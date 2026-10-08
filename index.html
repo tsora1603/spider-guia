@@ -33,16 +33,24 @@
 
     <div id="toasts" class="toast-region" aria-live="polite" aria-atomic="false"></div>
 
-    <dialog id="dlg" aria-labelledby="login-title">
+    <dialog id="dlg" aria-labelledby="login-title" aria-describedby="login-description">
       <h2 id="login-title">Entrar para sincronizar</h2>
-      <p class="mu sm">Enviamos um link de acesso ao seu e-mail. Use o mesmo e-mail em todos os aparelhos.</p>
-      <label class="sr-only" for="em">E-mail</label>
-      <input id="em" type="email" autocomplete="email" inputmode="email" placeholder="seu@email.com">
-      <div class="dialog-actions">
-        <button class="btn" id="go">Enviar link</button>
-        <button class="btn g" id="cl">Fechar</button>
-      </div>
-      <p id="msg" class="sm" role="status" aria-live="polite"></p>
+      <p id="login-description" class="mu sm">Acesso para contas cadastradas pelo administrador. Seu progresso também funciona sem login, neste dispositivo.</p>
+      <form id="login-form" class="private-login-form">
+        <label for="em">E-mail</label>
+        <input id="em" name="email" type="email" autocomplete="username" inputmode="email" placeholder="seu@email.com" maxlength="254" required>
+        <label for="login-password">Senha</label>
+        <div class="password-field">
+          <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Sua senha" required>
+          <button id="login-show-password" class="btn g password-visibility" type="button" aria-pressed="false" aria-controls="login-password">Mostrar</button>
+        </div>
+        <div class="dialog-actions">
+          <button class="btn" id="go" type="submit">Entrar</button>
+          <button class="btn g" id="cl" type="button">Cancelar</button>
+        </div>
+        <p id="msg" class="sm auth-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="sm mu auth-footnote">Esqueceu a senha? Peça ao administrador para redefini-la no Supabase. Não há cadastro público nem recuperação por e-mail.</p>
     </dialog>
 
     <dialog id="confirmdlg" aria-labelledby="confirm-title">

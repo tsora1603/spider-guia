@@ -9,6 +9,7 @@ import { readingPreferences, type ReadingDepth } from '../preferences/reading-pr
 import { DesignPreferencesCard } from '../design/DesignPreferencesCard';
 import { DeviceResetCard } from '../reset/DeviceResetCard';
 import { isSyncBlocked, resetPhase, cloudDecision, mayUseCloud } from '../reset/reset-guard';
+import { changeAuthenticatedPassword, passwordAuthError } from '../auth/password-auth';
 
 function ReadingPreferencesCard() {
   const preferences = useReadingPreferences();
@@ -39,6 +40,49 @@ function ReadingPreferencesCard() {
 }
 
 /** Status is descriptive only: reconnect permissions continue to be checked by the reset guard. */
+function ChangePasswordForm({ userId, email }: { userId: string; email: string }) {
+  const [current, setCurrent] = useState('');
+  const [next, setNext] = useState('');
+  const [confirm, setConfirm] = useState('');
+  const [pending, setPending] = useState(false);
+  const [message, setMessage] = useState('');
+  const [success, setSuccess] = useState(false);
+  const save = async (event: Event) => {
+    event.preventDefault();
+    if (pending) return;
+    setSuccess(false);
+    if (next.length < 8) { setMessage('Use pelo menos 8 caracteres na nova senha.'); return; }
+    if (next !== confirm) { setMessage('A confirmação não corresponde à nova senha.'); return; }
+    if (next === current) { setMessage('A nova senha deve ser diferente da atual.'); return; }
+    if (!navigator.onLine || !supabaseClient) { setMessage('Conecte-se à internet para alterar sua senha.'); return; }
+    setPending(true);
+    setMessage('');
+    try {
+      const error = await changeAuthenticatedPassword(supabaseClient, email, current, next, userId);
+      if (error) setMessage(passwordAuthError(error));
+      else { setCurrent(''); setNext(''); setConfirm(''); setSuccess(true); setMessage('Senha alterada. Utilize a nova senha no próximo acesso.'); }
+    } catch { setMessage('Não foi possível alterar a senha. Verifique sua conexão e tente novamente.'); }
+    finally { setPending(false); }
+  };
+  return <div class="account-password-panel">
+    <h3>Alterar minha senha</h3>
+    <p class="sm mu">Você pode trocar sua senha sem e-mail de recuperação. Informe a senha atual para confirmar sua identidade.</p>
+    <form class="account-password-form" onSubmit={save} aria-busy={pending}>
+      <label for="account-current-password">Senha atual
+        <input id="account-current-password" type="password" autocomplete="current-password" value={current} required disabled={pending} onInput={event => setCurrent(event.currentTarget.value)} />
+      </label>
+      <label for="account-new-password">Nova senha
+        <input id="account-new-password" type="password" autocomplete="new-password" minLength={8} value={next} required disabled={pending} onInput={event => setNext(event.currentTarget.value)} />
+      </label>
+      <label for="account-confirm-password">Confirmar nova senha
+        <input id="account-confirm-password" type="password" autocomplete="new-password" minLength={8} value={confirm} required disabled={pending} onInput={event => setConfirm(event.currentTarget.value)} />
+      </label>
+      <button class="btn g" type="submit" disabled={pending || !current || !next || !confirm}>{pending ? 'Alterando…' : 'Alterar senha'}</button>
+      {message ? <p class="sm auth-message" role={success ? 'status' : 'alert'}>{message}</p> : null}
+    </form>
+  </div>;
+}
+
 function AccountSyncCard() {
   useUiRevision('session');
   useUiRevision('sync');
@@ -56,6 +100,7 @@ function AccountSyncCard() {
     {resetPhase() !== 'preparing' && configured ? <button class="btn g" type="button" onClick={toggleAuth}>{appState.currentUser ? 'Sair da conta' : 'Entrar para sincronizar'}</button> : null}
     {resetPhase() === 'completed' && isSyncBlocked() && appState.currentUser && cloudDecision() !== 'restored' ? <button class="btn g settings-recovery-action" type="button" onClick={() => dispatchEvent(new Event('spider:cloud-review'))}>Decidir sobre o progresso na nuvem</button> : null}
     {appState.currentUser?.email ? <p class="sm mu account-email">Conectado como {appState.currentUser.email}</p> : null}
+    {appState.currentUser?.id && appState.currentUser?.email && configured ? <ChangePasswordForm key={appState.currentUser.id} userId={appState.currentUser.id} email={appState.currentUser.email} /> : null}
   </section>;
 }
 

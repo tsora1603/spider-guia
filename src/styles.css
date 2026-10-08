@@ -780,3 +780,23 @@ main[data-tab="Hoje"]>.reading-home{grid-column:1/-1;min-width:0}
 .checklist-sequence-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .checklist-sequence-heading .checklist-next-hint{color:var(--fg);margin-top:4px}
 @media(max-width:600px){.checklist-sequence-actions{width:100%;justify-content:flex-start}.checklist-sequence-actions .btn{flex:1;justify-content:center}}
+
+/* Conta privada: login por e-mail e senha, sem cadastro público. */
+.private-login-form{display:grid;gap:6px;margin-top:16px}
+.private-login-form>label,.account-password-form label{font-weight:700;font-size:.875rem}
+.private-login-form input,.account-password-form input{min-height:44px;background:var(--surface-field);color:var(--fg)}
+.password-field{display:flex;align-items:stretch;gap:8px;min-width:0}
+.password-field>input{min-width:0;flex:1;margin:0}
+.password-visibility{flex:none;min-height:44px;justify-content:center;padding-inline:13px}
+.private-login-form .dialog-actions{margin-top:12px}
+.private-login-form button:disabled,.account-password-form button:disabled{cursor:wait;opacity:.65}
+.auth-message{min-height:1.25em;margin:4px 0 0;color:var(--fg)}
+.auth-footnote{margin:15px 0 0;padding-top:12px;border-top:1px solid var(--border-subtle)}
+.account-password-form{display:grid;gap:10px;margin-top:14px}
+.account-password-form label{display:grid;gap:5px}
+.account-password-form input{width:100%;margin:0;border:1px solid var(--bd);border-radius:10px;padding:11px}
+.account-password-form .btn{justify-self:start}
+.private-login-form :focus-visible,.account-password-form :focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+@media(max-width:360px){.password-visibility{padding-inline:10px}}
+.account-password-panel{margin-top:18px;padding-top:16px;border-top:1px solid var(--border-subtle)}
+.account-password-panel h3{margin:0 0 6px}
