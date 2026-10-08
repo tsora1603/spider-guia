@@ -37,9 +37,12 @@ test('Etapa 6 · fontes agrupadas e busca restaurada na URL sem mudar links edit
   if (!(await first.evaluate(node => (node as HTMLDetailsElement).open))) await first.locator('summary').first().click();
   const row = first.locator('.source-row:has(a.source-link)').first();
   if (!(await row.evaluate(node => (node as HTMLDetailsElement).open))) await row.locator('summary').first().click();
-  const sourceLink = first.getByRole('link', { name: 'Abrir fonte ↗' }).first();
-  const href = await sourceLink.getAttribute('href');
-  expect(href).toMatch(/^https?:\/\//);
+  // O ícone externo é um SVG Lucide decorativo (aria-hidden), não parte do nome acessível.
+  // Valide o destino real e o texto do link sem depender de caracteres desenhados pelo ícone.
+  const sourceLink = row.locator('a.source-link');
+  await expect(sourceLink).toBeVisible();
+  await expect(sourceLink).toHaveAccessibleName('Abrir fonte');
+  await expect(sourceLink).toHaveAttribute('href', /^https?:\/\//);
 });
 
 test('Etapa 6 · permalink de fonte abre grupo e foco no item', async ({ page }) => {
