@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">SPIDER·GUIA</title>
+  <rect width="512" height="512" rx="112" fill="#101735"/>
+  <circle cx="256" cy="256" r="154" fill="#f13b47"/>
+  <path d="M256 112c-40 49-65 93-76 132h152c-11-39-36-83-76-132Z" fill="#101735"/>
+  <path d="M180 244c-8 27-10 51-7 72h166c3-21 1-45-7-72H180Z" fill="#101735"/>
+  <path d="M173 316c12 39 40 68 83 84 43-16 71-45 83-84H173Z" fill="#101735"/>
+  <path d="M256 151v228M205 181l102 0M185 244h142M180 316h152" fill="none" stroke="#f4f6fb" stroke-width="14" stroke-linecap="round"/>
+  <path d="M190 185 151 151M322 185l39-34M178 248l-57-9M334 248l57-9M185 316l-51 23M327 316l51 23" fill="none" stroke="#f4f6fb" stroke-width="14" stroke-linecap="round"/>
+</svg>

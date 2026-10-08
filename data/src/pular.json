@@ -1,0 +1,93 @@
+[
+  {
+    "recommendation": "Não pule",
+    "item": "Superior Spider-Man",
+    "range": "#701–733",
+    "weight": "● Essencial",
+    "rule": "A Marvel contou a série porque ela substituiu a Amazing como título principal. É a continuação direta da #700. O volume de 2014 retoma logo depois dela."
+  },
+  {
+    "recommendation": "Não pule",
+    "item": "Saga do Clone",
+    "range": "#394–418 (out/1994–dez/1996); ordem detalhada em Ler → Saga do Clone",
+    "weight": "● Essencial",
+    "rule": "A Amazing alterna capítulos de crossovers com edições avulsas. Os crossovers passam por todas as revistas do Aranha. Entre a #406 e a #407 saíram The Amazing Scarlet Spider #1–2, que não contam. Ler só a Amazing deixa lacunas."
+  },
+  {
+    "recommendation": "Não pule",
+    "item": "A Última Caçada de Kraven",
+    "range": "Amazing #293–294, Web of Spider-Man #31–32 e Spectacular #131–132",
+    "weight": "● Essencial",
+    "rule": "Só as #293–294 estão na Amazing. O resto do arco sai em outras revistas. Use a ordem intercalada da Leituras Extras."
+  },
+  {
+    "recommendation": "Não pule",
+    "item": "Traje negro (Guerras Secretas #8)",
+    "range": "Marvel Super Heroes Secret Wars #8 (dez/1984), fora da contagem; saga do traje nas #252–263",
+    "weight": "● Essencial",
+    "rule": "A Amazing #252 (mai/1984) saiu antes da Secret Wars #8 e já mostra Peter com o traje. Leia a #8 para saber de onde ele vem. Mais detalhes na Jornada."
+  },
+  {
+    "recommendation": "Não pule",
+    "item": "Casamento de Peter e MJ",
+    "range": "Proposta e noivado nas #290–292; casamento no Annual #21 (1987)",
+    "weight": "● Essencial",
+    "rule": "O Annual não conta na numeração, mas é onde o casamento acontece. A lua de mel está no Spectacular Spider-Man Annual #7 (○ Opcional)."
+  },
+  {
+    "recommendation": "Não pule",
+    "item": "Guerra Civil",
+    "range": "Civil War #1–2 (fora da contagem); Amazing #532–538",
+    "weight": "● Essencial",
+    "rule": "Peter revela a identidade na Civil War #2. A Tia May é baleada na #538. Civil War #3–7 é ◐ Contexto: um resumo basta. As consequências seguem em Back in Black (#539–543) e One More Day (#544–545)."
+  },
+  {
+    "recommendation": "Não pule",
+    "item": "Clone Conspiracy",
+    "range": "Minissérie #1–5 e Omega #1 (fora da contagem); Amazing (2015) #20–24 = #776–780 (dentro da contagem)",
+    "weight": "● Essencial",
+    "rule": "As #20–24 contam na numeração e acompanham a minissérie, que é o miolo do arco. Leia as duas juntas, na intercalação da Leituras Extras. Os tie-ins (Silk #14–17, Prowler #1–5) são ○ Opcional."
+  },
+  {
+    "recommendation": "Pode pular, com exceção",
+    "item": "Annuals",
+    "range": "Ex.: o casamento de Peter e MJ está no Annual #21 (1987)",
+    "weight": "○ Opcional",
+    "rule": "Annuals: ○ Opcional por padrão; ● Essencial quando a trama principal depende do Annual (ex.: #21, casamento). ◐ Contexto quando acrescenta desenvolvimento relevante de Peter/personagens (ex.: Amazing Spider-Man Annual #5 e The Spectacular Spider-Man Annual #7). Os demais Annuals incluídos neste guia seguem a mesma regra."
+  },
+  {
+    "recommendation": "Pode pular, com exceção",
+    "item": "Outras revistas do Aranha",
+    "range": "Marvel Team-Up (1972), Peter Parker: The Spectacular Spider-Man (1976), Giant-Size Spider-Man, Spider-Man (1990), Friendly Neighborhood, Sensational",
+    "weight": "○ Opcional",
+    "rule": "Podem ser puladas, exceto nos arcos marcados ● Essencial (Kraven, Saga do Clone, One More Day). A Spectacular tem numeração histórica própria, que chegou ao #313."
+  },
+  {
+    "recommendation": "Pode pular",
+    "item": "Edições com ponto ou sufixo",
+    "range": "#700.1, #16.HU, #50.LR, #88.BEY, #65.DEATHS",
+    "weight": "○ Opcional",
+    "rule": "Não entram na contagem. As .HU (Hunted) e as .LR (Last Remains) são complementares."
+  },
+  {
+    "recommendation": "Pode pular",
+    "item": "Edição #-1",
+    "range": "—",
+    "weight": "○ Opcional",
+    "rule": "Não entra na contagem."
+  },
+  {
+    "recommendation": "Depende do evento",
+    "item": "Minisséries de evento",
+    "range": "Ex.: Civil War #1–2, Sinister War, Dark Web, Secret Wars (2015), Spider-Geddon, Maximum Carnage",
+    "weight": "Varia",
+    "rule": "O peso muda de evento para evento. Veja a coluna Peso da Leituras Extras. A minissérie em si não conta na numeração; os capítulos dentro da Amazing, sim."
+  },
+  {
+    "recommendation": "Pode pular",
+    "item": "Renew Your Vows",
+    "range": "#752–756",
+    "weight": "○ Opcional",
+    "rule": "Minissérie de realidade alternativa de Secret Wars. Conta na numeração. É a única série dentro da contagem que dá para pular sem quebrar a continuidade. Ficam 5 números sem leitura."
+  }
+]

@@ -1,0 +1,4101 @@
+[
+  {
+    "n": 1,
+    "after": 0,
+    "weight": "◐ Contexto",
+    "name": "Amazing Fantasy #15 (ago/1962)",
+    "sequence": "Leia antes de começar a Amazing #1.- Capítulo 00 do Drive Espantoso",
+    "why": {
+      "text": "É a origem: a picada da aranha, a perda do Tio Ben e a ideia de que grandes poderes trazem grandes responsabilidades. Fica fora da contagem porque sai antes da Amazing #1.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "O Espetacular Homem-Aranha Edição Definitiva Vol. 1 (Panini) — inclui Amazing Fantasy #15 e Amazing Spider-Man #1–19.",
+    "itemIds": [
+      1
+    ],
+    "category": "extra",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes: Amazing Fantasy #15 é a origem e primeira aparição de Spider-Man, anterior à Amazing #1.",
+    "src": [
+      37,
+      150
+    ],
+    "just": "Posição e peso sustentados pelas fontes: Amazing Fantasy #15 é a origem e primeira aparição de Spider-Man, anterior à Amazing #1.",
+    "readingGroup": 1,
+    "unavailable": false,
+    "where": null,
+    "links": [],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 2,
+    "after": 16,
+    "weight": "● Essencial",
+    "name": "The Amazing Spider-Man Annual #1 (1964)",
+    "sequence": "Leia depois da Amazing #16.",
+    "why": {
+      "text": "Primeira formação e primeira aparição do Sexteto Sinistro como grupo. A leitura apresenta e nomeia a equipe; aparições posteriores do Sexteto ficam abruptas sem este marco.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição: Crushing Krisis. Peso: Marvel + GCD (primeira formação/aparição do Sexteto Sinistro; Annual destacado como must-read).",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1227
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância.",
+    "src": [
+      123,
+      147,
+      148,
+      149,
+      151
+    ],
+    "just": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 3,
+    "after": 28,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #2 (1965)",
+    "sequence": "Leia depois da Amazing #28.",
+    "why": {
+      "text": "Primeiro encontro Spider-Man/Doctor Strange; amplia o universo, mas não é necessário à trajetória de Peter.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1228
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 4,
+    "after": 41,
+    "weight": "◐ Contexto",
+    "name": "The Amazing Spider-Man Annual #3 (1966)",
+    "sequence": "Leia depois da Amazing #41.",
+    "why": {
+      "text": "Peter é testado como possível Vingador; é um marco de seu status diante dos heróis da Marvel.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1229
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 5,
+    "after": 52,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #4 (1967)",
+    "sequence": "Leia depois da Amazing #52.",
+    "why": {
+      "text": "Confronto com o Human Torch; aventura complementar sem consequência essencial para a linha principal.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1230
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 6,
+    "after": 61,
+    "weight": "◐ Contexto",
+    "name": "The Amazing Spider-Man Annual #5 (1968)",
+    "sequence": "Leia depois da Amazing #61 e antes da #62 (posição histórica preservada para manter o snapshot de IDs/ordem).",
+    "why": {
+      "text": "Peter descobre a verdade sobre Richard e Mary Parker e entende que seus pais eram agentes duplos. É um marco de desenvolvimento pessoal/familiar.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "As fontes consultadas posicionam o Annual #5 depois da Amazing #62, mas o catálogo histórico do site o mantém depois da #61. A ordem do catálogo é preservada por compatibilidade; a divergência fica explícita.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      63
+    ],
+    "category": "annual",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Divergente — fontes indicam depois da #62; catálogo preservado depois da #61",
+    "weightEvidence": "Confirmado por fontes e conteúdo documentado",
+    "confirmationDetail": "Comics Back Issues e Crushing Krisis posicionam o Annual #5 depois da Amazing #62; o GCD confirma a edição e a história sobre os pais de Peter. Como o requisito de regressão exige os IDs na mesma ordem, o site mantém a posição histórica depois da #61 e marca o status geral como Parcial.",
+    "src": [
+      62,
+      63,
+      123
+    ],
+    "just": "Comics Back Issues e Crushing Krisis posicionam o Annual #5 depois da Amazing #62; o GCD confirma a edição e a história sobre os pais de Peter. Como o requisito de regressão exige os IDs na mesma ordem, o site mantém a posição histórica depois da #61 e marca o status geral como Parcial.",
+    "readingGroup": 2,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      61
+    ],
+    "links": [],
+    "confirmationCriteria": {
+      "position": "not-met",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 7,
+    "after": 78,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #6 (1969)",
+    "sequence": "Leia depois da Amazing #78.",
+    "why": {
+      "text": "Annual do período; catalogado por completude. Parte relevante do conteúdo é reimpressão.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1231
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 8,
+    "after": 91,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #7 (1970)",
+    "sequence": "Leia depois da Amazing #91.",
+    "why": {
+      "text": "Annual do período; catalogado por completude, com baixo impacto na cronologia principal.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1232
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 9,
+    "after": 103,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #8 (1971)",
+    "sequence": "Leia depois da Amazing #103.",
+    "why": {
+      "text": "Annual do período; catalogado por completude, sem dependência da trama principal.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1233
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 10,
+    "after": 122,
+    "weight": "◐ Contexto",
+    "name": "The Amazing Spider-Man Annual #9 (1973)",
+    "sequence": "Leia depois da Amazing #122.",
+    "why": {
+      "text": "Retoma material ligado ao Duende Verde; vale como contexto histórico, embora seja fortemente baseado em material reaproveitado.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1234
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 11,
+    "after": 149,
+    "weight": "○ Opcional",
+    "name": "What If? (1977) #30 (publicada em 1981)",
+    "sequence": "Leia depois do fim da primeira Saga do Clone (#143–149).",
+    "why": {
+      "text": "Mostra o que teria acontecido se o clone de Peter tivesse vivido. É realidade alternativa. Leia só se quiser.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A cronologia da Gabbing Geek sustenta a posição relativa; o peso Opcional ainda não tem suporte editorial suficiente nas fontes consultadas.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      152
+    ],
+    "category": "extra",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição sustentada; peso Opcional ainda é classificação editorial",
+    "confirmationDetail": "A cronologia da Gabbing Geek sustenta a posição relativa; o peso Opcional ainda não tem suporte editorial suficiente nas fontes consultadas.",
+    "src": [
+      20,
+      124,
+      156
+    ],
+    "just": "A cronologia da Gabbing Geek sustenta a posição relativa; o peso Opcional ainda não tem suporte editorial suficiente nas fontes consultadas.",
+    "readingGroup": 3,
+    "unavailable": true,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      149
+    ],
+    "links": [],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 12,
+    "after": 159,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #10 (1976)",
+    "sequence": "Leia depois da Amazing #159.",
+    "why": {
+      "text": "Aventura complementar do período, com encaixe cronológico registrado após a #159.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1235
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 13,
+    "after": 170,
+    "weight": "○ Opcional",
+    "name": "Marvel Team-Up Annual #1 (1976)",
+    "sequence": "Leia depois da Amazing #170.",
+    "why": {
+      "text": "Primeiro Annual da linha; encontro de Spider-Man com X-Men, incluindo Wolverine.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1236
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      152
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 14,
+    "after": 171,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #11 (1977)",
+    "sequence": "Leia depois da Amazing #171.",
+    "why": {
+      "text": "Complementa o período pós-#171 e traz Peter/Tia May/Mary Jane; não é necessária à linha principal.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1237
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 15,
+    "after": 185,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #12 (1978)",
+    "sequence": "Leia depois da Amazing #185.",
+    "why": {
+      "text": "Annual do período; a fonte cronológica permite o encaixe no bloco, mas não uma posição fina inequívoca.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1238
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 16,
+    "after": 185,
+    "weight": "○ Opcional",
+    "name": "Marvel Team-Up Annual #2 (1979)",
+    "sequence": "Leia depois da Amazing #185.",
+    "why": {
+      "text": "Spider-Man/Hulk em aventura complementar; encaixe adotado no bloco pós-#185.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1239
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      152
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 17,
+    "after": 200,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #13 (1979)",
+    "sequence": "Leia depois da Amazing #200.",
+    "why": {
+      "text": "Annual complementar após a fase da #200; catalogado por completude.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1240
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 18,
+    "after": 200,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #1 (1979)",
+    "sequence": "Leia depois da Amazing #200.",
+    "why": {
+      "text": "Primeiro Annual da série Spectacular; complemento do período de Peter Parker.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1241
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      153
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 19,
+    "after": 209,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #14 (1980)",
+    "sequence": "Leia depois da Amazing #209.",
+    "why": {
+      "text": "Annual complementar com posição documentada após a #209.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1242
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 20,
+    "after": 209,
+    "weight": "○ Opcional",
+    "name": "Marvel Team-Up Annual #3 (1980)",
+    "sequence": "Leia depois da Amazing #209.",
+    "why": {
+      "text": "Team-up de complemento do período; sem consequência central para Peter.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1243
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      152
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 21,
+    "after": 212,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #2 (1980)",
+    "sequence": "Leia depois da Amazing #212.",
+    "why": {
+      "text": "Annual complementar da série Spectacular no começo da fase.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1244
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      153
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 22,
+    "after": 219,
+    "weight": "○ Opcional",
+    "name": "Marvel Team-Up Annual #4 (1981)",
+    "sequence": "Leia depois da Amazing #219.",
+    "why": {
+      "text": "Team-up complementar do período; sem impacto obrigatório na trajetória de Peter.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1245
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      152
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 23,
+    "after": 220,
+    "weight": "◐ Contexto",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #3 (1981)",
+    "sequence": "Leia depois da Amazing #220.",
+    "why": {
+      "text": "Explora o núcleo familiar de John Jameson/Man-Wolf e acrescenta contexto do círculo de Peter.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1246
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      153
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 24,
+    "after": 223,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #15 (1981)",
+    "sequence": "Leia depois da Amazing #223.",
+    "why": {
+      "text": "Annual complementar do período, inserido no bloco cronológico após a #223.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1247
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 25,
+    "after": 236,
+    "weight": "○ Opcional",
+    "name": "Marvel Team-Up Annual #6 (1983)",
+    "sequence": "Leia depois da Amazing #236.",
+    "why": {
+      "text": "Team-up complementar; a fonte coloca este Annual antes do #5 e antes da #237.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1248
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      152
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 26,
+    "after": 236,
+    "weight": "○ Opcional",
+    "name": "Marvel Team-Up Annual #5 (1982)",
+    "sequence": "Leia depois da Amazing #236.",
+    "why": {
+      "text": "Team-up complementar; fica após a #236 na ordem adotada.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1249
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      152
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 27,
+    "after": 237,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #16 (1982)",
+    "sequence": "Leia depois da Amazing #237.",
+    "why": {
+      "text": "Annual complementar; também introduz Monica Rambeau como nova Captain Marvel.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1250
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 28,
+    "after": 251,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #17 (1983)",
+    "sequence": "Leia depois da Amazing #251.",
+    "why": {
+      "text": "Annual complementar colocado após a #251, no início da transição para o período do traje negro.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1251
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 29,
+    "after": 251,
+    "weight": "● Essencial",
+    "name": "Marvel Super Heroes Secret Wars (Guerras Secretas) #8 (dez/1984)",
+    "sequence": "Leia antes de abrir a #252.",
+    "why": {
+      "text": "A Amazing #252 (mai/1984) saiu antes e já mostra Peter de traje preto, sem explicar de onde veio. A Secret Wars #8 mostra o momento em que ele recebe o traje.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição (evento todo: #1–12, opcional)",
+    "brazilianEdition": "Confirmado (edição antiga): a Panini publicou em 2007 um encadernado com a saga completa, Guerras Secretas (Secret Wars #1–12), segundo o Omelete; a #8 está nele. Edição atual e disponibilidade: não verificadas. A edição da Abril (1986–87) teve cortes na arte e nos roteiros.",
+    "itemIds": [
+      255
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      21
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 4,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      251
+    ],
+    "links": [
+      [
+        "Guerras Secretas",
+        "https://www.mediafire.com/file/i2yt34flnmkp02j/198412_Marvel_Super-Herois_Guerras_Secretas_008.cbr/file"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 30,
+    "after": 251,
+    "weight": "○ Opcional",
+    "name": "Marvel Team-Up #141–150 e Annual #7; Peter Parker, The Spectacular Spider-Man #90–100",
+    "sequence": "Leia junto com a Saga do Traje Negro (#252–263). A ordem edição por edição está no How To Love Comics (ver Mais → Fontes).",
+    "why": {
+      "text": "Amplia a Saga do Traje Negro. O essencial já está na Amazing: a descoberta de que o traje é vivo, na #258.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional continua sendo recomendação editorial. Amazing Spider-Man Annual #20 foi removido deste bloco por ser de 1986 e ter encaixe próprio depois da #282.",
+    "howMuch": "22 edições (Marvel Team-Up #141–150 + Annual #7; Spectacular Spider-Man #90–100)",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      256,
+      257,
+      258
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição sustentada; peso Opcional ainda é classificação editorial",
+    "confirmationDetail": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional é recomendação do guia e não está explicitamente sustentado pela fonte.",
+    "src": [
+      21,
+      124
+    ],
+    "just": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional é recomendação do guia e não está explicitamente sustentado pela fonte.",
+    "readingGroup": 5,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      251
+    ],
+    "links": [
+      [
+        "Marvel Team Up",
+        "https://hqs-soquadrinhos.blogspot.com/2011/08/marvel-team-up-1972.html"
+      ],
+      [
+        "AMS Annual #20",
+        "https://drive.google.com/file/d/1iftvFekVFgcrRueCT5jZX4NVa4nRTqxm/view?usp=drive_link"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 31,
+    "after": 258,
+    "weight": "◐ Contexto",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #4 (1984)",
+    "sequence": "Leia depois da Amazing #258.",
+    "why": {
+      "text": "Aprofunda o período do traje negro e acrescenta contexto familiar/civil de Peter.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1252
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      153
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 32,
+    "after": 259,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #18 (1984)",
+    "sequence": "Leia depois da Amazing #259.",
+    "why": {
+      "text": "Annual complementar do bloco de 1984; relevância principal está no contexto dos coadjuvantes.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1253
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 33,
+    "after": 263,
+    "weight": "◐ Contexto",
+    "name": "Web of Spider-Man #1 (1985)",
+    "sequence": "Leia depois da #263.",
+    "why": {
+      "text": "A Saga do Traje Negro fecha nesta edição. A #264 ainda mostra Peter com um traje preto comum, não com o simbionte.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      272
+    ],
+    "category": "extra",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      21
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 6,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      263
+    ],
+    "links": [
+      [
+        "Web of Spider",
+        "https://www.mediafire.com/file/8i456yc0b52tc5l/"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 34,
+    "after": 272,
+    "weight": "◐ Contexto",
+    "name": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
+    "sequence": "Leia depois da Amazing Spider-Man #272 e antes da #273.",
+    "why": {
+      "text": "Peter e o Demolidor caçam o assassino de uma amiga policial. Mostra os limites morais de Peter. A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "4 edições",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      278
+    ],
+    "category": "extra",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      56,
+      69,
+      70,
+      71
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 7,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      272
+    ],
+    "links": [
+      [
+        "Arco completo (GoFile)",
+        "https://gofile.io/d/llaPQfHo%20jean%20dewolff"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 35,
+    "after": 270,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #5 (1985)",
+    "sequence": "Leia depois da Amazing #270.",
+    "why": {
+      "text": "Annual complementar do período de 1985.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1254
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      153
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 36,
+    "after": 270,
+    "weight": "◐ Contexto",
+    "name": "The Amazing Spider-Man Annual #19 (1985)",
+    "sequence": "Leia depois da Amazing #270.",
+    "why": {
+      "text": "Mary Jane é envolvida diretamente na trama de Smythe; bom complemento para Peter/MJ.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1255
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 37,
+    "after": 270,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #1 (1985)",
+    "sequence": "Leia depois da Amazing #270.",
+    "why": {
+      "text": "Primeiro Annual da série Web of Spider-Man; complemento da fase do traje negro.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1256
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 38,
+    "after": 251,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #20 (1986)",
+    "sequence": "Leia antes da Amazing #252, na posição histórica já usada pelo catálogo (compatibilidade de ordem).",
+    "why": {
+      "text": "Annual do período de 1986; completa o bloco do período do traje negro e da transição para a fase seguinte.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "As fontes cronológicas/bibliográficas sustentam um encaixe em 1986, depois da #282, mas o catálogo histórico posiciona este ID antes da #252. A posição legada é preservada para manter o snapshot de IDs/ordem.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      259
+    ],
+    "category": "annual",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Divergente — fontes indicam depois da #282; catálogo preservado antes da #252",
+    "weightEvidence": "Parcial — peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "Amazing Spider-Man Annual #20 é uma edição de 1986 e as fontes consultadas a posicionam depois da #282; portanto ela não pertence factualmente à Saga do Traje Negro. A associação duplicada com o bloco do traje negro foi removida, mas o ID 259 permanece na posição histórica anterior à #252 para cumprir a regressão de ordem. Status geral: Parcial.",
+    "src": [
+      123,
+      157
+    ],
+    "just": "Amazing Spider-Man Annual #20 é uma edição de 1986 e as fontes consultadas a posicionam depois da #282; portanto ela não pertence factualmente à Saga do Traje Negro. A associação duplicada com o bloco do traje negro foi removida, mas o ID 259 permanece na posição histórica anterior à #252 para cumprir a regressão de ordem. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "not-met",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 39,
+    "after": 282,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #2 (1986)",
+    "sequence": "Leia depois da Amazing #282.",
+    "why": {
+      "text": "Annual da série Web; complemento do bloco de 1986.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1257
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 40,
+    "after": 282,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #6 (1986)",
+    "sequence": "Leia depois da Amazing #282.",
+    "why": {
+      "text": "Annual do período de 1986; complemento da cronologia paralela.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1258
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      123,
+      153
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 41,
+    "after": 292,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #3 (1987)",
+    "sequence": "Leia depois da Amazing #292 e antes do bloco do casamento, em 1987.",
+    "why": {
+      "text": "Annual predominantemente de perfis e material de referência sobre personagens e vilões; leitura complementar, sem encaixe fino confirmado.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1259
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 42,
+    "after": 292,
+    "weight": "● Essencial",
+    "name": "The Amazing Spider-Man Annual #21 (1987), o casamento",
+    "sequence": "Leia depois da #292 (MJ aceita o pedido).",
+    "why": {
+      "text": "O casamento acontece no Annual, fora da contagem. Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. É este casamento que One More Day apaga (#544–545).",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      303
+    ],
+    "category": "annual",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      22,
+      35,
+      38,
+      124,
+      151
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 8,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      292
+    ],
+    "links": [
+      [
+        "AMS Annual #21",
+        "https://www.mediafire.com/download/83knz3z28wrv5gn/O+Espantoso+Homem-Aranha+Anual+21+%28Lemuria%29.cbr"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 43,
+    "after": 292,
+    "weight": "◐ Contexto",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #7 (1987), a lua de mel",
+    "sequence": "Leia depois do Amazing Spider-Man Annual #21 (casamento) e antes de A Última Caçada de Kraven.",
+    "why": {
+      "text": "É a lua de mel de Peter e Mary Jane e dá continuidade imediata ao casamento, desenvolvendo o relacionamento no começo da vida de casados.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      304
+    ],
+    "category": "annual",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      22,
+      39,
+      123,
+      153
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 9,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      292
+    ],
+    "links": [],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 44,
+    "after": 292,
+    "weight": "● Essencial",
+    "name": "A Última Caçada de Kraven (4 edições fora da Amazing)",
+    "sequence": "Depois do casamento, leia nesta ordem: Web of Spider-Man #31 → Amazing #293 → Spectacular (1976) #131 → Web #32 → Amazing #294 → Spectacular #132.",
+    "why": {
+      "text": "Só as duas edições da Amazing deixam o arco cortado. Mostra do que Peter é feito. Hunted (Amazing 2018, #16–23) remete a esta história.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "4 edições fora (Web #31–32, Spectacular #131–132)",
+    "brazilianEdition": "Sem edição Panini localizada. Edição brasileira encontrada: Salvat (2013), O Espetacular Homem-Aranha – A última caçada de Kraven, vol. 9 da coleção de graphic novels Marvel, 168 pp.: Web of Spider-Man #31–32, Amazing #293–294 e Spectacular #131–132 (ficha do Skoob). Panini: a confirmar.",
+    "itemIds": [
+      305
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      22,
+      55
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 10,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      292
+    ],
+    "links": [
+      [
+        "Arco completo (SoQuadrinhos)",
+        "https://hqs-soquadrinhos.blogspot.com/2011/08/homem-aranha-ultima-cacada-de-kraven.html"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 45,
+    "after": 309,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #22 (1988)",
+    "sequence": "Leia depois da Amazing #309.",
+    "why": {
+      "text": "Parte do bloco Evolutionary War; complemento dos tie-ins anuais de 1988.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1260
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 46,
+    "after": 309,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #4 (1988)",
+    "sequence": "Leia depois da Amazing #309.",
+    "why": {
+      "text": "Parte do bloco Evolutionary War; complemento da linha de Web.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1261
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 47,
+    "after": 309,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #8 (1988)",
+    "sequence": "Leia depois da Amazing #309.",
+    "why": {
+      "text": "Parte do bloco Evolutionary War; complemento da linha de Spectacular.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1262
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      154
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 48,
+    "after": 319,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #23 (1989)",
+    "sequence": "Leia depois da Amazing #319.",
+    "why": {
+      "text": "Parte do bloco Atlantis Attacks; complemento do crossover anual de 1989.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1263
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 49,
+    "after": 319,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #9 (1989)",
+    "sequence": "Leia depois da Amazing #319.",
+    "why": {
+      "text": "Parte do bloco Atlantis Attacks; complemento da linha de Spectacular.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1264
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      154
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 50,
+    "after": 319,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #5 (1989)",
+    "sequence": "Leia depois da Amazing #319.",
+    "why": {
+      "text": "Parte do bloco Atlantis Attacks; complemento da linha de Web.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1265
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 51,
+    "after": 333,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #24 (1990)",
+    "sequence": "Leia depois da Amazing #333.",
+    "why": {
+      "text": "Parte do tríptico Spidey’s Totally Tiny Adventure, distribuído entre Annuals de 1990.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1266
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 52,
+    "after": 333,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #10 (1990)",
+    "sequence": "Leia depois da Amazing #333.",
+    "why": {
+      "text": "Continuação do tríptico Spidey’s Totally Tiny Adventure.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1267
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      154
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 53,
+    "after": 333,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #6 (1990)",
+    "sequence": "Leia depois da Amazing #333.",
+    "why": {
+      "text": "Fechamento do tríptico Spidey’s Totally Tiny Adventure.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1268
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 54,
+    "after": 348,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #25 (1991)",
+    "sequence": "Leia depois da Amazing #348.",
+    "why": {
+      "text": "Parte do bloco Vibranium Vendetta; complemento da sequência de 1991.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1269
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 55,
+    "after": 348,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #11 (1991)",
+    "sequence": "Leia depois da Amazing #348.",
+    "why": {
+      "text": "Parte do bloco Vibranium Vendetta; complemento da linha de Spectacular.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1270
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      154
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 56,
+    "after": 348,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #7 (1991)",
+    "sequence": "Leia depois da Amazing #348.",
+    "why": {
+      "text": "Parte do bloco Vibranium Vendetta; complemento da linha de Web.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1271
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 57,
+    "after": 363,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #26 (1992)",
+    "sequence": "Leia depois da Amazing #363.",
+    "why": {
+      "text": "Annual do bloco de 1992; acompanha a fase de The Hero Killers e material adjacente.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1272
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 58,
+    "after": 363,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #12 (1992)",
+    "sequence": "Leia depois da Amazing #363.",
+    "why": {
+      "text": "Annual do mesmo bloco de 1992, ampliando a fase paralela de Spectacular.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1273
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      154
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 59,
+    "after": 363,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #8 (1992)",
+    "sequence": "Leia depois da Amazing #363.",
+    "why": {
+      "text": "Annual do mesmo bloco de 1992, ampliando a fase paralela de Web.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1274
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 60,
+    "after": 367,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #9 (1993)",
+    "sequence": "Leia depois da Amazing #367.",
+    "why": {
+      "text": "Annual de 1993; complemento da linha paralela antes da reta final daquele ciclo.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1275
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 61,
+    "after": 377,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #27 (1993)",
+    "sequence": "Leia depois da Amazing #377.",
+    "why": {
+      "text": "Annual de 1993; entra antes do material que desemboca em Maximum Carnage.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1276
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 62,
+    "after": 377,
+    "weight": "○ Opcional",
+    "name": "Maximum Carnage (1993)",
+    "sequence": "Ao chegar à #378, leia nesta ordem: Spider-Man Unlimited #1 → Web of Spider-Man #101 → Amazing #378 → Spider-Man (1990) #35 → Spectacular (1976) #201 → Web #102 → Amazing #379 → Spider-Man #36 → Spectacular #202 → Web #103 → Amazing #380 → Spider-Man #37 → Spectacular #203 → Unlimited #2.",
+    "why": {
+      "text": "Só 3 dos 14 capítulos estão na Amazing (#378–380). Quer o arco completo? Siga a ordem indicada. Prefere a linha enxuta? Pule. Carnificina já estreou nas #361–363, dentro da contagem. Mas as três edições ficam com buracos de enredo.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "As fontes sustentam a ordem de Maximum Carnage; o peso Opcional em relação à jornada principal continua sendo recomendação editorial sem suporte suficiente nas fontes.",
+    "howMuch": "11 edições fora (Amazing #378–380 já contam)",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      391
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição sustentada; peso/relevância ainda sem confirmação independente suficiente",
+    "confirmationDetail": "As fontes sustentam a ordem de Maximum Carnage; o peso Opcional em relação à jornada principal continua sendo recomendação editorial sem suporte suficiente nas fontes.",
+    "src": [
+      40,
+      41
+    ],
+    "just": "As fontes sustentam a ordem de Maximum Carnage; o peso Opcional em relação à jornada principal continua sendo recomendação editorial sem suporte suficiente nas fontes.",
+    "readingGroup": 11,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      377
+    ],
+    "links": [
+      [
+        "Arco completo (GoFile)",
+        "https://gofile.io/d/XyblnkJo%20carnificina%20max%20anos%2090"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 63,
+    "after": 382,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #13 (1993)",
+    "sequence": "Leia depois da Amazing #382.",
+    "why": {
+      "text": "Annual de 1993, colocado após o bloco que inclui Amazing #382 na cronologia consolidada.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1277
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      154
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 64,
+    "after": 385,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual #28 (1994)",
+    "sequence": "Leia depois da Amazing #385.",
+    "why": {
+      "text": "Annual de 1994; complemento da fase final antes da transição para o período de 1995.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1278
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      151
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 65,
+    "after": 389,
+    "weight": "○ Opcional",
+    "name": "Web of Spider-Man Annual #10 (1994)",
+    "sequence": "Leia depois da Amazing #389.",
+    "why": {
+      "text": "Annual de 1994; complemento da reta final da série Web antes da transição de fase.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1279
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      155
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 66,
+    "after": 389,
+    "weight": "○ Opcional",
+    "name": "Peter Parker, The Spectacular Spider-Man Annual #14 (1994)",
+    "sequence": "Leia depois da Amazing #389.",
+    "why": {
+      "text": "Annual de 1994; na cronologia adotada, segue Web of Spider-Man Annual #10.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1280
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      124,
+      154
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 67,
+    "after": 393,
+    "weight": "● Essencial",
+    "name": "Saga do Clone (1994–96), em Spectacular (1976), Web of Spider-Man, Spider-Man (1990), Spider-Man Unlimited e outras revistas",
+    "sequence": "Ao chegar à #394, siga a ordem edição por edição em Ler → Saga do Clone (out/1994–dez/1996, #394–418). Entre a #406 e a #407 saíram The Amazing Scarlet Spider #1–2. Ao terminar, retome na #419.",
+    "why": {
+      "text": "A Amazing alterna capítulos de crossovers com edições avulsas. Ler só a Amazing deixa lacunas.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "150 entradas fora da numeração histórica; o roteiro completo em editorial.clone mantém 187 entradas, incluindo contexto, Amazing principal e epílogo.",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      408,
+      409,
+      411,
+      412,
+      413,
+      414,
+      415,
+      416,
+      417,
+      418,
+      419,
+      420,
+      422,
+      424,
+      425,
+      426,
+      427,
+      428,
+      430,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      447,
+      449,
+      450,
+      451,
+      453,
+      454,
+      455,
+      456,
+      458,
+      459,
+      460,
+      462,
+      463,
+      464,
+      465,
+      466,
+      467,
+      469,
+      470,
+      471,
+      472,
+      473,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      498,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      524,
+      525,
+      526,
+      528,
+      529,
+      530,
+      532,
+      533,
+      534,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      542,
+      543,
+      545,
+      546,
+      547,
+      548,
+      549,
+      551,
+      552,
+      553,
+      554,
+      555,
+      557,
+      558,
+      559,
+      561,
+      562,
+      563,
+      564,
+      565,
+      567,
+      568,
+      569,
+      570,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578,
+      579,
+      580,
+      581,
+      582
+    ],
+    "category": "saga",
+    "newItem": false,
+    "special": "clone",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Este card representa somente as entradas fora da numeração histórica da Saga do Clone. O roteiro dedicado editorial.clone continua com 187 entradas e inclui, separadamente, contexto da saga original, capítulos da Amazing principal e leituras posteriores.",
+    "src": [
+      20,
+      124
+    ],
+    "just": "Este card representa somente as entradas fora da numeração histórica da Saga do Clone. O roteiro dedicado editorial.clone continua com 187 entradas e inclui, separadamente, contexto da saga original, capítulos da Amazing principal e leituras posteriores.",
+    "readingGroup": 12,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      393
+    ],
+    "links": [],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 68,
+    "after": 421,
+    "weight": "○ Opcional",
+    "name": "Spider-Man Annual 1997 (Spider-Man '97)",
+    "sequence": "Leia depois da #421 e antes da #422.",
+    "why": {
+      "text": "Complementa a fase de Spider-Man de 1997; a posição adotada fica entre Amazing #421 e #422 pela cronologia de publicação.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1281
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      125
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 69,
+    "after": 426,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual (1997) — legado #30",
+    "sequence": "Leia depois da #426 e antes da #427.",
+    "why": {
+      "text": "Annual de 1997 da linha principal de Amazing, encaixado entre #426 e #427.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1282
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      126
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 70,
+    "after": 436,
+    "weight": "○ Opcional",
+    "name": "Spider-Man Annual 1998 / The Amazing Spider-Man Annual 1998 — legado #31",
+    "sequence": "Leia depois da #436 e antes da #437.",
+    "why": {
+      "text": "Evita duplicar a mesma publicação sob duas denominações; a edição fica entre Amazing #436 e #437.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1283
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      127
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 71,
+    "after": 440,
+    "weight": "◐ Contexto",
+    "name": "The Gathering of Five / The Final Chapter (1998)",
+    "sequence": "Ordem confirmada: Sensational Spider-Man #32 → Amazing #440 → Spider-Man #96 → Spectacular #262 → Sensational Spider-Man #33 → Amazing #441 → Spider-Man #97 → Spectacular #263 → Spider-Man #98. Na aba principal, o primeiro bloco entra depois da #440 e o segundo continua depois da #441.",
+    "why": {
+      "text": "A #441 não fecha a história. O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. Só depois começa o volume de 1999 (#442). A verdadeira Tia May reaparece aqui (ver Jornada).",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "3 edições (+4 de prelúdio)",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      605
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      27,
+      42
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 13,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (1963)",
+      440
+    ],
+    "links": [
+      [
+        "Arco completo (SoQuadrinhos)",
+        "https://hqs-soquadrinhos.blogspot.com/2011/08/homem-aranha-reuniao-dos-cinco-1998.html"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 72,
+    "after": 447,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual (1999) — legado #32",
+    "sequence": "Leia depois da #447 e antes da #448.",
+    "why": {
+      "text": "Fica entre Amazing vol.2 #6 e #7 pela data de venda.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1284
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      128
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 73,
+    "after": 449,
+    "weight": "○ Opcional",
+    "name": "Peter Parker: Spider-Man Annual (1999)",
+    "sequence": "Leia depois da #449 e antes da #450.",
+    "why": {
+      "text": "Complementa a linha de Peter Parker em 1999 e é encaixado entre os capítulos adjacentes da Amazing.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1285
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      129
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 74,
+    "after": 458,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual (2000) — legado #33",
+    "sequence": "Leia depois da #458 e antes da #459.",
+    "why": {
+      "text": "O Annual de 2000 fica entre as edições regulares #17 e #18 do volume 1999 pela cronologia de publicação.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1286
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      130
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 75,
+    "after": 464,
+    "weight": "○ Opcional",
+    "name": "Peter Parker: Spider-Man Annual (2000)",
+    "sequence": "Leia depois da #464 e antes da #465.",
+    "why": {
+      "text": "Complementa a fase de Peter Parker de 2000 e fica entre Amazing #23 e #24.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1287
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      131
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 76,
+    "after": 470,
+    "weight": "○ Opcional",
+    "name": "The Amazing Spider-Man Annual (2001) — legado #34",
+    "sequence": "Leia depois da #470 e antes da #471.",
+    "why": {
+      "text": "Fecha o conjunto de Annuals previstos para 1996–2001 antes da etapa seguinte do projeto.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1288
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      132
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 77,
+    "after": 524,
+    "weight": "◐ Contexto",
+    "name": "The Other (2005–06)",
+    "sequence": "Ao chegar à #525, leia nesta ordem: Friendly Neighborhood Spider-Man (2005) #1 → Marvel Knights Spider-Man #19 → Amazing (1999) #525 → Friendly #2 → Marvel Knights #20 → Amazing #526 → Friendly #3 → Marvel Knights #21 → Amazing #527 → Friendly #4 → Marvel Knights #22 → Amazing #528.",
+    "why": {
+      "text": "Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da Jornada lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "As fontes sustentam a ordem intercalada de The Other; o peso Contexto não é classificado de forma suficientemente clara pelas fontes.",
+    "howMuch": "8 edições fora",
+    "brazilianEdition": "Parcial: o Marvel Saga (Panini) tem 'O Outro – Parte Um' (vol.9) e 'O Outro – Parte 2' (vol.10), pelos títulos no Whakoom. A faixa de cada volume (Friendly Neighborhood #1–4, Marvel Knights #19–22, Amazing #525–528) não foi conferida em descrição oficial: a confirmar.",
+    "itemIds": [
+      690
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição sustentada; peso/relevância ainda sem confirmação independente suficiente",
+    "confirmationDetail": "As fontes sustentam a ordem intercalada de The Other; o peso Contexto não é classificado de forma suficientemente clara pelas fontes.",
+    "src": [
+      43,
+      44
+    ],
+    "just": "As fontes sustentam a ordem intercalada de The Other; o peso Contexto não é classificado de forma suficientemente clara pelas fontes.",
+    "readingGroup": 14,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2003)",
+      524
+    ],
+    "links": [
+      [
+        "Arco completo (Mega)",
+        "https://mega.nz/folder/iIo2WJTS"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 78,
+    "after": 531,
+    "weight": "● Essencial",
+    "name": "Civil War (Guerra Civil) #1–2 (2006)",
+    "sequence": "Leia entre a #531 e a #532. Ordem sugerida pela Marvel: Civil War #2 → Amazing #532–533 → demais.",
+    "why": {
+      "text": "Na Civil War #2, Peter revela a identidade em rede nacional. Sem ela, a #532 já começa com ele desmascarado.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "2 edições",
+    "brazilianEdition": "a confirmar: minissérie Civil War #1–2 sem edição Panini localizada nesta rodada. Contexto: o Marvel Saga Vol. 11 – Guerra Civil (Panini) traz Amazing Spider-Man #532–538 (ver bloco 3).",
+    "itemIds": [
+      698
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      32,
+      45,
+      46
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 15,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2003)",
+      531
+    ],
+    "links": [
+      [
+        "Arco completo (SoQuadrinhos)",
+        "https://hqs-soquadrinhos.blogspot.com/2011/08/guerra-civil-2006.html"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 79,
+    "after": 533,
+    "weight": "◐ Contexto",
+    "name": "Civil War #3–7 (2006–07)",
+    "sequence": "Depois da #533, leia a minissérie principal em sequência: Civil War #3 → #4 → #5 → #6 → #7. Esses cinco números ficam fora da contagem; a ordem acima é a dos capítulos da minissérie, enquanto os tie-ins têm uma intercalação bem mais longa.",
+    "why": {
+      "text": "Peter muda de lado e luta ao lado do Capitão América. Isso já aparece na Amazing (#532–538, 'Civil War: Amazing Spider-Man'). Um resumo do evento dá o contexto. Leia as edições só se quiser o evento todo. O peso é recomendação deste guia.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição dos capítulos de Civil War é sustentada; o próprio guia registrava que o peso Contexto era uma recomendação editorial, por isso ele ainda precisa de confirmação independente.",
+    "howMuch": "5 edições (um resumo basta)",
+    "brazilianEdition": "a confirmar: minissérie Civil War #3–7 sem edição Panini localizada nesta rodada. Contexto: o Marvel Saga Vol. 11 – Guerra Civil (Panini) traz Amazing Spider-Man #532–538 (ver bloco 3).",
+    "itemIds": [
+      701
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição sustentada; peso/relevância ainda sem confirmação independente suficiente",
+    "confirmationDetail": "A posição dos capítulos de Civil War é sustentada; o próprio guia registrava que o peso Contexto era uma recomendação editorial, por isso ele ainda precisa de confirmação independente.",
+    "src": [
+      32,
+      45,
+      46
+    ],
+    "just": "A posição dos capítulos de Civil War é sustentada; o próprio guia registrava que o peso Contexto era uma recomendação editorial, por isso ele ainda precisa de confirmação independente.",
+    "readingGroup": 16,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2003)",
+      533
+    ],
+    "links": [
+      [
+        "Arco completo (SoQuadrinhos)",
+        "https://hqs-soquadrinhos.blogspot.com/2011/08/guerra-civil-2006.html"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 80,
+    "after": 538,
+    "weight": "○ Opcional",
+    "name": "Back in Black (Homem-Aranha: De Volta ao Negro): Friendly Neighborhood Spider-Man #17–23 e Annual #1; Sensational Spider-Man (2006) #35–40 e Annual #1",
+    "sequence": "Ordem conferida para os capítulos listados: Friendly Neighborhood Spider-Man #17 → Sensational Spider-Man #35 → Amazing #539 → Friendly #18 → Sensational #36 → Amazing #540 → Friendly #19 → Sensational #37 → Amazing #541 → Friendly #20 → Friendly Annual #1 / Sensational Annual #1 → Friendly #21 → Sensational #38 → Amazing #542 → Friendly #22 → Sensational #39 → Friendly #23 → Sensational #40 → Amazing #543. GoCollect fixa os dois Annuals em maio, entre Friendly #20 e Friendly #21, mas não estabelece a ordem entre eles; por isso a situação permanece Parcial.",
+    "why": {
+      "text": "Complementa a Amazing #539–543: Peter, de traje preto, caça quem atirou na Tia May (na #538). A história principal está na Amazing. Leia estas só se quiser o arco inteiro.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "Parcial",
+    "howMuch": "15 edições",
+    "brazilianEdition": "Parcial: Marvel Saga Vol. 12 (Panini, jun/2021; título no Whakoom: A Volta do Uniforme Negro) reúne Amazing Spider-Man #539–543. Os tie-ins da coluna F (Friendly Neighborhood #17–23 e Annual #1; Sensational #35–40 e Annual #1) não constam nessa descrição: a confirmar.",
+    "itemIds": [
+      707,
+      708,
+      710,
+      711,
+      713,
+      714,
+      716,
+      717,
+      718,
+      719,
+      720,
+      722,
+      723,
+      724,
+      725
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Parcial",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "A estrutura do arco é sustentada, mas há incerteza fina na ordem dos Annuals; o peso Opcional também não está suficientemente sustentado pelas fontes.",
+    "src": [
+      64,
+      65
+    ],
+    "just": "A estrutura do arco é sustentada, mas há incerteza fina na ordem dos Annuals; o peso Opcional também não está suficientemente sustentado pelas fontes.",
+    "readingGroup": 17,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2003)",
+      538
+    ],
+    "links": [
+      [
+        "Arco completo (Mega)",
+        "https://mega.nz/folder/iIo2WJTS"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "not-met",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 81,
+    "after": 544,
+    "weight": "● Essencial",
+    "name": "One More Day (Um Dia a Mais)",
+    "sequence": "Intercale entre a #544 e a #545: Amazing #544 → Friendly Neighborhood Spider-Man #24 → Sensational Spider-Man (2006) #41 → Amazing #545.",
+    "why": {
+      "text": "O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. Abre a fase Brand New Day (#546 em diante).",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "2 edições fora",
+    "brazilianEdition": "Parcial: Marvel Saga Vol. 13 – Um Dia a Mais (Panini) já consta com Amazing #544–545 (ver bloco 3); Friendly Neighborhood #24 e Sensational #41 não foram confirmados nesse volume. Existe também a edição Salvat (2019), vol. 25 de A Coleção Definitiva do Homem-Aranha (184 pp.): Amazing #544–545, Friendly Neighborhood #24, Sensational #41 + Amazing #42–43 e Untold Tales #16 (registro bibliográfico).",
+    "itemIds": [
+      728
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      28
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 18,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2003)",
+      544
+    ],
+    "links": [
+      [
+        "Arco completo (Mega)",
+        "https://mega.nz/folder/iIo2WJTS"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 82,
+    "after": 545,
+    "weight": "○ Opcional",
+    "name": "Ultimate Spider-Man (2024) #1",
+    "sequence": "Leia depois de One More Day (#545).",
+    "why": {
+      "text": "Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado. Fica fora da continuidade principal. Não desfaz One More Day.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "Parcial",
+    "howMuch": "1 edição",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      730
+    ],
+    "category": "extra",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "A confirmar",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "As fontes sustentam que Ultimate Spider-Man (2024) é uma continuidade alternativa, coerente com peso Opcional; o ponto exato de encaixe após #545 é uma convenção do guia.",
+    "src": [
+      66,
+      67
+    ],
+    "just": "As fontes sustentam que Ultimate Spider-Man (2024) é uma continuidade alternativa, coerente com peso Opcional; o ponto exato de encaixe após #545 é uma convenção do guia.",
+    "readingGroup": 19,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2003)",
+      545
+    ],
+    "links": [
+      [
+        "HQ completa (SoQuadrinhos)",
+        "https://hqs-soquadrinhos.blogspot.com/2024/01/ultimate-homem-aranha-2024.html"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "not-met",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 83,
+    "after": 575,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #35 (2008)",
+    "sequence": "Leia depois da #575 e antes da #576.",
+    "why": {
+      "text": "Annual fora da linha principal; incluído no Lote D para manter a cronologia dos Annuals Amazing de 2008–2012.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1289
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      134
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 84,
+    "after": 598,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #36 (2009)",
+    "sequence": "Leia depois da #598 e antes da #599.",
+    "why": {
+      "text": "Annual fora da linha principal; incluído no Lote D para manter a cronologia dos Annuals Amazing de 2008–2012.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1290
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      135
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 85,
+    "after": 631,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #37 (2010)",
+    "sequence": "Leia depois da #631 e antes da #632.",
+    "why": {
+      "text": "Annual fora da linha principal; incluído no Lote D para manter a cronologia dos Annuals Amazing de 2008–2012.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1291
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      136
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 86,
+    "after": 657,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #38 (2011)",
+    "sequence": "Leia depois da #657 e antes da #658.",
+    "why": {
+      "text": "Annual fora da linha principal; incluído no Lote D para manter a cronologia dos Annuals Amazing de 2008–2012.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1292
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      137
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 87,
+    "after": 665,
+    "weight": "◐ Contexto",
+    "name": "Amazing Spider-Man: Infested #1 (2011)",
+    "sequence": "Leia entre a #665 e a #666.",
+    "why": {
+      "text": "É o prólogo da infestação que explode em Spider-Island (#666–673, dentro da contagem). Parte do prólogo também sai nas #659–660 e #662–665, que já estão na linha.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      851
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      47,
+      48
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 20,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2003)",
+      665
+    ],
+    "links": [],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 88,
+    "after": 668,
+    "weight": "○ Opcional",
+    "name": "Spider-Island: Deadly Foes #1 e Venom (2011) #6–8. Também há as minisséries Spider-Island: Cloak & Dagger, Deadly Hands of Kung Fu e The Amazing Spider-Girl",
+    "sequence": "Deadly Foes #1 e Venom #6: depois da #668. Venom #7: depois da #670. Venom #8: depois da #671.",
+    "why": {
+      "text": "O núcleo (#666–673) está na contagem e se entende sem tie-ins. Leia estes só para ampliar o evento.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "As fontes sustentam a posição dos tie-ins de Spider-Island, mas não sustentam de forma uniforme que todo o bloco selecionado seja Opcional.",
+    "howMuch": "4 edições (+ minisséries)",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      855,
+      856,
+      859,
+      861,
+      864,
+      865,
+      866
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição sustentada; peso Opcional do bloco completo ainda não é uniforme nas fontes",
+    "confirmationDetail": "As fontes sustentam a posição dos tie-ins de Spider-Island, mas não sustentam de forma uniforme que todo o bloco selecionado seja Opcional.",
+    "src": [
+      47,
+      48
+    ],
+    "just": "As fontes sustentam a posição dos tie-ins de Spider-Island, mas não sustentam de forma uniforme que todo o bloco selecionado seja Opcional.",
+    "readingGroup": 21,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2003)",
+      668
+    ],
+    "links": [
+      [
+        "Arco completo + Minisséries (Mega)",
+        "https://mega.nz/folder/iIo2WJTS"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 89,
+    "after": 686,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #39 (2012)",
+    "sequence": "Leia depois da #686 e antes da #687.",
+    "why": {
+      "text": "Annual fora da linha principal; incluído no Lote D para manter a cronologia dos Annuals Amazing de 2008–2012.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1293
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      138
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 90,
+    "after": 739,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #40 (2015)",
+    "sequence": "Leia depois da #739 e antes da #740.",
+    "why": {
+      "text": "Annual fora da linha principal; incluído no Lote E, seguindo a numeração legada dos Annuals Amazing.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição sustentada pelo GCD (on-sale 2014-12-10); peso Opcional ainda sem evidência suficiente para confirmação.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1294
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal.",
+    "src": [
+      139
+    ],
+    "just": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 91,
+    "after": 739,
+    "weight": "◐ Contexto",
+    "name": "Prelúdio de Spider-Verse, parte 1: Superior Spider-Man #32–33, Edge of Spider-Verse #1–5 e Spider-Man 2099 (2014) #5",
+    "sequence": "Bloco de leitura após a #739 e antes/ao redor das #740–741. Ordem escolhida pela lista oficial da Marvel: Superior Spider-Man #32 → Edge of Spider-Verse #1 → Edge #2 → Superior #33 → Edge #3 → Edge #4 → Amazing Spider-Man (2014) #7 (#740) → Edge #5 → Spider-Man 2099 #5 → Amazing Spider-Man (2014) #8 (#741). A HTLC e outros guias trocam algumas posições; a Marvel oficial tem prioridade por ser fonte primária.",
+    "why": {
+      "text": "As 7 edições originalmente listadas (Superior #32–33 + Edge #1–5) estão confirmadas, mas a Marvel também inclui Spider-Man 2099 #5 na sequência do prelúdio. Isso corrige o antigo ≈7 para 8 edições fora da linha. Superior #32–33 continuam sendo #732–733 na numeração histórica; o ponto de leitura deste bloco é posterior à #739.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "8 edições fora da linha (7 + Spider-Man 2099 #5)",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      933,
+      934,
+      935,
+      936,
+      937,
+      939,
+      940
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      49,
+      50
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 22,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2014)",
+      6
+    ],
+    "links": [
+      [
+        "Arco completo (SoQuadrinhos)",
+        "https://hqs-soquadrinhos.blogspot.com/2015/10/no-limiar-do-universo-aranha-2014.html"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 92,
+    "after": 742,
+    "weight": "◐ Contexto",
+    "name": "Spider-Verse, início do evento após a Amazing (2014) #8: Spider-Verse Team-Up #1 e Spider-Verse #1–2; tie-ins restantes são opcionais.",
+    "sequence": "Depois da Amazing (2014) #9 (#742), leia Spider-Verse Team-Up #1 → Spider-Verse #1 → Spider-Verse #2 → Amazing (2014) #10 (#743). A partir daí, siga a ordem oficial da Marvel para os tie-ins opcionais entre as #10–15.",
+    "why": {
+      "text": "A antiga conta ≈5 (+11) misturava o encerramento do prelúdio com o começo do evento. A Marvel inicia o evento propriamente dito na #9; fora da contagem, o bloco inicial tem Team-Up #1 + Spider-Verse #1–2. Os outros 12 tie-ins são classificados como opcionais por HTLC/Marvel.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "3 edições fora da linha + 12 tie-ins opcionais",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      943
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      49,
+      51
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 23,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2014)",
+      9
+    ],
+    "links": [
+      [
+        "Arco completo (SoQuadrinhos)",
+        "https://hqs-soquadrinhos.blogspot.com/2015/10/no-limiar-do-universo-aranha-2014.html"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 93,
+    "after": 751,
+    "weight": "◐ Contexto",
+    "name": "Secret Wars (2015) #1–9",
+    "sequence": "Depois da #751, leia Secret Wars (2015) #1 → #2 → #3 → #4 → #5 → #6 → #7 → #8 → #9; depois siga Renew Your Vows (#752–756) e o volume de 2015. A própria Marvel posiciona Secret Wars antes de Renew Your Vows no guia da fase.",
+    "why": {
+      "text": "A Marvel posiciona Secret Wars entre o fim do volume de 2014 e Renew Your Vows. Um resumo do evento basta. O peso é recomendação deste guia.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição de Secret Wars entre as fases é sustentada; o peso Contexto estava explicitamente registrado como recomendação do guia.",
+    "howMuch": "9 edições (um resumo basta)",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      953
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição sustentada; peso/relevância ainda sem confirmação independente suficiente",
+    "confirmationDetail": "A posição de Secret Wars entre as fases é sustentada; o peso Contexto estava explicitamente registrado como recomendação do guia.",
+    "src": [
+      50,
+      52
+    ],
+    "just": "A posição de Secret Wars entre as fases é sustentada; o peso Contexto estava explicitamente registrado como recomendação do guia.",
+    "readingGroup": 24,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2014)",
+      18
+    ],
+    "links": [
+      [
+        "Arco completo (SoQuadrinhos)",
+        "https://hqs-soquadrinhos.blogspot.com/2015/05/guerras-secretas-2015.html"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 94,
+    "after": 775,
+    "weight": "● Essencial",
+    "name": "The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem)",
+    "sequence": "Leia depois da #775, intercalando com a Amazing (2015) #20–24 (#776–780): Clone Conspiracy #1 → Amazing #20 → CC #2 → Amazing #21 → CC #3 → Amazing #22 → CC #4 → Amazing #23 → CC #5 → Amazing #24 → Omega #1.",
+    "why": {
+      "text": "As #20–24 da Amazing (2015) estão na contagem e acompanham a minissérie. A Marvel descreve assim, então a minissérie é o miolo do arco.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "6 edições fora (Clone Conspiracy #1–5 + Omega #1)",
+    "brazilianEdition": "Confirmado: O Espetacular Homem-Aranha Vol. 11 – A Conspiração do Clone (Panini, Nova Marvel Deluxe, capa dura, 272 pp., nov/2021) reúne Spider-Man: The Clone Conspiracy #1–5, Amazing Spider-Man (2015) #20–24 e Clone Conspiracy Omega #1. Os tie-ins de Silk e Prowler não constam na descrição.",
+    "itemIds": [
+      978,
+      984
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      53,
+      54
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 25,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2016)",
+      19
+    ],
+    "links": [
+      [
+        "Só Quadrinhos: Amazing (2015) #20–24",
+        "https://hqs-soquadrinhos.blogspot.com/2017/01/o-espantoso-homem-aranha-2016.html"
+      ],
+      [
+        "HQ Now: Omega #1",
+        "https://www.hq-now.com/hq-reader/25231/a-conspira-o-dos-clones/chapter/6/page/1"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 95,
+    "after": 776,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #41 (2017)",
+    "sequence": "Leia depois da #776 e antes da #777.",
+    "why": {
+      "text": "Annual fora da linha principal; publicado como Amazing Spider-Man Annual (2017) #1 e considerado Annual #41 na numeração Legacy.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1295
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      140
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 96,
+    "after": 795,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #42 (2018)",
+    "sequence": "Leia depois da #795 e antes da #796.",
+    "why": {
+      "text": "Annual de 2018; a data de venda o coloca entre #795 e #796 na sequência publicada.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1296
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      141
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 97,
+    "after": 804,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #43 (2018)",
+    "sequence": "Leia depois da #804 e antes da #805.",
+    "why": {
+      "text": "Annual de 2018 (legacy #43); publicado após Amazing #3 (804) e antes de Amazing #4 (805).",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1297
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      142
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 98,
+    "after": 816,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man (2018) #16.HU, #18.HU, #19.HU e #20.HU (tie-ins pontuados de Hunted)",
+    "sequence": "Após a #816, dentro de Hunted, a ordem conferida é: Amazing #16 (#817) → #16.HU → Amazing #17 (#818) → Amazing #18 (#819) → #18.HU → Amazing #19 (#820) → #19.HU → Amazing #20 (#821) → #20.HU → Amazing #21 (#822) → Amazing #22 (#823) → Amazing #23 (#824). Não existe #17.HU.",
+    "why": {
+      "text": "A história principal corre na Amazing; as .HU são tie-ins complementares e não entram na numeração histórica. A fonte de Hunted confirma as quatro edições pontuadas usadas neste guia.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "4 edições",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      1021,
+      1026,
+      1028,
+      1030
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      55
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 26,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2018)",
+      15
+    ],
+    "links": [
+      [
+        "Link do drive com os capítulos",
+        "https://drive.google.com/drive/folders/1Nqbm2J-yx12u8OknZjtIFwkMr75yVtoM?usp=drive_link"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 99,
+    "after": 816,
+    "weight": "○ Opcional",
+    "name": "Spider-Geddon #0–5 (2018) e tie-ins",
+    "sequence": "O evento Spider-Geddon #0–5 ocorre em 2018, antes de Hunted; o guia da fase de Nick Spencer o classifica como leitura opcional no início da fase, em paralelo à Amazing. Para este guia, o ponto de acesso permanece depois da #816, antes de Hunted, mas esse encaixe histórico específico não é dado como exato pela fonte.",
+    "why": {
+      "text": "A Amazing (2018) NÃO depende de Spider-Geddon para acompanhar a trama principal. A minissérie e os tie-ins seguem a saga dos Aranhas como material paralelo; a posição exata em relação a cada número da Amazing fica pendente.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "Parcial",
+    "howMuch": "6 edições",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      1022
+    ],
+    "category": "extra",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "A confirmar",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "A fonte classifica Spider-Geddon como leitura opcional, sustentando o peso; o encaixe exato depois da #816 continua sem confirmação.",
+    "src": [
+      68
+    ],
+    "just": "A fonte classifica Spider-Geddon como leitura opcional, sustentando o peso; o encaixe exato depois da #816 continua sem confirmação.",
+    "readingGroup": 27,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2018)",
+      15
+    ],
+    "links": [
+      [
+        "Arco completo (SoQuadrinhos)",
+        "https://hqs-soquadrinhos.blogspot.com/2019/01/aranha-gedon-2018.html"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "not-met",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 100,
+    "after": 845,
+    "weight": "◐ Contexto",
+    "name": "Amazing Spider-Man: Sins Rising Prelude (2020, one-shot)",
+    "sequence": "Ordem de Sins Rising: Amazing (2018) #44 → Prelude → #45–48 → The Sins of Norman Osborn → #49. Leia o Prelude depois da #44 (#845) e antes da #45 (#846).",
+    "why": {
+      "text": "Abre Sins Rising (Amazing 2018 #45–49 = #846–850). É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838).",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "O Espetacular Homem-Aranha (2019) Vol. 23 (Panini, fev/2021) — inclui Amazing Spider-Man (2018) #44–45 e Sins Rising Prelude (2020) #1, além de Spider-Man Annual (2019) #1 II.",
+    "itemIds": [
+      1055
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      56
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 28,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2018)",
+      44
+    ],
+    "links": [
+      [
+        "Arco completo (GoFile)",
+        "https://www.hq-now.com/hq-reader/32489/o-espetacular-homem-aranha-v5/chapter/44.1/page/1"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 101,
+    "after": 849,
+    "weight": "◐ Contexto",
+    "name": "Amazing Spider-Man: The Sins of Norman Osborn (2020, one-shot)",
+    "sequence": "Leia depois da #48 do volume de 2018 (#849). Entra antes da #49 (#850), segundo o How To Love Comics.",
+    "why": {
+      "text": "One-shot ligado a Sins Rising (Amazing 2018 #45–49).",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "Revista mensal O Espetacular Homem-Aranha (4ª série), nº 24 (mar/2021): inclui Os pecados de Norman Osborn.",
+    "itemIds": [
+      1060
+    ],
+    "category": "extra",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      56,
+      57
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 29,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2018)",
+      48
+    ],
+    "links": [
+      [
+        "Arco completo (GoFile)",
+        "https://www.hq-now.com/hq-reader/32489/o-espetacular-homem-aranha-v5/chapter/44.1/page/1"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 102,
+    "after": 850,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man (2018) #50.LR a #54.LR (tie-ins pontuados de Last Remains)",
+    "sequence": "Amazing Spider-Man (2018) #50.LR - #50 - #51.LR - #51 - #52.LR - #52 - #53.LR - #53 - #54.LR - #54 (tie-ins pontuados de Last Remains)",
+    "why": {
+      "text": "A história principal está na Amazing. As .LR são complementares e foram reunidas no 'Last Remains Companion'. Não contam na numeração.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "5 edições",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      1062,
+      1064,
+      1066,
+      1068,
+      1070
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      58,
+      59
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 30,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2018)",
+      49
+    ],
+    "links": [
+      [
+        "Link do drive com os capítulos",
+        "https://drive.google.com/drive/folders/1Nqbm2J-yx12u8OknZjtIFwkMr75yVtoM?usp=drive_link"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 103,
+    "after": 870,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual #44 (2021)",
+    "sequence": "Leia depois da #870 e antes da #871.",
+    "why": {
+      "text": "Annual de 2021, complementar ao período de Infinite Destinies; fora da numeração histórica.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1298
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      143
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 104,
+    "after": 912,
+    "weight": "● Essencial",
+    "name": "Dark Web Finale #1",
+    "sequence": "Leia depois da #18 do volume de 2022 (#912) e retome na #19 (#913).",
+    "why": {
+      "text": "É o desfecho de Dark Web.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      1131
+    ],
+    "category": "extra",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      60
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 31,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2022)",
+      18
+    ],
+    "links": [
+      [
+        "AMS v6 (2022) + Finale",
+        "https://gofile.io/d/TldFOBKr"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 105,
+    "after": 924,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual (2023) #1",
+    "sequence": "Leia depois da #924 e antes da #925.",
+    "why": {
+      "text": "Annual de 2023, complementar ao período de Contest of Chaos; fora da numeração histórica.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1299
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      144
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 106,
+    "after": 932,
+    "weight": "● Essencial",
+    "name": "Amazing Spider-Man: Gang War – First Strike #1 (2023)",
+    "sequence": "Leia depois da #38 do volume de 2022 (#932) e antes da #39 (#933). Essenciais, segundo o How To Love Comics: First Strike #1 e as #39–44 (#933–938, na contagem). As #37–38 mostram o prelúdio.",
+    "why": {
+      "text": "First Strike #1 abre o evento.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Confirmado",
+    "confirmationNote": "Posição e peso sustentados pelas fontes.",
+    "howMuch": "1 edição (+ opcionais)",
+    "brazilianEdition": "a confirmar",
+    "itemIds": [
+      1152,
+      1153,
+      1154,
+      1155,
+      1156,
+      1157,
+      1158
+    ],
+    "category": "event",
+    "newItem": false,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "confirmationDetail": "Posição e peso sustentados pelas fontes.",
+    "src": [
+      61
+    ],
+    "just": "Posição e peso sustentados pelas fontes.",
+    "readingGroup": 32,
+    "unavailable": false,
+    "where": [
+      "The Amazing Spider-Man (2022)",
+      38
+    ],
+    "links": [
+      [
+        "First Strike (GoFile)",
+        "https://gofile.io/d/iRyin1Ht"
+      ]
+    ],
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "evidence-led-80-20"
+    }
+  },
+  {
+    "n": 107,
+    "after": 946,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual (2024) #1",
+    "sequence": "Leia depois da #946 e antes da #947.",
+    "why": {
+      "text": "Annual de 2024 ligado a Infinity Watch; complementar à linha principal e fora da numeração histórica.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1300
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      145
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  },
+  {
+    "n": 108,
+    "after": 984,
+    "weight": "○ Opcional",
+    "name": "Amazing Spider-Man Annual (2026) #1",
+    "sequence": "Leia depois da #984 e antes da #985.",
+    "why": {
+      "text": "Annual de 2026, complementar à fase The Amazing Spider-Man (2025); fora da numeração histórica.",
+      "spoiler": "forte"
+    },
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "howMuch": "1 edição",
+    "brazilianEdition": "",
+    "itemIds": [
+      1301
+    ],
+    "category": "annual",
+    "newItem": true,
+    "special": "",
+    "positionEvidence": "Confirmada por fonte",
+    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
+    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "src": [
+      146
+    ],
+    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationCriteria": {
+      "position": "source-only",
+      "weight": "not-met"
+    }
+  }
+]

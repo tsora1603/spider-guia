@@ -1,0 +1,1418 @@
+{
+  "version": 1,
+  "capturedFrom": "Marco A antes da consolidação A.1",
+  "readings": [
+    {
+      "n": 1,
+      "after": 0,
+      "weight": "◐ Contexto",
+      "name": "Amazing Fantasy #15 (ago/1962)",
+      "unavailable": false,
+      "sequence": "Leia antes de começar a Amazing #1. Capítulo 00 do Drive Espantoso.",
+      "why": "É a origem: a picada da aranha, a perda do Tio Ben e a ideia de que grandes poderes trazem grandes responsabilidades. Fica fora da contagem porque sai antes da Amazing #1.",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição",
+      "where": null,
+      "links": [],
+      "itemIds": [
+        1
+      ],
+      "brazilianEdition": "O Espetacular Homem-Aranha Edição Definitiva Vol. 1 (Panini) — inclui Amazing Fantasy #15 e Amazing Spider-Man #1–19.",
+      "sourceRefs": [
+        37,
+        150
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 2,
+      "after": 61,
+      "weight": "◐ Contexto",
+      "name": "The Amazing Spider-Man Annual #5 (1968)",
+      "unavailable": false,
+      "sequence": "Leia depois da #61 e antes da #62.",
+      "why": "Peter descobre a verdade sobre Richard e Mary Parker e entende que seus pais eram agentes duplos. É um marco de desenvolvimento pessoal/familiar.",
+      "confirmation": "Parcial",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        61
+      ],
+      "links": [],
+      "itemIds": [
+        63
+      ],
+      "brazilianEdition": "Fonte: Comics Back Issues + GCD; posição cronológica depois da #61.",
+      "sourceRefs": [
+        62,
+        63
+      ],
+      "justification": "O peso Contexto é sustentado pela relevância familiar da história e pelas fontes consultadas; a posição permanece divergente entre referências (#61/#62), portanto o status geral continua Parcial."
+    },
+    {
+      "n": 3,
+      "after": 149,
+      "weight": "○ Opcional",
+      "name": "What If? (1977) #30 (publicada em 1981)",
+      "unavailable": true,
+      "sequence": "Leia depois do fim da primeira Saga do Clone (#143–149).",
+      "why": "Mostra o que teria acontecido se o clone de Peter tivesse vivido. É realidade alternativa. Leia só se quiser.",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        149
+      ],
+      "links": [],
+      "itemIds": [
+        152
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        124,
+        156,
+        20
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal."
+    },
+    {
+      "n": 4,
+      "after": 251,
+      "weight": "● Essencial",
+      "name": "Marvel Super Heroes Secret Wars (Guerras Secretas) #8 (dez/1984)",
+      "unavailable": false,
+      "sequence": "Leia antes de abrir a #252.",
+      "why": "A Amazing #252 (mai/1984) saiu antes e já mostra Peter de traje preto, sem explicar de onde veio. A Secret Wars #8 mostra o momento em que ele recebe o traje.",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição (evento todo: #1–12, opcional)",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        251
+      ],
+      "links": [
+        [
+          "Guerras Secretas",
+          "https://www.mediafire.com/file/i2yt34flnmkp02j/198412_Marvel_Super-Herois_Guerras_Secretas_008.cbr/file"
+        ]
+      ],
+      "itemIds": [
+        255
+      ],
+      "brazilianEdition": "Confirmado (edição antiga): a Panini publicou em 2007 um encadernado com a saga completa, Guerras Secretas (Secret Wars #1–12), segundo o Omelete; a #8 está nele. Edição atual e disponibilidade: não verificadas. A edição da Abril (1986–87) teve cortes na arte e nos roteiros.",
+      "sourceRefs": [
+        21
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância."
+    },
+    {
+      "n": 5,
+      "after": 251,
+      "weight": "○ Opcional",
+      "name": "Marvel Team-Up #141–150 e Annual #7; Peter Parker, The Spectacular Spider-Man #90–100; ASM Annual #20",
+      "unavailable": false,
+      "sequence": "Leia junto com a Saga do Traje Negro (#252–263). A ordem edição por edição está no How To Love Comics (ver Mais → Fontes).",
+      "why": "Amplia a Saga do Traje Negro. O essencial já está na Amazing: a descoberta de que o traje é vivo, na #258.",
+      "confirmation": "Confirmado",
+      "howMuch": "21 edições + annuals",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        251
+      ],
+      "links": [
+        [
+          "Marvel Team Up",
+          "https://hqs-soquadrinhos.blogspot.com/2011/08/marvel-team-up-1972.html"
+        ],
+        [
+          "AMS Annual #20",
+          "https://drive.google.com/file/d/1iftvFekVFgcrRueCT5jZX4NVa4nRTqxm/view?usp=drive_link"
+        ]
+      ],
+      "itemIds": [
+        256,
+        257,
+        258,
+        259
+      ],
+      "brazilianEdition": "",
+      "sourceRefs": [
+        21,
+        124,
+        151
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal."
+    },
+    {
+      "n": 6,
+      "after": 263,
+      "weight": "◐ Contexto",
+      "name": "Web of Spider-Man #1 (1985)",
+      "unavailable": false,
+      "sequence": "Leia depois da #263.",
+      "why": "A Saga do Traje Negro fecha nesta edição. A #264 ainda mostra Peter com um traje preto comum, não com o simbionte.",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        263
+      ],
+      "links": [
+        [
+          "Web of Spider",
+          "https://www.mediafire.com/file/8i456yc0b52tc5l/"
+        ]
+      ],
+      "itemIds": [
+        272
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        21
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 7,
+      "after": 272,
+      "weight": "◐ Contexto",
+      "name": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
+      "unavailable": false,
+      "sequence": "Leia depois da Amazing Spider-Man #272 e antes da #273.",
+      "why": "Peter e o Demolidor caçam o assassino de uma amiga policial. Mostra os limites morais de Peter. A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
+      "confirmation": "Confirmado",
+      "howMuch": "4 edições",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        272
+      ],
+      "links": [
+        [
+          "Arco completo (GoFile)",
+          "https://gofile.io/d/llaPQfHo%20jean%20dewolff"
+        ]
+      ],
+      "itemIds": [
+        278
+      ],
+      "brazilianEdition": "Confirmado",
+      "sourceRefs": [
+        69,
+        70,
+        71,
+        56
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 8,
+      "after": 292,
+      "weight": "● Essencial",
+      "name": "The Amazing Spider-Man Annual #21 (1987), o casamento",
+      "unavailable": false,
+      "sequence": "Leia depois da #292 (MJ aceita o pedido).",
+      "why": "O casamento acontece no Annual, fora da contagem. Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. É este casamento que One More Day apaga (#544–545).",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        292
+      ],
+      "links": [
+        [
+          "AMS Annual #21",
+          "https://www.mediafire.com/download/83knz3z28wrv5gn/O+Espantoso+Homem-Aranha+Anual+21+%28Lemuria%29.cbr"
+        ]
+      ],
+      "itemIds": [
+        303
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        22,
+        35,
+        38,
+        124,
+        151
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância."
+    },
+    {
+      "n": 9,
+      "after": 292,
+      "weight": "◐ Contexto",
+      "name": "The Spectacular Spider-Man Annual #7 (1987), a lua de mel",
+      "unavailable": false,
+      "sequence": "Leia depois do Annual #21 (casamento) e antes de A Última Caçada de Kraven.",
+      "why": "É a lua de mel de Peter e Mary Jane e dá continuidade imediata ao casamento, desenvolvendo o relacionamento no começo da vida de casados.",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        292
+      ],
+      "links": [],
+      "itemIds": [
+        304
+      ],
+      "brazilianEdition": "Fonte: Comics Back Issues + catálogo de The Wedding Saga; continuação do Annual #21.",
+      "sourceRefs": [
+        22,
+        39,
+        123,
+        153
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 10,
+      "after": 292,
+      "weight": "● Essencial",
+      "name": "A Última Caçada de Kraven (4 edições fora da Amazing)",
+      "unavailable": false,
+      "sequence": "Depois do casamento, leia nesta ordem: Web of Spider-Man #31 → Amazing #293 → Spectacular (1976) #131 → Web #32 → Amazing #294 → Spectacular #132.",
+      "why": "Só as duas edições da Amazing deixam o arco cortado. Mostra do que Peter é feito. Hunted (Amazing 2018, #16–23) remete a esta história.",
+      "confirmation": "Confirmado",
+      "howMuch": "4 edições fora (Web #31–32, Spectacular #131–132)",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        292
+      ],
+      "links": [
+        [
+          "Arco completo (SoQuadrinhos)",
+          "https://hqs-soquadrinhos.blogspot.com/2011/08/homem-aranha-ultima-cacada-de-kraven.html"
+        ]
+      ],
+      "itemIds": [
+        305
+      ],
+      "brazilianEdition": "Sem edição Panini localizada. Edição brasileira encontrada: Salvat (2013), O Espetacular Homem-Aranha – A última caçada de Kraven, vol. 9 da coleção de graphic novels Marvel, 168 pp.: Web of Spider-Man #31–32, Amazing #293–294 e Spectacular #131–132 (ficha do Skoob). Panini: a confirmar.",
+      "sourceRefs": [
+        22,
+        55
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância."
+    },
+    {
+      "n": 11,
+      "after": 377,
+      "weight": "○ Opcional",
+      "name": "Maximum Carnage (1993)",
+      "unavailable": false,
+      "sequence": "Ao chegar à #378, leia nesta ordem: Spider-Man Unlimited #1 → Web of Spider-Man #101 → Amazing #378 → Spider-Man (1990) #35 → Spectacular (1976) #201 → Web #102 → Amazing #379 → Spider-Man #36 → Spectacular #202 → Web #103 → Amazing #380 → Spider-Man #37 → Spectacular #203 → Unlimited #2.",
+      "why": "Só 3 dos 14 capítulos estão na Amazing (#378–380). Quer o arco completo? Siga a ordem indicada. Prefere a linha enxuta? Pule. Carnificina já estreou nas #361–363, dentro da contagem. Mas as três edições ficam com buracos de enredo.",
+      "confirmation": "Confirmado",
+      "howMuch": "11 edições fora (Amazing #378–380 já contam)",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        377
+      ],
+      "links": [
+        [
+          "Arco completo (GoFile)",
+          "https://gofile.io/d/XyblnkJo%20carnificina%20max%20anos%2090"
+        ]
+      ],
+      "itemIds": [
+        391
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        40,
+        41
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal."
+    },
+    {
+      "n": 12,
+      "after": 393,
+      "weight": "● Essencial",
+      "name": "Saga do Clone (1994–96), em Spectacular (1976), Web of Spider-Man, Spider-Man (1990), Spider-Man Unlimited e outras revistas",
+      "unavailable": false,
+      "sequence": "Ao chegar à #394, siga a ordem edição por edição em Ler → Saga do Clone (out/1994–dez/1996, #394–418). Entre a #406 e a #407 saíram The Amazing Scarlet Spider #1–2. Ao terminar, retome na #419.",
+      "why": "A Amazing alterna capítulos de crossovers com edições avulsas. Ler só a Amazing deixa lacunas.",
+      "confirmation": "Confirmado",
+      "howMuch": "=COUNTIF($S$59:$S$1284,\"Saga do Clone\") edições (blocos 1 a 6 de Ler → Saga do Clone)",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        393
+      ],
+      "links": [],
+      "itemIds": [
+        408,
+        409,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        422,
+        424,
+        425,
+        426,
+        427,
+        428,
+        430,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        449,
+        450,
+        451,
+        453,
+        454,
+        455,
+        456,
+        458,
+        459,
+        460,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        469,
+        470,
+        471,
+        472,
+        473,
+        475,
+        476,
+        477,
+        478,
+        479,
+        480,
+        482,
+        483,
+        484,
+        485,
+        486,
+        487,
+        488,
+        489,
+        490,
+        491,
+        492,
+        493,
+        494,
+        495,
+        496,
+        497,
+        498,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        524,
+        525,
+        526,
+        528,
+        529,
+        530,
+        532,
+        533,
+        534,
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542,
+        543,
+        545,
+        546,
+        547,
+        548,
+        549,
+        551,
+        552,
+        553,
+        554,
+        555,
+        557,
+        558,
+        559,
+        561,
+        562,
+        563,
+        564,
+        565,
+        567,
+        568,
+        569,
+        570,
+        572,
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        580,
+        581,
+        582
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        124,
+        20
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância."
+    },
+    {
+      "n": 13,
+      "after": 440,
+      "weight": "◐ Contexto",
+      "name": "The Gathering of Five / The Final Chapter (1998)",
+      "unavailable": false,
+      "sequence": "Ordem confirmada: Sensational Spider-Man #32 → Amazing #440 → Spider-Man #96 → Spectacular #262 → Sensational Spider-Man #33 → Amazing #441 → Spider-Man #97 → Spectacular #263 → Spider-Man #98. Na aba principal, o primeiro bloco entra depois da #440 e o segundo continua depois da #441.",
+      "why": "A #441 não fecha a história. O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. Só depois começa o volume de 1999 (#442). A verdadeira Tia May reaparece aqui (ver Jornada).",
+      "confirmation": "Confirmado",
+      "howMuch": "3 edições (+4 de prelúdio)",
+      "where": [
+        "The Amazing Spider-Man (1963)",
+        440
+      ],
+      "links": [
+        [
+          "Arco completo (SoQuadrinhos)",
+          "https://hqs-soquadrinhos.blogspot.com/2011/08/homem-aranha-reuniao-dos-cinco-1998.html"
+        ]
+      ],
+      "itemIds": [
+        605
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        27,
+        42
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 14,
+      "after": 524,
+      "weight": "◐ Contexto",
+      "name": "The Other (2005–06)",
+      "unavailable": false,
+      "sequence": "Ao chegar à #525, leia nesta ordem: Friendly Neighborhood Spider-Man (2005) #1 → Marvel Knights Spider-Man #19 → Amazing (1999) #525 → Friendly #2 → Marvel Knights #20 → Amazing #526 → Friendly #3 → Marvel Knights #21 → Amazing #527 → Friendly #4 → Marvel Knights #22 → Amazing #528.",
+      "why": "Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da Jornada lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4.",
+      "confirmation": "Confirmado",
+      "howMuch": "8 edições fora",
+      "where": [
+        "The Amazing Spider-Man (2003)",
+        524
+      ],
+      "links": [
+        [
+          "Arco completo (Mega)",
+          "https://mega.nz/folder/iIo2WJTS"
+        ]
+      ],
+      "itemIds": [
+        690
+      ],
+      "brazilianEdition": "Parcial: o Marvel Saga (Panini) tem 'O Outro – Parte Um' (vol.9) e 'O Outro – Parte 2' (vol.10), pelos títulos no Whakoom. A faixa de cada volume (Friendly Neighborhood #1–4, Marvel Knights #19–22, Amazing #525–528) não foi conferida em descrição oficial: a confirmar.",
+      "sourceRefs": [
+        43,
+        44
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 15,
+      "after": 531,
+      "weight": "● Essencial",
+      "name": "Civil War (Guerra Civil) #1–2 (2006)",
+      "unavailable": false,
+      "sequence": "Leia entre a #531 e a #532. Ordem sugerida pela Marvel: Civil War #2 → Amazing #532–533 → demais.",
+      "why": "Na Civil War #2, Peter revela a identidade em rede nacional. Sem ela, a #532 já começa com ele desmascarado.",
+      "confirmation": "Confirmado",
+      "howMuch": "2 edições",
+      "where": [
+        "The Amazing Spider-Man (2003)",
+        531
+      ],
+      "links": [
+        [
+          "Arco completo (SoQuadrinhos)",
+          "https://hqs-soquadrinhos.blogspot.com/2011/08/guerra-civil-2006.html"
+        ]
+      ],
+      "itemIds": [
+        698
+      ],
+      "brazilianEdition": "a confirmar: minissérie Civil War #1–2 sem edição Panini localizada nesta rodada. Contexto: o Marvel Saga Vol. 11 – Guerra Civil (Panini) traz Amazing Spider-Man #532–538 (ver bloco 3).",
+      "sourceRefs": [
+        45,
+        46,
+        32
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância."
+    },
+    {
+      "n": 16,
+      "after": 533,
+      "weight": "◐ Contexto",
+      "name": "Civil War #3–7 (2006–07)",
+      "unavailable": false,
+      "sequence": "Depois da #533, leia a minissérie principal em sequência: Civil War #3 → #4 → #5 → #6 → #7. Esses cinco números ficam fora da contagem; a ordem acima é a dos capítulos da minissérie, enquanto os tie-ins têm uma intercalação bem mais longa.",
+      "why": "Peter muda de lado e luta ao lado do Capitão América. Isso já aparece na Amazing (#532–538, 'Civil War: Amazing Spider-Man'). Um resumo do evento dá o contexto. Leia as edições só se quiser o evento todo. O peso é recomendação deste guia.",
+      "confirmation": "Confirmado",
+      "howMuch": "5 edições (um resumo basta)",
+      "where": [
+        "The Amazing Spider-Man (2003)",
+        533
+      ],
+      "links": [
+        [
+          "Arco completo (SoQuadrinhos)",
+          "https://hqs-soquadrinhos.blogspot.com/2011/08/guerra-civil-2006.html"
+        ]
+      ],
+      "itemIds": [
+        701
+      ],
+      "brazilianEdition": "a confirmar: minissérie Civil War #3–7 sem edição Panini localizada nesta rodada. Contexto: o Marvel Saga Vol. 11 – Guerra Civil (Panini) traz Amazing Spider-Man #532–538 (ver bloco 3).",
+      "sourceRefs": [
+        45,
+        46,
+        32
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 17,
+      "after": 538,
+      "weight": "○ Opcional",
+      "name": "Back in Black (Homem-Aranha: De Volta ao Negro): Friendly Neighborhood Spider-Man #17–23 e Annual #1; Sensational Spider-Man (2006) #35–40 e Annual #1",
+      "unavailable": false,
+      "sequence": "Ordem conferida para os capítulos listados: Friendly Neighborhood Spider-Man #17 → Sensational Spider-Man #35 → Amazing #539 → Friendly #18 → Sensational #36 → Amazing #540 → Friendly #19 → Sensational #37 → Amazing #541 → Friendly #20 → Friendly Annual #1 / Sensational Annual #1 → Friendly #21 → Sensational #38 → Amazing #542 → Friendly #22 → Sensational #39 → Friendly #23 → Sensational #40 → Amazing #543. GoCollect fixa os dois Annuals em maio, entre Friendly #20 e Friendly #21, mas não estabelece a ordem entre eles; por isso a situação permanece Parcial.",
+      "why": "Complementa a Amazing #539–543: Peter, de traje preto, caça quem atirou na Tia May (na #538). A história principal está na Amazing. Leia estas só se quiser o arco inteiro.",
+      "confirmation": "Parcial",
+      "howMuch": "15 edições",
+      "where": [
+        "The Amazing Spider-Man (2003)",
+        538
+      ],
+      "links": [
+        [
+          "Arco completo (Mega)",
+          "https://mega.nz/folder/iIo2WJTS"
+        ]
+      ],
+      "itemIds": [
+        707,
+        708,
+        710,
+        711,
+        713,
+        714,
+        716,
+        717,
+        718,
+        719,
+        720,
+        722,
+        723,
+        724,
+        725
+      ],
+      "brazilianEdition": "",
+      "sourceRefs": [
+        64,
+        65
+      ],
+      "justification": "As fontes sustentam a composição de Back in Black e o caráter complementar destas revistas, mas a ordem fina dos Annuals diverge; como a posição não é 100% determinada, o status permanece Parcial."
+    },
+    {
+      "n": 18,
+      "after": 544,
+      "weight": "● Essencial",
+      "name": "One More Day (Um Dia a Mais)",
+      "unavailable": false,
+      "sequence": "Intercale entre a #544 e a #545: Amazing #544 → Friendly Neighborhood Spider-Man #24 → Sensational Spider-Man (2006) #41 → Amazing #545.",
+      "why": "O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. Abre a fase Brand New Day (#546 em diante).",
+      "confirmation": "Confirmado",
+      "howMuch": "2 edições fora",
+      "where": [
+        "The Amazing Spider-Man (2003)",
+        544
+      ],
+      "links": [
+        [
+          "Arco completo (Mega)",
+          "https://mega.nz/folder/iIo2WJTS"
+        ]
+      ],
+      "itemIds": [
+        728
+      ],
+      "brazilianEdition": "Parcial: Marvel Saga Vol. 13 – Um Dia a Mais (Panini) já consta com Amazing #544–545 (ver bloco 3); Friendly Neighborhood #24 e Sensational #41 não foram confirmados nesse volume. Existe também a edição Salvat (2019), vol. 25 de A Coleção Definitiva do Homem-Aranha (184 pp.): Amazing #544–545, Friendly Neighborhood #24, Sensational #41 + Amazing #42–43 e Untold Tales #16 (registro bibliográfico).",
+      "sourceRefs": [
+        28
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância."
+    },
+    {
+      "n": 19,
+      "after": 545,
+      "weight": "○ Opcional",
+      "name": "Ultimate Spider-Man (2024) #1",
+      "unavailable": false,
+      "sequence": "Leia depois de One More Day (#545).",
+      "why": "Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado. Fica fora da continuidade principal. Não desfaz One More Day.",
+      "confirmation": "Parcial",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (2003)",
+        545
+      ],
+      "links": [
+        [
+          "HQ completa (SoQuadrinhos)",
+          "https://hqs-soquadrinhos.blogspot.com/2024/01/ultimate-homem-aranha-2024.html"
+        ]
+      ],
+      "itemIds": [
+        730
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        66,
+        67
+      ],
+      "justification": "As fontes sustentam o peso Opcional por se tratar de uma continuidade alternativa. O ponto exato de encaixe na linha principal é uma convenção do guia e não é confirmado por fonte, portanto o status permanece Parcial."
+    },
+    {
+      "n": 20,
+      "after": 665,
+      "weight": "◐ Contexto",
+      "name": "Amazing Spider-Man: Infested #1 (2011)",
+      "unavailable": false,
+      "sequence": "Leia entre a #665 e a #666.",
+      "why": "É o prólogo da infestação que explode em Spider-Island (#666–673, dentro da contagem). Parte do prólogo também sai nas #659–660 e #662–665, que já estão na linha.",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (2003)",
+        665
+      ],
+      "links": [],
+      "itemIds": [
+        851
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        47,
+        48
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 21,
+      "after": 668,
+      "weight": "○ Opcional",
+      "name": "Spider-Island: Deadly Foes #1 e Venom (2011) #6–8. Também há as minisséries Spider-Island: Cloak & Dagger, Deadly Hands of Kung Fu e The Amazing Spider-Girl",
+      "unavailable": false,
+      "sequence": "Deadly Foes #1 e Venom #6: depois da #668. Venom #7: depois da #670. Venom #8: depois da #671.",
+      "why": "O núcleo (#666–673) está na contagem e se entende sem tie-ins. Leia estes só para ampliar o evento.",
+      "confirmation": "Confirmado",
+      "howMuch": "4 edições (+ minisséries)",
+      "where": [
+        "The Amazing Spider-Man (2003)",
+        668
+      ],
+      "links": [
+        [
+          "Arco completo + Minisséries (Mega)",
+          "https://mega.nz/folder/iIo2WJTS"
+        ]
+      ],
+      "itemIds": [
+        855,
+        856,
+        859,
+        861,
+        864,
+        865,
+        866
+      ],
+      "brazilianEdition": "",
+      "sourceRefs": [
+        47,
+        48
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal."
+    },
+    {
+      "n": 22,
+      "after": 739,
+      "weight": "◐ Contexto",
+      "name": "Prelúdio de Spider-Verse, parte 1: Superior Spider-Man #32–33, Edge of Spider-Verse #1–5 e Spider-Man 2099 (2014) #5",
+      "unavailable": false,
+      "sequence": "Bloco de leitura após a #739 e antes/ao redor das #740–741. Ordem escolhida pela lista oficial da Marvel: Superior Spider-Man #32 → Edge of Spider-Verse #1 → Edge #2 → Superior #33 → Edge #3 → Edge #4 → Amazing Spider-Man (2014) #7 (#740) → Edge #5 → Spider-Man 2099 #5 → Amazing Spider-Man (2014) #8 (#741). A HTLC e outros guias trocam algumas posições; a Marvel oficial tem prioridade por ser fonte primária.",
+      "why": "As 7 edições originalmente listadas (Superior #32–33 + Edge #1–5) estão confirmadas, mas a Marvel também inclui Spider-Man 2099 #5 na sequência do prelúdio. Isso corrige o antigo ≈7 para 8 edições fora da linha. Superior #32–33 continuam sendo #732–733 na numeração histórica; o ponto de leitura deste bloco é posterior à #739.",
+      "confirmation": "Confirmado",
+      "howMuch": "8 edições fora da linha (7 + Spider-Man 2099 #5)",
+      "where": [
+        "The Amazing Spider-Man (2014)",
+        6
+      ],
+      "links": [
+        [
+          "Arco completo (SoQuadrinhos)",
+          "https://hqs-soquadrinhos.blogspot.com/2015/10/no-limiar-do-universo-aranha-2014.html"
+        ]
+      ],
+      "itemIds": [
+        933,
+        934,
+        935,
+        936,
+        937,
+        939,
+        940
+      ],
+      "brazilianEdition": "",
+      "sourceRefs": [
+        49,
+        50
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 23,
+      "after": 742,
+      "weight": "◐ Contexto",
+      "name": "Spider-Verse, início do evento após a Amazing (2014) #8: Spider-Verse Team-Up #1 e Spider-Verse #1–2; tie-ins restantes são opcionais.",
+      "unavailable": false,
+      "sequence": "Depois da Amazing (2014) #9 (#742), leia Spider-Verse Team-Up #1 → Spider-Verse #1 → Spider-Verse #2 → Amazing (2014) #10 (#743). A partir daí, siga a ordem oficial da Marvel para os tie-ins opcionais entre as #10–15.",
+      "why": "A antiga conta ≈5 (+11) misturava o encerramento do prelúdio com o começo do evento. A Marvel inicia o evento propriamente dito na #9; fora da contagem, o bloco inicial tem Team-Up #1 + Spider-Verse #1–2. Os outros 12 tie-ins são classificados como opcionais por HTLC/Marvel.",
+      "confirmation": "Confirmado",
+      "howMuch": "3 edições fora da linha + 12 tie-ins opcionais",
+      "where": [
+        "The Amazing Spider-Man (2014)",
+        9
+      ],
+      "links": [
+        [
+          "Arco completo (SoQuadrinhos)",
+          "https://hqs-soquadrinhos.blogspot.com/2015/10/no-limiar-do-universo-aranha-2014.html"
+        ]
+      ],
+      "itemIds": [
+        943
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        49,
+        51
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 24,
+      "after": 751,
+      "weight": "◐ Contexto",
+      "name": "Secret Wars (2015) #1–9",
+      "unavailable": false,
+      "sequence": "Depois da #751, leia Secret Wars (2015) #1 → #2 → #3 → #4 → #5 → #6 → #7 → #8 → #9; depois siga Renew Your Vows (#752–756) e o volume de 2015. A própria Marvel posiciona Secret Wars antes de Renew Your Vows no guia da fase.",
+      "why": "A Marvel posiciona Secret Wars entre o fim do volume de 2014 e Renew Your Vows. Um resumo do evento basta. O peso é recomendação deste guia.",
+      "confirmation": "Confirmado",
+      "howMuch": "9 edições (um resumo basta)",
+      "where": [
+        "The Amazing Spider-Man (2014)",
+        18
+      ],
+      "links": [
+        [
+          "Arco completo (SoQuadrinhos)",
+          "https://hqs-soquadrinhos.blogspot.com/2015/05/guerras-secretas-2015.html"
+        ]
+      ],
+      "itemIds": [
+        953
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        52,
+        50
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 25,
+      "after": 775,
+      "weight": "● Essencial",
+      "name": "The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem)",
+      "unavailable": false,
+      "sequence": "Leia depois da #775, intercalando com a Amazing (2015) #20–24 (#776–780): Clone Conspiracy #1 → Amazing #20 → CC #2 → Amazing #21 → CC #3 → Amazing #22 → CC #4 → Amazing #23 → CC #5 → Amazing #24 → Omega #1.",
+      "why": "As #20–24 da Amazing (2015) estão na contagem e acompanham a minissérie. A Marvel descreve assim, então a minissérie é o miolo do arco.",
+      "confirmation": "Confirmado",
+      "howMuch": "6 edições fora (Clone Conspiracy #1–5 + Omega #1)",
+      "where": [
+        "The Amazing Spider-Man (2016)",
+        19
+      ],
+      "links": [
+        [
+          "Só Quadrinhos: Amazing (2015) #20–24",
+          "https://hqs-soquadrinhos.blogspot.com/2017/01/o-espantoso-homem-aranha-2016.html"
+        ],
+        [
+          "HQ Now: Omega #1",
+          "https://www.hq-now.com/hq-reader/25231/a-conspira-o-dos-clones/chapter/6/page/1"
+        ]
+      ],
+      "itemIds": [
+        978,
+        984
+      ],
+      "brazilianEdition": "",
+      "sourceRefs": [
+        53,
+        54
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância."
+    },
+    {
+      "n": 26,
+      "after": 816,
+      "weight": "○ Opcional",
+      "name": "Amazing Spider-Man (2018) #16.HU, #18.HU, #19.HU e #20.HU (tie-ins pontuados de Hunted)",
+      "unavailable": false,
+      "sequence": "Após a #816, dentro de Hunted, a ordem conferida é: Amazing #16 (#817) → #16.HU → Amazing #17 (#818) → Amazing #18 (#819) → #18.HU → Amazing #19 (#820) → #19.HU → Amazing #20 (#821) → #20.HU → Amazing #21 (#822) → Amazing #22 (#823) → Amazing #23 (#824). Não existe #17.HU.",
+      "why": "A história principal corre na Amazing; as .HU são tie-ins complementares e não entram na numeração histórica. A fonte de Hunted confirma as quatro edições pontuadas usadas neste guia.",
+      "confirmation": "Confirmado",
+      "howMuch": "4 edições",
+      "where": [
+        "The Amazing Spider-Man (2018)",
+        15
+      ],
+      "links": [
+        [
+          "Link do drive com os capítulos",
+          "https://drive.google.com/drive/folders/1Nqbm2J-yx12u8OknZjtIFwkMr75yVtoM?usp=drive_link"
+        ]
+      ],
+      "itemIds": [
+        1021,
+        1026,
+        1028,
+        1030
+      ],
+      "brazilianEdition": "",
+      "sourceRefs": [
+        55
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal."
+    },
+    {
+      "n": 27,
+      "after": 816,
+      "weight": "○ Opcional",
+      "name": "Spider-Geddon #0–5 (2018) e tie-ins",
+      "unavailable": false,
+      "sequence": "O evento Spider-Geddon #0–5 ocorre em 2018, antes de Hunted; o guia da fase de Nick Spencer o classifica como leitura opcional no início da fase, em paralelo à Amazing. Para este guia, o ponto de acesso permanece depois da #816, antes de Hunted, mas esse encaixe histórico específico não é dado como exato pela fonte.",
+      "why": "A Amazing (2018) NÃO depende de Spider-Geddon para acompanhar a trama principal. A minissérie e os tie-ins seguem a saga dos Aranhas como material paralelo; a posição exata em relação a cada número da Amazing fica pendente.",
+      "confirmation": "Parcial",
+      "howMuch": "6 edições",
+      "where": [
+        "The Amazing Spider-Man (2018)",
+        15
+      ],
+      "links": [
+        [
+          "Arco completo (SoQuadrinhos)",
+          "https://hqs-soquadrinhos.blogspot.com/2019/01/aranha-gedon-2018.html"
+        ]
+      ],
+      "itemIds": [
+        1022
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        68
+      ],
+      "justification": "A fonte sustenta Spider-Geddon como leitura opcional/paralela, mas não fixa o encaixe exato em relação à Amazing; a posição permanece não confirmada e o status continua Parcial."
+    },
+    {
+      "n": 28,
+      "after": 845,
+      "weight": "◐ Contexto",
+      "name": "Amazing Spider-Man: Sins Rising Prelude (2020, one-shot)",
+      "unavailable": false,
+      "sequence": "Ordem de Sins Rising: Amazing (2018) #44 → Prelude → #45–48 → The Sins of Norman Osborn → #49. Leia o Prelude depois da #44 (#845) e antes da #45 (#846).",
+      "why": "Abre Sins Rising (Amazing 2018 #45–49 = #846–850). É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838).",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (2018)",
+        44
+      ],
+      "links": [
+        [
+          "Arco completo (GoFile)",
+          "https://www.hq-now.com/hq-reader/32489/o-espetacular-homem-aranha-v5/chapter/44.1/page/1"
+        ]
+      ],
+      "itemIds": [
+        1055
+      ],
+      "brazilianEdition": "O Espetacular Homem-Aranha (2019) Vol. 23 (Panini, fev/2021) — inclui Amazing Spider-Man (2018) #44–45 e Sins Rising Prelude (2020) #1, além de Spider-Man Annual (2019) #1 II.",
+      "sourceRefs": [
+        56
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 29,
+      "after": 849,
+      "weight": "◐ Contexto",
+      "name": "Amazing Spider-Man: The Sins of Norman Osborn (2020, one-shot)",
+      "unavailable": false,
+      "sequence": "Leia depois da #48 do volume de 2018 (#849). Entra antes da #49 (#850), segundo o How To Love Comics.",
+      "why": "One-shot ligado a Sins Rising (Amazing 2018 #45–49).",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (2018)",
+        48
+      ],
+      "links": [
+        [
+          "Arco completo (GoFile)",
+          "https://www.hq-now.com/hq-reader/32489/o-espetacular-homem-aranha-v5/chapter/44.1/page/1"
+        ]
+      ],
+      "itemIds": [
+        1060
+      ],
+      "brazilianEdition": "Revista mensal O Espetacular Homem-Aranha (4ª série), nº 24 (mar/2021): inclui Os pecados de Norman Osborn.",
+      "sourceRefs": [
+        56,
+        57
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Contexto é sustentado pelo conteúdo e pelas conexões narrativas documentadas; a dedução editorial limita-se a graduar essa relevância."
+    },
+    {
+      "n": 30,
+      "after": 850,
+      "weight": "○ Opcional",
+      "name": "Amazing Spider-Man (2018) #50.LR a #54.LR (tie-ins pontuados de Last Remains)",
+      "unavailable": false,
+      "sequence": "Amazing Spider-Man (2018) #50.LR - #50 - #51.LR - #51 - #52.LR - #52 - #53.LR - #53 - #54.LR - #54 (tie-ins pontuados de Last Remains)",
+      "why": "A história principal está na Amazing. As .LR são complementares e foram reunidas no 'Last Remains Companion'. Não contam na numeração.",
+      "confirmation": "Confirmado",
+      "howMuch": "5 edições",
+      "where": [
+        "The Amazing Spider-Man (2018)",
+        49
+      ],
+      "links": [
+        [
+          "Link do drive com os capítulos",
+          "https://drive.google.com/drive/folders/1Nqbm2J-yx12u8OknZjtIFwkMr75yVtoM?usp=drive_link"
+        ]
+      ],
+      "itemIds": [
+        1062,
+        1064,
+        1066,
+        1068,
+        1070
+      ],
+      "brazilianEdition": "",
+      "sourceRefs": [
+        58,
+        59
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal."
+    },
+    {
+      "n": 31,
+      "after": 912,
+      "weight": "● Essencial",
+      "name": "Dark Web Finale #1",
+      "unavailable": false,
+      "sequence": "Leia depois da #18 do volume de 2022 (#912) e retome na #19 (#913).",
+      "why": "É o desfecho de Dark Web.",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição",
+      "where": [
+        "The Amazing Spider-Man (2022)",
+        18
+      ],
+      "links": [
+        [
+          "AMS v6 (2022) + Finale",
+          "https://gofile.io/d/TldFOBKr"
+        ]
+      ],
+      "itemIds": [
+        1131
+      ],
+      "brazilianEdition": "a confirmar",
+      "sourceRefs": [
+        60
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância."
+    },
+    {
+      "n": 32,
+      "after": 932,
+      "weight": "● Essencial",
+      "name": "Amazing Spider-Man: Gang War – First Strike #1 (2023)",
+      "unavailable": false,
+      "sequence": "Leia depois da #38 do volume de 2022 (#932) e antes da #39 (#933). Essenciais, segundo o How To Love Comics: First Strike #1 e as #39–44 (#933–938, na contagem). As #37–38 mostram o prelúdio.",
+      "why": "First Strike #1 abre o evento.",
+      "confirmation": "Confirmado",
+      "howMuch": "1 edição (+ opcionais)",
+      "where": [
+        "The Amazing Spider-Man (2022)",
+        38
+      ],
+      "links": [
+        [
+          "First Strike (GoFile)",
+          "https://gofile.io/d/iRyin1Ht"
+        ]
+      ],
+      "itemIds": [
+        1152,
+        1153,
+        1154,
+        1155,
+        1156,
+        1157,
+        1158
+      ],
+      "brazilianEdition": "",
+      "sourceRefs": [
+        61
+      ],
+      "justification": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância."
+    }
+  ],
+  "extraDetailsById": {
+    "1": {
+      "ordem": "Leia antes de começar a Amazing #1. Capítulo 00 do Drive Espantoso.",
+      "porque": "É a origem: a picada da aranha, a perda do Tio Ben e a ideia de que grandes poderes trazem grandes responsabilidades. Fica fora da contagem porque sai antes da Amazing #1.",
+      "quanto": "1 edição",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes: Amazing Fantasy #15 é a origem e primeira aparição de Spider-Man, anterior à Amazing #1."
+    },
+    "63": {
+      "ordem": "Leia depois da #61 e antes da #62.",
+      "porque": "Peter descobre a verdade sobre Richard e Mary Parker e entende que seus pais eram agentes duplos. É um marco de desenvolvimento pessoal/familiar.",
+      "quanto": "1 edição",
+      "conf": "Parcial",
+      "confirmationDetail": "Peso sustentado pelo conteúdo e por referência de leituras indispensáveis; a posição ainda diverge entre referências (#61/#62), portanto o status geral permanece Parcial."
+    },
+    "152": {
+      "ordem": "Leia depois do fim da primeira Saga do Clone (#143–149).",
+      "porque": "Mostra o que teria acontecido se o clone de Peter tivesse vivido. É realidade alternativa. Leia só se quiser.",
+      "quanto": "1 edição",
+      "conf": "Parcial",
+      "confirmationDetail": "A cronologia da Gabbing Geek sustenta a posição relativa; o peso Opcional ainda não tem suporte editorial suficiente nas fontes consultadas."
+    },
+    "255": {
+      "ordem": "Leia antes de abrir a #252.",
+      "porque": "A Amazing #252 (mai/1984) saiu antes e já mostra Peter de traje preto, sem explicar de onde veio. A Secret Wars #8 mostra o momento em que ele recebe o traje.",
+      "quanto": "1 edição (evento todo: #1–12, opcional)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "256": {
+      "ordem": "Leia junto com a Saga do Traje Negro (#252–263). A ordem edição por edição está no How To Love Comics (ver Mais → Fontes).",
+      "porque": "Amplia a Saga do Traje Negro. O essencial já está na Amazing: a descoberta de que o traje é vivo, na #258.",
+      "quanto": "21 edições + annuals",
+      "conf": "Parcial",
+      "confirmationDetail": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional é recomendação do guia e não está explicitamente sustentado pela fonte."
+    },
+    "257": {
+      "ordem": "Leia junto com a Saga do Traje Negro (#252–263). A ordem edição por edição está no How To Love Comics (ver Mais → Fontes).",
+      "porque": "Amplia a Saga do Traje Negro. O essencial já está na Amazing: a descoberta de que o traje é vivo, na #258.",
+      "quanto": "21 edições + annuals",
+      "conf": "Parcial",
+      "confirmationDetail": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional é recomendação do guia e não está explicitamente sustentado pela fonte."
+    },
+    "258": {
+      "ordem": "Leia junto com a Saga do Traje Negro (#252–263). A ordem edição por edição está no How To Love Comics (ver Mais → Fontes).",
+      "porque": "Amplia a Saga do Traje Negro. O essencial já está na Amazing: a descoberta de que o traje é vivo, na #258.",
+      "quanto": "21 edições + annuals",
+      "conf": "Parcial",
+      "confirmationDetail": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional é recomendação do guia e não está explicitamente sustentado pela fonte."
+    },
+    "259": {
+      "ordem": "Leia junto com a Saga do Traje Negro (#252–263). A ordem edição por edição está no How To Love Comics (ver Mais → Fontes).",
+      "porque": "Amplia a Saga do Traje Negro. O essencial já está na Amazing: a descoberta de que o traje é vivo, na #258.",
+      "quanto": "21 edições + annuals",
+      "conf": "Parcial",
+      "confirmationDetail": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional é recomendação do guia e não está explicitamente sustentado pela fonte."
+    },
+    "272": {
+      "ordem": "Leia depois da #263.",
+      "porque": "A Saga do Traje Negro fecha nesta edição. A #264 ainda mostra Peter com um traje preto comum, não com o simbionte.",
+      "quanto": "1 edição",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "278": {
+      "ordem": "Leia depois da Amazing Spider-Man #272 e antes da #273.",
+      "porque": "Peter e o Demolidor caçam o assassino de uma amiga policial. Mostra os limites morais de Peter. A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
+      "quanto": "4 edições",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "303": {
+      "ordem": "Leia depois da #292 (MJ aceita o pedido).",
+      "porque": "O casamento acontece no Annual, fora da contagem. Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. É este casamento que One More Day apaga (#544–545).",
+      "quanto": "1 edição",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "304": {
+      "ordem": "Leia depois do Annual #21 (casamento) e antes de A Última Caçada de Kraven.",
+      "porque": "É a lua de mel de Peter e Mary Jane e dá continuidade imediata ao casamento, desenvolvendo o relacionamento no começo da vida de casados.",
+      "quanto": "1 edição",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "305": {
+      "ordem": "Depois do casamento, leia nesta ordem: Web of Spider-Man #31 → Amazing #293 → Spectacular (1976) #131 → Web #32 → Amazing #294 → Spectacular #132.",
+      "porque": "Só as duas edições da Amazing deixam o arco cortado. Mostra do que Peter é feito. Hunted (Amazing 2018, #16–23) remete a esta história.",
+      "quanto": "4 edições fora (Web #31–32, Spectacular #131–132)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "391": {
+      "ordem": "Ao chegar à #378, leia nesta ordem: Spider-Man Unlimited #1 → Web of Spider-Man #101 → Amazing #378 → Spider-Man (1990) #35 → Spectacular (1976) #201 → Web #102 → Amazing #379 → Spider-Man #36 → Spectacular #202 → Web #103 → Amazing #380 → Spider-Man #37 → Spectacular #203 → Unlimited #2.",
+      "porque": "Só 3 dos 14 capítulos estão na Amazing (#378–380). Quer o arco completo? Siga a ordem indicada. Prefere a linha enxuta? Pule. Carnificina já estreou nas #361–363, dentro da contagem. Mas as três edições ficam com buracos de enredo.",
+      "quanto": "11 edições fora (Amazing #378–380 já contam)",
+      "conf": "Parcial",
+      "confirmationDetail": "As fontes sustentam a ordem de Maximum Carnage; o peso Opcional em relação à jornada principal continua sendo recomendação editorial sem suporte suficiente nas fontes."
+    },
+    "605": {
+      "ordem": "Ordem confirmada: Sensational Spider-Man #32 → Amazing #440 → Spider-Man #96 → Spectacular #262 → Sensational Spider-Man #33 → Amazing #441 → Spider-Man #97 → Spectacular #263 → Spider-Man #98. Na aba principal, o primeiro bloco entra depois da #440 e o segundo continua depois da #441.",
+      "porque": "A #441 não fecha a história. O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. Só depois começa o volume de 1999 (#442). A verdadeira Tia May reaparece aqui (ver Jornada).",
+      "quanto": "3 edições (+4 de prelúdio)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "690": {
+      "ordem": "Ao chegar à #525, leia nesta ordem: Friendly Neighborhood Spider-Man (2005) #1 → Marvel Knights Spider-Man #19 → Amazing (1999) #525 → Friendly #2 → Marvel Knights #20 → Amazing #526 → Friendly #3 → Marvel Knights #21 → Amazing #527 → Friendly #4 → Marvel Knights #22 → Amazing #528.",
+      "porque": "Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da Jornada lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4.",
+      "quanto": "8 edições fora",
+      "conf": "Parcial",
+      "confirmationDetail": "As fontes sustentam a ordem intercalada de The Other; o peso Contexto não é classificado de forma suficientemente clara pelas fontes."
+    },
+    "698": {
+      "ordem": "Leia entre a #531 e a #532. Ordem sugerida pela Marvel: Civil War #2 → Amazing #532–533 → demais.",
+      "porque": "Na Civil War #2, Peter revela a identidade em rede nacional. Sem ela, a #532 já começa com ele desmascarado.",
+      "quanto": "2 edições",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "701": {
+      "ordem": "Depois da #533, leia a minissérie principal em sequência: Civil War #3 → #4 → #5 → #6 → #7. Esses cinco números ficam fora da contagem; a ordem acima é a dos capítulos da minissérie, enquanto os tie-ins têm uma intercalação bem mais longa.",
+      "porque": "Peter muda de lado e luta ao lado do Capitão América. Isso já aparece na Amazing (#532–538, 'Civil War: Amazing Spider-Man'). Um resumo do evento dá o contexto. Leia as edições só se quiser o evento todo. O peso é recomendação deste guia.",
+      "quanto": "5 edições (um resumo basta)",
+      "conf": "Parcial",
+      "confirmationDetail": "A posição dos capítulos de Civil War é sustentada; o próprio guia registrava que o peso Contexto era uma recomendação editorial, por isso ele ainda precisa de confirmação independente."
+    },
+    "707": {
+      "ordem": "Ordem conferida para os capítulos listados: Friendly Neighborhood Spider-Man #17 → Sensational Spider-Man #35 → Amazing #539 → Friendly #18 → Sensational #36 → Amazing #540 → Friendly #19 → Sensational #37 → Amazing #541 → Friendly #20 → Friendly Annual #1 / Sensational Annual #1 → Friendly #21 → Sensational #38 → Amazing #542 → Friendly #22 → Sensational #39 → Friendly #23 → Sensational #40 → Amazing #543. GoCollect fixa os dois Annuals em maio, entre Friendly #20 e Friendly #21, mas não estabelece a ordem entre eles; por isso a situação permanece Parcial.",
+      "porque": "Complementa a Amazing #539–543: Peter, de traje preto, caça quem atirou na Tia May (na #538). A história principal está na Amazing. Leia estas só se quiser o arco inteiro.",
+      "quanto": "15 edições",
+      "conf": "Parcial",
+      "confirmationDetail": "A estrutura do arco é sustentada, mas há incerteza fina na ordem dos Annuals; o peso Opcional também não está suficientemente sustentado pelas fontes."
+    },
+    "728": {
+      "ordem": "Intercale entre a #544 e a #545: Amazing #544 → Friendly Neighborhood Spider-Man #24 → Sensational Spider-Man (2006) #41 → Amazing #545.",
+      "porque": "O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. Abre a fase Brand New Day (#546 em diante).",
+      "quanto": "2 edições fora",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "730": {
+      "ordem": "Leia depois de One More Day (#545).",
+      "porque": "Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado. Fica fora da continuidade principal. Não desfaz One More Day.",
+      "quanto": "1 edição",
+      "conf": "Parcial",
+      "confirmationDetail": "As fontes sustentam que Ultimate Spider-Man (2024) é uma continuidade alternativa, coerente com peso Opcional; o ponto exato de encaixe após #545 é uma convenção do guia."
+    },
+    "851": {
+      "ordem": "Leia entre a #665 e a #666.",
+      "porque": "É o prólogo da infestação que explode em Spider-Island (#666–673, dentro da contagem). Parte do prólogo também sai nas #659–660 e #662–665, que já estão na linha.",
+      "quanto": "1 edição",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "855": {
+      "ordem": "Deadly Foes #1 e Venom #6: depois da #668. Venom #7: depois da #670. Venom #8: depois da #671.",
+      "porque": "O núcleo (#666–673) está na contagem e se entende sem tie-ins. Leia estes só para ampliar o evento.",
+      "quanto": "4 edições (+ minisséries)",
+      "conf": "Parcial",
+      "confirmationDetail": "As fontes sustentam a posição dos tie-ins de Spider-Island, mas não sustentam de forma uniforme que todo o bloco selecionado seja Opcional."
+    },
+    "933": {
+      "ordem": "Bloco de leitura após a #739 e antes/ao redor das #740–741. Ordem escolhida pela lista oficial da Marvel: Superior Spider-Man #32 → Edge of Spider-Verse #1 → Edge #2 → Superior #33 → Edge #3 → Edge #4 → Amazing Spider-Man (2014) #7 (#740) → Edge #5 → Spider-Man 2099 #5 → Amazing Spider-Man (2014) #8 (#741). A HTLC e outros guias trocam algumas posições; a Marvel oficial tem prioridade por ser fonte primária.",
+      "porque": "As 7 edições originalmente listadas (Superior #32–33 + Edge #1–5) estão confirmadas, mas a Marvel também inclui Spider-Man 2099 #5 na sequência do prelúdio. Isso corrige o antigo ≈7 para 8 edições fora da linha. Superior #32–33 continuam sendo #732–733 na numeração histórica; o ponto de leitura deste bloco é posterior à #739.",
+      "quanto": "8 edições fora da linha (7 + Spider-Man 2099 #5)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "943": {
+      "ordem": "Depois da Amazing (2014) #9 (#742), leia Spider-Verse Team-Up #1 → Spider-Verse #1 → Spider-Verse #2 → Amazing (2014) #10 (#743). A partir daí, siga a ordem oficial da Marvel para os tie-ins opcionais entre as #10–15.",
+      "porque": "A antiga conta ≈5 (+11) misturava o encerramento do prelúdio com o começo do evento. A Marvel inicia o evento propriamente dito na #9; fora da contagem, o bloco inicial tem Team-Up #1 + Spider-Verse #1–2. Os outros 12 tie-ins são classificados como opcionais por HTLC/Marvel.",
+      "quanto": "3 edições fora da linha + 12 tie-ins opcionais",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "953": {
+      "ordem": "Depois da #751, leia Secret Wars (2015) #1 → #2 → #3 → #4 → #5 → #6 → #7 → #8 → #9; depois siga Renew Your Vows (#752–756) e o volume de 2015. A própria Marvel posiciona Secret Wars antes de Renew Your Vows no guia da fase.",
+      "porque": "A Marvel posiciona Secret Wars entre o fim do volume de 2014 e Renew Your Vows. Um resumo do evento basta. O peso é recomendação deste guia.",
+      "quanto": "9 edições (um resumo basta)",
+      "conf": "Parcial",
+      "confirmationDetail": "A posição de Secret Wars entre as fases é sustentada; o peso Contexto estava explicitamente registrado como recomendação do guia."
+    },
+    "978": {
+      "ordem": "Leia depois da #775, intercalando com a Amazing (2015) #20–24 (#776–780): Clone Conspiracy #1 → Amazing #20 → CC #2 → Amazing #21 → CC #3 → Amazing #22 → CC #4 → Amazing #23 → CC #5 → Amazing #24 → Omega #1.",
+      "porque": "As #20–24 da Amazing (2015) estão na contagem e acompanham a minissérie. A Marvel descreve assim, então a minissérie é o miolo do arco.",
+      "quanto": "6 edições fora (Clone Conspiracy #1–5 + Omega #1)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1021": {
+      "ordem": "Após a #816, dentro de Hunted, a ordem conferida é: Amazing #16 (#817) → #16.HU → Amazing #17 (#818) → Amazing #18 (#819) → #18.HU → Amazing #19 (#820) → #19.HU → Amazing #20 (#821) → #20.HU → Amazing #21 (#822) → Amazing #22 (#823) → Amazing #23 (#824). Não existe #17.HU.",
+      "porque": "A história principal corre na Amazing; as .HU são tie-ins complementares e não entram na numeração histórica. A fonte de Hunted confirma as quatro edições pontuadas usadas neste guia.",
+      "quanto": "4 edições",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1022": {
+      "ordem": "O evento Spider-Geddon #0–5 ocorre em 2018, antes de Hunted; o guia da fase de Nick Spencer o classifica como leitura opcional no início da fase, em paralelo à Amazing. Para este guia, o ponto de acesso permanece depois da #816, antes de Hunted, mas esse encaixe histórico específico não é dado como exato pela fonte.",
+      "porque": "A Amazing (2018) NÃO depende de Spider-Geddon para acompanhar a trama principal. A minissérie e os tie-ins seguem a saga dos Aranhas como material paralelo; a posição exata em relação a cada número da Amazing fica pendente.",
+      "quanto": "6 edições",
+      "conf": "Parcial",
+      "confirmationDetail": "A fonte classifica Spider-Geddon como leitura opcional, sustentando o peso; o encaixe exato depois da #816 continua sem confirmação."
+    },
+    "1055": {
+      "ordem": "Ordem de Sins Rising: Amazing (2018) #44 → Prelude → #45–48 → The Sins of Norman Osborn → #49. Leia o Prelude depois da #44 (#845) e antes da #45 (#846).",
+      "porque": "Abre Sins Rising (Amazing 2018 #45–49 = #846–850). É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838).",
+      "quanto": "1 edição",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1060": {
+      "ordem": "Leia depois da #48 do volume de 2018 (#849). Entra antes da #49 (#850), segundo o How To Love Comics.",
+      "porque": "One-shot ligado a Sins Rising (Amazing 2018 #45–49).",
+      "quanto": "1 edição",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1062": {
+      "ordem": "Amazing Spider-Man (2018) #50.LR - #50 - #51.LR - #51 - #52.LR - #52 - #53.LR - #53 - #54.LR - #54 (tie-ins pontuados de Last Remains)",
+      "porque": "A história principal está na Amazing. As .LR são complementares e foram reunidas no 'Last Remains Companion'. Não contam na numeração.",
+      "quanto": "5 edições",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1131": {
+      "ordem": "Leia depois da #18 do volume de 2022 (#912) e retome na #19 (#913).",
+      "porque": "É o desfecho de Dark Web.",
+      "quanto": "1 edição",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1152": {
+      "ordem": "Leia depois da #38 do volume de 2022 (#932) e antes da #39 (#933). Essenciais, segundo o How To Love Comics: First Strike #1 e as #39–44 (#933–938, na contagem). As #37–38 mostram o prelúdio.",
+      "porque": "First Strike #1 abre o evento.",
+      "quanto": "1 edição (+ opcionais)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1153": {
+      "ordem": "Leia depois da #38 do volume de 2022 (#932) e antes da #39 (#933). Essenciais, segundo o How To Love Comics: First Strike #1 e as #39–44 (#933–938, na contagem). As #37–38 mostram o prelúdio.",
+      "porque": "First Strike #1 abre o evento.",
+      "quanto": "1 edição (+ opcionais)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1154": {
+      "ordem": "Leia depois da #38 do volume de 2022 (#932) e antes da #39 (#933). Essenciais, segundo o How To Love Comics: First Strike #1 e as #39–44 (#933–938, na contagem). As #37–38 mostram o prelúdio.",
+      "porque": "First Strike #1 abre o evento.",
+      "quanto": "1 edição (+ opcionais)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1155": {
+      "ordem": "Leia depois da #38 do volume de 2022 (#932) e antes da #39 (#933). Essenciais, segundo o How To Love Comics: First Strike #1 e as #39–44 (#933–938, na contagem). As #37–38 mostram o prelúdio.",
+      "porque": "First Strike #1 abre o evento.",
+      "quanto": "1 edição (+ opcionais)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1156": {
+      "ordem": "Leia depois da #38 do volume de 2022 (#932) e antes da #39 (#933). Essenciais, segundo o How To Love Comics: First Strike #1 e as #39–44 (#933–938, na contagem). As #37–38 mostram o prelúdio.",
+      "porque": "First Strike #1 abre o evento.",
+      "quanto": "1 edição (+ opcionais)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1157": {
+      "ordem": "Leia depois da #38 do volume de 2022 (#932) e antes da #39 (#933). Essenciais, segundo o How To Love Comics: First Strike #1 e as #39–44 (#933–938, na contagem). As #37–38 mostram o prelúdio.",
+      "porque": "First Strike #1 abre o evento.",
+      "quanto": "1 edição (+ opcionais)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    },
+    "1158": {
+      "ordem": "Leia depois da #38 do volume de 2022 (#932) e antes da #39 (#933). Essenciais, segundo o How To Love Comics: First Strike #1 e as #39–44 (#933–938, na contagem). As #37–38 mostram o prelúdio.",
+      "porque": "First Strike #1 abre o evento.",
+      "quanto": "1 edição (+ opcionais)",
+      "conf": "Confirmado",
+      "confirmationDetail": "Posição e peso sustentados pelas fontes."
+    }
+  }
+}

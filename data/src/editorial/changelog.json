@@ -1,0 +1,32 @@
+[
+  {
+    "date": "07/10/2026",
+    "title": "Spoilers declarativos e nível global",
+    "body": "O runtime deixa de detectar spoilers por regex, frases literais e auditoria de DOM. Campos já explicitamente protegidos passam a carregar spoiler forte no próprio dado; as demais ocorrências heurísticas são exportadas como sugestões pendentes de revisão. O controle global usa Nenhum, Leve ou Tudo."
+  },
+  {
+    "date": "07/10/2026",
+    "title": "Modelo editorial legado consolidado",
+    "body": "DATA.extras e DATA.leituras foram removidos do runtime. editorial.extras passa a ser a fonte única dos cards e detalhes; IDs, readingOrder e progresso permanecem inalterados. A consolidação separa o card da Saga do Clone do roteiro completo e registra explicitamente as divergências cronológicas do Annual #5 e do Annual #20 sem reordenar o catálogo."
+  },
+  {
+    "date": "06/10/2026",
+    "title": "Encaixe de A Morte de Jean DeWolff confirmado",
+    "body": "Peter Parker, The Spectacular Spider-Man #107–110 passa a entrar depois de Amazing Spider-Man #272 e antes da #273, mantendo a mesma identidade e o mesmo progresso."
+  },
+  {
+    "date": "06/10/2026",
+    "title": "Annuals consolidados",
+    "body": "Checklist consolidada em 1.301 itens: 1.000 da linha histórica e 301 leituras fora da linha. Os Annuals mantêm peso individual."
+  },
+  {
+    "date": "30/09/2026",
+    "title": "Linha histórica chega ao #1000",
+    "body": "A edição #1000 permanece o fechamento da numeração histórica desta versão do guia."
+  },
+  {
+    "date": "04–06/10/2026",
+    "title": "Leituras fora da linha ampliadas",
+    "body": "Annuals e materiais intercalados foram incorporados sem criar números históricos artificiais e sem substituir links editoriais já curados."
+  }
+]

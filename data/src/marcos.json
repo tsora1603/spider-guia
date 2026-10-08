@@ -1,0 +1,362 @@
+[
+  {
+    "year": "1962",
+    "title": "Origem do Homem-Aranha",
+    "description": {
+      "text": "Peter é picado por uma aranha radioativa, deixa de impedir um ladrão e perde o Tio Ben. Dali nasce a ideia de que grandes poderes trazem grandes responsabilidades.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "Amazing Fantasy #15 (ago/1962)",
+    "historicalStart": null,
+    "historicalEnd": null,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1965–66",
+    "title": "O Mestre Planejador",
+    "description": {
+      "text": "Doente e sem forças, Peter precisa se libertar de uma maquinaria colossal para levar o soro que salva a Tia May. É a cena mais citada da persistência do personagem.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #31–33",
+    "historicalStart": 31,
+    "historicalEnd": 33,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1966",
+    "title": "O Duende Verde é desmascarado",
+    "description": {
+      "text": "A identidade do Duende Verde é revelada: Norman Osborn, pai do melhor amigo de Peter, Harry. Prepara a rivalidade que atravessa a vida de Peter.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #39–40",
+    "historicalStart": 39,
+    "historicalEnd": 40,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1966",
+    "title": "Peter conhece Mary Jane",
+    "description": {
+      "text": "Primeiro encontro de Peter e Mary Jane Watson; 21 anos depois eles se casam.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #42",
+    "historicalStart": 42,
+    "historicalEnd": 42,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1967",
+    "title": "'Spider-Man No More!'",
+    "description": {
+      "text": "Peter, esgotado, abandona o uniforme: o retrato clássico da dúvida entre ser herói e ter uma vida normal.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #50",
+    "historicalStart": 50,
+    "historicalEnd": 50,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1973",
+    "title": "A morte de Gwen Stacy",
+    "description": {
+      "text": "O Duende Verde mata Gwen Stacy (#121) e Norman Osborn morre no confronto seguinte (#122). Gwen é a maior perda da juventude de Peter e continua a pesar nas escolhas dele.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #121–122",
+    "historicalStart": 121,
+    "historicalEnd": 122,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1974",
+    "title": "Harry Osborn vira Duende Verde",
+    "description": {
+      "text": "Harry, melhor amigo de Peter, assume o manto do pai. A amizade entre os dois vira um dos conflitos centrais dos anos seguintes.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #136–137",
+    "historicalStart": 136,
+    "historicalEnd": 137,
+    "weight": "◐ Contexto"
+  },
+  {
+    "year": "1975",
+    "title": "Saga do Clone original",
+    "description": {
+      "text": "Peter enfrenta o Chacal e um clone de si mesmo. O sobrevivente conclui que é o original, mas a #149 deixa a dúvida no ar. É a base da saga dos anos 90.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #143–149; opcional: What If? (1977) #30 (e se o clone tivesse vivido)",
+    "historicalStart": 143,
+    "historicalEnd": 149,
+    "weight": "◐ Contexto"
+  },
+  {
+    "year": "1980",
+    "title": "Peter confronta o ladrão que matou o Tio Ben",
+    "description": {
+      "text": "Peter reencontra o criminoso responsável pela morte do Tio Ben e acerta contas com a culpa que o move.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #200",
+    "historicalStart": 200,
+    "historicalEnd": 200,
+    "weight": "◐ Contexto"
+  },
+  {
+    "year": "1984",
+    "title": "Aquisição do traje negro (Guerras Secretas #8)",
+    "description": {
+      "text": "No espaço, durante Guerras Secretas, Peter recebe o traje alienígena preto, que lhe dá mais força e teias orgânicas. Só depois se descobre que o traje é vivo.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "Marvel Super Heroes Secret Wars #8 (dez/1984)",
+    "historicalStart": null,
+    "historicalEnd": null,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1984–85",
+    "title": "A Saga do Traje Negro",
+    "description": {
+      "text": "Peter volta à Terra com o traje, descobre que ele é um organismo vivo (#258) e precisa se livrar dele. O traje volta depois como Venom (#299–300).",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #252–263, com Marvel Team-Up #141–150, Peter Parker, The Spectacular Spider-Man #90–100, Web of Spider-Man #1 e annuals. Ordem completa no How To Love Comics.",
+    "historicalStart": 252,
+    "historicalEnd": 263,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1985–86",
+    "title": "A Morte de Jean DeWolff",
+    "description": {
+      "text": "Peter e o Demolidor caçam o assassino de uma amiga policial; o arco mostra os limites morais de Peter.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "Peter Parker, The Spectacular Spider-Man (1976) #107–110",
+    "historicalStart": null,
+    "historicalEnd": null,
+    "weight": "◐ Contexto"
+  },
+  {
+    "year": "1987",
+    "title": "Proposta e casamento com Mary Jane",
+    "description": {
+      "text": "Peter pede MJ em casamento (#290); ela recusa e volta a Pittsburgh (#291); ele vai atrás (#292) e ela aceita. O casamento acontece no Annual #21 e a lua de mel, no Spectacular Annual #7.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #290–292; The Amazing Spider-Man Annual #21 (1987); Peter Parker, The Spectacular Spider-Man Annual #7",
+    "historicalStart": 290,
+    "historicalEnd": 292,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1987",
+    "title": "A Última Caçada de Kraven",
+    "description": {
+      "text": "Kraven enterra Peter vivo e assume o lugar dele, de forma mais brutal; Peter sai da cova e o confronta. Mostra do que Peter é feito.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "Ordem: Web of Spider-Man #31 → The Amazing Spider-Man (1963) #293 → Spectacular #131 → Web #32 → Amazing #294 → Spectacular #132",
+    "historicalStart": 293,
+    "historicalEnd": 294,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1988",
+    "title": "Estreia de Venom",
+    "description": {
+      "text": "O traje negro volta como Venom: aparece numa cena no fim da #299 e de corpo inteiro na #300, com arte de Todd McFarlane.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #299–300",
+    "historicalStart": 299,
+    "historicalEnd": 300,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1994–96",
+    "title": "Saga do Clone",
+    "description": {
+      "text": "Ben Reilly (o clone) reaparece, Peter deixa o manto, Mary Jane engravida e tudo termina com a revelação de que Norman Osborn estava por trás da trama e de que Ben era o clone.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #394–418, mais capítulos em Spectacular, Web of Spider-Man, Spider-Man e Spider-Man Unlimited",
+    "historicalStart": 394,
+    "historicalEnd": 418,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1995",
+    "title": "A Tia May morre (#400)",
+    "description": {
+      "text": "A Tia May morre na edição de marco #400, de DeMatteis e Bagley. Em 1998, revela-se que quem morreu era uma atriz contratada por Osborn.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #400",
+    "historicalStart": 400,
+    "historicalEnd": 400,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "1998",
+    "title": "A Tia May está viva",
+    "description": {
+      "text": "Osborn revela que a May que morreu na #400 era uma atriz geneticamente alterada; a verdadeira May estava em cativeiro e fica sob os cuidados de Reed Richards. Peter se reencontra com ela.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #440–441; Spider-Man #96–98; Sensational Spider-Man #32–33; Peter Parker, The Spectacular Spider-Man #262–263 (crossover 'The Gathering of Five and The Final Chapter')",
+    "historicalStart": 441,
+    "historicalEnd": 441,
+    "weight": "◐ Contexto"
+  },
+  {
+    "year": "2001–02",
+    "title": "A Tia May descobre o segredo de Peter (#476)",
+    "description": {
+      "text": "Em #476 (“Coming Out”), Peter volta do confronto com Morlun e May percebe que o filho é o Homem-Aranha ao se deparar com a identidade secreta dele. É a revelação inicial do segredo para May.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1999) #35 (hist. #476)",
+    "historicalStart": 476,
+    "historicalEnd": 476,
+    "weight": "◐ Contexto"
+  },
+  {
+    "year": "2001–02",
+    "title": "A Tia May descobre o segredo de Peter (#479)",
+    "description": {
+      "text": "Em #479 (“The Conversation”), Peter conversa abertamente com May sobre sua vida como Homem-Aranha e sobre a culpa ligada à morte de Tio Ben; May passa a conhecer de forma explícita a dimensão de sua vida heroica.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1999) #38 (hist. #479)",
+    "historicalStart": 479,
+    "historicalEnd": 479,
+    "weight": "◐ Contexto"
+  },
+  {
+    "year": "2004",
+    "title": "Sins Past",
+    "description": {
+      "text": "Revela que Gwen Stacy teve filhos com Norman Osborn; é polêmico e muito discutido entre os fãs.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #509–514",
+    "historicalStart": 509,
+    "historicalEnd": 514,
+    "weight": "○ Opcional"
+  },
+  {
+    "year": "2005–06",
+    "title": "The Other",
+    "description": {
+      "text": "Peter, mortalmente ferido, 'morre' e volta com habilidades novas.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #525–528; Friendly Neighborhood Spider-Man #1–4; Marvel Knights Spider-Man #19–22",
+    "historicalStart": 525,
+    "historicalEnd": 528,
+    "weight": "◐ Contexto"
+  },
+  {
+    "year": "2006",
+    "title": "Guerra Civil: Peter revela a identidade",
+    "description": {
+      "text": "Ao lado de Tony Stark e do Registro de Super-Humanos, Peter se desmascara em rede nacional (Civil War #2). Depois muda de lado e luta ao lado do Capitão América. As escolhas dele colocam a família em perigo.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "Civil War #1–7 (minissérie); The Amazing Spider-Man (1963) #532–538 ('Civil War: Amazing Spider-Man', Straczynski e Ron Garney)",
+    "historicalStart": 532,
+    "historicalEnd": 538,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "2007",
+    "title": "A Tia May é baleada",
+    "description": {
+      "text": "No fim da Guerra Civil, um atirador a mando do Rei do Crime acerta a Tia May. Peter entra numa espiral de culpa e raiva.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #538",
+    "historicalStart": 538,
+    "historicalEnd": 538,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "2007",
+    "title": "Back in Black",
+    "description": {
+      "text": "Peter, de traje preto, caça o responsável pelo tiro enquanto May luta pela vida; é o momento mais sombrio da fase.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #539–543; Friendly Neighborhood Spider-Man #17–23 e Annual #1; Sensational Spider-Man (2006) #35–40 e Annual #1",
+    "historicalStart": 539,
+    "historicalEnd": 543,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "2007",
+    "title": "One More Day",
+    "description": {
+      "text": "Para salvar a Tia May, Peter e MJ aceitam o acordo de Mephisto: o casamento deixa de ter existido e ninguém lembra quem está sob a máscara. É o fim do casamento nos quadrinhos principais.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "Ordem: The Amazing Spider-Man (1963) #544 → Friendly Neighborhood Spider-Man #24 → Sensational Spider-Man (2006) #41 → Amazing #545",
+    "historicalStart": 544,
+    "historicalEnd": 545,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "2010",
+    "title": "One Moment in Time",
+    "description": {
+      "text": "Mostra o que realmente aconteceu no dia do casamento depois de One More Day e como Peter e MJ passam a se relacionar sem casamento.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #638–641 (Joe Quesada e Paolo Rivera)",
+    "historicalStart": 638,
+    "historicalEnd": 641,
+    "weight": "◐ Contexto"
+  },
+  {
+    "year": "2012–14",
+    "title": "Dying Wish: Octopus rouba o corpo de Peter",
+    "description": {
+      "text": "Na conclusão de “Dying Wish”, o Doutor Octopus troca de mente com Peter em #700 e assume a identidade do Homem-Aranha; o arco de Amazing é #698–700.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (1963) #698–700; The Superior Spider-Man (2013) #1–33 (hist. #701–733)",
+    "historicalStart": 698,
+    "historicalEnd": 733,
+    "weight": "● Essencial"
+  },
+  {
+    "year": "2024",
+    "title": "Peter e MJ casados (Ultimate Spider-Man)",
+    "description": {
+      "text": "Em outro universo, Peter Parker é um adulto casado com Mary Jane e pai de dois filhos. A edição #1 marca o início da nova linha Ultimate de 2024 e não altera a continuidade principal de Earth-616.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "Ultimate Spider-Man (2024) #1",
+    "historicalStart": null,
+    "historicalEnd": null,
+    "weight": "○ Opcional"
+  },
+  {
+    "year": "2025–26",
+    "title": "Cormac Crane e a Tia May",
+    "description": {
+      "text": "Cormac “Mac” Crane aparece pela primeira vez em The Amazing Spider-Man (2025) #26 (hist. #990). Ele é o filho biológico de Ben e May Parker e, portanto, primo de Peter. Na hist. #999, Peter e Tia May fazem as pazes.",
+      "spoiler": "forte"
+    },
+    "whereToRead": "The Amazing Spider-Man (2025) #26 (hist. #990); reconciliação de Peter com Tia May na hist. #999",
+    "historicalStart": 990,
+    "historicalEnd": 999,
+    "weight": "◐ Contexto"
+  }
+]

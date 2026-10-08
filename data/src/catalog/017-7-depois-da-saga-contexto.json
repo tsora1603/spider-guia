@@ -1,0 +1,96 @@
+{
+  "phase": "7. Depois da saga (contexto)",
+  "items": [
+    {
+      "id": 572,
+      "historicalNumber": null,
+      "type": "Saga do Clone",
+      "series": "The Spectacular Spider-Man (1976)",
+      "issue": "#241",
+      "phase": "7. Depois da saga (contexto)",
+      "weight": "◐ Contexto",
+      "brazilianEdition": "",
+      "instructions": "Retoma fios soltos do desfecho.\nConfirmação: Confirmado",
+      "readingOrder": 626,
+      "note": ""
+    },
+    {
+      "id": 574,
+      "historicalNumber": null,
+      "type": "Saga do Clone",
+      "series": "Sensational Spider-Man (1996)",
+      "issue": "#12",
+      "phase": "7. Depois da saga (contexto)",
+      "weight": "◐ Contexto",
+      "brazilianEdition": "",
+      "instructions": "Contexto pós-saga; siga a ordem em Ler → Saga do Clone.\nConfirmação: Confirmado",
+      "readingOrder": 628,
+      "note": ""
+    },
+    {
+      "id": 575,
+      "historicalNumber": null,
+      "type": "Saga do Clone",
+      "series": "Spider-Man (1990)",
+      "issue": "#76",
+      "phase": "7. Depois da saga (contexto)",
+      "weight": "◐ Contexto",
+      "brazilianEdition": "",
+      "instructions": "Passa a se chamar Peter Parker: Spider-Man.\nConfirmação: Confirmado",
+      "readingOrder": 629,
+      "note": ""
+    },
+    {
+      "id": 577,
+      "historicalNumber": null,
+      "type": "Saga do Clone",
+      "series": "What If…? (1989)",
+      "issue": "#86",
+      "phase": "7. Depois da saga (contexto)",
+      "weight": "◐ Contexto",
+      "brazilianEdition": "",
+      "instructions": "E se o Scarlet Spider tivesse matado o Homem-Aranha?\nConfirmação: Confirmado",
+      "readingOrder": 631,
+      "note": ""
+    },
+    {
+      "id": 579,
+      "historicalNumber": null,
+      "type": "Saga do Clone",
+      "series": "What If…? (1989)",
+      "issue": "#105",
+      "phase": "7. Depois da saga (contexto)",
+      "weight": "◐ Contexto",
+      "brazilianEdition": "",
+      "instructions": "E se MJ não tivesse perdido o bebê? Apresenta a Spider-Girl (May Parker).\nConfirmação: Confirmado",
+      "readingOrder": 633,
+      "note": ""
+    },
+    {
+      "id": 580,
+      "historicalNumber": null,
+      "type": "Saga do Clone",
+      "series": "Spider-Man: The Clone Saga (minissérie)",
+      "issue": "#1–6",
+      "phase": "7. Depois da saga (contexto)",
+      "weight": "◐ Contexto",
+      "brazilianEdition": "",
+      "instructions": "Releitura da saga 'como foi pensada originalmente' (DeFalco, Mackie e Nauck). Minissérie de 6 edições (#1–6) numa só linha.\nConfirmação: Confirmado",
+      "readingOrder": 634,
+      "note": ""
+    },
+    {
+      "id": 582,
+      "historicalNumber": null,
+      "type": "Saga do Clone",
+      "series": "Spider-Man: The Clone Conspiracy",
+      "issue": "evento",
+      "phase": "7. Depois da saga (contexto)",
+      "weight": "◐ Contexto",
+      "brazilianEdition": "",
+      "instructions": "Evento de 2016; na Amazing de 2015 ocupa as #20–24 (hist. #776–780).\nConfirmação: Confirmado",
+      "readingOrder": 636,
+      "note": ""
+    }
+  ]
+}

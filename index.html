@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta
+      name="description"
+      content="SPIDER·GUIA: guia de leitura do Homem-Aranha com checklist de progresso, leituras extras, Saga do Clone, jornada editorial e fontes."
+    >
+    <meta property="og:title" content="SPIDER·GUIA — Guia de Leitura do Homem-Aranha">
+    <meta
+      property="og:description"
+      content="Guia de leitura do Homem-Aranha com checklist de progresso, leituras extras, Saga do Clone, jornada editorial e fontes."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="./icon.svg">
+    <meta property="og:image:alt" content="Símbolo do SPIDER·GUIA">
+    <title>Guia de Leitura do Homem-Aranha</title>
+
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    >
+  </head>
+  <body>
+    <a class="skip-link" href="#app">Pular para o conteúdo</a>
+
+    <div id="root"></div>
+
+    <div id="toasts" class="toast-region" aria-live="polite" aria-atomic="false"></div>
+
+    <dialog id="dlg" aria-labelledby="login-title">
+      <h2 id="login-title">Entrar para sincronizar</h2>
+      <p class="mu sm">Enviamos um link de acesso ao seu e-mail. Use o mesmo e-mail em todos os aparelhos.</p>
+      <label class="sr-only" for="em">E-mail</label>
+      <input id="em" type="email" autocomplete="email" inputmode="email" placeholder="seu@email.com">
+      <div class="dialog-actions">
+        <button class="btn" id="go">Enviar link</button>
+        <button class="btn g" id="cl">Fechar</button>
+      </div>
+      <p id="msg" class="sm" role="status" aria-live="polite"></p>
+    </dialog>
+
+    <dialog id="confirmdlg" aria-labelledby="confirm-title">
+      <h2 id="confirm-title">Confirmar ação</h2>
+      <p id="confirm-copy"></p>
+      <div class="dialog-actions">
+        <button class="btn g" id="confirmcancel">Cancelar</button>
+        <button class="btn" id="confirmok">Confirmar</button>
+      </div>
+    </dialog>
+
+    <dialog id="skipdlg" aria-labelledby="skip-title">
+      <h2 id="skip-title">Pular uma leitura essencial?</h2>
+      <p>Esta leitura foi classificada como essencial para acompanhar a continuidade. Você ainda pode pulá-la, mas partes posteriores podem perder contexto.</p>
+      <p class="skip-location sm" id="skiploc"></p>
+      <div class="dialog-actions">
+        <button class="btn" id="skipback">Voltar</button>
+        <button class="btn g" id="skipgo">Pular mesmo assim</button>
+      </div>
+    </dialog>
+
+    <script src="./config.js"></script>
+    <script src="./links.js"></script>
+    <script src="./validator.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

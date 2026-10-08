@@ -1,0 +1,72 @@
+[
+  {
+    "term": "Numeração histórica (legacy)",
+    "definition": "Numeração contínua usada pelo guia para a linha principal, de #1 a #1000.",
+    "example": "#1000 representa o ponto histórico da continuidade, independentemente do volume da revista."
+  },
+  {
+    "term": "LGY",
+    "definition": "Prefixo “Legacy” usado nas capas para indicar o número histórico.",
+    "example": "LGY #1000"
+  },
+  {
+    "term": "Volume ou série",
+    "definition": "Cada relançamento da revista, identificado pelo ano entre parênteses.",
+    "example": "The Amazing Spider-Man (2018)"
+  },
+  {
+    "term": "Soma pronta",
+    "definition": "Valor que ajuda a ligar a edição de uma série ao número histórico.",
+    "example": "Histórico = edição na série + soma pronta"
+  },
+  {
+    "term": "Annual",
+    "definition": "Edição anual especial que fica fora da contagem histórica.",
+    "example": "Annual #21 (1987)"
+  },
+  {
+    "term": "Edição com sufixo",
+    "definition": "Edição com ponto ou letras no número; não recebe número histórico próprio.",
+    "example": "#16.HU / #50.LR"
+  },
+  {
+    "term": "One-shot",
+    "definition": "História única, sem numeração contínua.",
+    "example": "Sins Rising Prelude"
+  },
+  {
+    "term": "Minissérie de evento",
+    "definition": "Série curta ligada a um evento maior.",
+    "example": "Clone Conspiracy"
+  },
+  {
+    "term": "Tie-in",
+    "definition": "Edição de outra revista conectada a um evento.",
+    "example": "Uma edição de Venom ligada à Saga do Clone"
+  },
+  {
+    "term": "Crossover",
+    "definition": "Evento que atravessa várias revistas e precisa de uma ordem de leitura.",
+    "example": "Saga do Clone"
+  },
+  {
+    "term": "Prelúdio",
+    "definition": "História que prepara um evento principal.",
+    "example": "Prelude antes de um arco maior"
+  },
+  {
+    "term": "Intercalar",
+    "definition": "Ler revistas diferentes alternando-as na ordem indicada.",
+    "example": "Web #31 → Amazing #293 → ..."
+  },
+  {
+    "term": "Peso",
+    "definition": "Indica quanto a leitura importa para a jornada.",
+    "example": "● Essencial / ◐ Contexto / ○ Opcional"
+  },
+  {
+    "term": "Edição brasileira",
+    "definition": "Onde a história foi publicada no Brasil; “a confirmar” significa que a conferência ainda não foi concluída.",
+    "example": "O Espetacular Homem-Aranha Edição Definitiva (Panini)"
+  }
+]

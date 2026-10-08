@@ -1,0 +1,61 @@
+import { describe, expect, it } from 'vitest';
+import { readings } from '../../src/data/model';
+import { buildReadingPlan } from '../../src/preferences/reading-plan';
+import { summarizeReadingPlan } from '../../src/views/home-model';
+import { reconcileFocusSelection } from '../../src/components/focus-selection';
+import { matchesChecklistItem } from '../../src/components/checklist-model';
+
+const status = (states: Record<number, 'Não' | 'Sim' | 'Pulei'>) => (id: number) => states[id] || 'Não';
+
+describe('Checklist e Modo Foco seguem o plano canônico da Home', () => {
+  it('Completo segue os 1.301 itens em readingOrder, incluindo intercaladas', () => {
+    const plan = buildReadingPlan({ depth: 'complete', focusQuery: '' });
+    expect(plan.map(item => item.id)).toEqual(readings.map(item => item.id));
+    expect(plan).toHaveLength(1301);
+    expect(plan[0].id).toBe(1); // Amazing Fantasy #15
+    const index16 = plan.findIndex(item => item.type === 'Principal' && item.historicalNumber === 16);
+    expect(plan.slice(index16, index16 + 3).map(item => item.id)).toEqual([17, 1227, 18]);
+  });
+
+  it('Essenciais ignora opcionais/contexto e começa pela mesma leitura da Home', () => {
+    const plan = buildReadingPlan({ depth: 'essential', focusQuery: '' });
+    expect(plan[0].id).toBe(2); // ASM #1, não Amazing Fantasy (Contexto)
+    expect(plan.every(item => item.weight === '● Essencial')).toBe(true);
+    expect(summarizeReadingPlan(plan, status({})).next?.id).toBe(plan[0].id);
+    expect(plan.every((item, index) => index === 0 || plan[index - 1].readingOrder < item.readingOrder)).toBe(true);
+  });
+
+  it('Foco textual usa o mesmo filtro existente e mantém readingOrder', () => {
+    const plan = buildReadingPlan({ depth: 'focus', focusQuery: 'Kraven' });
+    expect(plan.length).toBeGreaterThan(0);
+    expect(plan.every(item => item.weight !== '○ Opcional')).toBe(true);
+    expect(plan.every((item, index) => index === 0 || plan[index - 1].readingOrder < item.readingOrder)).toBe(true);
+    expect(summarizeReadingPlan(plan, status({})).next?.id).toBe(plan[0].id);
+  });
+
+  it('Lida e Pulei não contam como pendentes, mas seguem visíveis sem filtro', () => {
+    const plan = buildReadingPlan({ depth: 'essential', focusQuery: '' });
+    const states = { [plan[0].id]: 'Sim', [plan[1].id]: 'Pulei' } as const;
+    const summary = summarizeReadingPlan(plan, status(states));
+    expect(summary.read).toBe(1);
+    expect(summary.skipped).toBe(1);
+    expect(summary.next?.id).toBe(plan[2].id);
+    const pending = plan.filter(item => matchesChecklistItem(item, 'Não', ''));
+    // Este filtro usa o progresso global real, não o objeto fictício desta asserção.
+    expect(pending.every((item, index) => index === 0 || pending[index - 1].readingOrder < item.readingOrder)).toBe(true);
+  });
+
+  it('Mover Próxima/Anterior mantém seleção mesmo após marcar uma HQ', () => {
+    const plan = buildReadingPlan({ depth: 'essential', focusQuery: '' });
+    const ids = plan.map(item => item.id);
+    const positions = new Map(readings.map((item, index) => [item.id, index]));
+    let focused = reconcileFocusSelection(ids, null, positions, () => true);
+    expect(focused).toBe(2);
+    focused = ids[1];
+    expect(reconcileFocusSelection(ids, focused, positions, () => true)).toBe(ids[1]);
+    focused = ids[2];
+    expect(reconcileFocusSelection(ids, focused, positions, () => true)).toBe(ids[2]);
+    focused = ids[1];
+    expect(reconcileFocusSelection(ids, focused, positions, () => true)).toBe(ids[1]);
+  });
+});

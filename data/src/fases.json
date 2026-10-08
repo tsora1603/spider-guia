@@ -1,0 +1,235 @@
+[
+  {
+    "kind": "phase",
+    "historicalStart": 1,
+    "historicalEnd": 38,
+    "name": "Lee e Ditko",
+    "creators": "Stan Lee e Steve Ditko",
+    "highlights": {
+      "text": "Dr. Octopus estreia na #3, o Homem-Areia na #4, o Lagarto na #6 e o Duende Verde na #14.",
+      "spoiler": "forte"
+    },
+    "notes": ""
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 39,
+    "historicalEnd": 110,
+    "name": "Lee e Romita Sr.",
+    "creators": "Stan Lee e John Romita Sr.; Roy Thomas escreve as #101–104 e Lee volta nas #105–110",
+    "highlights": {
+      "text": "O Rei do Crime estreia na #50, o Capitão Stacy morre nas #89–90 e as edições sobre drogas são as #96–98.",
+      "spoiler": "forte"
+    },
+    "notes": ""
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 111,
+    "historicalEnd": 181,
+    "name": "Conway e Wein",
+    "creators": "Gerry Conway (#111–149); Len Wein assume na #151",
+    "highlights": {
+      "text": "Gwen Stacy morre na #121, o Justiceiro estreia na #129 e a primeira Saga do Clone ocupa as #143–149.",
+      "spoiler": "forte"
+    },
+    "notes": "A #150 é de Archie Goodwin."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 182,
+    "historicalEnd": 251,
+    "name": "Wolfman, O'Neil e Stern",
+    "creators": "Marv Wolfman; Denny O'Neil; Roger Stern (desde a #224)",
+    "highlights": {
+      "text": "Gata Negra na #194; Duende Macabro nas #238–239.",
+      "spoiler": "forte"
+    },
+    "notes": "Limite ajustado: o texto original trazia #182–252; as #251–252 são de transição para a fase seguinte."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 252,
+    "historicalEnd": 289,
+    "name": "DeFalco e Frenz",
+    "creators": "Tom DeFalco e Ron Frenz",
+    "highlights": {
+      "text": "Uniforme preto na #252, simbionte revelado na #258 e 'Gang War' nas #284–288.",
+      "spoiler": "forte"
+    },
+    "notes": "O traje negro vem de Marvel Super Heroes Secret Wars #8 (fora da contagem); a #252 saiu antes dessa edição, em mai/1984. Ver Jornada."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 290,
+    "historicalEnd": 350,
+    "name": "Michelinie, McFarlane e Larsen",
+    "creators": "David Michelinie (#290–292); J. M. DeMatteis (#293–294); Ann Nocenti (#295); Todd McFarlane (arte quase toda de #298 a #328); Erik Larsen (arte desde a #329)",
+    "highlights": {
+      "text": "Venom aparece na #299 e de corpo inteiro na #300; 'A Última Caçada de Kraven' cruza as #293–294.",
+      "spoiler": "forte"
+    },
+    "notes": "Só as #293–294 do arco de Kraven estão na Amazing. O resto sai em outras revistas. A fase começa na #290; os roteiristas das #290–295 foram conferidos edição a edição."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 351,
+    "historicalEnd": 388,
+    "name": "Bagley",
+    "creators": "Mark Bagley (arte); Michelinie sai na #388",
+    "highlights": {
+      "text": "Carnificina estreia nas #361–363.",
+      "spoiler": "forte"
+    },
+    "notes": ""
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 389,
+    "historicalEnd": 441,
+    "name": "DeMatteis, DeFalco e Byrne",
+    "creators": "J. M. DeMatteis (#389–406); depois Tom DeFalco; John Byrne nas duas últimas",
+    "highlights": {
+      "text": "Saga do Clone nas #394–#418; Tia May \"morre\" na #400; Ben Reilly vira o Homem-Aranha na #407.",
+      "spoiler": "forte"
+    },
+    "notes": "Saga do Clone: out/1994 a dez/1996 (#394–418). A Amazing alterna capítulos de crossovers com edições avulsas. A saga passa por todas as revistas do Aranha (ver Ler → Saga do Clone). Entre a #406 e a #407 saíram The Amazing Scarlet Spider #1–2, que não contam. Ler só a Amazing deixa lacunas."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 442,
+    "historicalEnd": 470,
+    "name": "Mackie e Byrne",
+    "creators": "Howard Mackie; John Byrne (arte das #1–18 do volume)",
+    "highlights": "",
+    "notes": "Volume de 1999, #1–29."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 471,
+    "historicalEnd": 545,
+    "name": "Straczynski",
+    "creators": "J. Michael Straczynski",
+    "highlights": {
+      "text": "Começa na #30 do volume de 1999; a numeração histórica volta sozinha na #500; termina em 'One More Day' (#544–545).",
+      "spoiler": "forte"
+    },
+    "notes": "A capa do volume de 1999 já mostra #471 a partir da #30."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 546,
+    "historicalEnd": 647,
+    "name": "Brand New Day",
+    "creators": "Roteiristas rotativos",
+    "highlights": {
+      "text": "'Grim Hunt' ocupa as #634–637.",
+      "spoiler": "forte"
+    },
+    "notes": "A revista sai três vezes por mês nesta fase."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 648,
+    "historicalEnd": 700,
+    "name": "Slott (solo)",
+    "creators": "Dan Slott",
+    "highlights": {
+      "text": "'Big Time' (#648); Spider-Island (#666–673); Ends of the Earth (#682–687); 'Dying Wish' fecha a #700.",
+      "spoiler": "forte"
+    },
+    "notes": "Duas edições por mês."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 701,
+    "historicalEnd": 733,
+    "name": "Superior Spider-Man",
+    "creators": "Dan Slott",
+    "highlights": {
+      "text": "Continuação direta da #700.",
+      "spoiler": "forte"
+    },
+    "notes": "Não dá para pular: a Marvel conta a série porque ela substituiu a Amazing, e o volume de 2014 retoma logo depois dela."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 734,
+    "historicalEnd": 751,
+    "name": "Volume de 2014",
+    "creators": "Dan Slott",
+    "highlights": {
+      "text": "Peter retoma o título; 'Spider-Verse' ocupa as #9–15 do volume (#742–748).",
+      "spoiler": "forte"
+    },
+    "notes": ""
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 752,
+    "historicalEnd": 756,
+    "name": "Renew Your Vows (opcional)",
+    "creators": "Dan Slott",
+    "highlights": {
+      "text": "Realidade alternativa ligada a Secret Wars.",
+      "spoiler": "forte"
+    },
+    "notes": "Opcional: pode pular sem quebrar a continuidade; só ficam 5 números sem leitura."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 757,
+    "historicalEnd": 801,
+    "name": "Volume de 2015 + numeração histórica",
+    "creators": "Dan Slott",
+    "highlights": {
+      "text": "'Clone Conspiracy' (#20–24 do volume); volta à numeração histórica na #789; Venom Inc. (#792–793); saga do Red Goblin; despedida de Slott na #801.",
+      "spoiler": "forte"
+    },
+    "notes": "A minissérie Clone Conspiracy é paralela e não conta."
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 802,
+    "historicalEnd": 894,
+    "name": "Spencer e Beyond",
+    "creators": "Nick Spencer (#1–74 do volume = #802–875); 'Beyond' (#75–93 = #876–894)",
+    "highlights": {
+      "text": "'Hunted' (#16–23 do volume) e 'Last Remains' (#50–55).",
+      "spoiler": "forte"
+    },
+    "notes": ""
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 895,
+    "historicalEnd": 964,
+    "name": "Wells, Romita Jr. e Kelly/Ireland",
+    "creators": "Zeb Wells e John Romita Jr. (#1–60); Joe Kelly e Justina Ireland (#61–70)",
+    "highlights": {
+      "text": "'Dark Web' e 'Gang War'; 'Eight Deaths of Spider-Man' nas #61–70; a #900 é a #6 do volume.",
+      "spoiler": "forte"
+    },
+    "notes": ""
+  },
+  {
+    "kind": "phase",
+    "historicalStart": 965,
+    "historicalEnd": 1000,
+    "name": "Kelly, Larraz e Romita Jr.",
+    "creators": "Joe Kelly, Pepe Larraz e John Romita Jr. (desde abril de 2025)",
+    "highlights": {
+      "text": "A #1000 (#36 do volume) é uma edição gigante, com história principal de Kelly e Larraz e contos de aniversário de vários criadores.",
+      "spoiler": "forte"
+    },
+    "notes": "A #1000 foi publicada em 30/09/2026 (Toy People)."
+  },
+  {
+    "kind": "summary",
+    "label": "Total",
+    "name": "",
+    "creators": "← conferência com o total esperado da linha histórica",
+    "highlights": "",
+    "notes": ""
+  }
+]

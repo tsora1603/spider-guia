@@ -1,0 +1,31 @@
+{
+  "phase": "Pós-Saga do Clone / 1997",
+  "items": [
+    {
+      "id": 1281,
+      "historicalNumber": null,
+      "type": "Leitura fora da linha",
+      "series": "Amazing Spider-Man Annual",
+      "issue": "Annual 1997",
+      "phase": "Pós-Saga do Clone / 1997",
+      "weight": "○ Opcional",
+      "brazilianEdition": "",
+      "instructions": "Como encaixar: Leia no bloco Pós-Saga do Clone / 1997; use a posição indicada no Mapa geral.\nPor que ajuda: Complementa o período Pós-Saga do Clone / 1997 com material anual da respectiva série.\nConfirmação: Confirmado",
+      "readingOrder": 640,
+      "note": "Annual fora da numeração histórica. Leia entre Amazing #421 e #422."
+    },
+    {
+      "id": 1282,
+      "historicalNumber": null,
+      "type": "Leitura fora da linha",
+      "series": "Amazing Spider-Man Annual",
+      "issue": "Annual (1997)",
+      "phase": "Pós-Saga do Clone / 1997",
+      "weight": "○ Opcional",
+      "brazilianEdition": "",
+      "instructions": "Como encaixar: Leia no bloco Pós-Saga do Clone / 1997; use a posição indicada no Mapa geral.\nPor que ajuda: Complementa o período Pós-Saga do Clone / 1997 com material anual da respectiva série.\nConfirmação: Confirmado",
+      "readingOrder": 646,
+      "note": "Annual fora da numeração histórica; legado Annual #30. Leia entre Amazing #426 e #427."
+    }
+  ]
+}
