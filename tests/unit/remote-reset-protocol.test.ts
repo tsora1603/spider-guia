@@ -3,8 +3,8 @@ const values = new Map<string,string>();
 const storage={getItem:(k:string)=>values.get(k)??null,setItem:(k:string,v:string)=>{values.set(k,v);},removeItem:(k:string)=>{values.delete(k);}};
 const sync={invalidate:vi.fn(),waitForInFlight:vi.fn(async()=>{})};
 const disconnect=vi.fn(async()=>{});
-const resetLocal=vi.fn(async()=>{});
-vi.mock('../../src/reset/local-reset',()=>({resetThisDevice:(...args:any[])=>resetLocal(...args)}));
+const resetLocal=vi.fn(async(_deps:unknown)=>{});
+vi.mock('../../src/reset/local-reset',()=>({resetThisDevice:(deps:unknown)=>resetLocal(deps)}));
 beforeEach(async()=>{vi.resetModules();values.clear();vi.stubGlobal('localStorage',storage);vi.stubGlobal('navigator',{onLine:true,locks:{request:async(_name:string,_options:any,callback:(lock:unknown)=>Promise<unknown>)=>callback({name:'test-lock'})}});vi.stubGlobal('window',{SPIDER_REMOTE_RESET_VERIFIED:false,setTimeout,clearTimeout});vi.stubGlobal('crypto',{randomUUID:()=> '00000000-0000-4000-8000-000000000001'});sync.invalidate.mockClear();sync.waitForInFlight.mockClear();resetLocal.mockClear();});
 function mockServer(){
  let generation=1, data=[{user:'A',ord:1}], deleteCalls=0, requests:string[]=[];
