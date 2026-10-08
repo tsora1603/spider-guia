@@ -8,6 +8,7 @@ import { useProgressStatus } from '../ui/hooks';
 import { SpoilerText } from './SpoilerText';
 import { SkipButton, StatusButton, progressStatusLabel } from './Progress';
 import { Icon } from './Icon';
+import { SourceLinks } from './SourceLinks';
 import { bulkProgressUi } from '../progress/bulk-ui';
 
 const noteFor = (item: Reading) => {
@@ -22,6 +23,7 @@ const noteFor = (item: Reading) => {
 };
 
 type CloneContext = { part?: string | number; readingOrder?: number; note?: unknown };
+type ExtraEvidence = { confirmation?: string; sources?: number[] };
 
 /** Uma linha de edição, compartilhada pela Checklist, Extras e Saga do Clone.
  * O controle de pular nunca fica dentro de <details>: permanece acessível fechada.
@@ -32,6 +34,7 @@ export const IssueRow = memo(function IssueRow({
   onOpenChange,
   anchor = true,
   showBulkAction = true,
+  extraEvidence,
   context
 }: {
   key?: any;
@@ -40,6 +43,7 @@ export const IssueRow = memo(function IssueRow({
   onOpenChange?(id: number, open: boolean): void;
   anchor?: boolean;
   showBulkAction?: boolean;
+  extraEvidence?: ExtraEvidence;
   context?: CloneContext;
 }) {
   const [localOpen, setLocalOpen] = useState(false);
@@ -49,11 +53,11 @@ export const IssueRow = memo(function IssueRow({
   // pertence a Explorar > Extras. Em Explorar, manter as fichas completas.
   const editorialExtra = anchor && !context && item.type === 'Leitura fora da linha'
     ? extraEditorialByItemId[item.id] : null;
-  const { item: detailedItem, loading: detailLoading, error: detailError } = useReadingDetails(item.id, expanded && !editorialExtra);
+  const { item: detailedItem, loading: detailLoading, error: detailError } = useReadingDetails(item.id, expanded && !editorialExtra && !extraEvidence);
   const resolvedItem = detailedItem || item;
   const detail = extraDetailsById[item.id];
   const note = noteFor(resolvedItem);
-  const hasDetail = Boolean(editorialExtra || (resolvedItem.detailsLoaded && (resolvedItem.brazilianEdition || note || detail)));
+  const hasDetail = Boolean(editorialExtra || extraEvidence || (resolvedItem.detailsLoaded && (resolvedItem.brazilianEdition || note || detail)));
   return (
     <div id={anchor ? `hq-${item.id}` : undefined} tabIndex={-1} data-keyboard-reading data-reading-id={item.id} data-progress-status={status} class={`list-entry issue-entry ui-list-item ${status === 'Não' ? '' : 'is-done'}`}>
       <StatusButton id={item.id} status={status} labelPrefix={`${item.series} ${item.issue}`} />
@@ -74,6 +78,10 @@ export const IssueRow = memo(function IssueRow({
               <span class={`tag ${item.weight.startsWith('●') ? 'e' : ''}`}>{item.weight}</span>
               {item.type !== 'Principal' ? <span class="tag">{item.type}</span> : null}
               <span class={`reading-status reading-status-${status === 'Sim' ? 'read' : status === 'Pulei' ? 'skipped' : 'pending'}`}>{progressStatusLabel(status)}</span>
+              {extraEvidence ? <span class={`extra-editorial-status ${extraEvidence.confirmation === 'Confirmado' ? 'is-confirmed' : 'is-partial'}`}
+                aria-label={`Status editorial do conjunto: ${extraEvidence.confirmation || 'A confirmar'}`}
+                title="Status e fontes atribuídos à ficha editorial do conjunto; progresso desta HQ é independente"
+              >{extraEvidence.confirmation || 'A confirmar'} <span class="extra-editorial-status-scope">· conjunto</span></span> : null}
               {context?.part ? <span class="tag">Parte {context.part}</span> : null}
               {expanded && resolvedItem.detailsLoaded && !hasDetail && !context?.note ? <span class="mu sm">sem detalhes adicionais</span> : null}
             </div>
@@ -81,7 +89,17 @@ export const IssueRow = memo(function IssueRow({
           <Icon name="chevD" className="disclosure-chevron" />
         </summary>
         <div class="row-body disclosure-content">
-          {editorialExtra ? (
+          {extraEvidence ? (
+            <div class="extra-issue-evidence" aria-label="Fontes e confirmação editorial da leitura agrupada">
+              <span class="sm mu">Status editorial do conjunto: <b>{extraEvidence.confirmation || 'A confirmar'}</b>. A avaliação de posição e peso pertence à ficha editorial do conjunto.</span>
+              {extraEvidence.sources?.length ? (
+                <details class="extra-issue-source-disclosure">
+                  <summary><Icon name="search" size={16} /> Fontes consultadas do conjunto ({extraEvidence.sources.length}) <Icon name="chevD" size={16} /></summary>
+                  <div class="extra-issue-source-list"><SourceLinks indexes={extraEvidence.sources} /></div>
+                </details>
+              ) : <span class="sm mu">Sem fontes específicas registradas neste conjunto.</span>}
+            </div>
+          ) : editorialExtra ? (
             <a
               class="extra-more-info-link"
               href={exploreTarget('extras', 'extra', extraAnchorKey(editorialExtra))}

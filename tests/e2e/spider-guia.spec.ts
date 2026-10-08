@@ -821,6 +821,33 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(first).toHaveAttribute('data-progress-status', 'Sim');
   });
 
+  test('Extras agrupados exibem confirmação por leitura e fontes consultadas sem repetir justificativas', async ({ page }) => {
+    await page.goto('/#explorar/extras');
+    await page.getByRole('button', { name: /^Filtrar leituras extras/ }).click();
+    await page.getByRole('button', { name: 'Todas', exact: true }).click();
+    const confirmed = page.locator('.extra-entry').filter({ hasText: 'Marvel Team-Up #141–150' }).first();
+    await confirmed.locator(':scope > .row-details > summary').click();
+    const row = confirmed.locator('.extra-issue-list > .issue-entry').first();
+    await expect(row.locator('.extra-editorial-status')).toContainText('Confirmado');
+    await expect(row).toContainText('Pendente');
+    await row.locator(':scope > .row-details > summary').click();
+    await expect(row.locator('.extra-issue-evidence')).toBeVisible();
+    await expect(row.locator('.row-body')).not.toContainText('Como encaixar:');
+    await expect(row.locator('.row-body')).not.toContainText('Por que ler:');
+    await expect(row.locator('.row-body')).not.toContainText('Quanto ler:');
+    await row.getByText('Fontes consultadas do conjunto', { exact: false }).click();
+    const refs = row.locator('.extra-issue-source-list a.source-link');
+    await expect(refs).toHaveCount(4);
+    await expect(refs.first()).toHaveAttribute('href', /^https?:\/\//);
+    await row.getByRole('button', { name: /Marcar como lida/ }).click();
+    await expect(row).toHaveAttribute('data-progress-status', 'Sim');
+    await expect(row.locator('.extra-editorial-status')).toContainText('Confirmado');
+
+    const partial = page.locator('.extra-entry').filter({ hasText: 'Back in Black (Homem-Aranha' }).first();
+    await partial.locator(':scope > .row-details > summary').click();
+    await expect(partial.locator('.extra-issue-list .extra-editorial-status').first()).toContainText('Parcial');
+  });
+
   test('deep link distante localiza a HQ mesmo com virtualização', async ({ page }) => {
     await page.goto('/#checklist/hq/1301');
     const target = page.locator('#hq-1301');

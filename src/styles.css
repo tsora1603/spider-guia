@@ -808,3 +808,21 @@ main[data-tab="Hoje"]>.reading-home{grid-column:1/-1;min-width:0}
 details[open]>summary>.help-summary-chevron{transform:rotate(180deg)}
 .source-link .i{width:14px;height:14px;vertical-align:middle}
 @media(prefers-reduced-motion:reduce){.help-summary-chevron{transition:none}}
+
+
+/* Extras agrupados: progresso da HQ != confirmação editorial do conjunto.
+   Fontes são referências do grupo, não provas individuais inventadas. */
+.extra-editorial-status{display:inline-flex;align-items:center;padding:2px 7px;border-radius:999px;font-size:.6875rem;font-weight:700;line-height:1.45;border:1px solid currentColor}
+.extra-editorial-status.is-confirmed{color:var(--ok)}
+.extra-editorial-status.is-partial{color:var(--warning-text)}
+.extra-issue-evidence{display:grid;gap:9px;align-items:start;font-size:.8125rem}
+.extra-issue-evidence>span{line-height:1.45}
+.extra-issue-source-disclosure{min-width:0}
+.extra-issue-source-disclosure>summary{display:inline-flex;align-items:center;gap:7px;cursor:pointer;min-height:44px;color:var(--link);font-weight:700;list-style:none}
+.extra-issue-source-disclosure>summary::-webkit-details-marker{display:none}
+.extra-issue-source-disclosure>summary .i:last-child{transition:transform .15s ease}
+.extra-issue-source-disclosure[open]>summary .i:last-child{transform:rotate(180deg)}
+.extra-issue-source-disclosure>summary:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}
+.extra-issue-source-list{display:grid;gap:8px;padding:2px 0 10px 22px}
+.extra-issue-source-list .source-link{display:inline-flex;align-items:center;gap:6px;min-height:32px;overflow-wrap:anywhere;color:var(--link);text-decoration:underline;font-weight:600}
+@media(prefers-reduced-motion:reduce){.extra-issue-source-disclosure>summary .i:last-child{transition:none}}

@@ -3,24 +3,13 @@ import { DATA, editorialExtras, itemsById, readings } from '../data/model';
 import { statusOf } from '../state/progress-store';
 import { useProgressRevision } from '../ui/hooks';
 import { Icon } from './Icon';
+import { SourceLinks } from './SourceLinks';
 import { SpoilerText } from './SpoilerText';
 import { SkipButton, StatusButton, useProgressCounts, progressStatusLabel } from './Progress';
 import { IssueRow } from './IssueRow';
 import { ProgressBarVisual } from '../design/ProgressVisuals';
 
-export function SourceLinks({ indexes = [] }: { indexes?: number[] }) {
-  return <>
-    {indexes.map(index => {
-      const source = DATA.fontes.r[index];
-      if (!source) return null;
-      const title = String(source[0]).replace(/\s*\(atualizado.*$/, '');
-      const url = String(source[2] || '').split(/\s*;\s*/)[0];
-      return /^https?:\/\//.test(url)
-        ? <a class="source-link" href={url} target="_blank" rel="noopener"><Icon name="search" /> {title} <Icon name="chevR" /></a>
-        : <span class="source-link"><Icon name="search" /> {title}</span>;
-    })}
-  </>;
-}
+export { SourceLinks } from './SourceLinks';
 
 type ConfirmationCriteria = {
   position?: 'source-only' | 'not-met';
@@ -115,7 +104,13 @@ export function ExtraCard({ extra, editorialIndex, targeted = false }: { extra: 
           {state.total > 1 ? <div class="extra-issue-list content-list disclosure-list ui-list" aria-label={`Edições de ${extra.name}`}>
             {extra.itemIds.map((itemId: number) => {
               const item = itemsById[itemId];
-              return item ? <IssueRow key={itemId} item={item} anchor={false} showBulkAction={false} /> : null;
+              return item ? <IssueRow
+                key={itemId}
+                item={item}
+                anchor={false}
+                showBulkAction={false}
+                extraEvidence={{ confirmation: extra.confirmation, sources: extra.src || [] }}
+              /> : null;
             })}
           </div> : null}
           {hasSingleIssue && itemsById[id] ? <div class="sm mu">Abra a Checklist para consultar também a ficha completa desta edição.</div> : null}
