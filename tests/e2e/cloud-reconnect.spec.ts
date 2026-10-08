@@ -26,11 +26,12 @@ const mockedClient = `(() => {
   })};
 })();`;
 
-test.beforeEach(async ({ page }) => {
-  await page.route('**/config.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: "window.SUPABASE_URL='https://e2e.supabase.co';window.SUPABASE_ANON_KEY='fake';window.LINKS_ENABLED=true;" }));
-  await page.route('**/supabase.min.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: mockedClient }));
-  await page.route('https://fonts.googleapis.com/**', route => route.fulfill({ status: 200, contentType: 'text/css', body: '' }));
-  await page.addInitScript(() => {
+test.beforeEach(async ({ context }) => {
+  // As rotas/mocks precisam valer também para abas criadas dentro do teste.
+  await context.route('**/config.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: "window.SUPABASE_URL='https://e2e.supabase.co';window.SUPABASE_ANON_KEY='fake';window.LINKS_ENABLED=true;" }));
+  await context.route('**/supabase.min.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: mockedClient }));
+  await context.route('https://fonts.googleapis.com/**', route => route.fulfill({ status: 200, contentType: 'text/css', body: '' }));
+  await context.addInitScript(() => {
     if (localStorage.getItem('e2e-reconnect-seeded')) return;
     localStorage.setItem('e2e-reconnect-seeded', '1');
     localStorage.setItem('aranha-local-reset-guard-v1', JSON.stringify({version:2,phase:'completed',decision:'pending'}));
@@ -119,6 +120,11 @@ test('outra aba aberta recarrega após concessão, sem herdá-la enquanto antiga
   await page.locator('#cloud-reconnect-dialog').getByRole('button', {name:'Restaurar progresso da nuvem'}).click();
   await expect(page.locator('#cloud-reconnect-dialog')).toBeHidden();
   await expect.poll(() => second.evaluate(() => JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1') || '{}').decision)).toBe('restored');
+  await expect(second.locator('#cloud-reconnect-dialog')).toBeHidden();
+  // Aba antiga não recebe permissão de sincronização automaticamente.
+  expect(await second.evaluate(() => (window as any).__pushes)).toBe(0);
+  // Ao recarregar, a aba já nasce sob a autorização compartilhada validada.
+  await second.reload();
   await expect(second.locator('#cloud-reconnect-dialog')).toBeHidden();
   expect(await second.evaluate(() => (window as any).__deletes)).toBe(0);
 });

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { appState } from '../state/app-state';
 import { useUiRevision } from '../ui/hooks';
-import { cloudDecision, isSyncBlocked, resetPhase, remoteResetIsPending } from './reset-guard';
+import { cloudDecision, isSyncBlocked, resetPhase, remoteResetIsPending, LOCAL_RESET_GUARD_KEY, REMOTE_RESET_INTENT_KEY } from './reset-guard';
 import { confirmCloudRestore, confirmStartOnEmptyCloud, confirmLocalOnly, inspectCloudAfterReset } from '../runtime/controller';
 import type { CloudPreview } from './cloud-reconnect';
 import { getKnownGeneration } from '../sync/server-generation';
@@ -56,6 +56,19 @@ export function CloudReconnectDialog() {
     addEventListener('spider:cloud-review', request);
     return () => removeEventListener('spider:cloud-review', request);
   });
+  useEffect(() => {
+    // O navegador antigo não herda a autorização da outra aba: o guard interno
+    // continua bloqueando a escrita. Apenas removemos um diálogo obsoleto.
+    const onStorage = (event: StorageEvent) => {
+      if (event.key !== LOCAL_RESET_GUARD_KEY && event.key !== REMOTE_RESET_INTENT_KEY) return;
+      if (cloudDecision() !== 'restored' && !remoteResetIsPending()) return;
+      ++querySequence.current;
+      setPreview(null);
+      dialog.current?.close();
+    };
+    window.addEventListener('storage', onStorage);
+    return () => window.removeEventListener('storage', onStorage);
+  }, []);
   useEffect(() => {
     if (remoteResetIsPending() || !userId || resetPhase() !== 'completed' || cloudDecision() === 'restored') {
       ++querySequence.current;

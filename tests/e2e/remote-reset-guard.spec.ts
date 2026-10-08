@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 test('sem migração Supabase validada, reset remoto não pode ser escolhido',async({page})=>{
+ await page.addInitScript(() => localStorage.setItem('aranha-reading-preferences-v1', JSON.stringify({version:1,onboardingComplete:true,depth:'essential',focusQuery:'',readThrough:0})));
  await page.goto('/#conta/ajuda');
  await page.getByRole('button',{name:'Resetar todos os dados'}).click();
  const dialog=page.getByRole('dialog',{name:/Resetar dados deste dispositivo/});

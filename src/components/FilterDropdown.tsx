@@ -105,6 +105,21 @@ export function FilterDropdown<Value extends string>({
         {open ? (
           <div ref={menuRef} class="filter-menu" role="group" id={popupId} aria-label={label}
             onKeyDown={event => {
+              if (event.key === 'Tab') {
+                const buttons = Array.from(menuRef.current?.querySelectorAll<HTMLButtonElement>('.filter-option') || []);
+                const atBoundary = event.shiftKey ? document.activeElement === buttons[0] : document.activeElement === buttons[buttons.length - 1];
+                if (atBoundary) {
+                  event.preventDefault();
+                  const next = !event.shiftKey && triggerRef.current
+                    ? Array.from(document.querySelectorAll<HTMLElement>('a[href], button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex="-1"])'))
+                      .find(element => !menuRef.current?.contains(element) && element.getClientRects().length > 0 &&
+                        Boolean(triggerRef.current!.compareDocumentPosition(element) & Node.DOCUMENT_POSITION_FOLLOWING))
+                    : null;
+                  close();
+                  (next || triggerRef.current)?.focus();
+                }
+                return;
+              }
               if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
               event.preventDefault();
               const buttons = Array.from(menuRef.current?.querySelectorAll<HTMLButtonElement>('.filter-option') || []);

@@ -287,7 +287,7 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await expect(confirmed).toContainText('Posição: 100% evidência de fontes');
     await expect(confirmed).toContainText('Peso: ≥80% evidência · ≤20% dedução');
 
-    await page.locator('.filter-dropdown > summary').click();
+    await page.getByRole('button', { name: /Filtrar leituras extras por categoria/ }).click();
     await page.getByRole('button', { name: 'Todas', exact: true }).click();
     const partial = page.locator('.extra-entry').filter({ hasText: 'Annual #2 (1965)' });
     await partial.locator('summary').click();
@@ -322,7 +322,8 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await expect(page.locator('#hq-2')).toBeVisible();
 
     await context.setOffline(true);
-    await expect(page.locator('.sync-status')).toContainText('Offline');
+    // Sem sessão Supabase, mesmo offline o progresso fica apenas neste aparelho.
+    await expect(page.locator('.sync-status')).toContainText('Neste dispositivo');
     await page.locator('#hq-2').getByRole('button', { name: /Marcar como lida/ }).click();
 
     await expect.poll(async () => (await readProgress(page))['2']).toBe('Sim');
@@ -453,7 +454,7 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     const search = page.getByRole('searchbox', { name: 'Buscar na Checklist' });
     await search.fill('termo-que-nao-existe-aranha-999');
 
-    const empty = page.locator('.screen-state.empty');
+    const empty = page.locator('#app .screen-state.empty').filter({ hasText: 'Nenhuma leitura encontrada' });
     await expect(empty).toBeVisible();
     await expect(empty).toContainText('Nenhuma leitura encontrada');
     await empty.getByRole('button', { name: 'Limpar busca e filtros' }).click();

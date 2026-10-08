@@ -13,6 +13,19 @@ export const milestoneAnchorKey = (milestone: { year: unknown; title: unknown })
 export const extraAnchorKey = (extra: { itemIds?: number[]; name: unknown; after?: number }): string =>
   extra.itemIds?.length ? extra.itemIds.join('-') : `${slug(extra.name)}-${extra.after || 0}`;
 
+/** IDs editoriais podem ser inteiramente numéricos (ex.: "1228").
+ * Eles são chaves estáveis, não índices; os links legados por índice continuam
+ * aceitos somente quando não há uma chave editorial correspondente.
+ */
+export function resolveExtraTargetIndex(raw: string | null, extras: readonly { itemIds?: number[]; name: unknown; after?: number }[]): number | null {
+  if (raw === null) return null;
+  const byKey = extras.findIndex(entry => extraAnchorKey(entry) === raw);
+  if (byKey >= 0) return byKey;
+  if (!/^\d+$/.test(raw)) return null;
+  const legacyIndex = Number(raw);
+  return Number.isSafeInteger(legacyIndex) && legacyIndex >= 0 && legacyIndex < extras.length ? legacyIndex : null;
+}
+
 
 export function exploreTarget(section: string, target: EditorialTarget, value: number | string): string {
   const params = new URLSearchParams();

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { exploreTarget, exploreRouteParam, replaceExploreSearch, focusEditorialTarget, milestoneAnchorKey, extraAnchorKey } from '../src/views/explore-navigation.ts';
+import { exploreTarget, exploreRouteParam, replaceExploreSearch, focusEditorialTarget, milestoneAnchorKey, extraAnchorKey, resolveExtraTargetIndex } from '../src/views/explore-navigation.ts';
 
 import fs from 'node:fs';
 const catalog = JSON.parse(fs.readFileSync(new URL('../src/data/generated-index.json', import.meta.url), 'utf8'));
@@ -7,6 +7,11 @@ const milestoneKeys = catalog.marcos.r.map(([year, title]) => milestoneAnchorKey
 const extraKeys = catalog.editorial.extras.map(extraAnchorKey);
 assert.equal(new Set(milestoneKeys).size, milestoneKeys.length, 'marcos têm chaves distintas');
 assert.equal(new Set(extraKeys).size, extraKeys.length, 'extras têm chaves distintas');
+const annualIndex = catalog.editorial.extras.findIndex(entry => /The Amazing Spider-Man Annual #2 \(1965\)/.test(entry.name));
+assert.ok(annualIndex >= 0);
+assert.equal(resolveExtraTargetIndex(extraAnchorKey(catalog.editorial.extras[annualIndex]), catalog.editorial.extras), annualIndex, 'id numérico de extra tem prioridade sobre índice da lista');
+assert.equal(resolveExtraTargetIndex(String(catalog.editorial.extras.length - 1), catalog.editorial.extras) !== null, true, 'índice legado continua aceito quando não há chave homônima');
+assert.equal(resolveExtraTargetIndex('item-inexistente', catalog.editorial.extras), null);
 
 const location = { hash: '#explorar/jornada' };
 const historyCalls = [];

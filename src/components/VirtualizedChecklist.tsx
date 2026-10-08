@@ -196,13 +196,31 @@ export function VirtualizedChecklist() {
           target.scrollIntoView({ block: 'center', behavior: 'auto' });
           target.focus({ preventScroll: true });
           setViewport({ top: scrollY, height: innerHeight });
-          requestAnimationFrame(() => setDeepLinkPending(current => current === targetId ? null : current));
+          // Manter o chunk-alvo montado até a primeira navegação manual.
+          // Liberá-lo imediatamente pode desmontar a HQ focada quando as
+          // alturas estimadas da virtualização ainda estão sendo medidas.
         } else if (++attempts < 45) requestAnimationFrame(focusWhenReady);
       };
       requestAnimationFrame(focusWhenReady);
     }, 30);
     return () => clearTimeout(timeout);
   }, [deepLinkPending, design.focusMode, forcedChunkIndex, query, filter]);
+
+  useEffect(() => {
+    if (deepLinkPending == null || design.focusMode) return;
+    const release = () => setDeepLinkPending(null);
+    const releaseOnKey = (event: KeyboardEvent) => {
+      if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) release();
+    };
+    window.addEventListener('wheel', release, { passive: true });
+    window.addEventListener('touchstart', release, { passive: true });
+    window.addEventListener('keydown', releaseOnKey);
+    return () => {
+      window.removeEventListener('wheel', release);
+      window.removeEventListener('touchstart', release);
+      window.removeEventListener('keydown', releaseOnKey);
+    };
+  }, [deepLinkPending, design.focusMode]);
 
   const changeFilter = (next: ChecklistFilterValue) => {
     setFilter(next); appState.checklistFilter = next; router.replaceChecklistState();

@@ -86,7 +86,7 @@ test('Etapa 7 · acessibilidade de diálogos e preferência de menos movimento',
   await prepare(page);
   await page.goto('/#configuracoes');
   await page.getByRole('button', { name: 'Resetar todos os dados' }).click();
-  const dialog = page.locator('.device-reset-dialog');
+  const dialog = page.locator('dialog.device-reset-dialog:not(.cloud-reconnect-dialog)');
   await expect(dialog).toBeVisible();
   const result = await dialog.evaluate(node => ({ maxHeight: parseFloat(getComputedStyle(node).maxHeight), overflowY: getComputedStyle(node).overflowY }));
   expect(result.maxHeight).toBeLessThanOrEqual(560);

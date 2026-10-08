@@ -56,7 +56,7 @@ test('login privado: erro, entrar com senha, alterar senha e sair, sem cadastro'
   await expect(login).toBeHidden();
   await expect(page.getByText('Conectado como amigo@example.com')).toBeVisible();
   await page.getByLabel('Senha atual').fill('senha-correta');
-  await page.getByLabel('Nova senha').fill('nova-senha-segura');
+  await page.getByLabel('Nova senha', { exact: true }).fill('nova-senha-segura');
   await page.getByLabel('Confirmar nova senha').fill('nova-senha-segura');
   await page.getByRole('button',{name:'Alterar senha'}).click();
   await expect(page.getByText('Senha alterada.')).toBeVisible();

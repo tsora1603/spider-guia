@@ -20,7 +20,14 @@ const checks = {
   editorialSeparateFromProgress: editorial.includes('const availability =') && editorial.includes('progressStatusLabel(singleStatus)'),
   statusFilterUpdates: ui.includes('const progressRevision = useProgressRevision()') && /filter, query, progressRevision\]\)/.test(ui),
   remoteSecurityUntouched: source.includes('requestStatus(id: number') && source.includes('appState.skipPending = id'),
-  forcedDeepLink: ui.includes('const forcedChunkIndex =') && ui.includes('setDeepLinkPending(current => current === targetId ? null : current)'),
+  // A virtualização deve manter a HQ-alvo montada e focada até o usuário rolar.
+  // Soltar o alvo no próximo frame desmontava a linha de HQs distantes.
+  forcedDeepLink: ui.includes('const forcedChunkIndex =') &&
+    ui.includes('target.focus({ preventScroll: true })') &&
+    ui.includes("window.addEventListener('wheel', release") &&
+    ui.includes("window.addEventListener('touchstart', release") &&
+    ui.includes("window.removeEventListener('wheel', release") &&
+    ui.includes('setDeepLinkPending(null)'),
   e2eCoverage: ['Pular fica visível', 'filtro de status acompanha', 'Modo Foco é principal', 'Saga do Clone compartilha', 'Extras com várias', 'deep link distante'].every(t => e2e.includes(t))
 };
 console.log(JSON.stringify({ ok: Object.values(checks).every(Boolean), checks }, null, 2));

@@ -10,7 +10,7 @@ import { Icon } from '../components/Icon';
 import { FilterDropdown } from '../components/FilterDropdown';
 import { ScreenState } from '../components/ScreenState';
 import { ProgressBarVisual } from '../design/ProgressVisuals';
-import { exploreRouteParam, focusEditorialTarget, extraAnchorKey } from './explore-navigation';
+import { exploreRouteParam, focusEditorialTarget, resolveExtraTargetIndex } from './explore-navigation';
 
 const EXTRA_FILTERS: Array<[string, string]> = [
   ['rec', 'Recomendadas'], ['go', 'Liberadas'], ['ess', 'Essenciais'], ['ctx', 'Contexto'],
@@ -18,11 +18,7 @@ const EXTRA_FILTERS: Array<[string, string]> = [
 ];
 
 export function ExtrasView() {
-  const rawTarget = exploreRouteParam('extra');
-  const targetIndex = rawTarget === null ? null : (() => {
-    const index = /^\d+$/.test(rawTarget) ? Number(rawTarget) : editorialExtras.findIndex((entry: any) => extraAnchorKey(entry) === rawTarget);
-    return index >= 0 && index < editorialExtras.length ? index : null;
-  })();
+  const targetIndex = resolveExtraTargetIndex(exploreRouteParam('extra'), editorialExtras);
   const [filter, setFilter] = useState(targetIndex !== null ? 'all' : appState.extrasFilter || 'rec');
   useEffect(() => {
     if (targetIndex === null) return;
@@ -41,13 +37,22 @@ export function ExtrasView() {
     if (filter === 'opt') return String(entry.weight).startsWith('○');
     return true;
   });
-  const seenGroups = new Set<number>();
-  const cards = filtered.filter((entry: any) => {
-    if (!entry.readingGroup) return true;
-    if (seenGroups.has(entry.readingGroup)) return false;
-    seenGroups.add(entry.readingGroup);
-    return true;
-  });
+  // Grupos não devem ocultar a entrada exata aberta pela busca/deep link.
+  // No acesso normal preservamos o primeiro representante de cada grupo;
+  // em um link direto, a entrada solicitada o representa temporariamente.
+  const cards: any[] = [];
+  const groupPositions = new Map<number, number>();
+  for (const entry of filtered) {
+    if (!entry.readingGroup) { cards.push(entry); continue; }
+    const group = Number(entry.readingGroup);
+    const existing = groupPositions.get(group);
+    if (existing === undefined) {
+      groupPositions.set(group, cards.length);
+      cards.push(entry);
+    } else if (targetIndex !== null && editorialExtras[targetIndex] === entry) {
+      cards[existing] = entry;
+    }
+  }
   return (
     <>
       <div class="list-callout sm mu">Leituras fora da numeração histórica, integradas à mesma Checklist. Por padrão mostramos primeiro <b>Essenciais</b> e <b>Contexto</b>; use o filtro para explorar outras categorias.</div>
