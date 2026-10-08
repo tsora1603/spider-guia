@@ -1,6 +1,6 @@
 // Supabase opcional: Project URL e anon key.
-window.SUPABASE_URL = "COLE_AQUI_A_PROJECT_URL";
-window.SUPABASE_ANON_KEY = "COLE_AQUI_A_ANON_KEY";
+window.SUPABASE_URL = "https://otcvmqqxutbyhvlwpcgc.supabase.co/";
+window.SUPABASE_ANON_KEY = "sb_publishable_9PPoTkFM66k501aE2UYtDw_qr5LExFw";
 
 // Única flag da seção de Links. Defina false para não carregar links.js nem exibir a rota/aba.
 window.LINKS_ENABLED = true;
