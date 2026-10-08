@@ -1,7 +1,8 @@
 import { memo } from 'preact/compat';
 import { useState } from 'preact/hooks';
 import type { Reading } from '../data/model';
-import { extraDetailsById } from '../data/model';
+import { extraDetailsById, extraEditorialByItemId } from '../data/model';
+import { extraAnchorKey, exploreTarget } from '../views/explore-navigation';
 import { useReadingDetails } from '../data/hooks';
 import { useProgressStatus } from '../ui/hooks';
 import { SpoilerText } from './SpoilerText';
@@ -44,11 +45,15 @@ export const IssueRow = memo(function IssueRow({
   const [localOpen, setLocalOpen] = useState(false);
   const expanded = open ?? localOpen;
   const status = useProgressStatus(item.id);
-  const { item: detailedItem, loading: detailLoading, error: detailError } = useReadingDetails(item.id, expanded);
+  // A Checklist é uma sequência operacional; o conteúdo editorial dos Extras
+  // pertence a Explorar > Extras. Em Explorar, manter as fichas completas.
+  const editorialExtra = anchor && !context && item.type === 'Leitura fora da linha'
+    ? extraEditorialByItemId[item.id] : null;
+  const { item: detailedItem, loading: detailLoading, error: detailError } = useReadingDetails(item.id, expanded && !editorialExtra);
   const resolvedItem = detailedItem || item;
   const detail = extraDetailsById[item.id];
   const note = noteFor(resolvedItem);
-  const hasDetail = Boolean(resolvedItem.detailsLoaded && (resolvedItem.brazilianEdition || note || detail));
+  const hasDetail = Boolean(editorialExtra || (resolvedItem.detailsLoaded && (resolvedItem.brazilianEdition || note || detail)));
   return (
     <div id={anchor ? `hq-${item.id}` : undefined} tabIndex={-1} data-keyboard-reading data-reading-id={item.id} data-progress-status={status} class={`list-entry issue-entry ui-list-item ${status === 'Não' ? '' : 'is-done'}`}>
       <StatusButton id={item.id} status={status} labelPrefix={`${item.series} ${item.issue}`} />
@@ -76,6 +81,15 @@ export const IssueRow = memo(function IssueRow({
           <Icon name="chevD" className="disclosure-chevron" />
         </summary>
         <div class="row-body disclosure-content">
+          {editorialExtra ? (
+            <a
+              class="extra-more-info-link"
+              href={exploreTarget('extras', 'extra', extraAnchorKey(editorialExtra))}
+              aria-label={`Mais informações sobre ${item.series} ${item.issue} em Explorar, Extras`}
+            >
+              <Icon name="info" size={18} /> Mais informações <Icon name="arrowRight" size={18} />
+            </a>
+          ) : <>
           {context ? <div class="sm mu clone-context">{context.readingOrder != null ? `Ordem ${context.readingOrder}` : ''}{context.note ? <> · <SpoilerText text={context.note} /></> : null}</div> : null}
           {showBulkAction && item.historicalNumber ? <div class="issue-actions"><button class="skip-action bulk-inline-action" type="button" onClick={event => bulkProgressUi.open({ selection: { kind: 'through', itemId: item.id }, origin: event.currentTarget })}>Tudo até aqui</button></div> : null}
           {detailLoading ? <div class="ex mu sm" role="status">Carregando detalhes desta fase…</div> : null}
@@ -90,6 +104,7 @@ export const IssueRow = memo(function IssueRow({
               {detail.confirmationDetail ? <div class="sm mu"><SpoilerText text={detail.confirmationDetail} inline={false} /></div> : null}
             </div>
           ) : null}
+          </>}
         </div>
       </details>
       <div class="reading-row-end"><SkipButton id={item.id} status={status} /></div>

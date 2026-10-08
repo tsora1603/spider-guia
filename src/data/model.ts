@@ -131,6 +131,16 @@ export const editorialData = DATA.editorial || {};
 export const editorialExtras = editorialData.extras || [];
 export const cloneEntries = editorialData.clone?.entries || [];
 
+/** Associação editorial explícita: a Checklist só oferece detalhes em Explorar
+ * quando existe uma entrada de Extras que realmente referencia a HQ.
+ * Não inventar destinos para leituras sem ficha editorial própria.
+ */
+export const extraEditorialByItemId: Record<number, any> = Object.fromEntries(
+  editorialExtras.flatMap((extra: any) =>
+    (extra.itemIds || []).map((id: number) => [id, extra])
+  )
+);
+
 export const extraDetailsById = Object.fromEntries(
   editorialExtras.flatMap((extra: any) =>
     (extra.itemIds || []).map((id: number) => [
