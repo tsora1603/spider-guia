@@ -4,7 +4,7 @@ export const WeightSchema = z.enum(['● Essencial', '◐ Contexto', '○ Opcion
 export const ConfirmationSchema = z.enum(['Confirmado', 'Parcial', 'A confirmar']);
 export const ExtraConfirmationCriteriaSchema = z.object({
   position: z.enum(['source-only', 'not-met']),
-  weight: z.enum(['evidence-led-80-20', 'not-met'])
+  weight: z.enum(['evidence-led-60-40', 'not-met'])
 }).strict();
 export const ExtraConfirmationPolicySchema = z.object({
   position: z.object({
@@ -12,8 +12,8 @@ export const ExtraConfirmationPolicySchema = z.object({
     maximumDeductionPercent: z.literal(0)
   }).strict(),
   weight: z.object({
-    minimumEvidencePercent: z.literal(80),
-    maximumDeductionPercent: z.literal(20)
+    minimumEvidencePercent: z.literal(60),
+    maximumDeductionPercent: z.literal(40)
   }).strict()
 }).strict();
 export const SpoilerLevelSchema = z.enum(['leve', 'forte']);
@@ -90,14 +90,14 @@ export const ExtraSchema = z.object({
   just: z.string().optional()
 }).strict().superRefine((extra, ctx) => {
   const criteriaPass = extra.confirmationCriteria.position === 'source-only'
-    && extra.confirmationCriteria.weight === 'evidence-led-80-20';
+    && extra.confirmationCriteria.weight === 'evidence-led-60-40';
   const statusConfirmed = extra.confirmation === 'Confirmado';
   if (criteriaPass !== statusConfirmed) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
       path: ['confirmation'],
       message: statusConfirmed
-        ? 'Confirmado exige posição 100% baseada em fontes e peso no critério 80/20.'
+        ? 'Confirmado exige posição 100% baseada em fontes e peso no critério 60/40.'
         : 'Os dois critérios passaram; o status deve ser Confirmado.'
     });
   }

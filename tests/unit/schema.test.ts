@@ -56,7 +56,7 @@ describe('schemas Zod dos dados canônicos', () => {
     expect(FaseSchema.array().parse(phases).length).toBeGreaterThan(0);
     expect(MarcoSchema.array().parse(milestones).length).toBeGreaterThan(0);
     expect(SkipRuleSchema.array().parse(skip).length).toBeGreaterThan(0);
-    expect(SourceSchema.array().parse(sources)).toHaveLength(158);
+    expect(SourceSchema.array().parse(sources)).toHaveLength(166);
     expect(GlossaryEntrySchema.array().parse(glossary).length).toBeGreaterThan(0);
     expect(MethodologyEntrySchema.array().parse(methodology).length).toBeGreaterThan(0);
     expect(ChangelogEntrySchema.array().parse(changelog).length).toBeGreaterThan(0);

@@ -4,8 +4,8 @@ export const EXTRA_CONFIRMATION_POLICY = Object.freeze({
     maximumDeductionPercent: 0
   }),
   weight: Object.freeze({
-    minimumEvidencePercent: 80,
-    maximumDeductionPercent: 20
+    minimumEvidencePercent: 60,
+    maximumDeductionPercent: 40
   })
 });
 
@@ -15,7 +15,7 @@ export const POSITION_CRITERIA = Object.freeze({
 });
 
 export const WEIGHT_CRITERIA = Object.freeze({
-  PASS: 'evidence-led-80-20',
+  PASS: 'evidence-led-60-40',
   FAIL: 'not-met'
 });
 
@@ -33,7 +33,7 @@ export function validateExtraConfirmation(extra) {
     return {
       ok: false,
       message: confirmed
-        ? 'Status Confirmado exige posição 100% baseada em fontes e peso dentro do critério 80/20.'
+        ? 'Status Confirmado exige posição 100% baseada em fontes e peso dentro do critério 60/40.'
         : 'Os dois critérios foram aprovados; o status geral deve ser Confirmado.'
     };
   }

@@ -20,7 +20,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes: Amazing Fantasy #15 é a origem e primeira aparição de Spider-Man, anterior à Amazing #1.",
     "src": [
       37,
@@ -33,7 +33,7 @@
     "links": [],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -57,7 +57,7 @@
     "newItem": true,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância.",
     "src": [
       123,
@@ -69,7 +69,7 @@
     "just": "A posição é sustentada por fonte de ordem/cronologia e o peso Essencial é sustentado pela centralidade narrativa documentada nas fontes; a dedução editorial apenas completa a avaliação de relevância.",
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -82,8 +82,8 @@
       "text": "Primeiro encontro Spider-Man/Doctor Strange; amplia o universo, mas não é necessário à trajetória de Peter.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. A Marvel identifica o Annual #2 como encontro de Spider-Man e Doctor Strange contra Xandu. Dedução: apesar de ampliar os encontros do personagem no universo Marvel, não é etapa necessária para entender a trajetória principal; peso Opcional.",
     "howMuch": "1 edição",
     "brazilianEdition": "",
     "itemIds": [
@@ -93,16 +93,17 @@
     "newItem": true,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
-    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A Marvel identifica o Annual #2 como encontro de Spider-Man e Doctor Strange contra Xandu. Dedução: apesar de ampliar os encontros do personagem no universo Marvel, não é etapa necessária para entender a trajetória principal; peso Opcional. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       123,
-      151
+      151,
+      158
     ],
-    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A Marvel identifica o Annual #2 como encontro de Spider-Man e Doctor Strange contra Xandu. Dedução: apesar de ampliar os encontros do personagem no universo Marvel, não é etapa necessária para entender a trajetória principal; peso Opcional. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -115,8 +116,8 @@
       "text": "Peter é testado como possível Vingador; é um marco de seu status diante dos heróis da Marvel.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. A sinopse oficial registra que os Vingadores consideram convidar Spider-Man para sua equipe. Dedução: o episódio aprofunda o vínculo com os heróis da Marvel sem constituir virada central da série regular; peso Contexto.",
     "howMuch": "1 edição",
     "brazilianEdition": "",
     "itemIds": [
@@ -126,16 +127,17 @@
     "newItem": true,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
-    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A sinopse oficial registra que os Vingadores consideram convidar Spider-Man para sua equipe. Dedução: o episódio aprofunda o vínculo com os heróis da Marvel sem constituir virada central da série regular; peso Contexto. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       123,
-      151
+      151,
+      159
     ],
-    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A sinopse oficial registra que os Vingadores consideram convidar Spider-Man para sua equipe. Dedução: o episódio aprofunda o vínculo com os heróis da Marvel sem constituir virada central da série regular; peso Contexto. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -148,8 +150,8 @@
       "text": "Confronto com o Human Torch; aventura complementar sem consequência essencial para a linha principal.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. A sinopse oficial identifica o Annual #4 como confronto autônomo com o Human Torch e outros vilões. Dedução: a aventura amplia o período sem ser requisito para acompanhar a sequência principal; peso Opcional.",
     "howMuch": "1 edição",
     "brazilianEdition": "",
     "itemIds": [
@@ -159,16 +161,17 @@
     "newItem": true,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
-    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A sinopse oficial identifica o Annual #4 como confronto autônomo com o Human Torch e outros vilões. Dedução: a aventura amplia o período sem ser requisito para acompanhar a sequência principal; peso Opcional. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       123,
-      151
+      151,
+      160
     ],
-    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A sinopse oficial identifica o Annual #4 como confronto autônomo com o Human Torch e outros vilões. Dedução: a aventura amplia o período sem ser requisito para acompanhar a sequência principal; peso Opcional. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -192,7 +195,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Divergente — fontes indicam depois da #62; catálogo preservado depois da #61",
-    "weightEvidence": "Confirmado por fontes e conteúdo documentado",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Comics Back Issues e Crushing Krisis posicionam o Annual #5 depois da Amazing #62; o GCD confirma a edição e a história sobre os pais de Peter. Como o requisito de regressão exige os IDs na mesma ordem, o site mantém a posição histórica depois da #61 e marca o status geral como Parcial.",
     "src": [
       62,
@@ -209,7 +212,7 @@
     "links": [],
     "confirmationCriteria": {
       "position": "not-met",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -354,8 +357,8 @@
       "text": "Mostra o que teria acontecido se o clone de Peter tivesse vivido. É realidade alternativa. Leia só se quiser.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "A cronologia da Gabbing Geek sustenta a posição relativa; o peso Opcional ainda não tem suporte editorial suficiente nas fontes consultadas.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. A Marvel Database identifica What If? #30 como hipótese alternativa sobre o clone de Peter; a cronologia documenta o encaixe recomendado. Dedução: por não integrar a continuidade principal, o cenário alternativo é Opcional.",
     "howMuch": "1 edição",
     "brazilianEdition": "a confirmar",
     "itemIds": [
@@ -365,14 +368,14 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição sustentada; peso Opcional ainda é classificação editorial",
-    "confirmationDetail": "A cronologia da Gabbing Geek sustenta a posição relativa; o peso Opcional ainda não tem suporte editorial suficiente nas fontes consultadas.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A Marvel Database identifica What If? #30 como hipótese alternativa sobre o clone de Peter; a cronologia documenta o encaixe recomendado. Dedução: por não integrar a continuidade principal, o cenário alternativo é Opcional. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       20,
       124,
       156
     ],
-    "just": "A cronologia da Gabbing Geek sustenta a posição relativa; o peso Opcional ainda não tem suporte editorial suficiente nas fontes consultadas.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A Marvel Database identifica What If? #30 como hipótese alternativa sobre o clone de Peter; a cronologia documenta o encaixe recomendado. Dedução: por não integrar a continuidade principal, o cenário alternativo é Opcional. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "readingGroup": 3,
     "unavailable": true,
     "where": [
@@ -382,7 +385,7 @@
     "links": [],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -495,7 +498,7 @@
       "spoiler": "forte"
     },
     "confirmation": "Parcial",
-    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "confirmationNote": "Fontes dão suporte ao período/bloco, mas não ao encaixe exato após a HQ indicada; posição não atende à regra de 100% fontes. O peso também continua Parcial.",
     "howMuch": "1 edição",
     "brazilianEdition": "",
     "itemIds": [
@@ -504,16 +507,16 @@
     "category": "annual",
     "newItem": true,
     "special": "",
-    "positionEvidence": "Confirmada por fonte",
+    "positionEvidence": "Parcial — fontes documentam o período, mas não comprovam o ponto exato da intercalação",
     "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
-    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationDetail": "Posição: encaixe por bloco, sem comprovação documental inequívoca da posição exata. Não é permitido preencher a lacuna por dedução. Peso: faltam evidências de conteúdo para sustentar o mínimo de 60% por fontes.",
     "src": [
       123,
       151
     ],
-    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "just": "Posição: encaixe por bloco, sem comprovação documental inequívoca da posição exata. Não é permitido preencher a lacuna por dedução. Peso: faltam evidências de conteúdo para sustentar o mínimo de 60% por fontes.",
     "confirmationCriteria": {
-      "position": "source-only",
+      "position": "not-met",
       "weight": "not-met"
     }
   },
@@ -967,7 +970,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       21
@@ -987,7 +990,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -1000,8 +1003,8 @@
       "text": "Amplia a Saga do Traje Negro. O essencial já está na Amazing: a descoberta de que o traje é vivo, na #258.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional continua sendo recomendação editorial. Amazing Spider-Man Annual #20 foi removido deste bloco por ser de 1986 e ter encaixe próprio depois da #282.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. Fontes documentam a intercalação dos títulos na Saga do Traje Negro, e a Marvel identifica Amazing #258 como capítulo da revelação do simbionte. Dedução: o bloco expande a saga, mas a revelação fundamental aparece na Amazing; peso Opcional para a leitura orientada pela série principal.",
     "howMuch": "22 edições (Marvel Team-Up #141–150 + Annual #7; Spectacular Spider-Man #90–100)",
     "brazilianEdition": "a confirmar",
     "itemIds": [
@@ -1013,13 +1016,15 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição sustentada; peso Opcional ainda é classificação editorial",
-    "confirmationDetail": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional é recomendação do guia e não está explicitamente sustentado pela fonte.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: Fontes documentam a intercalação dos títulos na Saga do Traje Negro, e a Marvel identifica Amazing #258 como capítulo da revelação do simbionte. Dedução: o bloco expande a saga, mas a revelação fundamental aparece na Amazing; peso Opcional para a leitura orientada pela série principal. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       21,
-      124
+      124,
+      161,
+      162
     ],
-    "just": "A ordem da Saga do Traje Negro sustenta a posição; o peso Opcional é recomendação do guia e não está explicitamente sustentado pela fonte.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: Fontes documentam a intercalação dos títulos na Saga do Traje Negro, e a Marvel identifica Amazing #258 como capítulo da revelação do simbionte. Dedução: o bloco expande a saga, mas a revelação fundamental aparece na Amazing; peso Opcional para a leitura orientada pela série principal. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "readingGroup": 5,
     "unavailable": false,
     "where": [
@@ -1038,7 +1043,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -1128,7 +1133,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       21
@@ -1148,7 +1153,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -1172,7 +1177,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       56,
@@ -1195,7 +1200,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -1241,8 +1246,8 @@
       "text": "Mary Jane é envolvida diretamente na trama de Smythe; bom complemento para Peter/MJ.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. A sinopse oficial do Annual #19 confirma o confronto com Smythe envolvendo Mary Jane e Peter. Dedução: acrescenta contexto da relação Peter/MJ, mas não é indispensável para acompanhar a série principal; peso Contexto.",
     "howMuch": "1 edição",
     "brazilianEdition": "",
     "itemIds": [
@@ -1252,16 +1257,17 @@
     "newItem": true,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
-    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A sinopse oficial do Annual #19 confirma o confronto com Smythe envolvendo Mary Jane e Peter. Dedução: acrescenta contexto da relação Peter/MJ, mas não é indispensável para acompanhar a série principal; peso Contexto. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       124,
-      151
+      151,
+      163
     ],
-    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Contexto ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A sinopse oficial do Annual #19 confirma o confronto com Smythe envolvendo Mary Jane e Peter. Dedução: acrescenta contexto da relação Peter/MJ, mas não é indispensável para acompanhar a série principal; peso Contexto. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -1407,7 +1413,7 @@
       "spoiler": "forte"
     },
     "confirmation": "Parcial",
-    "confirmationNote": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso ainda não possui evidência suficiente para ser tratado como confirmado.",
+    "confirmationNote": "Fontes dão suporte ao período/bloco, mas não ao encaixe exato após a HQ indicada; posição não atende à regra de 100% fontes. O peso também continua Parcial.",
     "howMuch": "1 edição",
     "brazilianEdition": "",
     "itemIds": [
@@ -1416,16 +1422,16 @@
     "category": "annual",
     "newItem": true,
     "special": "",
-    "positionEvidence": "Confirmada por fonte",
+    "positionEvidence": "Parcial — fontes documentam o período, mas não comprovam o ponto exato da intercalação",
     "weightEvidence": "Parcial — posição confirmada; peso editorial ainda sem confirmação independente",
-    "confirmationDetail": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "confirmationDetail": "Posição: encaixe por bloco, sem comprovação documental inequívoca da posição exata. Não é permitido preencher a lacuna por dedução. Peso: faltam evidências de conteúdo para sustentar o mínimo de 60% por fontes.",
     "src": [
       124,
       155
     ],
-    "just": "A posição é sustentada pelas fontes cronológicas/bibliográficas consultadas; o peso Opcional ainda não possui confirmação independente suficiente. Status geral: Parcial.",
+    "just": "Posição: encaixe por bloco, sem comprovação documental inequívoca da posição exata. Não é permitido preencher a lacuna por dedução. Peso: faltam evidências de conteúdo para sustentar o mínimo de 60% por fontes.",
     "confirmationCriteria": {
-      "position": "source-only",
+      "position": "not-met",
       "weight": "not-met"
     }
   },
@@ -1450,7 +1456,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       22,
@@ -1474,7 +1480,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -1498,7 +1504,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       22,
@@ -1516,7 +1522,7 @@
     "links": [],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -1540,7 +1546,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       22,
@@ -1561,7 +1567,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -2135,8 +2141,8 @@
       "text": "Só 3 dos 14 capítulos estão na Amazing (#378–380). Quer o arco completo? Siga a ordem indicada. Prefere a linha enxuta? Pule. Carnificina já estreou nas #361–363, dentro da contagem. Mas as três edições ficam com buracos de enredo.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "As fontes sustentam a ordem de Maximum Carnage; o peso Opcional em relação à jornada principal continua sendo recomendação editorial sem suporte suficiente nas fontes.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. As fontes de ordem do crossover e a Marvel identificam Maximum Carnage como evento narrativo de 14 partes, com capítulos distribuídos em títulos distintos. Dedução: o guia oferece a leitura integral como extensão opcional da linha histórica, sem afirmar que os três capítulos da Amazing constituam sozinhos uma narrativa fechada.",
     "howMuch": "11 edições fora (Amazing #378–380 já contam)",
     "brazilianEdition": "a confirmar",
     "itemIds": [
@@ -2146,13 +2152,14 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição sustentada; peso/relevância ainda sem confirmação independente suficiente",
-    "confirmationDetail": "As fontes sustentam a ordem de Maximum Carnage; o peso Opcional em relação à jornada principal continua sendo recomendação editorial sem suporte suficiente nas fontes.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: As fontes de ordem do crossover e a Marvel identificam Maximum Carnage como evento narrativo de 14 partes, com capítulos distribuídos em títulos distintos. Dedução: o guia oferece a leitura integral como extensão opcional da linha histórica, sem afirmar que os três capítulos da Amazing constituam sozinhos uma narrativa fechada. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       40,
-      41
+      41,
+      164
     ],
-    "just": "As fontes sustentam a ordem de Maximum Carnage; o peso Opcional em relação à jornada principal continua sendo recomendação editorial sem suporte suficiente nas fontes.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: As fontes de ordem do crossover e a Marvel identificam Maximum Carnage como evento narrativo de 14 partes, com capítulos distribuídos em títulos distintos. Dedução: o guia oferece a leitura integral como extensão opcional da linha histórica, sem afirmar que os três capítulos da Amazing constituam sozinhos uma narrativa fechada. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "readingGroup": 11,
     "unavailable": false,
     "where": [
@@ -2167,7 +2174,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -2472,7 +2479,7 @@
     "newItem": false,
     "special": "clone",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Este card representa somente as entradas fora da numeração histórica da Saga do Clone. O roteiro dedicado editorial.clone continua com 187 entradas e inclui, separadamente, contexto da saga original, capítulos da Amazing principal e leituras posteriores.",
     "src": [
       20,
@@ -2488,7 +2495,7 @@
     "links": [],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -2608,7 +2615,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       27,
@@ -2629,7 +2636,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -2802,8 +2809,8 @@
       "text": "Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da Jornada lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "As fontes sustentam a ordem intercalada de The Other; o peso Contexto não é classificado de forma suficientemente clara pelas fontes.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. A ordem de The Other e os volumes que compõem a história constam nas fontes bibliográficas, que registram a transformação de Peter ao longo do crossover. Dedução: os capítulos fora da Amazing enriquecem a compreensão dessa fase; peso Contexto, sem tratá-los como leituras obrigatórias isoladamente.",
     "howMuch": "8 edições fora",
     "brazilianEdition": "Parcial: o Marvel Saga (Panini) tem 'O Outro – Parte Um' (vol.9) e 'O Outro – Parte 2' (vol.10), pelos títulos no Whakoom. A faixa de cada volume (Friendly Neighborhood #1–4, Marvel Knights #19–22, Amazing #525–528) não foi conferida em descrição oficial: a confirmar.",
     "itemIds": [
@@ -2813,13 +2820,13 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição sustentada; peso/relevância ainda sem confirmação independente suficiente",
-    "confirmationDetail": "As fontes sustentam a ordem intercalada de The Other; o peso Contexto não é classificado de forma suficientemente clara pelas fontes.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A ordem de The Other e os volumes que compõem a história constam nas fontes bibliográficas, que registram a transformação de Peter ao longo do crossover. Dedução: os capítulos fora da Amazing enriquecem a compreensão dessa fase; peso Contexto, sem tratá-los como leituras obrigatórias isoladamente. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       43,
       44
     ],
-    "just": "As fontes sustentam a ordem intercalada de The Other; o peso Contexto não é classificado de forma suficientemente clara pelas fontes.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: A ordem de The Other e os volumes que compõem a história constam nas fontes bibliográficas, que registram a transformação de Peter ao longo do crossover. Dedução: os capítulos fora da Amazing enriquecem a compreensão dessa fase; peso Contexto, sem tratá-los como leituras obrigatórias isoladamente. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "readingGroup": 14,
     "unavailable": false,
     "where": [
@@ -2834,7 +2841,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -2858,7 +2865,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       32,
@@ -2880,7 +2887,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -2893,8 +2900,8 @@
       "text": "Peter muda de lado e luta ao lado do Capitão América. Isso já aparece na Amazing (#532–538, 'Civil War: Amazing Spider-Man'). Um resumo do evento dá o contexto. Leia as edições só se quiser o evento todo. O peso é recomendação deste guia.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "A posição dos capítulos de Civil War é sustentada; o próprio guia registrava que o peso Contexto era uma recomendação editorial, por isso ele ainda precisa de confirmação independente.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. Guias da Guerra Civil registram as etapas do evento; a própria Amazing cobre as principais consequências para Peter. Dedução: as edições gerais #3–7 ampliam o contexto político e heroico sem substituírem a trajetória de Peter na Amazing; peso Contexto.",
     "howMuch": "5 edições (um resumo basta)",
     "brazilianEdition": "a confirmar: minissérie Civil War #3–7 sem edição Panini localizada nesta rodada. Contexto: o Marvel Saga Vol. 11 – Guerra Civil (Panini) traz Amazing Spider-Man #532–538 (ver bloco 3).",
     "itemIds": [
@@ -2904,14 +2911,14 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição sustentada; peso/relevância ainda sem confirmação independente suficiente",
-    "confirmationDetail": "A posição dos capítulos de Civil War é sustentada; o próprio guia registrava que o peso Contexto era uma recomendação editorial, por isso ele ainda precisa de confirmação independente.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: Guias da Guerra Civil registram as etapas do evento; a própria Amazing cobre as principais consequências para Peter. Dedução: as edições gerais #3–7 ampliam o contexto político e heroico sem substituírem a trajetória de Peter na Amazing; peso Contexto. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       32,
       45,
       46
     ],
-    "just": "A posição dos capítulos de Civil War é sustentada; o próprio guia registrava que o peso Contexto era uma recomendação editorial, por isso ele ainda precisa de confirmação independente.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: Guias da Guerra Civil registram as etapas do evento; a própria Amazing cobre as principais consequências para Peter. Dedução: as edições gerais #3–7 ampliam o contexto político e heroico sem substituírem a trajetória de Peter na Amazing; peso Contexto. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "readingGroup": 16,
     "unavailable": false,
     "where": [
@@ -2926,7 +2933,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -2964,7 +2971,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Parcial",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "A estrutura do arco é sustentada, mas há incerteza fina na ordem dos Annuals; o peso Opcional também não está suficientemente sustentado pelas fontes.",
     "src": [
       64,
@@ -2985,7 +2992,7 @@
     ],
     "confirmationCriteria": {
       "position": "not-met",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3009,7 +3016,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       28
@@ -3029,7 +3036,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3053,7 +3060,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "A confirmar",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "As fontes sustentam que Ultimate Spider-Man (2024) é uma continuidade alternativa, coerente com peso Opcional; o ponto exato de encaixe após #545 é uma convenção do guia.",
     "src": [
       66,
@@ -3074,7 +3081,7 @@
     ],
     "confirmationCriteria": {
       "position": "not-met",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3226,7 +3233,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       47,
@@ -3242,7 +3249,7 @@
     "links": [],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3338,8 +3345,8 @@
       "text": "Annual fora da linha principal; incluído no Lote E, seguindo a numeração legada dos Annuals Amazing.",
       "spoiler": "forte"
     },
-    "confirmation": "Confirmado",
-    "confirmationNote": "Posição sustentada pelo GCD (on-sale 2014-12-10); peso Opcional ainda sem evidência suficiente para confirmação.",
+    "confirmation": "Parcial",
+    "confirmationNote": "A posição é sustentada pelo GCD. A fonte usada documenta a edição/data, sem confirmar conteúdo ou independência narrativa suficiente para sustentar ao menos 60% do peso Opcional.",
     "howMuch": "1 edição",
     "brazilianEdition": "",
     "itemIds": [
@@ -3349,15 +3356,15 @@
     "newItem": true,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
-    "confirmationDetail": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal.",
+    "weightEvidence": "Parcial — referência bibliográfica comprova a edição e a data, mas não demonstra seu peso Opcional",
+    "confirmationDetail": "Posição: sustentada pelo registro bibliográfico do GCD. Peso: não confirmado, porque a fonte citada registra publicação/cronologia, não o papel narrativo do Annual. A inferência editorial isolada não basta para promover o status.",
     "src": [
       139
     ],
-    "just": "A posição é sustentada por fonte de ordem/cronologia. O peso Opcional é sustentado pelo caráter de Annual, história paralela, tie-in ou continuidade alternativa documentado nas fontes; a dedução editorial limita-se a concluir que não é necessária para seguir a linha principal.",
+    "just": "Posição: sustentada pelo registro bibliográfico do GCD. Peso: não confirmado, porque a fonte citada registra publicação/cronologia, não o papel narrativo do Annual. A inferência editorial isolada não basta para promover o status.",
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "not-met"
     }
   },
   {
@@ -3387,7 +3394,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       49,
@@ -3408,7 +3415,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3432,7 +3439,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       49,
@@ -3453,7 +3460,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3466,8 +3473,8 @@
       "text": "A Marvel posiciona Secret Wars entre o fim do volume de 2014 e Renew Your Vows. Um resumo do evento basta. O peso é recomendação deste guia.",
       "spoiler": "forte"
     },
-    "confirmation": "Parcial",
-    "confirmationNote": "A posição de Secret Wars entre as fases é sustentada; o peso Contexto estava explicitamente registrado como recomendação do guia.",
+    "confirmation": "Confirmado",
+    "confirmationNote": "Peso reavaliado pelo critério 60/40. O guia da Marvel situa Renew Your Vows no período de Secret Wars e a nova série principal depois do evento. Dedução: Secret Wars fornece panorama do cenário entre volumes, mas o enredo integral não é pré-requisito para seguir a Amazing; peso Contexto.",
     "howMuch": "9 edições (um resumo basta)",
     "brazilianEdition": "a confirmar",
     "itemIds": [
@@ -3477,13 +3484,14 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Parcial — posição sustentada; peso/relevância ainda sem confirmação independente suficiente",
-    "confirmationDetail": "A posição de Secret Wars entre as fases é sustentada; o peso Contexto estava explicitamente registrado como recomendação do guia.",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
+    "confirmationDetail": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: O guia da Marvel situa Renew Your Vows no período de Secret Wars e a nova série principal depois do evento. Dedução: Secret Wars fornece panorama do cenário entre volumes, mas o enredo integral não é pré-requisito para seguir a Amazing; peso Contexto. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "src": [
       50,
-      52
+      52,
+      165
     ],
-    "just": "A posição de Secret Wars entre as fases é sustentada; o peso Contexto estava explicitamente registrado como recomendação do guia.",
+    "just": "Posição: confirmada pelas fontes cronológicas já registradas. Peso: O guia da Marvel situa Renew Your Vows no período de Secret Wars e a nova série principal depois do evento. Dedução: Secret Wars fornece panorama do cenário entre volumes, mas o enredo integral não é pré-requisito para seguir a Amazing; peso Contexto. A proporção 60/40 é uma regra editorial de avaliação, não uma medição objetiva dessas fontes.",
     "readingGroup": 24,
     "unavailable": false,
     "where": [
@@ -3498,7 +3506,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "not-met"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3523,7 +3531,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       53,
@@ -3548,7 +3556,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3671,7 +3679,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       55
@@ -3691,7 +3699,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3715,7 +3723,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "A confirmar",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "A fonte classifica Spider-Geddon como leitura opcional, sustentando o peso; o encaixe exato depois da #816 continua sem confirmação.",
     "src": [
       68
@@ -3735,7 +3743,7 @@
     ],
     "confirmationCriteria": {
       "position": "not-met",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3759,7 +3767,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       56
@@ -3779,7 +3787,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3803,7 +3811,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       56,
@@ -3824,7 +3832,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3852,7 +3860,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       58,
@@ -3873,7 +3881,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -3929,7 +3937,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       60
@@ -3949,7 +3957,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {
@@ -4011,7 +4019,7 @@
     "newItem": false,
     "special": "",
     "positionEvidence": "Confirmada por fonte",
-    "weightEvidence": "Confirmado (fontes + dedução editorial limitada)",
+    "weightEvidence": "Confirmado (fontes e dedução lógica até 40%)",
     "confirmationDetail": "Posição e peso sustentados pelas fontes.",
     "src": [
       61
@@ -4031,7 +4039,7 @@
     ],
     "confirmationCriteria": {
       "position": "source-only",
-      "weight": "evidence-led-80-20"
+      "weight": "evidence-led-60-40"
     }
   },
   {

@@ -16,7 +16,7 @@ const failures = [];
 const fail = message => failures.push(message);
 
 if (JSON.stringify(meta.extraConfirmationPolicy) !== JSON.stringify(EXTRA_CONFIRMATION_POLICY)) {
-  fail('meta.json não corresponde à política canônica 100/0 para posição e 80/20 para peso.');
+  fail('meta.json não corresponde à política canônica 100/0 para posição e 60/40 para peso.');
 }
 
 if (JSON.stringify(generated.editorial?.confirmationPolicy) !== JSON.stringify(EXTRA_CONFIRMATION_POLICY)) {

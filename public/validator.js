@@ -49,10 +49,10 @@
     if (
       confirmationPolicy?.position?.minimumEvidencePercent !== 100 ||
       confirmationPolicy?.position?.maximumDeductionPercent !== 0 ||
-      confirmationPolicy?.weight?.minimumEvidencePercent !== 80 ||
-      confirmationPolicy?.weight?.maximumDeductionPercent !== 20
+      confirmationPolicy?.weight?.minimumEvidencePercent !== 60 ||
+      confirmationPolicy?.weight?.maximumDeductionPercent !== 40
     ) {
-      fail('extras.confirmation.policy', 'A política de confirmação deve ser posição 100/0 e peso 80/20.');
+      fail('extras.confirmation.policy', 'A política de confirmação deve ser posição 100/0 e peso 60/40.');
     }
 
     const extras = data?.editorial?.extras || [];
@@ -63,11 +63,11 @@
       if (!VALID_WEIGHTS.has(extra.weight)) fail('extras.weight', `Peso inválido em ${extra.name || `extra ${index + 1}`}.`);
       if (extra.confirmation && !VALID_STATUSES.has(extra.confirmation)) fail('extras.status', `Status inválido em ${extra.name || `extra ${index + 1}`}: ${extra.confirmation}.`);
       const positionPass = extra.confirmationCriteria?.position === 'source-only';
-      const weightPass = extra.confirmationCriteria?.weight === 'evidence-led-80-20';
+      const weightPass = extra.confirmationCriteria?.weight === 'evidence-led-60-40';
       const criteriaPass = positionPass && weightPass;
       if (!extra.confirmationCriteria) fail('extras.confirmation.criteria', `${extra.name || `Extra ${index + 1}`} não declara confirmationCriteria.`);
       if ((extra.confirmation === 'Confirmado') !== criteriaPass) {
-        fail('extras.confirmation.invariant', `${extra.name || `Extra ${index + 1}`}: Confirmado exige posição 100% baseada em fontes e peso no critério 80/20.`);
+        fail('extras.confirmation.invariant', `${extra.name || `Extra ${index + 1}`}: Confirmado exige posição 100% baseada em fontes e peso no critério 60/40.`);
       }
       if (criteriaPass && !(extra.src || []).length) {
         fail('extras.confirmation.sources', `${extra.name || `Extra ${index + 1}`}: Confirmado precisa registrar fonte.`);

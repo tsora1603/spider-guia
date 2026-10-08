@@ -285,15 +285,15 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await confirmed.locator('summary').click();
     await expect(confirmed).toContainText('Confirmado');
     await expect(confirmed).toContainText('Posição: 100% evidência de fontes');
-    await expect(confirmed).toContainText('Peso: ≥80% evidência · ≤20% dedução');
+    await expect(confirmed).toContainText('Peso: ≥60% fontes · ≤40% dedução lógica');
 
     await page.getByRole('button', { name: /Filtrar leituras extras por categoria/ }).click();
     await page.getByRole('button', { name: 'Todas', exact: true }).click();
-    const partial = page.locator('.extra-entry').filter({ hasText: 'Annual #2 (1965)' });
+    const partial = page.locator('.extra-entry').filter({ hasText: 'Annual #6 (1969)' });
     await partial.locator('summary').click();
     await expect(partial).toContainText('Parcial');
     await expect(partial).toContainText('Posição: 100% evidência de fontes');
-    await expect(partial).toContainText('Peso: critério 80/20 não atendido');
+    await expect(partial).toContainText('Peso: critério 60/40 não atendido');
   });
 
   test('logout não apaga progresso local existente', async ({ page }) => {

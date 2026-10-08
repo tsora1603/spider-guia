@@ -1,5 +1,10 @@
 [
   {
+    "date": "08/10/2026",
+    "title": "Revisão dos critérios de confirmação dos Extras (100/0 e 60/40)",
+    "body": "Posição exige fonte para o ponto exato. Peso admite até 40% de dedução lógica apoiada em pelo menos 60% de base factual. Status foram reavaliados caso a caso, com justificativas específicas e novas fontes primárias para exemplos representativos; divergências e lacunas permanecem Parciais."
+  },
+  {
     "date": "07/10/2026",
     "title": "Spoilers declarativos e nível global",
     "body": "O runtime deixa de detectar spoilers por regex, frases literais e auditoria de DOM. Campos já explicitamente protegidos passam a carregar spoiler forte no próprio dado; as demais ocorrências heurísticas são exportadas como sugestões pendentes de revisão. O controle global usa Nenhum, Leve ou Tudo."

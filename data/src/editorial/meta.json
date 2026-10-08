@@ -1,14 +1,14 @@
 {
-  "sourcesAppended": 86,
-  "editorialVersion": 5,
+  "sourcesAppended": 94,
+  "editorialVersion": 6,
   "extraConfirmationPolicy": {
     "position": {
       "minimumEvidencePercent": 100,
       "maximumDeductionPercent": 0
     },
     "weight": {
-      "minimumEvidencePercent": 80,
-      "maximumDeductionPercent": 20
+      "minimumEvidencePercent": 60,
+      "maximumDeductionPercent": 40
     }
   }
 }

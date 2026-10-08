@@ -12,10 +12,10 @@ const readExtras = async () => JSON.parse(
 );
 
 describe('contrato de confirmação das Leituras Extras', () => {
-  it('fixa a política em 100/0 para posição e 80/20 para peso', () => {
+  it('fixa a política em 100/0 para posição e 60/40 para peso', () => {
     expect(EXTRA_CONFIRMATION_POLICY).toEqual({
       position: { minimumEvidencePercent: 100, maximumDeductionPercent: 0 },
-      weight: { minimumEvidencePercent: 80, maximumDeductionPercent: 20 }
+      weight: { minimumEvidencePercent: 60, maximumDeductionPercent: 40 }
     });
   });
 
@@ -25,11 +25,26 @@ describe('contrato de confirmação das Leituras Extras', () => {
     const bothPass = extras.filter((extra: any) => extraConfirmationPasses(extra));
 
     expect(extras).toHaveLength(108);
-    expect(confirmed).toHaveLength(23);
-    expect(bothPass).toHaveLength(23);
+    expect(confirmed).toHaveLength(32);
+    expect(bothPass).toHaveLength(32);
     for (const extra of extras) {
       expect(validateExtraConfirmation(extra).ok).toBe(true);
       expect(extra.confirmation === 'Confirmado').toBe(extraConfirmationPasses(extra));
+    }
+  });
+
+  it('reclassifica casos com suporte narrativo sem promover divergências de posição', async () => {
+    const extras = await readExtras();
+    for (const n of [3, 4, 5, 11, 30, 36, 62, 77, 79, 93]) {
+      const extra = extras.find((item: any) => item.n === n);
+      expect(extra.confirmation).toBe('Confirmado');
+      expect(extra.confirmationCriteria.weight).toBe('evidence-led-60-40');
+      expect(extra.confirmationNote).toContain('Dedução:');
+      expect(extra.src.length).toBeGreaterThan(0);
+    }
+    for (const n of [6, 15, 38, 41, 80, 82, 90, 99]) {
+      const extra = extras.find((item: any) => item.n === n);
+      expect(extra.confirmation).toBe('Parcial');
     }
   });
 
@@ -41,7 +56,7 @@ describe('contrato de confirmação das Leituras Extras', () => {
     );
     const weightOnly = extras.find((extra: any) =>
       extra.confirmationCriteria.position === 'not-met'
-      && extra.confirmationCriteria.weight === 'evidence-led-80-20'
+      && extra.confirmationCriteria.weight === 'evidence-led-60-40'
     );
 
     expect(positionOnly?.confirmation).toBe('Parcial');
