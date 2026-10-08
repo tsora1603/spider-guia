@@ -16,7 +16,7 @@ export function SourceLinks({ indexes = [] }: { indexes?: number[] }) {
       const title = String(source[0]).replace(/\s*\(atualizado.*$/, '');
       const url = String(source[2] || '').split(/\s*;\s*/)[0];
       return /^https?:\/\//.test(url)
-        ? <a class="source-link" href={url} target="_blank" rel="noopener"><Icon name="search" /> {title} ›</a>
+        ? <a class="source-link" href={url} target="_blank" rel="noopener"><Icon name="search" /> {title} <Icon name="chevR" /></a>
         : <span class="source-link"><Icon name="search" /> {title}</span>;
     })}
   </>;
@@ -105,6 +105,7 @@ export function ExtraCard({ extra, editorialIndex, targeted = false }: { extra: 
               {extra.unavailable ? <span class="tag">sem link</span> : null}
             </div>
           </div>
+          <Icon name="chevD" className="disclosure-chevron" />
         </summary>
         <div class="row-body disclosure-content">
           <EvidenceBox status={extra.confirmation} detail={extra.confirmationDetail || extra.just} sources={extra.src || []} criteria={extra.confirmationCriteria} />

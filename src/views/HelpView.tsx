@@ -5,6 +5,7 @@ import { router } from '../runtime/controller';
 import { SpoilerText } from '../components/SpoilerText';
 import { ScreenState } from '../components/ScreenState';
 import { ListSearch } from '../components/ListSearch';
+import { Icon } from '../components/Icon';
 import { helpQueryParams, withHelpSearch, helpTargetIndex } from './help-routing';
 
 const SOURCE_SITE_NAMES: Record<string, string> = {
@@ -58,7 +59,7 @@ function Glossary({ query, target }: { query: string; target: number | null }) {
   return <>
     <p class="mu sm glossary-count ui-list-count" role="status">{filtered.length} {filtered.length === 1 ? 'termo' : 'termos'} de {DATA.glossario.r.length} · Toque para ler a definição</p>
     <div class="glossary-grid">{filtered.map(({ row, index }) => <details class={`card disclosure-item glossary-card${index === target ? ' is-targeted' : ''}`} id={`glossario-${index}`} key={index} open={index === target ? true : undefined}>
-      <summary class="disclosure-summary ui-disclosure-summary"><b>{row[0]}</b></summary>
+      <summary class="disclosure-summary ui-disclosure-summary"><b>{row[0]}</b><Icon name="chevD" className="help-summary-chevron" /></summary>
       <div class="row-body disclosure-content"><p class="sm"><SpoilerText text={row[1]} /></p>{row[2] ? <p class="sm mu">Ex.: {row[2]}</p> : null}<a class="help-deep-link sm" href={`#ajuda/glossario?termo=${index}`}>Link para este termo</a></div>
     </details>)}</div>
   </>;
@@ -73,10 +74,10 @@ function Sources({ query, target }: { query: string; target: number | null }) {
     {groups.length ? <div class="content-list disclosure-list ui-list source-site-list">{groups.map(group => {
       const hasTarget = group.sources.some(item => item.index === target);
       return <details class="source-site-group ui-list-item disclosure-item" key={group.key} open={query || hasTarget ? true : undefined}>
-        <summary class="disclosure-summary ui-disclosure-summary source-site-summary"><div class="row-head"><b>{group.label}</b><div class="row-meta disclosure-meta"><span class="tag">{group.sources.length} fontes</span><span class="mu sm">{group.key === 'sem-site' ? 'sem domínio' : group.key}</span></div></div></summary>
+        <summary class="disclosure-summary ui-disclosure-summary source-site-summary"><div class="row-head"><b>{group.label}</b><div class="row-meta disclosure-meta"><span class="tag">{group.sources.length} fontes</span><span class="mu sm">{group.key === 'sem-site' ? 'sem domínio' : group.key}</span></div></div><Icon name="chevD" className="help-summary-chevron" /></summary>
         <div class="source-site-body disclosure-content"><div class="source-list disclosure-list source-list-nested">{group.sources.map(({ source, index, uses, url }) => <details class={`content-row ui-list-item disclosure-item source-row${index === target ? ' is-targeted' : ''}`} id={`fonte-${index}`} key={index} open={index === target ? true : undefined}>
-          <summary class="disclosure-summary ui-disclosure-summary"><b>{source[0]}</b></summary>
-          <div class="row-body disclosure-content"><p class="sm mu"><SpoilerText text={source[1]} /></p>{url ? <a class="source-link" href={url} target="_blank" rel="noopener noreferrer">Abrir fonte ↗</a> : null}{uses.length ? <div class="source-uses sm mu"><b>Usada em:</b> {uses.join(' · ')}</div> : null}<a class="help-deep-link sm" href={`#ajuda/fontes?fonte=${index}`}>Link para esta fonte</a></div>
+          <summary class="disclosure-summary ui-disclosure-summary"><b>{source[0]}</b><Icon name="chevD" className="disclosure-chevron" /></summary>
+          <div class="row-body disclosure-content"><p class="sm mu"><SpoilerText text={source[1]} /></p>{url ? <a class="source-link" href={url} target="_blank" rel="noopener noreferrer">Abrir fonte <Icon name="externalLink" /></a> : null}{uses.length ? <div class="source-uses sm mu"><b>Usada em:</b> {uses.join(' · ')}</div> : null}<a class="help-deep-link sm" href={`#ajuda/fontes?fonte=${index}`}>Link para esta fonte</a></div>
         </details>)}</div></div>
       </details>;
     })}</div> : <ScreenState kind="empty" title="Nenhuma fonte encontrada" message={`Nenhuma fonte corresponde a “${query}”.`} />}
@@ -91,7 +92,7 @@ function Methodology({ target }: { target: number | null }) {
     <div class="method-grid">{entries.map((entry: any, index: number) => <section class={`card${index === target ? ' is-targeted' : ''}`} id={`metodologia-${index}`} key={entry.title} tabIndex={-1}>
       <h3>{entry.title}</h3><p class="sm mu"><SpoilerText text={entry.body} /></p><a class="help-deep-link sm" href={`#ajuda/metodologia?bloco=${index}`}>Link para este tema</a>
     </section>)}</div>
-    {editorialData.changelog?.length ? <div class="content-list disclosure-list"><details class="content-row ui-list-item disclosure-item"><summary class="disclosure-summary ui-disclosure-summary"><b>Atualizações editoriais</b></summary><div class="row-body disclosure-content">{editorialData.changelog.map((entry: any) => <div class="src" key={`${entry.date}-${entry.title}`}><b>{entry.date} · {entry.title}</b><p class="sm mu">{entry.body}</p></div>)}</div></details></div> : null}
+    {editorialData.changelog?.length ? <div class="content-list disclosure-list"><details class="content-row ui-list-item disclosure-item"><summary class="disclosure-summary ui-disclosure-summary"><b>Atualizações editoriais</b><Icon name="chevD" className="disclosure-chevron" /></summary><div class="row-body disclosure-content">{editorialData.changelog.map((entry: any) => <div class="src" key={`${entry.date}-${entry.title}`}><b>{entry.date} · {entry.title}</b><p class="sm mu">{entry.body}</p></div>)}</div></details></div> : null}
   </>;
 }
 

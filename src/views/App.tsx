@@ -24,7 +24,7 @@ const HelpView = lazy(() => import('./HelpView').then(module => ({ default: modu
 
 const NAV_ITEMS: Array<{ key: 'Hoje' | 'Checklist' | 'Explorar' | 'Ajuda' | 'Configurações'; icon: IconName; hash: string; mobileLabel?: string }> = [
   { key: 'Hoje', icon: 'home', hash: '#hoje' },
-  { key: 'Checklist', icon: 'check', hash: '#checklist' },
+  { key: 'Checklist', icon: 'checklist', hash: '#checklist' },
   { key: 'Explorar', icon: 'route', hash: '#explorar/jornada' },
   { key: 'Ajuda', icon: 'info', hash: '#ajuda' },
   { key: 'Configurações', icon: 'settings', hash: '#configuracoes', mobileLabel: 'Config.' }

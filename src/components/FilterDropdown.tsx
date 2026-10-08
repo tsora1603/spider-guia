@@ -136,7 +136,7 @@ export function FilterDropdown<Value extends string>({
                 class="filter-option"
                 aria-pressed={value === optionValue}
                 onClick={() => { onChange(optionValue); close(true); }}
-              >{optionLabel}</button>
+              >{optionLabel}{value === optionValue ? <Icon name="check" className="filter-option-check" /> : null}</button>
             ))}
           </div>
         ) : null}

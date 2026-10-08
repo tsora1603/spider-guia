@@ -73,6 +73,7 @@ export const IssueRow = memo(function IssueRow({
               {expanded && resolvedItem.detailsLoaded && !hasDetail && !context?.note ? <span class="mu sm">sem detalhes adicionais</span> : null}
             </div>
           </div>
+          <Icon name="chevD" className="disclosure-chevron" />
         </summary>
         <div class="row-body disclosure-content">
           {context ? <div class="sm mu clone-context">{context.readingOrder != null ? `Ordem ${context.readingOrder}` : ''}{context.note ? <> · <SpoilerText text={context.note} /></> : null}</div> : null}

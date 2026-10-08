@@ -45,7 +45,7 @@
     "test:e2e:report": "playwright show-report",
     "e:unit": "vitest run",
     "e:e2e": "playwright test",
-    "e:check": "npm run e:architecture:check && npm run stage1:check && npm run stage2:check && npm run ux:stage4:check && npm run ux:stage5:check && npm run ux:stage6:check && npm run ux:stage7:check && npm run preferences:check && npm run extras:confirmation:check && npm run stage3:check && npm run stage4:check && npm run stage5:check && npm run lint && npm run d:check && npm run data:check && npm run links:check && npm run test:unit",
+    "e:check": "npm run icons:check && npm run e:architecture:check && npm run stage1:check && npm run stage2:check && npm run ux:stage4:check && npm run ux:stage5:check && npm run ux:stage6:check && npm run ux:stage7:check && npm run preferences:check && npm run extras:confirmation:check && npm run stage3:check && npm run stage4:check && npm run stage5:check && npm run lint && npm run d:check && npm run data:check && npm run links:check && npm run test:unit",
     "ci": "npm run e:check && npm run build",
     "e:architecture:check": "node scripts/check-e-quality.mjs",
     "preferences:check": "node scripts/check-reading-preferences.mjs",
@@ -63,7 +63,8 @@
     "ux:stage6:check": "node scripts/check-ux-stage6.mjs && node --experimental-strip-types scripts/check-help-routing.mjs",
     "ux:stage7:check": "node scripts/check-quality-stage7.mjs",
     "focus:navigation:check": "node --experimental-strip-types scripts/check-focus-navigation.mjs",
-    "reading-sequence:check": "node --experimental-strip-types scripts/check-reading-sequence-refactor.mjs"
+    "reading-sequence:check": "node --experimental-strip-types scripts/check-reading-sequence-refactor.mjs",
+    "icons:check": "node scripts/check-lucide-icons.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
@@ -77,6 +78,7 @@
     "zod": "^3.24.2"
   },
   "dependencies": {
-    "preact": "^10.29.8"
+    "preact": "^10.29.8",
+    "lucide-preact": "^1.47.0"
   }
 }

@@ -85,8 +85,8 @@ function FocusChecklist({ items, currentId, onCurrentId, onExit }: {
       <IssueRow key={item.id} item={item} open={expanded} onOpenChange={(_id, nextOpen) => setExpanded(nextOpen)} />
     </div>
     <nav class="focus-reader-nav" aria-label="Navegação do modo foco">
-      <button class="btn g" data-focus-nav="previous" type="button" disabled={index <= 0} onClick={() => go(index - 1)}><span aria-hidden="true">←</span> Anterior</button>
-      <button class="btn" data-focus-nav="next" type="button" disabled={index >= items.length - 1} onClick={() => go(index + 1)}>Próxima <span aria-hidden="true">→</span></button>
+      <button class="btn g" data-focus-nav="previous" type="button" disabled={index <= 0} onClick={() => go(index - 1)}><Icon name="arrowLeft" /> Anterior</button>
+      <button class="btn" data-focus-nav="next" type="button" disabled={index >= items.length - 1} onClick={() => go(index + 1)}>Próxima <Icon name="arrowRight" /></button>
     </nav>
   </section>;
 }
