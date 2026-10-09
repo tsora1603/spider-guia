@@ -859,3 +859,9 @@ details[open]>summary>.help-summary-chevron{transform:rotate(180deg)}
 .links-context-toolbar .btn{min-height:44px}
 .links-context-toolbar .sm{margin-right:auto}
 @media(max-width:600px){.reading-links-cta{width:100%}.reading-links-action{display:block}.links-context-toolbar .links-back-reading{width:100%;justify-content:flex-start}}
+
+/* Critérios editoriais compartilhados por Extras e Saga do Clone. */
+.extra-evidence-criteria{display:flex;flex-wrap:wrap;gap:7px 14px}
+.extra-evidence-criteria>span{display:inline-flex;align-items:center;gap:5px;color:var(--text-muted);font-weight:650}
+.extra-evidence-criteria .criterion-pass{color:var(--ok)}
+.extra-evidence-criteria .criterion-fail{color:var(--warning-text)}

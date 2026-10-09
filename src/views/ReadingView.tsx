@@ -77,7 +77,7 @@ export function ExtrasView() {
 function CloneIssue({ entry }: { entry: any; key?: any }) {
   const reading = itemsById[entry.id];
   if (!reading) return null;
-  return <IssueRow item={reading} anchor={false} showBulkAction={false} context={{ part: entry.part, readingOrder: entry.readingOrder, note: entry.note }} />;
+  return <IssueRow item={reading} anchor={false} showBulkAction={false} showLinks={false} context={{ part: entry.part, readingOrder: entry.readingOrder, note: entry.note }} extraEvidence={{ confirmation: entry.confirmation, detail: entry.confirmationDetail, scope: 'item', sources: entry.sources, criteria: entry.confirmationCriteria }} />;
 }
 
 export function CloneView() {
@@ -109,8 +109,8 @@ export function CloneView() {
 function ClonePhase({ phase, ids, open, onToggle }: any) {
   const counts = useProgressCounts(ids);
   return (
-    <section class="clone-phase ui-list-item disclosure-item">
-      <button class="clone-phase-button disclosure-summary ui-disclosure-summary" onClick={onToggle} aria-expanded={open}>
+    <section class={`clone-phase journey-phase ui-list-item disclosure-item${open ? ' is-open' : ''}`}>
+      <button class="fh disclosure-summary ui-disclosure-summary" onClick={onToggle} aria-expanded={open}>
         <div><b>{phase.name}</b><span class="mu sm"> {ids.length} entradas · {phase.arcs.length} {phase.arcs.length === 1 ? 'arco' : 'arcos'}</span></div>
         <span class="c">{counts.read} lidas · {counts.skipped} puladas · {counts.percent}% <Icon name={open ? 'chevU' : 'chevD'} /></span>
       </button>

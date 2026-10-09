@@ -52,7 +52,11 @@ describe('schemas Zod dos dados canônicos', () => {
       ]);
 
     expect(ExtraSchema.array().parse(extras)).toHaveLength(108);
-    expect(CloneSchema.parse(clone).entries).toHaveLength(187);
+    const cloneEntries = CloneSchema.parse(clone).entries;
+    expect(cloneEntries).toHaveLength(187);
+    expect(cloneEntries.every((entry) => entry.confirmation === 'Confirmado')).toBe(true);
+    expect(cloneEntries.every((entry) => entry.confirmationCriteria.position === 'source-only')).toBe(true);
+    expect(cloneEntries.every((entry) => entry.sources.length > 0)).toBe(true);
     expect(FaseSchema.array().parse(phases).length).toBeGreaterThan(0);
     expect(MarcoSchema.array().parse(milestones).length).toBeGreaterThan(0);
     expect(SkipRuleSchema.array().parse(skip).length).toBeGreaterThan(0);
@@ -74,6 +78,17 @@ describe('schemas Zod dos dados canônicos', () => {
     expect(ExtraSchema.safeParse({
       ...confirmed,
       confirmationCriteria: { ...confirmed.confirmationCriteria, weight: 'not-met' }
+    }).success).toBe(false);
+  });
+
+  it('rejeita confirmação da Saga do Clone quando a posição não é 100% documental', async () => {
+    const clone = await readJson('data/src/editorial/clone.json');
+    const entry = clone.entries[0];
+    expect(CloneSchema.safeParse({
+      entries: [{
+        ...entry,
+        confirmationCriteria: { ...entry.confirmationCriteria, position: 'not-met' }
+      }]
     }).success).toBe(false);
   });
 

@@ -27,7 +27,16 @@ const noteFor = (item: Reading) => {
 };
 
 type CloneContext = { part?: string | number; readingOrder?: number; note?: unknown };
-type ExtraEvidence = { confirmation?: string; sources?: number[] };
+type ExtraEvidence = {
+  confirmation?: string;
+  detail?: string;
+  scope?: 'item' | 'group';
+  sources?: number[];
+  criteria?: {
+    position?: 'source-only' | 'not-met';
+    weight?: 'evidence-led-60-40' | 'inherited' | 'not-met';
+  };
+};
 
 /** Uma linha de edição, compartilhada pela Checklist, Extras e Saga do Clone.
  * O controle de pular nunca fica dentro de <details>: permanece acessível fechada.
@@ -93,11 +102,11 @@ export const IssueRow = memo(function IssueRow({
         {extraEvidence ? (
           <span
             class={`extra-editorial-status ${extraEvidence.confirmation === 'Confirmado' ? 'is-confirmed' : 'is-partial'}`}
-            aria-label={`Status editorial do conjunto: ${extraEvidence.confirmation || 'A confirmar'}`}
-            title="Status e fontes atribuídos à ficha editorial do conjunto; progresso desta HQ é independente"
+            aria-label={`Status editorial ${extraEvidence.scope === 'item' ? 'do item' : 'do conjunto'}: ${extraEvidence.confirmation || 'A confirmar'}`}
+            title={`Status e fontes atribuídos à ficha editorial ${extraEvidence.scope === 'item' ? 'deste item' : 'do conjunto'}; progresso desta HQ é independente`}
           >
             {extraEvidence.confirmation || 'A confirmar'}{' '}
-            <span class="extra-editorial-status-scope">· conjunto</span>
+            <span class="extra-editorial-status-scope">· {extraEvidence.scope === 'item' ? 'item' : 'conjunto'}</span>
           </span>
         ) : null}
         {context?.part ? <span class="tag">Parte {context.part}</span> : null}
@@ -141,15 +150,61 @@ export const IssueRow = memo(function IssueRow({
                   class="extra-issue-evidence"
                   aria-label="Fontes e confirmação editorial da leitura agrupada"
                 >
+                  {context ? (
+                    <div class="sm mu clone-context">
+                      {context.readingOrder != null ? `Ordem ${context.readingOrder}` : ''}
+                      {context.note ? (
+                        <>
+                          {' '}
+                          · <SpoilerText text={context.note} />
+                        </>
+                      ) : null}
+                    </div>
+                  ) : null}
                   <span class="sm mu">
-                    Status editorial do conjunto:{' '}
-                    <b>{extraEvidence.confirmation || 'A confirmar'}</b>. A avaliação de posição e
-                    peso pertence à ficha editorial do conjunto.
+                    <b>{extraEvidence.confirmation || 'A confirmar'}.</b>{' '}
+                    {extraEvidence.detail ||
+                      'A avaliação editorial e as fontes pertencem a esta seleção.'}
                   </span>
+                  {extraEvidence.criteria ? (
+                    <div class="extra-evidence-criteria" aria-label="Critérios de confirmação">
+                      <span
+                        class={
+                          extraEvidence.criteria.position === 'source-only'
+                            ? 'criterion-pass'
+                            : 'criterion-fail'
+                        }
+                      >
+                        <Icon
+                          name={
+                            extraEvidence.criteria.position === 'source-only' ? 'check' : 'minus'
+                          }
+                          size={15}
+                        />
+                        Posição: 100% baseada em fontes
+                      </span>
+                      <span
+                        class={
+                          extraEvidence.criteria.weight === 'not-met'
+                            ? 'criterion-fail'
+                            : 'criterion-pass'
+                        }
+                      >
+                        <Icon
+                          name={extraEvidence.criteria.weight === 'not-met' ? 'minus' : 'check'}
+                          size={15}
+                        />
+                        Peso:{' '}
+                        {extraEvidence.criteria.weight === 'inherited'
+                          ? 'preservado da classificação anterior'
+                          : '60% pesquisa · 40% dedução editorial'}
+                      </span>
+                    </div>
+                  ) : null}
                   {extraEvidence.sources?.length ? (
                     <details class="extra-issue-source-disclosure">
                       <summary>
-                        <Icon name="search" size={16} /> Fontes consultadas do conjunto (
+                        <Icon name="search" size={16} /> {extraEvidence.scope === 'item' ? 'Fontes consultadas' : 'Fontes consultadas do conjunto'} (
                         {extraEvidence.sources.length}) <Icon name="chevD" size={16} />
                       </summary>
                       <div class="extra-issue-source-list">

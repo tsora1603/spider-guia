@@ -177,15 +177,37 @@ export const EditorialMetaSchema = z
   })
   .strict();
 
-export const CloneEntrySchema = z.object({
-  id: z.number().int().positive(),
-  readingOrder: z.number().int().positive(),
-  phase: z.string().min(1),
-  crossover: z.string(),
-  part: z.string(),
-  note: SpoilerTextSchema,
-  sourceOrder: z.number().int().positive()
-});
+export const CloneEntrySchema = z
+  .object({
+    id: z.number().int().positive(),
+    readingOrder: z.number().int().positive(),
+    phase: z.string().min(1),
+    crossover: z.string(),
+    part: z.string(),
+    note: SpoilerTextSchema,
+    sourceOrder: z.number().int().positive(),
+    confirmation: ConfirmationSchema,
+    confirmationDetail: z.string().min(1),
+    confirmationCriteria: z
+      .object({
+        position: z.enum(['source-only', 'not-met']),
+        weight: z.enum(['evidence-led-60-40', 'inherited', 'not-met'])
+      })
+      .strict(),
+    sources: z.array(z.number().int().nonnegative()).min(1)
+  })
+  .superRefine((entry, ctx) => {
+    const criteriaPass =
+      entry.confirmationCriteria.position === 'source-only' &&
+      entry.confirmationCriteria.weight !== 'not-met';
+    if ((entry.confirmation === 'Confirmado') !== criteriaPass) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['confirmation'],
+        message: 'Confirmado exige posição baseada apenas em fontes e peso pesquisado ou herdado.'
+      });
+    }
+  });
 
 export const CloneSchema = z.object({
   entries: z.array(CloneEntrySchema)

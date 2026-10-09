@@ -10,7 +10,17 @@
         "text": "Início da leitura sugerida da 'Saga do Clone original' (#143–149).",
         "spoiler": "forte"
       },
-      "sourceOrder": 1
+      "sourceOrder": 1,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 146,
@@ -19,7 +29,17 @@
       "crossover": "Saga do Clone original (1975)",
       "part": "",
       "note": "",
-      "sourceOrder": 2
+      "sourceOrder": 2,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 147,
@@ -28,7 +48,17 @@
       "crossover": "Saga do Clone original (1975)",
       "part": "",
       "note": "",
-      "sourceOrder": 3
+      "sourceOrder": 3,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 148,
@@ -37,7 +67,17 @@
       "crossover": "Saga do Clone original (1975)",
       "part": "",
       "note": "",
-      "sourceOrder": 4
+      "sourceOrder": 4,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 149,
@@ -46,7 +86,17 @@
       "crossover": "Saga do Clone original (1975)",
       "part": "",
       "note": "",
-      "sourceOrder": 5
+      "sourceOrder": 5,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 150,
@@ -55,7 +105,17 @@
       "crossover": "Saga do Clone original (1975)",
       "part": "",
       "note": "",
-      "sourceOrder": 6
+      "sourceOrder": 6,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 151,
@@ -67,7 +127,17 @@
         "text": "Origem do Jackal e do primeiro clone; o clone aparece na #149.",
         "spoiler": "forte"
       },
-      "sourceOrder": 7
+      "sourceOrder": 7,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 152,
@@ -79,7 +149,18 @@
         "text": "E se o clone de Peter tivesse vivido? (1981).",
         "spoiler": "forte"
       },
-      "sourceOrder": 8
+      "sourceOrder": 8,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        156
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 408,
@@ -91,7 +172,17 @@
         "text": "Retorno do clone, ainda sem nome (mai/1994, segundo a Wikipedia). Não consta na ordem do How To Love Comics.",
         "spoiler": "forte"
       },
-      "sourceOrder": 9
+      "sourceOrder": 9,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 409,
@@ -103,7 +194,18 @@
         "text": "Início oficial da saga (out/1994).",
         "spoiler": "forte"
       },
-      "sourceOrder": 10
+      "sourceOrder": 10,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 410,
@@ -112,7 +214,18 @@
       "crossover": "Power and Responsibility / The Double",
       "part": "2",
       "note": "",
-      "sourceOrder": 11
+      "sourceOrder": 11,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 411,
@@ -124,7 +237,18 @@
         "text": "O clone passa a se chamar Ben Reilly.",
         "spoiler": "forte"
       },
-      "sourceOrder": 12
+      "sourceOrder": 12,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 412,
@@ -133,7 +257,18 @@
       "crossover": "Power and Responsibility / The Double",
       "part": "4",
       "note": "",
-      "sourceOrder": 13
+      "sourceOrder": 13,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 413,
@@ -145,7 +280,18 @@
         "text": "Passado de Ben Reilly e Kaine; publicada mais tarde, mas faz sentido ler aqui. A #0 é só reimpressão.",
         "spoiler": "forte"
       },
-      "sourceOrder": 14
+      "sourceOrder": 14,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 414,
@@ -154,7 +300,18 @@
       "crossover": "The Lost Years",
       "part": "2",
       "note": "",
-      "sourceOrder": 15
+      "sourceOrder": 15,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 415,
@@ -163,7 +320,18 @@
       "crossover": "The Lost Years",
       "part": "3",
       "note": "",
-      "sourceOrder": 16
+      "sourceOrder": 16,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 416,
@@ -175,7 +343,18 @@
         "text": "Primeira aventura solo de Ben como Scarlet Spider (enfrenta Venom).",
         "spoiler": "forte"
       },
-      "sourceOrder": 17
+      "sourceOrder": 17,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 417,
@@ -187,7 +366,18 @@
         "text": "A história A é a Parte 2; a história B é a Parte 3 de Back From The Edge (e há uma história C com Mary Jane).",
         "spoiler": "forte"
       },
-      "sourceOrder": 18
+      "sourceOrder": 18,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 418,
@@ -196,7 +386,18 @@
       "crossover": "The Exile Returns",
       "part": "3",
       "note": "",
-      "sourceOrder": 19
+      "sourceOrder": 19,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 419,
@@ -205,7 +406,18 @@
       "crossover": "The Exile Returns",
       "part": "4",
       "note": "",
-      "sourceOrder": 20
+      "sourceOrder": 20,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 420,
@@ -214,7 +426,18 @@
       "crossover": "The Exile Returns",
       "part": "5",
       "note": "",
-      "sourceOrder": 21
+      "sourceOrder": 21,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 421,
@@ -226,7 +449,18 @@
         "text": "Foco em Peter Parker (a Amazing e a Spectacular ficam com Peter).",
         "spoiler": "forte"
       },
-      "sourceOrder": 22
+      "sourceOrder": 22,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 422,
@@ -238,7 +472,18 @@
         "text": "A Parte 3 está em Spider-Man Unlimited #7 (história B), já listada acima.",
         "spoiler": "forte"
       },
-      "sourceOrder": 23
+      "sourceOrder": 23,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 423,
@@ -247,7 +492,18 @@
       "crossover": "Back From The Edge",
       "part": "4",
       "note": "",
-      "sourceOrder": 24
+      "sourceOrder": 24,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 424,
@@ -256,7 +512,18 @@
       "crossover": "Back From The Edge",
       "part": "5",
       "note": "",
-      "sourceOrder": 25
+      "sourceOrder": 25,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 425,
@@ -268,7 +535,18 @@
         "text": "Ben Reilly contra Tombstone e Grim Hunter (Vladimir Kravinoff).",
         "spoiler": "forte"
       },
-      "sourceOrder": 26
+      "sourceOrder": 26,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 426,
@@ -277,7 +555,18 @@
       "crossover": "Web of Life",
       "part": "2",
       "note": "",
-      "sourceOrder": 27
+      "sourceOrder": 27,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 427,
@@ -286,7 +575,18 @@
       "crossover": "Web of Life",
       "part": "3",
       "note": "",
-      "sourceOrder": 28
+      "sourceOrder": 28,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 428,
@@ -295,7 +595,18 @@
       "crossover": "Web of Life",
       "part": "4",
       "note": "",
-      "sourceOrder": 29
+      "sourceOrder": 29,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 429,
@@ -307,7 +618,18 @@
         "text": "Peter contra Doutor Octopus e Stunner (estreia do Stunner).",
         "spoiler": "forte"
       },
-      "sourceOrder": 30
+      "sourceOrder": 30,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 430,
@@ -319,7 +641,18 @@
         "text": "Mary Jane anuncia que está grávida.",
         "spoiler": "forte"
       },
-      "sourceOrder": 31
+      "sourceOrder": 31,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 431,
@@ -328,7 +661,18 @@
       "crossover": "Web of Death",
       "part": "3",
       "note": "",
-      "sourceOrder": 32
+      "sourceOrder": 32,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 432,
@@ -340,7 +684,18 @@
         "text": "Morte do Doutor Octopus.",
         "spoiler": "forte"
       },
-      "sourceOrder": 33
+      "sourceOrder": 33,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 433,
@@ -352,7 +707,18 @@
         "text": "Peter e Ben contra membros do Sexteto Sinistro.",
         "spoiler": "forte"
       },
-      "sourceOrder": 34
+      "sourceOrder": 34,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 434,
@@ -361,7 +727,18 @@
       "crossover": "Funeral for an Octopus",
       "part": "2",
       "note": "",
-      "sourceOrder": 35
+      "sourceOrder": 35,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 435,
@@ -370,7 +747,18 @@
       "crossover": "Funeral for an Octopus",
       "part": "3",
       "note": "",
-      "sourceOrder": 36
+      "sourceOrder": 36,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 436,
@@ -382,7 +770,18 @@
         "text": "Edição entre dois arcos maiores.",
         "spoiler": "forte"
       },
-      "sourceOrder": 37
+      "sourceOrder": 37,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 437,
@@ -394,7 +793,18 @@
         "text": "Novos detalhes sobre os clones do Jackal.",
         "spoiler": "forte"
       },
-      "sourceOrder": 38
+      "sourceOrder": 38,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 438,
@@ -403,7 +813,18 @@
       "crossover": "Smoke and Mirrors",
       "part": "2",
       "note": "",
-      "sourceOrder": 39
+      "sourceOrder": 39,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 439,
@@ -412,7 +833,18 @@
       "crossover": "Smoke and Mirrors",
       "part": "3",
       "note": "",
-      "sourceOrder": 40
+      "sourceOrder": 40,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 440,
@@ -424,7 +856,18 @@
         "text": "Resumo da saga até aqui.",
         "spoiler": "forte"
       },
-      "sourceOrder": 41
+      "sourceOrder": 41,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 441,
@@ -433,7 +876,18 @@
       "crossover": "Players and Pawns",
       "part": "1",
       "note": "",
-      "sourceOrder": 42
+      "sourceOrder": 42,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 442,
@@ -442,7 +896,18 @@
       "crossover": "Players and Pawns",
       "part": "2",
       "note": "",
-      "sourceOrder": 43
+      "sourceOrder": 43,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 443,
@@ -454,7 +919,18 @@
         "text": "Crossover com simbiontes (Venom, Carnificina). Para contexto de Venom, o How To Love Comics sugere a minissérie Venom: Separation Anxiety.",
         "spoiler": "forte"
       },
-      "sourceOrder": 44
+      "sourceOrder": 44,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 444,
@@ -463,7 +939,18 @@
       "crossover": "Planet of the Symbiotes",
       "part": "2",
       "note": "",
-      "sourceOrder": 45
+      "sourceOrder": 45,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 445,
@@ -472,7 +959,18 @@
       "crossover": "Planet of the Symbiotes",
       "part": "3",
       "note": "",
-      "sourceOrder": 46
+      "sourceOrder": 46,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 446,
@@ -481,7 +979,18 @@
       "crossover": "Planet of the Symbiotes",
       "part": "4",
       "note": "",
-      "sourceOrder": 47
+      "sourceOrder": 47,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 447,
@@ -490,7 +999,18 @@
       "crossover": "Planet of the Symbiotes",
       "part": "5",
       "note": "",
-      "sourceOrder": 48
+      "sourceOrder": 48,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 448,
@@ -502,7 +1022,18 @@
         "text": "Edição de marco: a Tia May 'morre' (depois se revela uma atriz, ver 'The Gathering of Five and The Final Chapter').",
         "spoiler": "forte"
       },
-      "sourceOrder": 49
+      "sourceOrder": 49,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 449,
@@ -511,7 +1042,18 @@
       "crossover": "The Parker Legacy",
       "part": "2",
       "note": "",
-      "sourceOrder": 50
+      "sourceOrder": 50,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 450,
@@ -520,7 +1062,18 @@
       "crossover": "The Parker Legacy",
       "part": "3",
       "note": "",
-      "sourceOrder": 51
+      "sourceOrder": 51,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 451,
@@ -529,7 +1082,18 @@
       "crossover": "The Mark of Kaine",
       "part": "1",
       "note": "",
-      "sourceOrder": 52
+      "sourceOrder": 52,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 452,
@@ -538,7 +1102,18 @@
       "crossover": "The Mark of Kaine",
       "part": "2",
       "note": "",
-      "sourceOrder": 53
+      "sourceOrder": 53,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 453,
@@ -547,7 +1122,18 @@
       "crossover": "The Mark of Kaine",
       "part": "3",
       "note": "",
-      "sourceOrder": 54
+      "sourceOrder": 54,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 454,
@@ -559,7 +1145,18 @@
         "text": "Ben troca de lugar com Peter.",
         "spoiler": "forte"
       },
-      "sourceOrder": 55
+      "sourceOrder": 55,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 455,
@@ -568,7 +1165,18 @@
       "crossover": "The Mark of Kaine",
       "part": "5",
       "note": "",
-      "sourceOrder": 56
+      "sourceOrder": 56,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 456,
@@ -580,7 +1188,18 @@
         "text": "Edição solta entre crossovers; traz um holodisco do Scarlet Spider em live action.",
         "spoiler": "forte"
       },
-      "sourceOrder": 57
+      "sourceOrder": 57,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 457,
@@ -589,7 +1208,18 @@
       "crossover": "Crossfire",
       "part": "1",
       "note": "",
-      "sourceOrder": 58
+      "sourceOrder": 58,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 458,
@@ -598,7 +1228,18 @@
       "crossover": "Crossfire",
       "part": "2",
       "note": "",
-      "sourceOrder": 59
+      "sourceOrder": 59,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 459,
@@ -607,7 +1248,18 @@
       "crossover": "Crossfire",
       "part": "3",
       "note": "",
-      "sourceOrder": 60
+      "sourceOrder": 60,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 460,
@@ -616,7 +1268,18 @@
       "crossover": "The Trial of Peter Parker",
       "part": "1",
       "note": "",
-      "sourceOrder": 61
+      "sourceOrder": 61,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 461,
@@ -625,7 +1288,18 @@
       "crossover": "The Trial of Peter Parker",
       "part": "2",
       "note": "",
-      "sourceOrder": 62
+      "sourceOrder": 62,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 462,
@@ -634,7 +1308,18 @@
       "crossover": "The Trial of Peter Parker",
       "part": "3",
       "note": "",
-      "sourceOrder": 63
+      "sourceOrder": 63,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 463,
@@ -646,7 +1331,18 @@
         "text": "A revelação polêmica: os exames indicam que Peter é o clone e Ben, o original.",
         "spoiler": "forte"
       },
-      "sourceOrder": 64
+      "sourceOrder": 64,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 464,
@@ -658,7 +1354,18 @@
         "text": "Resumo da saga e dos personagens.",
         "spoiler": "forte"
       },
-      "sourceOrder": 65
+      "sourceOrder": 65,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 465,
@@ -667,7 +1374,18 @@
       "crossover": "Maximum Clonage",
       "part": "prólogo",
       "note": "",
-      "sourceOrder": 66
+      "sourceOrder": 66,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 466,
@@ -676,7 +1394,18 @@
       "crossover": "Maximum Clonage",
       "part": "1",
       "note": "",
-      "sourceOrder": 67
+      "sourceOrder": 67,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 467,
@@ -685,7 +1414,18 @@
       "crossover": "Maximum Clonage",
       "part": "2",
       "note": "",
-      "sourceOrder": 68
+      "sourceOrder": 68,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 468,
@@ -694,7 +1434,18 @@
       "crossover": "Maximum Clonage",
       "part": "3",
       "note": "",
-      "sourceOrder": 69
+      "sourceOrder": 69,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 469,
@@ -703,7 +1454,18 @@
       "crossover": "Maximum Clonage",
       "part": "4",
       "note": "",
-      "sourceOrder": 70
+      "sourceOrder": 70,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 470,
@@ -712,7 +1474,18 @@
       "crossover": "Maximum Clonage",
       "part": "5",
       "note": "",
-      "sourceOrder": 71
+      "sourceOrder": 71,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 471,
@@ -721,7 +1494,18 @@
       "crossover": "Maximum Clonage",
       "part": "6",
       "note": "",
-      "sourceOrder": 72
+      "sourceOrder": 72,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 472,
@@ -733,7 +1517,18 @@
         "text": "Só se liga de leve à saga.",
         "spoiler": "forte"
       },
-      "sourceOrder": 73
+      "sourceOrder": 73,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 473,
@@ -742,7 +1537,18 @@
       "crossover": "Exiled",
       "part": "1",
       "note": "",
-      "sourceOrder": 74
+      "sourceOrder": 74,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 474,
@@ -751,7 +1557,18 @@
       "crossover": "Exiled",
       "part": "2",
       "note": "",
-      "sourceOrder": 75
+      "sourceOrder": 75,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 475,
@@ -760,7 +1577,18 @@
       "crossover": "Exiled",
       "part": "3",
       "note": "",
-      "sourceOrder": 76
+      "sourceOrder": 76,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 476,
@@ -769,7 +1597,18 @@
       "crossover": "Exiled",
       "part": "4",
       "note": "",
-      "sourceOrder": 77
+      "sourceOrder": 77,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 477,
@@ -781,7 +1620,18 @@
         "text": "O papel de Peter como Spider-Man é questionado.",
         "spoiler": "forte"
       },
-      "sourceOrder": 78
+      "sourceOrder": 78,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 478,
@@ -793,7 +1643,18 @@
         "text": "Última edição desta Web of Spider-Man; substituída pela Sensational Spider-Man.",
         "spoiler": "forte"
       },
-      "sourceOrder": 79
+      "sourceOrder": 79,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 479,
@@ -802,7 +1663,18 @@
       "crossover": "Time Bomb",
       "part": "extra",
       "note": "",
-      "sourceOrder": 80
+      "sourceOrder": 80,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 480,
@@ -811,7 +1683,18 @@
       "crossover": "Time Bomb",
       "part": "extra",
       "note": "",
-      "sourceOrder": 81
+      "sourceOrder": 81,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 481,
@@ -823,7 +1706,18 @@
         "text": "Virada: Peter deixa de ser o Homem-Aranha.",
         "spoiler": "forte"
       },
-      "sourceOrder": 82
+      "sourceOrder": 82,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 482,
@@ -832,7 +1726,18 @@
       "crossover": "The Greatest Responsibility",
       "part": "2",
       "note": "",
-      "sourceOrder": 83
+      "sourceOrder": 83,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 483,
@@ -844,7 +1749,18 @@
         "text": "Passa-se durante o crossover, mas não é parte dele.",
         "spoiler": "forte"
       },
-      "sourceOrder": 84
+      "sourceOrder": 84,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 484,
@@ -853,7 +1769,18 @@
       "crossover": "The Greatest Responsibility",
       "part": "3",
       "note": "",
-      "sourceOrder": 85
+      "sourceOrder": 85,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 485,
@@ -862,7 +1789,18 @@
       "crossover": "Depois de The Greatest Responsibility",
       "part": "",
       "note": "",
-      "sourceOrder": 86
+      "sourceOrder": 86,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 486,
@@ -871,7 +1809,18 @@
       "crossover": "Depois de The Greatest Responsibility",
       "part": "",
       "note": "",
-      "sourceOrder": 87
+      "sourceOrder": 87,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 487,
@@ -880,7 +1829,18 @@
       "crossover": "Depois de The Greatest Responsibility",
       "part": "",
       "note": "",
-      "sourceOrder": 88
+      "sourceOrder": 88,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 488,
@@ -892,7 +1852,18 @@
         "text": "As revistas mudam de título: Ben é o Spider-Man central.",
         "spoiler": "forte"
       },
-      "sourceOrder": 89
+      "sourceOrder": 89,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 489,
@@ -904,7 +1875,18 @@
         "text": "Não conta na numeração histórica.",
         "spoiler": "forte"
       },
-      "sourceOrder": 90
+      "sourceOrder": 90,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 490,
@@ -913,7 +1895,18 @@
       "crossover": "Virtual Mortality",
       "part": "3",
       "note": "",
-      "sourceOrder": 91
+      "sourceOrder": 91,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 491,
@@ -922,7 +1915,18 @@
       "crossover": "Virtual Mortality",
       "part": "4",
       "note": "",
-      "sourceOrder": 92
+      "sourceOrder": 92,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 492,
@@ -931,7 +1935,18 @@
       "crossover": "Cyberwar",
       "part": "1",
       "note": "",
-      "sourceOrder": 93
+      "sourceOrder": 93,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 493,
@@ -940,7 +1955,18 @@
       "crossover": "Cyberwar",
       "part": "2",
       "note": "",
-      "sourceOrder": 94
+      "sourceOrder": 94,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 494,
@@ -952,7 +1978,18 @@
         "text": "Parte do Cyberwar, mas sem numeração de parte na capa.",
         "spoiler": "forte"
       },
-      "sourceOrder": 95
+      "sourceOrder": 95,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 495,
@@ -961,7 +1998,18 @@
       "crossover": "Cyberwar",
       "part": "3",
       "note": "",
-      "sourceOrder": 96
+      "sourceOrder": 96,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 496,
@@ -970,7 +2018,18 @@
       "crossover": "Cyberwar",
       "part": "4",
       "note": "",
-      "sourceOrder": 97
+      "sourceOrder": 97,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 497,
@@ -979,7 +2038,18 @@
       "crossover": "Depois de Cyberwar",
       "part": "",
       "note": "",
-      "sourceOrder": 98
+      "sourceOrder": 98,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 498,
@@ -991,7 +2061,18 @@
         "text": "Ben aparece como Spider-Man (jan/1996).",
         "spoiler": "forte"
       },
-      "sourceOrder": 99
+      "sourceOrder": 99,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 499,
@@ -1003,7 +2084,18 @@
         "text": "Ben deixa a identidade de Scarlet Spider e assume 'Spider-Man'.",
         "spoiler": "forte"
       },
-      "sourceOrder": 100
+      "sourceOrder": 100,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 500,
@@ -1012,7 +2104,18 @@
       "crossover": "Depois de Cyberwar",
       "part": "",
       "note": "",
-      "sourceOrder": 101
+      "sourceOrder": 101,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 501,
@@ -1021,7 +2124,18 @@
       "crossover": "Nightmare in Scarlet!",
       "part": "1",
       "note": "",
-      "sourceOrder": 102
+      "sourceOrder": 102,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 502,
@@ -1030,7 +2144,18 @@
       "crossover": "Nightmare in Scarlet!",
       "part": "2",
       "note": "",
-      "sourceOrder": 103
+      "sourceOrder": 103,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 503,
@@ -1039,7 +2164,18 @@
       "crossover": "Nightmare in Scarlet!",
       "part": "3",
       "note": "",
-      "sourceOrder": 104
+      "sourceOrder": 104,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 504,
@@ -1051,7 +2187,18 @@
         "text": "História fechada.",
         "spoiler": "forte"
       },
-      "sourceOrder": 105
+      "sourceOrder": 105,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 505,
@@ -1060,7 +2207,18 @@
       "crossover": "Depois de Nightmare in Scarlet!",
       "part": "",
       "note": "",
-      "sourceOrder": 106
+      "sourceOrder": 106,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 506,
@@ -1069,7 +2227,18 @@
       "crossover": "Depois de Nightmare in Scarlet!",
       "part": "",
       "note": "",
-      "sourceOrder": 107
+      "sourceOrder": 107,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 507,
@@ -1081,7 +2250,18 @@
         "text": "Ben Reilly e Venom.",
         "spoiler": "forte"
       },
-      "sourceOrder": 108
+      "sourceOrder": 108,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 508,
@@ -1090,7 +2270,18 @@
       "crossover": "Along Came a Spider",
       "part": "2",
       "note": "",
-      "sourceOrder": 109
+      "sourceOrder": 109,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 509,
@@ -1099,7 +2290,18 @@
       "crossover": "Along Came a Spider",
       "part": "3",
       "note": "",
-      "sourceOrder": 110
+      "sourceOrder": 110,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 510,
@@ -1108,7 +2310,18 @@
       "crossover": "Along Came a Spider",
       "part": "4",
       "note": "",
-      "sourceOrder": 111
+      "sourceOrder": 111,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 511,
@@ -1120,7 +2333,18 @@
         "text": "Ben contra Mysterio.",
         "spoiler": "forte"
       },
-      "sourceOrder": 112
+      "sourceOrder": 112,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 512,
@@ -1129,7 +2353,18 @@
       "crossover": "Media Blizzard",
       "part": "2",
       "note": "",
-      "sourceOrder": 113
+      "sourceOrder": 113,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 513,
@@ -1138,7 +2373,18 @@
       "crossover": "Media Blizzard",
       "part": "3",
       "note": "",
-      "sourceOrder": 114
+      "sourceOrder": 114,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 514,
@@ -1147,7 +2393,18 @@
       "crossover": "The Final Adventure (e mais)",
       "part": "",
       "note": "",
-      "sourceOrder": 115
+      "sourceOrder": 115,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 515,
@@ -1159,7 +2416,18 @@
         "text": "Peter consegue largar a vida de herói? Termina com o nascimento do bebê.",
         "spoiler": "forte"
       },
-      "sourceOrder": 116
+      "sourceOrder": 116,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 516,
@@ -1168,7 +2436,18 @@
       "crossover": "The Final Adventure (e mais)",
       "part": "2",
       "note": "",
-      "sourceOrder": 117
+      "sourceOrder": 117,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 517,
@@ -1177,7 +2456,18 @@
       "crossover": "The Final Adventure (e mais)",
       "part": "3",
       "note": "",
-      "sourceOrder": 118
+      "sourceOrder": 118,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 518,
@@ -1186,7 +2476,18 @@
       "crossover": "The Final Adventure (e mais)",
       "part": "4",
       "note": "",
-      "sourceOrder": 119
+      "sourceOrder": 119,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 519,
@@ -1195,7 +2496,18 @@
       "crossover": "The Final Adventure (e mais)",
       "part": "",
       "note": "",
-      "sourceOrder": 120
+      "sourceOrder": 120,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 520,
@@ -1204,7 +2516,18 @@
       "crossover": "The Final Adventure (e mais)",
       "part": "",
       "note": "",
-      "sourceOrder": 121
+      "sourceOrder": 121,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 521,
@@ -1213,7 +2536,18 @@
       "crossover": "The Return of Kaine",
       "part": "1",
       "note": "",
-      "sourceOrder": 122
+      "sourceOrder": 122,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 522,
@@ -1222,7 +2556,18 @@
       "crossover": "The Return of Kaine",
       "part": "2",
       "note": "",
-      "sourceOrder": 123
+      "sourceOrder": 123,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 523,
@@ -1231,7 +2576,18 @@
       "crossover": "The Return of Kaine",
       "part": "3",
       "note": "",
-      "sourceOrder": 124
+      "sourceOrder": 124,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 524,
@@ -1240,7 +2596,18 @@
       "crossover": "The Return of Kaine",
       "part": "4",
       "note": "",
-      "sourceOrder": 125
+      "sourceOrder": 125,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 525,
@@ -1249,7 +2616,18 @@
       "crossover": "The Return of Kaine",
       "part": "extra",
       "note": "",
-      "sourceOrder": 126
+      "sourceOrder": 126,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 526,
@@ -1261,7 +2639,18 @@
         "text": "Ben Reilly contra Carnificina.",
         "spoiler": "forte"
       },
-      "sourceOrder": 127
+      "sourceOrder": 127,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 527,
@@ -1270,7 +2659,18 @@
       "crossover": "Web of Carnage",
       "part": "2",
       "note": "",
-      "sourceOrder": 128
+      "sourceOrder": 128,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 528,
@@ -1279,7 +2679,18 @@
       "crossover": "Web of Carnage",
       "part": "3",
       "note": "",
-      "sourceOrder": 129
+      "sourceOrder": 129,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 529,
@@ -1288,7 +2699,18 @@
       "crossover": "Web of Carnage",
       "part": "4",
       "note": "",
-      "sourceOrder": 130
+      "sourceOrder": 130,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 530,
@@ -1300,7 +2722,18 @@
         "text": "Ben é fotografado sem máscara; o casamento de Peter e MJ não vai bem.",
         "spoiler": "forte"
       },
-      "sourceOrder": 131
+      "sourceOrder": 131,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 531,
@@ -1309,7 +2742,18 @@
       "crossover": "Blood Brothers",
       "part": "2",
       "note": "",
-      "sourceOrder": 132
+      "sourceOrder": 132,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 532,
@@ -1318,7 +2762,18 @@
       "crossover": "Blood Brothers",
       "part": "3",
       "note": "",
-      "sourceOrder": 133
+      "sourceOrder": 133,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 533,
@@ -1327,7 +2782,18 @@
       "crossover": "Blood Brothers",
       "part": "4",
       "note": "",
-      "sourceOrder": 134
+      "sourceOrder": 134,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 534,
@@ -1336,7 +2802,18 @@
       "crossover": "Blood Brothers",
       "part": "5",
       "note": "",
-      "sourceOrder": 135
+      "sourceOrder": 135,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 535,
@@ -1345,7 +2822,18 @@
       "crossover": "Blood Brothers",
       "part": "6",
       "note": "",
-      "sourceOrder": 136
+      "sourceOrder": 136,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 536,
@@ -1354,7 +2842,18 @@
       "crossover": "Depois de Blood Brothers",
       "part": "",
       "note": "",
-      "sourceOrder": 137
+      "sourceOrder": 137,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 537,
@@ -1363,7 +2862,18 @@
       "crossover": "Depois de Blood Brothers",
       "part": "",
       "note": "",
-      "sourceOrder": 138
+      "sourceOrder": 138,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 538,
@@ -1372,7 +2882,18 @@
       "crossover": "Depois de Blood Brothers",
       "part": "",
       "note": "",
-      "sourceOrder": 139
+      "sourceOrder": 139,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 539,
@@ -1381,7 +2902,18 @@
       "crossover": "Depois de Blood Brothers",
       "part": "",
       "note": "",
-      "sourceOrder": 140
+      "sourceOrder": 140,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 540,
@@ -1393,7 +2925,18 @@
         "text": "Ben Reilly contra Kaine.",
         "spoiler": "forte"
       },
-      "sourceOrder": 141
+      "sourceOrder": 141,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 541,
@@ -1402,7 +2945,18 @@
       "crossover": "The Redemption",
       "part": "2",
       "note": "",
-      "sourceOrder": 142
+      "sourceOrder": 142,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 542,
@@ -1411,7 +2965,18 @@
       "crossover": "The Redemption",
       "part": "3",
       "note": "",
-      "sourceOrder": 143
+      "sourceOrder": 143,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 543,
@@ -1420,7 +2985,18 @@
       "crossover": "The Redemption",
       "part": "4",
       "note": "",
-      "sourceOrder": 144
+      "sourceOrder": 144,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 544,
@@ -1432,7 +3008,18 @@
         "text": "Edições fechadas e team-ups.",
         "spoiler": "forte"
       },
-      "sourceOrder": 145
+      "sourceOrder": 145,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 545,
@@ -1441,7 +3028,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 146
+      "sourceOrder": 146,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 546,
@@ -1450,7 +3048,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 147
+      "sourceOrder": 147,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 547,
@@ -1459,7 +3068,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 148
+      "sourceOrder": 148,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 548,
@@ -1468,7 +3088,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 149
+      "sourceOrder": 149,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 549,
@@ -1477,7 +3108,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 150
+      "sourceOrder": 150,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 550,
@@ -1486,7 +3128,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 151
+      "sourceOrder": 151,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 551,
@@ -1495,7 +3148,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 152
+      "sourceOrder": 152,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 552,
@@ -1504,7 +3168,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 153
+      "sourceOrder": 153,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 553,
@@ -1513,7 +3188,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 154
+      "sourceOrder": 154,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 554,
@@ -1522,7 +3208,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 155
+      "sourceOrder": 155,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 555,
@@ -1531,7 +3228,18 @@
       "crossover": "Depois de The Redemption",
       "part": "",
       "note": "",
-      "sourceOrder": 156
+      "sourceOrder": 156,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 556,
@@ -1543,7 +3251,18 @@
         "text": "Cruza com o evento Onslaught, visto pela ótica de Peter e Ben.",
         "spoiler": "forte"
       },
-      "sourceOrder": 157
+      "sourceOrder": 157,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 557,
@@ -1552,7 +3271,18 @@
       "crossover": "Tie-ins de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 158
+      "sourceOrder": 158,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 558,
@@ -1564,7 +3294,18 @@
         "text": "Preparam o desfecho da saga.",
         "spoiler": "forte"
       },
-      "sourceOrder": 159
+      "sourceOrder": 159,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 559,
@@ -1573,7 +3314,18 @@
       "crossover": "Depois de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 160
+      "sourceOrder": 160,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 560,
@@ -1582,7 +3334,18 @@
       "crossover": "Depois de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 161
+      "sourceOrder": 161,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 561,
@@ -1591,7 +3354,18 @@
       "crossover": "Depois de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 162
+      "sourceOrder": 162,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 562,
@@ -1600,7 +3374,18 @@
       "crossover": "Depois de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 163
+      "sourceOrder": 163,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 563,
@@ -1612,7 +3397,18 @@
         "text": "Annual: fora da numeração.",
         "spoiler": "forte"
       },
-      "sourceOrder": 164
+      "sourceOrder": 164,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 564,
@@ -1621,7 +3417,18 @@
       "crossover": "Depois de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 165
+      "sourceOrder": 165,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 565,
@@ -1630,7 +3437,18 @@
       "crossover": "Depois de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 166
+      "sourceOrder": 166,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 566,
@@ -1639,7 +3457,18 @@
       "crossover": "Depois de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 167
+      "sourceOrder": 167,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 567,
@@ -1648,7 +3477,18 @@
       "crossover": "Depois de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 168
+      "sourceOrder": 168,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 568,
@@ -1657,7 +3497,18 @@
       "crossover": "Depois de Onslaught",
       "part": "",
       "note": "",
-      "sourceOrder": 169
+      "sourceOrder": 169,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 569,
@@ -1669,7 +3520,18 @@
         "text": "Final da saga.",
         "spoiler": "forte"
       },
-      "sourceOrder": 170
+      "sourceOrder": 170,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 570,
@@ -1678,7 +3540,18 @@
       "crossover": "Revelations",
       "part": "2",
       "note": "",
-      "sourceOrder": 171
+      "sourceOrder": 171,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 571,
@@ -1690,7 +3563,18 @@
         "text": "O bebê de Peter e MJ nasce morto; Osborn se revela por trás da saga.",
         "spoiler": "forte"
       },
-      "sourceOrder": 172
+      "sourceOrder": 172,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 573,
@@ -1702,7 +3586,18 @@
         "text": "Osborn confirma que Peter é o original e Ben é o clone; Ben morre salvando Peter, que volta a ser o Homem-Aranha.",
         "spoiler": "forte"
       },
-      "sourceOrder": 173
+      "sourceOrder": 173,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 576,
@@ -1714,7 +3609,18 @@
         "text": "Explica o plano de Norman Osborn.",
         "spoiler": "forte"
       },
-      "sourceOrder": 174
+      "sourceOrder": 174,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 578,
@@ -1723,7 +3629,18 @@
       "crossover": "Pontas soltas",
       "part": "",
       "note": "",
-      "sourceOrder": 175
+      "sourceOrder": 175,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 581,
@@ -1735,7 +3652,18 @@
         "text": "Paródia bem-humorada da saga.",
         "spoiler": "forte"
       },
-      "sourceOrder": 176
+      "sourceOrder": 176,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 572,
@@ -1747,7 +3675,18 @@
         "text": "Retoma fios soltos do desfecho.",
         "spoiler": "forte"
       },
-      "sourceOrder": 177
+      "sourceOrder": 177,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 583,
@@ -1759,7 +3698,18 @@
         "text": "Primeira edição pós-saga na Amazing.",
         "spoiler": "forte"
       },
-      "sourceOrder": 178
+      "sourceOrder": 178,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 574,
@@ -1768,7 +3718,18 @@
       "crossover": "Continuação das revistas",
       "part": "",
       "note": "",
-      "sourceOrder": 179
+      "sourceOrder": 179,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 575,
@@ -1780,7 +3741,18 @@
         "text": "Passa a se chamar Peter Parker: Spider-Man.",
         "spoiler": "forte"
       },
-      "sourceOrder": 180
+      "sourceOrder": 180,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 577,
@@ -1792,7 +3764,18 @@
         "text": "E se o Scarlet Spider tivesse matado o Homem-Aranha?",
         "spoiler": "forte"
       },
-      "sourceOrder": 181
+      "sourceOrder": 181,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 579,
@@ -1804,7 +3787,18 @@
         "text": "E se MJ não tivesse perdido o bebê? Apresenta a Spider-Girl (May Parker).",
         "spoiler": "forte"
       },
-      "sourceOrder": 182
+      "sourceOrder": 182,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 580,
@@ -1816,7 +3810,18 @@
         "text": "Releitura da saga 'como foi pensada originalmente' (DeFalco, Mackie e Nauck). Minissérie de 6 edições (#1–6) numa só linha.",
         "spoiler": "forte"
       },
-      "sourceOrder": 183
+      "sourceOrder": 183,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     },
     {
       "id": 793,
@@ -1828,7 +3833,18 @@
         "text": "Kaine retorna (histórias de Marc Guggenheim).",
         "spoiler": "forte"
       },
-      "sourceOrder": 184
+      "sourceOrder": 184,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 794,
@@ -1837,7 +3853,18 @@
       "crossover": "Histórias paralelas",
       "part": "",
       "note": "",
-      "sourceOrder": 185
+      "sourceOrder": 185,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 795,
@@ -1846,7 +3873,18 @@
       "crossover": "Histórias paralelas",
       "part": "",
       "note": "",
-      "sourceOrder": 186
+      "sourceOrder": 186,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "inherited"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição na Saga do Clone é sustentada pelas fontes; o peso foi preservado da classificação já existente na linha principal ou em Leituras Extras."
     },
     {
       "id": 582,
@@ -1858,7 +3896,18 @@
         "text": "Evento de 2016; na Amazing de 2015 ocupa as #20–24 (hist. #776–780).",
         "spoiler": "forte"
       },
-      "sourceOrder": 187
+      "sourceOrder": 187,
+      "confirmation": "Confirmado",
+      "confirmationCriteria": {
+        "position": "source-only",
+        "weight": "evidence-led-60-40"
+      },
+      "sources": [
+        20,
+        23,
+        24
+      ],
+      "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial."
     }
   ]
 }
