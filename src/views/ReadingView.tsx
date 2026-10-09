@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'preact/hooks';
 import { appState } from '../state/app-state';
 import { cloneEntries, editorialExtras } from '../data/model';
 import { VirtualizedChecklist } from '../components/VirtualizedChecklist';
-import { ExtraCard, CloneSummary, extraState } from '../components/Editorial';
+import { EvidenceBox, ExtraCard, CloneSummary, extraState } from '../components/Editorial';
 import { useProgressCounts } from '../components/Progress';
 import { itemsById } from '../data/model';
 import { IssueRow } from '../components/IssueRow';
@@ -77,7 +77,21 @@ export function ExtrasView() {
 function CloneIssue({ entry }: { entry: any; key?: any }) {
   const reading = itemsById[entry.id];
   if (!reading) return null;
-  return <IssueRow item={reading} anchor={false} showBulkAction={false} showLinks={false} context={{ part: entry.part, readingOrder: entry.readingOrder, note: entry.note }} extraEvidence={{ confirmation: entry.confirmation, detail: entry.confirmationDetail, scope: 'item', sources: entry.sources, criteria: entry.confirmationCriteria }} />;
+  return <IssueRow item={reading} anchor={false} showBulkAction={false} showLinks={false} suppressEditorialDetails context={{ part: entry.part, readingOrder: entry.readingOrder, note: entry.note }} />;
+}
+
+function CloneArc({ arc }: { arc: any; key?: any }) {
+  const entries = arc.entries as any[];
+  const sources = [...new Set(entries.flatMap(entry => entry.sources || []))];
+  const confirmed = entries.every(entry => entry.confirmation === 'Confirmado');
+  const positionPass = entries.every(entry => entry.confirmationCriteria?.position === 'source-only');
+  const hasResearchedWeight = entries.some(entry => entry.confirmationCriteria?.weight === 'evidence-led-60-40');
+  const weightPass = entries.every(entry => entry.confirmationCriteria?.weight !== 'not-met');
+  const inherited = entries.filter(entry => entry.confirmationCriteria?.weight === 'inherited').length;
+  const detail = hasResearchedWeight
+    ? `A posição do arco segue as fontes. Os pesos exclusivos usam o critério 60/40${inherited ? `; ${inherited} classificação${inherited > 1 ? 'ões foram preservadas' : ' foi preservada'} de outra área do guia` : ''}.`
+    : 'A posição do arco segue as fontes; os pesos foram preservados das classificações anteriores.';
+  return <section class="clone-arc disclosure-nested"><h4>{arc.name || 'Sem crossover específico'}</h4><EvidenceBox status={confirmed && positionPass && weightPass ? 'Confirmado' : 'Parcial'} detail={detail} sources={sources} criteria={{ position: positionPass ? 'source-only' : 'not-met', weight: weightPass ? (hasResearchedWeight ? 'evidence-led-60-40' : 'inherited') : 'not-met' }} />{entries.map(entry => <CloneIssue key={`${entry.id}-${entry.readingOrder}`} entry={entry} />)}</section>;
 }
 
 export function CloneView() {
@@ -115,7 +129,7 @@ function ClonePhase({ phase, ids, open, onToggle }: any) {
         <span class="c">{counts.read} lidas · {counts.skipped} puladas · {counts.percent}% <Icon name={open ? 'chevU' : 'chevD'} /></span>
       </button>
       <ProgressBarVisual value={counts.percent} label={`Progresso de ${phase.name}`} className="phase-progress" />
-      {open ? <div class="clone-content disclosure-content">{phase.arcs.map((arc: any) => <section class="clone-arc disclosure-nested" key={arc.name || 'none'}><h4>{arc.name || 'Sem crossover específico'}</h4>{arc.entries.map((entry: any) => <CloneIssue key={`${entry.id}-${entry.readingOrder}`} entry={entry} />)}</section>)}</div> : null}
+      {open ? <div class="clone-content disclosure-content">{phase.arcs.map((arc: any) => <CloneArc arc={arc} key={arc.name || 'none'} />)}</div> : null}
     </section>
   );
 }

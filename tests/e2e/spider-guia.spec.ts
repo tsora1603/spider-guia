@@ -806,20 +806,22 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(page.locator(`#hq-${id}`)).toHaveAttribute('data-progress-status', 'Sim');
   });
 
-  test('Saga do Clone usa o padrão visual compartilhado e mostra confirmação e fontes por item', async ({ page }) => {
+  test('Saga do Clone usa o padrão visual compartilhado e mostra confirmação e fontes por arco', async ({ page }) => {
     await page.goto('/#explorar/clone');
     const phase = page.locator('.clone-phase').first();
     await expect(phase).toHaveClass(/journey-phase/);
     await expect(phase).toHaveClass(/is-open/);
-    const row = phase.locator('.clone-arc .issue-entry').first();
-    await expect(row.locator('.extra-editorial-status')).toContainText('Confirmado');
+    const arc = phase.locator('.clone-arc').first();
+    await expect(arc.locator(':scope > .cf')).toContainText('Confirmado');
+    await expect(arc.locator(':scope > .cf')).toContainText('Posição: 100% evidência de fontes');
+    await expect(arc.locator(':scope > .cf a.source-link')).not.toHaveCount(0);
+    const row = arc.locator('.issue-entry').first();
+    await expect(row.locator('.extra-editorial-status')).toHaveCount(0);
     await row.locator('.row-details > summary').click();
     await expect(row).not.toContainText('Continue na linha principal');
     await expect(row).not.toContainText('Quanto ler:');
     await expect(row).not.toContainText('Confirmação:');
-    await expect(row.getByText('Posição: 100% baseada em fontes')).toBeVisible();
-    await row.getByText('Fontes consultadas', { exact: false }).click();
-    await expect(row.locator('.extra-issue-source-list a.source-link')).not.toHaveCount(0);
+    await expect(row.locator('.extra-issue-evidence')).toHaveCount(0);
   });
 
   test('Extras com várias edições apresentam três estados independentes', async ({ page }) => {

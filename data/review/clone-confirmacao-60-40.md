@@ -10,7 +10,7 @@ Revisão concluída em 9 de outubro de 2026 para as 187 posições da ordem espe
 
 ## Resultado
 
-As 187 posições têm suporte documental suficiente e permanecem **Confirmadas**. Cada ficha registra suas fontes e distingue o peso pesquisado das classificações herdadas. Nenhum peso anterior foi alterado.
+As 187 posições têm suporte documental suficiente. A interface consolida o resultado por arco, com um único selo, critérios e fontes para o conjunto. Os pesos pesquisados permanecem distintos das classificações herdadas e nenhum peso anterior foi alterado.
 
 Casos de contexto receberam tratamento específico: a saga original usa o guia de leitura e a documentação histórica; _What If?_ #30 também usa sua referência bibliográfica própria; _Web of Spider-Man_ #114 usa as fontes que documentam o retorno de Ben antes do início oficial em #117.
 

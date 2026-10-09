@@ -14,14 +14,14 @@ export { SourceLinks } from './SourceLinks';
 
 type ConfirmationCriteria = {
   position?: 'source-only' | 'not-met';
-  weight?: 'evidence-led-60-40' | 'not-met';
+  weight?: 'evidence-led-60-40' | 'inherited' | 'not-met';
 };
 
 export function EvidenceBox({ status, detail, sources, criteria }: { status?: string; detail?: unknown; sources?: number[]; criteria?: ConfirmationCriteria }) {
   if (!status && !detail && !(sources || []).length && !criteria) return null;
   const confirmed = status === 'Confirmado';
   const positionPass = criteria?.position === 'source-only';
-  const weightPass = criteria?.weight === 'evidence-led-60-40';
+  const weightPass = criteria?.weight === 'evidence-led-60-40' || criteria?.weight === 'inherited';
   return (
     <div class={`cf ${confirmed ? 'ok' : 'p'}`}>
       <b>{confirmed ? <><Icon name="shield" /> Confirmado</> : status || 'Parcial'}</b>
@@ -31,7 +31,7 @@ export function EvidenceBox({ status, detail, sources, criteria }: { status?: st
             <Icon name={positionPass ? 'check' : 'minus'} /> Posição: {positionPass ? '100% evidência de fontes' : 'critério de 100% não atendido'}
           </span>
           <span class={weightPass ? 'criterion-pass' : 'criterion-fail'}>
-            <Icon name={weightPass ? 'check' : 'minus'} /> Peso: {weightPass ? '≥60% fontes · ≤40% dedução lógica' : 'critério 60/40 não atendido'}
+            <Icon name={weightPass ? 'check' : 'minus'} /> Peso: {criteria?.weight === 'inherited' ? 'preservado da classificação anterior' : weightPass ? '≥60% fontes · ≤40% dedução lógica' : 'critério 60/40 não atendido'}
           </span>
         </div>
       ) : null}
