@@ -16,7 +16,10 @@ const noteFor = (item: Reading) => {
   const notes = item.notes || '';
   const extraNote = item.extraNote || '';
   const filteredNotes = extraDetailsById[item.id]
-    ? notes.split('\n').filter(line => !/^(Por que ajuda|Confirmação):/.test(line)).join('\n')
+    ? notes
+        .split('\n')
+        .filter((line) => !/^(Por que ajuda|Confirmação):/.test(line))
+        .join('\n')
     : notes;
   return [extraNote, filteredNotes]
     .filter((value, index, values) => value && values.indexOf(value) === index)
@@ -36,7 +39,6 @@ export const IssueRow = memo(function IssueRow({
   anchor = true,
   showBulkAction = true,
   showLinks = true,
-  prominentLinks = false,
   extraEvidence,
   context
 }: {
@@ -47,7 +49,6 @@ export const IssueRow = memo(function IssueRow({
   anchor?: boolean;
   showBulkAction?: boolean;
   showLinks?: boolean;
-  prominentLinks?: boolean;
   extraEvidence?: ExtraEvidence;
   context?: CloneContext;
 }) {
@@ -56,56 +57,186 @@ export const IssueRow = memo(function IssueRow({
   const status = useProgressStatus(item.id);
   // A Checklist é uma sequência operacional; o conteúdo editorial dos Extras
   // pertence a Explorar > Extras. Em Explorar, manter as fichas completas.
-  const editorialExtra = anchor && !context && item.type === 'Leitura fora da linha'
-    ? extraEditorialByItemId[item.id] : null;
-  const { item: detailedItem, loading: detailLoading, error: detailError } = useReadingDetails(item.id, expanded && !editorialExtra && !extraEvidence);
+  const editorialExtra =
+    anchor && !context && item.type === 'Leitura fora da linha'
+      ? extraEditorialByItemId[item.id]
+      : null;
+  const {
+    item: detailedItem,
+    loading: detailLoading,
+    error: detailError
+  } = useReadingDetails(item.id, expanded && !editorialExtra && !extraEvidence);
   const resolvedItem = detailedItem || item;
   const detail = extraDetailsById[item.id];
   const note = noteFor(resolvedItem);
-  const hasDetail = Boolean(editorialExtra || extraEvidence || (showLinks && hasReadingLinks('item', item.id)) || (resolvedItem.detailsLoaded && (note || detail)));
+  const hasDetail = Boolean(
+    editorialExtra ||
+    extraEvidence ||
+    (showLinks && hasReadingLinks('item', item.id)) ||
+    (resolvedItem.detailsLoaded && (note || detail))
+  );
+  const infoOnly = Boolean(editorialExtra && !extraEvidence && !showLinks);
+  const heading = (
+    <div class="row-head">
+      <b>
+        {item.series} {item.issue}
+      </b>
+      <div class="row-meta disclosure-meta">
+        {item.historicalNumber ? <span class="mu sm">#{item.historicalNumber}</span> : null}
+        <span class={`tag ${item.weight.startsWith('●') ? 'e' : ''}`}>{item.weight}</span>
+        {item.type !== 'Principal' ? <span class="tag">{item.type}</span> : null}
+        <span
+          class={`reading-status reading-status-${status === 'Sim' ? 'read' : status === 'Pulei' ? 'skipped' : 'pending'}`}
+        >
+          {progressStatusLabel(status)}
+        </span>
+        {extraEvidence ? (
+          <span
+            class={`extra-editorial-status ${extraEvidence.confirmation === 'Confirmado' ? 'is-confirmed' : 'is-partial'}`}
+            aria-label={`Status editorial do conjunto: ${extraEvidence.confirmation || 'A confirmar'}`}
+            title="Status e fontes atribuídos à ficha editorial do conjunto; progresso desta HQ é independente"
+          >
+            {extraEvidence.confirmation || 'A confirmar'}{' '}
+            <span class="extra-editorial-status-scope">· conjunto</span>
+          </span>
+        ) : null}
+        {context?.part ? <span class="tag">Parte {context.part}</span> : null}
+        {expanded && resolvedItem.detailsLoaded && !hasDetail && !context?.note ? (
+          <span class="mu sm">sem detalhes adicionais</span>
+        ) : null}
+      </div>
+    </div>
+  );
   return (
-    <div id={anchor ? `hq-${item.id}` : undefined} tabIndex={-1} data-keyboard-reading data-reading-id={item.id} data-progress-status={status} class={`list-entry issue-entry ui-list-item ${status === 'Não' ? '' : 'is-done'}`}>
+    <div
+      id={anchor ? `hq-${item.id}` : undefined}
+      tabIndex={-1}
+      data-keyboard-reading
+      data-reading-id={item.id}
+      data-progress-status={status}
+      class={`list-entry issue-entry ui-list-item ${status === 'Não' ? '' : 'is-done'}${expanded && !infoOnly ? ' is-open' : ''}`}
+    >
       <StatusButton id={item.id} status={status} labelPrefix={`${item.series} ${item.issue}`} />
-      <details
-        class="row-details disclosure-item"
-        open={expanded}
-        onToggle={event => {
-          const next = event.currentTarget.open;
-          if (open === undefined) setLocalOpen(next);
-          else onOpenChange?.(item.id, next);
-        }}
-      >
-        <summary class="disclosure-summary ui-disclosure-summary">
-          <div class="row-head">
-            <b>{item.series} {item.issue}</b>
-            <div class="row-meta disclosure-meta">
-              {item.historicalNumber ? <span class="mu sm">#{item.historicalNumber}</span> : null}
-              <span class={`tag ${item.weight.startsWith('●') ? 'e' : ''}`}>{item.weight}</span>
-              {item.type !== 'Principal' ? <span class="tag">{item.type}</span> : null}
-              <span class={`reading-status reading-status-${status === 'Sim' ? 'read' : status === 'Pulei' ? 'skipped' : 'pending'}`}>{progressStatusLabel(status)}</span>
-              {extraEvidence ? <span class={`extra-editorial-status ${extraEvidence.confirmation === 'Confirmado' ? 'is-confirmed' : 'is-partial'}`}
-                aria-label={`Status editorial do conjunto: ${extraEvidence.confirmation || 'A confirmar'}`}
-                title="Status e fontes atribuídos à ficha editorial do conjunto; progresso desta HQ é independente"
-              >{extraEvidence.confirmation || 'A confirmar'} <span class="extra-editorial-status-scope">· conjunto</span></span> : null}
-              {context?.part ? <span class="tag">Parte {context.part}</span> : null}
-              {expanded && resolvedItem.detailsLoaded && !hasDetail && !context?.note ? <span class="mu sm">sem detalhes adicionais</span> : null}
+      <div class="issue-content">
+        {infoOnly ? (
+          <div class="issue-summary">{heading}</div>
+        ) : (
+          <details
+            class="row-details disclosure-item"
+            open={expanded}
+            onToggle={(event) => {
+              const next = event.currentTarget.open;
+              if (open === undefined) setLocalOpen(next);
+              else onOpenChange?.(item.id, next);
+            }}
+          >
+            <summary class="disclosure-summary ui-disclosure-summary">
+              {heading}
+              <Icon name="chevD" className="disclosure-chevron" />
+            </summary>
+            <div class="row-body disclosure-content">
+              {showLinks ? <ReadingLinksAction kind="item" id={item.id} /> : null}
+              {extraEvidence ? (
+                <div
+                  class="extra-issue-evidence"
+                  aria-label="Fontes e confirmação editorial da leitura agrupada"
+                >
+                  <span class="sm mu">
+                    Status editorial do conjunto:{' '}
+                    <b>{extraEvidence.confirmation || 'A confirmar'}</b>. A avaliação de posição e
+                    peso pertence à ficha editorial do conjunto.
+                  </span>
+                  {extraEvidence.sources?.length ? (
+                    <details class="extra-issue-source-disclosure">
+                      <summary>
+                        <Icon name="search" size={16} /> Fontes consultadas do conjunto (
+                        {extraEvidence.sources.length}) <Icon name="chevD" size={16} />
+                      </summary>
+                      <div class="extra-issue-source-list">
+                        <SourceLinks indexes={extraEvidence.sources} />
+                      </div>
+                    </details>
+                  ) : (
+                    <span class="sm mu">Sem fontes específicas registradas neste conjunto.</span>
+                  )}
+                </div>
+              ) : editorialExtra ? null : (
+                <>
+                  {context ? (
+                    <div class="sm mu clone-context">
+                      {context.readingOrder != null ? `Ordem ${context.readingOrder}` : ''}
+                      {context.note ? (
+                        <>
+                          {' '}
+                          · <SpoilerText text={context.note} />
+                        </>
+                      ) : null}
+                    </div>
+                  ) : null}
+                  {showBulkAction && item.historicalNumber ? (
+                    <div class="issue-actions">
+                      <button
+                        class="skip-action bulk-inline-action"
+                        type="button"
+                        onClick={(event) =>
+                          bulkProgressUi.open({
+                            selection: { kind: 'through', itemId: item.id },
+                            origin: event.currentTarget
+                          })
+                        }
+                      >
+                        Tudo até aqui
+                      </button>
+                    </div>
+                  ) : null}
+                  {detailLoading ? (
+                    <div class="ex mu sm" role="status">
+                      Carregando detalhes desta fase…
+                    </div>
+                  ) : null}
+                  {detailError ? (
+                    <div class="ex sm" role="alert">
+                      Não foi possível carregar os detalhes desta fase. Tente novamente ao reabrir a
+                      edição.
+                    </div>
+                  ) : null}
+                  {note ? (
+                    <div class="ex nt">
+                      <SpoilerText text={note} inline={false} />
+                    </div>
+                  ) : null}
+                  {detail ? (
+                    <div class="ex">
+                      {detail.porque ? (
+                        <>
+                          <b>Por que ler:</b> <SpoilerText text={detail.porque} />
+                          <br />
+                        </>
+                      ) : null}
+                      {detail.quanto ? (
+                        <>
+                          <b>Quanto ler:</b> {detail.quanto}{' '}
+                        </>
+                      ) : null}
+                      {detail.conf ? (
+                        <>
+                          · <b>Confirmação:</b> {detail.conf}
+                        </>
+                      ) : null}
+                      {detail.confirmationDetail ? (
+                        <div class="sm mu">
+                          <SpoilerText text={detail.confirmationDetail} inline={false} />
+                        </div>
+                      ) : null}
+                    </div>
+                  ) : null}
+                </>
+              )}
             </div>
-          </div>
-          <Icon name="chevD" className="disclosure-chevron" />
-        </summary>
-        <div class="row-body disclosure-content">
-          {showLinks && !prominentLinks ? <ReadingLinksAction kind="item" id={item.id} /> : null}
-          {extraEvidence ? (
-            <div class="extra-issue-evidence" aria-label="Fontes e confirmação editorial da leitura agrupada">
-              <span class="sm mu">Status editorial do conjunto: <b>{extraEvidence.confirmation || 'A confirmar'}</b>. A avaliação de posição e peso pertence à ficha editorial do conjunto.</span>
-              {extraEvidence.sources?.length ? (
-                <details class="extra-issue-source-disclosure">
-                  <summary><Icon name="search" size={16} /> Fontes consultadas do conjunto ({extraEvidence.sources.length}) <Icon name="chevD" size={16} /></summary>
-                  <div class="extra-issue-source-list"><SourceLinks indexes={extraEvidence.sources} /></div>
-                </details>
-              ) : <span class="sm mu">Sem fontes específicas registradas neste conjunto.</span>}
-            </div>
-          ) : editorialExtra ? (
+          </details>
+        )}
+        {editorialExtra && !extraEvidence ? (
+          <div class="issue-permanent-actions">
             <a
               class="extra-more-info-link"
               href={exploreTarget('extras', 'extra', extraAnchorKey(editorialExtra))}
@@ -113,25 +244,10 @@ export const IssueRow = memo(function IssueRow({
             >
               <Icon name="info" size={18} /> Mais informações <Icon name="arrowRight" size={18} />
             </a>
-          ) : <>
-          {context ? <div class="sm mu clone-context">{context.readingOrder != null ? `Ordem ${context.readingOrder}` : ''}{context.note ? <> · <SpoilerText text={context.note} /></> : null}</div> : null}
-          {showBulkAction && item.historicalNumber ? <div class="issue-actions"><button class="skip-action bulk-inline-action" type="button" onClick={event => bulkProgressUi.open({ selection: { kind: 'through', itemId: item.id }, origin: event.currentTarget })}>Tudo até aqui</button></div> : null}
-          {detailLoading ? <div class="ex mu sm" role="status">Carregando detalhes desta fase…</div> : null}
-          {detailError ? <div class="ex sm" role="alert">Não foi possível carregar os detalhes desta fase. Tente novamente ao reabrir a edição.</div> : null}
-          {note ? <div class="ex nt"><SpoilerText text={note} inline={false} /></div> : null}
-          {detail ? (
-            <div class="ex">
-              {detail.porque ? <><b>Por que ler:</b> <SpoilerText text={detail.porque} /><br /></> : null}
-              {detail.quanto ? <><b>Quanto ler:</b> {detail.quanto} </> : null}
-              {detail.conf ? <>· <b>Confirmação:</b> {detail.conf}</> : null}
-              {detail.confirmationDetail ? <div class="sm mu"><SpoilerText text={detail.confirmationDetail} inline={false} /></div> : null}
-            </div>
-          ) : null}
-          </>}
-        </div>
-      </details>
+          </div>
+        ) : null}
+      </div>
       <div class="reading-row-end">
-        {showLinks && prominentLinks ? <ReadingLinksAction kind="item" id={item.id} compact /> : null}
         <SkipButton id={item.id} status={status} />
       </div>
     </div>

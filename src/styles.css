@@ -632,9 +632,19 @@ main[data-tab="Hoje"]>.reading-home{grid-column:1/-1;min-width:0}
 .checklist-focus-control .focus-mode-button .i{width:18px;height:18px;flex:none}
 /* Ações não ficam dentro do <details>, portanto nunca desaparecem ao recolher. */
 .list-entry.issue-entry,.list-entry.extra-entry{align-items:flex-start}
-.list-entry.issue-entry>.row-details,.list-entry.extra-entry>.row-details{min-width:0;flex:1}
+.list-entry.issue-entry>.issue-content,.list-entry.extra-entry>.row-details{min-width:0;flex:1}
 .reading-row-end{flex:none;display:flex;align-items:center;justify-content:flex-end;align-self:flex-start;padding:10px 10px 10px 0}
-.reading-row-end .skip-action{min-width:74px;max-width:134px;line-height:1.2}
+.reading-row-end .reading-skip{min-width:44px;max-width:116px;line-height:1.2}
+/* A cápsula é menor; o botão mantém uma área de toque de 44px. */
+button.skip-action.reading-skip{min-height:44px;padding:8px 0;border:0;background:transparent;box-shadow:none;font-size:.6875rem}
+.reading-skip-label{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:28px;padding:4px 8px;border:1px solid var(--danger-border);border-radius:var(--radius-pill);background:var(--danger-surface);line-height:1.2}
+.reading-skip-label>.i{width:12px;height:12px;flex:none}
+.reading-skip:hover .reading-skip-label{background:var(--danger-surface-hover);border-color:var(--danger-border-strong)}
+.issue-summary{padding:12px 14px}
+.issue-permanent-actions{padding:0 14px 14px}
+.issue-entry .row-details,.issue-entry .row-details>.disclosure-summary,.issue-entry .row-details>.disclosure-summary:hover,.issue-entry .row-body{background:transparent}
+.issue-entry{transition:background-color var(--ease)}
+.issue-entry:is(:hover,:focus-within,.is-open){background:var(--surface-reading-selected)}
 .reading-status{font:700 .6875rem/1.3 Inter,system-ui,sans-serif;color:var(--text-muted)}
 .reading-status-read{color:var(--success-text)}
 .reading-status-skipped{color:var(--warning-text)}
@@ -648,17 +658,16 @@ main[data-tab="Hoje"]>.reading-home{grid-column:1/-1;min-width:0}
   .checklist-focus-control{align-items:stretch;flex-direction:column;padding:13px 14px;gap:10px}
   .checklist-focus-control .focus-mode-button{width:100%}
   .reading-row-end{padding:9px 8px 9px 0}
-  .reading-row-end .skip-action{min-width:0;padding:7px 8px;gap:4px}
-  .reading-row-end .skip-action svg{width:13px;height:13px;flex:none}
   .list-entry.issue-entry,.list-entry.extra-entry{gap:6px}
   .list-entry.issue-entry>.ck,.list-entry.extra-entry>.ck{margin-left:8px}
   .list-entry.issue-entry .row-details>summary,.list-entry.extra-entry .row-details>summary{padding:10px 29px 10px 3px}
   .list-entry.issue-entry .row-details>summary>.disclosure-chevron,.list-entry.extra-entry .row-details>summary>.disclosure-chevron{right:9px}
+  .issue-summary{padding:10px 3px}
+  .issue-permanent-actions{padding:0 3px 12px}
+  .issue-permanent-actions .extra-more-info-link{padding:8px;gap:6px;font-size:.75rem}
   .extra-issue-list>.issue-entry>.ck{margin-left:6px}
 }
 @media(max-width:380px){
-  .reading-row-end .skip-action{max-width:88px;min-height:44px;font-size:.6875rem;flex-wrap:wrap}
-  .reading-row-end .skip-action svg{display:none}
   .list-entry.issue-entry,.list-entry.extra-entry{gap:4px}
   .list-entry.issue-entry>.ck,.list-entry.extra-entry>.ck{min-width:44px}
 }
@@ -831,17 +840,19 @@ details[open]>summary>.help-summary-chevron{transform:rotate(180deg)}
 .reading-links-cta.reading-links-green:disabled{background:var(--surface-control);border-color:var(--border-subtle);color:var(--text-muted);cursor:default;opacity:1}
 .reading-links-action.is-compact{margin:0;display:flex;flex:none}
 .reading-links-action.is-compact .reading-links-cta{min-width:68px;min-height:44px;justify-content:center;gap:6px;padding:8px 10px;font-size:.8125rem}
-.reading-row-end:has(.reading-links-action){flex-direction:column;gap:4px}
 .checklist-sequence-list{background:transparent;border:0;box-shadow:none;border-radius:0}
-.checklist-series-group{margin:0 0 12px;border:1px solid var(--border-subtle);border-radius:var(--radius);background:var(--surface-list);overflow:hidden}
-.checklist-series-heading{display:flex;align-items:center;gap:10px;padding-right:12px;background:var(--surface-summary)}
+.checklist-series-group{margin:0 0 12px;border:1px solid var(--border-subtle);border-radius:var(--radius);background:var(--surface-list);overflow:hidden;transition:background-color var(--ease)}
+.checklist-series-heading{display:flex;align-items:center;gap:10px;padding-right:12px;background:transparent}
 .checklist-series-toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0;min-height:88px;padding:14px 16px;border:0;background:transparent;color:inherit;text-align:left;font:inherit;cursor:pointer}
 .checklist-series-toggle .row-head{display:grid;gap:5px;min-width:0;overflow-wrap:anywhere}
 .checklist-series-toggle>.i{flex:none;width:20px;height:20px}
-.checklist-series-toggle:hover{background:var(--surface-hover)}
+.checklist-series-toggle:hover{background:transparent}
 .checklist-series-toggle:focus-visible{outline:3px solid var(--focus-ring);outline-offset:-3px}
 .checklist-series-items{border-top:1px solid var(--border-subtle)}
-.checklist-series-group.is-single>.issue-entry{border:0;margin:0;border-radius:0;background:var(--surface-summary)}
+.checklist-series-group.is-single>.issue-entry{border:0;margin:0;border-radius:0;background:transparent}
+/* O estado pertence à superfície completa, incluindo controles e conteúdo. */
+.checklist-series-group:is(.is-open,:focus-within):not(.is-single),.checklist-series-group:has(>.checklist-series-heading:hover),.checklist-series-group.is-single:has(>.issue-entry:is(:hover,:focus-within,.is-open)){background:var(--surface-reading-selected);border-color:var(--border-emphasis)}
+.checklist-series-items .issue-entry:is(:hover,:focus-within,.is-open){background:transparent}
 @media(max-width:600px){.checklist-series-heading{gap:4px;padding-right:8px}.checklist-series-toggle{padding:12px 10px;gap:6px}.reading-links-action.is-compact .reading-links-cta{min-width:60px;padding:7px;font-size:.75rem}}
 .reading-links-cta:focus-visible,.links-context-toolbar .btn:focus-visible{outline:3px solid var(--focus-ring);outline-offset:2px}
 .links-context-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 12px}

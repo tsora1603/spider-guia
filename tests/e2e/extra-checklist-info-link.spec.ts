@@ -11,18 +11,15 @@ test('Amazing Fantasy #15 oferece apenas Mais informações e abre a ficha exata
   await page.goto('/#checklist/hq/1');
   const row = page.locator('#hq-1');
   await expect(row).toBeVisible();
-  const disclosure = row.locator(':scope > details');
-  if (!(await disclosure.evaluate(element => (element as HTMLDetailsElement).open))) {
-    await disclosure.locator('summary').click();
-  }
-  const link = disclosure.getByRole('link', { name: /Mais informações sobre Amazing Fantasy #15/i });
+  await expect(row.locator('details')).toHaveCount(0);
+  const link = row.getByRole('link', { name: /Mais informações sobre Amazing Fantasy #15/i });
   await expect(link).toBeVisible();
   await expect(link).toHaveAttribute('href', '#explorar/extras?extra=1');
-  await expect(disclosure.locator('.extra-more-info-link svg.lucide-info')).toBeVisible();
-  await expect(disclosure).not.toContainText('Por que ler:');
-  await expect(disclosure).not.toContainText('Quanto ler:');
-  await expect(disclosure).not.toContainText('Como encaixar:');
-  await expect(disclosure).not.toContainText('Confirmação:');
+  await expect(row.locator('.extra-more-info-link svg.lucide-info')).toBeVisible();
+  await expect(row).not.toContainText('Por que ler:');
+  await expect(row).not.toContainText('Quanto ler:');
+  await expect(row).not.toContainText('Como encaixar:');
+  await expect(row).not.toContainText('Confirmação:');
   await link.click();
   await expect(page).toHaveURL(/#explorar\/extras\?extra=1$/);
   const target = page.locator('[data-explore-target="extra"]');
@@ -37,11 +34,8 @@ test('link de uma edição pertencente a um Extra com várias HQs abre o grupo c
   await page.goto('/#checklist/hq/256');
   const row = page.locator('#hq-256');
   await expect(row).toBeVisible();
-  const details = row.locator(':scope > details');
-  if (!(await details.evaluate(element => (element as HTMLDetailsElement).open))) {
-    await details.locator('summary').click();
-  }
-  const link = details.locator('a.extra-more-info-link');
+  const link = row.locator('a.extra-more-info-link');
+  await expect(link).toBeVisible();
   await expect(link).toHaveAttribute('href', '#explorar/extras?extra=256-257-258');
   await link.click();
   await expect(page.locator('[data-explore-target="extra"]')).toContainText('Marvel Team-Up');

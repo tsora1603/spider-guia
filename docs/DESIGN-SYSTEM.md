@@ -44,7 +44,7 @@ Cinco destinos principais; barra inferior no mobile e rail no desktop, com indic
 
 ## Checklist e Modo Foco
 
-Checklist segue a sequência de `buildReadingPlan`, agrupando somente trechos consecutivos da mesma série em dropdowns. Intercalações abrem um novo grupo quando a série retorna; edições isoladas usam a mesma superfície sem outro nível de expansão. Jornada concentra as fases/marcos. O Modo Foco usa a mesma sequência visível e atualiza estado por HQ ao avançar. Pesquisa e filtros preservam as divisões originais do plano. Botões verdes **Ler** ficam ao lado dos títulos de grupos e edições, fora do controle de expansão; levam aos vínculos explícitos na aba Links. **Sem link** é desabilitado quando não existe destino cadastrado.
+Checklist segue a sequência de `buildReadingPlan`, agrupando somente trechos consecutivos da mesma série em dropdowns. Intercalações abrem um novo grupo quando a série retorna; edições isoladas usam a mesma superfície sem outro nível de expansão. Jornada concentra as fases/marcos. O Modo Foco usa a mesma sequência visível e atualiza estado por HQ ao avançar. Pesquisa e filtros preservam as divisões originais do plano. O botão verde **Ler** fica somente no título do grupo, fora do controle de expansão; leva aos vínculos explícitos na aba Links. Edições individuais não repetem essa ação. **Mais informações** fica sempre visível; itens com apenas a ficha extra não têm expansão vazia. **Sem link** é desabilitado nos grupos sem destino cadastrado. A superfície inteira do dropdown recebe `--surface-reading-selected` ao abrir ou receber foco; cabeçalhos e conteúdo permanecem transparentes. **Pular** usa uma cápsula visual de 28px dentro de uma área de toque de pelo menos 44px.
 
 ## Testes de coesão
 

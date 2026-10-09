@@ -832,7 +832,7 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     const row = confirmed.locator('.extra-issue-list > .issue-entry').first();
     await expect(row.locator('.extra-editorial-status')).toContainText('Confirmado');
     await expect(row).toContainText('Pendente');
-    await row.locator(':scope > .row-details > summary').click();
+    await row.locator(':scope > .issue-content > .row-details > summary').click();
     await expect(row.locator('.extra-issue-evidence')).toBeVisible();
     await expect(row.locator('.row-body')).not.toContainText('Como encaixar:');
     await expect(row.locator('.row-body')).not.toContainText('Por que ler:');

@@ -15,7 +15,8 @@ test('séries consecutivas preservam Amazing Fantasy e o Annual entre as ediçõ
   const groups = page.locator('.checklist-series-group');
   await expect(groups.nth(0)).toHaveAttribute('data-series', 'Amazing Fantasy');
   await expect(groups.nth(0).locator('.issue-entry')).toHaveAttribute('data-reading-id', '1');
-  await expect(groups.nth(0).getByRole('button', { name: 'Link de leitura ainda não cadastrado' })).toBeDisabled();
+  await expect(groups.nth(0).locator('.reading-links-cta')).toHaveCount(0);
+  await expect(groups.nth(0).getByRole('link', { name: /Mais informações/ })).toBeVisible();
   await expect(groups.nth(1)).toHaveAttribute('data-series-key', 'series-2');
   await expect(groups.nth(2)).toHaveAttribute('data-series-key', 'series-1227');
   await expect(groups.nth(3)).toHaveAttribute('data-series-key', 'series-18');
@@ -31,7 +32,7 @@ test('séries consecutivas preservam Amazing Fantasy e o Annual entre as ediçõ
   await expect(groups.nth(2)).toHaveAttribute('data-series-key', 'series-1227');
 });
 
-test('botões verdes do grupo e da edição abrem o destino e permitem voltar', async ({ page }) => {
+test('somente o título do grupo oferece o botão verde e permite voltar', async ({ page }) => {
   await page.goto('/#checklist');
   const group = page.locator('[data-series-key="series-2"]');
   const groupLink = group.getByRole('button', { name: 'Ver links de The Amazing Spider-Man (1963) #1–#16', exact: true });
@@ -44,8 +45,9 @@ test('botões verdes do grupo e da edição abrem o destino e permitem voltar', 
   await expect(row).toBeVisible();
   await expect(group.locator('.checklist-series-toggle')).toHaveAttribute('aria-expanded', 'true');
   await expect(row.locator('details')).not.toHaveAttribute('open', '');
+  await expect(group.locator('.issue-entry .reading-links-cta')).toHaveCount(0);
   await row.getByRole('button', { name: /Marcar como lida/ }).click();
-  await row.getByRole('button', { name: 'Ver links desta leitura' }).click();
+  await groupLink.click();
   await expect(page).toHaveURL(/link=spider-man-1963/);
   await page.goBack();
   await expect(page.locator('#hq-2')).toHaveAttribute('data-progress-status', 'Sim');
@@ -103,11 +105,14 @@ test('grupos e botões cabem no celular, inclusive com título comprido', async 
   await page.goto('/#checklist');
   await page.locator('[data-series-key="series-2"] .checklist-series-toggle').click();
   const row = page.locator('#hq-2');
-  const link = row.getByRole('button', { name: 'Ver links desta leitura' });
+  const link = page.locator('[data-series-key="series-2"] .checklist-series-heading .reading-links-cta');
   await expect(link).toBeVisible();
   const bounds = await link.boundingBox();
   expect(bounds!.height).toBeGreaterThanOrEqual(44);
   expect(bounds!.width).toBeGreaterThanOrEqual(44);
+  const skip = row.getByRole('button', { name: 'Pular', exact: true });
+  expect((await skip.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+  expect((await skip.locator('.reading-skip-label').boundingBox())!.height).toBeLessThanOrEqual(30);
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await row.scrollIntoViewIfNeeded();
   await page.screenshot({ path: '/tmp/spider-checklist-mobile.png' });
@@ -115,6 +120,38 @@ test('grupos e botões cabem no celular, inclusive com título comprido', async 
   await expect(page.locator('#hq-707')).toBeVisible();
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
+
+for (const theme of ['dark', 'light']) {
+  test(`seleção colore toda a superfície do dropdown no tema ${theme}`, async ({ page }) => {
+    await page.addInitScript(theme => localStorage.setItem('aranha-design-preferences-v1', JSON.stringify({
+      version: 1, theme, fontScale: 'normal', focusMode: false
+    })), theme);
+    await page.goto('/#checklist');
+    const group = page.locator('[data-series-key="series-2"]');
+    const selected = await group.evaluate(element => getComputedStyle(element).getPropertyValue('--surface-reading-selected').trim());
+    await group.locator('.checklist-series-toggle').click();
+    const selectedRgb = await group.evaluate((element, value) => {
+      const probe = document.createElement('span');
+      probe.style.color = value;
+      element.append(probe);
+      const color = getComputedStyle(probe).color;
+      probe.remove();
+      return color;
+    }, selected);
+    await expect(group).toHaveCSS('background-color', selectedRgb);
+    for (const selector of ['.checklist-series-heading', '.checklist-series-toggle', '.issue-entry', '.row-details', '.row-details > summary']) {
+      await expect(group.locator(selector).first()).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    }
+    await group.locator('#hq-2 summary').click();
+    await expect(group.locator('#hq-2 .row-body')).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    await expect(group).toHaveCSS('background-color', selectedRgb);
+    await page.goto('/#checklist/hq/1227');
+    const annual = page.locator('#hq-1227');
+    await expect(annual.getByRole('link', { name: /Mais informações/ })).toBeVisible();
+    await expect(annual.locator('details')).toHaveCount(0);
+    await expect(page.locator('[data-series-key="series-1227"]')).toHaveCSS('background-color', selectedRgb);
+  });
+}
 
 test('a flag de Links oculta as ações dos grupos e das edições', async ({ page }) => {
   await page.route('**/config.js', route => route.fulfill({ contentType: 'application/javascript', body: 'window.LINKS_ENABLED = false;' }));

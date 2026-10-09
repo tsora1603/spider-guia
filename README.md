@@ -38,12 +38,12 @@ Para adicionar Links, preserve os grupos e URLs existentes, acrescente o destino
 ## Como o usuário navega
 
 - **Hoje:** continuar lendo, “Já li até...”, progresso e ritmo.
-- **Checklist:** dropdowns por trechos consecutivos de cada série, com status **Não / Sim / Pulei** e Modo Foco; usa o mesmo plano/ordem da Home. Anuais e outras séries continuam intercalados: a série reaparece em outro dropdown quando a leitura retorna a ela. Edições isoladas usam o mesmo visual, sem um nível extra de agrupamento. Botões verdes **Ler**, nos títulos dos grupos e nas edições, levam aos destinos associados na aba Links; **Sem link** indica uma edição sem destino cadastrado.
+- **Checklist:** dropdowns por trechos consecutivos de cada série, com status **Não / Sim / Pulei** e Modo Foco; usa o mesmo plano/ordem da Home. Anuais e outras séries continuam intercalados: a série reaparece em outro dropdown quando a leitura retorna a ela. Edições isoladas usam o mesmo visual, sem um nível extra de agrupamento. O botão verde **Ler** fica somente no título do grupo e leva aos destinos associados na aba Links; **Sem link** indica um grupo sem destino cadastrado. Itens individuais não repetem essa ação.
 - **Explorar:** Jornada (fases e marcos), Extras (fichas e fontes), Saga do Clone e Links (quando habilitados). Links são cards de largura total com destinos externos acessíveis diretamente; `coverage` fornece o resumo de edições e `extraId` apresenta um botão para a ficha exata de Extras apenas quando a associação é válida. A busca local e `#explorar/links?link=<id>` continuam disponíveis.
 - **Ajuda:** como usar, glossário, fontes e metodologia.
 - **Configurações:** plano, spoilers, aparência, conta, backup e reset.
 
-Uma leitura extra com ficha editorial pode exibir **Mais informações** na Checklist, apontando diretamente para **Explorar → Extras**.
+Uma leitura extra com ficha editorial exibe **Mais informações** sempre visível na Checklist, apontando diretamente para **Explorar → Extras**.
 
 ## Publicação e contas
 
@@ -62,16 +62,17 @@ Uma leitura extra com ficha editorial pode exibir **Mais informações** na Chec
 
 ### Links contextuais nas leituras
 
-Os CTAs **Ver links desta leitura** na Checklist, no Modo Foco e nas
+Os botões **Ler** dos grupos da Checklist e **Ver links desta leitura** nas
 fichas de Extras usam `src/links/associations.ts`. O índice é baseado
 exclusivamente em `data/src/editorial/links.json`: `itemIds` para HQs e `extraId` (inclusive
 sobrescritas ou `null` no destino) para fichas de Extras. Cobertura LGY,
 nomes e `readingGroup` nunca geram associações implícitas. Sem vínculo
 explícito e URL HTTP(S) válida, não há navegação para um destino de leitura.
 
-Na Checklist, a ação fica visível mesmo com a edição recolhida. Grupos reúnem os
-links de suas edições sem repetir destinos; itens sem associação exibem **Sem link**
-desabilitado. As associações da linha principal estão cadastradas em `itemIds`,
+Na Checklist, o botão fica apenas no título do grupo, inclusive recolhido. Grupos
+reúnem os links de suas edições sem repetir destinos; grupos sem associação exibem
+**Sem link** desabilitado. Edições com ficha extra mantêm **Mais informações** fora
+da área recolhível. Quando esse é o único conteúdo, não há expansão vazia. As associações da linha principal estão cadastradas em `itemIds`,
 conforme a cobertura declarada dos oito grupos de séries. Anuais e outras revistas
 não herdam esses vínculos. Amazing Fantasy **#15** permanece sem destino cadastrado.
 

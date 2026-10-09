@@ -65,8 +65,8 @@ function ChecklistSeriesGroup({ group, expanded, openItems, onItemToggle, onGrou
   const range = `${issueLabel(first)}–${issueLabel(last)}`;
   const single = group.items.length === 1;
   const read = group.items.filter(item => statusOf(item.id) === 'Sim').length;
-  return <div ref={ref} class={`checklist-series-group${single ? ' is-single' : ''}`} data-series={group.name} data-series-key={group.key}>
-    {single ? <IssueRow key={first.id} item={first} open={openItems.has(first.id)} onOpenChange={onItemToggle} prominentLinks /> : <>
+  return <div ref={ref} class={`checklist-series-group${single ? ' is-single' : expanded ? ' is-open' : ''}`} data-series={group.name} data-series-key={group.key}>
+    {single ? <IssueRow key={first.id} item={first} open={openItems.has(first.id)} onOpenChange={onItemToggle} showLinks={false} /> : <>
       <div class="checklist-series-heading">
         <button class="checklist-series-toggle" type="button" aria-expanded={expanded} aria-controls={`${group.key}-items`}
           onClick={() => onGroupToggle(group.key)}>
@@ -77,7 +77,7 @@ function ChecklistSeriesGroup({ group, expanded, openItems, onItemToggle, onGrou
       </div>
       <div id={`${group.key}-items`} hidden={!expanded} class="checklist-series-items">
         {expanded ? chunkItems(group.items).map(chunk => <div key={chunk.key} class="checklist-sequence-chunk" data-sequence-chunk={chunk.key}>
-          {chunk.items.map(item => <IssueRow key={item.id} item={item} open={openItems.has(item.id)} onOpenChange={onItemToggle} prominentLinks />)}
+          {chunk.items.map(item => <IssueRow key={item.id} item={item} open={openItems.has(item.id)} onOpenChange={onItemToggle} showLinks={false} />)}
         </div>) : null}
       </div>
     </>}
@@ -107,7 +107,7 @@ function FocusChecklist({ items, currentId, onCurrentId, onExit }: {
       <button class="btn g focus-exit" type="button" onClick={onExit}>Sair do foco</button>
     </header>
     <div class="focus-reader-card">
-      <IssueRow key={item.id} item={item} open={expanded} onOpenChange={(_id, nextOpen) => setExpanded(nextOpen)} prominentLinks />
+      <IssueRow key={item.id} item={item} open={expanded} onOpenChange={(_id, nextOpen) => setExpanded(nextOpen)} showLinks={false} />
     </div>
     <nav class="focus-reader-nav" aria-label="Navegação do modo foco">
       <button class="btn g" data-focus-nav="previous" type="button" disabled={index <= 0} onClick={() => go(index - 1)}><Icon name="arrowLeft" /> Anterior</button>

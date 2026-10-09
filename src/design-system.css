@@ -17,7 +17,7 @@
   color-scheme:dark;
   --page:#090d19;--text:#f4f6fb;--text-muted:#aeb7cf;--text-soft:#d7defe;--text-subtle:#929dbd;
   --surface-1:#11182b;--surface-2:#171f36;--surface-control:#0d1324;--surface-inset:#0b1021;--surface-field:#090e1d;--surface-hover:#18203c;--surface-dialog:#10162a;
-  --surface-list:#11182b;--surface-summary:#121933;--surface-expanded:#11182b;--surface-nested:#11182b;
+  --surface-list:#11182b;--surface-summary:#121933;--surface-expanded:#11182b;--surface-nested:#11182b;--surface-reading-selected:#1b2541;
   --border:#293454;--border-subtle:#293454;--border-strong:#354064;--border-emphasis:#46547f;--border-focus-soft:#53669c;
   --primary:#c92d38;--primary-strong:#ff6b73;--primary-tint:rgb(241 59 71/.08);--primary-tint-strong:rgb(224 38 45/.16);
   --accent:#4b63df;--link:#b8c4ff;--focus-ring:#a8b8ff;
@@ -32,7 +32,7 @@
   color-scheme:light;
   --page:#f7f8fc;--text:#161a2a;--text-muted:#555e75;--text-soft:#303a58;--text-subtle:#65708d;
   --surface-1:#ffffff;--surface-2:#f3f5fb;--surface-control:#f0f3fa;--surface-inset:#f5f6fb;--surface-field:#ffffff;--surface-hover:#e9edf8;--surface-dialog:#ffffff;
-  --surface-list:#ffffff;--surface-summary:#f4f6fb;--surface-expanded:#ffffff;--surface-nested:#ffffff;
+  --surface-list:#ffffff;--surface-summary:#f4f6fb;--surface-expanded:#ffffff;--surface-nested:#ffffff;--surface-reading-selected:#eef2ff;
   --border:#c7cde0;--border-subtle:#c7cde0;--border-strong:#aeb7cf;--border-emphasis:#8f9ab8;--border-focus-soft:#6678b8;
   --primary:#b51f2d;--primary-strong:#a01825;--primary-tint:rgb(181 31 45/.07);--primary-tint-strong:rgb(181 31 45/.11);
   --accent:#334fc7;--link:#2847b8;--focus-ring:#173cba;

@@ -23,9 +23,9 @@ test('navegação usa ícones SVG oficiais Lucide em mobile e desktop', async ({
   }
 });
 
-test('Checklist usa chevrons Lucide em detalhes expansíveis', async ({ page }) => {
+test('Checklist usa chevrons Lucide nos grupos expansíveis', async ({ page }) => {
   await page.goto('/#checklist');
-  const chevron = page.locator('.row-details > summary > svg.disclosure-chevron.lucide-chevron-down').first();
+  const chevron = page.locator('.checklist-series-toggle > svg.lucide-chevron-down').first();
   await expect(chevron).toBeAttached();
   await expect(chevron).toHaveAttribute('aria-hidden', 'true');
 });

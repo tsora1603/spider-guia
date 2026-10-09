@@ -47,8 +47,8 @@ export function StatusButton({ id, status, labelPrefix }: { id: number; status: 
 
 export function SkipButton({ id, status }: { id: number; status: ProgressStatus }) {
   return (
-    <button class="skip-action" type="button" aria-label={status === 'Pulei' ? 'Desfazer pulo' : 'Pular'} onClick={event => requestStatus(id, 'Pulei', event.currentTarget)}>
-      <Icon name="skipa" /> {status === 'Pulei' ? 'Desfazer pulo' : 'Pular'}
+    <button class="skip-action reading-skip" type="button" aria-label={status === 'Pulei' ? 'Desfazer pulo' : 'Pular'} onClick={event => requestStatus(id, 'Pulei', event.currentTarget)}>
+      <span class="reading-skip-label"><Icon name="skipa" /><span>{status === 'Pulei' ? 'Desfazer pulo' : 'Pular'}</span></span>
     </button>
   );
 }
