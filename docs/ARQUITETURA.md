@@ -26,12 +26,18 @@
 
 ## Links editoriais e cobertura
 
-Os destinos externos são editados em `data/src/editorial/links.json`, validados pelo schema Zod em `data/schema.mjs` e pelo modelo semântico `data/link-model.mjs` (compartilhado entre Vite e Node). `npm run data:build` incorpora esses Links em `DATA.editorial.links`; não há scripts globais `links.js`/`link-model.js`. Os tipos ficam em `src/links/types.ts`. Este cadastro é independente das Fontes de pesquisa e da ordem de leitura. **Não converta intervalos numéricos em `itemIds`.**
+Os destinos externos são editados em `data/src/editorial/links.json`, validados pelo schema Zod em `data/schema.mjs` e pelo modelo semântico `data/link-model.mjs` (compartilhado entre Vite e Node). `npm run data:build` incorpora esses Links em `DATA.editorial.links`; não há scripts globais `links.js`/`link-model.js`. Os tipos ficam em `src/links/types.ts`. Este cadastro é independente das Fontes de pesquisa e da ordem de leitura. **Números de edição e LGY não são IDs de progresso:** cadastre o ID real do registro do catálogo após conferir sua identidade e cobertura.
 
 - `id` e `title` identificam o grupo; `links: [{ label, url }]` representa os destinos. `stores` e `libraries` seguem o mesmo formato.
 - `coverage` é uma lista opcional de coberturas: `{ type: 'lgy', ranges: [{ start: 442, end: 499 }] }` para numeração histórica; `{ type: 'series', series: 'Civil War', volume: '2006', ranges: [{ start: 1, end: 2 }] }` para numeração de série/volume; `{ type: 'one-shot', series: 'Nome da HQ', volume: '2020' }` para edição única. Há suporte a vários intervalos e a sufixos (`suffix: 'LR'`). Os rótulos são gerados por `formatCoverage`.
 - Cada destino pode declarar sua própria `coverage`, substituindo a cobertura geral do grupo, e `extraId` para substituir a ficha associada (use `null` para nenhum Extra): útil quando uma URL aponta para um Annual e outra para capítulos distintos. A associação com URL não comprova disponibilidade atual do destino.
 - `itemIds` é opcional e aponta **somente** para entradas explicitamente relacionadas do catálogo; grupos sem `itemIds` exigem `coverage`. Não deduza IDs de `LGY` ou do número de uma HQ.
+
+Os oito grupos das séries principais têm associações explícitas com os registros
+`Principal` cobertos: LGY 1–964 e a edição #29 de 2025. Esse cadastro não inclui
+anuais ou outras séries por coincidência de numeração. A aplicação continua usando
+somente `itemIds` para os botões das edições e a união desses vínculos para cada
+dropdown; não interpreta `coverage` como uma associação automática em tempo de execução.
 - `extraId` aponta diretamente para o campo estável `n` de `data/src/editorial/extras.json`; grupos sem ficha correspondente não recebem esse campo. `readingGroup` permanece temporariamente para compatibilidade com dados históricos e é verificado contra a ficha referida, sem servir como identidade da ficha.
 - `notes` contém observações editoriais; não misturar nele intervalos que possam ser representados com cobertura estruturada. `context` de Links históricos ainda é aceito no JSON. As fontes de evidência continuam em `data/src/fontes.json` e no registro bibliográfico `data/src/editorial/publication-evidence.json`.
 
@@ -63,7 +69,7 @@ O catálogo permanece dividido em **46 arquivos de fase/arco**, enumerados em `d
 | Rota                                                                          | Destino                        |
 | ----------------------------------------------------------------------------- | ------------------------------ |
 | `#hoje`                                                                       | Home / próxima leitura         |
-| `#checklist`, `#checklist/hq/:id`                                             | Lista contínua / HQ específica |
+| `#checklist`, `#checklist/hq/:id`                                             | Sequência agrupada por série / HQ específica, com abertura automática do grupo |
 | `#explorar/jornada`, `#explorar/extras`, `#explorar/clone`, `#explorar/links` | Descoberta editorial           |
 | `#ajuda`, `#ajuda/glossario`, `#ajuda/fontes`, `#ajuda/metodologia`           | Conteúdo de ajuda              |
 | `#configuracoes`                                                              | Preferências, conta e dados    |

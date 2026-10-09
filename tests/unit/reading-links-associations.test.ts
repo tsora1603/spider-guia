@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { createLinkAssociations, linkTargetsFor } from '../../src/links/associations';
+import { createLinkAssociations, linkTargetsFor, linkTargetsForItems } from '../../src/links/associations';
 import { contextualLinksTarget, resolveLinkTargets } from '../../src/views/explore-navigation';
 import type { EditorialLinkGroup } from '../../src/links/types';
 
@@ -34,6 +34,12 @@ const sample: EditorialLinkGroup[] = [
 ];
 
 describe('Ações contextuais — índice de Links explícitos', () => {
+  it('o botão do grupo reúne somente vínculos das edições, sem repetir destinos', () => {
+    const index = createLinkAssociations(sample, known, extras);
+    expect(linkTargetsForItems(index, [1, 2, 3, 4])).toEqual(['alpha', 'beta']);
+    expect(linkTargetsForItems(index, [4])).toEqual([]);
+    expect(linkTargetsForItems(index, [])).toEqual([]);
+  });
   it('indexa somente itemIds cadastrados; LGY jamais gera vínculos de HQ', () => {
     const index = createLinkAssociations(sample, known, extras);
     expect(linkTargetsFor(index, 'item', 1)).toEqual(['alpha']);
@@ -122,7 +128,7 @@ describe('Ações contextuais — índice de Links explícitos', () => {
     );
   });
 
-  it('prova no catálogo real: grupos amplos sem itemIds não geram 1.000 CTAs', () => {
+  it('vincula explicitamente a linha principal à cobertura cadastrada, sem incluir anuais', () => {
     const groups = JSON.parse(readFileSync('data/src/editorial/links.json', 'utf8')) as EditorialLinkGroup[];
     const editorial = JSON.parse(readFileSync('data/src/editorial/extras.json', 'utf8')) as { n: number }[];
     const catalog = JSON.parse(readFileSync('src/data/generated-index.json', 'utf8')) as {itemIndexFields:string[]; itemIndex:unknown[][]};
@@ -130,10 +136,23 @@ describe('Ações contextuais — índice de Links explícitos', () => {
     const ids = new Set(catalog.itemIndex.map((row) => Number(row[idIndex])));
     const index = createLinkAssociations(groups, ids, new Set(editorial.map((entry) => entry.n)));
     expect(groups).toHaveLength(34);
-    expect(groups.filter((group) => !group.itemIds)).toHaveLength(8);
+    expect(groups.filter((group) => !group.itemIds)).toHaveLength(0);
     expect(index.byExtraId.size).toBeGreaterThan(20);
-    expect(index.byItemId.size).toBeGreaterThan(30);
-    expect(index.byItemId.size).toBeLessThan(100);
+    expect(index.byItemId.get(2)).toEqual(['spider-man-1963']);
+    expect(groups[0].itemIds).toHaveLength(700);
+    expect(index.byItemId.get(1)).toBeUndefined(); // Amazing Fantasy ainda não tem destino cadastrado.
+    expect(index.byItemId.get(1227)).toBeUndefined(); // Annual #1 não herda o link da série principal.
+    const numberIndex = catalog.itemIndexFields.indexOf('historicalNumber');
+    for (const row of catalog.itemIndex.filter(row => row[numberIndex] != null)) {
+      const number = Number(row[numberIndex]);
+      if (number <= 964) expect(index.byItemId.has(Number(row[idIndex]))).toBe(true);
+    }
+    const seriesIndex = catalog.itemIndexFields.indexOf('series');
+    const issueIndex = catalog.itemIndexFields.indexOf('issue');
+    for (const row of catalog.itemIndex.filter(row => row[seriesIndex] === 'The Amazing Spider-Man (2025)')) {
+      expect(linkTargetsFor(index, 'item', Number(row[idIndex])))
+        .toEqual(String(row[issueIndex]).replace(/^#/, '') === '29' ? ['spider-man-2025'] : []);
+    }
     expect(index.byItemId.get(259)).toContain('leitura-5');
     expect(index.byExtraId.get(38)).toContain('leitura-5');
     for (const entry of index.byItemId.values())

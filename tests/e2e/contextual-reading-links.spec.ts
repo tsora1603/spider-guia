@@ -1,5 +1,11 @@
 import { expect, test } from '@playwright/test';
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('aranha-reading-preferences-v1', JSON.stringify({
+    version: 1, onboardingComplete: true, depth: 'essential', focusQuery: '', readThrough: 0
+  })));
+});
+
 async function openIssue(page: import('@playwright/test').Page, id: number) {
   await page.goto(`/#checklist/hq/${id}`);
   const row = page.locator(`#hq-${id}`);
@@ -62,8 +68,8 @@ test.describe('Etapa 3 — Links contextuais da leitura', () => {
   test('busca, histórico, largura e teclado funcionam em desktop e mobile', async ({ page }) => {
     for (const width of [320, 1440]) {
       await page.setViewportSize({ width, height: 800 });
-      await openIssue(page, 256);
-      await page.getByRole('button', { name: 'Ver links desta leitura' }).click();
+      const row = await openIssue(page, 256);
+      await row.getByRole('button', { name: 'Ver links desta leitura' }).click();
       await expect(page.locator('.link-card.is-targeted')).toBeFocused();
       await page.goBack();
       await expect(page.locator('#hq-256')).toBeVisible();

@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks';
-import { itemsById, readings, type Reading } from '../data/model';
+import { itemsById, readings, type ChecklistGroup, type Reading } from '../data/model';
 import { appState } from '../state/app-state';
 import { router } from '../runtime/controller';
 import { bulkProgressUi } from '../progress/bulk-ui';
 import { IssueRow } from './IssueRow';
+import { ReadingGroupLinksAction } from './ReadingLinksAction';
 import { Icon } from './Icon';
 import { FilterDropdown } from './FilterDropdown';
 import { ListSearch } from './ListSearch';
@@ -18,10 +19,10 @@ import { buildReadingPlan } from '../preferences/reading-plan';
 import { summarizeReadingPlan } from '../views/home-model';
 import { statusOf } from '../state/progress-store';
 import { useProgressRevision } from '../ui/hooks';
-import { computeVirtualWindow, matchesChecklistItem, type ChecklistFilterValue } from './checklist-model';
+import { computeVirtualWindow, groupChecklistSeries, matchesChecklistItem, type ChecklistFilterValue } from './checklist-model';
 
 // A Home e a Checklist compartilham o mesmo plano e a mesma ordem canônica.
-// A segmentação abaixo serve APENAS à virtualização: nunca representa fases/arcos.
+// Os grupos respeitam as intercalações; os chunks internos só reduzem o trabalho de renderização.
 const CHUNK_SIZE = 24;
 const catalogPositions = new Map(readings.map((item, index) => [item.id, index]));
 const FILTERS: Array<[ChecklistFilterValue, string]> = [
@@ -38,25 +39,48 @@ function chunkItems(items: readonly Reading[]): ListChunk[] {
   return chunks;
 }
 
-function ChecklistChunk({ chunk, openItems, onItemToggle, onMeasured }: {
+function ChecklistSeriesGroup({ group, expanded, openItems, onItemToggle, onGroupToggle, onMeasured, measurementKey }: {
   key?: any;
-  chunk: ListChunk;
+  group: ChecklistGroup;
+  expanded: boolean;
   openItems: ReadonlySet<number>;
   onItemToggle: (id: number, open: boolean) => void;
+  onGroupToggle: (key: string) => void;
   onMeasured: (key: string, height: number) => void;
+  measurementKey: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!ref.current || typeof ResizeObserver === 'undefined') return;
     const observer = new ResizeObserver(entries => {
       const height = entries[0]?.borderBoxSize?.[0]?.blockSize || entries[0]?.contentRect.height || ref.current?.offsetHeight || 0;
-      if (height) onMeasured(chunk.key, height);
+      if (height) onMeasured(measurementKey, height);
     });
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [chunk.key, onMeasured]);
-  return <div ref={ref} class="checklist-sequence-chunk" data-sequence-chunk={chunk.key}>
-    {chunk.items.map(item => <IssueRow key={item.id} item={item} open={openItems.has(item.id)} onOpenChange={onItemToggle} />)}
+  }, [measurementKey, onMeasured]);
+  const first = group.items[0];
+  const last = group.items[group.items.length - 1];
+  const issueLabel = (item: Reading) => item.issue.startsWith('#') ? item.issue : `#${item.issue}`;
+  const range = `${issueLabel(first)}–${issueLabel(last)}`;
+  const single = group.items.length === 1;
+  const read = group.items.filter(item => statusOf(item.id) === 'Sim').length;
+  return <div ref={ref} class={`checklist-series-group${single ? ' is-single' : ''}`} data-series={group.name} data-series-key={group.key}>
+    {single ? <IssueRow key={first.id} item={first} open={openItems.has(first.id)} onOpenChange={onItemToggle} prominentLinks /> : <>
+      <div class="checklist-series-heading">
+        <button class="checklist-series-toggle" type="button" aria-expanded={expanded} aria-controls={`${group.key}-items`}
+          onClick={() => onGroupToggle(group.key)}>
+          <span class="row-head"><b>{group.name}</b><span class="sm mu">{range} · {group.items.length} leituras · {read} lidas</span></span>
+          <Icon name={expanded ? 'chevU' : 'chevD'} />
+        </button>
+        <ReadingGroupLinksAction itemIds={group.items.map(item => item.id)} label={`${group.name} ${range}`} />
+      </div>
+      <div id={`${group.key}-items`} hidden={!expanded} class="checklist-series-items">
+        {expanded ? chunkItems(group.items).map(chunk => <div key={chunk.key} class="checklist-sequence-chunk" data-sequence-chunk={chunk.key}>
+          {chunk.items.map(item => <IssueRow key={item.id} item={item} open={openItems.has(item.id)} onOpenChange={onItemToggle} prominentLinks />)}
+        </div>) : null}
+      </div>
+    </>}
   </div>;
 }
 
@@ -83,7 +107,7 @@ function FocusChecklist({ items, currentId, onCurrentId, onExit }: {
       <button class="btn g focus-exit" type="button" onClick={onExit}>Sair do foco</button>
     </header>
     <div class="focus-reader-card">
-      <IssueRow key={item.id} item={item} open={expanded} onOpenChange={(_id, nextOpen) => setExpanded(nextOpen)} />
+      <IssueRow key={item.id} item={item} open={expanded} onOpenChange={(_id, nextOpen) => setExpanded(nextOpen)} prominentLinks />
     </div>
     <nav class="focus-reader-nav" aria-label="Navegação do modo foco">
       <button class="btn g" data-focus-nav="previous" type="button" disabled={index <= 0} onClick={() => go(index - 1)}><Icon name="arrowLeft" /> Anterior</button>
@@ -111,20 +135,34 @@ export function VirtualizedChecklist() {
     if (!outsidePlanItem) return plan;
     return [...plan, outsidePlanItem].sort((a, b) => a.readingOrder - b.readingOrder);
   }, [plan, outsidePlanItem]);
-  const visibleItems = useMemo(() => orderedItems.filter(item =>
-    (outsidePlanItem != null && item.id === focusedItemId) || matchesChecklistItem(item, filter, query)
-  ), [orderedItems, outsidePlanItem, focusedItemId, filter, query, progressRevision]);
-  const chunks = useMemo(() => chunkItems(visibleItems), [visibleItems]);
+  // Filtrar depois de agrupar impede a união de trechos separados por outra série.
+  const groups = useMemo(() => groupChecklistSeries(orderedItems).map(group => ({
+    ...group,
+    items: group.items.filter(item => (outsidePlanItem != null && item.id === focusedItemId) || matchesChecklistItem(item, filter, query))
+  })).filter(group => group.items.length), [orderedItems, outsidePlanItem, focusedItemId, filter, query, progressRevision]);
+  const visibleItems = useMemo(() => groups.flatMap(group => group.items), [groups]);
 
   const [focusItemId, setFocusItemId] = useState<number | null>(() => focusedItemId ?? planSummary.next?.id ?? null);
   const [deepLinkPending, setDeepLinkPending] = useState<number | null>(() => focusedItemId ?? null);
   const [openItems, setOpenItems] = useState<Set<number>>(() => new Set(appState.checklistOpenItems));
+  const [openGroups, setOpenGroups] = useState<Set<string>>(() => new Set(appState.checklistOpenGroups));
   const [measured, setMeasured] = useState<Map<string, number>>(() => new Map());
   const [viewport, setViewport] = useState(() => ({ top: scrollY, height: innerHeight }));
   const hostRef = useRef<HTMLDivElement>(null);
   const focusWasActive = useRef(design.focusMode);
 
   useEffect(() => setDeepLinkPending(focusedItemId ?? null), [focusedItemId]);
+  useEffect(() => {
+    if (deepLinkPending == null) return;
+    const group = groups.find(group => group.items.some(item => item.id === deepLinkPending));
+    if (!group || group.items.length === 1) return;
+    setOpenGroups(current => {
+      if (current.has(group.key)) return current;
+      const next = new Set(current).add(group.key);
+      appState.checklistOpenGroups = new Set(next);
+      return next;
+    });
+  }, [deepLinkPending, groups]);
   useEffect(() => {
     setQuery(appState.checklistQuery);
     setFilter((appState.checklistFilter || '') as ChecklistFilterValue);
@@ -173,14 +211,26 @@ export function VirtualizedChecklist() {
     });
   }, []);
 
-  const heights = useMemo(() => chunks.map(chunk => measured.get(chunk.key) || chunk.items.length * 88), [chunks, measured]);
+  const toggleGroup = useCallback((key: string) => {
+    setDeepLinkPending(null);
+    setOpenGroups(current => {
+      const next = new Set(current);
+      if (next.has(key)) next.delete(key); else next.add(key);
+      appState.checklistOpenGroups = new Set(next);
+      return next;
+    });
+  }, []);
+
+  const measurementKeys = useMemo(() => groups.map(group => `${group.key}:${openGroups.has(group.key)}:${group.items.map(item => item.id).join(',')}`), [groups, openGroups]);
+  const heights = useMemo(() => groups.map((group, index) => measured.get(measurementKeys[index]) ||
+    (group.items.length === 1 ? 112 : 92 + (openGroups.has(group.key) ? group.items.length * 112 : 0))), [groups, measured, measurementKeys, openGroups]);
   const hostTop = (hostRef.current?.getBoundingClientRect().top || 0) + scrollY;
   const relativeScroll = Math.max(0, viewport.top - hostTop);
   const forcedChunkIndex = deepLinkPending != null && !design.focusMode
-    ? chunks.findIndex(chunk => chunk.items.some(item => item.id === deepLinkPending)) : -1;
+    ? groups.findIndex(group => group.items.some(item => item.id === deepLinkPending)) : -1;
   const forcedTop = forcedChunkIndex < 0 ? null : heights.slice(0, forcedChunkIndex).reduce((sum, height) => sum + height, 0);
   const windowed = computeVirtualWindow(heights, forcedTop ?? relativeScroll, viewport.height, forcedTop == null ? 700 : 0);
-  const visibleChunks = chunks.slice(windowed.start, windowed.end);
+  const visibleGroups = groups.slice(windowed.start, windowed.end);
 
   useEffect(() => {
     if (deepLinkPending == null || !visibleItems.some(item => item.id === deepLinkPending)) return;
@@ -244,7 +294,7 @@ export function VirtualizedChecklist() {
       </button>
     </div>
     <div class="checklist-sequence-heading">
-      <div><span class="lbl">Sequência de leitura</span><strong>Plano: {readingDepthName(preferences)}</strong><p class="mu sm">A mesma ordem e seleção de “Sua próxima leitura” na Home. Fases e marcos estão em Explorar → Jornada.</p>
+      <div><span class="lbl">Sequência de leitura</span><strong>Plano: {readingDepthName(preferences)}</strong><p class="mu sm">Abra uma série para ver as edições. Anuais e outras leituras mantêm sua posição na sequência.</p>
         {planSummary.next ? <p class="checklist-next-hint sm"><b>Próxima:</b> {planSummary.next.series} {planSummary.next.issue}</p> : <p class="checklist-next-hint sm">{plan.length ? 'Nenhuma leitura pendente neste plano.' : 'O plano atual não contém leituras.'}</p>}
       </div>
       <div class="checklist-sequence-actions">
@@ -269,7 +319,9 @@ export function VirtualizedChecklist() {
     ) : (
       <div ref={hostRef} class="virtual-checklist checklist-sequence-list content-list ui-list" data-virtualized="true" data-reading-sequence="true">
         <svg class="virtual-spacer" aria-hidden="true" width="1" height={windowed.top} />
-        {visibleChunks.map(chunk => <ChecklistChunk key={chunk.key} chunk={chunk} openItems={openItems} onItemToggle={toggleItem} onMeasured={onMeasured} />)}
+        {visibleGroups.map((group, index) => <ChecklistSeriesGroup key={group.key} group={group} expanded={openGroups.has(group.key)}
+          openItems={openItems} onItemToggle={toggleItem} onGroupToggle={toggleGroup} onMeasured={onMeasured}
+          measurementKey={measurementKeys[windowed.start + index]} />)}
         <svg class="virtual-spacer" aria-hidden="true" width="1" height={windowed.bottom} />
       </div>
     )}

@@ -44,7 +44,7 @@ Cinco destinos principais; barra inferior no mobile e rail no desktop, com indic
 
 ## Checklist e Modo Foco
 
-Checklist segue a sequência contínua de `buildReadingPlan`, não agrupa por fase; Jornada concentra as fases/marcos. O Modo Foco usa a mesma sequência visível e atualiza estado por HQ ao avançar. Pesquisa e filtros devem coexistir com ações de progresso sem disparar expansão acidental.
+Checklist segue a sequência de `buildReadingPlan`, agrupando somente trechos consecutivos da mesma série em dropdowns. Intercalações abrem um novo grupo quando a série retorna; edições isoladas usam a mesma superfície sem outro nível de expansão. Jornada concentra as fases/marcos. O Modo Foco usa a mesma sequência visível e atualiza estado por HQ ao avançar. Pesquisa e filtros preservam as divisões originais do plano. Botões verdes **Ler** ficam ao lado dos títulos de grupos e edições, fora do controle de expansão; levam aos vínculos explícitos na aba Links. **Sem link** é desabilitado quando não existe destino cadastrado.
 
 ## Testes de coesão
 

@@ -4,6 +4,17 @@ import { statusOf } from '../state/progress-store';
 
 export type ChecklistFilterValue = '' | 'Não' | 'Sim' | 'Pulei' | 'ess';
 
+/** Agrupa apenas séries consecutivas: anuais e crossovers mantêm sua posição. */
+export function groupChecklistSeries(items: readonly Reading[]): ChecklistGroup[] {
+  const groups: ChecklistGroup[] = [];
+  for (const item of items) {
+    const previous = groups[groups.length - 1];
+    if (previous?.name === item.series) previous.items.push(item);
+    else groups.push({ key: `series-${item.id}`, name: item.series, items: [item] });
+  }
+  return groups;
+}
+
 export function matchesChecklistItem(item: Reading, filter: ChecklistFilterValue, query: string) {
   const matchesFilter =
     !filter ||

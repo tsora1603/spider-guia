@@ -30,7 +30,7 @@ const NAV_ITEMS: Array<{ key: 'Hoje' | 'Checklist' | 'Explorar' | 'Ajuda' | 'Con
   { key: 'Configurações', icon: 'settings', hash: '#configuracoes', mobileLabel: 'Config.' }
 ];
 const PAGE_HEADERS: Record<string, [string, string]> = {
-  Checklist: ['Checklist', 'Acompanhe as 1.301 leituras agrupadas por fase ou arco.'],
+  Checklist: ['Checklist', 'Acompanhe as 1.301 leituras por série, na ordem do seu plano.'],
   Explorar: ['Explorar', 'Descubra a Jornada, leituras Extras e a ordem da Saga do Clone.'],
   Ajuda: ['Ajuda', 'Como usar o guia, glossário, fontes e metodologia.'],
   Configurações: ['Configurações', 'Gerencie suas preferências, sincronização e dados locais.']

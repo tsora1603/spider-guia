@@ -36,6 +36,7 @@ export const IssueRow = memo(function IssueRow({
   anchor = true,
   showBulkAction = true,
   showLinks = true,
+  prominentLinks = false,
   extraEvidence,
   context
 }: {
@@ -46,6 +47,7 @@ export const IssueRow = memo(function IssueRow({
   anchor?: boolean;
   showBulkAction?: boolean;
   showLinks?: boolean;
+  prominentLinks?: boolean;
   extraEvidence?: ExtraEvidence;
   context?: CloneContext;
 }) {
@@ -92,7 +94,7 @@ export const IssueRow = memo(function IssueRow({
           <Icon name="chevD" className="disclosure-chevron" />
         </summary>
         <div class="row-body disclosure-content">
-          {showLinks ? <ReadingLinksAction kind="item" id={item.id} /> : null}
+          {showLinks && !prominentLinks ? <ReadingLinksAction kind="item" id={item.id} /> : null}
           {extraEvidence ? (
             <div class="extra-issue-evidence" aria-label="Fontes e confirmação editorial da leitura agrupada">
               <span class="sm mu">Status editorial do conjunto: <b>{extraEvidence.confirmation || 'A confirmar'}</b>. A avaliação de posição e peso pertence à ficha editorial do conjunto.</span>
@@ -128,7 +130,10 @@ export const IssueRow = memo(function IssueRow({
           </>}
         </div>
       </details>
-      <div class="reading-row-end"><SkipButton id={item.id} status={status} /></div>
+      <div class="reading-row-end">
+        {showLinks && prominentLinks ? <ReadingLinksAction kind="item" id={item.id} compact /> : null}
+        <SkipButton id={item.id} status={status} />
+      </div>
     </div>
   );
 });

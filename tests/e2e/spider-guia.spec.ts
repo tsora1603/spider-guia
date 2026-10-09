@@ -458,7 +458,7 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await expect(empty).toBeVisible();
     await expect(empty).toContainText('Nenhuma leitura encontrada');
     await empty.getByRole('button', { name: 'Limpar busca e filtros' }).click();
-    await expect(page.locator('.checklist-sequence-chunk').first()).toBeVisible();
+    await expect(page.locator('.checklist-series-group').first()).toBeVisible();
   });
 
 
@@ -580,7 +580,7 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     const wars = page.locator('.link-row').filter({ hasText: 'Marvel Super Heroes Secret Wars' }).first();
     await expect(wars).toBeVisible();
     await expect(wars.locator('summary')).toHaveCount(0);
-    const link = wars.getByRole('link', { name: 'Guerras Secretas', exact: true });
+    const link = wars.getByRole('link', { name: 'Guerras Secretas (abre em nova aba)', exact: true });
     await expect(link).toHaveAttribute('href', 'https://www.mediafire.com/file/i2yt34flnmkp02j/198412_Marvel_Super-Herois_Guerras_Secretas_008.cbr/file');
   });
 
@@ -617,7 +617,9 @@ test.describe('SPIDER·GUIA — sistema de listas (UX Etapa 2)', () => {
     await page.getByRole('heading', { name: 'Checklist' }).click();
     await expect(menu).toHaveCount(0);
     await trigger.press('ArrowDown');
+    await expect(menu.getByRole('button', { name: 'Pendentes', exact: true })).toBeFocused();
     await page.keyboard.press('End');
+    await expect(menu.getByRole('button', { name: 'Essenciais', exact: true })).toBeFocused();
     await page.keyboard.press('Tab');
     await expect(menu).toHaveCount(0);
   });
@@ -935,6 +937,7 @@ test.describe('Refactor · Checklist = sequência da Home', () => {
     await expect(page.locator('.home-next')).toContainText('The Amazing Spider-Man (1963) 1');
     await page.goto('/#checklist');
     const list = page.locator('[data-reading-sequence="true"]');
+    await list.locator('.checklist-series-toggle').first().click();
     await expect(list.locator('.issue-entry').first()).toHaveAttribute('data-reading-id', '2');
     await expect(page.locator('.checklist-group-header')).toHaveCount(0);
     await expect(page.locator('.checklist-sequence-heading')).toContainText('Plano: Essenciais');
@@ -975,6 +978,7 @@ test.describe('Refactor · Checklist = sequência da Home', () => {
     await expect(page.locator('.checklist-plan-exception')).toContainText('não pertence ao plano ativo');
     await page.goto('/#checklist');
     await expect(page.locator('.checklist-plan-exception')).toHaveCount(0);
+    await page.locator('.checklist-series-toggle').first().click();
     await expect(page.locator('.checklist-sequence-list .issue-entry').first()).toHaveAttribute('data-reading-id', '2');
   });
 

@@ -1,5 +1,11 @@
 import { expect, test } from '@playwright/test';
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('aranha-reading-preferences-v1', JSON.stringify({
+    version: 1, onboardingComplete: true, depth: 'essential', focusQuery: '', readThrough: 0
+  })));
+});
+
 test.describe('Explorar → Links: cards de ação direta', () => {
   test('todos os destinos são acessíveis sem abrir dropdown e nenhuma HQ é listada automaticamente', async ({
     page

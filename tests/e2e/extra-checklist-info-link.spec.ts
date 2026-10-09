@@ -1,5 +1,11 @@
 import { expect, test } from '@playwright/test';
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('aranha-reading-preferences-v1', JSON.stringify({
+    version: 1, onboardingComplete: true, depth: 'essential', focusQuery: '', readThrough: 0
+  })));
+});
+
 /** A Checklist deve evitar duplicar fichas editoriais extensas. */
 test('Amazing Fantasy #15 oferece apenas Mais informações e abre a ficha exata em Explorar', async ({ page }) => {
   await page.goto('/#checklist/hq/1');

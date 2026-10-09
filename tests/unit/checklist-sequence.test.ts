@@ -3,9 +3,38 @@ import { readings } from '../../src/data/model';
 import { buildReadingPlan } from '../../src/preferences/reading-plan';
 import { summarizeReadingPlan } from '../../src/views/home-model';
 import { reconcileFocusSelection } from '../../src/components/focus-selection';
-import { matchesChecklistItem } from '../../src/components/checklist-model';
+import { filterChecklistGroups, groupChecklistSeries, matchesChecklistItem } from '../../src/components/checklist-model';
 
 const status = (states: Record<number, 'Não' | 'Sim' | 'Pulei'>) => (id: number) => states[id] || 'Não';
+
+describe('Dropdowns por série preservam a sequência', () => {
+  it.each(['complete', 'essential', 'focus'] as const)('agrupa o plano %s sem mover ou duplicar leituras', depth => {
+    const plan = buildReadingPlan({ depth, focusQuery: 'Kraven' });
+    const groups = groupChecklistSeries(plan);
+    expect(groups.flatMap(group => group.items.map(item => item.id))).toEqual(plan.map(item => item.id));
+    expect(new Set(groups.map(group => group.key)).size).toBe(groups.length);
+    expect(groups.every(group => group.items.every(item => item.series === group.name))).toBe(true);
+    expect(groups.every((group, index) => !index || groups[index - 1].name !== group.name)).toBe(true);
+  });
+
+  it('isola Amazing Fantasy e Annual #1 entre os dois trechos da Amazing', () => {
+    const groups = groupChecklistSeries(readings);
+    expect(groups[0].items.map(item => item.id)).toEqual([1]);
+    expect(groups[1].items.map(item => item.id)).toEqual(Array.from({ length: 16 }, (_, index) => index + 2));
+    expect(groups[2].items.map(item => item.id)).toEqual([1227]);
+    expect(groups[3].name).toBe(groups[1].name);
+    expect(groups[3].items[0].id).toBe(18);
+  });
+
+  it('a busca não une trechos separados nem muda suas chaves', () => {
+    const groups = groupChecklistSeries(readings);
+    const filtered = filterChecklistGroups(groups, '', 'The Amazing Spider-Man (1963)');
+    expect(filtered[0].key).toBe(groups[1].key);
+    expect(filtered[1].key).toBe(groups[3].key);
+    expect(filtered[0].items[filtered[0].items.length - 1].id).toBe(17);
+    expect(filtered[1].items[0].id).toBe(18);
+  });
+});
 
 describe('Checklist e Modo Foco seguem o plano canônico da Home', () => {
   it('Completo segue os 1.301 itens em readingOrder, incluindo intercaladas', () => {

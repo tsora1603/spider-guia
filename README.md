@@ -38,7 +38,7 @@ Para adicionar Links, preserve os grupos e URLs existentes, acrescente o destino
 ## Como o usuário navega
 
 - **Hoje:** continuar lendo, “Já li até...”, progresso e ritmo.
-- **Checklist:** sequência contínua do plano ativo, com status **Não / Sim / Pulei** e Modo Foco; usa o mesmo plano/ordem da Home.
+- **Checklist:** dropdowns por trechos consecutivos de cada série, com status **Não / Sim / Pulei** e Modo Foco; usa o mesmo plano/ordem da Home. Anuais e outras séries continuam intercalados: a série reaparece em outro dropdown quando a leitura retorna a ela. Edições isoladas usam o mesmo visual, sem um nível extra de agrupamento. Botões verdes **Ler**, nos títulos dos grupos e nas edições, levam aos destinos associados na aba Links; **Sem link** indica uma edição sem destino cadastrado.
 - **Explorar:** Jornada (fases e marcos), Extras (fichas e fontes), Saga do Clone e Links (quando habilitados). Links são cards de largura total com destinos externos acessíveis diretamente; `coverage` fornece o resumo de edições e `extraId` apresenta um botão para a ficha exata de Extras apenas quando a associação é válida. A busca local e `#explorar/links?link=<id>` continuam disponíveis.
 - **Ajuda:** como usar, glossário, fontes e metodologia.
 - **Configurações:** plano, spoilers, aparência, conta, backup e reset.
@@ -67,7 +67,13 @@ fichas de Extras usam `src/links/associations.ts`. O índice é baseado
 exclusivamente em `data/src/editorial/links.json`: `itemIds` para HQs e `extraId` (inclusive
 sobrescritas ou `null` no destino) para fichas de Extras. Cobertura LGY,
 nomes e `readingGroup` nunca geram associações implícitas. Sem vínculo
-explícito e URL HTTP(S) válida, o CTA não aparece.
+explícito e URL HTTP(S) válida, não há navegação para um destino de leitura.
+
+Na Checklist, a ação fica visível mesmo com a edição recolhida. Grupos reúnem os
+links de suas edições sem repetir destinos; itens sem associação exibem **Sem link**
+desabilitado. As associações da linha principal estão cadastradas em `itemIds`,
+conforme a cobertura declarada dos oito grupos de séries. Anuais e outras revistas
+não herdam esses vínculos. Amazing Fantasy **#15** permanece sem destino cadastrado.
 
 O hash `#explorar/links?link=<id>` permanece aceito. Para múltiplos
 cards, repita `link` na URL. O parâmetro opcional `from` registra uma rota

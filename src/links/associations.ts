@@ -63,3 +63,8 @@ export function linkTargetsFor(
 ): readonly string[] {
   return (kind === 'item' ? associations.byItemId : associations.byExtraId).get(id) || [];
 }
+
+/** União dos vínculos explícitos das edições, sem duplicar cards de Links. */
+export function linkTargetsForItems(associations: LinkAssociations, ids: readonly number[]): string[] {
+  return [...new Set(ids.flatMap(id => [...linkTargetsFor(associations, 'item', id)]))];
+}

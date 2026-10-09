@@ -30,7 +30,7 @@ const checks = {
   hasOverscanWindow: /overscan = 700/.test(source),
   measuresDynamicChunkHeight: /ResizeObserver/.test(virtualSource),
   preservesOpenItemState: /openItems/.test(virtualSource),
-  usesContinuousPlan: /buildReadingPlan\(preferences\)/.test(virtualSource) && /chunkItems\(visibleItems\)/.test(virtualSource) && !/checklistGroups/.test(virtualSource),
+  usesContinuousPlan: /buildReadingPlan\(preferences\)/.test(virtualSource) && /groupChecklistSeries\(orderedItems\)/.test(virtualSource) && !/checklistGroups/.test(virtualSource),
   deepLinkVirtualizationBridge: /focusWhenReady/.test(virtualSource) && /forcedChunkIndex/.test(virtualSource)
 };
 const ok = Object.values(checks).every(Boolean);
