@@ -14,23 +14,23 @@ O workflow GitHub Actions (`.github/workflows/quality.yml`) verifica lint, tipos
 
 ## Comandos úteis
 
-| Comando | Quando usar |
-| --- | --- |
-| `npm run dev` | Prévia local (gera dados antes de abrir Vite) |
-| `npm run links:check` | Ao editar `data/src/editorial/links.json` |
-| `npm run data:build && npm run data:check` | Ao editar `data/src/` |
-| `npm run reading-sequence:check` | Ao alterar plano, Checklist ou Modo Foco |
-| `npm run icons:check` | Ao atualizar os ícones Lucide |
-| `npm run typecheck && npm run test:unit` | Antes de enviar alterações de código |
-| `npm run test:e2e` | Verificar fluxos reais no Playwright (requer navegador instalado) |
-| `npm run e:check && npm run build` | Validação ampla e build de produção |
-| `npm run reset:local-smoke && npm run reset:smoke` | Após mudanças em progresso, sync ou reset |
+| Comando                                            | Quando usar                                                       |
+| -------------------------------------------------- | ----------------------------------------------------------------- |
+| `npm run dev`                                      | Prévia local (gera dados antes de abrir Vite)                     |
+| `npm run links:check`                              | Ao editar `data/src/editorial/links.json`                         |
+| `npm run data:build && npm run data:check`         | Ao editar `data/src/`                                             |
+| `npm run reading-sequence:check`                   | Ao alterar plano, Checklist ou Modo Foco                          |
+| `npm run icons:check`                              | Ao atualizar os ícones Lucide                                     |
+| `npm run typecheck && npm run test:unit`           | Antes de enviar alterações de código                              |
+| `npm run test:e2e`                                 | Verificar fluxos reais no Playwright (requer navegador instalado) |
+| `npm run e:check && npm run build`                 | Validação ampla e build de produção                               |
+| `npm run reset:local-smoke && npm run reset:smoke` | Após mudanças em progresso, sync ou reset                         |
 
 Instalação do Chromium do Playwright: `npx playwright install chromium`. O build produz a pasta **`dist/`**. `netlify.toml` usa **Node 24**, `npm run build` e `dist/`.
 
 ## Alterações comuns
 
-**Links:** edite a lista de grupos em `data/src/editorial/links.json`. Acrescente destinos com `label` e `url` a `links` de um grupo; ou crie um grupo com `id` único, `title`, `links` e `coverage` (quando não houver `itemIds`). Associações `itemIds` e `extraId` precisam ser explícitas; não as deduza de intervalos. Preserve associações e URLs já existentes. Os links são editoriais; **Fontes** ficam em `data/src/fontes.json`. Referências bibliográficas brasileiras usadas na pesquisa ficam em `data/src/editorial/publication-evidence.json`, fora dos dados servidos no site. Não insira a seção “Onde procurar”.
+**Links:** edite a lista de grupos em `data/src/editorial/links.json`. Acrescente destinos com `label` e `url`; para vincular o grupo à interface, use `targets` dos tipos `items`, `historical`, `extra` ou `cloneArc`. `extraTarget` escolhe uma ficha diferente para um destino, ou `null` a suprime. Preserve associações e URLs existentes e rode `npm run links:check`. Os links são editoriais; **Fontes** ficam em `data/src/fontes.json`. Referências bibliográficas brasileiras usadas na pesquisa ficam em `data/src/editorial/publication-evidence.json`, fora dos dados servidos no site. Não insira a seção “Onde procurar”.
 
 **Dados editoriais:** edite `data/src/editorial/extras.json`, `clone.json`, `data/src/marcos.json` etc. Gere novamente os dados. Os status dos Extras respeitam **posição 100% por fontes** e **peso 60% fontes / até 40% dedução documentada**; não promova itens sem evidências suficientes. Revisão histórica detalhada: `data/review/extras-confirmacao-60-40.md`.
 

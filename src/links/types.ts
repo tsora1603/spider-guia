@@ -14,9 +14,15 @@ export interface EditorialDestination {
   url: string;
   /** Substitui (não soma) a cobertura do grupo quando o destino é mais específico. */
   coverage?: EditorialCoverage[];
-  /** Sobrescreve extraId do grupo; null indica destino sem ficha própria. */
-  extraId?: number | null;
+  /** Define a ficha de Extras deste destino; null suprime o alvo herdado. */
+  extraTarget?: number | null;
 }
+
+export type EditorialLinkTarget =
+  | { kind: 'items'; ids: number[] }
+  | { kind: 'historical'; ranges: IssueRange[] }
+  | { kind: 'extra'; id: number }
+  | { kind: 'cloneArc'; id: string };
 
 export interface EditorialLinkGroup {
   id: string;
@@ -25,11 +31,8 @@ export interface EditorialLinkGroup {
   notes?: string;
   /** Compatibilidade de dados antigos; novas entradas devem usar notes. */
   context?: string;
-  itemIds?: number[];
-  /** Referência explícita ao campo estável `n` de editorial.extras. */
-  extraId?: number;
-  /** Campo legado, mantido até a migração do consumidor em outra etapa. */
-  readingGroup?: number;
+  /** Fonte única das associações contextuais da Checklist, Extras e Saga do Clone. */
+  targets?: EditorialLinkTarget[];
   links: EditorialDestination[];
   stores?: EditorialDestination[];
   libraries?: EditorialDestination[];

@@ -14,7 +14,12 @@ const extras = JSON.parse(
 );
 const errors = validateEditorialLinks(groups, {
   knownItemIds: itemIds,
-  extras
+  extras,
+  cloneArcIds: new Set(
+    JSON.parse(
+      await fs.readFile(path.join(ROOT, 'data/src/editorial/clone.json'), 'utf8')
+    ).entries.map((entry) => entry.arcId)
+  )
 });
 assert.equal(errors.length, 0, `Links inválidos: ${JSON.stringify(errors)}`);
 for (const group of groups) {
@@ -32,5 +37,5 @@ const total = groups.reduce(
   0
 );
 console.log(
-  `Links editoriais OK: ${groups.length} grupos, ${total} destinos, ${groups.filter((group) => group.coverage).length} coberturas, ${groups.filter((group) => group.extraId).length} associações explícitas.`
+  `Links editoriais OK: ${groups.length} grupos, ${total} destinos, ${groups.filter((group) => group.coverage).length} coberturas, ${groups.filter((group) => group.targets?.length).length} grupos com alvos explícitos.`
 );

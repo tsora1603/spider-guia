@@ -2,708 +2,6 @@
   {
     "id": "spider-man-1963",
     "title": "The Amazing Spider-Man (1963); The Amazing Spider-Man (1999); The Amazing Spider-Man (2003)",
-    "itemIds": [
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33,
-      34,
-      35,
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49,
-      50,
-      51,
-      52,
-      53,
-      54,
-      55,
-      56,
-      57,
-      58,
-      59,
-      60,
-      61,
-      62,
-      64,
-      65,
-      66,
-      67,
-      68,
-      69,
-      70,
-      71,
-      72,
-      73,
-      74,
-      75,
-      76,
-      77,
-      78,
-      79,
-      80,
-      81,
-      82,
-      83,
-      84,
-      85,
-      86,
-      87,
-      88,
-      89,
-      90,
-      91,
-      92,
-      93,
-      94,
-      95,
-      96,
-      97,
-      98,
-      99,
-      100,
-      101,
-      102,
-      103,
-      104,
-      105,
-      106,
-      107,
-      108,
-      109,
-      110,
-      111,
-      112,
-      113,
-      114,
-      115,
-      116,
-      117,
-      118,
-      119,
-      120,
-      121,
-      122,
-      123,
-      124,
-      125,
-      126,
-      127,
-      128,
-      129,
-      130,
-      131,
-      132,
-      133,
-      134,
-      135,
-      136,
-      137,
-      138,
-      139,
-      140,
-      141,
-      142,
-      143,
-      144,
-      145,
-      146,
-      147,
-      148,
-      149,
-      150,
-      151,
-      153,
-      154,
-      155,
-      156,
-      157,
-      158,
-      159,
-      160,
-      161,
-      162,
-      163,
-      164,
-      165,
-      166,
-      167,
-      168,
-      169,
-      170,
-      171,
-      172,
-      173,
-      174,
-      175,
-      176,
-      177,
-      178,
-      179,
-      180,
-      181,
-      182,
-      183,
-      184,
-      185,
-      186,
-      187,
-      188,
-      189,
-      190,
-      191,
-      192,
-      193,
-      194,
-      195,
-      196,
-      197,
-      198,
-      199,
-      200,
-      201,
-      202,
-      203,
-      204,
-      205,
-      206,
-      207,
-      208,
-      209,
-      210,
-      211,
-      212,
-      213,
-      214,
-      215,
-      216,
-      217,
-      218,
-      219,
-      220,
-      221,
-      222,
-      223,
-      224,
-      225,
-      226,
-      227,
-      228,
-      229,
-      230,
-      231,
-      232,
-      233,
-      234,
-      235,
-      236,
-      237,
-      238,
-      239,
-      240,
-      241,
-      242,
-      243,
-      244,
-      245,
-      246,
-      247,
-      248,
-      249,
-      250,
-      251,
-      252,
-      253,
-      254,
-      260,
-      261,
-      262,
-      263,
-      264,
-      265,
-      266,
-      267,
-      268,
-      269,
-      270,
-      271,
-      273,
-      274,
-      275,
-      276,
-      277,
-      279,
-      280,
-      281,
-      282,
-      283,
-      284,
-      285,
-      286,
-      287,
-      288,
-      289,
-      290,
-      291,
-      292,
-      293,
-      294,
-      295,
-      296,
-      297,
-      298,
-      299,
-      300,
-      301,
-      302,
-      306,
-      307,
-      308,
-      309,
-      310,
-      311,
-      312,
-      313,
-      314,
-      315,
-      316,
-      317,
-      318,
-      319,
-      320,
-      321,
-      322,
-      323,
-      324,
-      325,
-      326,
-      327,
-      328,
-      329,
-      330,
-      331,
-      332,
-      333,
-      334,
-      335,
-      336,
-      337,
-      338,
-      339,
-      340,
-      341,
-      342,
-      343,
-      344,
-      345,
-      346,
-      347,
-      348,
-      349,
-      350,
-      351,
-      352,
-      353,
-      354,
-      355,
-      356,
-      357,
-      358,
-      359,
-      360,
-      361,
-      362,
-      363,
-      364,
-      365,
-      366,
-      367,
-      368,
-      369,
-      370,
-      371,
-      372,
-      373,
-      374,
-      375,
-      376,
-      377,
-      378,
-      379,
-      380,
-      381,
-      382,
-      383,
-      384,
-      385,
-      386,
-      387,
-      388,
-      389,
-      390,
-      392,
-      393,
-      394,
-      395,
-      396,
-      397,
-      398,
-      399,
-      400,
-      401,
-      402,
-      403,
-      404,
-      405,
-      406,
-      407,
-      410,
-      421,
-      423,
-      429,
-      431,
-      438,
-      448,
-      452,
-      457,
-      461,
-      468,
-      474,
-      481,
-      499,
-      512,
-      523,
-      527,
-      531,
-      535,
-      544,
-      550,
-      556,
-      560,
-      566,
-      571,
-      583,
-      584,
-      585,
-      586,
-      587,
-      588,
-      589,
-      590,
-      591,
-      592,
-      593,
-      594,
-      595,
-      596,
-      597,
-      598,
-      599,
-      600,
-      601,
-      602,
-      603,
-      604,
-      606,
-      607,
-      608,
-      609,
-      610,
-      611,
-      612,
-      613,
-      614,
-      615,
-      616,
-      617,
-      618,
-      619,
-      620,
-      621,
-      622,
-      623,
-      624,
-      625,
-      626,
-      627,
-      628,
-      629,
-      630,
-      631,
-      632,
-      633,
-      634,
-      635,
-      636,
-      637,
-      638,
-      639,
-      640,
-      641,
-      642,
-      643,
-      644,
-      645,
-      646,
-      647,
-      648,
-      649,
-      650,
-      651,
-      652,
-      653,
-      654,
-      655,
-      656,
-      657,
-      658,
-      659,
-      660,
-      661,
-      662,
-      663,
-      664,
-      665,
-      666,
-      667,
-      668,
-      669,
-      670,
-      671,
-      672,
-      673,
-      674,
-      675,
-      676,
-      677,
-      678,
-      679,
-      680,
-      681,
-      682,
-      683,
-      684,
-      685,
-      686,
-      687,
-      688,
-      689,
-      691,
-      692,
-      693,
-      694,
-      695,
-      696,
-      697,
-      699,
-      700,
-      702,
-      703,
-      704,
-      705,
-      706,
-      709,
-      712,
-      715,
-      721,
-      726,
-      727,
-      729,
-      731,
-      732,
-      733,
-      734,
-      735,
-      736,
-      737,
-      738,
-      739,
-      740,
-      741,
-      742,
-      743,
-      744,
-      745,
-      746,
-      747,
-      748,
-      749,
-      750,
-      751,
-      752,
-      753,
-      754,
-      755,
-      756,
-      757,
-      758,
-      759,
-      760,
-      761,
-      762,
-      763,
-      764,
-      765,
-      766,
-      767,
-      768,
-      769,
-      770,
-      771,
-      772,
-      773,
-      774,
-      775,
-      776,
-      777,
-      778,
-      779,
-      780,
-      781,
-      782,
-      783,
-      784,
-      785,
-      786,
-      787,
-      788,
-      789,
-      790,
-      791,
-      792,
-      793,
-      794,
-      795,
-      796,
-      797,
-      798,
-      799,
-      800,
-      801,
-      802,
-      803,
-      804,
-      805,
-      806,
-      807,
-      808,
-      809,
-      810,
-      811,
-      812,
-      813,
-      814,
-      815,
-      816,
-      817,
-      818,
-      819,
-      820,
-      821,
-      822,
-      823,
-      824,
-      825,
-      826,
-      827,
-      828,
-      829,
-      830,
-      831,
-      832,
-      833,
-      834,
-      835,
-      836,
-      837,
-      838,
-      839,
-      840,
-      841,
-      842,
-      843,
-      844,
-      845,
-      846,
-      847,
-      848,
-      849,
-      850,
-      852,
-      853,
-      854,
-      857,
-      858,
-      860,
-      862,
-      863,
-      867,
-      868,
-      869,
-      870,
-      871,
-      872,
-      873,
-      874,
-      875,
-      876,
-      877,
-      878,
-      879,
-      880,
-      881,
-      882,
-      883,
-      884,
-      885,
-      886,
-      887,
-      888,
-      889,
-      890,
-      891,
-      892,
-      893
-    ],
     "links": [
       {
         "label": "Link [Google Drive]",
@@ -744,46 +42,114 @@
           }
         ]
       }
+    ],
+    "targets": [
+      {
+        "kind": "historical",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 700
+          }
+        ]
+      },
+      {
+        "kind": "cloneArc",
+        "id": "saga-do-clone-original-1975"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "power-and-responsibility-the-double"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "back-from-the-edge"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "web-of-death"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "smoke-and-mirrors"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "the-parker-legacy"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "the-mark-of-kaine"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "crossfire"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "the-trial-of-peter-parker"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "maximum-clonage"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "exiled"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "the-greatest-responsibility"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "depois-de-cyberwar"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "media-blizzard"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "the-return-of-kaine"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "web-of-carnage"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "blood-brothers"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "depois-de-the-redemption"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "tie-ins-de-onslaught"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "depois-de-onslaught"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "revelations"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "continuacao-das-revistas"
+      },
+      {
+        "kind": "cloneArc",
+        "id": "historias-paralelas"
+      }
     ]
   },
   {
     "id": "superior-spider-man-2013",
     "title": "The Superior Spider-Man (2013)",
-    "itemIds": [
-      894,
-      895,
-      896,
-      897,
-      898,
-      899,
-      900,
-      901,
-      902,
-      903,
-      904,
-      905,
-      906,
-      907,
-      908,
-      909,
-      910,
-      911,
-      912,
-      913,
-      914,
-      915,
-      916,
-      917,
-      918,
-      919,
-      920,
-      921,
-      922,
-      923,
-      924,
-      925,
-      926
-    ],
     "links": [
       {
         "label": "Link [SóQuadrinhos]",
@@ -800,31 +166,22 @@
           }
         ]
       }
+    ],
+    "targets": [
+      {
+        "kind": "historical",
+        "ranges": [
+          {
+            "start": 701,
+            "end": 733
+          }
+        ]
+      }
     ]
   },
   {
     "id": "spider-man-2014",
     "title": "The Amazing Spider-Man (2014)",
-    "itemIds": [
-      927,
-      928,
-      929,
-      930,
-      931,
-      932,
-      938,
-      941,
-      942,
-      944,
-      945,
-      946,
-      947,
-      948,
-      949,
-      950,
-      951,
-      952
-    ],
     "links": [
       {
         "label": "Link [SóQuadrinhos]",
@@ -841,18 +198,22 @@
           }
         ]
       }
+    ],
+    "targets": [
+      {
+        "kind": "historical",
+        "ranges": [
+          {
+            "start": 734,
+            "end": 751
+          }
+        ]
+      }
     ]
   },
   {
     "id": "renew-your-vows",
     "title": "Amazing Spider-Man: Renew Your Vows (2015)",
-    "itemIds": [
-      954,
-      955,
-      956,
-      957,
-      958
-    ],
     "links": [
       {
         "label": "Link [GoFile]",
@@ -869,58 +230,22 @@
           }
         ]
       }
+    ],
+    "targets": [
+      {
+        "kind": "historical",
+        "ranges": [
+          {
+            "start": 752,
+            "end": 756
+          }
+        ]
+      }
     ]
   },
   {
     "id": "spider-man-2016",
     "title": "The Amazing Spider-Man (2016)",
-    "itemIds": [
-      959,
-      960,
-      961,
-      962,
-      963,
-      964,
-      965,
-      966,
-      967,
-      968,
-      969,
-      970,
-      971,
-      972,
-      973,
-      974,
-      975,
-      976,
-      977,
-      979,
-      980,
-      981,
-      982,
-      983,
-      985,
-      986,
-      987,
-      988,
-      989,
-      990,
-      991,
-      992,
-      993,
-      994,
-      995,
-      996,
-      997,
-      998,
-      999,
-      1000,
-      1001,
-      1002,
-      1003,
-      1004,
-      1005
-    ],
     "links": [
       {
         "label": "Link [SóQuadrinhos]",
@@ -937,106 +262,22 @@
           }
         ]
       }
+    ],
+    "targets": [
+      {
+        "kind": "historical",
+        "ranges": [
+          {
+            "start": 757,
+            "end": 801
+          }
+        ]
+      }
     ]
   },
   {
     "id": "spider-man-2018",
     "title": "The Amazing Spider-Man (2018)",
-    "itemIds": [
-      1006,
-      1007,
-      1008,
-      1009,
-      1010,
-      1011,
-      1012,
-      1013,
-      1014,
-      1015,
-      1016,
-      1017,
-      1018,
-      1019,
-      1020,
-      1023,
-      1024,
-      1025,
-      1027,
-      1029,
-      1031,
-      1032,
-      1033,
-      1034,
-      1035,
-      1036,
-      1037,
-      1038,
-      1039,
-      1040,
-      1041,
-      1042,
-      1043,
-      1044,
-      1045,
-      1046,
-      1047,
-      1048,
-      1049,
-      1050,
-      1051,
-      1052,
-      1053,
-      1054,
-      1056,
-      1057,
-      1058,
-      1059,
-      1061,
-      1063,
-      1065,
-      1067,
-      1069,
-      1071,
-      1072,
-      1073,
-      1074,
-      1075,
-      1076,
-      1077,
-      1078,
-      1079,
-      1080,
-      1081,
-      1082,
-      1083,
-      1084,
-      1085,
-      1086,
-      1087,
-      1089,
-      1090,
-      1091,
-      1092,
-      1093,
-      1094,
-      1095,
-      1096,
-      1097,
-      1098,
-      1099,
-      1100,
-      1101,
-      1102,
-      1103,
-      1104,
-      1105,
-      1106,
-      1107,
-      1108,
-      1109,
-      1110,
-      1111
-    ],
     "links": [
       {
         "label": "Link [Google Drive]",
@@ -1053,83 +294,22 @@
           }
         ]
       }
+    ],
+    "targets": [
+      {
+        "kind": "historical",
+        "ranges": [
+          {
+            "start": 802,
+            "end": 894
+          }
+        ]
+      }
     ]
   },
   {
     "id": "spider-man-2022",
     "title": "The Amazing Spider-Man (2022)",
-    "itemIds": [
-      1112,
-      1113,
-      1114,
-      1115,
-      1116,
-      1117,
-      1118,
-      1119,
-      1120,
-      1121,
-      1122,
-      1123,
-      1124,
-      1125,
-      1127,
-      1128,
-      1129,
-      1130,
-      1132,
-      1133,
-      1134,
-      1135,
-      1136,
-      1137,
-      1138,
-      1139,
-      1140,
-      1141,
-      1142,
-      1143,
-      1144,
-      1145,
-      1146,
-      1147,
-      1148,
-      1149,
-      1150,
-      1151,
-      1159,
-      1160,
-      1161,
-      1162,
-      1163,
-      1164,
-      1165,
-      1166,
-      1167,
-      1168,
-      1169,
-      1170,
-      1171,
-      1172,
-      1173,
-      1174,
-      1175,
-      1176,
-      1177,
-      1178,
-      1179,
-      1180,
-      1181,
-      1182,
-      1183,
-      1184,
-      1185,
-      1186,
-      1187,
-      1188,
-      1189,
-      1190
-    ],
     "links": [
       {
         "label": "Link [GoFile]",
@@ -1146,14 +326,22 @@
           }
         ]
       }
+    ],
+    "targets": [
+      {
+        "kind": "historical",
+        "ranges": [
+          {
+            "start": 895,
+            "end": 964
+          }
+        ]
+      }
     ]
   },
   {
     "id": "spider-man-2025",
     "title": "The Amazing Spider-Man (2025)",
-    "itemIds": [
-      1219
-    ],
     "links": [
       {
         "label": "Link [Google Drive]",
@@ -1173,13 +361,22 @@
           }
         ]
       }
+    ],
+    "targets": [
+      {
+        "kind": "historical",
+        "ranges": [
+          {
+            "start": 993,
+            "end": 993
+          }
+        ]
+      }
     ]
   },
   {
     "id": "leitura-4",
-    "readingGroup": 4,
     "title": "Marvel Super Heroes Secret Wars (Guerras Secretas) #8 (dez/1984)",
-    "itemIds": [255],
     "links": [
       {
         "label": "Guerras Secretas",
@@ -1200,13 +397,16 @@
         ]
       }
     ],
-    "extraId": 29
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 29
+      }
+    ]
   },
   {
     "id": "leitura-5",
-    "readingGroup": 5,
     "title": "Marvel Team-Up #141–150 e annual #7; Peter Parker, The Spectacular Spider-Man #90–100; AMS annual #20",
-    "itemIds": [256, 257, 258, 259],
     "links": [
       {
         "label": "Marvel Team Up",
@@ -1232,12 +432,12 @@
               }
             ]
           }
-        ]
+        ],
+        "extraTarget": 30
       },
       {
         "label": "AMS Annual #20",
         "url": "https://drive.google.com/file/d/1iftvFekVFgcrRueCT5jZX4NVa4nRTqxm/view?usp=drive_link",
-        "extraId": 38,
         "coverage": [
           {
             "type": "series",
@@ -1249,7 +449,8 @@
               }
             ]
           }
-        ]
+        ],
+        "extraTarget": 38
       }
     ],
     "notes": "Amplia a Saga do Traje Negro. O essencial já está na Amazing: a descoberta de que o traje é vivo, na #258.",
@@ -1295,13 +496,20 @@
         ]
       }
     ],
-    "extraId": 30
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 30
+      },
+      {
+        "kind": "extra",
+        "id": 38
+      }
+    ]
   },
   {
     "id": "leitura-6",
-    "readingGroup": 6,
     "title": "Web of Spider-Man #1 (1985)",
-    "itemIds": [272],
     "links": [
       {
         "label": "Web of Spider",
@@ -1322,13 +530,16 @@
         ]
       }
     ],
-    "extraId": 33
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 33
+      }
+    ]
   },
   {
     "id": "leitura-7",
-    "readingGroup": 7,
     "title": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
-    "itemIds": [278],
     "links": [
       {
         "label": "Arco completo (GoFile)",
@@ -1348,13 +559,16 @@
         ]
       }
     ],
-    "extraId": 34
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 34
+      }
+    ]
   },
   {
     "id": "leitura-8",
-    "readingGroup": 8,
     "title": "The Amazing Spider-Man Annual #21 (1987), o casamento",
-    "itemIds": [303],
     "links": [
       {
         "label": "AMS Annual #21",
@@ -1375,13 +589,16 @@
         ]
       }
     ],
-    "extraId": 42
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 42
+      }
+    ]
   },
   {
     "id": "leitura-10",
-    "readingGroup": 10,
     "title": "A Última Caçada de Kraven (4 edições fora da Amazing)",
-    "itemIds": [305],
     "links": [
       {
         "label": "Arco completo (SoQuadrinhos)",
@@ -1389,13 +606,16 @@
       }
     ],
     "notes": "Só as duas edições da Amazing deixam o arco cortado. Mostra do que Peter é feito. Hunted (Amazing 2018, #16–23) remete a esta história.",
-    "extraId": 44
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 44
+      }
+    ]
   },
   {
     "id": "leitura-11",
-    "readingGroup": 11,
     "title": "Maximum Carnage (1993)",
-    "itemIds": [391],
     "links": [
       {
         "label": "Arco completo (GoFile)",
@@ -1403,13 +623,16 @@
       }
     ],
     "notes": "Só 3 dos 14 capítulos estão na Amazing (#378–380). Quer o arco completo? Siga a ordem da coluna ao lado. Prefere a linha enxuta? Pule. Carnificina já estreou nas #361–363, dentro da contagem. Mas as três edições ficam com buracos de enredo.",
-    "extraId": 62
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 62
+      }
+    ]
   },
   {
     "id": "leitura-13",
-    "readingGroup": 13,
     "title": "The Gathering of Five / The Final Chapter (1998)",
-    "itemIds": [605],
     "links": [
       {
         "label": "Arco completo (SoQuadrinhos)",
@@ -1417,13 +640,16 @@
       }
     ],
     "notes": "A #441 não fecha a história. O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. Só depois começa o volume de 1999 (#442). A verdadeira Tia May reaparece aqui (aba 'Marcos e arcos').",
-    "extraId": 71
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 71
+      }
+    ]
   },
   {
     "id": "leitura-14",
-    "readingGroup": 14,
     "title": "The Other (2005–06)",
-    "itemIds": [690],
     "links": [
       {
         "label": "Arco completo (Mega)",
@@ -1431,13 +657,16 @@
       }
     ],
     "notes": "Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da aba 'Marcos e arcos' lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4.",
-    "extraId": 77
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 77
+      }
+    ]
   },
   {
     "id": "leitura-15",
-    "readingGroup": 15,
     "title": "Civil War (Guerra Civil) #1–2 (2006)",
-    "itemIds": [698],
     "links": [
       {
         "label": "Arco completo (SoQuadrinhos)",
@@ -1458,13 +687,16 @@
         ]
       }
     ],
-    "extraId": 78
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 78
+      }
+    ]
   },
   {
     "id": "leitura-16",
-    "readingGroup": 16,
     "title": "Civil War #3–7 (2006–07)",
-    "itemIds": [701],
     "links": [
       {
         "label": "Arco completo (SoQuadrinhos)",
@@ -1485,13 +717,16 @@
         ]
       }
     ],
-    "extraId": 79
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 79
+      }
+    ]
   },
   {
     "id": "leitura-17",
-    "readingGroup": 17,
     "title": "Back in Black (Homem-Aranha: De Volta ao Negro): Friendly Neighborhood Spider-Man #17–23 e Annual #1; Sensational Spider-Man (2006) #35–40 e Annual #1",
-    "itemIds": [707, 708, 710, 711, 713, 714, 716, 717, 718, 719, 720, 722, 723, 724, 725],
     "links": [
       {
         "label": "Arco completo (Mega)",
@@ -1543,13 +778,16 @@
         ]
       }
     ],
-    "extraId": 80
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 80
+      }
+    ]
   },
   {
     "id": "leitura-18",
-    "readingGroup": 18,
     "title": "One More Day (Um Dia a Mais)",
-    "itemIds": [728],
     "links": [
       {
         "label": "Arco completo (Mega)",
@@ -1557,13 +795,16 @@
       }
     ],
     "notes": "O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. Abre a fase Brand New Day (#546 em diante).",
-    "extraId": 81
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 81
+      }
+    ]
   },
   {
     "id": "leitura-19",
-    "readingGroup": 19,
     "title": "Ultimate Spider-Man (2024) #1",
-    "itemIds": [730],
     "links": [
       {
         "label": "HQ completa (SoQuadrinhos)",
@@ -1584,13 +825,16 @@
         ]
       }
     ],
-    "extraId": 82
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 82
+      }
+    ]
   },
   {
     "id": "leitura-21",
-    "readingGroup": 21,
     "title": "Spider-Island: Deadly Foes #1 e Venom (2011) #6–8. Também há as minisséries Spider-Island: Cloak & Dagger, Deadly Hands of Kung Fu e The Amazing Spider-Girl",
-    "itemIds": [855, 856, 859, 861, 864, 865, 866],
     "links": [
       {
         "label": "Arco completo + Minisséries (Mega)",
@@ -1621,13 +865,16 @@
         ]
       }
     ],
-    "extraId": 88
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 88
+      }
+    ]
   },
   {
     "id": "leitura-22",
-    "readingGroup": 22,
     "title": "Prelúdio de Spider-Verse, parte 1: Superior Spider-Man #32–33, Edge of Spider-Verse #1–5 e Spider-Man 2099 (2014) #5",
-    "itemIds": [933, 934, 935, 936, 937, 939, 940],
     "links": [
       {
         "label": "Arco completo (SoQuadrinhos)",
@@ -1668,13 +915,16 @@
         ]
       }
     ],
-    "extraId": 91
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 91
+      }
+    ]
   },
   {
     "id": "leitura-23",
-    "readingGroup": 23,
     "title": "Spider-Verse, início do evento após a Amazing (2014) #8: Spider-Verse Team-Up #1 e Spider-Verse #1–2; tie-ins restantes são opcionais.",
-    "itemIds": [943],
     "links": [
       {
         "label": "Arco completo (SoQuadrinhos)",
@@ -1704,13 +954,16 @@
         ]
       }
     ],
-    "extraId": 92
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 92
+      }
+    ]
   },
   {
     "id": "leitura-24",
-    "readingGroup": 24,
     "title": "Secret Wars (2015) #1–9",
-    "itemIds": [953],
     "links": [
       {
         "label": "Arco completo (SoQuadrinhos)",
@@ -1731,18 +984,20 @@
         ]
       }
     ],
-    "extraId": 93
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 93
+      }
+    ]
   },
   {
     "id": "leitura-25",
-    "readingGroup": 25,
     "title": "The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem)",
-    "itemIds": [978, 984],
     "links": [
       {
         "label": "Só Quadrinhos: Amazing (2015) #20–24",
         "url": "https://hqs-soquadrinhos.blogspot.com/2017/01/o-espantoso-homem-aranha-2016.html",
-        "extraId": null,
         "coverage": [
           {
             "type": "series",
@@ -1755,7 +1010,8 @@
               }
             ]
           }
-        ]
+        ],
+        "extraTarget": null
       },
       {
         "label": "HQ Now: Omega #1",
@@ -1797,13 +1053,16 @@
         ]
       }
     ],
-    "extraId": 94
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 94
+      }
+    ]
   },
   {
     "id": "leitura-26",
-    "readingGroup": 26,
     "title": "Amazing Spider-Man (2018) #16.HU, #18.HU, #19.HU e #20.HU (tie-ins pontuados de Hunted)",
-    "itemIds": [1021, 1026, 1028, 1030],
     "links": [
       {
         "label": "Link do drive com os capítulos",
@@ -1829,13 +1088,16 @@
         ]
       }
     ],
-    "extraId": 98
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 98
+      }
+    ]
   },
   {
     "id": "leitura-27",
-    "readingGroup": 27,
     "title": "Spider-Geddon #0–5 (2018) e tie-ins",
-    "itemIds": [1022],
     "links": [
       {
         "label": "Arco completo (SoQuadrinhos)",
@@ -1856,13 +1118,16 @@
         ]
       }
     ],
-    "extraId": 99
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 99
+      }
+    ]
   },
   {
     "id": "leitura-28",
-    "readingGroup": 28,
     "title": "Amazing Spider-Man: Sins Rising Prelude (2020, one-shot)",
-    "itemIds": [1055],
     "links": [
       {
         "label": "Arco completo (GoFile)",
@@ -1877,13 +1142,16 @@
         "volume": "2020"
       }
     ],
-    "extraId": 100
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 100
+      }
+    ]
   },
   {
     "id": "leitura-29",
-    "readingGroup": 29,
     "title": "Amazing Spider-Man: The Sins of Norman Osborn (2020, one-shot)",
-    "itemIds": [1060],
     "links": [
       {
         "label": "Arco completo (GoFile)",
@@ -1898,13 +1166,16 @@
         "volume": "2020"
       }
     ],
-    "extraId": 101
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 101
+      }
+    ]
   },
   {
     "id": "leitura-30",
-    "readingGroup": 30,
     "title": "Amazing Spider-Man (2018) #50.LR a #54.LR (tie-ins pontuados de Last Remains)",
-    "itemIds": [1062, 1064, 1066, 1068, 1070],
     "links": [
       {
         "label": "Link do drive com os capítulos",
@@ -1926,13 +1197,16 @@
         "suffix": "LR"
       }
     ],
-    "extraId": 102
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 102
+      }
+    ]
   },
   {
     "id": "leitura-31",
-    "readingGroup": 31,
     "title": "Dark Web Finale #1",
-    "itemIds": [1131],
     "links": [
       {
         "label": "AMS v6 (2022) + Finale",
@@ -1952,13 +1226,16 @@
         ]
       }
     ],
-    "extraId": 104
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 104
+      }
+    ]
   },
   {
     "id": "leitura-32",
-    "readingGroup": 32,
     "title": "Amazing Spider-Man: Gang War – First Strike #1 (2023)",
-    "itemIds": [1152, 1153, 1154, 1155, 1156, 1157, 1158],
     "links": [
       {
         "label": "First Strike (GoFile)",
@@ -1979,6 +1256,11 @@
         ]
       }
     ],
-    "extraId": 106
+    "targets": [
+      {
+        "kind": "extra",
+        "id": 106
+      }
+    ]
   }
 ]

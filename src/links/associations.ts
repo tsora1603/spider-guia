@@ -5,21 +5,25 @@ export interface LinkAssociations {
   byItemId: ReadonlyMap<number, readonly string[]>;
   /** `n` é a identidade explícita da ficha de Extras. */
   byExtraId: ReadonlyMap<number, readonly string[]>;
+  /** Identidade estável do arco em editorial.clone. */
+  byCloneArcId: ReadonlyMap<string, readonly string[]>;
 }
 
-/** Apenas os relacionamentos declarados em itemIds e extraId produzem CTAs.
- * `coverage`, título e readingGroup não são evidências de identidade.
- */
+/** Apenas `targets` produz CTAs; cobertura e título são metadados de apresentação. */
 export function createLinkAssociations(
   groups: readonly EditorialLinkGroup[],
-  knownItemIds: ReadonlySet<number>,
-  knownExtraIds: ReadonlySet<number>
+  items: ReadonlyArray<{ id: number; historicalNumber: number | null; type: string }>,
+  extras: ReadonlyArray<{ n: number; itemIds?: number[] }>,
+  knownCloneArcIds: ReadonlySet<string> = new Set()
 ): LinkAssociations {
+  const itemById = new Map(items.map((item) => [item.id, item]));
+  const extraById = new Map(extras.map((extra) => [extra.n, extra]));
   const byItemId = new Map<number, string[]>();
   const byExtraId = new Map<number, string[]>();
+  const byCloneArcId = new Map<string, string[]>();
   const seenGroupIds = new Set<string>();
 
-  const add = (map: Map<number, string[]>, key: number, groupId: string) => {
+  const add = <Key extends number | string>(map: Map<Key, string[]>, key: Key, groupId: string) => {
     const list = map.get(key) || [];
     if (!list.includes(groupId)) list.push(groupId);
     map.set(key, list);
@@ -42,17 +46,32 @@ export function createLinkAssociations(
     });
     if (!validDestinations.length) continue;
 
-    for (const itemId of group.itemIds || []) {
-      if (Number.isSafeInteger(itemId) && knownItemIds.has(itemId)) add(byItemId, itemId, group.id);
-    }
-    for (const destination of validDestinations) {
-      const extraId = Object.prototype.hasOwnProperty.call(destination, 'extraId')
-        ? destination.extraId
-        : group.extraId;
-      if (extraId != null && knownExtraIds.has(extraId)) add(byExtraId, extraId, group.id);
+    for (const target of group.targets || []) {
+      if (target.kind === 'items') {
+        for (const itemId of target.ids) if (itemById.has(itemId)) add(byItemId, itemId, group.id);
+      } else if (target.kind === 'historical') {
+        for (const item of items) {
+          if (item.type !== 'Principal' || item.historicalNumber == null) continue;
+          if (
+            target.ranges.some(
+              (range) =>
+                item.historicalNumber! >= range.start && item.historicalNumber! <= range.end
+            )
+          )
+            add(byItemId, item.id, group.id);
+        }
+      } else if (target.kind === 'extra') {
+        const extra = extraById.get(target.id);
+        if (!extra) continue;
+        add(byExtraId, target.id, group.id);
+        for (const itemId of extra.itemIds || [])
+          if (itemById.has(itemId)) add(byItemId, itemId, group.id);
+      } else if (knownCloneArcIds.has(target.id)) {
+        add(byCloneArcId, target.id, group.id);
+      }
     }
   }
-  return { byItemId, byExtraId };
+  return { byItemId, byExtraId, byCloneArcId };
 }
 
 /** Compartilhado pela Checklist, Modo Foco e Extras. */
@@ -65,6 +84,16 @@ export function linkTargetsFor(
 }
 
 /** União dos vínculos explícitos das edições, sem duplicar cards de Links. */
-export function linkTargetsForItems(associations: LinkAssociations, ids: readonly number[]): string[] {
-  return [...new Set(ids.flatMap(id => [...linkTargetsFor(associations, 'item', id)]))];
+export function linkTargetsForItems(
+  associations: LinkAssociations,
+  ids: readonly number[]
+): string[] {
+  return [...new Set(ids.flatMap((id) => [...linkTargetsFor(associations, 'item', id)]))];
+}
+
+export function linkTargetsForCloneArc(
+  associations: LinkAssociations,
+  arcId: string
+): readonly string[] {
+  return associations.byCloneArcId.get(arcId) || [];
 }

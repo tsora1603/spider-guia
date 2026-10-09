@@ -81,7 +81,7 @@ function validateCoverage(coverage, field, fail) {
   });
 }
 
-function validateEditorialLinks(groups, { knownItemIds, extras } = {}) {
+function validateEditorialLinks(groups, { knownItemIds, extras, cloneArcIds } = {}) {
   const errors = [];
   const fail = (code, message) => errors.push({ code, message });
   if (!Array.isArray(groups))
@@ -103,44 +103,63 @@ function validateEditorialLinks(groups, { knownItemIds, extras } = {}) {
     if (group.context != null && !isText(group.context))
       fail('links.notes', `${label}: contexto legado inválido.`);
     if (group.coverage != null) validateCoverage(group.coverage, `${label}.coverage`, fail);
-    if (group.itemIds == null) {
+    if (group.targets == null) {
       if (group.coverage == null)
-        fail('links.association', `${label}: sem itemIds exige coverage válida.`);
-    } else if (!Array.isArray(group.itemIds) || !group.itemIds.length) {
-      fail('links.item', `${label}: itemIds deve ser lista não vazia ou omitida.`);
+        fail('links.association', `${label}: sem targets exige coverage válida.`);
+    } else if (!Array.isArray(group.targets) || !group.targets.length) {
+      fail('links.target', `${label}: targets deve ser lista não vazia ou omitida.`);
     } else {
-      const used = new Set();
-      for (const id of group.itemIds) {
-        if (!Number.isSafeInteger(id) || id <= 0 || (knownItemIds && !knownItemIds.has(id)))
-          fail('links.item', `${label}: ID de HQ inexistente/inválido ${id}.`);
-        if (used.has(id)) fail('links.item.duplicate', `${label}: ID de HQ duplicado ${id}.`);
-        used.add(id);
-      }
-    }
-    if (
-      group.readingGroup != null &&
-      (!Number.isSafeInteger(group.readingGroup) || group.readingGroup <= 0)
-    ) {
-      fail('links.readingGroup', `${label}: readingGroup legado inválido.`);
-    }
-    if (group.extraId != null) {
-      if (!Number.isSafeInteger(group.extraId) || group.extraId <= 0)
-        fail('links.extra', `${label}: extraId inválido.`);
-      else if (extraById) {
-        const extra = extraById.get(group.extraId);
-        if (!extra) fail('links.extra', `${label}: ficha de Extras inexistente ${group.extraId}.`);
-        else {
-          if (group.readingGroup != null && group.readingGroup !== extra.readingGroup)
-            fail('links.extra', `${label}: readingGroup diverge de Extras #${group.extraId}.`);
+      const usedTargets = new Set();
+      for (const [targetIndex, target] of group.targets.entries()) {
+        const path = `${label}.targets[${targetIndex}]`;
+        if (
+          !isObject(target) ||
+          !['items', 'historical', 'extra', 'cloneArc'].includes(target.kind)
+        ) {
+          fail('links.target', `${path}: alvo inválido.`);
+          continue;
+        }
+        const key = JSON.stringify(target);
+        if (usedTargets.has(key)) fail('links.target.duplicate', `${path}: alvo duplicado.`);
+        usedTargets.add(key);
+        if (target.kind === 'items') {
+          if (!Array.isArray(target.ids) || !target.ids.length)
+            fail('links.item', `${path}: ids vazio.`);
+          const ids = new Set();
+          for (const id of target.ids || []) {
+            if (!Number.isSafeInteger(id) || id <= 0 || (knownItemIds && !knownItemIds.has(id)))
+              fail('links.item', `${path}: ID de HQ inexistente/inválido ${id}.`);
+            if (ids.has(id)) fail('links.item.duplicate', `${path}: ID de HQ duplicado ${id}.`);
+            ids.add(id);
+          }
+        } else if (target.kind === 'historical') {
+          if (!Array.isArray(target.ranges) || !target.ranges.length)
+            fail('links.historical', `${path}: ranges vazio.`);
+          for (const range of target.ranges || []) {
+            if (
+              !isObject(range) ||
+              !Number.isSafeInteger(range.start) ||
+              !Number.isSafeInteger(range.end) ||
+              range.start < 1 ||
+              range.end < range.start
+            )
+              fail('links.historical', `${path}: intervalo histórico inválido.`);
+          }
+        } else if (target.kind === 'extra') {
           if (
-            Array.isArray(group.itemIds) &&
-            !group.itemIds.some((id) => (extra.itemIds || []).includes(id))
+            !Number.isSafeInteger(target.id) ||
+            target.id <= 0 ||
+            (extraById && !extraById.has(target.id))
           )
-            fail('links.extra', `${label}: nenhum itemId coincide com Extras #${group.extraId}.`);
+            fail('links.extra', `${path}: ficha de Extras inexistente/inválida ${target.id}.`);
+        } else if (!isText(target.id) || (cloneArcIds && !cloneArcIds.has(target.id))) {
+          fail(
+            'links.cloneArc',
+            `${path}: arco da Saga do Clone inexistente/inválido ${target.id}.`
+          );
         }
       }
-    } else if (group.readingGroup != null)
-      fail('links.extra', `${label}: readingGroup sem extraId explícito.`);
+    }
     const urls = new Set();
     let destinations = 0;
     for (const field of ['links', 'stores', 'libraries']) {
@@ -168,23 +187,16 @@ function validateEditorialLinks(groups, { knownItemIds, extras } = {}) {
         urls.add(destination.url);
         if (destination.coverage != null)
           validateCoverage(destination.coverage, `${path}.coverage`, fail);
-        if (destination.extraId != null) {
-          if (!Number.isSafeInteger(destination.extraId) || destination.extraId <= 0) {
-            fail('links.extra', `${path}: extraId inválido.`);
-          } else if (extraById) {
-            const extra = extraById.get(destination.extraId);
-            if (!extra)
-              fail('links.extra', `${path}: ficha de Extras inexistente ${destination.extraId}.`);
-            else if (
-              Array.isArray(group.itemIds) &&
-              !group.itemIds.some((id) => (extra.itemIds || []).includes(id))
-            ) {
-              fail(
-                'links.extra',
-                `${path}: nenhum itemId do grupo coincide com Extras #${destination.extraId}.`
-              );
-            }
-          }
+        if (destination.extraTarget !== undefined && destination.extraTarget !== null) {
+          if (
+            !Number.isSafeInteger(destination.extraTarget) ||
+            destination.extraTarget <= 0 ||
+            (extraById && !extraById.has(destination.extraTarget))
+          )
+            fail(
+              'links.extra',
+              `${path}: extraTarget inexistente/inválido ${destination.extraTarget}.`
+            );
         }
         destinations++;
       });
@@ -194,11 +206,14 @@ function validateEditorialLinks(groups, { knownItemIds, extras } = {}) {
   return errors;
 }
 
-// null explícito no destino suprime o extraId herdado do grupo.
+// null explícito no destino suprime o único alvo de Extra herdado do grupo.
 function resolveExtraId(group, destination) {
-  return destination && Object.prototype.hasOwnProperty.call(destination, 'extraId')
-    ? destination.extraId
-    : (group.extraId ?? null);
+  if (destination && Object.prototype.hasOwnProperty.call(destination, 'extraTarget'))
+    return destination.extraTarget;
+  const ids = (group.targets || [])
+    .filter((target) => target.kind === 'extra')
+    .map((target) => target.id);
+  return ids.length === 1 ? ids[0] : null;
 }
 
 export { formatCoverage, validateCoverage, validateEditorialLinks, resolveExtraId };

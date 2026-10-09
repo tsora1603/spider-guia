@@ -39,12 +39,18 @@ export function LinksView() {
   };
   const all = useMemo(getEditorialLinkGroups, []);
   const params = new URLSearchParams(hash.split('?')[1] || '');
-  const targets = resolveLinkTargets(params.getAll('link'), all.map((group) => group.key));
+  const targets = resolveLinkTargets(
+    params.getAll('link'),
+    all.map((group) => group.key)
+  );
   const targetKey = targets.join('|');
   const targeted = new Set(targets);
   const targetIndex = targets.length ? all.findIndex((group) => group.key === targets[0]) : -1;
   const from = params.get('from');
-  const safeReturn = from && /^#(?:checklist(?:\/hq\/\d+)?|explorar\/extras)(?:\?|$)/.test(from) ? from : null;
+  const safeReturn =
+    from && /^#(?:checklist(?:\/hq\/\d+)?|explorar\/(?:extras|clone))(?:\?|$)/.test(from)
+      ? from
+      : null;
   useEffect(() => {
     if (targetIndex < 0) return;
     setQuery('');
@@ -52,9 +58,12 @@ export function LinksView() {
     return () => cancelAnimationFrame(frame);
   }, [targetKey, targetIndex]);
   const needle = targets.length ? '' : normalizeText(query);
-  const filtered = targets.length > 1
-    ? all.filter((group) => targeted.has(group.key))
-    : !needle ? all : all.filter((group) => group.searchText.includes(needle));
+  const filtered =
+    targets.length > 1
+      ? all.filter((group) => targeted.has(group.key))
+      : !needle
+        ? all
+        : all.filter((group) => group.searchText.includes(needle));
 
   return (
     <>
@@ -68,8 +77,27 @@ export function LinksView() {
       </div>
       {targets.length ? (
         <div class="links-context-toolbar">
-          {safeReturn ? <button type="button" class="btn g links-back-reading" onClick={(event) => router.navigate(safeReturn, event.currentTarget)}><Icon name="arrowLeft" size={18} /> Voltar à leitura</button> : null}
-          {targets.length > 1 ? <><span class="sm mu">Links associados a esta leitura</span><button type="button" class="btn g" onClick={(event) => router.navigate('#explorar/links', event.currentTarget)}>Ver todos os links</button></> : null}
+          {safeReturn ? (
+            <button
+              type="button"
+              class="btn g links-back-reading"
+              onClick={(event) => router.navigate(safeReturn, event.currentTarget)}
+            >
+              <Icon name="arrowLeft" size={18} /> Voltar à leitura
+            </button>
+          ) : null}
+          {targets.length > 1 ? (
+            <>
+              <span class="sm mu">Links associados a esta leitura</span>
+              <button
+                type="button"
+                class="btn g"
+                onClick={(event) => router.navigate('#explorar/links', event.currentTarget)}
+              >
+                Ver todos os links
+              </button>
+            </>
+          ) : null}
         </div>
       ) : null}
       {filtered.length ? (

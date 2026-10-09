@@ -10,19 +10,23 @@ const DEFAULT_READING_PREFERENCES = {
 };
 
 async function mockExternalAssets(page: Page) {
-  await page.route('https://fonts.googleapis.com/**', route =>
+  await page.route('https://fonts.googleapis.com/**', (route) =>
     route.fulfill({ status: 200, contentType: 'text/css', body: '' })
   );
-  await page.route('https://fonts.gstatic.com/**', route =>
+  await page.route('https://fonts.gstatic.com/**', (route) =>
     route.fulfill({ status: 204, body: '' })
   );
-  await page.route(SUPABASE_CDN, route =>
-    route.fulfill({ status: 200, contentType: 'application/javascript', body: 'window.supabase = undefined;' })
+  await page.route(SUPABASE_CDN, (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: 'application/javascript',
+      body: 'window.supabase = undefined;'
+    })
   );
 }
 
 async function mockAuthenticatedSupabase(page: Page) {
-  await page.route('**/config.js', route =>
+  await page.route('**/config.js', (route) =>
     route.fulfill({
       status: 200,
       contentType: 'application/javascript',
@@ -33,7 +37,7 @@ async function mockAuthenticatedSupabase(page: Page) {
       `
     })
   );
-  await page.route(SUPABASE_CDN, route =>
+  await page.route(SUPABASE_CDN, (route) =>
     route.fulfill({
       status: 200,
       contentType: 'application/javascript',
@@ -120,12 +124,20 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await dialog.getByRole('button', { name: 'Salvar e começar' }).click();
     await expect(dialog).toBeHidden();
 
-    await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('aranha-reading-preferences-v1') || '{}'))).toMatchObject({
-      onboardingComplete: true,
-      depth: 'essential',
-      readThrough: 5
-    });
-    await expect.poll(() => page.evaluate(() => localStorage.getItem('aranha-spoiler-level-v1'))).toBe('leve');
+    await expect
+      .poll(() =>
+        page.evaluate(() =>
+          JSON.parse(localStorage.getItem('aranha-reading-preferences-v1') || '{}')
+        )
+      )
+      .toMatchObject({
+        onboardingComplete: true,
+        depth: 'essential',
+        readThrough: 5
+      });
+    await expect
+      .poll(() => page.evaluate(() => localStorage.getItem('aranha-spoiler-level-v1')))
+      .toBe('leve');
     const progress = await readProgress(page);
     for (const id of ['2', '3', '4', '5', '6']) expect(progress[id]).toBe('Sim');
     expect(progress['1']).toBeUndefined(); // Leitura de contexto fora da linha não é marcada por número histórico.
@@ -189,7 +201,9 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await expect(update).toBeDisabled();
     await input.fill('4');
     await expect(update).toBeEnabled();
-    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await expect
+      .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth))
+      .toBe(true);
     await update.click();
     await expect(page.getByRole('dialog')).toContainText('Marcar leituras como lidas?');
   });
@@ -197,7 +211,10 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
   test('marcação individual não exibe toast redundante', async ({ page }) => {
     await initializeStorage(page);
     await page.goto('/#hq/2');
-    await page.locator('#hq-2').getByRole('button', { name: /Marcar como lida/ }).click();
+    await page
+      .locator('#hq-2')
+      .getByRole('button', { name: /Marcar como lida/ })
+      .click();
     await expect(page.getByText('Progresso atualizado.')).toHaveCount(0);
     await expect.poll(async () => (await readProgress(page))['2']).toBe('Sim');
   });
@@ -242,7 +259,9 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
 
     await hiddenStrong.first().click();
     await expect(firstExtra.locator('[data-spoiler-level="forte"]')).toHaveCount(before - 1);
-    await expect.poll(() => page.evaluate(() => localStorage.getItem('aranha-spoiler-level-v1'))).not.toBe('tudo');
+    await expect
+      .poll(() => page.evaluate(() => localStorage.getItem('aranha-spoiler-level-v1')))
+      .not.toBe('tudo');
   });
 
   test('spoiler pode ser revelado por teclado', async ({ page }) => {
@@ -273,7 +292,9 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
 
     await page.locator('#spoiler-level').selectOption('tudo');
     await expect(firstExtra.locator('[data-spoiler-level="forte"]')).toHaveCount(0);
-    await expect.poll(() => page.evaluate(() => localStorage.getItem('aranha-spoiler-level-v1'))).toBe('tudo');
+    await expect
+      .poll(() => page.evaluate(() => localStorage.getItem('aranha-spoiler-level-v1')))
+      .toBe('tudo');
   });
 
   test('Leituras Extras tornam os dois critérios de confirmação explícitos', async ({ page }) => {
@@ -324,7 +345,10 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await context.setOffline(true);
     // Sem sessão Supabase, mesmo offline o progresso fica apenas neste aparelho.
     await expect(page.locator('.sync-status')).toContainText('Neste dispositivo');
-    await page.locator('#hq-2').getByRole('button', { name: /Marcar como lida/ }).click();
+    await page
+      .locator('#hq-2')
+      .getByRole('button', { name: /Marcar como lida/ })
+      .click();
 
     await expect.poll(async () => (await readProgress(page))['2']).toBe('Sim');
     await context.setOffline(false);
@@ -342,21 +366,29 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
       await expect(nav.getByRole('button', { name: label, exact: true })).toBeVisible();
     }
     await expect(nav).toHaveCSS('position', 'fixed');
-    await expect(nav.getByRole('button', { name: 'Configurações' }).locator('.nav-label-short')).toBeVisible();
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-    const bounds = await nav.getByRole('button').evaluateAll(buttons => buttons.map(button => {
-      const rect = button.getBoundingClientRect();
-      return { left: rect.left, right: rect.right, width: rect.width };
-    }));
-    expect(bounds.every(box => box.left >= 0 && box.right <= 320 && box.width >= 44)).toBe(true);
+    await expect(
+      nav.getByRole('button', { name: 'Configurações' }).locator('.nav-label-short')
+    ).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+      true
+    );
+    const bounds = await nav.getByRole('button').evaluateAll((buttons) =>
+      buttons.map((button) => {
+        const rect = button.getBoundingClientRect();
+        return { left: rect.left, right: rect.right, width: rect.width };
+      })
+    );
+    expect(bounds.every((box) => box.left >= 0 && box.right <= 320 && box.width >= 44)).toBe(true);
 
     await nav.getByRole('button', { name: 'Ajuda', exact: true }).click();
     await expect(page).toHaveURL(/#ajuda$/);
     await expect(page.getByText('Um lugar para cada intenção')).toBeVisible();
-    await page.getByRole('navigation', { name: 'Seções de Ajuda' }).getByRole('button', { name: 'Fontes' }).click();
+    await page
+      .getByRole('navigation', { name: 'Seções de Ajuda' })
+      .getByRole('button', { name: 'Fontes' })
+      .click();
     await expect(page).toHaveURL(/#ajuda\/fontes$/);
     await expect(page.getByText('Fontes documentais')).toBeVisible();
-
 
     await nav.getByRole('button', { name: 'Explorar', exact: true }).click();
     await expect(page).toHaveURL(/#explorar\/jornada$/);
@@ -370,12 +402,17 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await expect(page.getByText('Preferências de leitura')).toBeVisible();
   });
 
-  test('rotas legadas de Ajuda e Configurações preservam o destino e histórico', async ({ page }) => {
+  test('rotas legadas de Ajuda e Configurações preservam o destino e histórico', async ({
+    page
+  }) => {
     await initializeStorage(page);
     await page.goto('/#conta/fontes?origem=antigo');
     await expect(page).toHaveURL(/#ajuda\/fontes\?origem=antigo$/);
     await expect(page.getByText('Fontes documentais')).toBeVisible();
-    await page.getByRole('navigation', { name: 'Navegação principal' }).getByRole('button', { name: 'Configurações' }).click();
+    await page
+      .getByRole('navigation', { name: 'Navegação principal' })
+      .getByRole('button', { name: 'Configurações' })
+      .click();
     await expect(page).toHaveURL(/#configuracoes$/);
     await expect(page.getByText('Leve seu progresso com você')).toBeVisible();
     await expect(page.getByText('Fontes documentais')).toHaveCount(0);
@@ -407,18 +444,22 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await expect(dialog).toContainText('The Amazing Spider-Man (1963) 5');
     await dialog.getByRole('button', { name: 'Aplicar 6' }).click();
 
-    await expect.poll(async () => {
-      const progress = await readProgress(page);
-      return ['1', '2', '3', '4', '5', '6'].every(id => progress[id] === 'Sim');
-    }).toBe(true);
+    await expect
+      .poll(async () => {
+        const progress = await readProgress(page);
+        return ['1', '2', '3', '4', '5', '6'].every((id) => progress[id] === 'Sim');
+      })
+      .toBe(true);
 
     const toast = page.locator('.toast').filter({ hasText: '6 leituras' }).last();
     await expect(toast).toContainText('Desfazer');
     await toast.getByRole('button', { name: 'Desfazer' }).click();
-    await expect.poll(async () => {
-      const progress = await readProgress(page);
-      return ['1', '2', '3', '4', '5', '6'].every(id => progress[id] == null);
-    }).toBe(true);
+    await expect
+      .poll(async () => {
+        const progress = await readProgress(page);
+        return ['1', '2', '3', '4', '5', '6'].every((id) => progress[id] == null);
+      })
+      .toBe(true);
   });
 
   test('atalhos de teclado abrem ajuda, busca, lote e alternam uma leitura', async ({ page }) => {
@@ -437,7 +478,9 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await page.keyboard.press('/');
     await expect(page.getByRole('searchbox', { name: 'Buscar na Checklist' })).toBeFocused();
 
-    await page.getByRole('searchbox', { name: 'Buscar na Checklist' }).evaluate(element => (element as HTMLElement).blur());
+    await page
+      .getByRole('searchbox', { name: 'Buscar na Checklist' })
+      .evaluate((element) => (element as HTMLElement).blur());
     await page.keyboard.press('b');
     const bulkDialog = page.getByRole('dialog', { name: 'Editar em lote' });
     await expect(bulkDialog).toBeVisible();
@@ -454,26 +497,32 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     const search = page.getByRole('searchbox', { name: 'Buscar na Checklist' });
     await search.fill('termo-que-nao-existe-aranha-999');
 
-    const empty = page.locator('#app .screen-state.empty').filter({ hasText: 'Nenhuma leitura encontrada' });
+    const empty = page
+      .locator('#app .screen-state.empty')
+      .filter({ hasText: 'Nenhuma leitura encontrada' });
     await expect(empty).toBeVisible();
     await expect(empty).toContainText('Nenhuma leitura encontrada');
     await empty.getByRole('button', { name: 'Limpar busca e filtros' }).click();
     await expect(page.locator('.checklist-series-group').first()).toBeVisible();
   });
 
-
   test('cada destino exibe estado de carregamento durante o lazy-load', async ({ page }) => {
     await initializeStorage(page);
     let releaseAccountChunk!: () => void;
-    const accountChunkGate = new Promise<void>(resolve => { releaseAccountChunk = resolve; });
-    await page.route('**/assets/MoreView-*.js', async route => {
+    const accountChunkGate = new Promise<void>((resolve) => {
+      releaseAccountChunk = resolve;
+    });
+    await page.route('**/assets/MoreView-*.js', async (route) => {
       await accountChunkGate;
       await route.continue();
     });
 
     await page.goto('/#hoje');
     await expect(page.getByRole('textbox', { name: 'Buscar edição, série ou arco' })).toBeVisible();
-    await page.getByRole('navigation', { name: 'Navegação principal' }).getByRole('button', { name: 'Configurações', exact: true }).click();
+    await page
+      .getByRole('navigation', { name: 'Navegação principal' })
+      .getByRole('button', { name: 'Configurações', exact: true })
+      .click();
     await expect(page.locator('.screen-state.loading')).toContainText('Carregando Configurações');
     releaseAccountChunk();
     await expect(page.getByText('Preferências de leitura')).toBeVisible();
@@ -481,16 +530,18 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
 
   test('falha de chunk cai no estado de erro do destino sem apagar progresso', async ({ page }) => {
     await initializeStorage(page, { progress: { '2': 'Sim' } });
-    await page.route('**/assets/MoreView-*.js', route => route.abort());
+    await page.route('**/assets/MoreView-*.js', (route) => route.abort());
     await page.goto('/#hoje');
     await expect(page.getByRole('textbox', { name: 'Buscar edição, série ou arco' })).toBeVisible();
 
-    await page.getByRole('navigation', { name: 'Navegação principal' }).getByRole('button', { name: 'Configurações', exact: true }).click();
+    await page
+      .getByRole('navigation', { name: 'Navegação principal' })
+      .getByRole('button', { name: 'Configurações', exact: true })
+      .click();
     const error = page.locator('.screen-state.error');
     await expect(error).toContainText('Não foi possível abrir Configurações');
     expect((await readProgress(page))['2']).toBe('Sim');
   });
-
 
   test('tema, escala e modo foco persistem em 360 px', async ({ page }) => {
     await page.setViewportSize({ width: 360, height: 740 });
@@ -506,20 +557,31 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
     await expect(page.locator('html')).toHaveAttribute('data-font-scale', 'large');
     await expect(page.locator('html')).toHaveAttribute('data-focus-mode', 'on');
-    await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('aranha-design-preferences-v1') || '{}'))).toEqual({
-      version: 1,
-      theme: 'light',
-      fontScale: 'large',
-      focusMode: true
-    });
+    await expect
+      .poll(() =>
+        page.evaluate(() =>
+          JSON.parse(localStorage.getItem('aranha-design-preferences-v1') || '{}')
+        )
+      )
+      .toEqual({
+        version: 1,
+        theme: 'light',
+        fontScale: 'large',
+        focusMode: true
+      });
 
-    await page.getByRole('navigation', { name: 'Navegação principal' }).getByRole('button', { name: 'Checklist', exact: true }).click();
+    await page
+      .getByRole('navigation', { name: 'Navegação principal' })
+      .getByRole('button', { name: 'Checklist', exact: true })
+      .click();
     const focusReader = page.getByRole('region', { name: 'Modo foco da Checklist' });
     await expect(focusReader).toBeVisible();
     await expect(focusReader.locator('.issue-entry')).toHaveCount(1);
     const before = await focusReader.locator('.issue-entry').getAttribute('data-reading-id');
     await focusReader.getByRole('button', { name: /Próxima/ }).click();
-    await expect.poll(() => focusReader.locator('.issue-entry').getAttribute('data-reading-id')).not.toBe(before);
+    await expect
+      .poll(() => focusReader.locator('.issue-entry').getAttribute('data-reading-id'))
+      .not.toBe(before);
 
     await page.reload();
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
@@ -530,7 +592,12 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
   test('tema automático acompanha preferência escura do sistema', async ({ page }) => {
     await page.emulateMedia({ colorScheme: 'dark' });
     await initializeStorage(page);
-    await page.addInitScript(() => localStorage.setItem('aranha-design-preferences-v1', JSON.stringify({ version: 1, theme: 'auto', fontScale: 'default', focusMode: false })));
+    await page.addInitScript(() =>
+      localStorage.setItem(
+        'aranha-design-preferences-v1',
+        JSON.stringify({ version: 1, theme: 'auto', fontScale: 'default', focusMode: false })
+      )
+    );
     await page.goto('/#hoje');
     await expect(page.locator('html')).toHaveAttribute('data-theme-preference', 'auto');
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
@@ -545,7 +612,9 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await row.locator('summary').click();
 
     const targets = [
-      page.getByRole('navigation', { name: 'Navegação principal' }).getByRole('button', { name: 'Checklist', exact: true }),
+      page
+        .getByRole('navigation', { name: 'Navegação principal' })
+        .getByRole('button', { name: 'Checklist', exact: true }),
       page.getByRole('button', { name: 'Ações em lote B' }),
       row.getByRole('button', { name: /Marcar como lida/ }),
       row.getByRole('button', { name: 'Pular', exact: true }),
@@ -558,7 +627,6 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     }
   });
 
-
   test('meta semanal é privada e persiste sem recursos sociais', async ({ page }) => {
     await page.setViewportSize({ width: 360, height: 740 });
     await initializeStorage(page);
@@ -567,9 +635,15 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     const card = page.locator('.engagement-card');
     await expect(card).toBeVisible();
     await expect(card).toContainText('Ritmo pessoal');
-    await expect(card).toContainText('Não existe ranking, perfil público, sequência diária ou compartilhamento');
+    await expect(card).toContainText(
+      'Não existe ranking, perfil público, sequência diária ou compartilhamento'
+    );
     await card.getByLabel('Meta semanal de leituras').fill('7');
-    await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('aranha-engagement-v1') || '{}'))).toEqual({ version: 1, weeklyGoal: 7 });
+    await expect
+      .poll(() =>
+        page.evaluate(() => JSON.parse(localStorage.getItem('aranha-engagement-v1') || '{}'))
+      )
+      .toEqual({ version: 1, weeklyGoal: 7 });
     await expect(page.getByRole('button', { name: /Compartilhar/i })).toHaveCount(0);
     await expect(page.getByText(/Lista de compras/i)).toHaveCount(0);
   });
@@ -577,15 +651,22 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
   test('links editoriais existentes permanecem intactos', async ({ page }) => {
     await initializeStorage(page);
     await page.goto('/#explorar/links');
-    const wars = page.locator('.link-row').filter({ hasText: 'Marvel Super Heroes Secret Wars' }).first();
+    const wars = page
+      .locator('.link-row')
+      .filter({ hasText: 'Marvel Super Heroes Secret Wars' })
+      .first();
     await expect(wars).toBeVisible();
     await expect(wars.locator('summary')).toHaveCount(0);
-    const link = wars.getByRole('link', { name: 'Guerras Secretas (abre em nova aba)', exact: true });
-    await expect(link).toHaveAttribute('href', 'https://www.mediafire.com/file/i2yt34flnmkp02j/198412_Marvel_Super-Herois_Guerras_Secretas_008.cbr/file');
+    const link = wars.getByRole('link', {
+      name: 'Guerras Secretas (abre em nova aba)',
+      exact: true
+    });
+    await expect(link).toHaveAttribute(
+      'href',
+      'https://www.mediafire.com/file/i2yt34flnmkp02j/198412_Marvel_Super-Herois_Guerras_Secretas_008.cbr/file'
+    );
   });
-
 });
-
 
 test.describe('SPIDER·GUIA — sistema de listas (UX Etapa 2)', () => {
   test.beforeEach(async ({ page }) => {
@@ -593,7 +674,9 @@ test.describe('SPIDER·GUIA — sistema de listas (UX Etapa 2)', () => {
     await initializeStorage(page);
   });
 
-  test('Checklist: dropdown seleciona, fecha, restaura foco e responde a Escape/clique externo', async ({ page }) => {
+  test('Checklist: dropdown seleciona, fecha, restaura foco e responde a Escape/clique externo', async ({
+    page
+  }) => {
     await page.setViewportSize({ width: 360, height: 740 });
     await page.goto('/#checklist');
     const trigger = page.locator('.checklist-toolbar .filter-trigger');
@@ -638,27 +721,47 @@ test.describe('SPIDER·GUIA — sistema de listas (UX Etapa 2)', () => {
   test('Jornada, Links e Fontes não introduzem caixas internas escuras', async ({ page }) => {
     await page.goto('/#explorar/jornada');
     await expect(page.locator('.journey-body').first()).toBeVisible();
-    const backgrounds = async (selector: string) => page.locator(selector).first().evaluate(element => {
-      const style = getComputedStyle(element);
-      return { background: style.backgroundColor, shadow: style.boxShadow };
-    });
-    await expect.poll(() => backgrounds('.journey-body')).toEqual({ background: 'rgba(0, 0, 0, 0)', shadow: 'none' });
+    const backgrounds = async (selector: string) =>
+      page
+        .locator(selector)
+        .first()
+        .evaluate((element) => {
+          const style = getComputedStyle(element);
+          return { background: style.backgroundColor, shadow: style.boxShadow };
+        });
+    await expect
+      .poll(() => backgrounds('.journey-body'))
+      .toEqual({ background: 'rgba(0, 0, 0, 0)', shadow: 'none' });
     await page.goto('/#explorar/links');
     await expect(page.locator('.links-list details')).toHaveCount(0);
-    await expect.poll(() => backgrounds('.link-destination')).toEqual({ background: 'rgba(0, 0, 0, 0)', shadow: 'none' });
+    await expect
+      .poll(() => backgrounds('.link-destination'))
+      .toEqual({ background: 'rgba(0, 0, 0, 0)', shadow: 'none' });
     await page.goto('/#ajuda/fontes');
     const site = page.locator('.source-site-group').first();
     await site.locator('summary').first().click();
-    await expect.poll(() => backgrounds('.source-site-body')).toEqual({ background: 'rgba(0, 0, 0, 0)', shadow: 'none' });
+    await expect
+      .poll(() => backgrounds('.source-site-body'))
+      .toEqual({ background: 'rgba(0, 0, 0, 0)', shadow: 'none' });
   });
 
   test('Listas permanecem contidas em 320 px e 1440 px', async ({ page }) => {
     for (const width of [320, 1440]) {
       await page.setViewportSize({ width, height: 840 });
-      for (const route of ['#checklist', '#explorar/jornada', '#explorar/extras', '#explorar/clone', '#ajuda/fontes']) {
+      for (const route of [
+        '#checklist',
+        '#explorar/jornada',
+        '#explorar/extras',
+        '#explorar/clone',
+        '#ajuda/fontes'
+      ]) {
         await page.goto(`/${route}`);
         await expect(page.locator('main')).toBeVisible();
-        await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
+        await expect
+          .poll(() =>
+            page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)
+          )
+          .toBe(true);
       }
     }
   });
@@ -670,13 +773,17 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await initializeStorage(page);
   });
 
-  test('Pular fica visível com a edição fechada e exige confirmação só para essencial', async ({ page }) => {
+  test('Pular fica visível com a edição fechada e exige confirmação só para essencial', async ({
+    page
+  }) => {
     await page.setViewportSize({ width: 320, height: 720 });
     await page.goto('/#checklist/hq/2');
     const row = page.locator('#hq-2');
     await expect(row).toBeVisible();
     await expect(row.locator('.row-details')).not.toHaveAttribute('open', '');
-    const skip = row.locator('.reading-row-end').getByRole('button', { name: 'Pular', exact: true });
+    const skip = row
+      .locator('.reading-row-end')
+      .getByRole('button', { name: 'Pular', exact: true });
     await expect(skip).toBeVisible();
     await skip.click();
     await expect(row.locator('.row-details')).not.toHaveAttribute('open', '');
@@ -687,7 +794,9 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await row.getByRole('button', { name: 'Desfazer pulo' }).click();
     await expect.poll(async () => (await readProgress(page))['2'] || 'Não').toBe('Não');
     await expect(row).toHaveAttribute('data-progress-status', 'Não');
-    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await expect
+      .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth))
+      .toBe(true);
   });
 
   test('filtro de status acompanha marcação/desmarcação sem refresh', async ({ page }) => {
@@ -700,7 +809,10 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await page.getByRole('button', { name: 'Lidas', exact: true }).click();
     await expect(page.locator('#hq-2')).toBeVisible();
     await expect(page.locator('#hq-2')).toContainText('Lida');
-    await page.locator('#hq-2').getByRole('button', { name: /Marcar como não lida/ }).click();
+    await page
+      .locator('#hq-2')
+      .getByRole('button', { name: /Marcar como não lida/ })
+      .click();
     await expect.poll(() => page.locator('#hq-2').count()).toBe(0);
     await expect(page).toHaveURL(/f=lidas/);
   });
@@ -716,9 +828,13 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     const focus = page.getByRole('region', { name: 'Modo foco da Checklist' });
     const first = await focus.locator('.issue-entry').getAttribute('data-reading-id');
     await page.keyboard.press('j');
-    await expect.poll(() => focus.locator('.issue-entry').getAttribute('data-reading-id')).not.toBe(first);
+    await expect
+      .poll(() => focus.locator('.issue-entry').getAttribute('data-reading-id'))
+      .not.toBe(first);
     await page.keyboard.press('k');
-    await expect.poll(() => focus.locator('.issue-entry').getAttribute('data-reading-id')).toBe(first);
+    await expect
+      .poll(() => focus.locator('.issue-entry').getAttribute('data-reading-id'))
+      .toBe(first);
     await expect(focus.locator('.issue-entry')).toHaveCount(1);
     await page.reload();
     await expect(page.locator('[data-focus-toggle]')).toHaveAttribute('aria-pressed', 'true');
@@ -758,7 +874,9 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(checkbox).toHaveClass(/\bSim\b/);
   });
 
-  test('Modo Foco avança várias HQs sem voltar à Amazing Fantasy #15 após mudanças de progresso', async ({ page }) => {
+  test('Modo Foco avança várias HQs sem voltar à Amazing Fantasy #15 após mudanças de progresso', async ({
+    page
+  }) => {
     await initializeStorage(page);
     await page.goto('/#checklist/hq/1'); // A rota de entrada continua apontando para a HQ 1.
     await page.locator('[data-focus-toggle]').click();
@@ -794,7 +912,9 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     expect((await readProgress(page))['3']).toBeUndefined();
   });
 
-  test('Saga do Clone compartilha o progresso e mantém Pular no extremo direito', async ({ page }) => {
+  test('Saga do Clone compartilha o progresso e mantém Pular no extremo direito', async ({
+    page
+  }) => {
     await page.goto('/#explorar/clone');
     const row = page.locator('.clone-arc .issue-entry').first();
     await expect(row).toBeVisible();
@@ -806,12 +926,18 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(page.locator(`#hq-${id}`)).toHaveAttribute('data-progress-status', 'Sim');
   });
 
-  test('Saga do Clone usa o padrão visual compartilhado e mostra confirmação e fontes por arco', async ({ page }) => {
+  test('Saga do Clone usa o padrão visual compartilhado e mostra confirmação e fontes por arco', async ({
+    page
+  }) => {
     await page.goto('/#explorar/clone');
     const phase = page.locator('.clone-phase').first();
     await expect(phase).toHaveClass(/journey-phase/);
     await expect(phase).toHaveClass(/is-open/);
     const arc = phase.locator('.clone-arc').first();
+    const links = arc.getByRole('button', {
+      name: 'Ver links de Saga do Clone original (1975)'
+    });
+    await expect(links).toBeVisible();
     await expect(arc.locator(':scope > .cf')).toContainText('Confirmado');
     await expect(arc.locator(':scope > .cf')).toContainText('Posição: 100% evidência de fontes');
     await expect(arc.locator(':scope > .cf a.source-link')).not.toHaveCount(0);
@@ -822,13 +948,25 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(row).not.toContainText('Quanto ler:');
     await expect(row).not.toContainText('Confirmação:');
     await expect(row.locator('.extra-issue-evidence')).toHaveCount(0);
+    await links.click();
+    await expect(page).toHaveURL(/#explorar\/links\?/);
+    await expect(
+      page.getByRole('article', {
+        name: 'The Amazing Spider-Man (1963); The Amazing Spider-Man (1999); The Amazing Spider-Man (2003)'
+      })
+    ).toBeVisible();
+    await page.getByRole('button', { name: 'Voltar à leitura' }).click();
+    await expect(page).toHaveURL(/#explorar\/clone$/);
   });
 
   test('Extras com várias edições apresentam três estados independentes', async ({ page }) => {
     await page.goto('/#explorar/extras');
     await page.getByRole('button', { name: /^Filtrar leituras extras/ }).click();
     await page.getByRole('button', { name: 'Todas', exact: true }).click();
-    const card = page.locator('.extra-entry').filter({ hasText: 'Marvel Team-Up #141–150' }).first();
+    const card = page
+      .locator('.extra-entry')
+      .filter({ hasText: 'Marvel Team-Up #141–150' })
+      .first();
     await expect(card).toBeVisible();
     await card.locator(':scope > .row-details > summary').click();
     const issues = card.locator('.extra-issue-list > .issue-entry');
@@ -841,11 +979,16 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(first).toHaveAttribute('data-progress-status', 'Sim');
   });
 
-  test('Extras agrupados exibem confirmação por leitura e fontes consultadas sem repetir justificativas', async ({ page }) => {
+  test('Extras agrupados exibem confirmação por leitura e fontes consultadas sem repetir justificativas', async ({
+    page
+  }) => {
     await page.goto('/#explorar/extras');
     await page.getByRole('button', { name: /^Filtrar leituras extras/ }).click();
     await page.getByRole('button', { name: 'Todas', exact: true }).click();
-    const confirmed = page.locator('.extra-entry').filter({ hasText: 'Marvel Team-Up #141–150' }).first();
+    const confirmed = page
+      .locator('.extra-entry')
+      .filter({ hasText: 'Marvel Team-Up #141–150' })
+      .first();
     await confirmed.locator(':scope > .row-details > summary').click();
     const row = confirmed.locator('.extra-issue-list > .issue-entry').first();
     await expect(row.locator('.extra-editorial-status')).toContainText('Confirmado');
@@ -863,9 +1006,14 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(row).toHaveAttribute('data-progress-status', 'Sim');
     await expect(row.locator('.extra-editorial-status')).toContainText('Confirmado');
 
-    const partial = page.locator('.extra-entry').filter({ hasText: 'Back in Black (Homem-Aranha' }).first();
+    const partial = page
+      .locator('.extra-entry')
+      .filter({ hasText: 'Back in Black (Homem-Aranha' })
+      .first();
     await partial.locator(':scope > .row-details > summary').click();
-    await expect(partial.locator('.extra-issue-list .extra-editorial-status').first()).toContainText('Parcial');
+    await expect(
+      partial.locator('.extra-issue-list .extra-editorial-status').first()
+    ).toContainText('Parcial');
   });
 
   test('deep link distante localiza a HQ mesmo com virtualização', async ({ page }) => {
@@ -886,7 +1034,9 @@ test.describe('UX Etapa 5 — resultados contextuais de Explorar', () => {
     await page.goto('/#explorar/jornada');
     const search = page.getByRole('searchbox', { name: 'Buscar em todo o guia' });
     await search.fill('Mestre Planejador');
-    const journeyResults = page.locator('.search-result-group').filter({ has: page.getByRole('heading', { name: 'Jornada' }) });
+    const journeyResults = page
+      .locator('.search-result-group')
+      .filter({ has: page.getByRole('heading', { name: 'Jornada' }) });
     await journeyResults.getByRole('button', { name: /Mestre Planejador/ }).click();
     await expect(page).toHaveURL(/#explorar\/jornada\?marco=[a-z0-9-]+$/);
     const target = page.locator('[data-explore-target="marco"]');
@@ -906,7 +1056,9 @@ test.describe('UX Etapa 5 — resultados contextuais de Explorar', () => {
     await page.goto('/#explorar/jornada');
     const search = page.getByRole('searchbox', { name: 'Buscar em todo o guia' });
     await search.fill('The Amazing Spider-Man Annual #2');
-    const extrasGroup = page.locator('.search-result-group').filter({ has: page.getByRole('heading', { name: 'Extras' }) });
+    const extrasGroup = page
+      .locator('.search-result-group')
+      .filter({ has: page.getByRole('heading', { name: 'Extras' }) });
     await extrasGroup.getByRole('button').first().click();
     await expect(page).toHaveURL(/#explorar\/extras\?extra=[a-z0-9-]+$/);
     const target = page.locator('[data-explore-target="extra"]');
@@ -919,7 +1071,9 @@ test.describe('UX Etapa 5 — resultados contextuais de Explorar', () => {
     await page.goto('/#explorar/jornada');
     const search = page.getByRole('searchbox', { name: 'Buscar em todo o guia' });
     await search.fill('Guerras Secretas');
-    const linksGroup = page.locator('.search-result-group').filter({ has: page.getByRole('heading', { name: 'Links editoriais' }) });
+    const linksGroup = page
+      .locator('.search-result-group')
+      .filter({ has: page.getByRole('heading', { name: 'Links editoriais' }) });
     await linksGroup.getByRole('button').first().click();
     await expect(page).toHaveURL(/#explorar\/links\?link=/);
     const target = page.locator('[data-explore-target="link"]');
@@ -930,7 +1084,9 @@ test.describe('UX Etapa 5 — resultados contextuais de Explorar', () => {
     await expect(page).toHaveURL(/lq=Guerras\+Secretas/);
     await expect(page.locator('.links-list .link-row')).not.toHaveCount(0);
     await page.reload();
-    await expect(page.getByRole('searchbox', { name: 'Buscar links' })).toHaveValue('Guerras Secretas');
+    await expect(page.getByRole('searchbox', { name: 'Buscar links' })).toHaveValue(
+      'Guerras Secretas'
+    );
   });
 
   test('rotas diretas e antigas preservam query e funcionam em 320 px', async ({ page }) => {
@@ -938,7 +1094,9 @@ test.describe('UX Etapa 5 — resultados contextuais de Explorar', () => {
     await page.goto('/#jornada?marco=1&origem=antiga');
     await expect(page).toHaveURL(/#explorar\/jornada\?marco=1&origem=antiga$/);
     await expect(page.locator('#explore-milestone-1')).toBeVisible();
-    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await expect
+      .poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth))
+      .toBe(true);
     await page.goto('/#explorar/extras?extra=1');
     await expect(page.locator('#explore-extra-1')).toBeVisible();
     await page.reload();
@@ -947,9 +1105,13 @@ test.describe('UX Etapa 5 — resultados contextuais de Explorar', () => {
 });
 
 test.describe('Refactor · Checklist = sequência da Home', () => {
-  test.beforeEach(async ({ page }) => { await mockExternalAssets(page); });
+  test.beforeEach(async ({ page }) => {
+    await mockExternalAssets(page);
+  });
 
-  test('Essenciais: Home e Checklist começam na mesma HQ; foco avança sem voltar', async ({ page }) => {
+  test('Essenciais: Home e Checklist começam na mesma HQ; foco avança sem voltar', async ({
+    page
+  }) => {
     await initializeStorage(page, { preferences: { depth: 'essential' } });
     await page.goto('/#hoje');
     await expect(page.locator('.home-next')).toContainText('The Amazing Spider-Man (1963) 1');
@@ -989,18 +1151,27 @@ test.describe('Refactor · Checklist = sequência da Home', () => {
     await expect(row).toHaveAttribute('data-reading-id', '2');
   });
 
-  test('Link direto abre HQ fora do plano sem adicioná-la permanentemente à sequência', async ({ page }) => {
+  test('Link direto abre HQ fora do plano sem adicioná-la permanentemente à sequência', async ({
+    page
+  }) => {
     await initializeStorage(page, { preferences: { depth: 'essential' } });
     await page.goto('/#checklist/hq/1');
     await expect(page.locator('#hq-1')).toBeVisible();
-    await expect(page.locator('.checklist-plan-exception')).toContainText('não pertence ao plano ativo');
+    await expect(page.locator('.checklist-plan-exception')).toContainText(
+      'não pertence ao plano ativo'
+    );
     await page.goto('/#checklist');
     await expect(page.locator('.checklist-plan-exception')).toHaveCount(0);
     await page.locator('.checklist-series-toggle').first().click();
-    await expect(page.locator('.checklist-sequence-list .issue-entry').first()).toHaveAttribute('data-reading-id', '2');
+    await expect(page.locator('.checklist-sequence-list .issue-entry').first()).toHaveAttribute(
+      'data-reading-id',
+      '2'
+    );
   });
 
-  test('Ações em lote oferecem Plano atual e não expõem fases/arcos na Checklist', async ({ page }) => {
+  test('Ações em lote oferecem Plano atual e não expõem fases/arcos na Checklist', async ({
+    page
+  }) => {
     await initializeStorage(page, { preferences: { depth: 'essential' } });
     await page.goto('/#checklist');
     await page.getByRole('button', { name: /Ações em lote/ }).click();

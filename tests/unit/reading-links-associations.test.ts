@@ -1,28 +1,42 @@
 import { describe, expect, it, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { createLinkAssociations, linkTargetsFor, linkTargetsForItems } from '../../src/links/associations';
+import {
+  createLinkAssociations,
+  linkTargetsFor,
+  linkTargetsForCloneArc,
+  linkTargetsForItems
+} from '../../src/links/associations';
 import { contextualLinksTarget, resolveLinkTargets } from '../../src/views/explore-navigation';
 import type { EditorialLinkGroup } from '../../src/links/types';
 
-const known = new Set([1, 2, 3, 4]);
-const extras = new Set([10, 11]);
+const known = [1, 2, 3, 4].map((id) => ({ id, historicalNumber: id, type: 'Principal' }));
+const extras = [
+  { n: 10, itemIds: [1, 2] },
+  { n: 11, itemIds: [3] }
+];
 const sample: EditorialLinkGroup[] = [
   {
     id: 'alpha',
     title: 'Alpha',
-    itemIds: [1, 2],
-    extraId: 10,
+    targets: [
+      { kind: 'items', ids: [1, 2] },
+      { kind: 'extra', id: 10 },
+      { kind: 'extra', id: 11 },
+      { kind: 'cloneArc', id: 'arc-a' }
+    ],
     links: [
       { label: 'A', url: 'https://example.com/a' },
-      { label: 'B', url: 'https://example.com/b', extraId: 11 },
-      { label: 'C', url: 'https://example.com/c', extraId: null }
+      { label: 'B', url: 'https://example.com/b', extraTarget: 11 },
+      { label: 'C', url: 'https://example.com/c', extraTarget: null }
     ]
   },
   {
     id: 'beta',
     title: 'Beta',
-    itemIds: [2, 3],
-    extraId: 10,
+    targets: [
+      { kind: 'items', ids: [2, 3] },
+      { kind: 'extra', id: 10 }
+    ],
     links: [{ label: 'D', url: 'https://example.com/d' }]
   },
   {
@@ -35,37 +49,37 @@ const sample: EditorialLinkGroup[] = [
 
 describe('Ações contextuais — índice de Links explícitos', () => {
   it('o botão do grupo reúne somente vínculos das edições, sem repetir destinos', () => {
-    const index = createLinkAssociations(sample, known, extras);
+    const index = createLinkAssociations(sample, known, extras, new Set(['arc-a']));
     expect(linkTargetsForItems(index, [1, 2, 3, 4])).toEqual(['alpha', 'beta']);
     expect(linkTargetsForItems(index, [4])).toEqual([]);
     expect(linkTargetsForItems(index, [])).toEqual([]);
   });
-  it('indexa somente itemIds cadastrados; LGY jamais gera vínculos de HQ', () => {
-    const index = createLinkAssociations(sample, known, extras);
-    expect(linkTargetsFor(index, 'item', 1)).toEqual(['alpha']);
+  it('indexa somente targets cadastrados; coverage jamais gera vínculos de HQ', () => {
+    const index = createLinkAssociations(sample, known, extras, new Set(['arc-a']));
+    expect(linkTargetsFor(index, 'item', 1)).toEqual(['alpha', 'beta']);
     expect(linkTargetsFor(index, 'item', 2)).toEqual(['alpha', 'beta']);
-    expect(linkTargetsFor(index, 'item', 3)).toEqual(['beta']);
+    expect(linkTargetsFor(index, 'item', 3)).toEqual(['alpha', 'beta']);
     expect(linkTargetsFor(index, 'item', 4)).toEqual([]);
     expect(index.byItemId.size).toBe(3);
     expect(index.byItemId.get(700)).toBeUndefined();
   });
 
-  it('liga conjuntos Extras por extraId explícito, incluindo substituições por destino', () => {
-    const index = createLinkAssociations(sample, known, extras);
+  it('liga conjuntos Extras pelos targets explícitos', () => {
+    const index = createLinkAssociations(sample, known, extras, new Set(['arc-a']));
     expect(linkTargetsFor(index, 'extra', 10)).toEqual(['alpha', 'beta']);
     expect(linkTargetsFor(index, 'extra', 11)).toEqual(['alpha']);
   });
 
-  it('null explícito suprime herança; readingGroup e títulos não criam relações', () => {
+  it('extraTarget de destino não cria associações; título e coverage também não', () => {
     const index = createLinkAssociations(
       [
         {
           ...sample[0],
           id: 'null-only',
-          links: [{ label: 'Sem extra', url: 'https://example.com', extraId: null }]
+          targets: [{ kind: 'items', ids: [1] }],
+          links: [{ label: 'Sem extra', url: 'https://example.com', extraTarget: 11 }]
         },
-        { ...sample[2], id: 'legacy', readingGroup: 10 },
-        { ...sample[2], id: 'missing-extra', extraId: 999 }
+        { ...sample[2], id: 'coverage' }
       ],
       known,
       extras
@@ -79,19 +93,21 @@ describe('Ações contextuais — índice de Links explícitos', () => {
       [
         {
           ...sample[0],
-          itemIds: [1, 9999],
-          extraId: 9999,
+          targets: [
+            { kind: 'items', ids: [1, 9999] },
+            { kind: 'extra', id: 9999 }
+          ],
           links: [{ label: 'Inválido', url: 'javascript:alert(1)' }]
         },
         {
           ...sample[0],
-          itemIds: [1, 9999],
+          targets: [{ kind: 'items', ids: [1, 9999] }],
           links: [{ label: 'Válido', url: 'https://example.com' }]
         },
         {
           ...sample[0],
           id: 'valid',
-          itemIds: [1, 9999],
+          targets: [{ kind: 'items', ids: [1, 9999] }],
           links: [{ label: 'Válido', url: 'https://example.com' }]
         }
       ],
@@ -126,35 +142,68 @@ describe('Ações contextuais — índice de Links explícitos', () => {
     expect(contextualLinksTarget(['alpha'], 'https://other.example/')).toBe(
       '#explorar/links?link=alpha'
     );
+    expect(contextualLinksTarget(['alpha'], '#explorar/clone')).toBe(
+      '#explorar/links?link=alpha&from=%23explorar%2Fclone'
+    );
   });
 
   it('vincula explicitamente a linha principal à cobertura cadastrada, sem incluir anuais', () => {
-    const groups = JSON.parse(readFileSync('data/src/editorial/links.json', 'utf8')) as EditorialLinkGroup[];
-    const editorial = JSON.parse(readFileSync('data/src/editorial/extras.json', 'utf8')) as { n: number }[];
-    const catalog = JSON.parse(readFileSync('src/data/generated-index.json', 'utf8')) as {itemIndexFields:string[]; itemIndex:unknown[][]};
+    const groups = JSON.parse(
+      readFileSync('data/src/editorial/links.json', 'utf8')
+    ) as EditorialLinkGroup[];
+    const editorial = JSON.parse(readFileSync('data/src/editorial/extras.json', 'utf8')) as {
+      n: number;
+      itemIds?: number[];
+    }[];
+    const catalog = JSON.parse(readFileSync('src/data/generated-index.json', 'utf8')) as {
+      itemIndexFields: string[];
+      itemIndex: unknown[][];
+    };
     const idIndex = catalog.itemIndexFields.indexOf('id');
-    const ids = new Set(catalog.itemIndex.map((row) => Number(row[idIndex])));
-    const index = createLinkAssociations(groups, ids, new Set(editorial.map((entry) => entry.n)));
+    const numberIndex = catalog.itemIndexFields.indexOf('historicalNumber');
+    const typeIndex = catalog.itemIndexFields.indexOf('type');
+    const indexedItems = catalog.itemIndex.map((row) => ({
+      id: Number(row[idIndex]),
+      historicalNumber: row[numberIndex] == null ? null : Number(row[numberIndex]),
+      type: String(row[typeIndex])
+    }));
+    const clone = JSON.parse(readFileSync('data/src/editorial/clone.json', 'utf8')) as {
+      entries: Array<{ arcId: string }>;
+    };
+    const index = createLinkAssociations(
+      groups,
+      indexedItems,
+      editorial,
+      new Set(clone.entries.map((entry) => entry.arcId))
+    );
     expect(groups).toHaveLength(34);
-    expect(groups.filter((group) => !group.itemIds)).toHaveLength(0);
+    expect(groups.filter((group) => !group.targets?.length)).toHaveLength(0);
     expect(index.byExtraId.size).toBeGreaterThan(20);
     expect(index.byItemId.get(2)).toEqual(['spider-man-1963']);
-    expect(groups[0].itemIds).toHaveLength(700);
+    expect(groups[0].targets).toContainEqual({
+      kind: 'historical',
+      ranges: [{ start: 1, end: 700 }]
+    });
     expect(index.byItemId.get(1)).toBeUndefined(); // Amazing Fantasy ainda não tem destino cadastrado.
     expect(index.byItemId.get(1227)).toBeUndefined(); // Annual #1 não herda o link da série principal.
-    const numberIndex = catalog.itemIndexFields.indexOf('historicalNumber');
-    for (const row of catalog.itemIndex.filter(row => row[numberIndex] != null)) {
+    for (const row of catalog.itemIndex.filter((row) => row[numberIndex] != null)) {
       const number = Number(row[numberIndex]);
       if (number <= 964) expect(index.byItemId.has(Number(row[idIndex]))).toBe(true);
     }
     const seriesIndex = catalog.itemIndexFields.indexOf('series');
     const issueIndex = catalog.itemIndexFields.indexOf('issue');
-    for (const row of catalog.itemIndex.filter(row => row[seriesIndex] === 'The Amazing Spider-Man (2025)')) {
-      expect(linkTargetsFor(index, 'item', Number(row[idIndex])))
-        .toEqual(String(row[issueIndex]).replace(/^#/, '') === '29' ? ['spider-man-2025'] : []);
+    for (const row of catalog.itemIndex.filter(
+      (row) => row[seriesIndex] === 'The Amazing Spider-Man (2025)'
+    )) {
+      expect(linkTargetsFor(index, 'item', Number(row[idIndex]))).toEqual(
+        String(row[issueIndex]).replace(/^#/, '') === '29' ? ['spider-man-2025'] : []
+      );
     }
     expect(index.byItemId.get(259)).toContain('leitura-5');
     expect(index.byExtraId.get(38)).toContain('leitura-5');
+    expect(linkTargetsForCloneArc(index, 'power-and-responsibility-the-double')).toEqual([
+      'spider-man-1963'
+    ]);
     for (const entry of index.byItemId.values())
       for (const id of entry) expect(groups.some((group) => group.id === id)).toBe(true);
   });
@@ -192,7 +241,7 @@ describe('Captura da origem no histórico', () => {
     try {
       rememberReadingReturn('item', 256);
       expect(replaceState).toHaveBeenCalledOnce();
-      const [state, _title, href] = replaceState.mock.calls[0];
+      const [state, , href] = replaceState.mock.calls[0];
       expect(state.origin).toBe('preserved');
       expect(href).toBe('http://localhost/#checklist?f=pendentes');
       expect(readingReturnFor(state, '#checklist?f=pendentes', 'item')).toBe(256);

@@ -150,9 +150,15 @@ const LinkDestinationSchema = z
     label: z.string().min(1),
     url: z.string().min(1),
     coverage: z.array(LinkCoverageSchema).min(1).optional(),
-    extraId: z.number().int().positive().nullable().optional()
+    extraTarget: z.number().int().positive().nullable().optional()
   })
   .strict();
+const EditorialLinkTargetSchema = z.discriminatedUnion('kind', [
+  z.object({ kind: z.literal('items'), ids: z.array(z.number().int().positive()).min(1) }).strict(),
+  z.object({ kind: z.literal('historical'), ranges: z.array(LinkRangeSchema).min(1) }).strict(),
+  z.object({ kind: z.literal('extra'), id: z.number().int().positive() }).strict(),
+  z.object({ kind: z.literal('cloneArc'), id: z.string().min(1) }).strict()
+]);
 export const EditorialLinkGroupSchema = z
   .object({
     id: z.string().min(1),
@@ -160,9 +166,7 @@ export const EditorialLinkGroupSchema = z
     coverage: z.array(LinkCoverageSchema).min(1).optional(),
     notes: z.string().optional(),
     context: z.string().optional(),
-    itemIds: z.array(z.number().int().positive()).min(1).optional(),
-    extraId: z.number().int().positive().optional(),
-    readingGroup: z.number().int().positive().optional(),
+    targets: z.array(EditorialLinkTargetSchema).min(1).optional(),
     links: z.array(LinkDestinationSchema).min(1),
     stores: z.array(LinkDestinationSchema).optional(),
     libraries: z.array(LinkDestinationSchema).optional()
@@ -183,6 +187,7 @@ export const CloneEntrySchema = z
     readingOrder: z.number().int().positive(),
     phase: z.string().min(1),
     crossover: z.string(),
+    arcId: z.string().min(1),
     part: z.string(),
     note: SpoilerTextSchema,
     sourceOrder: z.number().int().positive(),

@@ -14,18 +14,6 @@ for (const [index, original] of baseline.entries()) {
   assert.ok(group, `Link original removido: ${original.id}`);
   assert.equal(group.id, original.id, `Ordem/ID de Link alterado em ${index}`);
   assert.equal(group.title, original.title, `Título alterado em ${original.id}`);
-  if ('readingGroup' in original)
-    assert.equal(
-      group.readingGroup,
-      original.readingGroup,
-      `readingGroup alterado em ${original.id}`
-    );
-  if ('itemIds' in original)
-    assert.equal(
-      JSON.stringify(group.itemIds),
-      JSON.stringify(original.itemIds),
-      `itemIds alterados em ${original.id}`
-    );
   for (const key of ['links', 'stores', 'libraries']) {
     const previous = original[key] || [];
     const actual = group[key] || [];

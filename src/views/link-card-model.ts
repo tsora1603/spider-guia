@@ -30,7 +30,9 @@ export function createEditorialLinkCards(
   groups: readonly EditorialLinkGroup[],
   extras: readonly ExtraReference[],
   model: CoverageModel | undefined,
-  itemsById: Readonly<Record<number, Pick<Reading, 'series' | 'issue'>>>
+  itemsById: Readonly<
+    Record<number, Pick<Reading, 'series' | 'issue' | 'historicalNumber' | 'type'>>
+  >
 ): EditorialLinkCard[] {
   const extrasById = new Map(extras.map((extra) => [extra.n, extra]));
   const coverageLabel = (coverage?: EditorialCoverage[]) =>
@@ -51,12 +53,12 @@ export function createEditorialLinkCards(
       return own && own !== commonCoverage;
     });
     const cardDestinations = destinations.map((destination) => {
-      // An explicit null on a destination intentionally suppresses the group association.
+      // An explicit null on a destination intentionally suppresses the inherited Extra target.
       const extraId =
         model?.resolveExtraId(group, destination) ??
-        (Object.prototype.hasOwnProperty.call(destination, 'extraId')
-          ? destination.extraId
-          : group.extraId);
+        (Object.prototype.hasOwnProperty.call(destination, 'extraTarget')
+          ? destination.extraTarget
+          : null);
       const extra = extraId != null ? extrasById.get(extraId) : undefined;
       const specificCoverage = coverageLabel(destination.coverage);
       return {
@@ -70,7 +72,31 @@ export function createEditorialLinkCards(
         extraTarget: extra ? extraAnchorKey(extra) : null
       };
     });
-    const issueNames = (group.itemIds || [])
+    const directIds = (group.targets || []).flatMap((target) =>
+      target.kind === 'items' ? target.ids : []
+    );
+    const extraIds = (group.targets || []).flatMap((target) =>
+      target.kind === 'extra' ? extrasById.get(target.id)?.itemIds || [] : []
+    );
+    const historicalTargets = (group.targets || []).filter(
+      (target) => target.kind === 'historical'
+    );
+    const historicalIds = Object.entries(itemsById)
+      .filter(
+        ([, item]) =>
+          item.type === 'Principal' &&
+          item.historicalNumber != null &&
+          historicalTargets.some(
+            (target) =>
+              target.kind === 'historical' &&
+              target.ranges.some(
+                (range) =>
+                  item.historicalNumber! >= range.start && item.historicalNumber! <= range.end
+              )
+          )
+      )
+      .map(([id]) => Number(id));
+    const issueNames = [...new Set([...directIds, ...extraIds, ...historicalIds])]
       .map((id) => itemsById[id])
       .filter(Boolean)
       .map((item) => `${item.series} ${item.issue}`);
@@ -91,6 +117,9 @@ export function createEditorialLinkCards(
               destination.coverageLabel
             ]),
             ...issueNames,
+            ...(group.targets || []).flatMap((target) =>
+              target.kind === 'cloneArc' ? [target.id] : []
+            ),
             group.notes,
             group.context
           ].join(' ')

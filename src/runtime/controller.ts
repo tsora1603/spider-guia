@@ -754,7 +754,11 @@ export function initializeRuntime() {
 
   if (new URLSearchParams(location.search).get('debug') === '1' && window.SpiderValidator) {
     const result = window.SpiderValidator.validate(DATA, linksEnabled ? editorialLinks : []);
-    const linkErrors = validateEditorialLinks(editorialLinks, { knownItemIds: new Set(readings.map(item => item.id)), extras: editorialExtras });
+    const linkErrors = validateEditorialLinks(editorialLinks, {
+      knownItemIds: new Set(readings.map(item => item.id)),
+      extras: editorialExtras,
+      cloneArcIds: new Set(cloneEntries.map((entry: any) => entry.arcId))
+    });
     result.errors.push(...linkErrors);
     result.ok = result.errors.length === 0;
     window.__SPIDER_VALIDATION__ = result;

@@ -19,16 +19,18 @@ const model = {
       )
       .join(' · '),
   resolveExtraId: (group: EditorialLinkGroup, destination?: EditorialLinkGroup['links'][number]) =>
-    destination && Object.prototype.hasOwnProperty.call(destination, 'extraId')
-      ? (destination.extraId ?? null)
-      : (group.extraId ?? null)
+    destination && Object.prototype.hasOwnProperty.call(destination, 'extraTarget')
+      ? (destination.extraTarget ?? null)
+      : ((
+          (group.targets || []).find((target) => target.kind === 'extra') as
+            { kind: 'extra'; id: number } | undefined
+        )?.id ?? null)
 };
 
 const group: EditorialLinkGroup = {
   id: 'saga-a',
   title: 'Saga A',
-  extraId: 8,
-  itemIds: [1, 2],
+  targets: [{ kind: 'extra', id: 8 }],
   coverage: [{ type: 'lgy', ranges: [{ start: 40, end: 45 }] }],
   notes: 'Leia depois da edição X',
   links: [
@@ -36,18 +38,18 @@ const group: EditorialLinkGroup = {
     {
       label: 'Annual no Mediafire',
       url: 'https://mediafire.com/b',
-      extraId: 9,
+      extraTarget: 9,
       coverage: [{ type: 'one-shot', series: 'Annual #20' }]
     },
-    { label: 'Material independente', url: 'https://example.org/c', extraId: null }
+    { label: 'Material independente', url: 'https://example.org/c', extraTarget: null }
   ]
 };
 
 describe('Explorar → Links: projeção editorial para cards diretos', () => {
   it('mantém IDs, ordem e URLs, apresentando cobertura específica sem repetir a comum', () => {
     const cards = createEditorialLinkCards([group], extras, model, {
-      1: { series: 'ASM', issue: '#1' },
-      2: { series: 'ASM', issue: '#2' }
+      1: { series: 'ASM', issue: '#1', historicalNumber: 1, type: 'Principal' },
+      2: { series: 'ASM', issue: '#2', historicalNumber: 2, type: 'Principal' }
     });
     expect(cards).toHaveLength(1);
     expect(cards[0].key).toBe('saga-a');
@@ -72,7 +74,7 @@ describe('Explorar → Links: projeção editorial para cards diretos', () => {
       null
     ]);
     const invalid = createEditorialLinkCards(
-      [{ ...group, extraId: 999, links: [group.links[0]] }],
+      [{ ...group, targets: [{ kind: 'extra', id: 999 }], links: [group.links[0]] }],
       extras,
       model,
       {}
@@ -80,7 +82,7 @@ describe('Explorar → Links: projeção editorial para cards diretos', () => {
     expect(invalid[0].destinations[0].extraTarget).toBeNull();
   });
 
-  it('permite novas entradas sem itemIds nem ficha de Extras', () => {
+  it('permite novas entradas sem targets nem ficha de Extras', () => {
     const card = createEditorialLinkCards(
       [
         {

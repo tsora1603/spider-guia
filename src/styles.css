@@ -651,6 +651,7 @@ button.skip-action.reading-skip{min-height:44px;padding:8px 0;border:0;backgroun
 .reading-status-pending{color:var(--text-muted)}
 .clone-arc>.issue-entry{border-top:1px solid var(--border-subtle)}
 .clone-arc>.issue-entry:first-of-type{border-top:0}
+.clone-arc-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}.clone-arc-heading h4{margin:0}.clone-arc-heading .reading-links-action{margin:0}
 .clone-context{margin-bottom:10px}
 .extra-issue-list{margin:12px 0 0;border:1px solid var(--border-subtle);border-radius:var(--radius-sm);box-shadow:none}
 .extra-issue-list>.issue-entry:first-child{border-top:0}

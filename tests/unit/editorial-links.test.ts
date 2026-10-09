@@ -11,14 +11,17 @@ type Coverage =
   | { type: 'lgy'; ranges: IssueRange[] }
   | { type: 'series'; series: string; volume?: string; ranges: IssueRange[]; suffix?: string }
   | { type: 'one-shot'; series: string; volume?: string };
+type Target =
+  | { kind: 'items'; ids: number[] }
+  | { kind: 'historical'; ranges: IssueRange[] }
+  | { kind: 'extra'; id: number }
+  | { kind: 'cloneArc'; id: string };
 type Group = {
   id: string;
   title: string;
-  links: Array<{ label: string; url: string; coverage?: Coverage[]; extraId?: number | null }>;
-  itemIds?: number[];
+  links: Array<{ label: string; url: string; coverage?: Coverage[]; extraTarget?: number | null }>;
+  targets?: Target[];
   coverage?: Coverage[];
-  extraId?: number;
-  readingGroup?: number;
 };
 type LinkModel = {
   formatCoverage(coverage: Coverage[]): string;
@@ -27,7 +30,8 @@ type LinkModel = {
     groups: Group[],
     options?: {
       knownItemIds?: Set<number>;
-      extras?: Array<{ n: number; readingGroup?: number; itemIds: number[] }>;
+      extras?: Array<{ n: number; itemIds: number[] }>;
+      cloneArcIds?: Set<string>;
     }
   ): Array<{ code: string; message: string }>;
 };
@@ -40,7 +44,8 @@ function loadModel() {
 }
 
 const fakeItemIds = new Set(Array.from({ length: 1301 }, (_, i) => i + 1));
-const fakeExtras = [{ n: 30, readingGroup: 5, itemIds: [256, 257, 258] }];
+const fakeExtras = [{ n: 30, itemIds: [256, 257, 258] }];
+const fakeCloneArcs = new Set(['arc-a']);
 
 const example = (): Group => ({
   id: 'novo-exemplo',
@@ -68,24 +73,40 @@ const example = (): Group => ({
 const errorsFor = (group: Group) => {
   const { model } = loadModel();
   return model
-    .validateEditorialLinks([group], { knownItemIds: fakeItemIds, extras: fakeExtras })
+    .validateEditorialLinks([group], {
+      knownItemIds: fakeItemIds,
+      extras: fakeExtras,
+      cloneArcIds: fakeCloneArcs
+    })
     .map((error) => error.code);
 };
 
 describe('Links editoriais — cobertura e associações explícitas', () => {
-  it('preserva o registro original válido com itemIds opcionais', () => {
+  it('preserva os grupos e centraliza todas as associações em targets', () => {
     const { model, groups } = loadModel();
     expect(groups).toHaveLength(34);
     expect(groups.filter((group) => group.coverage)).toHaveLength(29);
-    expect(groups.find((group) => group.id === 'leitura-5')).toMatchObject({
-      itemIds: [256, 257, 258, 259],
-      extraId: 30
-    });
+    expect(groups.every((group) => group.targets?.length)).toBe(true);
+    expect(groups.find((group) => group.id === 'leitura-5')?.targets).toEqual(
+      expect.arrayContaining([
+        { kind: 'extra', id: 30 },
+        { kind: 'extra', id: 38 }
+      ])
+    );
+    expect(JSON.stringify(groups)).not.toMatch(/"(?:itemIds|extraId|readingGroup)"/);
     const sourceExtraGroups = JSON.parse(
       readFileSync(resolve('data/src/editorial/extras.json'), 'utf8')
     );
     expect(
-      model.validateEditorialLinks(groups, { knownItemIds: fakeItemIds, extras: sourceExtraGroups })
+      model.validateEditorialLinks(groups, {
+        knownItemIds: fakeItemIds,
+        extras: sourceExtraGroups,
+        cloneArcIds: new Set(
+          JSON.parse(readFileSync(resolve('data/src/editorial/clone.json'), 'utf8')).entries.map(
+            (entry: { arcId: string }) => entry.arcId
+          )
+        )
+      })
     ).toHaveLength(0);
   });
 
@@ -105,15 +126,18 @@ describe('Links editoriais — cobertura e associações explícitas', () => {
     ).toBe('Série X #50.LR–54.LR');
   });
 
-  it('rejeita falta de coverage quando itemIds não são fornecidos', () => {
+  it('rejeita falta simultânea de coverage e targets', () => {
     const group = example();
     delete group.coverage;
     expect(errorsFor(group)).toContain('links.association');
   });
 
-  it('rejeita ID de grupo duplicado, itemIds duplicados e IDs inexistentes', () => {
+  it('rejeita ID de grupo duplicado, IDs de itens duplicados e inexistentes', () => {
     const { model } = loadModel();
-    const group = { ...example(), itemIds: [256, 256, 9999] };
+    const group: Group = {
+      ...example(),
+      targets: [{ kind: 'items', ids: [256, 256, 9999] }]
+    };
     const errors = model.validateEditorialLinks([group, structuredClone(group)], {
       knownItemIds: fakeItemIds
     });
@@ -149,14 +173,21 @@ describe('Links editoriais — cobertura e associações explícitas', () => {
     expect(errorsFor(group)).toContain('links.url');
   });
 
-  it('rejeita referência a Extra inexistente e divergência de readingGroup', () => {
-    const group = { ...example(), itemIds: [256], extraId: 30, readingGroup: 12 };
-    expect(errorsFor(group)).toContain('links.extra');
-    group.readingGroup = 5;
+  it('valida referências estáveis de Extras, arcos e substituições por destino', () => {
+    const group: Group = {
+      ...example(),
+      targets: [
+        { kind: 'extra', id: 30 },
+        { kind: 'cloneArc', id: 'arc-a' }
+      ]
+    };
     expect(errorsFor(group)).toEqual([]);
-    group.extraId = 999;
+    group.targets = [{ kind: 'extra', id: 999 }];
     expect(errorsFor(group)).toContain('links.extra');
-    delete group.extraId;
+    group.targets = [{ kind: 'cloneArc', id: 'desconhecido' }];
+    expect(errorsFor(group)).toContain('links.cloneArc');
+    group.targets = [{ kind: 'extra', id: 30 }];
+    group.links[0].extraTarget = 999;
     expect(errorsFor(group)).toContain('links.extra');
   });
 });
