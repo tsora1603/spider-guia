@@ -18,6 +18,94 @@
 
 window.EDITORIAL_LINKS = [
   {
+    "id": "spider-man-1963",
+    "title": "The Amazing Spider-Man (1963); The Amazing Spider-Man (1999); The Amazing Spider-Man (2003)",
+    "context": "Edições: AMS (1963): LGY #1-441 | AMS (1999): LGY #442-499 | AMS (2003): LGY #500-700.",
+    "links": [
+      {
+        "label": "Link [Google Drive]",
+        "url": "https://drive.google.com/drive/folders/1Hw9zsdJMEOEQWsJCQNwVloUMzwfiUBT7?usp=drive_link",
+      }
+    ]
+  },
+  {
+    "id": "superior-spider-man-2013",
+    "title": "The Superior Spider-Man (2013)",
+    "context": "Edições: LGY #701-733.",
+    "links": [
+      {
+        "label": "Link [SóQuadrinhos]",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2013/06/superior-homem-aranha-2013.html",
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2014",
+    "title": "The Amazing Spider-Man (2014)",
+    "context": "Edições: LGY #734-751.",
+    "links": [
+      {
+        "label": "Link [SóQuadrinhos]",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2014/05/o-espetacular-homem-aranha-2014.html",
+      }
+    ]
+  },
+  {
+    "id": "renew-your-vows",
+    "title": "Amazing Spider-Man: Renew Your Vows (2015)",
+    "context": "Edições: LGY #752-756.",
+    "links": [
+      {
+        "label": "Link [GoFile]",
+        "url": "https://gofile.io/d/VXeqr0Uj"
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2016",
+    "title": "The Amazing Spider-Man (2016)",
+    "context": "Edições: LGY #757-801.",
+    "links": [
+      {
+        "label": "Link [SóQuadrinhos]",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2017/01/o-espantoso-homem-aranha-2016.html",
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2018",
+    "title": "The Amazing Spider-Man (2018)",
+    "context": "Edições: LGY #802-894.",
+    "links": [
+      {
+        "label": "Link [Google Drive]",
+        "url": "https://drive.google.com/drive/folders/1Nqbm2J-yx12u8OknZjtIFwkMr75yVtoM?usp=drive_link",
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2022",
+    "title": "The Amazing Spider-Man (2022)",
+    "context": "Edições: LGY #895-964.",
+    "links": [
+      {
+        "label": "Link [GoFile]",
+        "url": "https://gofile.io/d/TldFOBKr",
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2025",
+    "title": "The Amazing Spider-Man (2025)",
+    "context": "INCOMPLETO!!! Capítulo mais recente: #29 (LGY #993). Última atualização: 10/08/2026.",
+    "links": [
+      {
+        "label": "Link [Google Drive]",
+        "url": "https://drive.google.com/drive/folders/1It5XuWhGpBCLOMofCY9bMz0Gtsmtxu1O?usp=sharing",
+      }
+    ]
+  },
+  {
     "id": "leitura-4",
     "readingGroup": 4,
     "title": "Marvel Super Heroes Secret Wars (Guerras Secretas) #8 (dez/1984)",
@@ -28,7 +116,7 @@ window.EDITORIAL_LINKS = [
     "links": [
       {
         "label": "Guerras Secretas",
-        "url": "https://www.mediafire.com/file/i2yt34flnmkp02j/198412_Marvel_Super-Herois_Guerras_Secretas_008.cbr/file"
+        "url": "https://www.mediafire.com/file/i2yt34flnmkp02j/198412_Marvel_Super-Herois_Guerras_Secretas_008.cbr/file",
       }
     ]
   },
@@ -80,7 +168,7 @@ window.EDITORIAL_LINKS = [
     "links": [
       {
         "label": "Arco completo (GoFile)",
-        "url": "https://gofile.io/d/llaPQfHo%20jean%20dewolff"
+        "url": "https://gofile.io/d/llaPQfHo"
       }
     ]
   },
@@ -125,7 +213,7 @@ window.EDITORIAL_LINKS = [
     "links": [
       {
         "label": "Arco completo (GoFile)",
-        "url": "https://gofile.io/d/XyblnkJo%20carnificina%20max%20anos%2090"
+        "url": "https://gofile.io/d/XyblnkJo"
       }
     ]
   },
@@ -155,7 +243,7 @@ window.EDITORIAL_LINKS = [
     "links": [
       {
         "label": "Arco completo (Mega)",
-        "url": "https://mega.nz/folder/iIo2WJTS"
+        "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
       }
     ]
   },
@@ -214,7 +302,7 @@ window.EDITORIAL_LINKS = [
     "links": [
       {
         "label": "Arco completo (Mega)",
-        "url": "https://mega.nz/folder/iIo2WJTS"
+        "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
       }
     ]
   },
@@ -229,7 +317,7 @@ window.EDITORIAL_LINKS = [
     "links": [
       {
         "label": "Arco completo (Mega)",
-        "url": "https://mega.nz/folder/iIo2WJTS"
+        "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
       }
     ]
   },
@@ -265,7 +353,7 @@ window.EDITORIAL_LINKS = [
     "links": [
       {
         "label": "Arco completo + Minisséries (Mega)",
-        "url": "https://mega.nz/folder/iIo2WJTS"
+        "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
       }
     ]
   },

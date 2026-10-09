@@ -1,12 +1,23 @@
+# Dependências
 node_modules/
+
+# Build
 dist/
+.vite/
+
+# Testes
+coverage/
 playwright-report/
 test-results/
-coverage/
-.DS_Store
+
+# Logs
 *.log
 
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Configurações privadas
 .env
 .env.*
 !.env.example
-.netlify/
