@@ -31,7 +31,6 @@ export function buildReadingGroups(editorialExtras) {
       where: extra.where ?? null,
       links: extra.links || [],
       itemIds: extra.itemIds || [],
-      brazilianEdition: extra.brazilianEdition || '',
       sourceRefs: extra.src || [],
       justification: extra.just || extra.confirmationDetail || ''
     }));

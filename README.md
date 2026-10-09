@@ -21,25 +21,25 @@ Para checagem mais ampla: `npm run e:check`, `npm run reset:local-smoke` e `npm 
 
 ## Onde fica cada coisa
 
-| Tarefa | Fonte editável |
-| --- | --- |
-| Links de **Explorar → Links** | `public/links.js` |
-| Habilitar Links, configurar Supabase e flag de reset remoto | `public/config.js` |
-| HQs e `readingOrder` | `data/src/catalog/` |
-| Extras, Saga do Clone, fases, marcos e metodologia | `data/src/editorial/`, `data/src/fases.json`, `data/src/marcos.json` |
-| Glossário e fontes | `data/src/glossario.json`, `data/src/fontes.json` |
-| Interface, navegação e estilos | `src/`, `src/design-system.css`, `src/styles.css` |
-| Ícone do navegador | `public/icon.svg` |
+| Tarefa                                                      | Fonte editável                                                       |
+| ----------------------------------------------------------- | -------------------------------------------------------------------- |
+| Links de **Explorar → Links**                               | `data/src/editorial/links.json`                                    |
+| Habilitar Links, configurar Supabase e flag de reset remoto | `public/config.js`                                                   |
+| HQs e `readingOrder`                                        | `data/src/catalog/`                                                  |
+| Extras, Saga do Clone, fases, marcos e metodologia          | `data/src/editorial/`, `data/src/fases.json`, `data/src/marcos.json` |
+| Glossário e fontes                                          | `data/src/glossario.json`, `data/src/fontes.json`                    |
+| Interface, navegação e estilos                              | `src/`, `src/design-system.css`, `src/styles.css`                    |
+| Ícone do navegador                                          | `public/icon.svg`                                                    |
 
 **Não edite arquivos gerados** (`data.js`, `src/data/chunks/`, `src/data/generated-*.json`, `src/data/generated-chunks.ts`). Eles são reconstruídos por `npm run data:build` a partir de `data/src/`.
 
-Para adicionar Links, preserve os grupos e URLs existentes, acrescente o destino em `public/links.js` e rode `npm run links:check`. Para alterações editoriais, rode `npm run data:build` e `npm run data:check`. Mudanças em IDs ou ordem de leitura podem afetar progresso salvo e exigem migração deliberada.
+Para adicionar Links, preserve os grupos e URLs existentes, acrescente o destino em `data/src/editorial/links.json` e rode `npm run links:check`. O modelo de cobertura, as associações explícitas com Extras e exemplos de cadastro estão em [Arquitetura e dados](docs/ARQUITETURA.md#links-editoriais-e-cobertura). Para alterações editoriais, rode `npm run data:build` e `npm run data:check`. Mudanças em IDs ou ordem de leitura podem afetar progresso salvo e exigem migração deliberada.
 
 ## Como o usuário navega
 
 - **Hoje:** continuar lendo, “Já li até...”, progresso e ritmo.
 - **Checklist:** sequência contínua do plano ativo, com status **Não / Sim / Pulei** e Modo Foco; usa o mesmo plano/ordem da Home.
-- **Explorar:** Jornada (fases e marcos), Extras (fichas e fontes), Saga do Clone e Links (quando habilitados).
+- **Explorar:** Jornada (fases e marcos), Extras (fichas e fontes), Saga do Clone e Links (quando habilitados). Links são cards de largura total com destinos externos acessíveis diretamente; `coverage` fornece o resumo de edições e `extraId` apresenta um botão para a ficha exata de Extras apenas quando a associação é válida. A busca local e `#explorar/links?link=<id>` continuam disponíveis.
 - **Ajuda:** como usar, glossário, fontes e metodologia.
 - **Configurações:** plano, spoilers, aparência, conta, backup e reset.
 
@@ -59,3 +59,25 @@ Uma leitura extra com ficha editorial pode exibir **Mais informações** na Chec
 - [Sistema visual](docs/DESIGN-SYSTEM.md) — tokens, componentes e padrões de acessibilidade.
 
 **Evidências editoriais (não documentação operacional):** `data/review/extras-confirmacao-60-40.md` (análise detalhada dos 108 Extras) e `data/review/spoiler-suggestions.md` (sugestões para revisão, sem aplicação automática).
+
+### Links contextuais nas leituras
+
+Os CTAs **Ver links desta leitura** na Checklist, no Modo Foco e nas
+fichas de Extras usam `src/links/associations.ts`. O índice é baseado
+exclusivamente em `data/src/editorial/links.json`: `itemIds` para HQs e `extraId` (inclusive
+sobrescritas ou `null` no destino) para fichas de Extras. Cobertura LGY,
+nomes e `readingGroup` nunca geram associações implícitas. Sem vínculo
+explícito e URL HTTP(S) válida, o CTA não aparece.
+
+O hash `#explorar/links?link=<id>` permanece aceito. Para múltiplos
+cards, repita `link` na URL. O parâmetro opcional `from` registra uma rota
+interna de retorno; o botão **Voltar à leitura** restaura a ficha ou o hash
+de origem, sem alterar o estado de progresso. Navegação Back/Forward funciona
+independentemente do botão. Notas bibliográficas brasileiras usadas como evidência foram preservadas
+em `data/src/editorial/publication-evidence.json`, fora dos dados de interface;
+as fontes de pesquisa da aplicação continuam em `data/src/fontes.json`.
+
+Na volta pelo histórico do navegador, a posição da HQ/Extra é recuperada por
+um marcador de interface na própria entrada do histórico (`history.state`).
+Filtros e buscas do hash original permanecem intactos; o marcador não entra em
+progresso, backup, Supabase ou sincronização.

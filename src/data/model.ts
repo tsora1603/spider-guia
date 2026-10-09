@@ -12,7 +12,6 @@ export interface Reading {
   issue: string;
   phase: string;
   weight: string;
-  brazilianEdition: string;
   notes: string;
   readingOrder: number;
   extraNote: string;
@@ -40,7 +39,6 @@ const toIndexReading = (row: unknown[]): Reading => {
     issue: String(indexField(row, 'issue')),
     phase: String(indexField(row, 'phase')),
     weight: String(indexField(row, 'weight')),
-    brazilianEdition: '',
     notes: '',
     readingOrder: Number(indexField(row, 'readingOrder')),
     extraNote: '',
@@ -70,7 +68,6 @@ const toDetailedReading = (row: unknown[], fields: string[]): Reading => {
     issue: String(value('issue')),
     phase: String(value('phase')),
     weight: String(value('weight')),
-    brazilianEdition: String(value('brazilianEdition') ?? ''),
     notes: String(value('instructions') ?? ''),
     readingOrder: Number(value('readingOrder')),
     extraNote: String(value('note') ?? ''),
@@ -171,7 +168,6 @@ export const readingGroups = editorialExtras
     where: extra.where ?? null,
     links: extra.links || [],
     ords: extra.itemIds || [],
-    nota: extra.brazilianEdition || '',
     src: extra.src || [],
     just: extra.just || extra.confirmationDetail || ''
   }));

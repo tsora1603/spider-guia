@@ -7,6 +7,7 @@ import { SourceLinks } from './SourceLinks';
 import { SpoilerText } from './SpoilerText';
 import { SkipButton, StatusButton, useProgressCounts, progressStatusLabel } from './Progress';
 import { IssueRow } from './IssueRow';
+import { ReadingLinksAction } from './ReadingLinksAction';
 import { ProgressBarVisual } from '../design/ProgressVisuals';
 
 export { SourceLinks } from './SourceLinks';
@@ -100,7 +101,7 @@ export function ExtraCard({ extra, editorialIndex, targeted = false }: { extra: 
           <EvidenceBox status={extra.confirmation} detail={extra.confirmationDetail || extra.just} sources={extra.src || []} criteria={extra.confirmationCriteria} />
           <KeyValue label="Em que ordem" value={extra.sequence} />
           <KeyValue label="Por que ajuda" value={extra.why} />
-          {extra.brazilianEdition ? <div class="ex"><Icon name="book" /> {extra.brazilianEdition}</div> : null}
+          <ReadingLinksAction kind="extra" id={extra.n} />
           {state.total > 1 ? <div class="extra-issue-list content-list disclosure-list ui-list" aria-label={`Edições de ${extra.name}`}>
             {extra.itemIds.map((itemId: number) => {
               const item = itemsById[itemId];
@@ -109,6 +110,7 @@ export function ExtraCard({ extra, editorialIndex, targeted = false }: { extra: 
                 item={item}
                 anchor={false}
                 showBulkAction={false}
+                showLinks={false}
                 extraEvidence={{ confirmation: extra.confirmation, sources: extra.src || [] }}
               /> : null;
             })}

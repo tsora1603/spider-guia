@@ -1,0 +1,1003 @@
+[
+  {
+    "id": "spider-man-1963",
+    "title": "The Amazing Spider-Man (1963); The Amazing Spider-Man (1999); The Amazing Spider-Man (2003)",
+    "links": [
+      {
+        "label": "Link [Google Drive]",
+        "url": "https://drive.google.com/drive/folders/1Hw9zsdJMEOEQWsJCQNwVloUMzwfiUBT7?usp=drive_link"
+      }
+    ],
+    "coverage": [
+      {
+        "type": "lgy",
+        "series": "The Amazing Spider-Man",
+        "volume": "1963",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 441
+          }
+        ]
+      },
+      {
+        "type": "lgy",
+        "series": "The Amazing Spider-Man",
+        "volume": "1999",
+        "ranges": [
+          {
+            "start": 442,
+            "end": 499
+          }
+        ]
+      },
+      {
+        "type": "lgy",
+        "series": "The Amazing Spider-Man",
+        "volume": "2003",
+        "ranges": [
+          {
+            "start": 500,
+            "end": 700
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "superior-spider-man-2013",
+    "title": "The Superior Spider-Man (2013)",
+    "links": [
+      {
+        "label": "Link [SóQuadrinhos]",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2013/06/superior-homem-aranha-2013.html"
+      }
+    ],
+    "coverage": [
+      {
+        "type": "lgy",
+        "ranges": [
+          {
+            "start": 701,
+            "end": 733
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2014",
+    "title": "The Amazing Spider-Man (2014)",
+    "links": [
+      {
+        "label": "Link [SóQuadrinhos]",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2014/05/o-espetacular-homem-aranha-2014.html"
+      }
+    ],
+    "coverage": [
+      {
+        "type": "lgy",
+        "ranges": [
+          {
+            "start": 734,
+            "end": 751
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "renew-your-vows",
+    "title": "Amazing Spider-Man: Renew Your Vows (2015)",
+    "links": [
+      {
+        "label": "Link [GoFile]",
+        "url": "https://gofile.io/d/VXeqr0Uj"
+      }
+    ],
+    "coverage": [
+      {
+        "type": "lgy",
+        "ranges": [
+          {
+            "start": 752,
+            "end": 756
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2016",
+    "title": "The Amazing Spider-Man (2016)",
+    "links": [
+      {
+        "label": "Link [SóQuadrinhos]",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2017/01/o-espantoso-homem-aranha-2016.html"
+      }
+    ],
+    "coverage": [
+      {
+        "type": "lgy",
+        "ranges": [
+          {
+            "start": 757,
+            "end": 801
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2018",
+    "title": "The Amazing Spider-Man (2018)",
+    "links": [
+      {
+        "label": "Link [Google Drive]",
+        "url": "https://drive.google.com/drive/folders/1Nqbm2J-yx12u8OknZjtIFwkMr75yVtoM?usp=drive_link"
+      }
+    ],
+    "coverage": [
+      {
+        "type": "lgy",
+        "ranges": [
+          {
+            "start": 802,
+            "end": 894
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2022",
+    "title": "The Amazing Spider-Man (2022)",
+    "links": [
+      {
+        "label": "Link [GoFile]",
+        "url": "https://gofile.io/d/TldFOBKr"
+      }
+    ],
+    "coverage": [
+      {
+        "type": "lgy",
+        "ranges": [
+          {
+            "start": 895,
+            "end": 964
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spider-man-2025",
+    "title": "The Amazing Spider-Man (2025)",
+    "links": [
+      {
+        "label": "Link [Google Drive]",
+        "url": "https://drive.google.com/drive/folders/1It5XuWhGpBCLOMofCY9bMz0Gtsmtxu1O?usp=sharing"
+      }
+    ],
+    "notes": "INCOMPLETO!!! Capítulo mais recente: #29 (LGY #993). Última atualização: 10/08/2026.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "The Amazing Spider-Man",
+        "volume": "2025",
+        "ranges": [
+          {
+            "start": 29,
+            "end": 29
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "leitura-4",
+    "readingGroup": 4,
+    "title": "Marvel Super Heroes Secret Wars (Guerras Secretas) #8 (dez/1984)",
+    "itemIds": [255],
+    "links": [
+      {
+        "label": "Guerras Secretas",
+        "url": "https://www.mediafire.com/file/i2yt34flnmkp02j/198412_Marvel_Super-Herois_Guerras_Secretas_008.cbr/file"
+      }
+    ],
+    "notes": "A Amazing #252 (mai/1984) saiu antes e já mostra Peter de traje preto, sem explicar de onde veio. A Secret Wars #8 mostra o momento em que ele recebe o traje.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Marvel Super Heroes Secret Wars",
+        "volume": "1984",
+        "ranges": [
+          {
+            "start": 8,
+            "end": 8
+          }
+        ]
+      }
+    ],
+    "extraId": 29
+  },
+  {
+    "id": "leitura-5",
+    "readingGroup": 5,
+    "title": "Marvel Team-Up #141–150 e annual #7; Peter Parker, The Spectacular Spider-Man #90–100; AMS annual #20",
+    "itemIds": [256, 257, 258, 259],
+    "links": [
+      {
+        "label": "Marvel Team Up",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2011/08/marvel-team-up-1972.html",
+        "coverage": [
+          {
+            "type": "series",
+            "series": "Marvel Team-Up",
+            "ranges": [
+              {
+                "start": 141,
+                "end": 150
+              }
+            ]
+          },
+          {
+            "type": "series",
+            "series": "Marvel Team-Up Annual",
+            "ranges": [
+              {
+                "start": 7,
+                "end": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "AMS Annual #20",
+        "url": "https://drive.google.com/file/d/1iftvFekVFgcrRueCT5jZX4NVa4nRTqxm/view?usp=drive_link",
+        "extraId": 38,
+        "coverage": [
+          {
+            "type": "series",
+            "series": "The Amazing Spider-Man Annual",
+            "ranges": [
+              {
+                "start": 20,
+                "end": 20
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": "Amplia a Saga do Traje Negro. O essencial já está na Amazing: a descoberta de que o traje é vivo, na #258.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Marvel Team-Up",
+        "ranges": [
+          {
+            "start": 141,
+            "end": 150
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "Marvel Team-Up Annual",
+        "ranges": [
+          {
+            "start": 7,
+            "end": 7
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "Peter Parker, The Spectacular Spider-Man",
+        "ranges": [
+          {
+            "start": 90,
+            "end": 100
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "The Amazing Spider-Man Annual",
+        "ranges": [
+          {
+            "start": 20,
+            "end": 20
+          }
+        ]
+      }
+    ],
+    "extraId": 30
+  },
+  {
+    "id": "leitura-6",
+    "readingGroup": 6,
+    "title": "Web of Spider-Man #1 (1985)",
+    "itemIds": [272],
+    "links": [
+      {
+        "label": "Web of Spider",
+        "url": "https://www.mediafire.com/file/8i456yc0b52tc5l/"
+      }
+    ],
+    "notes": "A Saga do Traje Negro fecha nesta edição. A #264 ainda mostra Peter com um traje preto comum, não com o simbionte.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Web of Spider-Man",
+        "volume": "1985",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 1
+          }
+        ]
+      }
+    ],
+    "extraId": 33
+  },
+  {
+    "id": "leitura-7",
+    "readingGroup": 7,
+    "title": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
+    "itemIds": [278],
+    "links": [
+      {
+        "label": "Arco completo (GoFile)",
+        "url": "https://gofile.io/d/llaPQfHo"
+      }
+    ],
+    "notes": "Peter e o Demolidor caçam o assassino de uma amiga policial. Mostra os limites morais de Peter. A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Peter Parker, The Spectacular Spider-Man",
+        "ranges": [
+          {
+            "start": 107,
+            "end": 110
+          }
+        ]
+      }
+    ],
+    "extraId": 34
+  },
+  {
+    "id": "leitura-8",
+    "readingGroup": 8,
+    "title": "The Amazing Spider-Man Annual #21 (1987), o casamento",
+    "itemIds": [303],
+    "links": [
+      {
+        "label": "AMS Annual #21",
+        "url": "https://www.mediafire.com/download/83knz3z28wrv5gn/O+Espantoso+Homem-Aranha+Anual+21+%28Lemuria%29.cbr"
+      }
+    ],
+    "notes": "O casamento acontece no Annual, fora da contagem. Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. É este casamento que One More Day apaga (#544–545).",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "The Amazing Spider-Man Annual",
+        "volume": "1987",
+        "ranges": [
+          {
+            "start": 21,
+            "end": 21
+          }
+        ]
+      }
+    ],
+    "extraId": 42
+  },
+  {
+    "id": "leitura-10",
+    "readingGroup": 10,
+    "title": "A Última Caçada de Kraven (4 edições fora da Amazing)",
+    "itemIds": [305],
+    "links": [
+      {
+        "label": "Arco completo (SoQuadrinhos)",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2011/08/homem-aranha-ultima-cacada-de-kraven.html"
+      }
+    ],
+    "notes": "Só as duas edições da Amazing deixam o arco cortado. Mostra do que Peter é feito. Hunted (Amazing 2018, #16–23) remete a esta história.",
+    "extraId": 44
+  },
+  {
+    "id": "leitura-11",
+    "readingGroup": 11,
+    "title": "Maximum Carnage (1993)",
+    "itemIds": [391],
+    "links": [
+      {
+        "label": "Arco completo (GoFile)",
+        "url": "https://gofile.io/d/XyblnkJo"
+      }
+    ],
+    "notes": "Só 3 dos 14 capítulos estão na Amazing (#378–380). Quer o arco completo? Siga a ordem da coluna ao lado. Prefere a linha enxuta? Pule. Carnificina já estreou nas #361–363, dentro da contagem. Mas as três edições ficam com buracos de enredo.",
+    "extraId": 62
+  },
+  {
+    "id": "leitura-13",
+    "readingGroup": 13,
+    "title": "The Gathering of Five / The Final Chapter (1998)",
+    "itemIds": [605],
+    "links": [
+      {
+        "label": "Arco completo (SoQuadrinhos)",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2011/08/homem-aranha-reuniao-dos-cinco-1998.html"
+      }
+    ],
+    "notes": "A #441 não fecha a história. O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. Só depois começa o volume de 1999 (#442). A verdadeira Tia May reaparece aqui (aba 'Marcos e arcos').",
+    "extraId": 71
+  },
+  {
+    "id": "leitura-14",
+    "readingGroup": 14,
+    "title": "The Other (2005–06)",
+    "itemIds": [690],
+    "links": [
+      {
+        "label": "Arco completo (Mega)",
+        "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
+      }
+    ],
+    "notes": "Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da aba 'Marcos e arcos' lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4.",
+    "extraId": 77
+  },
+  {
+    "id": "leitura-15",
+    "readingGroup": 15,
+    "title": "Civil War (Guerra Civil) #1–2 (2006)",
+    "itemIds": [698],
+    "links": [
+      {
+        "label": "Arco completo (SoQuadrinhos)",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2011/08/guerra-civil-2006.html"
+      }
+    ],
+    "notes": "Na Civil War #2, Peter revela a identidade em rede nacional. Sem ela, a #532 já começa com ele desmascarado.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Civil War",
+        "volume": "2006",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 2
+          }
+        ]
+      }
+    ],
+    "extraId": 78
+  },
+  {
+    "id": "leitura-16",
+    "readingGroup": 16,
+    "title": "Civil War #3–7 (2006–07)",
+    "itemIds": [701],
+    "links": [
+      {
+        "label": "Arco completo (SoQuadrinhos)",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2011/08/guerra-civil-2006.html"
+      }
+    ],
+    "notes": "Peter muda de lado e luta ao lado do Capitão América. Isso já aparece na Amazing (#532–538, 'Civil War: Amazing Spider-Man'). Um resumo do evento dá o contexto. Leia as edições só se quiser o evento todo. O peso é recomendação deste guia.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Civil War",
+        "volume": "2006–2007",
+        "ranges": [
+          {
+            "start": 3,
+            "end": 7
+          }
+        ]
+      }
+    ],
+    "extraId": 79
+  },
+  {
+    "id": "leitura-17",
+    "readingGroup": 17,
+    "title": "Back in Black (Homem-Aranha: De Volta ao Negro): Friendly Neighborhood Spider-Man #17–23 e Annual #1; Sensational Spider-Man (2006) #35–40 e Annual #1",
+    "itemIds": [707, 708, 710, 711, 713, 714, 716, 717, 718, 719, 720, 722, 723, 724, 725],
+    "links": [
+      {
+        "label": "Arco completo (Mega)",
+        "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
+      }
+    ],
+    "notes": "Complementa a Amazing #539–543: Peter, de traje preto, caça quem atirou na Tia May (na #538). A história principal está na Amazing. Leia estas só se quiser o arco inteiro.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Friendly Neighborhood Spider-Man",
+        "ranges": [
+          {
+            "start": 17,
+            "end": 23
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "Friendly Neighborhood Spider-Man Annual",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 1
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "Sensational Spider-Man",
+        "volume": "2006",
+        "ranges": [
+          {
+            "start": 35,
+            "end": 40
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "Sensational Spider-Man Annual",
+        "volume": "2006",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 1
+          }
+        ]
+      }
+    ],
+    "extraId": 80
+  },
+  {
+    "id": "leitura-18",
+    "readingGroup": 18,
+    "title": "One More Day (Um Dia a Mais)",
+    "itemIds": [728],
+    "links": [
+      {
+        "label": "Arco completo (Mega)",
+        "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
+      }
+    ],
+    "notes": "O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. Abre a fase Brand New Day (#546 em diante).",
+    "extraId": 81
+  },
+  {
+    "id": "leitura-19",
+    "readingGroup": 19,
+    "title": "Ultimate Spider-Man (2024) #1",
+    "itemIds": [730],
+    "links": [
+      {
+        "label": "HQ completa (SoQuadrinhos)",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2024/01/ultimate-homem-aranha-2024.html"
+      }
+    ],
+    "notes": "Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado. Fica fora da continuidade principal. Não desfaz One More Day.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Ultimate Spider-Man",
+        "volume": "2024",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 1
+          }
+        ]
+      }
+    ],
+    "extraId": 82
+  },
+  {
+    "id": "leitura-21",
+    "readingGroup": 21,
+    "title": "Spider-Island: Deadly Foes #1 e Venom (2011) #6–8. Também há as minisséries Spider-Island: Cloak & Dagger, Deadly Hands of Kung Fu e The Amazing Spider-Girl",
+    "itemIds": [855, 856, 859, 861, 864, 865, 866],
+    "links": [
+      {
+        "label": "Arco completo + Minisséries (Mega)",
+        "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
+      }
+    ],
+    "notes": "O núcleo (#666–673) está na contagem e se entende sem tie-ins. Leia estes só para ampliar o evento.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Spider-Island: Deadly Foes",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 1
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "Venom",
+        "volume": "2011",
+        "ranges": [
+          {
+            "start": 6,
+            "end": 8
+          }
+        ]
+      }
+    ],
+    "extraId": 88
+  },
+  {
+    "id": "leitura-22",
+    "readingGroup": 22,
+    "title": "Prelúdio de Spider-Verse, parte 1: Superior Spider-Man #32–33, Edge of Spider-Verse #1–5 e Spider-Man 2099 (2014) #5",
+    "itemIds": [933, 934, 935, 936, 937, 939, 940],
+    "links": [
+      {
+        "label": "Arco completo (SoQuadrinhos)",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2015/10/no-limiar-do-universo-aranha-2014.html"
+      }
+    ],
+    "notes": "As 7 edições originalmente listadas (Superior #32–33 + Edge #1–5) estão confirmadas, mas a Marvel também inclui Spider-Man 2099 #5 na sequência do prelúdio. Isso corrige o antigo ≈7 para 8 edições fora da linha. Superior #32–33 continuam sendo #732–733 na numeração histórica; o ponto de leitura deste bloco é posterior à #739.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Superior Spider-Man",
+        "ranges": [
+          {
+            "start": 32,
+            "end": 33
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "Edge of Spider-Verse",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 5
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "Spider-Man 2099",
+        "volume": "2014",
+        "ranges": [
+          {
+            "start": 5,
+            "end": 5
+          }
+        ]
+      }
+    ],
+    "extraId": 91
+  },
+  {
+    "id": "leitura-23",
+    "readingGroup": 23,
+    "title": "Spider-Verse, início do evento após a Amazing (2014) #8: Spider-Verse Team-Up #1 e Spider-Verse #1–2; tie-ins restantes são opcionais.",
+    "itemIds": [943],
+    "links": [
+      {
+        "label": "Arco completo (SoQuadrinhos)",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2015/10/no-limiar-do-universo-aranha-2014.html"
+      }
+    ],
+    "notes": "A antiga conta ≈5 (+11) misturava o encerramento do prelúdio com o começo do evento. A Marvel inicia o evento propriamente dito na #9; fora da contagem, o bloco inicial tem Team-Up #1 + Spider-Verse #1–2. Os outros 12 tie-ins são classificados como opcionais por HTLC/Marvel.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Spider-Verse Team-Up",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 1
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "Spider-Verse",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 2
+          }
+        ]
+      }
+    ],
+    "extraId": 92
+  },
+  {
+    "id": "leitura-24",
+    "readingGroup": 24,
+    "title": "Secret Wars (2015) #1–9",
+    "itemIds": [953],
+    "links": [
+      {
+        "label": "Arco completo (SoQuadrinhos)",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2015/05/guerras-secretas-2015.html"
+      }
+    ],
+    "notes": "A Marvel posiciona Secret Wars entre o fim do volume de 2014 e Renew Your Vows. Um resumo do evento basta. O peso é recomendação deste guia.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Secret Wars",
+        "volume": "2015",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 9
+          }
+        ]
+      }
+    ],
+    "extraId": 93
+  },
+  {
+    "id": "leitura-25",
+    "readingGroup": 25,
+    "title": "The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem)",
+    "itemIds": [978, 984],
+    "links": [
+      {
+        "label": "Só Quadrinhos: Amazing (2015) #20–24",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2017/01/o-espantoso-homem-aranha-2016.html",
+        "extraId": null,
+        "coverage": [
+          {
+            "type": "series",
+            "series": "The Amazing Spider-Man",
+            "volume": "2015",
+            "ranges": [
+              {
+                "start": 20,
+                "end": 24
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "HQ Now: Omega #1",
+        "url": "https://www.hq-now.com/hq-reader/25231/a-conspira-o-dos-clones/chapter/6/page/1",
+        "coverage": [
+          {
+            "type": "series",
+            "series": "The Clone Conspiracy: Omega",
+            "ranges": [
+              {
+                "start": 1,
+                "end": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": "As #20–24 da Amazing (2015) estão na contagem e acompanham a minissérie. A Marvel descreve assim, então a minissérie é o miolo do arco.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "The Clone Conspiracy",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 5
+          }
+        ]
+      },
+      {
+        "type": "series",
+        "series": "The Clone Conspiracy: Omega",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 1
+          }
+        ]
+      }
+    ],
+    "extraId": 94
+  },
+  {
+    "id": "leitura-26",
+    "readingGroup": 26,
+    "title": "Amazing Spider-Man (2018) #16.HU, #18.HU, #19.HU e #20.HU (tie-ins pontuados de Hunted)",
+    "itemIds": [1021, 1026, 1028, 1030],
+    "links": [
+      {
+        "label": "Link do drive com os capítulos",
+        "url": "https://drive.google.com/drive/folders/1Nqbm2J-yx12u8OknZjtIFwkMr75yVtoM?usp=drive_link"
+      }
+    ],
+    "notes": "A história principal corre na Amazing; as .HU são tie-ins complementares e não entram na numeração histórica. A fonte de Hunted confirma as quatro edições pontuadas usadas neste guia.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "The Amazing Spider-Man",
+        "volume": "2018",
+        "suffix": "HU",
+        "ranges": [
+          {
+            "start": 16,
+            "end": 16
+          },
+          {
+            "start": 18,
+            "end": 20
+          }
+        ]
+      }
+    ],
+    "extraId": 98
+  },
+  {
+    "id": "leitura-27",
+    "readingGroup": 27,
+    "title": "Spider-Geddon #0–5 (2018) e tie-ins",
+    "itemIds": [1022],
+    "links": [
+      {
+        "label": "Arco completo (SoQuadrinhos)",
+        "url": "https://hqs-soquadrinhos.blogspot.com/2019/01/aranha-gedon-2018.html"
+      }
+    ],
+    "notes": "A Amazing (2018) NÃO depende de Spider-Geddon para acompanhar a trama principal. A minissérie e os tie-ins seguem a saga dos Aranhas como material paralelo; a posição exata em relação a cada número da Amazing fica pendente.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Spider-Geddon",
+        "volume": "2018",
+        "ranges": [
+          {
+            "start": 0,
+            "end": 5
+          }
+        ]
+      }
+    ],
+    "extraId": 99
+  },
+  {
+    "id": "leitura-28",
+    "readingGroup": 28,
+    "title": "Amazing Spider-Man: Sins Rising Prelude (2020, one-shot)",
+    "itemIds": [1055],
+    "links": [
+      {
+        "label": "Arco completo (GoFile)",
+        "url": "https://www.hq-now.com/hq-reader/32489/o-espetacular-homem-aranha-v5/chapter/44.1/page/1"
+      }
+    ],
+    "notes": "Abre Sins Rising (Amazing 2018 #45–49 = #846–850). É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838).",
+    "coverage": [
+      {
+        "type": "one-shot",
+        "series": "Amazing Spider-Man: Sins Rising Prelude",
+        "volume": "2020"
+      }
+    ],
+    "extraId": 100
+  },
+  {
+    "id": "leitura-29",
+    "readingGroup": 29,
+    "title": "Amazing Spider-Man: The Sins of Norman Osborn (2020, one-shot)",
+    "itemIds": [1060],
+    "links": [
+      {
+        "label": "Arco completo (GoFile)",
+        "url": "https://www.hq-now.com/hq-reader/32489/o-espetacular-homem-aranha-v5/chapter/44.1/page/1"
+      }
+    ],
+    "notes": "One-shot ligado a Sins Rising (Amazing 2018 #45–49).",
+    "coverage": [
+      {
+        "type": "one-shot",
+        "series": "Amazing Spider-Man: The Sins of Norman Osborn",
+        "volume": "2020"
+      }
+    ],
+    "extraId": 101
+  },
+  {
+    "id": "leitura-30",
+    "readingGroup": 30,
+    "title": "Amazing Spider-Man (2018) #50.LR a #54.LR (tie-ins pontuados de Last Remains)",
+    "itemIds": [1062, 1064, 1066, 1068, 1070],
+    "links": [
+      {
+        "label": "Link do drive com os capítulos",
+        "url": "https://drive.google.com/drive/folders/1Nqbm2J-yx12u8OknZjtIFwkMr75yVtoM?usp=drive_link"
+      }
+    ],
+    "notes": "A história principal está na Amazing. As .LR são complementares e foram reunidas no 'Last Remains Companion'. Não contam na numeração.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "The Amazing Spider-Man",
+        "volume": "2018",
+        "ranges": [
+          {
+            "start": 50,
+            "end": 54
+          }
+        ],
+        "suffix": "LR"
+      }
+    ],
+    "extraId": 102
+  },
+  {
+    "id": "leitura-31",
+    "readingGroup": 31,
+    "title": "Dark Web Finale #1",
+    "itemIds": [1131],
+    "links": [
+      {
+        "label": "AMS v6 (2022) + Finale",
+        "url": "https://gofile.io/d/TldFOBKr"
+      }
+    ],
+    "notes": "É o desfecho de Dark Web.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Dark Web Finale",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 1
+          }
+        ]
+      }
+    ],
+    "extraId": 104
+  },
+  {
+    "id": "leitura-32",
+    "readingGroup": 32,
+    "title": "Amazing Spider-Man: Gang War – First Strike #1 (2023)",
+    "itemIds": [1152, 1153, 1154, 1155, 1156, 1157, 1158],
+    "links": [
+      {
+        "label": "First Strike (GoFile)",
+        "url": "https://gofile.io/d/iRyin1Ht"
+      }
+    ],
+    "notes": "First Strike #1 abre o evento.",
+    "coverage": [
+      {
+        "type": "series",
+        "series": "Amazing Spider-Man: Gang War – First Strike",
+        "volume": "2023",
+        "ranges": [
+          {
+            "start": 1,
+            "end": 1
+          }
+        ]
+      }
+    ],
+    "extraId": 106
+  }
+]

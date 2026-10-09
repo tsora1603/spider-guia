@@ -2001,7 +2001,7 @@
     {
       "id": "SP-0200",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/33/name",
+      "path": "/33/title",
       "text": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
       "match": "Morte",
       "suggestedLevel": "forte",
@@ -2011,7 +2011,7 @@
     {
       "id": "SP-0201",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/41/name",
+      "path": "/41/title",
       "text": "The Amazing Spider-Man Annual #21 (1987), o casamento",
       "match": "casamento",
       "suggestedLevel": "leve",
@@ -2021,7 +2021,7 @@
     {
       "id": "SP-0202",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/42/name",
+      "path": "/42/title",
       "text": "Peter Parker, The Spectacular Spider-Man Annual #7 (1987), a lua de mel",
       "match": "lua de mel",
       "suggestedLevel": "leve",
@@ -2051,7 +2051,7 @@
     {
       "id": "SP-0205",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/66/name",
+      "path": "/66/title",
       "text": "Saga do Clone (1994–96), em Spectacular (1976), Web of Spider-Man, Spider-Man (1990), Spider-Man Unlimited e outras revistas",
       "match": "Clone",
       "suggestedLevel": "forte",
@@ -2061,7 +2061,7 @@
     {
       "id": "SP-0206",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/93/name",
+      "path": "/93/title",
       "text": "The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem)",
       "match": "Clone",
       "suggestedLevel": "forte",
@@ -2741,7 +2741,7 @@
     {
       "id": "SP-0274",
       "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/18/name",
+      "path": "/EDITORIAL_LINKS/18/title",
       "text": "The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem)",
       "match": "Clone",
       "suggestedLevel": "forte",
@@ -2811,7 +2811,7 @@
     {
       "id": "SP-0281",
       "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/3/name",
+      "path": "/EDITORIAL_LINKS/3/title",
       "text": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
       "match": "Morte",
       "suggestedLevel": "forte",
@@ -2861,7 +2861,7 @@
     {
       "id": "SP-0286",
       "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/4/name",
+      "path": "/EDITORIAL_LINKS/4/title",
       "text": "The Amazing Spider-Man Annual #21 (1987), o casamento",
       "match": "casamento",
       "suggestedLevel": "leve",

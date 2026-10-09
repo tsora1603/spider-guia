@@ -26,14 +26,13 @@ function GlobalSearch({ query }: { query: string }) {
     const issueTokens = needle.split(/\s+/).filter(Boolean);
     const issueResults = readings.filter(item => issueTokens.every(token => item.searchText.includes(token))).slice(0, 8);
     const extraResults = editorialExtras.filter((entry: any) => normalizeText([
-      entry.name, entry.why, entry.howMuch, entry.brazilianEdition, entry.weight, entry.category
+      entry.name, entry.why, entry.howMuch, entry.weight, entry.category
     ].join(' ')).includes(needle)).slice(0, 5);
     const milestoneResults = milestones.filter((entry: any) => normalizeText([
       entry.year, entry.title, entry.description, entry.whereToRead, entry.weight
     ].join(' ')).includes(needle)).slice(0, 5);
     const linkResults = linksEnabled ? getEditorialLinkGroups().filter(group => normalizeText([
-      group.name, ...group.issues, group.context, group.brazilianEdition,
-      ...[...group.links, ...group.stores, ...group.libraries].flatMap(entry => [entry.label, entry.url])
+      group.searchText
     ].join(' ')).includes(needle)).slice(0, 5) : [];
     const cloneResults = cloneEntries.filter((entry: any) => {
       const reading = itemsById[entry.id];
@@ -50,7 +49,7 @@ function GlobalSearch({ query }: { query: string }) {
     {results.issueResults.length ? <div class="search-result-group"><h3>Checklist</h3>{results.issueResults.map(item => <button class="search-result" key={`issue-${item.id}`} onClick={event => router.navigate(`#checklist/hq/${item.id}`, event.currentTarget)}><span><b>{item.series} {item.issue}</b><small>{item.phase}{item.historicalNumber ? ` · #${item.historicalNumber}` : ''}</small></span><Icon name="chevD" /></button>)}</div> : null}
     {results.milestoneResults.length ? <div class="search-result-group"><h3>Jornada</h3>{results.milestoneResults.map((item: any) => <button class="search-result" key={`${item.year}-${item.title}`} onClick={event => router.navigate(exploreTarget('jornada', 'marco', milestoneAnchorKey(item)), event.currentTarget)}><span><b><SpoilerText text={item.title} /></b><small>{item.year} · {item.whereToRead}</small></span><Icon name="route" /></button>)}</div> : null}
     {results.extraResults.length ? <div class="search-result-group"><h3>Extras</h3>{results.extraResults.map((item: any) => <button class="search-result" key={item.id || item.name} onClick={event => router.navigate(item.special === 'clone' ? '#explorar/clone' : exploreTarget('extras', 'extra', extraAnchorKey(item)), event.currentTarget)}><span><b><SpoilerText text={item.name} /></b><small>{item.weight}</small></span><Icon name="book" /></button>)}</div> : null}
-    {results.linkResults.length ? <div class="search-result-group"><h3>Links editoriais</h3>{results.linkResults.map(group => <button class="search-result" key={group.key} onClick={event => router.navigate(exploreTarget('links', 'link', group.key), event.currentTarget)}><span><b><SpoilerText text={group.name} /></b><small>{group.links.length + group.stores.length + group.libraries.length} destinos curados</small></span><Icon name="link" /></button>)}</div> : null}
+    {results.linkResults.length ? <div class="search-result-group"><h3>Links editoriais</h3>{results.linkResults.map(group => <button class="search-result" key={group.key} onClick={event => router.navigate(exploreTarget('links', 'link', group.key), event.currentTarget)}><span><b><SpoilerText text={group.name} /></b><small>{group.coverageLabel || 'Link externo'}</small></span><Icon name="link" /></button>)}</div> : null}
     {results.cloneResults.length ? <div class="search-result-group"><h3>Saga do Clone</h3>{results.cloneResults.map((entry: any, index: number) => { const item = itemsById[entry.id]; return <button class="search-result" key={`${entry.id}-${entry.readingOrder}-${index}`} onClick={event => router.navigate(`#checklist/hq/${entry.id}`, event.currentTarget)}><span><b>{item ? `${item.series} ${item.issue}` : `Leitura ${entry.id}`}</b><small>{entry.phase}{entry.crossover ? ` · ${entry.crossover}` : ''}</small></span><Icon name="chevD" /></button>; })}</div> : null}
   </section>;
 }

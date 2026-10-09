@@ -1,0 +1,184 @@
+import { describe, expect, it, vi } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { createLinkAssociations, linkTargetsFor } from '../../src/links/associations';
+import { contextualLinksTarget, resolveLinkTargets } from '../../src/views/explore-navigation';
+import type { EditorialLinkGroup } from '../../src/links/types';
+
+const known = new Set([1, 2, 3, 4]);
+const extras = new Set([10, 11]);
+const sample: EditorialLinkGroup[] = [
+  {
+    id: 'alpha',
+    title: 'Alpha',
+    itemIds: [1, 2],
+    extraId: 10,
+    links: [
+      { label: 'A', url: 'https://example.com/a' },
+      { label: 'B', url: 'https://example.com/b', extraId: 11 },
+      { label: 'C', url: 'https://example.com/c', extraId: null }
+    ]
+  },
+  {
+    id: 'beta',
+    title: 'Beta',
+    itemIds: [2, 3],
+    extraId: 10,
+    links: [{ label: 'D', url: 'https://example.com/d' }]
+  },
+  {
+    id: 'coverage-only',
+    title: 'LGY #1–700',
+    coverage: [{ type: 'lgy', ranges: [{ start: 1, end: 700 }] }],
+    links: [{ label: 'E', url: 'https://example.com/e' }]
+  }
+];
+
+describe('Ações contextuais — índice de Links explícitos', () => {
+  it('indexa somente itemIds cadastrados; LGY jamais gera vínculos de HQ', () => {
+    const index = createLinkAssociations(sample, known, extras);
+    expect(linkTargetsFor(index, 'item', 1)).toEqual(['alpha']);
+    expect(linkTargetsFor(index, 'item', 2)).toEqual(['alpha', 'beta']);
+    expect(linkTargetsFor(index, 'item', 3)).toEqual(['beta']);
+    expect(linkTargetsFor(index, 'item', 4)).toEqual([]);
+    expect(index.byItemId.size).toBe(3);
+    expect(index.byItemId.get(700)).toBeUndefined();
+  });
+
+  it('liga conjuntos Extras por extraId explícito, incluindo substituições por destino', () => {
+    const index = createLinkAssociations(sample, known, extras);
+    expect(linkTargetsFor(index, 'extra', 10)).toEqual(['alpha', 'beta']);
+    expect(linkTargetsFor(index, 'extra', 11)).toEqual(['alpha']);
+  });
+
+  it('null explícito suprime herança; readingGroup e títulos não criam relações', () => {
+    const index = createLinkAssociations(
+      [
+        {
+          ...sample[0],
+          id: 'null-only',
+          links: [{ label: 'Sem extra', url: 'https://example.com', extraId: null }]
+        },
+        { ...sample[2], id: 'legacy', readingGroup: 10 },
+        { ...sample[2], id: 'missing-extra', extraId: 999 }
+      ],
+      known,
+      extras
+    );
+    expect(index.byExtraId.size).toBe(0);
+    expect(index.byItemId.get(1)).toEqual(['null-only']);
+  });
+
+  it('ignora destinos HTTP(S) inválidos, IDs desconhecidos e grupos duplicados', () => {
+    const index = createLinkAssociations(
+      [
+        {
+          ...sample[0],
+          itemIds: [1, 9999],
+          extraId: 9999,
+          links: [{ label: 'Inválido', url: 'javascript:alert(1)' }]
+        },
+        {
+          ...sample[0],
+          itemIds: [1, 9999],
+          links: [{ label: 'Válido', url: 'https://example.com' }]
+        },
+        {
+          ...sample[0],
+          id: 'valid',
+          itemIds: [1, 9999],
+          links: [{ label: 'Válido', url: 'https://example.com' }]
+        }
+      ],
+      known,
+      extras
+    );
+    expect(index.byItemId.get(1)).toEqual(['valid']);
+    expect(index.byItemId.get(9999)).toBeUndefined();
+  });
+
+  it('permite deep link para vários cards e URL de retorno após recarregar', () => {
+    const hash = contextualLinksTarget(
+      ['alpha', 'beta', 'alpha'],
+      '#checklist/hq/2?f=pendentes&q=annual'
+    );
+    const params = new URLSearchParams(hash.split('?')[1]);
+    expect(hash.startsWith('#explorar/links?')).toBe(true);
+    expect(params.getAll('link')).toEqual(['alpha', 'beta']);
+    expect(params.get('from')).toBe('#checklist/hq/2?f=pendentes&q=annual');
+    expect(resolveLinkTargets(params.getAll('link'), ['alpha', 'beta', 'z'])).toEqual([
+      'alpha',
+      'beta'
+    ]);
+  });
+
+  it('mantém os links simples e o fallback por índice sem confundir IDs numéricos', () => {
+    expect(resolveLinkTargets(['1'], ['alpha', '1', 'beta'])).toEqual(['1']);
+    expect(resolveLinkTargets(['0', 'beta', 'não-existe'], ['alpha', 'beta'])).toEqual([
+      'alpha',
+      'beta'
+    ]);
+    expect(contextualLinksTarget(['alpha'], 'https://other.example/')).toBe(
+      '#explorar/links?link=alpha'
+    );
+  });
+
+  it('prova no catálogo real: grupos amplos sem itemIds não geram 1.000 CTAs', () => {
+    const groups = JSON.parse(readFileSync('data/src/editorial/links.json', 'utf8')) as EditorialLinkGroup[];
+    const editorial = JSON.parse(readFileSync('data/src/editorial/extras.json', 'utf8')) as { n: number }[];
+    const catalog = JSON.parse(readFileSync('src/data/generated-index.json', 'utf8')) as {itemIndexFields:string[]; itemIndex:unknown[][]};
+    const idIndex = catalog.itemIndexFields.indexOf('id');
+    const ids = new Set(catalog.itemIndex.map((row) => Number(row[idIndex])));
+    const index = createLinkAssociations(groups, ids, new Set(editorial.map((entry) => entry.n)));
+    expect(groups).toHaveLength(34);
+    expect(groups.filter((group) => !group.itemIds)).toHaveLength(8);
+    expect(index.byExtraId.size).toBeGreaterThan(20);
+    expect(index.byItemId.size).toBeGreaterThan(30);
+    expect(index.byItemId.size).toBeLessThan(100);
+    expect(index.byItemId.get(259)).toContain('leitura-5');
+    expect(index.byExtraId.get(38)).toContain('leitura-5');
+    for (const entry of index.byItemId.values())
+      for (const id of entry) expect(groups.some((group) => group.id === id)).toBe(true);
+  });
+});
+
+describe('Retorno à leitura sem perder contexto', () => {
+  it('restaura somente a entrada original do histórico, ignorando outras rotas', async () => {
+    const { readingReturnFor } = await import('../../src/links/return-context');
+    const state = {
+      spiderReadingReturn: { kind: 'item', id: 256, hash: '#checklist?f=pendentes' }
+    };
+    expect(readingReturnFor(state, '#checklist?f=pendentes', 'item')).toBe(256);
+    expect(readingReturnFor(state, '#checklist?f=lidas', 'item')).toBeNull();
+    expect(readingReturnFor(state, '#checklist?f=pendentes', 'extra')).toBeNull();
+    expect(
+      readingReturnFor(
+        { spiderReadingReturn: { kind: 'item', id: 0, hash: '#checklist' } },
+        '#checklist',
+        'item'
+      )
+    ).toBeNull();
+  });
+});
+
+describe('Captura da origem no histórico', () => {
+  it('grava apenas o contexto de UI e preserva history.state existente', async () => {
+    const { rememberReadingReturn, readingReturnFor } =
+      await import('../../src/links/return-context');
+    const replaceState = vi.fn();
+    vi.stubGlobal('history', { state: { origin: 'preserved' }, replaceState });
+    vi.stubGlobal('location', {
+      hash: '#checklist?f=pendentes',
+      href: 'http://localhost/#checklist?f=pendentes'
+    });
+    try {
+      rememberReadingReturn('item', 256);
+      expect(replaceState).toHaveBeenCalledOnce();
+      const [state, _title, href] = replaceState.mock.calls[0];
+      expect(state.origin).toBe('preserved');
+      expect(href).toBe('http://localhost/#checklist?f=pendentes');
+      expect(readingReturnFor(state, '#checklist?f=pendentes', 'item')).toBe(256);
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
+});

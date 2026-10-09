@@ -17,7 +17,7 @@ O workflow GitHub Actions (`.github/workflows/quality.yml`) verifica lint, tipos
 | Comando | Quando usar |
 | --- | --- |
 | `npm run dev` | Prévia local (gera dados antes de abrir Vite) |
-| `npm run links:check` | Ao editar `public/links.js` |
+| `npm run links:check` | Ao editar `data/src/editorial/links.json` |
 | `npm run data:build && npm run data:check` | Ao editar `data/src/` |
 | `npm run reading-sequence:check` | Ao alterar plano, Checklist ou Modo Foco |
 | `npm run icons:check` | Ao atualizar os ícones Lucide |
@@ -30,7 +30,7 @@ Instalação do Chromium do Playwright: `npx playwright install chromium`. O bui
 
 ## Alterações comuns
 
-**Links:** edite `window.EDITORIAL_LINKS` em `public/links.js`. Acrescente destinos com `label` e `url` a `links` de um grupo; ou crie grupo com `id` único, `title`, `itemIds`, `context`, `links`. Preserve associações e URLs já existentes. Os links são editoriais; **Fontes** ficam em `data/src/fontes.json`. Não insira a seção “Onde procurar”.
+**Links:** edite a lista de grupos em `data/src/editorial/links.json`. Acrescente destinos com `label` e `url` a `links` de um grupo; ou crie um grupo com `id` único, `title`, `links` e `coverage` (quando não houver `itemIds`). Associações `itemIds` e `extraId` precisam ser explícitas; não as deduza de intervalos. Preserve associações e URLs já existentes. Os links são editoriais; **Fontes** ficam em `data/src/fontes.json`. Referências bibliográficas brasileiras usadas na pesquisa ficam em `data/src/editorial/publication-evidence.json`, fora dos dados servidos no site. Não insira a seção “Onde procurar”.
 
 **Dados editoriais:** edite `data/src/editorial/extras.json`, `clone.json`, `data/src/marcos.json` etc. Gere novamente os dados. Os status dos Extras respeitam **posição 100% por fontes** e **peso 60% fontes / até 40% dedução documentada**; não promova itens sem evidências suficientes. Revisão histórica detalhada: `data/review/extras-confirmacao-60-40.md`.
 

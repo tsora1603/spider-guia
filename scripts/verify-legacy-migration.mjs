@@ -97,7 +97,7 @@ if (failed.length) process.exitCode = 2;
 
 function compareReadings(before, after) {
   const beforeByN = new Map(before.map(group => [group.n, group]));
-  const fields = ['after','weight','name','unavailable','sequence','why','confirmation','howMuch','where','links','itemIds','brazilianEdition','sourceRefs','justification'];
+  const fields = ['after','weight','name','unavailable','sequence','why','confirmation','howMuch','where','links','itemIds','sourceRefs','justification'];
   const diffs = [];
   for (const group of after) {
     const old = beforeByN.get(group.n) || {};

@@ -205,13 +205,13 @@ Geradas: **292** · leve: **42** · forte: **250**.
 | SP-0197 | forte | `data/src/catalog/018-pos-saga-do-clone-1997.json/items/1/instructions` | regex-legada:clone/original | Como encaixar: Leia no bloco Pós-Saga do Clone / 1997; |
 | SP-0198 | forte | `data/src/catalog/018-pos-saga-do-clone-1997.json/items/1/instructions` | regex-legada:clone/original | Por que ajuda: Complementa o período Pós-Saga do Clone / 1997 com material anual da respectiva série. |
 | SP-0199 | leve | `data/src/editorial/extras.json/0/confirmationDetail` | regex-legada:estreia/origem | Posição e peso sustentados pelas fontes: Amazing Fantasy #15 é a origem e primeira aparição de Spider-Man, anterior à Amazing #1. |
-| SP-0200 | forte | `data/src/editorial/extras.json/33/name` | regex-legada:morte | Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff) |
-| SP-0201 | leve | `data/src/editorial/extras.json/41/name` | regex-legada:relacionamento/casamento | The Amazing Spider-Man Annual #21 (1987), o casamento |
-| SP-0202 | leve | `data/src/editorial/extras.json/42/name` | regex-legada:relacionamento/casamento | Peter Parker, The Spectacular Spider-Man Annual #7 (1987), a lua de mel |
+| SP-0200 | forte | `data/src/editorial/extras.json/33/title` | regex-legada:morte | Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff) |
+| SP-0201 | leve | `data/src/editorial/extras.json/41/title` | regex-legada:relacionamento/casamento | The Amazing Spider-Man Annual #21 (1987), o casamento |
+| SP-0202 | leve | `data/src/editorial/extras.json/42/title` | regex-legada:relacionamento/casamento | Peter Parker, The Spectacular Spider-Man Annual #7 (1987), a lua de mel |
 | SP-0203 | forte | `data/src/editorial/extras.json/66/confirmationDetail` | regex-legada:clone/original | Este card representa somente as entradas fora da numeração histórica da Saga do Clone. |
 | SP-0204 | forte | `data/src/editorial/extras.json/66/confirmationDetail` | regex-legada:clone/original | O roteiro dedicado editorial.clone continua com 187 entradas e inclui, separadamente, contexto da saga original, capítulos da Amazing principal e leituras posteriores. |
-| SP-0205 | forte | `data/src/editorial/extras.json/66/name` | regex-legada:clone/original | Saga do Clone (1994–96), em Spectacular (1976), Web of Spider-Man, Spider-Man (1990), Spider-Man Unlimited e outras revistas |
-| SP-0206 | forte | `data/src/editorial/extras.json/93/name` | regex-legada:clone/original | The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem) |
+| SP-0205 | forte | `data/src/editorial/extras.json/66/title` | regex-legada:clone/original | Saga do Clone (1994–96), em Spectacular (1976), Web of Spider-Man, Spider-Man (1990), Spider-Man Unlimited e outras revistas |
+| SP-0206 | forte | `data/src/editorial/extras.json/93/title` | regex-legada:clone/original | The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem) |
 | SP-0207 | forte | `data/src/fases.json/15/notes` | regex-legada:clone/original | A minissérie Clone Conspiracy é paralela e não conta. |
 | SP-0208 | forte | `data/src/fases.json/3/notes` | regex-legada:clone/original | Limite ajustado: o texto original trazia #182–252; |
 | SP-0209 | forte | `data/src/fases.json/7/notes` | regex-legada:clone/original | A saga passa por todas as revistas do Aranha (ver Ler → Saga do Clone). |
@@ -274,27 +274,27 @@ Geradas: **292** · leve: **42** · forte: **250**.
 | SP-0266 | forte | `data/src/marcos.json/6/title` | frase-literal-legada | Harry Osborn vira Duende Verde |
 | SP-0267 | forte | `data/src/marcos.json/7/title` | regex-legada:clone/original | Saga do Clone original |
 | SP-0268 | forte | `data/src/marcos.json/8/title` | regex-legada:morte | Peter confronta o ladrão que matou o Tio Ben |
-| SP-0269 | forte | `public/links.js/EDITORIAL_LINKS/12/context` | frase-literal-legada | O acordo com Mephisto, que apaga o casamento |
-| SP-0270 | leve | `public/links.js/EDITORIAL_LINKS/12/context` | regex-legada:relacionamento/casamento | O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. |
-| SP-0271 | forte | `public/links.js/EDITORIAL_LINKS/12/context` | regex-legada:Mephisto/pacto | O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. |
-| SP-0272 | leve | `public/links.js/EDITORIAL_LINKS/13/context` | regex-legada:relacionamento/casamento | Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado. |
-| SP-0273 | forte | `public/links.js/EDITORIAL_LINKS/13/context` | frase-literal-legada | o casamento de Peter e MJ |
-| SP-0274 | forte | `public/links.js/EDITORIAL_LINKS/18/name` | regex-legada:clone/original | The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem) |
-| SP-0275 | leve | `public/links.js/EDITORIAL_LINKS/2/context` | regex-legada:simbionte/traje | A #264 ainda mostra Peter com um traje preto comum, não com o simbionte. |
-| SP-0276 | forte | `public/links.js/EDITORIAL_LINKS/21/context` | regex-legada:ressurreição | É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838). |
-| SP-0277 | forte | `public/links.js/EDITORIAL_LINKS/21/context` | frase-literal-legada | Kindred ressuscita o Sin-Eater |
-| SP-0278 | forte | `public/links.js/EDITORIAL_LINKS/24/context` | regex-legada:desfecho | É o desfecho de Dark Web. |
-| SP-0279 | forte | `public/links.js/EDITORIAL_LINKS/3/context` | frase-literal-legada | A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco. |
-| SP-0280 | forte | `public/links.js/EDITORIAL_LINKS/3/context` | regex-legada:ressurreição | A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco. |
-| SP-0281 | forte | `public/links.js/EDITORIAL_LINKS/3/name` | regex-legada:morte | Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff) |
-| SP-0282 | forte | `public/links.js/EDITORIAL_LINKS/4/context` | frase-literal-legada | É este casamento que One More Day apaga (#544–545). |
-| SP-0283 | leve | `public/links.js/EDITORIAL_LINKS/4/context` | regex-legada:relacionamento/casamento | É este casamento que One More Day apaga (#544–545). |
-| SP-0284 | leve | `public/links.js/EDITORIAL_LINKS/4/context` | regex-legada:relacionamento/casamento | O casamento acontece no Annual, fora da contagem. |
-| SP-0285 | leve | `public/links.js/EDITORIAL_LINKS/4/context` | regex-legada:cerimônia | Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. |
-| SP-0286 | leve | `public/links.js/EDITORIAL_LINKS/4/name` | regex-legada:relacionamento/casamento | The Amazing Spider-Man Annual #21 (1987), o casamento |
-| SP-0287 | forte | `public/links.js/EDITORIAL_LINKS/7/context` | regex-legada:poderes/aposentadoria | O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. |
-| SP-0288 | forte | `public/links.js/EDITORIAL_LINKS/7/context` | regex-legada:desfecho | O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. |
-| SP-0289 | forte | `public/links.js/EDITORIAL_LINKS/8/context` | frase-literal-legada | Peter 'morre' e volta com habilidades novas |
-| SP-0290 | forte | `public/links.js/EDITORIAL_LINKS/8/context` | regex-legada:morte | Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). |
-| SP-0291 | forte | `public/links.js/EDITORIAL_LINKS/9/context` | frase-literal-legada | Na Civil War #2, Peter revela a identidade em rede nacional. |
-| SP-0292 | forte | `public/links.js/EDITORIAL_LINKS/9/context` | regex-legada:revelação/identidade | Na Civil War #2, Peter revela a identidade em rede nacional. |
+| SP-0269 | forte | `data/src/editorial/links.json/12/context` | frase-literal-legada | O acordo com Mephisto, que apaga o casamento |
+| SP-0270 | leve | `data/src/editorial/links.json/12/context` | regex-legada:relacionamento/casamento | O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. |
+| SP-0271 | forte | `data/src/editorial/links.json/12/context` | regex-legada:Mephisto/pacto | O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. |
+| SP-0272 | leve | `data/src/editorial/links.json/13/context` | regex-legada:relacionamento/casamento | Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado. |
+| SP-0273 | forte | `data/src/editorial/links.json/13/context` | frase-literal-legada | o casamento de Peter e MJ |
+| SP-0274 | forte | `data/src/editorial/links.json/18/title` | regex-legada:clone/original | The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem) |
+| SP-0275 | leve | `data/src/editorial/links.json/2/context` | regex-legada:simbionte/traje | A #264 ainda mostra Peter com um traje preto comum, não com o simbionte. |
+| SP-0276 | forte | `data/src/editorial/links.json/21/context` | regex-legada:ressurreição | É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838). |
+| SP-0277 | forte | `data/src/editorial/links.json/21/context` | frase-literal-legada | Kindred ressuscita o Sin-Eater |
+| SP-0278 | forte | `data/src/editorial/links.json/24/context` | regex-legada:desfecho | É o desfecho de Dark Web. |
+| SP-0279 | forte | `data/src/editorial/links.json/3/context` | frase-literal-legada | A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco. |
+| SP-0280 | forte | `data/src/editorial/links.json/3/context` | regex-legada:ressurreição | A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco. |
+| SP-0281 | forte | `data/src/editorial/links.json/3/title` | regex-legada:morte | Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff) |
+| SP-0282 | forte | `data/src/editorial/links.json/4/context` | frase-literal-legada | É este casamento que One More Day apaga (#544–545). |
+| SP-0283 | leve | `data/src/editorial/links.json/4/context` | regex-legada:relacionamento/casamento | É este casamento que One More Day apaga (#544–545). |
+| SP-0284 | leve | `data/src/editorial/links.json/4/context` | regex-legada:relacionamento/casamento | O casamento acontece no Annual, fora da contagem. |
+| SP-0285 | leve | `data/src/editorial/links.json/4/context` | regex-legada:cerimônia | Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. |
+| SP-0286 | leve | `data/src/editorial/links.json/4/title` | regex-legada:relacionamento/casamento | The Amazing Spider-Man Annual #21 (1987), o casamento |
+| SP-0287 | forte | `data/src/editorial/links.json/7/context` | regex-legada:poderes/aposentadoria | O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. |
+| SP-0288 | forte | `data/src/editorial/links.json/7/context` | regex-legada:desfecho | O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. |
+| SP-0289 | forte | `data/src/editorial/links.json/8/context` | frase-literal-legada | Peter 'morre' e volta com habilidades novas |
+| SP-0290 | forte | `data/src/editorial/links.json/8/context` | regex-legada:morte | Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). |
+| SP-0291 | forte | `data/src/editorial/links.json/9/context` | frase-literal-legada | Na Civil War #2, Peter revela a identidade em rede nacional. |
+| SP-0292 | forte | `data/src/editorial/links.json/9/context` | regex-legada:revelação/identidade | Na Civil War #2, Peter revela a identidade em rede nacional. |

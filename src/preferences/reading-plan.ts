@@ -28,7 +28,7 @@ export function focusedReadingIds(query: string) {
   }
 
   for (const extra of editorialExtras as any[]) {
-    if (!matchesTokens(searchableValues([extra.name, extra.why, extra.howMuch, extra.category, extra.brazilianEdition]), queryTokens)) continue;
+    if (!matchesTokens(searchableValues([extra.name, extra.why, extra.howMuch, extra.category]), queryTokens)) continue;
     for (const id of extra.itemIds || []) ids.add(Number(id));
   }
 

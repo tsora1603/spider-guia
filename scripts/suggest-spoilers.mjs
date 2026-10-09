@@ -1,7 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { ROOT, SRC_DIR, readJson } from './lib/data-utils.mjs';
-import vm from 'node:vm';
 import { isAnnotatedText, plainText } from './lib/spoiler-data.mjs';
 
 // Cópia deliberada da heurística do runtime pré-Marco D. Ela existe SOMENTE neste
@@ -143,13 +142,10 @@ const metodologia = await readJson(path.join(SRC_DIR, 'editorial', 'metodologia.
 metodologia.forEach((entry, index) => inspect(entry.body, 'data/src/editorial/metodologia.json', `/${index}/body`));
 
 // Links continuam curados em JS e também passavam por SpoilerText (name/context).
-const linksSource = await fs.readFile(path.join(ROOT, 'public', 'links.js'), 'utf8');
-const context = { window: { LINKS_ENABLED: true } };
-vm.runInNewContext(linksSource, context, { filename: 'public/links.js' });
-const links = context.window.EDITORIAL_LINKS || context.window.getEditorialLinks?.() || [];
+const links = JSON.parse(await fs.readFile(path.join(ROOT, 'data/src/editorial/links.json'), 'utf8'));
 links.forEach((group, index) => {
-  inspect(group.name || group.title, 'public/links.js', `/EDITORIAL_LINKS/${index}/name`);
-  inspect(group.context, 'public/links.js', `/EDITORIAL_LINKS/${index}/context`);
+  inspect(group.name || group.title, 'data/src/editorial/links.json', `/${index}/title`);
+  inspect(group.context, 'data/src/editorial/links.json', `/${index}/context`);
 });
 
 suggestions.sort((a, b) => a.sourceFile.localeCompare(b.sourceFile) || a.path.localeCompare(b.path) || a.text.localeCompare(b.text));

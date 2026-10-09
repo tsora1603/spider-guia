@@ -33,6 +33,31 @@ export function exploreTarget(section: string, target: EditorialTarget, value: n
   return `#explorar/${section}?${params.toString()}`;
 }
 
+/** A única representação de multi-targets usa `link` repetido no hash.
+ * Preserva deep links individuais e permite voltar ao ponto de leitura.
+ */
+export function contextualLinksTarget(linkIds: readonly string[], from?: string): string {
+  const params = new URLSearchParams();
+  for (const id of new Set(linkIds.filter(Boolean))) params.append('link', id);
+  if (from && /^#(?:checklist(?:\/hq\/\d+)?|explorar\/extras)(?:\?|$)/.test(from)) {
+    params.set('from', from);
+  }
+  return `#explorar/links${params.size ? `?${params.toString()}` : ''}`;
+}
+
+/** Aceita tanto os IDs estáveis quanto índices numéricos de URLs legadas. */
+export function resolveLinkTargets(raw: readonly string[], linkIds: readonly string[]): string[] {
+  const available = new Set(linkIds);
+  const found: string[] = [];
+  for (const value of raw) {
+    const target = available.has(value)
+      ? value
+      : /^\d+$/.test(value) ? linkIds[Number(value)] : undefined;
+    if (target && !found.includes(target)) found.push(target);
+  }
+  return found;
+}
+
 export function exploreRouteParam(param: EditorialTarget): string | null {
   const query = window.location.hash.split('?').slice(1).join('?');
   return new URLSearchParams(query).get(param);

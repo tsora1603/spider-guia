@@ -18,9 +18,9 @@ const checks = {
   accessibleSearch: ['type="search"', 'aria-label={label}', 'data-shortcut-search'].every(token => component.includes(token)),
   controlledSearch: ['views/ExploreView.tsx','views/LinksView.tsx','views/HelpView.tsx','components/VirtualizedChecklist.tsx'].every(file => read('src/'+file).includes('<ListSearch')),
   semanticLists: ['ui-list', 'ui-list-item', 'ui-disclosure-summary'].every(token => css.includes('.'+token)) && [journey, links, help, extras].every(text => text.includes('ui-list')),
-  nestedBoxesRemoved: !css.includes("content:'Detalhes da fase'") && !css.includes("content:'Detalhes do link'") && css.includes('.journey-phase .journey-body{padding:14px 16px 17px;border-top:1px solid var(--border-subtle);background:transparent}') && css.includes('.link-panel{padding:0;background:transparent;min-width:0}') && css.includes('.source-site-body{padding:0;background:transparent}'),
+  nestedBoxesRemoved: !css.includes("content:'Detalhes da fase'") && !css.includes("content:'Detalhes do link'") && css.includes('.journey-phase .journey-body{padding:14px 16px 17px;border-top:1px solid var(--border-subtle);background:transparent}') && css.includes('.link-destination{min-width:0;background:transparent}') && !links.includes('<details') && css.includes('.source-site-body{padding:0;background:transparent}'),
   themesAndFocus: theme.includes('[data-theme="light"]') && theme.includes('[data-theme="dark"]') && theme.includes(':focus-visible') && css.includes('.filter-trigger:focus-visible') && css.includes('--target-min'),
-  e2eRegression: ['dropdown seleciona', 'Extras reutiliza', 'sem caixas internas escuras', '320 px e 1440 px'].every(token => e2e.includes(token))
+  e2eRegression: ['dropdown seleciona', 'Extras reutiliza', 'não introduzem caixas internas escuras', '320 px e 1440 px'].every(token => e2e.includes(token))
 };
 console.log(JSON.stringify({ ok: Object.values(checks).every(Boolean), checks }, null, 2));
 for (const [name, ok] of Object.entries(checks)) if (!ok) fail(name);

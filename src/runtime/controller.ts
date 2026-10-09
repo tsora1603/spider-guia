@@ -1,3 +1,5 @@
+import type { EditorialLinkGroup } from '../links/types';
+import { validateEditorialLinks } from '../../data/link-model.mjs';
 import { appState } from '../state/app-state';
 import { progressStore, statusOf, VALID_PROGRESS_STATUSES } from '../state/progress-store';
 import type { ProgressStatus } from '../state/types';
@@ -18,8 +20,8 @@ import { loginWithPassword, passwordAuthError } from '../auth/password-auth';
 const PROGRESS_EXPORT_FORMAT = 'spider-guia-progress';
 const PROGRESS_EXPORT_VERSION = 1;
 
-export const linksEnabled = window.LINKS_ENABLED !== false && typeof window.getEditorialLinks === 'function';
-export const editorialLinks: any[] = linksEnabled ? (window.getEditorialLinks?.() as any[]) || [] : [];
+export const linksEnabled = window.LINKS_ENABLED !== false;
+export const editorialLinks: EditorialLinkGroup[] = linksEnabled ? (DATA.editorial?.links || []) : [];
 
 const SUPABASE_CDN_URL = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js';
 
@@ -752,6 +754,9 @@ export function initializeRuntime() {
 
   if (new URLSearchParams(location.search).get('debug') === '1' && window.SpiderValidator) {
     const result = window.SpiderValidator.validate(DATA, linksEnabled ? editorialLinks : []);
+    const linkErrors = validateEditorialLinks(editorialLinks, { knownItemIds: new Set(readings.map(item => item.id)), extras: editorialExtras });
+    result.errors.push(...linkErrors);
+    result.ok = result.errors.length === 0;
     window.__SPIDER_VALIDATION__ = result;
     if (!result.ok) result.errors.forEach(error => console.error(`[Spider·Guia:${error.code}] ${error.message}`));
   }

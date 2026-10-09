@@ -42,10 +42,9 @@ export function itemRowToObject(row) {
     issue: row[4],
     phase: row[5],
     weight: row[6],
-    brazilianEdition: row[7],
-    instructions: row[8],
-    readingOrder: row[9],
-    note: row[10]
+    instructions: row[7],
+    readingOrder: row[8],
+    note: row[9]
   };
 }
 
@@ -58,7 +57,6 @@ export function itemObjectToRow(item) {
     item.issue,
     item.phase,
     item.weight,
-    item.brazilianEdition,
     item.instructions,
     item.readingOrder,
     item.note

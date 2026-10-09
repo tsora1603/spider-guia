@@ -7,13 +7,14 @@ const read = relative => fs.readFile(path.join(ROOT, relative), 'utf8');
 const exists = async relative => fs.access(path.join(ROOT, relative)).then(() => true).catch(() => false);
 const fail = message => { throw new Error(`Etapa 5: ${message}`); };
 
-const [pkgSource, model, buildData, home, engagement, linksView, generatedIndexSource] = await Promise.all([
+const [pkgSource, model, buildData, home, engagement, linksView, linkCardModel, generatedIndexSource] = await Promise.all([
   read('package.json'),
   read('src/data/model.ts'),
   read('scripts/build-data.mjs'),
   read('src/views/HomeView.tsx'),
   read('src/engagement/EngagementCard.tsx'),
   read('src/views/LinksView.tsx'),
+  read('src/views/link-card-model.ts'),
   read('src/data/generated-index.json')
 ]);
 const pkg = JSON.parse(pkgSource);
@@ -61,12 +62,15 @@ for (const pattern of ['navigator.share', 'shareProgressCard', 'paniniStoreUrl',
   if (searchable.includes(pattern)) fail(`feature fora do escopo privado encontrada: ${pattern}`);
 }
 
-// A integridade estrutural dos links editoriais é verificada por check-editorial-links.mjs.
+// A integridade estrutural dos Links continua sendo validada por check-editorial-links.mjs.
+// O consumidor usa uma projeção tipada para apresentar destinos sem disclosures.
 for (const required of [
-  'editorialLinks', 'group.links', 'group.stores', 'group.libraries',
-  'href={entry.url}', 'target="_blank"', 'rel="noopener"',
-  'normalizeDestinations(group.stores)', 'normalizeDestinations(group.libraries)'
-]) if (!linksView.includes(required)) fail(`LinksView não mantém a origem/abertura dos links: ${required}`);
+  'editorialLinks', 'createEditorialLinkCards', 'href={destination.url}',
+  'target="_blank"', 'rel="noopener noreferrer"'
+]) if (!linksView.includes(required)) fail(`LinksView não mantém o destino externo: ${required}`);
+for (const required of [
+  'group.links', 'group.stores', 'group.libraries', 'model?.resolveExtraId', 'extraAnchorKey'
+]) if (!linkCardModel.includes(required)) fail(`Projeção de Links não mantém as associações: ${required}`);
 if ('paniniEditions' in generatedIndex) fail('índice contém projeção de catálogo oficial que não pertence ao escopo privado.');
 
 if (!pkg.scripts?.['stage5:check']) fail('script stage5:check ausente.');

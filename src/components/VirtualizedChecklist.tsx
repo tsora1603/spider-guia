@@ -9,6 +9,7 @@ import { FilterDropdown } from './FilterDropdown';
 import { ListSearch } from './ListSearch';
 import { ScreenState } from './ScreenState';
 import { reconcileFocusSelection } from './focus-selection';
+import { readingReturnFor } from '../links/return-context';
 import { useDesignPreferences } from '../design/hooks';
 import { designPreferences } from '../design/preferences';
 import { useReadingPreferences } from '../preferences/hooks';
@@ -94,7 +95,7 @@ function FocusChecklist({ items, currentId, onCurrentId, onExit }: {
 export function VirtualizedChecklist() {
   const [query, setQuery] = useState(appState.checklistQuery);
   const [filter, setFilter] = useState<ChecklistFilterValue>((appState.checklistFilter || '') as ChecklistFilterValue);
-  const focusedItemId = appState.focusedItemId;
+  const focusedItemId = appState.focusedItemId ?? readingReturnFor(history.state, location.hash, 'item');
   const progressRevision = useProgressRevision();
   const preferences = useReadingPreferences();
   const design = useDesignPreferences();

@@ -13,10 +13,12 @@ import {
   glossaryObjectToRow
 } from './lib/data-utils.mjs';
 import { buildReadingGroups } from './lib/editorial-projection.mjs';
+import { validateEditorialLinks } from '../data/link-model.mjs';
 import {
   CatalogPhaseSchema,
   FaseSchema,
   ExtraSchema,
+  EditorialLinkGroupSchema,
   LeituraSchema,
   CloneSchema,
   MarcoSchema,
@@ -42,12 +44,15 @@ const pular = zodArray(SkipRuleSchema, await readJson(path.join(SRC_DIR, 'pular.
 const fontes = zodArray(SourceSchema, await readJson(path.join(SRC_DIR, 'fontes.json')), 'fontes');
 const glossario = zodArray(GlossaryEntrySchema, await readJson(path.join(SRC_DIR, 'glossario.json')), 'glossario');
 const editorialExtras = zodArray(ExtraSchema, await readJson(path.join(SRC_DIR, 'editorial', 'extras.json')), 'editorial.extras');
+const editorialLinks = zodArray(EditorialLinkGroupSchema, await readJson(path.join(SRC_DIR, 'editorial', 'links.json')), 'editorial.links');
 const derivedReadings = zodArray(LeituraSchema, buildReadingGroups(editorialExtras), 'editorial.readingGroups (derived)');
 const clone = CloneSchema.parse(await readJson(path.join(SRC_DIR, 'editorial', 'clone.json')));
 const metodologia = zodArray(MethodologyEntrySchema, await readJson(path.join(SRC_DIR, 'editorial', 'metodologia.json')), 'editorial.metodologia');
 const changelog = zodArray(ChangelogEntrySchema, await readJson(path.join(SRC_DIR, 'editorial', 'changelog.json')), 'editorial.changelog');
 const editorialMeta = EditorialMetaSchema.parse(await readJson(path.join(SRC_DIR, 'editorial', 'meta.json')));
 validateInvariants({ items, fases, marcos, editorialExtras, derivedReadings, clone, fontes });
+const linkErrors = validateEditorialLinks(editorialLinks, { knownItemIds: new Set(items.map(item => item.id)), extras: editorialExtras });
+if (linkErrors.length) throw new Error(`Links editoriais inválidos: ${JSON.stringify(linkErrors)}`);
 
 const ITEM_INDEX_FIELDS = [
   'id',
@@ -62,7 +67,7 @@ const ITEM_INDEX_FIELDS = [
 ];
 const SEARCH_STOPWORDS = new Set('como encaixar leia leitura depois antes linha principal porque ajuda confirmacao confirmado confirmada parcial contexto opcional essencial continue marque checklist uma para com sem que por das dos nas nos nao sim sua seu suas seus this the and spider man amazing edition issue volume vol panini'.split(' '));
 const compactSearchHint = item => {
-  const text = [item.brazilianEdition, item.instructions, item.note].filter(Boolean).join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const text = [item.instructions, item.note].filter(Boolean).join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const tokens = text.match(/[a-z0-9#]+/g) || [];
   return [...new Set(tokens.filter(token => token.length >= 3 && !SEARCH_STOPWORDS.has(token)))].join(' ');
 };
@@ -105,6 +110,7 @@ const output = {
   itemFields: manifest.itemFields,
   editorial: {
     extras: editorialExtras,
+    links: editorialLinks,
     clone,
     metodologia,
     changelog,
@@ -121,7 +127,9 @@ if (!checkOnly) {
   await fs.mkdir(generatedDir, { recursive: true });
   await fs.writeFile(path.join(generatedDir, 'generated-data.json'), `${JSON.stringify(output)}\n`, 'utf8');
 
+  const catalogLookup = { bySeries: Object.fromEntries([...new Set(items.map(item => item.series))].map(series => [series, items.filter(item => item.series === series).map(item => ({ id: item.id, issue: item.issue, historicalNumber: item.historicalNumber }))])) };
   const indexOutput = {
+    catalogLookup,
     itemIndexFields: ITEM_INDEX_FIELDS,
     itemIndex: items.map(itemIndexRow),
     catalogChunks: chunkDescriptors,

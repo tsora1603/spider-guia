@@ -9,7 +9,6 @@
     'issue',
     'phase',
     'weight',
-    'brazilianEdition',
     'instructions',
     'readingOrder',
     'note'
@@ -104,46 +103,7 @@
       if (item && item.readingOrder !== entry.readingOrder) fail('clone.order', `Saga do Clone ID ${entry.id}: readingOrder divergente.`);
     });
 
-    (links || []).forEach((group, groupIndex) => {
-      const groupName = group.id || groupIndex + 1;
-      (group.itemIds || []).forEach(id => {
-        if (!idSet.has(Number(id))) {
-          fail('links.item', `Grupo de link ${groupName} referencia ID inexistente ${id}.`);
-        }
-      });
-
-      const validateDestinations = (entries, field) => {
-        if (entries == null) return;
-        if (!Array.isArray(entries)) {
-          fail('links.field', `${field} deve ser uma lista no grupo ${groupName}.`);
-          return;
-        }
-        entries.forEach((link, linkIndex) => {
-          if (!link?.url || !link?.label) {
-            fail(
-              'links.entry',
-              `Link incompleto em ${groupName}.${field}, posição ${linkIndex + 1}.`
-            );
-          }
-        });
-      };
-
-      validateDestinations(group.links || [], 'links');
-      validateDestinations(group.stores, 'stores');
-      validateDestinations(group.libraries, 'libraries');
-
-      if (
-        group.brazilianEdition != null &&
-        typeof group.brazilianEdition !== 'string'
-      ) {
-        fail(
-          'links.brazilianEdition',
-          `brazilianEdition deve ser texto no grupo ${groupName}.`
-        );
-      }
-    });
-
-
+    // Vínculos de Links são validados pelo módulo compartilhado data/link-model.mjs.
 
     return {
       ok: errors.length === 0,

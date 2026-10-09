@@ -35,9 +35,12 @@ check('extra abre entrada e filtro não esconde item', () => {
 });
 check('link direto respeita a flag e abre grupo', () => {
   assertIncludes(explore, "exploreTarget('links', 'link', group.key)");
-  assertIncludes(links, "exploreRouteParam('link')");
+  assertIncludes(links, "params.getAll('link')");
+  assertIncludes(links, "resolveLinkTargets(");
   assertIncludes(links, "params.set('lq', value)");
-  assertIncludes(links, 'href={entry.url}');
+  assertIncludes(links, 'href={destination.url}');
+  assertIncludes(links, 'tabIndex={-1}');
+  assert.ok(!links.includes('<details'), 'Links não devem exigir expansão');
 });
 check('busca e retorno restauram contexto sem poluir histórico', () => {
   assertIncludes(navigation, 'history.replaceState(history.state');

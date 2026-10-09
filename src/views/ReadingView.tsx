@@ -11,6 +11,7 @@ import { FilterDropdown } from '../components/FilterDropdown';
 import { ScreenState } from '../components/ScreenState';
 import { ProgressBarVisual } from '../design/ProgressVisuals';
 import { exploreRouteParam, focusEditorialTarget, resolveExtraTargetIndex } from './explore-navigation';
+import { readingReturnFor } from '../links/return-context';
 
 const EXTRA_FILTERS: Array<[string, string]> = [
   ['rec', 'Recomendadas'], ['go', 'Liberadas'], ['ess', 'Essenciais'], ['ctx', 'Contexto'],
@@ -18,14 +19,17 @@ const EXTRA_FILTERS: Array<[string, string]> = [
 ];
 
 export function ExtrasView() {
-  const targetIndex = resolveExtraTargetIndex(exploreRouteParam('extra'), editorialExtras);
-  const [filter, setFilter] = useState(targetIndex !== null ? 'all' : appState.extrasFilter || 'rec');
+  const directExtra = resolveExtraTargetIndex(exploreRouteParam('extra'), editorialExtras);
+  const returnedExtraId = readingReturnFor(history.state, location.hash, 'extra');
+  const rememberedIndex = returnedExtraId === null ? null : editorialExtras.findIndex((extra: any) => extra.n === returnedExtraId);
+  const targetIndex = directExtra ?? (rememberedIndex !== null && rememberedIndex >= 0 ? rememberedIndex : null);
+  const [filter, setFilter] = useState(directExtra !== null ? 'all' : appState.extrasFilter || 'rec');
   useEffect(() => {
     if (targetIndex === null) return;
-    setFilter('all');
+    if (directExtra !== null) setFilter('all');
     const frame = requestAnimationFrame(() => focusEditorialTarget(`explore-extra-${targetIndex}`));
     return () => cancelAnimationFrame(frame);
-  }, [targetIndex]);
+  }, [targetIndex, directExtra]);
   const filtered = editorialExtras.filter((entry: any) => {
     const availability = extraState(entry).availability;
     if (filter === 'rec') return entry.weight !== '○ Opcional';

@@ -10,6 +10,7 @@ import { SkipButton, StatusButton, progressStatusLabel } from './Progress';
 import { Icon } from './Icon';
 import { SourceLinks } from './SourceLinks';
 import { bulkProgressUi } from '../progress/bulk-ui';
+import { ReadingLinksAction, hasReadingLinks } from './ReadingLinksAction';
 
 const noteFor = (item: Reading) => {
   const notes = item.notes || '';
@@ -34,6 +35,7 @@ export const IssueRow = memo(function IssueRow({
   onOpenChange,
   anchor = true,
   showBulkAction = true,
+  showLinks = true,
   extraEvidence,
   context
 }: {
@@ -43,6 +45,7 @@ export const IssueRow = memo(function IssueRow({
   onOpenChange?(id: number, open: boolean): void;
   anchor?: boolean;
   showBulkAction?: boolean;
+  showLinks?: boolean;
   extraEvidence?: ExtraEvidence;
   context?: CloneContext;
 }) {
@@ -57,7 +60,7 @@ export const IssueRow = memo(function IssueRow({
   const resolvedItem = detailedItem || item;
   const detail = extraDetailsById[item.id];
   const note = noteFor(resolvedItem);
-  const hasDetail = Boolean(editorialExtra || extraEvidence || (resolvedItem.detailsLoaded && (resolvedItem.brazilianEdition || note || detail)));
+  const hasDetail = Boolean(editorialExtra || extraEvidence || (showLinks && hasReadingLinks('item', item.id)) || (resolvedItem.detailsLoaded && (note || detail)));
   return (
     <div id={anchor ? `hq-${item.id}` : undefined} tabIndex={-1} data-keyboard-reading data-reading-id={item.id} data-progress-status={status} class={`list-entry issue-entry ui-list-item ${status === 'Não' ? '' : 'is-done'}`}>
       <StatusButton id={item.id} status={status} labelPrefix={`${item.series} ${item.issue}`} />
@@ -89,6 +92,7 @@ export const IssueRow = memo(function IssueRow({
           <Icon name="chevD" className="disclosure-chevron" />
         </summary>
         <div class="row-body disclosure-content">
+          {showLinks ? <ReadingLinksAction kind="item" id={item.id} /> : null}
           {extraEvidence ? (
             <div class="extra-issue-evidence" aria-label="Fontes e confirmação editorial da leitura agrupada">
               <span class="sm mu">Status editorial do conjunto: <b>{extraEvidence.confirmation || 'A confirmar'}</b>. A avaliação de posição e peso pertence à ficha editorial do conjunto.</span>
@@ -112,7 +116,6 @@ export const IssueRow = memo(function IssueRow({
           {showBulkAction && item.historicalNumber ? <div class="issue-actions"><button class="skip-action bulk-inline-action" type="button" onClick={event => bulkProgressUi.open({ selection: { kind: 'through', itemId: item.id }, origin: event.currentTarget })}>Tudo até aqui</button></div> : null}
           {detailLoading ? <div class="ex mu sm" role="status">Carregando detalhes desta fase…</div> : null}
           {detailError ? <div class="ex sm" role="alert">Não foi possível carregar os detalhes desta fase. Tente novamente ao reabrir a edição.</div> : null}
-          {resolvedItem.brazilianEdition ? <div class="ex"><Icon name="book" /> {resolvedItem.brazilianEdition}</div> : null}
           {note ? <div class="ex nt"><SpoilerText text={note} inline={false} /></div> : null}
           {detail ? (
             <div class="ex">

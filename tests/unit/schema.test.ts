@@ -89,7 +89,6 @@ describe('schemas Zod dos dados canônicos', () => {
           issue: '1',
           phase: 'Teste',
           weight: '● Essencial',
-          brazilianEdition: '',
           instructions: '',
           readingOrder: 0,
           note: ''

@@ -579,7 +579,7 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
     await page.goto('/#explorar/links');
     const wars = page.locator('.link-row').filter({ hasText: 'Marvel Super Heroes Secret Wars' }).first();
     await expect(wars).toBeVisible();
-    await wars.locator('summary').click();
+    await expect(wars.locator('summary')).toHaveCount(0);
     const link = wars.getByRole('link', { name: 'Guerras Secretas', exact: true });
     await expect(link).toHaveAttribute('href', 'https://www.mediafire.com/file/i2yt34flnmkp02j/198412_Marvel_Super-Herois_Guerras_Secretas_008.cbr/file');
   });
@@ -633,7 +633,7 @@ test.describe('SPIDER·GUIA — sistema de listas (UX Etapa 2)', () => {
     await expect(page.locator('.extras-list .extra-entry').first()).toBeVisible();
   });
 
-  test('Detalhes de Jornada, Links e Fontes continuam a lista sem caixas internas escuras', async ({ page }) => {
+  test('Jornada, Links e Fontes não introduzem caixas internas escuras', async ({ page }) => {
     await page.goto('/#explorar/jornada');
     await expect(page.locator('.journey-body').first()).toBeVisible();
     const backgrounds = async (selector: string) => page.locator(selector).first().evaluate(element => {
@@ -642,8 +642,8 @@ test.describe('SPIDER·GUIA — sistema de listas (UX Etapa 2)', () => {
     });
     await expect.poll(() => backgrounds('.journey-body')).toEqual({ background: 'rgba(0, 0, 0, 0)', shadow: 'none' });
     await page.goto('/#explorar/links');
-    await page.locator('.link-row summary').first().click();
-    await expect.poll(() => backgrounds('.link-panel')).toEqual({ background: 'rgba(0, 0, 0, 0)', shadow: 'none' });
+    await expect(page.locator('.links-list details')).toHaveCount(0);
+    await expect.poll(() => backgrounds('.link-destination')).toEqual({ background: 'rgba(0, 0, 0, 0)', shadow: 'none' });
     await page.goto('/#ajuda/fontes');
     const site = page.locator('.source-site-group').first();
     await site.locator('summary').first().click();
@@ -904,9 +904,8 @@ test.describe('UX Etapa 5 — resultados contextuais de Explorar', () => {
     await expect(page).toHaveURL(/#explorar\/links\?link=/);
     const target = page.locator('[data-explore-target="link"]');
     await expect(target).toBeVisible();
-    await expect(target).toHaveAttribute('open', '');
-    await expect(target.locator('summary')).toBeFocused();
-    await expect(target.locator('a.lk').first()).toHaveAttribute('href', /https?:\/\//);
+    await expect(target).toBeFocused();
+    await expect(target.locator('a.link-external').first()).toHaveAttribute('href', /https?:\/\//);
     await page.getByRole('searchbox', { name: 'Buscar links' }).fill('Guerras Secretas');
     await expect(page).toHaveURL(/lq=Guerras\+Secretas/);
     await expect(page.locator('.links-list .link-row')).not.toHaveCount(0);
