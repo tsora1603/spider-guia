@@ -7,7 +7,7 @@ Guia privado de leitura do Homem-Aranha, feito com **Vite + TypeScript + Preact*
 Requer **Node.js 24** e npm. Na raiz do projeto:
 
 ```bash
-npm install           # ou npm ci, se houver package-lock.json versionado
+npm ci                # instalação reproduzível com o package-lock.json versionado
 npm run dev           # abre o endereço exibido pelo Vite
 ```
 
@@ -18,6 +18,10 @@ npm run test:e2e      # Playwright (primeiro: npx playwright install chromium)
 ```
 
 Para checagem mais ampla: `npm run e:check`, `npm run reset:local-smoke` e `npm run reset:smoke`. A instalação e o CI podem exigir outras dependências do ambiente. **Aprovação em testes locais não comprova a segurança do Supabase real.**
+
+O Vite exibe a URL local (normalmente `http://localhost:5173`). Abra-a no navegador; encerre com `Ctrl+C`. Não abra `index.html` por duplo clique. Para testar a versão publicada, rode `npm run build` e `npm run preview` (normalmente `http://localhost:4173`).
+
+Para preparar um fork com configuração própria, publicar no Netlify/GitHub Pages ou servir em outra hospedagem, siga [Execução e hospedagem](docs/HOSPEDAGEM.md).
 
 ## Onde fica cada coisa
 
@@ -33,7 +37,7 @@ Para checagem mais ampla: `npm run e:check`, `npm run reset:local-smoke` e `npm 
 
 **Não edite arquivos gerados** (`data.js`, `src/data/chunks/`, `src/data/generated-*.json`, `src/data/generated-chunks.ts`). Eles são reconstruídos por `npm run data:build` a partir de `data/src/`.
 
-Para adicionar Links, preserve os grupos e URLs existentes, acrescente o destino em `data/src/editorial/links.json` e rode `npm run links:check`. O modelo de cobertura, as associações explícitas com Extras e exemplos de cadastro estão em [Arquitetura e dados](docs/ARQUITETURA.md#links-editoriais-e-cobertura). Para alterações editoriais, rode `npm run data:build` e `npm run data:check`. Mudanças em IDs ou ordem de leitura podem afetar progresso salvo e exigem migração deliberada.
+Para adicionar ou corrigir Links, siga os [exemplos e o procedimento de manutenção](docs/MANUTENCAO.md#como-adicionar-ou-modificar-links), incluindo a revisão do snapshot quando uma URL histórica precisar ser substituída. O modelo de cobertura, as associações explícitas com Extras e exemplos de cadastro estão em [Arquitetura e dados](docs/ARQUITETURA.md#links-editoriais-e-cobertura). Para alterações editoriais, rode `npm run data:build` e `npm run data:check`. Mudanças em IDs ou ordem de leitura podem afetar progresso salvo e exigem migração deliberada.
 
 ## Como o usuário navega
 
@@ -53,6 +57,8 @@ Uma leitura extra com ficha editorial exibe **Mais informações** sempre visív
 
 ## Documentação mantida
 
+- [Execução e hospedagem](docs/HOSPEDAGEM.md) — instalação, cópia independente, GitHub Pages, Netlify e servidor próprio.
+- [Contribuição pelo GitHub](CONTRIBUTING.md) — branches, pull requests e revisão por terceiros.
 - [Manutenção e publicação](docs/MANUTENCAO.md) — como editar, testar, fazer commit e publicar.
 - [Arquitetura e dados](docs/ARQUITETURA.md) — pastas, rotas, modelo editorial e geração de dados.
 - [Supabase e segurança](docs/SUPABASE-E-SEGURANCA.md) — contas, RLS, sincronização, backup e reset.
