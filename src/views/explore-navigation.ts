@@ -1,5 +1,5 @@
 /** Internal editorial anchors are positions in the versioned curated index, not inferred HQ mappings. */
-export type EditorialTarget = 'marco' | 'extra' | 'link';
+export type EditorialTarget = 'marco' | 'extra' | 'link' | 'passo';
 
 const slug = (value: unknown) =>
   String(value ?? '')
@@ -89,6 +89,7 @@ export function replaceExploreSearch(query: string): void {
   params.delete('marco');
   params.delete('extra');
   params.delete('link');
+  params.delete('passo');
   if (query.trim()) params.set('q', query);
   else params.delete('q');
   const next = params.toString();

@@ -1,6 +1,7 @@
 import { spoilerPlainText } from '../spoilers/model';
 import generatedIndex from './generated-index.json';
 import { catalogChunkLoaders } from './generated-chunks';
+import type { CloneGuide } from '../clone-guide/model';
 
 export const DATA = generatedIndex as any;
 
@@ -127,6 +128,7 @@ export function cachedReadingDetails(id: number): Reading | null {
 export const editorialData = DATA.editorial || {};
 export const editorialExtras = editorialData.extras || [];
 export const cloneEntries = editorialData.clone?.entries || [];
+export const cloneGuide: CloneGuide = editorialData.clone?.guide;
 
 /** Associação editorial explícita: a Checklist só oferece detalhes em Explorar
  * quando existe uma entrada de Extras que realmente referencia a HQ.

@@ -93,6 +93,38 @@ export function CloneArcLinksAction({ arcId, label }: { arcId: string; label: st
   );
 }
 
+export function CloneGuideLinksAction({
+  itemIds,
+  arcIds,
+  stepId,
+  label
+}: {
+  itemIds: number[];
+  arcIds: string[];
+  stepId: string;
+  label: string;
+}) {
+  if (!linksEnabled) return null;
+  const linkIds = [
+    ...new Set([
+      ...linkTargetsForItems(associations, itemIds),
+      ...arcIds.flatMap((arcId) => [...linkTargetsForCloneArc(associations, arcId)])
+    ])
+  ];
+  if (!linkIds.length) return null;
+  return (
+    <ReadingLinksButton
+      linkIds={linkIds}
+      source={exploreTarget('clone', 'passo', stepId)}
+      kind="item"
+      id={0}
+      compact
+      remember={false}
+      label={`Ver links de ${label}`}
+    />
+  );
+}
+
 function ReadingLinksButton({
   linkIds,
   source,

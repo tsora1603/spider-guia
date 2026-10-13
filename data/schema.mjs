@@ -214,8 +214,96 @@ export const CloneEntrySchema = z
     }
   });
 
+export const CloneGuideStepSchema = z
+  .object({
+    id: z.string().min(1),
+    number: z.number().int().positive(),
+    title: z.string().min(1),
+    edition: z.string().min(1),
+    read: z.string().min(1),
+    note: z.string(),
+    format: z.string().min(1),
+    originals: z.array(z.string().min(1)).min(1),
+    itemIds: z.array(z.number().int().positive()).min(1),
+    arcIds: z.array(z.string().min(1)),
+    complement: z.string()
+  })
+  .strict();
+
+export const CloneGuideSchema = z
+  .object({
+    title: z.string().min(1),
+    intro: z.array(z.string().min(1)).min(1),
+    legend: z.string().min(1),
+    sections: z
+      .array(
+        z
+          .object({
+            id: z.string().min(1),
+            title: z.string().min(1),
+            description: z.string().min(1),
+            steps: z.array(CloneGuideStepSchema).min(1)
+          })
+          .strict()
+      )
+      .min(1),
+    notes: z.array(z.object({ title: z.string().min(1), body: z.string().min(1) }).strict()),
+    sources: z
+      .array(
+        z
+          .object({
+            title: z.string().min(1),
+            description: z.string().min(1),
+            url: z
+              .string()
+              .url()
+              .regex(/^https?:\/\//)
+              .optional()
+          })
+          .strict()
+      )
+      .min(1)
+  })
+  .strict()
+  .superRefine((guide, ctx) => {
+    const steps = guide.sections.flatMap((section) => section.steps);
+    if (
+      new Set(steps.map((step) => step.id)).size !== steps.length ||
+      new Set(guide.sections.map((section) => section.id)).size !== guide.sections.length
+    ) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'IDs do guia brasileiro devem ser únicos.'
+      });
+    }
+    if (steps.some((step, index) => step.number !== index + 1)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Passos do guia brasileiro devem ser consecutivos.'
+      });
+    }
+    const base = guide.sections[0];
+    const expected = [
+      ...Array.from(
+        { length: 18 },
+        (_, index) => `panini-saga-${String(index + 1).padStart(2, '0')}`
+      ),
+      'panini-ben-01'
+    ];
+    if (
+      base?.id !== 'base' ||
+      JSON.stringify(base?.steps.map((step) => step.id)) !== JSON.stringify(expected)
+    ) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'A base deve conter os 19 volumes integrais na ordem definida.'
+      });
+    }
+  });
+
 export const CloneSchema = z.object({
-  entries: z.array(CloneEntrySchema)
+  entries: z.array(CloneEntrySchema),
+  guide: CloneGuideSchema.optional()
 });
 
 export const MarcoSchema = z.object({

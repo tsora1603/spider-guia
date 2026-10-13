@@ -3356,5 +3356,1801 @@
       "confirmationDetail": "A posição segue a ordem publicada nas fontes. O peso já existente foi validado com pelo menos 60% de evidência documental e até 40% de dedução editorial.",
       "arcId": "historias-paralelas"
     }
-  ]
+  ],
+  "guide": {
+    "title": "Guia brasileiro da Saga do Clone",
+    "intro": [
+      "Comece por A Saga do Clone, volumes 1–18, e depois A Saga do Clone — Ben Reilly, volume 1, todos da Panini. Leia cada volume inteiro, uma única vez, sem interrupções e sem retornos.",
+      "Depois dos 19 volumes, siga apenas as histórias restantes, usando as edições brasileiras indicadas ou os originais americanos. Ao retomar uma revista avulsa da Abril, leia outra história nela, sem repetir o que já foi lido."
+    ],
+    "legend": "Amazing = The Amazing Spider-Man (1963); Spectacular = The Spectacular Spider-Man (1976); Spider-Man = série de 1990; Sensational = série de 1996; Unlimited = Spider-Man Unlimited (1993); Team-Up = Spider-Man Team-Up (1995). Homem-Aranha nº 177–198, A Teia do Aranha e Grandes Heróis Marvel são da Abril. A Teia do Homem-Aranha nº 4 e Homem-Aranha nº 109, nas expansões, são da Panini.",
+    "sections": [
+      {
+        "id": "base",
+        "title": "1. Os 19 volumes completos",
+        "description": "Leia A Saga do Clone, volumes 1–18, em sequência; depois Ben Reilly, volume 1. Cada volume é lido inteiro, uma única vez, sem interrupções e sem retornos.",
+        "steps": [
+          {
+            "id": "panini-saga-01",
+            "number": 1,
+            "title": "A Saga do Clone — volume 1",
+            "edition": "A Saga do Clone — Panini, vol. 1",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Web of Spider-Man (1985) #117",
+              "The Amazing Spider-Man (1963) #394",
+              "Spider-Man (1990) #51",
+              "The Spectacular Spider-Man (1976) #217"
+            ],
+            "itemIds": [
+              409,
+              410,
+              411,
+              412
+            ],
+            "arcIds": [
+              "power-and-responsibility-the-double"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-02",
+            "number": 2,
+            "title": "A Saga do Clone — volume 2",
+            "edition": "A Saga do Clone — Panini, vol. 2",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "Os contos adicionais dos mesmos originais do volume 1 são histórias diferentes; leia também esse material.",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Web of Spider-Man (1985) #117",
+              "The Amazing Spider-Man (1963) #394",
+              "Spider-Man (1990) #51",
+              "The Spectacular Spider-Man (1976) #217",
+              "Web of Spider-Man (1985) #118",
+              "Web of Spider-Man (1985) #119",
+              "Spider-Man (1990) #52",
+              "Spider-Man (1990) #53"
+            ],
+            "itemIds": [
+              409,
+              410,
+              411,
+              412,
+              416,
+              419,
+              418,
+              420
+            ],
+            "arcIds": [
+              "power-and-responsibility-the-double",
+              "the-exile-returns"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-03",
+            "number": 3,
+            "title": "A Saga do Clone — volume 3",
+            "edition": "A Saga do Clone — Panini, vol. 3",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Spider-Man Unlimited (1993) #7",
+              "The Amazing Spider-Man (1963) #395",
+              "The Amazing Spider-Man (1963) #396",
+              "The Spectacular Spider-Man (1976) #218",
+              "The Spectacular Spider-Man (1976) #219"
+            ],
+            "itemIds": [
+              417,
+              421,
+              423,
+              422,
+              424
+            ],
+            "arcIds": [
+              "the-exile-returns",
+              "back-from-the-edge"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-04",
+            "number": 4,
+            "title": "A Saga do Clone — volume 4",
+            "edition": "A Saga do Clone — Panini, vol. 4",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Web of Spider-Man (1985) #120",
+              "Web of Spider-Man (1985) #121",
+              "Spider-Man (1990) #54",
+              "Spider-Man (1990) #55",
+              "The Amazing Spider-Man (1963) #397",
+              "The Amazing Spider-Man (1963) #398",
+              "The Spectacular Spider-Man (1976) #220",
+              "The Spectacular Spider-Man (1976) #221"
+            ],
+            "itemIds": [
+              425,
+              427,
+              426,
+              428,
+              429,
+              431,
+              430,
+              432
+            ],
+            "arcIds": [
+              "web-of-life",
+              "web-of-death"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-05",
+            "number": 5,
+            "title": "A Saga do Clone — volume 5",
+            "edition": "A Saga do Clone — Panini, vol. 5",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Spider-Man: Funeral for an Octopus #1",
+              "Spider-Man: Funeral for an Octopus #2",
+              "Spider-Man: Funeral for an Octopus #3",
+              "Spider-Man Unlimited (1993) #8"
+            ],
+            "itemIds": [
+              433,
+              434,
+              435,
+              436
+            ],
+            "arcIds": [
+              "funeral-for-an-octopus"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-06",
+            "number": 6,
+            "title": "A Saga do Clone — volume 6",
+            "edition": "A Saga do Clone — Panini, vol. 6",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Web of Spider-Man (1985) #122",
+              "Web of Spider-Man (1985) #123",
+              "The Amazing Spider-Man (1963) #399",
+              "The Amazing Spider-Man (1963) #400",
+              "Spider-Man (1990) #56",
+              "The Spectacular Spider-Man (1976) #222"
+            ],
+            "itemIds": [
+              437,
+              442,
+              438,
+              448,
+              439,
+              441
+            ],
+            "arcIds": [
+              "smoke-and-mirrors",
+              "players-and-pawns",
+              "the-parker-legacy"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-07",
+            "number": 7,
+            "title": "A Saga do Clone — volume 7",
+            "edition": "A Saga do Clone — Panini, vol. 7",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "Os complementos de Amazing #400 são diferentes da história central do volume 6.",
+            "format": "Panini · volume completo",
+            "originals": [
+              "The Amazing Spider-Man (1963) #400",
+              "Spider-Man (1990) #57",
+              "The Spectacular Spider-Man (1976) #223",
+              "Spider-Man: The Clone Journal #1"
+            ],
+            "itemIds": [
+              448,
+              449,
+              450,
+              440
+            ],
+            "arcIds": [
+              "the-parker-legacy",
+              "the-clone-journal"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-08",
+            "number": 8,
+            "title": "A Saga do Clone — volume 8",
+            "edition": "A Saga do Clone — Panini, vol. 8",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Web of Spider-Man (1985) #124",
+              "The Amazing Spider-Man (1963) #401",
+              "Spider-Man (1990) #58",
+              "The Spectacular Spider-Man (1976) #224",
+              "Spider-Man Unlimited (1993) #9"
+            ],
+            "itemIds": [
+              451,
+              452,
+              453,
+              454,
+              455
+            ],
+            "arcIds": [
+              "the-mark-of-kaine"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-09",
+            "number": 9,
+            "title": "A Saga do Clone — volume 9",
+            "edition": "A Saga do Clone — Panini, vol. 9",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Web of Spider-Man (1985) #125",
+              "The Amazing Spider-Man (1963) #402",
+              "Spider-Man (1990) #59",
+              "The Spectacular Spider-Man (1976) #225"
+            ],
+            "itemIds": [
+              456,
+              457,
+              458,
+              459
+            ],
+            "arcIds": [
+              "the-mark-of-kaine",
+              "crossfire"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-10",
+            "number": 10,
+            "title": "A Saga do Clone — volume 10",
+            "edition": "A Saga do Clone — Panini, vol. 10",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Web of Spider-Man (1985) #126",
+              "The Amazing Spider-Man (1963) #403",
+              "Spider-Man (1990) #60",
+              "The Spectacular Spider-Man (1976) #226",
+              "Spider-Man: The Jackal Files #1"
+            ],
+            "itemIds": [
+              460,
+              461,
+              462,
+              463,
+              464
+            ],
+            "arcIds": [
+              "the-trial-of-peter-parker",
+              "the-jackal-files"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-11",
+            "number": 11,
+            "title": "A Saga do Clone — volume 11",
+            "edition": "A Saga do Clone — Panini, vol. 11",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Amazing Spider-Man Super Special #1",
+              "Spider-Man Super Special #1",
+              "Venom Super Special #1",
+              "Spectacular Spider-Man Super Special #1",
+              "Web of Spider-Man Super Special #1"
+            ],
+            "itemIds": [
+              443,
+              444,
+              445,
+              446,
+              447
+            ],
+            "arcIds": [
+              "planet-of-the-symbiotes"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-12",
+            "number": 12,
+            "title": "A Saga do Clone — volume 12",
+            "edition": "A Saga do Clone — Panini, vol. 12",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "New Warriors (1990) #61",
+              "Spider-Man: Maximum Clonage Alpha #1",
+              "Web of Spider-Man (1985) #127",
+              "The Amazing Spider-Man (1963) #404"
+            ],
+            "itemIds": [
+              465,
+              466,
+              467,
+              468
+            ],
+            "arcIds": [
+              "maximum-clonage"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-13",
+            "number": 13,
+            "title": "A Saga do Clone — volume 13",
+            "edition": "A Saga do Clone — Panini, vol. 13",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Spider-Man (1990) #61",
+              "The Spectacular Spider-Man (1976) #227",
+              "Spider-Man: Maximum Clonage Omega #1",
+              "New Warriors (1990) #62"
+            ],
+            "itemIds": [
+              469,
+              470,
+              471,
+              472
+            ],
+            "arcIds": [
+              "maximum-clonage"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-14",
+            "number": 14,
+            "title": "A Saga do Clone — volume 14",
+            "edition": "A Saga do Clone — Panini, vol. 14",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "Os contos dos especiais são distintos do arco Planet of the Symbiotes do volume 11.",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Amazing Spider-Man Super Special #1",
+              "Venom Super Special #1",
+              "Spectacular Spider-Man Super Special #1",
+              "Web of Spider-Man Super Special #1"
+            ],
+            "itemIds": [
+              443,
+              445,
+              446,
+              447
+            ],
+            "arcIds": [
+              "planet-of-the-symbiotes"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-15",
+            "number": 15,
+            "title": "A Saga do Clone — volume 15",
+            "edition": "A Saga do Clone — Panini, vol. 15",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Web of Spider-Man (1985) #128",
+              "The Amazing Spider-Man (1963) #405",
+              "Spider-Man (1990) #62",
+              "Spider-Man Unlimited (1993) #10"
+            ],
+            "itemIds": [
+              473,
+              474,
+              475,
+              476
+            ],
+            "arcIds": [
+              "exiled"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-16",
+            "number": 16,
+            "title": "A Saga do Clone — volume 16",
+            "edition": "A Saga do Clone — Panini, vol. 16",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "Leia New Warriors #63–66 agora. Nenhum desses capítulos retorna à sequência complementar.",
+            "format": "Panini · volume completo",
+            "originals": [
+              "The Spectacular Spider-Man (1976) #228",
+              "Web of Spider-Man (1985) #129",
+              "New Warriors (1990) #63",
+              "New Warriors (1990) #64",
+              "New Warriors (1990) #65",
+              "New Warriors (1990) #66"
+            ],
+            "itemIds": [
+              477,
+              478,
+              479,
+              480,
+              486,
+              497
+            ],
+            "arcIds": [
+              "time-bomb",
+              "depois-de-the-greatest-responsibility",
+              "depois-de-cyberwar"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-17",
+            "number": 17,
+            "title": "A Saga do Clone — volume 17",
+            "edition": "A Saga do Clone — Panini, vol. 17",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "",
+            "format": "Panini · volume completo",
+            "originals": [
+              "The Amazing Spider-Man (1963) #406",
+              "Spider-Man (1990) #63",
+              "Spider-Man Team-Up (1995) #1",
+              "The Spectacular Spider-Man (1976) #229"
+            ],
+            "itemIds": [
+              481,
+              482,
+              483,
+              484
+            ],
+            "arcIds": [
+              "the-greatest-responsibility"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-saga-18",
+            "number": 18,
+            "title": "A Saga do Clone — volume 18",
+            "edition": "A Saga do Clone — Panini, vol. 18",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "Leia The Lost Years #1–3 e The Parker Years neste volume. Nenhum deles será antecipado ou retomado.",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Spider-Man: The Lost Years #1",
+              "Spider-Man: The Lost Years #2",
+              "Spider-Man: The Lost Years #3",
+              "Spider-Man: The Parker Years #1"
+            ],
+            "itemIds": [
+              413,
+              414,
+              415,
+              485
+            ],
+            "arcIds": [
+              "the-lost-years",
+              "depois-de-the-greatest-responsibility"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "panini-ben-01",
+            "number": 19,
+            "title": "A Saga do Clone — Ben Reilly — volume 1",
+            "edition": "A Saga do Clone — Ben Reilly — Panini, vol. 1",
+            "read": "Leia o volume inteiro, na ordem do sumário.",
+            "note": "Leia Scarlet Spider Unlimited #1 e Virtual Mortality neste volume. Depois, prossiga para Cyberwar.",
+            "format": "Panini · volume completo",
+            "originals": [
+              "Scarlet Spider Unlimited #1",
+              "Web of Scarlet Spider #1",
+              "Amazing Scarlet Spider #1",
+              "Scarlet Spider (1995) #1",
+              "Spectacular Scarlet Spider #1"
+            ],
+            "itemIds": [
+              487,
+              488,
+              489,
+              490,
+              491
+            ],
+            "arcIds": [
+              "depois-de-the-greatest-responsibility",
+              "virtual-mortality"
+            ],
+            "complement": ""
+          }
+        ]
+      },
+      {
+        "id": "cyberwar",
+        "title": "2. Cyberwar e estabelecimento de Ben",
+        "description": "Comece aqui depois dos 19 volumes. Virtual Mortality e New Warriors #66 já foram lidos; não entram novamente.",
+        "steps": [
+          {
+            "id": "leitura-20",
+            "number": 20,
+            "title": "Aranha Escarlate Especial — Abril (fev. 1998)",
+            "edition": "Aranha Escarlate Especial — Abril (fev. 1998)",
+            "read": "Web of Scarlet Spider #2 → Amazing Scarlet Spider #2.",
+            "note": "Leia somente esses dois capítulos. Não releia Scarlet Spider Unlimited #1 nem os excertos de The Jackal Files, já cobertos pelos volumes da base. A Abril omitiu a última página de Amazing Scarlet Spider #2: complete-a no original antes de Green Goblin #3, ou substitua esse capítulo inteiro pela edição americana.",
+            "format": "Brasil + página do original",
+            "originals": [
+              "Web of Scarlet Spider #2",
+              "Amazing Scarlet Spider #2"
+            ],
+            "itemIds": [
+              492,
+              493
+            ],
+            "arcIds": [
+              "cyberwar"
+            ],
+            "complement": "Amazing Scarlet Spider #2 — última página; alternativamente, edição americana inteira no lugar do capítulo brasileiro."
+          },
+          {
+            "id": "leitura-21",
+            "number": 21,
+            "title": "Green Goblin (1995) #3 — original americano",
+            "edition": "Green Goblin (1995) #3 — original americano",
+            "read": "Capítulo intermediário de Cyberwar.",
+            "note": "",
+            "format": "Original americano",
+            "originals": [
+              "Green Goblin (1995) #3"
+            ],
+            "itemIds": [
+              494
+            ],
+            "arcIds": [
+              "cyberwar"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-22",
+            "number": 22,
+            "title": "Aranha Escarlate Especial — Abril (fev. 1998) — retomar",
+            "edition": "Aranha Escarlate Especial — Abril (fev. 1998) — retomar",
+            "read": "Scarlet Spider #2 → Spectacular Scarlet Spider #2.",
+            "note": "Conclua Cyberwar depois de Green Goblin #3; não leia o especial inteiro em uma única passagem.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Scarlet Spider (1995) #2",
+              "Spectacular Scarlet Spider #2"
+            ],
+            "itemIds": [
+              495,
+              496
+            ],
+            "arcIds": [
+              "cyberwar"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-23",
+            "number": 23,
+            "title": "A Teia do Aranha — Abril, nº 100",
+            "edition": "A Teia do Aranha — Abril, nº 100",
+            "read": "Sensational Spider-Man #0 → Amazing Spider-Man #407 → Spider-Man #64.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "Sensational Spider-Man (1996) #0",
+              "The Amazing Spider-Man (1963) #407",
+              "Spider-Man (1990) #64"
+            ],
+            "itemIds": [
+              498,
+              499,
+              500
+            ],
+            "arcIds": [
+              "depois-de-cyberwar"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-24",
+            "number": 24,
+            "title": "Web of Scarlet Spider #3; New Warriors (1990) #67; Web of Scarlet Spider #4 — originais americanos",
+            "edition": "Web of Scarlet Spider #3; New Warriors (1990) #67; Web of Scarlet Spider #4 — originais americanos",
+            "read": "Leia nessa ordem: Web of Scarlet Spider #3 → New Warriors #67 → Web of Scarlet Spider #4.",
+            "note": "",
+            "format": "Original americano",
+            "originals": [
+              "Web of Scarlet Spider #3",
+              "New Warriors (1990) #67",
+              "Web of Scarlet Spider #4"
+            ],
+            "itemIds": [
+              501,
+              502,
+              503
+            ],
+            "arcIds": [
+              "nightmare-in-scarlet"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-25",
+            "number": 25,
+            "title": "A Teia do Aranha — Abril, nº 102 — primeiro uso",
+            "edition": "A Teia do Aranha — Abril, nº 102 — primeiro uso",
+            "read": "Somente Spectacular Spider-Man #230.",
+            "note": "Reserve o Annual 1996 para o passo correspondente; o conto de Holiday Special será tratado separadamente.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Spectacular Spider-Man (1976) #230"
+            ],
+            "itemIds": [
+              504
+            ],
+            "arcIds": [
+              "depois-de-nightmare-in-scarlet"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-26",
+            "number": 26,
+            "title": "Grandes Heróis Marvel — Abril, nº 59",
+            "edition": "Grandes Heróis Marvel — Abril, nº 59",
+            "read": "Spider-Man/Punisher: Family Plot #1 → #2.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "Spider-Man/Punisher: Family Plot #1",
+              "Spider-Man/Punisher: Family Plot #2"
+            ],
+            "itemIds": [
+              505,
+              506
+            ],
+            "arcIds": [
+              "depois-de-nightmare-in-scarlet"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-27",
+            "number": 27,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 178",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 178",
+            "read": "Arco principal de Venom: Along Came a Spider #1–4.",
+            "note": "A Abril publicou o arco principal, mas omitiu material secundário ligado ao Híbrido. Para leitura de todas as histórias, complete nos originais sem repetir o arco já lido.",
+            "format": "BR; extras EUA",
+            "originals": [
+              "Venom: Along Came a Spider #1",
+              "Venom: Along Came a Spider #2",
+              "Venom: Along Came a Spider #3",
+              "Venom: Along Came a Spider #4"
+            ],
+            "itemIds": [
+              507,
+              508,
+              509,
+              510
+            ],
+            "arcIds": [
+              "along-came-a-spider"
+            ],
+            "complement": "Venom: Along Came a Spider #1–4 — histórias secundárias omitidas; extensão por conto a conferir."
+          },
+          {
+            "id": "leitura-28",
+            "number": 28,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 177",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 177",
+            "read": "Sensational #1 → Amazing #408 → Spider-Man #65.",
+            "note": "Pule The Parker Years, já lido no vol. 18, caso esteja presente nesta edição brasileira.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Sensational Spider-Man (1996) #1",
+              "The Amazing Spider-Man (1963) #408",
+              "Spider-Man (1990) #65"
+            ],
+            "itemIds": [
+              511,
+              512,
+              513
+            ],
+            "arcIds": [
+              "media-blizzard"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-29",
+            "number": 29,
+            "title": "Spider-Man Holiday Special (1995) — original americano",
+            "edition": "Spider-Man Holiday Special (1995) — original americano",
+            "read": "Antologia completa, lida uma única vez neste ponto.",
+            "note": "Há quatro contos dispersos em A Teia nº 102/105 e Homem-Aranha nº 186, mas essa combinação não cobre os cinco contos. Usar o original inteiro evita cobertura incompleta e idas e voltas.",
+            "format": "EUA — integralidade",
+            "originals": [
+              "Spider-Man Holiday Special (1995)"
+            ],
+            "itemIds": [
+              514
+            ],
+            "arcIds": [
+              "the-final-adventure-e-mais"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-30",
+            "number": 30,
+            "title": "Homem-Aranha: A Aventura Final — Abril, nº 1–4",
+            "edition": "Homem-Aranha: A Aventura Final — Abril, nº 1–4",
+            "read": "The Final Adventure #1 → #2 → #3 → #4.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "Spider-Man: The Final Adventure #1",
+              "Spider-Man: The Final Adventure #2",
+              "Spider-Man: The Final Adventure #3",
+              "Spider-Man: The Final Adventure #4"
+            ],
+            "itemIds": [
+              515,
+              516,
+              517,
+              518
+            ],
+            "arcIds": [
+              "the-final-adventure-e-mais"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-31",
+            "number": 31,
+            "title": "A Teia do Aranha — Abril, nº 101",
+            "edition": "A Teia do Aranha — Abril, nº 101",
+            "read": "História Couraças, de Spider-Man Unlimited #11.",
+            "note": "Marvel 98 nº 5 tem associação ao mesmo original, mas a auditoria não identificou com segurança o conto. Para integralidade, confira e complete o material restante no americano.",
+            "format": "BR; complemento a conferir",
+            "originals": [
+              "Spider-Man Unlimited (1993) #11"
+            ],
+            "itemIds": [
+              519
+            ],
+            "arcIds": [
+              "the-final-adventure-e-mais"
+            ],
+            "complement": "Spider-Man Unlimited #11 — demais contos, se não identificados em sua edição brasileira."
+          },
+          {
+            "id": "leitura-32",
+            "number": 32,
+            "title": "Spider-Man Team-Up (1995) #2 — original americano",
+            "edition": "Spider-Man Team-Up (1995) #2 — original americano",
+            "read": "Edição #2.",
+            "note": "",
+            "format": "Original americano",
+            "originals": [
+              "Spider-Man Team-Up (1995) #2"
+            ],
+            "itemIds": [
+              520
+            ],
+            "arcIds": [
+              "the-final-adventure-e-mais"
+            ],
+            "complement": ""
+          }
+        ]
+      },
+      {
+        "id": "kaine",
+        "title": "3. Retorno de Kaine, Carnificina e Blood Brothers",
+        "description": "Siga os capítulos indicados, mesmo quando uma revista da Abril também reúne histórias de um bloco posterior.",
+        "steps": [
+          {
+            "id": "leitura-33",
+            "number": 33,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 179",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 179",
+            "read": "Spectacular #231 → Sensational #2.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Spectacular Spider-Man (1976) #231",
+              "Sensational Spider-Man (1996) #2"
+            ],
+            "itemIds": [
+              521,
+              522
+            ],
+            "arcIds": [
+              "the-return-of-kaine"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-34",
+            "number": 34,
+            "title": "A Teia do Aranha — Abril, nº 103",
+            "edition": "A Teia do Aranha — Abril, nº 103",
+            "read": "Amazing #409 → Spider-Man #66 → Spectacular #232.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Amazing Spider-Man (1963) #409",
+              "Spider-Man (1990) #66",
+              "The Spectacular Spider-Man (1976) #232"
+            ],
+            "itemIds": [
+              523,
+              524,
+              525
+            ],
+            "arcIds": [
+              "the-return-of-kaine"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-35",
+            "number": 35,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 180",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 180",
+            "read": "Sensational #3 → Amazing #410 → Spider-Man #67 → Spectacular #233.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "Sensational Spider-Man (1996) #3",
+              "The Amazing Spider-Man (1963) #410",
+              "Spider-Man (1990) #67",
+              "The Spectacular Spider-Man (1976) #233"
+            ],
+            "itemIds": [
+              526,
+              527,
+              528,
+              529
+            ],
+            "arcIds": [
+              "web-of-carnage"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-36",
+            "number": 36,
+            "title": "A Teia do Aranha — Abril, nº 104",
+            "edition": "A Teia do Aranha — Abril, nº 104",
+            "read": "Sensational #4 → Amazing #411 → Spider-Man #68.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "Sensational Spider-Man (1996) #4",
+              "The Amazing Spider-Man (1963) #411",
+              "Spider-Man (1990) #68"
+            ],
+            "itemIds": [
+              530,
+              531,
+              532
+            ],
+            "arcIds": [
+              "blood-brothers"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-37",
+            "number": 37,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 181",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 181",
+            "read": "Spectacular #234 → Sensational #5 → Amazing #412.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Spectacular Spider-Man (1976) #234",
+              "Sensational Spider-Man (1996) #5",
+              "The Amazing Spider-Man (1963) #412"
+            ],
+            "itemIds": [
+              533,
+              534,
+              535
+            ],
+            "arcIds": [
+              "blood-brothers"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-38",
+            "number": 38,
+            "title": "A Teia do Aranha — Abril, nº 105",
+            "edition": "A Teia do Aranha — Abril, nº 105",
+            "read": "História principal de Spider-Man Unlimited #12 → Spider-Man #69.",
+            "note": "Os dois contos de Holiday Special não precisam ser relidos. Integralidade dos demais contos de Unlimited #12 não demonstrada.",
+            "format": "BR; complemento a conferir",
+            "originals": [
+              "Spider-Man Unlimited (1993) #12",
+              "Spider-Man (1990) #69"
+            ],
+            "itemIds": [
+              536,
+              537
+            ],
+            "arcIds": [
+              "depois-de-blood-brothers"
+            ],
+            "complement": "Spider-Man Unlimited #12 — contos além do principal, se houver e não estiverem reproduzidos."
+          },
+          {
+            "id": "leitura-39",
+            "number": 39,
+            "title": "Spider-Man Team-Up (1995) #3 — original americano",
+            "edition": "Spider-Man Team-Up (1995) #3 — original americano",
+            "read": "Edição #3.",
+            "note": "",
+            "format": "Original americano",
+            "originals": [
+              "Spider-Man Team-Up (1995) #3"
+            ],
+            "itemIds": [
+              538
+            ],
+            "arcIds": [
+              "depois-de-blood-brothers"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-40",
+            "number": 40,
+            "title": "A Teia do Aranha — Abril, nº 106 — primeira passagem",
+            "edition": "A Teia do Aranha — Abril, nº 106 — primeira passagem",
+            "read": "Somente Sensational Spider-Man #6.",
+            "note": "Pare: os demais capítulos desta revista entram depois de Redemption e de Homem-Aranha nº 182.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Sensational Spider-Man (1996) #6"
+            ],
+            "itemIds": [
+              539
+            ],
+            "arcIds": [
+              "depois-de-blood-brothers"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-41",
+            "number": 41,
+            "title": "A Teia do Aranha — Abril, nº 108",
+            "edition": "A Teia do Aranha — Abril, nº 108",
+            "read": "Spider-Man: The Redemption #1–4, na ordem.",
+            "note": "Os #1–2 estão reunidos em uma história brasileira conjunta.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Spider-Man: The Redemption #1",
+              "Spider-Man: The Redemption #2",
+              "Spider-Man: The Redemption #3",
+              "Spider-Man: The Redemption #4"
+            ],
+            "itemIds": [
+              540,
+              541,
+              542,
+              543
+            ],
+            "arcIds": [
+              "the-redemption"
+            ],
+            "complement": ""
+          }
+        ]
+      },
+      {
+        "id": "redemption",
+        "title": "4. Depois de Redemption e passagem por Massacre",
+        "description": "As pausas e retomadas deste bloco envolvem apenas revistas avulsas da Abril, para ler histórias diferentes.",
+        "steps": [
+          {
+            "id": "leitura-42",
+            "number": 42,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 182 — primeira passagem",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 182 — primeira passagem",
+            "read": "Somente Amazing Spider-Man #413.",
+            "note": "Interrompa para Daredevil #354.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Amazing Spider-Man (1963) #413"
+            ],
+            "itemIds": [
+              544
+            ],
+            "arcIds": [
+              "depois-de-the-redemption"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-43",
+            "number": 43,
+            "title": "Daredevil (1964) #354 — original americano",
+            "edition": "Daredevil (1964) #354 — original americano",
+            "read": "Edição #354.",
+            "note": "",
+            "format": "Original americano",
+            "originals": [
+              "Daredevil (1964) #354"
+            ],
+            "itemIds": [
+              545
+            ],
+            "arcIds": [
+              "depois-de-the-redemption"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-44",
+            "number": 44,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 182 — retomar",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 182 — retomar",
+            "read": "Spider-Man #70 → Spectacular #235 → Spectacular #236.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "Spider-Man (1990) #70",
+              "The Spectacular Spider-Man (1976) #235",
+              "The Spectacular Spider-Man (1976) #236"
+            ],
+            "itemIds": [
+              546,
+              547,
+              548
+            ],
+            "arcIds": [
+              "depois-de-the-redemption"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-45",
+            "number": 45,
+            "title": "A Teia do Aranha — Abril, nº 106 — retomar",
+            "edition": "A Teia do Aranha — Abril, nº 106 — retomar",
+            "read": "Sensational #7 → Amazing #414 → Spider-Man #71.",
+            "note": "Não releia Sensational #6.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Sensational Spider-Man (1996) #7",
+              "The Amazing Spider-Man (1963) #414",
+              "Spider-Man (1990) #71"
+            ],
+            "itemIds": [
+              549,
+              550,
+              551
+            ],
+            "arcIds": [
+              "depois-de-the-redemption"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-46",
+            "number": 46,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 183 — primeira passagem",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 183 — primeira passagem",
+            "read": "Somente Spectacular Spider-Man #237.",
+            "note": "Reserve #238–239 para depois de Massacre e Amazing #416.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Spectacular Spider-Man (1976) #237"
+            ],
+            "itemIds": [
+              552
+            ],
+            "arcIds": [
+              "depois-de-the-redemption"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-47",
+            "number": 47,
+            "title": "A Teia do Aranha — Abril, nº 107 — primeira passagem",
+            "edition": "A Teia do Aranha — Abril, nº 107 — primeira passagem",
+            "read": "História identificada de Spider-Man Unlimited #13.",
+            "note": "A auditoria registra 46 páginas no Brasil para um original de 68 páginas; a reprodução de todos os contos não foi verificada.",
+            "format": "BR; complemento a conferir",
+            "originals": [
+              "Spider-Man Unlimited (1993) #13"
+            ],
+            "itemIds": [
+              553
+            ],
+            "arcIds": [
+              "depois-de-the-redemption"
+            ],
+            "complement": "Spider-Man Unlimited #13 — histórias/páginas adicionais não identificadas na edição Abril."
+          },
+          {
+            "id": "leitura-48",
+            "number": 48,
+            "title": "Spider-Man Team-Up (1995) #4 — original americano",
+            "edition": "Spider-Man Team-Up (1995) #4 — original americano",
+            "read": "Edição #4.",
+            "note": "",
+            "format": "Original americano",
+            "originals": [
+              "Spider-Man Team-Up (1995) #4"
+            ],
+            "itemIds": [
+              554
+            ],
+            "arcIds": [
+              "depois-de-the-redemption"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-49",
+            "number": 49,
+            "title": "A Teia do Aranha — Abril, nº 107 — retomar",
+            "edition": "A Teia do Aranha — Abril, nº 107 — retomar",
+            "read": "Sensational Spider-Man #8.",
+            "note": "X-Men: Massacre nº 2 reproduz só uma página deste número; não o use como substituto desta leitura.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Sensational Spider-Man (1996) #8"
+            ],
+            "itemIds": [
+              555
+            ],
+            "arcIds": [
+              "depois-de-the-redemption"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-50",
+            "number": 50,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 184",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 184",
+            "read": "Amazing #415 → Spider-Man #72.",
+            "note": "Alternativa: capítulos correspondentes de X-Men: Massacre nº 2, Panini (2015). Leia-os uma vez só; isso não exige ler todo o evento Massacre.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Amazing Spider-Man (1963) #415",
+              "Spider-Man (1990) #72"
+            ],
+            "itemIds": [
+              556,
+              557
+            ],
+            "arcIds": [
+              "tie-ins-de-onslaught"
+            ],
+            "complement": ""
+          }
+        ]
+      },
+      {
+        "id": "preparation",
+        "title": "5. Preparação para o desfecho",
+        "description": "Mantenha a ordem entre as histórias que a Abril agrupou em números diferentes.",
+        "steps": [
+          {
+            "id": "leitura-51",
+            "number": 51,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 185 — primeira passagem",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 185 — primeira passagem",
+            "read": "Sensational #9 → #10.",
+            "note": "Reserve Unlimited #14 para mais adiante.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Sensational Spider-Man (1996) #9",
+              "Sensational Spider-Man (1996) #10"
+            ],
+            "itemIds": [
+              558,
+              559
+            ],
+            "arcIds": [
+              "depois-de-onslaught"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-52",
+            "number": 52,
+            "title": "A Teia do Aranha — Abril, nº 109 — primeira passagem",
+            "edition": "A Teia do Aranha — Abril, nº 109 — primeira passagem",
+            "read": "Somente Amazing Spider-Man #416.",
+            "note": "Reserve Spider-Man #73–74 e Amazing #417.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Amazing Spider-Man (1963) #416"
+            ],
+            "itemIds": [
+              560
+            ],
+            "arcIds": [
+              "depois-de-onslaught"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-53",
+            "number": 53,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 183 — retomar",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 183 — retomar",
+            "read": "Spectacular #238 → #239.",
+            "note": "Não releia #237.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Spectacular Spider-Man (1976) #238",
+              "The Spectacular Spider-Man (1976) #239"
+            ],
+            "itemIds": [
+              561,
+              562
+            ],
+            "arcIds": [
+              "depois-de-onslaught"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-54",
+            "number": 54,
+            "title": "A Teia do Aranha — Abril, nº 102 — retomar",
+            "edition": "A Teia do Aranha — Abril, nº 102 — retomar",
+            "read": "Dois contos documentados de Amazing Spider-Man Annual 1996: Corações e mentes; Um conto do espetacular Homem-Aranha.",
+            "note": "Não releia Spectacular #230 nem Holiday Special. A auditoria comprova esses dois contos; não certifica conteúdo adicional do anual.",
+            "format": "BR; integralidade limitada ao documentado",
+            "originals": [
+              "The Amazing Spider-Man Annual (1996)"
+            ],
+            "itemIds": [
+              563
+            ],
+            "arcIds": [
+              "depois-de-onslaught"
+            ],
+            "complement": "Amazing Spider-Man Annual 1996 — conferir eventuais conteúdos além dos dois contos documentados."
+          },
+          {
+            "id": "leitura-55",
+            "number": 55,
+            "title": "A Teia do Aranha — Abril, nº 109 — retomar",
+            "edition": "A Teia do Aranha — Abril, nº 109 — retomar",
+            "read": "Spider-Man #73 → #74 → Amazing #417.",
+            "note": "Não releia Amazing #416.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Spider-Man (1990) #73",
+              "Spider-Man (1990) #74",
+              "The Amazing Spider-Man (1963) #417"
+            ],
+            "itemIds": [
+              564,
+              565,
+              566
+            ],
+            "arcIds": [
+              "depois-de-onslaught"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-56",
+            "number": 56,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 185 — retomar",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 185 — retomar",
+            "read": "História(s) associada(s) a Spider-Man Unlimited #14.",
+            "note": "Associação ao original confirmada; não há conferência de todos os contos do original de 68 páginas.",
+            "format": "BR; complemento a conferir",
+            "originals": [
+              "Spider-Man Unlimited (1993) #14"
+            ],
+            "itemIds": [
+              567
+            ],
+            "arcIds": [
+              "depois-de-onslaught"
+            ],
+            "complement": "Spider-Man Unlimited #14 — contos não demonstrados no Brasil, se houver."
+          },
+          {
+            "id": "leitura-57",
+            "number": 57,
+            "title": "Spider-Man Team-Up (1995) #5 — original americano",
+            "edition": "Spider-Man Team-Up (1995) #5 — original americano",
+            "read": "Edição #5.",
+            "note": "",
+            "format": "Original americano",
+            "originals": [
+              "Spider-Man Team-Up (1995) #5"
+            ],
+            "itemIds": [
+              568
+            ],
+            "arcIds": [
+              "depois-de-onslaught"
+            ],
+            "complement": ""
+          }
+        ]
+      },
+      {
+        "id": "revelations",
+        "title": "6. Revelações e fechamento da saga",
+        "description": "Conclua as quatro partes de Revelations antes de Osborn Journal e Dead Man’s Hand.",
+        "steps": [
+          {
+            "id": "leitura-58",
+            "number": 58,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 186",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 186",
+            "read": "Revelations: Spectacular #240 → Sensational #11 → Amazing #418.",
+            "note": "Pule o conto de Holiday Special já lido no original.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Spectacular Spider-Man (1976) #240",
+              "Sensational Spider-Man (1996) #11",
+              "The Amazing Spider-Man (1963) #418"
+            ],
+            "itemIds": [
+              569,
+              570,
+              571
+            ],
+            "arcIds": [
+              "revelations"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-59",
+            "number": 59,
+            "title": "A Teia do Aranha — Abril, nº 110 — primeira passagem",
+            "edition": "A Teia do Aranha — Abril, nº 110 — primeira passagem",
+            "read": "Spider-Man #75: conclusão de Revelations.",
+            "note": "Alternativa brasileira: o capítulo em Os Heróis Mais Poderosos da Marvel nº 90, Salvat. Reserve Osborn Journal e Spectacular #241.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Spider-Man (1990) #75"
+            ],
+            "itemIds": [
+              573
+            ],
+            "arcIds": [
+              "revelations"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-60",
+            "number": 60,
+            "title": "A Teia do Aranha — Abril, nº 110 — retomar",
+            "edition": "A Teia do Aranha — Abril, nº 110 — retomar",
+            "read": "Spider-Man: The Osborn Journal #1.",
+            "note": "Somente depois de concluir Revelations.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Spider-Man: The Osborn Journal #1"
+            ],
+            "itemIds": [
+              576
+            ],
+            "arcIds": [
+              "pontas-soltas"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-61",
+            "number": 61,
+            "title": "A Teia do Aranha — Abril, nº 111",
+            "edition": "A Teia do Aranha — Abril, nº 111",
+            "read": "Spider-Man: Dead Man’s Hand #1.",
+            "note": "Não antecipe outros capítulos da revista fora desta lista.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Spider-Man: Dead Man’s Hand #1"
+            ],
+            "itemIds": [
+              578
+            ],
+            "arcIds": [
+              "pontas-soltas"
+            ],
+            "complement": ""
+          }
+        ]
+      },
+      {
+        "id": "epilogues",
+        "title": "7. Epílogos imediatos — opcionais",
+        "description": "Leituras seguintes ao desfecho; Spectacular #241 retoma diretamente alguns fios da conclusão.",
+        "steps": [
+          {
+            "id": "leitura-62",
+            "number": 62,
+            "title": "A Teia do Aranha — Abril, nº 110 — concluir",
+            "edition": "A Teia do Aranha — Abril, nº 110 — concluir",
+            "read": "Spectacular Spider-Man #241.",
+            "note": "Continuação imediata de fios do desfecho; não releia #75 nem Osborn Journal.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Spectacular Spider-Man (1976) #241"
+            ],
+            "itemIds": [
+              572
+            ],
+            "arcIds": [
+              "continuacao-das-revistas"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-63",
+            "number": 63,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 187",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 187",
+            "read": "Amazing Spider-Man #419.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Amazing Spider-Man (1963) #419"
+            ],
+            "itemIds": [
+              583
+            ],
+            "arcIds": [
+              "continuacao-das-revistas"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-64",
+            "number": 64,
+            "title": "Homem-Aranha — Abril, 1ª série, nº 189",
+            "edition": "Homem-Aranha — Abril, 1ª série, nº 189",
+            "read": "Sensational Spider-Man #12.",
+            "note": "",
+            "format": "Edição brasileira",
+            "originals": [
+              "Sensational Spider-Man (1996) #12"
+            ],
+            "itemIds": [
+              574
+            ],
+            "arcIds": [
+              "continuacao-das-revistas"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-65",
+            "number": 65,
+            "title": "Spider-Man (1990) #76 — original americano",
+            "edition": "Spider-Man (1990) #76 — original americano",
+            "read": "Edição #76.",
+            "note": "",
+            "format": "Original americano",
+            "originals": [
+              "Spider-Man (1990) #76"
+            ],
+            "itemIds": [
+              575
+            ],
+            "arcIds": [
+              "continuacao-das-revistas"
+            ],
+            "complement": ""
+          }
+        ]
+      },
+      {
+        "id": "humor",
+        "title": "8. Humor — opcional",
+        "description": "Especial separado da continuidade obrigatória.",
+        "steps": [
+          {
+            "id": "leitura-66",
+            "number": 66,
+            "title": "101 Ways to End the Clone Saga #1 — original americano",
+            "edition": "101 Ways to End the Clone Saga #1 — original americano",
+            "read": "Especial humorístico.",
+            "note": "Opcional; não é capítulo obrigatório para entender o desfecho.",
+            "format": "Original americano",
+            "originals": [
+              "101 Ways to End the Clone Saga #1"
+            ],
+            "itemIds": [
+              581
+            ],
+            "arcIds": [
+              "pontas-soltas"
+            ],
+            "complement": ""
+          }
+        ]
+      },
+      {
+        "id": "expansions",
+        "title": "9. Expansões posteriores — opcionais",
+        "description": "Universos alternativos, releitura e eventos posteriores. Não são capítulos necessários para fechar a saga de 1994–1996.",
+        "steps": [
+          {
+            "id": "leitura-67",
+            "number": 67,
+            "title": "What If...? (1989) #86 — original americano",
+            "edition": "What If...? (1989) #86 — original americano",
+            "read": "Edição #86.",
+            "note": "Universo alternativo, fora da continuidade principal.",
+            "format": "Original americano",
+            "originals": [
+              "What If...? (1989) #86"
+            ],
+            "itemIds": [
+              577
+            ],
+            "arcIds": [
+              "historias-paralelas"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-68",
+            "number": 68,
+            "title": "Os Heróis Mais Poderosos da Marvel — Salvat, nº 69: Garota-Aranha",
+            "edition": "Os Heróis Mais Poderosos da Marvel — Salvat, nº 69: Garota-Aranha",
+            "read": "What If...? (1989) #105.",
+            "note": "Alternativa: Homem-Aranha nº 198, Abril. Universo alternativo.",
+            "format": "Edição brasileira",
+            "originals": [
+              "What If...? (1989) #105"
+            ],
+            "itemIds": [
+              579
+            ],
+            "arcIds": [
+              "historias-paralelas"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-69",
+            "number": 69,
+            "title": "A Teia do Homem-Aranha — Panini, nº 4 (dez. 2010): A Saga do Clone — Edição Definitiva",
+            "edition": "A Teia do Homem-Aranha — Panini, nº 4 (dez. 2010): A Saga do Clone — Edição Definitiva",
+            "read": "Spider-Man: The Clone Saga (2009) #1–6.",
+            "note": "Releitura alternativa; não é continuação do desfecho de 1996 nem a coleção de 2024.",
+            "format": "Edição brasileira",
+            "originals": [
+              "Spider-Man: The Clone Saga (2009) #1",
+              "Spider-Man: The Clone Saga (2009) #2",
+              "Spider-Man: The Clone Saga (2009) #3",
+              "Spider-Man: The Clone Saga (2009) #4",
+              "Spider-Man: The Clone Saga (2009) #5",
+              "Spider-Man: The Clone Saga (2009) #6"
+            ],
+            "itemIds": [
+              580
+            ],
+            "arcIds": [
+              "historias-paralelas"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-70",
+            "number": 70,
+            "title": "Homem-Aranha — Panini, nº 109 (jan. 2011)",
+            "edition": "Homem-Aranha — Panini, nº 109 (jan. 2011)",
+            "read": "Amazing Spider-Man #608–610.",
+            "note": "Retorno posterior de Kaine; salto de muitos anos. Não serve de epílogo imediato.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Amazing Spider-Man (1963) #608",
+              "The Amazing Spider-Man (1963) #609",
+              "The Amazing Spider-Man (1963) #610"
+            ],
+            "itemIds": [
+              793,
+              794,
+              795
+            ],
+            "arcIds": [
+              "historias-paralelas"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-71",
+            "number": 71,
+            "title": "O Espetacular Homem-Aranha — Panini, encadernado vol. 11: A Conspiração do Clone (2021)",
+            "edition": "O Espetacular Homem-Aranha — Panini, encadernado vol. 11: A Conspiração do Clone (2021)",
+            "read": "The Clone Conspiracy #1–5.",
+            "note": "Alternativa: capítulos em O Espetacular Homem-Aranha, 3ª série, nº 16–18 (2018). Evento posterior; a minissérie central não representa todos os tie-ins.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Clone Conspiracy (2016) #1",
+              "The Clone Conspiracy (2016) #2",
+              "The Clone Conspiracy (2016) #3",
+              "The Clone Conspiracy (2016) #4",
+              "The Clone Conspiracy (2016) #5"
+            ],
+            "itemIds": [
+              582
+            ],
+            "arcIds": [
+              "historias-paralelas"
+            ],
+            "complement": ""
+          }
+        ]
+      },
+      {
+        "id": "context",
+        "title": "Apêndice: contexto — opcional",
+        "description": "Referências da auditoria fora da sequência complementar. Não é preciso interromper ou anteceder a leitura dos 19 volumes para consultá-las.",
+        "steps": [
+          {
+            "id": "leitura-72",
+            "number": 72,
+            "title": "O Espetacular Homem-Aranha: Edição Definitiva — Panini, vol. 9",
+            "edition": "O Espetacular Homem-Aranha: Edição Definitiva — Panini, vol. 9",
+            "read": "Somente Amazing Spider-Man #143–146.",
+            "note": "Contexto de 1975; não é necessário ler todo o encadernado. Referência opcional fora da sequência complementar; não interrompe nem antecede obrigatoriamente os 19 volumes.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Amazing Spider-Man (1963) #143",
+              "The Amazing Spider-Man (1963) #144",
+              "The Amazing Spider-Man (1963) #145",
+              "The Amazing Spider-Man (1963) #146"
+            ],
+            "itemIds": [
+              145,
+              146,
+              147,
+              148
+            ],
+            "arcIds": [
+              "saga-do-clone-original-1975"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-73",
+            "number": 73,
+            "title": "O Espetacular Homem-Aranha: Edição Definitiva — Panini, vol. 10",
+            "edition": "O Espetacular Homem-Aranha: Edição Definitiva — Panini, vol. 10",
+            "read": "Somente Amazing Spider-Man #147–149.",
+            "note": " Referência opcional fora da sequência complementar; não interrompe nem antecede obrigatoriamente os 19 volumes.",
+            "format": "Edição brasileira",
+            "originals": [
+              "The Amazing Spider-Man (1963) #147",
+              "The Amazing Spider-Man (1963) #148",
+              "The Amazing Spider-Man (1963) #149"
+            ],
+            "itemIds": [
+              149,
+              150,
+              151
+            ],
+            "arcIds": [
+              "saga-do-clone-original-1975"
+            ],
+            "complement": ""
+          },
+          {
+            "id": "leitura-74",
+            "number": 74,
+            "title": "Almanaque Premiere Marvel — RGE, nº 6",
+            "edition": "Almanaque Premiere Marvel — RGE, nº 6",
+            "read": "História do clone de What If? (1977) #30.",
+            "note": "Universo alternativo. Não confundir com a outra história de What If? #30 publicada em Capitão América nº 97. Referência opcional fora da sequência complementar; não interrompe nem antecede obrigatoriamente os 19 volumes.",
+            "format": "Edição brasileira",
+            "originals": [
+              "What If? (1977–1998) #30"
+            ],
+            "itemIds": [
+              152
+            ],
+            "arcIds": [
+              "saga-do-clone-original-1975"
+            ],
+            "complement": ""
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "title": "Venom: Along Came a Spider #1–4",
+        "body": "Homem-Aranha nº 178 cobre o arco principal, mas a auditoria registra material secundário omitido, inclusive ligado ao Híbrido. Para integralidade, complete os extras nos originais sem reler o arco principal."
+      },
+      {
+        "title": "Spider-Man Holiday Special (1995)",
+        "body": "O roteiro escolhe o original inteiro. A combinação de A Teia nº 102/105 e Homem-Aranha nº 186 cobre quatro dos cinco contos identificados; depois, pule esses contos ao voltar às revistas da Abril."
+      },
+      {
+        "title": "Spider-Man Unlimited #11",
+        "body": "Couraças está em A Teia nº 101. A associação a Marvel 98 nº 5 não teve o conto identificado com segurança. Confira e complete os demais contos no original."
+      },
+      {
+        "title": "Spider-Man Unlimited #12–14 e Annual 1996",
+        "body": "Há histórias brasileiras documentadas, mas a reprodução de todos os contos dos originais não foi demonstrada. A Teia nº 102 comprova os dois contos do Annual indicados no roteiro; não se presume conteúdo além deles."
+      },
+      {
+        "title": "Sensational Spider-Man #8",
+        "body": "Leia o capítulo em A Teia nº 107. Uma página em X-Men: Massacre nº 2 não substitui essa leitura."
+      },
+      {
+        "title": "Limites da pesquisa",
+        "body": "As correspondências vêm da auditoria bibliográfica de 09/10/2026; não houve inspeção física de todas as revistas. Um original americano indicado não significa ineditismo histórico no Brasil. As marcas de progresso referem-se às HQs da Checklist, não a uma conferência de todos os contos de cada edição brasileira."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Auditoria brasileira — etapa 10",
+        "description": "Planilha fornecida pelo leitor: auditoria_saga_do_clone_etapa_10.xlsx. Corte bibliográfico: 09/10/2026."
+      },
+      {
+        "title": "How to Love Comics — ordem americana",
+        "url": "https://www.howtolovecomics.com/2024/02/19/spider-man-clone-saga-reading-order/",
+        "description": "Base de sequência retomada depois do conteúdo dos 19 volumes."
+      },
+      {
+        "title": "Panini — A Saga do Clone, volume 18",
+        "url": "https://panini.com.br/homem-aranha-a-saga-do-clone-vol-18",
+        "description": "Conteúdo de The Lost Years e The Parker Years."
+      },
+      {
+        "title": "Panini — A Saga do Clone, volume 14",
+        "url": "https://panini.com.br/homem-aranha-a-saga-do-clone-vol-14",
+        "description": "Contos complementares dos especiais."
+      }
+    ]
+  }
 }

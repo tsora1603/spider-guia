@@ -2248,14 +2248,14 @@
     "after": 393,
     "weight": "● Essencial",
     "name": "Saga do Clone (1994–96), em Spectacular (1976), Web of Spider-Man, Spider-Man (1990), Spider-Man Unlimited e outras revistas",
-    "sequence": "Ao chegar à #394, siga a ordem edição por edição em Ler → Saga do Clone (out/1994–dez/1996, #394–418). Entre a #406 e a #407 saíram The Amazing Scarlet Spider #1–2. Ao terminar, retome na #419.",
+    "sequence": "Ao chegar à #394, abra Explorar → Saga do Clone. Leia A Saga do Clone, volumes 1–18, e depois Ben Reilly, volume 1, todos da Panini, inteiros e em sequência. Após esses 19 volumes, siga apenas as histórias restantes nas edições brasileiras ou americanas indicadas. Ao concluir a saga, retome a linha principal na #419.",
     "why": {
       "text": "A Amazing alterna capítulos de crossovers com edições avulsas. Ler só a Amazing deixa lacunas.",
       "spoiler": "forte"
     },
     "confirmation": "Confirmado",
     "confirmationNote": "Posição e peso sustentados pelas fontes.",
-    "howMuch": "150 entradas fora da numeração histórica; o roteiro completo em editorial.clone mantém 187 entradas, incluindo contexto, Amazing principal e epílogo.",
+    "howMuch": "19 volumes completos na base brasileira, seguidos por capítulos restantes, fechamento e epílogos. As HQs americanas mantêm os mesmos IDs e o mesmo progresso da Checklist.",
     "itemIds": [
       408,
       409,
@@ -2418,7 +2418,7 @@
       20,
       124
     ],
-    "just": "Este card representa somente as entradas fora da numeração histórica da Saga do Clone. O roteiro dedicado editorial.clone continua com 187 entradas e inclui, separadamente, contexto da saga original, capítulos da Amazing principal e leituras posteriores.",
+    "just": "Este card acompanha as entradas fora da numeração histórica. O roteiro brasileiro em editorial.clone.guide organiza os encadernados e as publicações restantes; editorial.clone.entries preserva as referências de HQs e arcos usadas pelos links.",
     "readingGroup": 12,
     "unavailable": false,
     "where": [

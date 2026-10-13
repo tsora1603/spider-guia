@@ -1,5 +1,5 @@
 import { useMemo } from 'preact/hooks';
-import { DATA, editorialExtras, itemsById, readings } from '../data/model';
+import { cloneGuide, editorialExtras, itemsById, readings } from '../data/model';
 import { statusOf } from '../state/progress-store';
 import { useProgressRevision } from '../ui/hooks';
 import { Icon } from './Icon';
@@ -8,6 +8,8 @@ import { SpoilerText } from './SpoilerText';
 import { SkipButton, StatusButton, useProgressCounts, progressStatusLabel } from './Progress';
 import { IssueRow } from './IssueRow';
 import { ReadingLinksAction } from './ReadingLinksAction';
+import { cloneGuideItemIds } from '../clone-guide/model';
+import { router } from '../runtime/controller';
 import { ProgressBarVisual } from '../design/ProgressVisuals';
 
 export { SourceLinks } from './SourceLinks';
@@ -124,12 +126,13 @@ export function ExtraCard({ extra, editorialIndex, targeted = false }: { extra: 
 }
 
 export function CloneSummary() {
-  const ids = DATA.editorial.clone.entries.map((entry: any) => entry.id) as number[];
+  const ids = cloneGuideItemIds(cloneGuide.sections);
   const counts = useProgressCounts(ids);
   return (
     <div class="list-callout ed-note">
-      <div class="ed-sum"><div><div class="lbl">Ordem especializada</div><b class="xt">Saga do Clone · {ids.length} entradas</b><p class="mu sm">8 fases editoriais, crossovers e partes em uma ordem especializada. O progresso é o mesmo da Checklist.</p></div><b>{counts.percent}%</b></div>
+      <div class="ed-sum"><div><div class="lbl">Ordem especializada</div><b class="xt">Saga do Clone · guia brasileiro</b><p class="mu sm">19 volumes completos, seguidos pelas leituras restantes em edições brasileiras ou americanas. O progresso das HQs é o mesmo da Checklist.</p></div><b>{counts.percent}%</b></div>
       <ProgressBarVisual value={counts.percent} label="Progresso da Saga do Clone" />
+      <button class="btn g" onClick={event => router.navigate('#explorar/clone', event.currentTarget)}>Abrir guia brasileiro</button>
     </div>
   );
 }

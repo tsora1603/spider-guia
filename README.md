@@ -43,7 +43,7 @@ Para adicionar ou corrigir Links, siga os [exemplos e o procedimento de manuten�
 
 - **Hoje:** continuar lendo, “Já li até...”, progresso e ritmo.
 - **Checklist:** dropdowns por trechos consecutivos de cada série, com status **Não / Sim / Pulei** e Modo Foco; usa o mesmo plano/ordem da Home. Anuais e outras séries continuam intercalados: a série reaparece em outro dropdown quando a leitura retorna a ela. Edições isoladas usam o mesmo visual, sem um nível extra de agrupamento. O botão verde **Ler** fica somente no título do grupo e leva aos destinos associados na aba Links; **Sem link** indica um grupo sem destino cadastrado. Itens individuais não repetem essa ação.
-- **Explorar:** Jornada (fases e marcos), Extras (fichas e fontes), Saga do Clone e Links (quando habilitados). Links são cards de largura total com destinos externos acessíveis diretamente; `coverage` fornece o resumo e `targets` vincula o mesmo cadastro à Checklist, aos Extras e aos arcos da Saga do Clone. A busca local e `#explorar/links?link=<id>` continuam disponíveis.
+- **Explorar:** Jornada (fases e marcos), Extras (fichas e fontes), Saga do Clone (guia brasileiro: 19 volumes completos, seguidos pelas leituras restantes) e Links (quando habilitados). Links são cards de largura total com destinos externos acessíveis diretamente; `coverage` fornece o resumo e `targets` vincula o mesmo cadastro à Checklist, aos Extras e aos arcos da Saga do Clone. A busca local e `#explorar/links?link=<id>` continuam disponíveis.
 - **Ajuda:** como usar, glossário, fontes e metodologia.
 - **Configurações:** plano, spoilers, aparência, conta, backup e reset.
 

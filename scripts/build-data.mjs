@@ -348,6 +348,16 @@ function validateInvariants({
         `Clone ID ${entry.id}: readingOrder divergente (${entry.readingOrder} vs ${item.readingOrder}).`
       );
   });
+  const cloneArcIds = new Set(clone.entries.map((entry) => entry.arcId));
+  for (const section of clone.guide?.sections || []) {
+    for (const step of section.steps) {
+      validateItemIds(`editorial.clone.guide.${step.id}`, step.itemIds);
+      if (new Set(step.itemIds).size !== step.itemIds.length)
+        fail(`Guia brasileiro ${step.id}: itemIds duplicados.`);
+      for (const arcId of step.arcIds)
+        if (!cloneArcIds.has(arcId)) fail(`Guia brasileiro ${step.id}: arco inexistente ${arcId}.`);
+    }
+  }
 
   const sourceCount = fontes.length;
   editorialExtras.forEach((extra) => {

@@ -860,3 +860,20 @@ details[open]>summary>.help-summary-chevron{transform:rotate(180deg)}
 .links-context-toolbar .btn{min-height:44px}
 .links-context-toolbar .sm{margin-right:auto}
 @media(max-width:600px){.reading-links-cta{width:100%}.reading-links-action{display:block}.links-context-toolbar .links-back-reading{width:100%;justify-content:flex-start}}
+
+/* Guia brasileiro: volumes completos e leituras complementares */
+.clone-guide-intro h3,.clone-guide-notes h3,.clone-guide-sources h3{margin:0 0 10px}
+.clone-guide-help summary,.clone-guide-notes summary,.clone-checklist>summary,.clone-originals>summary{cursor:pointer;font-weight:600;min-height:32px;padding:8px 0}
+.clone-list .clone-guide-step{padding:0;border-radius:0;background:transparent}
+.clone-guide-step>summary{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.clone-guide-step>summary .row-head{min-width:0;overflow-wrap:anywhere}
+.clone-step-number{color:var(--mu)}
+.clone-step-body{padding:0 18px 16px}
+.clone-step-body p{line-height:1.6;overflow-wrap:anywhere}
+.clone-section-description{padding:12px 18px;margin:0}
+.clone-complement{border-left:3px solid var(--blue);padding:8px 12px;background:var(--surface-inset)}
+.clone-checklist,.clone-originals{margin-top:12px}
+.clone-guide-notes,.clone-guide-sources{margin-top:18px}
+.clone-guide-sources>div+div{margin-top:12px}
+.clone-originals ul{padding-left:20px;overflow-wrap:anywhere}
+@media(max-width:600px){.clone-guide-step>summary{padding:12px}.clone-step-body{padding:0 12px 12px}.clone-section-description{padding:12px}}

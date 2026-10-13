@@ -1,12 +1,12 @@
-import { useEffect, useMemo, useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { appState } from '../state/app-state';
-import { cloneEntries, editorialExtras } from '../data/model';
+import { cloneGuide, editorialExtras } from '../data/model';
 import { VirtualizedChecklist } from '../components/VirtualizedChecklist';
-import { EvidenceBox, ExtraCard, CloneSummary, extraState } from '../components/Editorial';
+import { ExtraCard, CloneSummary, extraState } from '../components/Editorial';
 import { useProgressCounts } from '../components/Progress';
 import { itemsById } from '../data/model';
 import { IssueRow } from '../components/IssueRow';
-import { CloneArcLinksAction } from '../components/ReadingLinksAction';
+import { CloneGuideLinksAction } from '../components/ReadingLinksAction';
 import { Icon } from '../components/Icon';
 import { FilterDropdown } from '../components/FilterDropdown';
 import { ScreenState } from '../components/ScreenState';
@@ -17,6 +17,13 @@ import {
   resolveExtraTargetIndex
 } from './explore-navigation';
 import { readingReturnFor } from '../links/return-context';
+
+import {
+  cloneGuideItemIds,
+  findCloneGuideStep,
+  type CloneGuideSection,
+  type CloneGuideStep
+} from '../clone-guide/model';
 
 const EXTRA_FILTERS: Array<[string, string]> = [
   ['rec', 'Recomendadas'],
@@ -121,159 +128,206 @@ export function ExtrasView() {
   );
 }
 
-function CloneIssue({ entry }: { entry: any; key?: any }) {
-  const reading = itemsById[entry.id];
-  if (!reading) return null;
+function CloneStep({ step, targeted }: { step: CloneGuideStep; targeted: boolean }) {
+  const counts = useProgressCounts(step.itemIds);
   return (
-    <IssueRow
-      item={reading}
-      anchor={false}
-      showBulkAction={false}
-      showLinks={false}
-      suppressEditorialDetails
-      context={{ part: entry.part, readingOrder: entry.readingOrder, note: entry.note }}
-    />
-  );
-}
-
-function CloneArc({ arc }: { arc: any; key?: any }) {
-  const entries = arc.entries as any[];
-  const sources = [...new Set(entries.flatMap((entry) => entry.sources || []))];
-  const confirmed = entries.every((entry) => entry.confirmation === 'Confirmado');
-  const positionPass = entries.every(
-    (entry) => entry.confirmationCriteria?.position === 'source-only'
-  );
-  const hasResearchedWeight = entries.some(
-    (entry) => entry.confirmationCriteria?.weight === 'evidence-led-60-40'
-  );
-  const weightPass = entries.every((entry) => entry.confirmationCriteria?.weight !== 'not-met');
-  const inherited = entries.filter(
-    (entry) => entry.confirmationCriteria?.weight === 'inherited'
-  ).length;
-  const detail = hasResearchedWeight
-    ? `A posição do arco segue as fontes. Os pesos exclusivos usam o critério 60/40${inherited ? `; ${inherited} classificação${inherited > 1 ? 'ões foram preservadas' : ' foi preservada'} de outra área do guia` : ''}.`
-    : 'A posição do arco segue as fontes; os pesos foram preservados das classificações anteriores.';
-  const label = arc.name || 'Sem crossover específico';
-  return (
-    <section class="clone-arc disclosure-nested">
-      <div class="clone-arc-heading">
-        <h4>{label}</h4>
-        <CloneArcLinksAction arcId={entries[0].arcId} label={label} />
-      </div>
-      <EvidenceBox
-        status={confirmed && positionPass && weightPass ? 'Confirmado' : 'Parcial'}
-        detail={detail}
-        sources={sources}
-        criteria={{
-          position: positionPass ? 'source-only' : 'not-met',
-          weight: weightPass
-            ? hasResearchedWeight
-              ? 'evidence-led-60-40'
-              : 'inherited'
-            : 'not-met'
-        }}
-      />
-      {entries.map((entry) => (
-        <CloneIssue key={`${entry.id}-${entry.readingOrder}`} entry={entry} />
-      ))}
-    </section>
-  );
-}
-
-export function CloneView() {
-  const phases = useMemo(() => {
-    const result: any[] = [];
-    for (const entry of cloneEntries as any[]) {
-      let phase = result.find((item) => item.name === entry.phase);
-      if (!phase) {
-        phase = { name: entry.phase, arcs: [] };
-        result.push(phase);
-      }
-      let arc = phase.arcs.find((item: any) => item.name === entry.crossover);
-      if (!arc) {
-        arc = { name: entry.crossover, entries: [] };
-        phase.arcs.push(arc);
-      }
-      arc.entries.push(entry);
-    }
-    return result;
-  }, []);
-  const [openPhases, setOpenPhases] = useState<Set<number>>(() => new Set([0]));
-  return (
-    <>
-      <div class="list-callout sm mu intro-note">
-        A Saga do Clone é uma visão editorial sobre as <b>mesmas HQs</b> da Checklist. Marcar aqui
-        atualiza imediatamente o progresso global; não existe um segundo sistema de estado.
-      </div>
-      {phases.length ? (
-        <div class="content-list disclosure-list ui-list clone-list">
-          {phases.map((phase, index) => {
-            const ids = phase.arcs.flatMap((arc: any) => arc.entries.map((entry: any) => entry.id));
-            return (
-              <ClonePhase
-                key={phase.name}
-                phase={phase}
-                index={index}
-                ids={ids}
-                open={openPhases.has(index)}
-                onToggle={() =>
-                  setOpenPhases((current) => {
-                    const next = new Set(current);
-                    next.has(index) ? next.delete(index) : next.add(index);
-                    return next;
-                  })
-                }
-              />
-            );
-          })}
+    <details
+      id={`clone-step-${step.id}`}
+      class={`clone-arc clone-guide-step disclosure-item editorial-anchor${targeted ? ' is-targeted' : ''}`}
+      data-clone-step={step.id}
+      open={targeted || step.number === 1 ? true : undefined}
+    >
+      <summary class="disclosure-summary ui-disclosure-summary">
+        <div class="row-head">
+          <b>
+            <span class="clone-step-number">{step.number}.</span> {step.title}
+          </b>
+          <div class="row-meta disclosure-meta">
+            <span class="tag">{step.format}</span>
+          </div>
         </div>
-      ) : (
-        <ScreenState
-          kind="empty"
-          title="Saga do Clone sem entradas"
-          message="Nenhuma leitura da Saga do Clone foi carregada no catálogo atual."
+        <Icon name="chevD" className="disclosure-chevron" />
+      </summary>
+      <div class="clone-step-body disclosure-content">
+        <p class="clone-reading-order">
+          <b>Leia:</b> {step.read}
+        </p>
+        {step.note ? <p class="sm mu clone-context">{step.note}</p> : null}
+        {step.complement ? (
+          <p class="clone-complement sm">
+            <b>Completar ou conferir no original:</b> {step.complement}
+          </p>
+        ) : null}
+        <CloneGuideLinksAction
+          itemIds={step.itemIds}
+          arcIds={step.arcIds}
+          stepId={step.id}
+          label={step.title}
         />
-      )}
-    </>
+        <details class="clone-checklist disclosure-nested">
+          <summary>
+            HQs deste passo na Checklist · {counts.read} lidas · {counts.skipped} puladas
+          </summary>
+          <p class="sm mu">
+            As marcas acompanham as HQs americanas do catálogo. Contos de um mesmo número podem
+            aparecer em volumes diferentes; confira o sumário para completar a leitura do volume.
+          </p>
+          <div class="content-list disclosure-list ui-list">
+            {step.itemIds.map((id) => {
+              const reading = itemsById[id];
+              return reading ? (
+                <IssueRow
+                  key={id}
+                  item={reading}
+                  anchor={false}
+                  showBulkAction={false}
+                  showLinks={false}
+                  suppressEditorialDetails
+                />
+              ) : null;
+            })}
+          </div>
+        </details>
+        <details class="clone-originals sm disclosure-nested">
+          <summary>Conteúdo americano de referência</summary>
+          <ul>
+            {step.originals.map((label) => (
+              <li key={label}>{label}</li>
+            ))}
+          </ul>
+        </details>
+      </div>
+    </details>
   );
 }
 
-function ClonePhase({ phase, ids, open, onToggle }: any) {
+function CloneSection({
+  section,
+  open,
+  onToggle,
+  targetId
+}: {
+  section: CloneGuideSection;
+  open: boolean;
+  onToggle: () => void;
+  targetId: string | null;
+}) {
+  const ids = cloneGuideItemIds([section]);
   const counts = useProgressCounts(ids);
   return (
     <section
       class={`clone-phase journey-phase ui-list-item disclosure-item${open ? ' is-open' : ''}`}
+      data-clone-section={section.id}
     >
       <button
         class="fh disclosure-summary ui-disclosure-summary"
         onClick={onToggle}
         aria-expanded={open}
+        aria-controls={`clone-section-${section.id}`}
       >
         <div>
-          <b>{phase.name}</b>
+          <b>{section.title}</b>
           <span class="mu sm">
             {' '}
-            {ids.length} entradas · {phase.arcs.length} {phase.arcs.length === 1 ? 'arco' : 'arcos'}
+            {section.steps.length} {section.id === 'base' ? 'volumes completos' : 'passos'}
           </span>
         </div>
-        <span class="c">
-          {counts.read} lidas · {counts.skipped} puladas · {counts.percent}%{' '}
-          <Icon name={open ? 'chevU' : 'chevD'} />
-        </span>
+        <Icon name={open ? 'chevU' : 'chevD'} />
       </button>
       <ProgressBarVisual
         value={counts.percent}
-        label={`Progresso de ${phase.name}`}
+        label={`Progresso das HQs de ${section.title}`}
         className="phase-progress"
       />
       {open ? (
-        <div class="clone-content disclosure-content">
-          {phase.arcs.map((arc: any) => (
-            <CloneArc arc={arc} key={arc.name || 'none'} />
+        <div id={`clone-section-${section.id}`} class="clone-content disclosure-content">
+          <p class="clone-section-description sm mu">{section.description}</p>
+          {section.steps.map((step) => (
+            <CloneStep key={step.id} step={step} targeted={step.id === targetId} />
           ))}
         </div>
       ) : null}
     </section>
+  );
+}
+
+export function CloneView() {
+  const targetId = exploreRouteParam('passo');
+  const target = findCloneGuideStep(cloneGuide, targetId);
+  const [openSections, setOpenSections] = useState<Set<string>>(() => new Set(['base']));
+  useEffect(() => {
+    if (!target) return;
+    setOpenSections((current) => new Set([...current, target.section.id]));
+    const frame = requestAnimationFrame(() => focusEditorialTarget(`clone-step-${target.step.id}`));
+    return () => cancelAnimationFrame(frame);
+  }, [targetId]);
+  return (
+    <>
+      <div class="list-callout intro-note clone-guide-intro">
+        <h3>{cloneGuide.title}</h3>
+        {cloneGuide.intro.map((text) => (
+          <p class="sm" key={text}>
+            {text}
+          </p>
+        ))}
+        <p class="sm mu">
+          O progresso das HQs é compartilhado com a Checklist. Os encadernados da base não voltam à
+          sequência complementar.
+        </p>
+      </div>
+      <details class="list-callout clone-guide-help">
+        <summary>Como interpretar os títulos e a numeração</summary>
+        <p class="sm mu">{cloneGuide.legend}</p>
+      </details>
+      <div class="content-list disclosure-list ui-list clone-list">
+        {cloneGuide.sections.map((section) => (
+          <CloneSection
+            key={section.id}
+            section={section}
+            targetId={targetId}
+            open={openSections.has(section.id)}
+            onToggle={() =>
+              setOpenSections((current) => {
+                const next = new Set(current);
+                next.has(section.id) ? next.delete(section.id) : next.add(section.id);
+                return next;
+              })
+            }
+          />
+        ))}
+      </div>
+      <section
+        class="list-callout clone-guide-notes"
+        aria-label="Integralidade e limites da pesquisa"
+      >
+        <h3>Integralidade e cuidados</h3>
+        <p class="sm mu">
+          As histórias brasileiras identificadas não comprovam a reprodução de todos os contos de
+          cada original americano.
+        </p>
+        {cloneGuide.notes.map((note) => (
+          <details key={note.title} class="disclosure-nested">
+            <summary>{note.title}</summary>
+            <p class="sm mu">{note.body}</p>
+          </details>
+        ))}
+      </section>
+      <section class="list-callout clone-guide-sources" aria-label="Fontes do guia brasileiro">
+        <h3>Fontes do guia</h3>
+        {cloneGuide.sources.map((source) => (
+          <div key={source.title}>
+            {source.url ? (
+              <a class="source-link" href={source.url} target="_blank" rel="noopener noreferrer">
+                <Icon name="search" /> {source.title}
+              </a>
+            ) : (
+              <b class="sm">{source.title}</b>
+            )}
+            <p class="sm mu">{source.description}</p>
+          </div>
+        ))}
+      </section>
+    </>
   );
 }
 

@@ -916,7 +916,9 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     page
   }) => {
     await page.goto('/#explorar/clone');
-    const row = page.locator('.clone-arc .issue-entry').first();
+    const firstStep = page.locator('[data-clone-step="panini-saga-01"]');
+    await firstStep.locator('.clone-checklist > summary').click();
+    const row = firstStep.locator('.issue-entry').first();
     await expect(row).toBeVisible();
     await expect(row.locator('.reading-row-end .skip-action')).toBeVisible();
     const id = await row.getAttribute('data-reading-id');
@@ -926,27 +928,28 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(page.locator(`#hq-${id}`)).toHaveAttribute('data-progress-status', 'Sim');
   });
 
-  test('Saga do Clone usa o padrão visual compartilhado e mostra confirmação e fontes por arco', async ({
+  test('Saga do Clone apresenta a base brasileira, preserva os links e retorna ao passo', async ({
     page
   }) => {
     await page.goto('/#explorar/clone');
-    const phase = page.locator('.clone-phase').first();
-    await expect(phase).toHaveClass(/journey-phase/);
-    await expect(phase).toHaveClass(/is-open/);
-    const arc = phase.locator('.clone-arc').first();
-    const links = arc.getByRole('button', {
-      name: 'Ver links de Saga do Clone original (1975)'
-    });
+    const base = page.locator('[data-clone-section="base"]');
+    await expect(base).toHaveClass(/journey-phase/);
+    await expect(base).toHaveClass(/is-open/);
+    await expect(base.locator('[data-clone-step]')).toHaveCount(19);
+    await expect(base.locator('[data-clone-step]').last()).toContainText('Ben Reilly — volume 1');
+    await expect(page.locator('.clone-guide-intro')).toContainText(
+      'sem interrupções e sem retornos'
+    );
+    await expect(page.locator('.clone-guide-sources a.source-link')).not.toHaveCount(0);
+    const step = base.locator('[data-clone-step="panini-saga-01"]');
+    await expect(step).toContainText('Leia o volume inteiro');
+    const links = step.getByRole('button', { name: 'Ver links de A Saga do Clone — volume 1' });
     await expect(links).toBeVisible();
-    await expect(arc.locator(':scope > .cf')).toContainText('Confirmado');
-    await expect(arc.locator(':scope > .cf')).toContainText('Posição: 100% evidência de fontes');
-    await expect(arc.locator(':scope > .cf a.source-link')).not.toHaveCount(0);
-    const row = arc.locator('.issue-entry').first();
+    await step.locator('.clone-checklist > summary').click();
+    const row = step.locator('.issue-entry').first();
     await expect(row.locator('.extra-editorial-status')).toHaveCount(0);
     await row.locator('.row-details > summary').click();
     await expect(row).not.toContainText('Continue na linha principal');
-    await expect(row).not.toContainText('Quanto ler:');
-    await expect(row).not.toContainText('Confirmação:');
     await expect(row.locator('.extra-issue-evidence')).toHaveCount(0);
     await links.click();
     await expect(page).toHaveURL(/#explorar\/links\?/);
@@ -956,7 +959,34 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
       })
     ).toBeVisible();
     await page.getByRole('button', { name: 'Voltar à leitura' }).click();
-    await expect(page).toHaveURL(/#explorar\/clone$/);
+    await expect(page).toHaveURL(/#explorar\/clone\?passo=panini-saga-01$/);
+    await expect(page.locator('#clone-step-panini-saga-01')).toHaveAttribute('open', '');
+    await base.getByRole('button', { name: /1\. Os 19 volumes completos/ }).click();
+    await expect(base).not.toHaveClass(/is-open/);
+  });
+
+  test('Saga do Clone encontra revistas brasileiras na busca e abre o passo no mobile', async ({
+    page
+  }) => {
+    await page.setViewportSize({ width: 320, height: 740 });
+    await page.goto('/#explorar/clone');
+    await page.getByRole('searchbox', { name: 'Buscar em todo o guia' }).fill('A Teia do Aranha');
+    const result = page
+      .locator('.search-result-group')
+      .filter({ has: page.getByRole('heading', { name: 'Saga do Clone', exact: true }) })
+      .getByRole('button')
+      .first();
+    await expect(result).toContainText('100');
+    await result.click();
+    await expect(page).toHaveURL(/#explorar\/clone\?passo=/);
+    const target = page.locator('.clone-guide-step.is-targeted');
+    await expect(target).toHaveAttribute('open', '');
+    await expect(target).toContainText('Sensational Spider-Man #0');
+    await expect(target.locator(':scope > summary')).toBeFocused();
+    const overflow = await page.evaluate(
+      () => document.documentElement.scrollWidth > window.innerWidth + 1
+    );
+    expect(overflow).toBe(false);
   });
 
   test('Extras com várias edições apresentam três estados independentes', async ({ page }) => {

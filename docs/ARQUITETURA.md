@@ -37,7 +37,7 @@ Os oito grupos das séries principais têm associações explícitas com os regi
 `Principal` cobertos: LGY 1–964 e a edição #29 de 2025. Esse cadastro não inclui
 anuais ou outras séries por coincidência de numeração. A aplicação continua usando
 os alvos `historical` para os botões das edições e a união desses vínculos para cada
-dropdown. `coverage` continua sendo apenas apresentação. Os alvos `extra` alimentam os botões das fichas; os alvos `cloneArc` alimentam o botão no título de cada arco da Saga do Clone.
+dropdown. `coverage` continua sendo apenas apresentação. Os alvos `extra` alimentam os botões das fichas; os alvos `cloneArc` alimentam os destinos dos passos correspondentes no guia brasileiro da Saga do Clone.
 
 - `notes` contém observações editoriais; não misturar nele intervalos que possam ser representados com cobertura estruturada. `context` de Links históricos ainda é aceito no JSON. As fontes de evidência continuam em `data/src/fontes.json` e no registro bibliográfico `data/src/editorial/publication-evidence.json`.
 
@@ -79,3 +79,13 @@ O roteador interpreta caminhos históricos (`#inicio`, `#ler/*`, `#conta/*` e ou
 ## Qualidade e limites
 
 Vitest (`tests/unit/`) testa lógica; Playwright (`tests/e2e/`) testa interface; `scripts/` reúne validadores e smoke tests. Ver [Manutenção](MANUTENCAO.md). Testes locais simulados não substituem testes reais de Supabase/RLS.
+
+## Guia brasileiro da Saga do Clone
+
+A tela `#explorar/clone` usa `guide` em `data/src/editorial/clone.json`: introdução, blocos, passos, notas de integralidade e fontes. A base tem exatamente A Saga do Clone, volumes 1–18, e Ben Reilly, volume 1, lidos inteiros e em sequência. Os capítulos restantes começam em Cyberwar; New Warriors #66 e outras HQs já cobertas não são reinseridos.
+
+Cada passo possui ID estável, número, edição brasileira ou americana, instrução de leitura, originais de referência, `itemIds` do catálogo e `arcIds` explícitos. A busca abre `#explorar/clone?passo=<id>`, expandindo e focando o passo. Os links de leitura retornam ao mesmo alvo. `CloneGuideSchema` verifica a ordem dos 19 volumes e a unicidade dos passos; `data:build` verifica as referências ao catálogo e aos arcos.
+
+`entries` conserva as referências editoriais anteriores para compatibilidade dos IDs de arcos e dos vínculos existentes; não é o roteiro exibido. Os passos reutilizam as HQs da Checklist, sem novo armazenamento de progresso. O progresso é deduplicado por ID, pois contos de um mesmo número americano podem estar em mais de um volume. Ele não certifica integralidade de uma edição brasileira.
+
+Para corrigir disponibilidade ou cobertura, edite os passos/notas de `guide`, preserve os IDs existentes e gere os dados novamente. Uma correspondência de revista não comprova todos os contos: registre cortes confirmados e dúvidas separadamente. A auditoria bibliográfica fornecida pelo leitor é a base das correspondências brasileiras; a ordem americana é retomada somente após os 19 volumes.
