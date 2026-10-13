@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from 'preact/hooks';
+import { useLayoutEffect, useId, useRef, useState } from 'preact/hooks';
 import { Icon } from './Icon';
 
 type FilterOption<Value extends string> = readonly [value: Value, label: string];
@@ -22,6 +22,7 @@ export function FilterDropdown<Value extends string>({
   const triggerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const popupId = useId();
+  const pendingFocus = useRef<number | null>(null);
   const selectedLabel = options.find(option => option[0] === value)?.[1] || options[0]?.[1] || '';
 
   const focusOption = (index: number) => {
@@ -31,11 +32,12 @@ export function FilterDropdown<Value extends string>({
   };
 
   const close = (restoreFocus = false) => {
+    pendingFocus.current = null;
     setOpen(false);
     if (restoreFocus) triggerRef.current?.focus();
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!open) return;
     const reposition = () => {
       const trigger = triggerRef.current?.getBoundingClientRect();
@@ -65,6 +67,12 @@ export function FilterDropdown<Value extends string>({
     document.addEventListener('keydown', onKeyDown);
     window.addEventListener('resize', reposition);
     window.addEventListener('scroll', reposition, true);
+    // O menu já deve aceitar teclado e ter foco quando seu DOM aparece.
+    // Um requestAnimationFrame posterior pode sobrescrever End/Home do usuário.
+    if (pendingFocus.current != null) {
+      focusOption(pendingFocus.current);
+      pendingFocus.current = null;
+    }
     return () => {
       document.removeEventListener('pointerdown', onPointerDown);
       document.removeEventListener('focusin', onFocusIn);
@@ -75,8 +83,11 @@ export function FilterDropdown<Value extends string>({
   }, [open]);
 
   const openAt = (index: number) => {
-    setOpen(true);
-    requestAnimationFrame(() => focusOption(index));
+    if (open) focusOption(index);
+    else {
+      pendingFocus.current = index;
+      setOpen(true);
+    }
   };
 
   return (
