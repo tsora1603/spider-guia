@@ -1,105 +1,71 @@
 # Arquitetura e dados
 
-## Visão geral
+Site estático em **Vite + TypeScript + Preact**, publicado pelo GitHub Pages. `data/src/` é a fonte editorial; `npm run data:build` gera `data.js`, índices e chunks em `src/data/`. `npm run build` produz `dist/`.
 
-- **Front-end estático:** Vite + TypeScript + Preact, sem servidor próprio para servir as páginas; GitHub Pages entrega `dist/` após os checks do GitHub Actions.
-- **Navegação:** roteador por hash em `src/router/router.ts`, com aliases legados preservados. Cinco destinos: Hoje, Checklist, Explorar, Ajuda e Configurações.
-- **Estado/progresso:** `src/state/`, `src/progress/` e persistência local; status individual `Não`, `Sim`, `Pulei` (pulado não equivale a lido).
-- **Leitura:** `src/preferences/reading-plan.ts` define o plano da Home e da Checklist; ordenação por `readingOrder`. A divisão editorial em fases/marcos pertence à **Jornada**.
-- **Modo Foco:** uma HQ visível por vez, dentro da sequência filtrada; navegação Anterior/Próxima sem reiniciar posição ou reaproveitar status de outra HQ.
-- **Conteúdo e pesquisa:** `src/data/`, `src/views/`, `src/components/`. Ícones via `lucide-preact`; sistema de cores e espaçamento em `src/design-system.css`.
-- **Conta/sync/reset:** `src/auth/`, `src/sync/`, `src/reset/`; Supabase opcional, com RLS e protocolo de gerações quando migrado.
+## Mapa do código
 
-## Fontes editáveis dos dados
+| Área                                     | Local                                                |
+| ---------------------------------------- | ---------------------------------------------------- |
+| Rotas por hash                           | `src/router/router.ts`                               |
+| Telas e componentes                      | `src/views/`, `src/components/`                      |
+| Plano compartilhado por Home e Checklist | `src/preferences/reading-plan.ts`                    |
+| Estado, progresso e backup               | `src/state/`, `src/progress/`                        |
+| Login, sincronização e reset             | `src/auth/`, `src/sync/`, `src/reset/`               |
+| Validação editorial                      | `data/schema.mjs`, `data/link-model.mjs`, `scripts/` |
 
-| Caminho                                           | Responsabilidade                                          |
-| ------------------------------------------------- | --------------------------------------------------------- |
-| `data/src/catalog/`                               | 46 arquivos do catálogo, total de 1.301 leituras          |
-| `data/src/editorial/extras.json`                  | 108 fichas de Extras, fontes, posição, peso e confirmação |
-| `data/src/editorial/clone.json`                   | Saga do Clone                                             |
-| `data/src/editorial/metodologia.json`             | Metodologia editorial                                     |
-| `data/src/fases.json`, `data/src/marcos.json`     | Navegação por fases/marcos da Jornada                     |
-| `data/src/fontes.json`, `data/src/glossario.json` | Referências e glossário                                   |
-| `data/src/editorial/links.json`                   | Grupos e URLs de Links editoriais (separados de Fontes)   |
-
-`npm run data:build` valida e reconstrói `data.js`, `src/data/chunks/` e os índices `src/data/generated-*`. **Não altere esses artefatos manualmente.** Os IDs existentes e a ordem são preservados por snapshots/checagens e devem continuar estáveis para não quebrar progresso salvo.
+O catálogo tem 1.301 HQs em 46 arquivos, listados em `data/src/manifest.json`. Os arquivos gerados não são editáveis. **IDs e `readingOrder` devem permanecer estáveis**: alterações podem exigir migração de progresso e revisão dos snapshots.
 
 ## Links editoriais e cobertura
 
-Os destinos externos são editados em `data/src/editorial/links.json`, validados pelo schema Zod em `data/schema.mjs` e pelo modelo semântico `data/link-model.mjs` (compartilhado entre Vite e Node). `npm run data:build` incorpora esses Links em `DATA.editorial.links`; não há scripts globais `links.js`/`link-model.js`. Os tipos ficam em `src/links/types.ts`. Este cadastro é independente das Fontes de pesquisa e da ordem de leitura. **Números de edição e LGY não são IDs de progresso:** cadastre o ID real do registro do catálogo após conferir sua identidade e cobertura.
+`data/src/editorial/links.json` é a fonte dos destinos e associações. Cada grupo tem `id`, `title` e `links: [{ label, url }]`; `stores` e `libraries` são opcionais.
 
-- `id` e `title` identificam o grupo; `links: [{ label, url }]` representa os destinos. `stores` e `libraries` seguem o mesmo formato.
-- `coverage` é uma lista opcional de coberturas: `{ type: 'lgy', ranges: [{ start: 442, end: 499 }] }` para numeração histórica; `{ type: 'series', series: 'Civil War', volume: '2006', ranges: [{ start: 1, end: 2 }] }` para numeração de série/volume; `{ type: 'one-shot', series: 'Nome da HQ', volume: '2020' }` para edição única. Há suporte a vários intervalos e a sufixos (`suffix: 'LR'`). Os rótulos são gerados por `formatCoverage`.
-- Cada destino pode declarar sua própria `coverage`, substituindo a cobertura geral do grupo, e `extraTarget` para substituir a ficha associada (use `null` para nenhum Extra). A associação com URL não comprova disponibilidade atual do destino.
-- `targets` é a fonte única das associações contextuais: `items` recebe IDs do catálogo; `historical` recebe intervalos LGY e seleciona somente itens `Principal`; `extra` recebe o `n` estável de uma ficha; `cloneArc` recebe o `arcId` estável de um arco. Grupos sem `targets` exigem `coverage` e servem apenas como cards de Links.
+`coverage` descreve o conteúdo do card. Aceita `lgy` com intervalos históricos, `series` com nome/volume/intervalos, ou `one-shot` com nome/volume. Intervalos usam `{ "start": 1, "end": 3 }`; séries podem ter `suffix`. Um destino pode declarar cobertura própria.
 
-Os oito grupos das séries principais têm associações explícitas com os registros
-`Principal` cobertos: LGY 1–964 e a edição #29 de 2025. Esse cadastro não inclui
-anuais ou outras séries por coincidência de numeração. A aplicação continua usando
-os alvos `historical` para os botões das edições e a união desses vínculos para cada
-dropdown. `coverage` continua sendo apenas apresentação. Os alvos `extra` alimentam os botões das fichas; os alvos `cloneArc` alimentam os destinos dos passos correspondentes no guia brasileiro da Saga do Clone.
+**`targets` cria as associações dos botões:**
 
-- `notes` contém observações editoriais; não misturar nele intervalos que possam ser representados com cobertura estruturada. `context` de Links históricos ainda é aceito no JSON. As fontes de evidência continuam em `data/src/fontes.json` e no registro bibliográfico `data/src/editorial/publication-evidence.json`.
+| Tipo            | Exemplo                                                           | Identificador                               |
+| --------------- | ----------------------------------------------------------------- | ------------------------------------------- |
+| HQ ou volume    | `{ "kind": "items", "ids": [1302] }`                              | `id` do catálogo ou `checklistId` do volume |
+| Linha principal | `{ "kind": "historical", "ranges": [{ "start": 1, "end": 10 }] }` | LGY; seleciona apenas itens `Principal`     |
+| Extra           | `{ "kind": "extra", "id": 30 }`                                   | `n` de `extras.json`                        |
+| Arco do Clone   | `{ "kind": "cloneArc", "id": "saga-do-clone-original-1975" }`     | `arcId` de `clone.json`                     |
 
-**Exemplo de novo Link sem enumerar HQs:**
+Confirme a correspondência antes de usar os exemplos. Números de edição não são IDs. Sem `targets`, o grupo precisa de `coverage` e aparece somente na aba Links. `extraTarget` em um destino substitui a ficha associada; `null` a suprime. Títulos e coberturas não criam vínculos automaticamente.
 
-```js
-{
-  id: 'exemplo-serie',
-  title: 'Série Exemplo (2025)',
-  coverage: [{ type: 'series', series: 'Série Exemplo', volume: '2025', ranges: [{ start: 1, end: 12 }] }],
-  links: [{ label: 'Destino externo', url: 'https://example.org/serie-exemplo' }]
-}
-```
+Os botões **Ler** da Checklist reúnem os destinos do grupo de leituras. `#explorar/links?link=<id>` abre um card; o parâmetro `from` guarda a rota para **Voltar à leitura**. O histórico restaura posição/filtros sem alterar progresso.
 
-Os Links originais continuam no mesmo índice e com os mesmos URLs. `npm run links:check` valida IDs de itens, Extras e arcos, intervalos, URLs, duplicidades e o snapshot `data/snapshots/editorial-links-baseline.json`. **Divergência preservada:** `leitura-5` aponta às fichas #30 e #38; a cobertura de cada URL permanece separada, e o destino do Annual #20 usa `extraTarget: 38`. O destino Amazing (2015) #20–24 de `leitura-25` usa `extraTarget: null`, pois não há ficha individual daquela sequência principal. Em `spider-man-2025`, somente a edição #29 tem alvo cadastrado.
-
-O catálogo permanece dividido em **46 arquivos de fase/arco**, enumerados em `data/src/manifest.json`, porque essa divisão também determina os chunks carregados sob demanda. O índice gerado (`src/data/generated-index.json`) fornece pesquisa compacta, associação de fase por ID e consulta `catalogLookup.bySeries`; não existe uma segunda base editável de HQs. O campo antigo de publicação brasileira foi removido dos dados ativos. Referências com valor de evidência permanecem em `data/src/editorial/publication-evidence.json` (arquivo de pesquisa não incluído no build), vinculadas a IDs de HQ/Extra e, quando disponíveis, às mesmas posições de `data/src/fontes.json`.
+Fontes de pesquisa ficam em `data/src/fontes.json`. Evidências brasileiras ficam em `data/src/editorial/publication-evidence.json`, fora do build. Para editar destinos e preservar o baseline, siga [Manutenção](MANUTENCAO.md#como-adicionar-ou-modificar-links).
 
 ## Extras e confirmação
 
-- **Posição no plano:** 100% respaldada por fontes, sem compensação por dedução.
-- **Peso editorial:** pelo menos 60% de suporte factual e até 40% de dedução lógica explicitada. Não é pontuação matemática de links.
-- **Confirmado:** somente quando posição e peso cumprem os requisitos. Caso contrário, **Parcial** (ou **A confirmar**, quando usado no cadastro).
-- Na **Checklist**, o botão **Mais informações** leva à ficha exata de **Explorar → Extras** quando existe associação por `itemIds`; caso contrário, os detalhes permanecem na Checklist. A consulta editorial fica em Explorar, sem duplicar textos extensos na Checklist.
-- Auditoria detalhada e fontes por item: `data/review/extras-confirmacao-60-40.md`.
-
-## Endereços importantes
-
-| Rota                                                                          | Destino                                                                        |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| `#hoje`                                                                       | Home / próxima leitura                                                         |
-| `#checklist`, `#checklist/hq/:id`                                             | Sequência agrupada por série / HQ específica, com abertura automática do grupo |
-| `#explorar/jornada`, `#explorar/extras`, `#explorar/clone`, `#explorar/links` | Descoberta editorial                                                           |
-| `#ajuda`, `#ajuda/glossario`, `#ajuda/fontes`, `#ajuda/metodologia`           | Conteúdo de ajuda                                                              |
-| `#configuracoes`                                                              | Preferências, conta e dados                                                    |
-
-O roteador interpreta caminhos históricos (`#inicio`, `#ler/*`, `#conta/*` e outros) por aliases. Procure manter esses links em mudanças futuras. Busca e filtros podem ser serializados em parâmetros da URL.
-
-## Qualidade e limites
-
-Vitest (`tests/unit/`) testa lógica; Playwright (`tests/e2e/`) testa interface; `scripts/` reúne validadores e smoke tests. Ver [Manutenção](MANUTENCAO.md). Testes locais simulados não substituem testes reais de Supabase/RLS.
+A posição exige 100% de respaldo por fontes. O peso exige ao menos 60% de suporte factual e permite até 40% de dedução documentada. **Confirmado** exige ambos; a auditoria está em `data/review/extras-confirmacao-60-40.md`. `itemIds` vincula a leitura à ficha exibida em **Mais informações**.
 
 ## Guia brasileiro da Saga do Clone
 
-A tela `#explorar/clone` usa `guide` em `data/src/editorial/clone.json`: introdução, blocos, passos, notas de integralidade e fontes. A base tem exatamente A Saga do Clone, volumes 1–18, e Ben Reilly, volume 1, lidos inteiros e em sequência. Os capítulos restantes começam em Cyberwar; New Warriors #66 e outras HQs já cobertas não são reinseridos.
+Edite `guide` em `data/src/editorial/clone.json`. A base é **A Saga do Clone 1–18**, seguida de **Ben Reilly 1**, todos inteiros e em sequência. As leituras restantes começam em Cyberwar; HQs já cobertas, como New Warriors #66, não retornam ao roteiro.
 
-Cada passo possui ID estável, número, edição brasileira ou americana, instrução de leitura, originais de referência, `itemIds` do catálogo e `arcIds` explícitos. A busca abre `#explorar/clone?passo=<id>`, expandindo e focando o passo. Os links de leitura retornam ao mesmo alvo. `CloneGuideSchema` verifica a ordem dos 19 volumes e a unicidade dos passos; `data:build` verifica as referências ao catálogo e aos arcos.
-
-`entries` conserva as referências editoriais anteriores para compatibilidade dos IDs de arcos e dos vínculos existentes; não é o roteiro exibido. Os passos usam volumes com marcação própria na base e as HQs restantes nos blocos seguintes. IDs antigos e registros históricos permanecem disponíveis para backup e sincronização; a projeção operacional evita duplicar leituras cobertas.
-
-Para corrigir disponibilidade ou cobertura, edite os passos/notas de `guide`, preserve os IDs existentes e gere os dados novamente. Uma correspondência de revista não comprova todos os contos: registre cortes confirmados e dúvidas separadamente. A auditoria bibliográfica fornecida pelo leitor é a base das correspondências brasileiras; a ordem americana é retomada somente após os 19 volumes.
+Passos têm IDs estáveis, `itemIds` para cobertura e `arcIds` para links. `entries` preserva referências anteriores. Ao corrigir uma edição, documente contos ausentes e dúvidas de cobertura, preserve IDs e gere os dados novamente. O schema valida ordem, unicidade e referências.
 
 ## Checklist com volumes Panini
 
-`src/data/checklist-catalog.ts` projeta a sequência operacional a partir do catálogo de HQs e dos 19 passos da base do guia. Os IDs `1302–1320`, definidos como `checklistId` em `data/src/editorial/clone.json`, são reservados aos volumes. Cada volume tem estado próprio e herda os links pela cobertura explícita em `sourceItemIds`.
+`src/data/checklist-catalog.ts` substitui 84 HQs pelos 19 volumes. Os IDs **1302–1320** são reservados aos `checklistId` dos volumes; altere a cobertura nos `itemIds` do passo em `clone.json`.
 
-O modelo publica `catalogReadings` (as 1.301 HQs históricas), `readings` (registro completo de 1.320 IDs para backup/sync) e `checklistReadings` (1.236 leituras visíveis: 84 HQs substituídas por 19 volumes). Home, Checklist, Modo Foco, busca e ações em lote usam a sequência visível. As referências bibliográficas e os snapshots históricos continuam preservados.
+| Coleção do modelo   | Conteúdo                                                          |
+| ------------------- | ----------------------------------------------------------------- |
+| `catalogReadings`   | 1.301 HQs históricas                                              |
+| `readings`          | 1.320 registros para backup/sync, incluindo os volumes            |
+| `checklistReadings` | 1.236 leituras visíveis; usadas por Home, Checklist, Foco e busca |
 
-Links antigos para HQs cobertas resolvem o primeiro volume correspondente, com aviso das demais correspondências, sem reinserir a HQ na Checklist. Jornada e Extras projetam IDs para os volumes, evitando contabilizar a mesma leitura duas vezes. Os volumes 1/2 e 11/14 não compartilham marcações, pois reúnem contos diferentes.
+Volumes têm marcações próprias; HQs antigas não os concluem automaticamente. Backups antigos com as 1.301 HQs continuam aceitos e preservam as marcações atuais dos volumes. Links para HQs substituídas abrem o volume correspondente. “Já li até” usa somente HQs principais visíveis; volumes exigem marcação explícita.
 
-`src/progress/backup.ts` aceita somente conjuntos completos de IDs reconhecidos: o catálogo histórico ou o registro atual. Backups novos incluem as HQs históricas e os volumes. Importar um backup antigo preserva marcações explícitas dos volumes que ele não conhece. Nenhuma leitura integral de volume é inferida de antigas marcações de HQs. O protocolo Supabase já aceita IDs positivos; as regras de autorização e reset não foram alteradas.
+## Endereços importantes
 
-A marca histórica “Já li até” opera apenas nas HQs principais visíveis; volumes devem ser marcados explicitamente. Intervalos em lote com um limite substituído pedem a seleção dos volumes, evitando concluir um encadernado inteiro por um único capítulo.
+| Rota                                                                | Destino                                          |
+| ------------------------------------------------------------------- | ------------------------------------------------ |
+| `#hoje`                                                             | Próxima leitura                                  |
+| `#checklist`, `#checklist/hq/:id`                                   | Lista ou leitura específica                      |
+| `#explorar/jornada`, `extras`, `clone`, `links`                     | Seções de Explorar; cada nome segue `#explorar/` |
+| `#ajuda`, `#ajuda/glossario`, `#ajuda/fontes`, `#ajuda/metodologia` | Ajuda                                            |
+| `#configuracoes`                                                    | Plano, aparência, conta e dados                  |
 
-Ao acrescentar HQs no futuro, escolha IDs que não colidam com os reservados aos volumes. O build rejeita colisões. Para mudar a cobertura, edite `itemIds` do passo do guia; não duplique a regra em filtros da interface.
+Preserve aliases antigos como `#inicio`, `#ler/*` e `#conta/*`. Testes de lógica ficam em `tests/unit/`, de interface em `tests/e2e/` e de hospedagem em `tests/hosting/`.

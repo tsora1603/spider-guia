@@ -1,110 +1,29 @@
-# Manutenção e publicação
+# Manutenção
 
-Guia prático para editar o SPIDER·GUIA. Para instalação e publicação no GitHub Pages ou servidor próprio, consulte [Execução e hospedagem](HOSPEDAGEM.md). Para colaborar por pull request, consulte [CONTRIBUTING.md](../CONTRIBUTING.md).
-
-## Fluxo diário
-
-1. Abra a pasta do repositório no VS Code e faça a alteração no **arquivo-fonte**, nunca num arquivo gerado.
-2. Teste localmente (`npm run dev`) e revise a mudança no navegador.
-3. Rode os comandos adequados abaixo e depois `npm run build`.
-4. Em **Source Control**, confira o diff, crie um **Commit** e use **Sync Changes/Push**.
-5. Confira **GitHub → Actions → Quality and GitHub Pages**. Na `main`, aguarde os testes e o job **Publish GitHub Pages**; abra a URL do environment `github-pages`. Em caso de falha, investigue o primeiro job que falhou antes de repetir a publicação.
-
-O workflow GitHub Actions (`.github/workflows/quality.yml`) verifica lint, tipos, dados, Vitest, regressões e Playwright, incluindo uma prévia em `/spider-guia/`. Somente após todos os checks ele publica o mesmo build testado no Pages. Pull requests e branches de trabalho executam os checks sem publicar. Uma falha mantém a versão anterior no ar.
-
-## Comandos úteis
-
-| Comando                                            | Quando usar                                                       |
-| -------------------------------------------------- | ----------------------------------------------------------------- |
-| `npm run dev`                                      | Prévia local (gera dados antes de abrir Vite)                     |
-| `npm run links:check`                              | Ao editar `data/src/editorial/links.json`                         |
-| `npm run data:build && npm run data:check`         | Ao editar `data/src/`                                             |
-| `npm run reading-sequence:check`                   | Ao alterar plano, Checklist ou Modo Foco                          |
-| `npm run icons:check`                              | Ao atualizar os ícones Lucide                                     |
-| `npm run typecheck && npm run test:unit`           | Antes de enviar alterações de código                              |
-| `npm run test:e2e`                                 | Verificar fluxos reais no Playwright (requer navegador instalado) |
-| `npm run build && npm run test:pages`              | Verificar assets, rotas e progresso na subpasta do Pages          |
-| `npm run e:check && npm run build`                 | Validação ampla e build de produção                               |
-| `npm run reset:local-smoke && npm run reset:smoke` | Após mudanças em progresso, sync ou reset                         |
-
-Instalação do Chromium do Playwright: `npx playwright install chromium`. O build produz a pasta **`dist/`**. O workflow usa **Node 24**, dependências do lockfile e as actions oficiais do Pages. `npm run test:pages` serve o último build, sem regenerá-lo; rode `build` antes quando estiver testando localmente.
-
-## Alterações comuns
-
-**Links:** siga o procedimento abaixo e edite a lista de grupos em `data/src/editorial/links.json`. Acrescente destinos com `label` e `url`; para vincular o grupo à interface, use `targets` dos tipos `items`, `historical`, `extra` ou `cloneArc`. `extraTarget` escolhe uma ficha diferente para um destino, ou `null` a suprime. Preserve associações e URLs existentes e rode `npm run links:check`. Os links são editoriais; **Fontes** ficam em `data/src/fontes.json`. Referências bibliográficas brasileiras usadas na pesquisa ficam em `data/src/editorial/publication-evidence.json`, fora dos dados servidos no site. Não insira a seção “Onde procurar”.
-
-**Dados editoriais:** edite `data/src/editorial/extras.json`, `clone.json`, `data/src/marcos.json` etc. Gere novamente os dados. Os status dos Extras respeitam **posição 100% por fontes** e **peso 60% fontes / até 40% dedução documentada**; não promova itens sem evidências suficientes. Revisão histórica detalhada: `data/review/extras-confirmacao-60-40.md`.
-
-**Visual:** use tokens em `src/design-system.css`, padrões em `src/styles.css` e ícones de `lucide-preact` via `src/components/Icon.tsx`. Não altere o catálogo apenas para mudar a UI.
-
-**Novo ZIP de alterações:** não apague a pasta `.git`; copie só os arquivos alterados sobre o repositório, examine o diff e preserve configurações locais, especialmente `public/config.js` quando tiver seus valores reais de Supabase.
-
-## Cuidados
-
-- `package-lock.json`, se gerado e usado pelo projeto, deve ser versionado. Não envie `node_modules/`, `dist/`, arquivos `.env` ou segredos.
-- Não altere IDs existentes, significado de IDs ou `readingOrder` sem avaliar migração de progresso. Os snapshots em `data/snapshots/` são proteções/registro, não conteúdo para edição rotineira.
-- Não faça `git push --force` para resolver testes; investigue o log e preserve o histórico.
-- Testes simulados de reset **não** demonstram permissão RLS nem atomicidade no servidor real. Consulte [Supabase e segurança](SUPABASE-E-SEGURANCA.md).
+Edite as fontes em `data/src/` e `src/`. `data.js`, `src/data/chunks/` e `src/data/generated-*` são gerados por `npm run data:build`. Preserve IDs existentes e exporte o progresso antes de mudar o catálogo.
 
 ## Como adicionar ou modificar links
 
-1. Edite `data/src/editorial/links.json`, uma lista JSON de grupos. Use aspas duplas, não inclua comentários nem vírgula depois do último elemento.
-2. Para acrescentar um destino a um grupo existente, adicione um objeto ao array `links` desse grupo, mantendo seu `id`, título e associações:
+Abra `data/src/editorial/links.json` no editor ou use **Edit** no GitHub. Essa lista de grupos aparece em **Explorar → Links**.
+
+- **Corrigir:** altere `url` ou `label` no destino existente.
+- **Adicionar um destino:** acrescente `{ "label": "Nome", "url": "https://..." }` ao array `links` do grupo. `stores` e `libraries` usam o mesmo formato.
+- **Criar um grupo:** acrescente um objeto como este, substituindo os valores de exemplo:
 
 ```json
 {
-  "label": "Novo destino de leitura",
-  "url": "https://example.org/leitura"
+  "id": "novo-grupo",
+  "title": "Título da HQ",
+  "coverage": [{ "type": "one-shot", "series": "Título da HQ", "volume": "2026" }],
+  "links": [{ "label": "Destino de leitura", "url": "https://example.org/leitura" }]
 }
 ```
 
-Substitua a URL de exemplo por um destino real. `stores` e `libraries`, quando presentes, recebem objetos no mesmo formato. Confira manualmente o endereço e as permissões de acesso em uma janela sem login; os scripts validam a estrutura, mas não comprovam que o conteúdo externo está disponível.
+Use um ID único e estável. O exemplo cria um card na aba Links. Para associar botões a HQs, Extras ou arcos, acrescente `targets` conforme [Arquitetura](ARQUITETURA.md#links-editoriais-e-cobertura). Confira o endereço no navegador; os validadores não comprovam disponibilidade externa.
 
-### Criar um grupo
+**Links históricos:** o validador protege IDs, ordem, títulos, rótulos e URLs originais. Para corrigir uma URL/rótulo histórico, ajuste também **somente a entrada correspondente** em `data/snapshots/editorial-links-baseline.json` e explique o motivo no pull request. Preserve a ordem dos grupos e ao menos um destino por grupo; não regenere o snapshot inteiro para contornar erros.
 
-Acrescente um grupo ao final da lista, depois dos grupos históricos. Este exemplo cria somente um card em Explorar → Links:
-
-```json
-{
-  "id": "nova-serie-2026",
-  "title": "Nova série (2026)",
-  "coverage": [
-    {
-      "type": "series",
-      "series": "Nova série",
-      "volume": "2026",
-      "ranges": [{ "start": 1, "end": 3 }]
-    }
-  ],
-  "links": [
-    {
-      "label": "Site oficial",
-      "url": "https://example.org/nova-serie"
-    }
-  ]
-}
-```
-
-Escolha um `id` único e estável. Ajuste nome, volume, cobertura e URL; não publique os exemplos como conteúdo real. `coverage` descreve o conteúdo do card, mas não cria botões na Checklist. Para associar leituras, acrescente `targets` ao grupo:
-
-| Tipo                    | Formato                                                           | Onde obter o valor                                                 |
-| ----------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------ |
-| HQs específicas         | `{ "kind": "items", "ids": [123] }`                               | Campo `id` de `data/src/catalog/*.json`, conferindo série e edição |
-| Linha principal por LGY | `{ "kind": "historical", "ranges": [{ "start": 1, "end": 10 }] }` | Numeração histórica; seleciona apenas itens `Principal`            |
-| Ficha de Extra          | `{ "kind": "extra", "id": 30 }`                                   | Campo `n` de `data/src/editorial/extras.json`                      |
-| Arco da Saga do Clone   | `{ "kind": "cloneArc", "id": "saga-do-clone-original-1975" }`     | Campo `arcId` de `data/src/editorial/clone.json`                   |
-
-Os números acima ilustram o formato: confirme que correspondem ao conteúdo do destino antes de usá-los. Um grupo pode conter vários alvos. Para mudar a ficha de um destino específico, use `extraTarget` nesse destino; `null` suprime a ficha. Consulte [Arquitetura e dados](ARQUITETURA.md#links-editoriais-e-cobertura) para coberturas por destino.
-
-### Corrigir ou remover um destino existente
-
-Altere `url` ou `label` no arquivo-fonte; preserve o ID do grupo para manter URLs internas como `#explorar/links?link=<id>`. Remova um destino indisponível somente depois de avaliar as leituras que perderão seu botão. O schema exige ao menos um objeto em `links` por grupo.
-
-Há uma proteção adicional: `scripts/check-link-integrity.mjs` compara os grupos iniciais com `data/snapshots/editorial-links-baseline.json` e exige seus IDs, títulos, posições e pares `label`/`url` originais. Por isso, substituir uma URL ou rótulo histórico, remover um destino histórico ou reordenar esses grupos faz `npm run links:check` falhar, mesmo que o JSON seja válido.
-
-Para uma correção deliberada de URL/rótulo histórico, altere **somente a entrada correspondente** no snapshot junto com a fonte, documente o endereço anterior, o novo e o motivo no pull request, e peça revisão de quem mantém o catálogo. A remoção de um grupo histórico exige revisão conjunta da proteção de posição/IDs; prefira corrigir seu destino. Não regenere todo o snapshot nem desative a checagem para contornar uma falha. Destinos adicionados após o baseline não precisam ser incluídos nele automaticamente.
-
-### Validar e publicar
+Valide a alteração:
 
 ```bash
 npm run links:check
@@ -114,23 +33,42 @@ npm run build
 npm run preview
 ```
 
-Na prévia, confira Explorar → Links, a busca e os botões das leituras associadas. Confira `window.LINKS_ENABLED = true` em `public/config.js`: `false` oculta a seção e suas ações, mas não remove os dados do build. Após alterações em JSON durante `npm run dev`, execute novamente `data:build` ou reinicie o servidor, pois a geração ocorre ao iniciar o comando.
+Confira **Explorar → Links** e os botões associados. `LINKS_ENABLED` em `public/config.js` precisa estar `true`. Depois de editar JSON com o servidor aberto, rode `data:build` novamente ou reinicie `npm run dev`.
 
-Revise o diff dos arquivos-fonte e dos artefatos gerados versionados, faça o pull request e publique conforme [Hospedagem](HOSPEDAGEM.md). Editar somente o JSON no GitHub não altera uma cópia já publicada sem um novo build/deploy.
+## Outras alterações
+
+| Conteúdo               | Fonte                                                             |
+| ---------------------- | ----------------------------------------------------------------- |
+| HQs e ordem            | `data/src/catalog/`                                               |
+| Extras e Saga do Clone | `data/src/editorial/extras.json`, `data/src/editorial/clone.json` |
+| Jornada                | `data/src/fases.json`, `data/src/marcos.json`                     |
+| Fontes e glossário     | `data/src/fontes.json`, `data/src/glossario.json`                 |
+| Visual                 | `src/design-system.css`, `src/styles.css`                         |
+
+Para mudar cobertura, volumes ou ordem, siga os contratos de [Arquitetura](ARQUITETURA.md). Para contas e reset, siga [Supabase](SUPABASE-E-SEGURANCA.md).
+
+## Comandos úteis
+
+| Comando                                    | Uso                                  |
+| ------------------------------------------ | ------------------------------------ |
+| `npm run dev`                              | Desenvolvimento local                |
+| `npm run data:build && npm run data:check` | Alterações nos dados                 |
+| `npm run links:check`                      | Cadastro de links                    |
+| `npm run ci`                               | Validações completas e build         |
+| `npm run test:e2e`                         | Fluxos no navegador; requer Chromium |
+| `npm run build && npm run test:pages`      | Build na subpasta do Pages           |
+| `npm run reading-sequence:check`           | Plano, Checklist e Modo Foco         |
+
+Instale o navegador de testes com `npx playwright install chromium`.
+
+## Publicar ou reverter
+
+Revise o diff e envie as alterações conforme [Contribuição](../CONTRIBUTING.md). Após integrar à **main**, o Actions testa e publica no Pages. Confira **Actions → Quality and GitHub Pages** e abra o site. Para desfazer uma alteração, envie um commit de reversão; mudanças no banco exigem tratamento separado.
 
 ## Rotina de quem mantém sua própria cópia
 
-- Periodicamente, confira links externos, permissões e falhas nos deploys. Registre correções em issues com o grupo/URL afetado e passos para reproduzir.
-- Antes de atualizar dependências, use uma branch; revise `package.json` e `package-lock.json`, rode `npm ci`, `npm run ci` e os testes dos fluxos afetados. Evite atualizações de versão principal sem revisar notas de compatibilidade.
-- Para incorporar mudanças do projeto original, configure `upstream`, faça `git fetch upstream` e integre a branch desejada em uma branch de trabalho. Resolva conflitos preservando sua configuração e seus links; valide antes de integrar à branch publicada.
-- Mantenha a branch de publicação, o domínio e o responsável por GitHub/Pages/Supabase registrados para a equipe. Use acessos individuais e os mecanismos de colaboração das plataformas.
-- Antes de trocar domínio, limpar dados ou migrar catálogo, exporte o progresso em Configurações. Progresso local pertence ao navegador e à origem (protocolo, domínio e porta); não acompanha automaticamente a mudança de endereço. Importe o backup no novo site. Dois sites sob a mesma origem podem compartilhar armazenamento local; prefira origens distintas para cópias independentes.
-- Se uma versão falhar, reverta o commit por pull request e integre a reversão à `main`: os checks publicam novamente a versão corrigida no Pages. Se apenas a publicação falhou, corrija configuração/permissões e repita o workflow. Uma reversão do site não reverte o banco Supabase; trate migrações separadamente.
-
-## Progresso após a substituição por volumes Panini
-
-As 84 HQs cobertas pelos 19 encadernados saíram da Checklist, e os volumes têm marcações independentes. Confirme quais volumes foram lidos inteiros; marcações antigas de HQs não concluem automaticamente os encadernados. Os registros anteriores continuam no backup e na sincronização.
-
-Exporte um backup antes de mudanças de cobertura. Um backup atual contém 1.320 registros, incluindo referências históricas e volumes, enquanto a Checklist mostra 1.236 leituras. Backups antigos com as 1.301 HQs continuam aceitos e preservam as marcações atuais dos volumes. Não reutilize os IDs `1302–1320` para novas HQs.
-
-Links para uma HQ substituída abrem seu volume correspondente. Ao cadastrar links novos, `targets.items` também pode apontar diretamente ao ID de um volume. Atualize `itemIds` do passo em `clone.json` para corrigir sua cobertura e rode `npm run ci` e os testes de Checklist/backup após mudanças estruturais.
+- Revise links externos e falhas em Actions periodicamente.
+- Atualize dependências em uma branch, versione `package-lock.json` e valide com `npm run ci`.
+- Para incorporar mudanças do original, configure `upstream`, faça `git fetch upstream` e integre em uma branch, preservando sua configuração e seus links.
+- Guarde backups antes de trocar domínio ou catálogo. O JSON exportado contém progresso e histórico; preferências e aparência não entram nele.
+- Mantenha os responsáveis por GitHub, domínio e Supabase registrados. Preserve o histórico Git e mantenha segredos fora do repositório.

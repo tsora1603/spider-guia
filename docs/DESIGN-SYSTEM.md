@@ -1,61 +1,45 @@
-# Sistema visual do SPIDER·GUIA
+# Sistema visual
 
-Fonte de verdade de estilo: `src/design-system.css` (tokens/temas) e `src/styles.css` (componentes/layout). Esta página documenta padrões em uso, não etapas históricas.
+Estilos em `src/design-system.css` (tokens/temas) e `src/styles.css` (layout). Use **Bangers** nos títulos, **Inter/system-ui** na interface e ícones de `lucide-preact` via `src/components/Icon.tsx`. O favicon é `public/icon.png`.
 
-## Princípios
+## Regras gerais
 
-- Identidade com **Bangers** (títulos) e **Inter/system-ui** (interface), tema escuro/claro/automático e escalas de fonte.
-- Tokens semânticos para superfícies, texto, bordas e estados (`--primary`, `--success`, `--warning`, `--danger` etc.); sem cor literal ou `!important` fora das regras previstas.
-- Áreas clicáveis de pelo menos **44 px** (`--target-min: 2.75rem`), foco visível, contraste adequado e suporte a movimento reduzido.
-- Ícones de interface de **`lucide-preact`** por meio de `src/components/Icon.tsx`. O favicon `public/icon.png` é independente.
-- Estados de progresso **Não / Sim / Pulei** sempre distinguíveis também por texto, não somente por cor.
+Use tokens para cores/espaçamento, foco visível, alvos de toque de pelo menos **44 px** e suporte a movimento reduzido. Confira temas claro/escuro/automático e escalas de fonte. Status devem ser reconhecíveis por texto; mantenha estilos inline, cores literais fora dos tokens e `!important` fora da interface.
 
 ## Componentes
 
-### 1. Botão (`.btn`)
+### 1. Botões e controles (`.btn`, `.seg`)
 
-Uma ação principal por conjunto decisório; feedback de disabled/loading/erro e foco de teclado claro.
+Uma ação principal por decisão, com estado selecionado, desabilitado, carregando ou erro.
 
-### 2. Cartão (`.card`, `.hero`)
+### 2. Cartões e metadados (`.card`, `.hero`, `.tag`, `.pill`)
 
-Agrupamento sem inventar fundos aninhados; a Home privilegia espaço contínuo, não mosaico de cartões.
+Agrupe conteúdo com superfícies simples; etiquetas descrevem informações.
 
-### 3. Etiqueta (`.tag`, `.pill`)
+### 3. Busca e filtros (`ListSearch`, `FilterDropdown`)
 
-Metadados de peso/estado com rótulo legível. Não usar tag como botão.
+Preserve foco, navegação por teclado e fechamento por Escape/clique externo.
 
-### 4. Busca e filtros (`ListSearch`, `FilterDropdown`)
+### 4. Progresso e leituras (`.progress-bar`, `.progress-ring`, `.issue-entry`)
 
-Controle acessível: teclado, Escape, clique externo, foco preservado e feedback após escolher opção.
+Distinga **Não / Sim / Pulei**. Marcar fica à esquerda e Pular à direita; **Mais informações** permanece visível quando existe ficha extra.
 
-### 5. Controle segmentado (`.seg`)
+### 5. Navegação (`#nav`, `.side`)
 
-Alternância entre vistas mutuamente exclusivas, com estado selecionado reconhecível.
+Cinco destinos: Hoje, Checklist, Explorar, Ajuda e Configurações. Barra inferior no celular e navegação lateral no desktop.
 
-### 6. Progresso (`.progress-bar`, `.progress-ring`)
+### 6. Estados da tela (`.screen-state`)
 
-Resumo acessível por texto; leituras puladas não são contadas como lidas.
+Carregamento, vazio e erro oferecem uma próxima ação e preservam o progresso.
 
-### 7. Linha de HQ (`.issue-entry`)
+### 7. Modais (`dialog`)
 
-Marcar à esquerda, descrição/expansão no centro, Pular à direita; detalhe é continuação da linha. Na Checklist, Extras com ficha editorial têm link **Mais informações**.
+Associe título, contenha/restaure foco e mantenha ações acessíveis em telas pequenas.
 
-### 8. Estado da tela (`.screen-state`)
+### 8. Checklist e Modo Foco
 
-Vazio, carregando ou erro, com próxima ação útil e sem apagar progresso por falhas de rede.
+Agrupe apenas trechos consecutivos da mesma série. O Foco segue o mesmo plano, uma leitura por vez. **Ler** fica no título do grupo; **Sem link** fica desabilitado. Cada leitura mantém seu próprio status.
 
-### 9. Modal (`dialog`)
+## Validação
 
-Título associado, foco contido/restaurado e ações destrutivas com confirmações adequadas, sem cortar botões no celular.
-
-### 10. Navegação (`#nav`, `.side`)
-
-Cinco destinos principais; barra inferior no mobile e rail no desktop, com indicação de rota atual e labels acessíveis.
-
-## Checklist e Modo Foco
-
-Checklist segue a sequência de `buildReadingPlan`, agrupando somente trechos consecutivos da mesma série em dropdowns. Intercalações abrem um novo grupo quando a série retorna; edições isoladas usam a mesma superfície sem outro nível de expansão. Jornada concentra as fases/marcos. O Modo Foco usa a mesma sequência visível e atualiza estado por HQ ao avançar. Pesquisa e filtros preservam as divisões originais do plano. O botão verde **Ler** fica somente no título do grupo, fora do controle de expansão; leva aos vínculos explícitos na aba Links. Edições individuais não repetem essa ação. **Mais informações** fica sempre visível; itens com apenas a ficha extra não têm expansão vazia. **Sem link** é desabilitado nos grupos sem destino cadastrado. A superfície inteira do dropdown recebe `--surface-reading-selected` ao abrir ou receber foco; cabeçalhos e conteúdo permanecem transparentes. **Pular** usa uma cápsula visual de 28px dentro de uma área de toque de pelo menos 44px.
-
-## Testes de coesão
-
-`npm run stage4:check` verifica tokens, temas, contraste de pares definidos, alvo mínimo, ausência de estilos inline proibidos e **as dez seções de componentes deste documento**. Playwright verifica comportamento e responsividade; uma checagem estática não substitui a inspeção visual.
+`npm run stage4:check` verifica tokens, contraste AA, componentes e alvos de toque. Confira também responsividade e comportamento no navegador conforme [Manutenção](MANUTENCAO.md#comandos-úteis).
