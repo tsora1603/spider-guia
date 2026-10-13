@@ -1,4 +1,4 @@
-name: Quality and tests
+name: Quality and GitHub Pages
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
   group: spider-guia-tests-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
   quality:
@@ -25,15 +25,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: npm
 
       - name: Install dependencies
-        shell: bash
-        run: |
-          if [[ -f package-lock.json ]]; then
-            npm ci --no-audit --no-fund
-          else
-            npm install --no-audit --no-fund
-          fi
+        run: npm ci --no-audit --no-fund
 
       - name: Rebuild generated data from sources
         run: npm run data:build
@@ -60,21 +55,25 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: npm
 
       - name: Install dependencies
-        shell: bash
-        run: |
-          if [[ -f package-lock.json ]]; then
-            npm ci --no-audit --no-fund
-          else
-            npm install --no-audit --no-fund
-          fi
+        run: npm ci --no-audit --no-fund
 
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
       - name: Run Playwright against production build
         run: npm run test:e2e
+
+      - name: Verify GitHub Pages subpath on the same build
+        run: npm run test:pages
+
+      - name: Upload tested site for GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
 
       - name: Upload Playwright report
         if: ${{ !cancelled() }}
@@ -84,3 +83,29 @@ jobs:
           path: playwright-report/
           if-no-files-found: ignore
           retention-days: 14
+
+  deploy:
+    name: Publish GitHub Pages
+    needs: [quality, e2e]
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check Pages configuration
+        uses: actions/configure-pages@v5
+        with:
+          enablement: false
+
+      - name: Deploy tested artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

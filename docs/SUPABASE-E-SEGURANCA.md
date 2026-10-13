@@ -9,7 +9,7 @@
 3. Execute `supabase/tests/validate_permissions.sql` como administrador: todas as verificações `ok` devem retornar `true`. Esse check somente leitura não substitui testes com usuários autenticados distintos.
 4. Em `public/config.js`, preencha **somente** a Project URL (sem `/rest/v1/`) e a **chave publicável** do Supabase. **Nunca** inclua `service_role`, `sb_secret_*`, senha de banco, tokens administrativos ou senha pessoal no navegador/GitHub.
 5. Configure Auth conforme a modalidade do site: **login privado com e-mail e senha**, contas criadas pelo administrador em **Authentication → Users**, provedor Email ativado e cadastro público desativado em **Sign In / Providers**. Confirme administrativamente os e-mails das contas sob seu controle.
-6. Faça deploy pelo Netlify e teste login, logout, leitura local, `Sim`/`Pulei`/`Não`, sync em dois dispositivos e isolamento entre duas contas. Uma conta não pode consultar/alterar progresso da outra.
+6. Faça deploy pelo GitHub Pages e teste login, logout, leitura local, `Sim`/`Pulei`/`Não`, sync em dois dispositivos e isolamento entre duas contas. Uma conta não pode consultar/alterar progresso da outra. Ao trocar o endereço, mantenha o mesmo projeto Supabase para conservar o progresso remoto e entre novamente na conta. Se houver URLs configuradas em **Authentication → URL Configuration**, atualize-as para o endereço publicado; o fluxo atual de e-mail/senha não depende de redirecionamento nem oferece recuperação por e-mail.
 
 Se esquecer a senha, sem SMTP a recuperação é administrativa (painel ou Admin API **somente no servidor protegido**); usuário já logado pode alterar a senha informando a atual em Configurações. Não peça a senha atual dos amigos.
 

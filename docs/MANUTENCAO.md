@@ -1,6 +1,6 @@
 # Manutenção e publicação
 
-Guia prático para editar o SPIDER·GUIA. Para instalação e publicação no Netlify, GitHub Pages ou servidor próprio, consulte [Execução e hospedagem](HOSPEDAGEM.md). Para colaborar por pull request, consulte [CONTRIBUTING.md](../CONTRIBUTING.md).
+Guia prático para editar o SPIDER·GUIA. Para instalação e publicação no GitHub Pages ou servidor próprio, consulte [Execução e hospedagem](HOSPEDAGEM.md). Para colaborar por pull request, consulte [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Fluxo diário
 
@@ -8,9 +8,9 @@ Guia prático para editar o SPIDER·GUIA. Para instalação e publicação no Ne
 2. Teste localmente (`npm run dev`) e revise a mudança no navegador.
 3. Rode os comandos adequados abaixo e depois `npm run build`.
 4. Em **Source Control**, confira o diff, crie um **Commit** e use **Sync Changes/Push**.
-5. Confira **GitHub → Actions** e **Netlify → Deploys**. Se o build do Netlify falhar, verifique os logs antes de tentar outro deploy.
+5. Confira **GitHub → Actions → Quality and GitHub Pages**. Na `main`, aguarde os testes e o job **Publish GitHub Pages**; abra a URL do environment `github-pages`. Em caso de falha, investigue o primeiro job que falhou antes de repetir a publicação.
 
-O workflow GitHub Actions (`.github/workflows/quality.yml`) verifica lint, tipos, dados, Vitest, regressões e Playwright. **O Netlify publica independentemente do resultado do Actions**: para não publicar código não homologado, faça alterações em branch de trabalho e só integre à `main` depois de verificar os checks.
+O workflow GitHub Actions (`.github/workflows/quality.yml`) verifica lint, tipos, dados, Vitest, regressões e Playwright, incluindo uma prévia em `/spider-guia/`. Somente após todos os checks ele publica o mesmo build testado no Pages. Pull requests e branches de trabalho executam os checks sem publicar. Uma falha mantém a versão anterior no ar.
 
 ## Comandos úteis
 
@@ -23,10 +23,11 @@ O workflow GitHub Actions (`.github/workflows/quality.yml`) verifica lint, tipos
 | `npm run icons:check`                              | Ao atualizar os ícones Lucide                                     |
 | `npm run typecheck && npm run test:unit`           | Antes de enviar alterações de código                              |
 | `npm run test:e2e`                                 | Verificar fluxos reais no Playwright (requer navegador instalado) |
+| `npm run build && npm run test:pages`              | Verificar assets, rotas e progresso na subpasta do Pages          |
 | `npm run e:check && npm run build`                 | Validação ampla e build de produção                               |
 | `npm run reset:local-smoke && npm run reset:smoke` | Após mudanças em progresso, sync ou reset                         |
 
-Instalação do Chromium do Playwright: `npx playwright install chromium`. O build produz a pasta **`dist/`**. `netlify.toml` usa **Node 24**, `npm run build` e `dist/`.
+Instalação do Chromium do Playwright: `npx playwright install chromium`. O build produz a pasta **`dist/`**. O workflow usa **Node 24**, dependências do lockfile e as actions oficiais do Pages. `npm run test:pages` serve o último build, sem regenerá-lo; rode `build` antes quando estiver testando localmente.
 
 ## Alterações comuns
 
@@ -122,9 +123,9 @@ Revise o diff dos arquivos-fonte e dos artefatos gerados versionados, faça o pu
 - Periodicamente, confira links externos, permissões e falhas nos deploys. Registre correções em issues com o grupo/URL afetado e passos para reproduzir.
 - Antes de atualizar dependências, use uma branch; revise `package.json` e `package-lock.json`, rode `npm ci`, `npm run ci` e os testes dos fluxos afetados. Evite atualizações de versão principal sem revisar notas de compatibilidade.
 - Para incorporar mudanças do projeto original, configure `upstream`, faça `git fetch upstream` e integre a branch desejada em uma branch de trabalho. Resolva conflitos preservando sua configuração e seus links; valide antes de integrar à branch publicada.
-- Mantenha a branch de publicação, o domínio e o responsável por GitHub/Netlify/Supabase registrados para a equipe. Use acessos individuais e os mecanismos de colaboração das plataformas.
+- Mantenha a branch de publicação, o domínio e o responsável por GitHub/Pages/Supabase registrados para a equipe. Use acessos individuais e os mecanismos de colaboração das plataformas.
 - Antes de trocar domínio, limpar dados ou migrar catálogo, exporte o progresso em Configurações. Progresso local pertence ao navegador e à origem (protocolo, domínio e porta); não acompanha automaticamente a mudança de endereço. Importe o backup no novo site. Dois sites sob a mesma origem podem compartilhar armazenamento local; prefira origens distintas para cópias independentes.
-- Se uma versão falhar, reverta o commit por pull request ou restaure um deploy anterior no provedor. Uma reversão do site não reverte o banco Supabase; trate migrações separadamente.
+- Se uma versão falhar, reverta o commit por pull request e integre a reversão à `main`: os checks publicam novamente a versão corrigida no Pages. Se apenas a publicação falhou, corrija configuração/permissões e repita o workflow. Uma reversão do site não reverte o banco Supabase; trate migrações separadamente.
 
 ## Progresso após a substituição por volumes Panini
 

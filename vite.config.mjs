@@ -1,5 +1,5 @@
 export default {
-  // Caminhos relativos mantêm o mesmo build publicável em Netlify e GitHub Pages.
+  // Assets relativos funcionam em /spider-guia/ no Pages e na raiz de um domínio próprio.
   base: './',
   build: {
     target: 'es2020',

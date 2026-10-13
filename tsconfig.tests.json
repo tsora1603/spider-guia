@@ -9,6 +9,7 @@
     "tests/**/*.ts",
     "src/**/*.d.ts",
     "playwright.config.ts",
+    "playwright.pages.config.ts",
     "vitest.config.ts"
   ]
 }

@@ -15,13 +15,14 @@ npm run dev           # abre o endereço exibido pelo Vite
 npm run build         # valida dados e TypeScript, gera dist/
 npm run test:unit     # Vitest
 npm run test:e2e      # Playwright (primeiro: npx playwright install chromium)
+npm run test:pages    # testa o mesmo dist/ sob /spider-guia/ (rode build antes)
 ```
 
 Para checagem mais ampla: `npm run e:check`, `npm run reset:local-smoke` e `npm run reset:smoke`. A instalação e o CI podem exigir outras dependências do ambiente. **Aprovação em testes locais não comprova a segurança do Supabase real.**
 
 O Vite exibe a URL local (normalmente `http://localhost:5173`). Abra-a no navegador; encerre com `Ctrl+C`. Não abra `index.html` por duplo clique. Para testar a versão publicada, rode `npm run build` e `npm run preview` (normalmente `http://localhost:4173`).
 
-Para preparar um fork com configuração própria, publicar no Netlify/GitHub Pages ou servir em outra hospedagem, siga [Execução e hospedagem](docs/HOSPEDAGEM.md).
+Para preparar um fork com configuração própria, publicar no GitHub Pages ou servir em outra hospedagem, siga [Execução e hospedagem](docs/HOSPEDAGEM.md). A versão do Pages usa o endereço padrão `https://tsora1603.github.io/spider-guia/`; a ativação e o resultado do deploy aparecem em **Settings → Pages** e **Actions**.
 
 ## Onde fica cada coisa
 
@@ -33,7 +34,7 @@ Para preparar um fork com configuração própria, publicar no Netlify/GitHub Pa
 | Extras, Saga do Clone, fases, marcos e metodologia          | `data/src/editorial/`, `data/src/fases.json`, `data/src/marcos.json` |
 | Glossário e fontes                                          | `data/src/glossario.json`, `data/src/fontes.json`                    |
 | Interface, navegação e estilos                              | `src/`, `src/design-system.css`, `src/styles.css`                    |
-| Ícone do navegador                                          | `public/icon.svg`                                                    |
+| Ícone do navegador                                          | `public/icon.png`                                                    |
 
 **Não edite arquivos gerados** (`data.js`, `src/data/chunks/`, `src/data/generated-*.json`, `src/data/generated-chunks.ts`). Eles são reconstruídos por `npm run data:build` a partir de `data/src/`.
 
@@ -51,13 +52,13 @@ Uma leitura extra com ficha editorial exibe **Mais informações** sempre visív
 
 ## Publicação e contas
 
-- **GitHub:** histórico de alterações e testes automáticos; **Netlify:** build e publicação a partir da branch conectada (`netlify.toml`). O GitHub Actions **não** publica no GitHub Pages.
+- **GitHub Pages:** `.github/workflows/quality.yml` valida dados, lint, tipos, testes unitários e fluxos no navegador. Após aprovação, publica o mesmo `dist/` testado em cada push na `main`. Pull requests e outras branches executam os testes; a publicação fica restrita à `main`.
 - **Supabase:** login privado por **e-mail e senha** (contas criadas pelo administrador), progresso sincronizado por usuário e controles de exclusão segura. O site funciona sem login, com progresso somente local.
 - **Reset remoto:** não habilite `SPIDER_REMOTE_RESET_VERIFIED` só porque os scripts SQL passaram; a validação deve incluir testes reais multiusuário/multidispositivo. Nunca publique senhas, `service_role` ou `sb_secret_*`.
 
 ## Documentação mantida
 
-- [Execução e hospedagem](docs/HOSPEDAGEM.md) — instalação, cópia independente, GitHub Pages, Netlify e servidor próprio.
+- [Execução e hospedagem](docs/HOSPEDAGEM.md) — instalação, cópia independente, GitHub Pages, transição do Netlify e servidor próprio.
 - [Contribuição pelo GitHub](CONTRIBUTING.md) — branches, pull requests e revisão por terceiros.
 - [Manutenção e publicação](docs/MANUTENCAO.md) — como editar, testar, fazer commit e publicar.
 - [Arquitetura e dados](docs/ARQUITETURA.md) — pastas, rotas, modelo editorial e geração de dados.

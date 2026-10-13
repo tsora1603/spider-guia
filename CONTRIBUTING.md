@@ -1,6 +1,6 @@
 # Contribuir pelo GitHub
 
-Comece pelo [README](README.md), pelo [guia de execução](docs/HOSPEDAGEM.md) e pelas regras de [manutenção dos dados e links](docs/MANUTENCAO.md). Não é necessário acesso ao Netlify ou ao banco de produção para propor alterações.
+Comece pelo [README](README.md), pelo [guia de execução](docs/HOSPEDAGEM.md) e pelas regras de [manutenção dos dados e links](docs/MANUTENCAO.md). Não é necessário administrar o Pages ou o banco de produção para propor alterações. Pull requests executam os checks; a publicação acontece somente após integração à `main` e aprovação de todos os testes.
 
 ## Preparar e enviar uma alteração
 

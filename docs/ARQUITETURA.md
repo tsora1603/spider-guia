@@ -2,7 +2,7 @@
 
 ## Visão geral
 
-- **Front-end estático:** Vite + TypeScript + Preact, sem servidor próprio para servir as páginas; Netlify entrega `dist/`.
+- **Front-end estático:** Vite + TypeScript + Preact, sem servidor próprio para servir as páginas; GitHub Pages entrega `dist/` após os checks do GitHub Actions.
 - **Navegação:** roteador por hash em `src/router/router.ts`, com aliases legados preservados. Cinco destinos: Hoje, Checklist, Explorar, Ajuda e Configurações.
 - **Estado/progresso:** `src/state/`, `src/progress/` e persistência local; status individual `Não`, `Sim`, `Pulei` (pulado não equivale a lido).
 - **Leitura:** `src/preferences/reading-plan.ts` define o plano da Home e da Checklist; ordenação por `readingOrder`. A divisão editorial em fases/marcos pertence à **Jornada**.

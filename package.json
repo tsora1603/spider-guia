@@ -38,6 +38,7 @@
     "test:watch": "vitest",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
+    "test:pages": "playwright test --config playwright.pages.config.ts",
     "test:e2e:headed": "playwright test --headed",
     "test:e2e:report": "playwright show-report",
     "e:unit": "vitest run",
