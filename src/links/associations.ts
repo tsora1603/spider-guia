@@ -76,12 +76,6 @@ export function createLinkAssociations(
       }
     }
   }
-  // A cobertura explícita do volume herda os vínculos das HQs substituídas.
-  for (const item of items) {
-    for (const sourceId of item.sourceItemIds || []) {
-      for (const groupId of byItemId.get(sourceId) || []) add(byItemId, item.id, groupId);
-    }
-  }
   return { byItemId, byExtraId, byCloneArcId };
 }
 
@@ -107,4 +101,18 @@ export function linkTargetsForCloneArc(
   arcId: string
 ): readonly string[] {
   return associations.byCloneArcId.get(arcId) || [];
+}
+
+/** Encadernados exigem destino próprio; a cobertura americana não é um link do volume. */
+export function linkTargetsForCloneStep(
+  associations: LinkAssociations,
+  step: { checklistId?: number; itemIds: readonly number[]; arcIds: readonly string[] }
+): string[] {
+  if (step.checklistId) return [...linkTargetsFor(associations, 'item', step.checklistId)];
+  return [
+    ...new Set([
+      ...linkTargetsForItems(associations, step.itemIds),
+      ...step.arcIds.flatMap((arcId) => [...linkTargetsForCloneArc(associations, arcId)])
+    ])
+  ];
 }

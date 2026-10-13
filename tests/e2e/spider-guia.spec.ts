@@ -928,7 +928,7 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(page.locator(`#hq-${id}`)).toHaveAttribute('data-progress-status', 'Sim');
   });
 
-  test('Saga do Clone apresenta a base brasileira, preserva os links e retorna ao passo', async ({
+  test('Saga do Clone distingue volumes sem destino e mantém links da continuação com retorno', async ({
     page
   }) => {
     await page.goto('/#explorar/clone');
@@ -943,14 +943,26 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(page.locator('.clone-guide-sources a.source-link')).not.toHaveCount(0);
     const step = base.locator('[data-clone-step="panini-saga-01"]');
     await expect(step).toContainText('Leia o volume inteiro');
-    const links = step.getByRole('button', { name: 'Ver links de A Saga do Clone — volume 1' });
-    await expect(links).toBeVisible();
+    await expect(base.locator('.reading-links-cta')).toHaveCount(19);
+    await expect(base.locator('.reading-links-cta:not(:disabled)')).toHaveCount(0);
+    const missing = step.getByRole('button', { name: 'Link de leitura ainda não cadastrado' });
+    await expect(missing).toBeVisible();
+    await expect(missing).toBeDisabled();
+    await expect(missing).toHaveText('Sem link');
     await step.locator('.clone-checklist > summary').click();
     const row = step.locator('.issue-entry').first();
     await expect(row.locator('.extra-editorial-status')).toHaveCount(0);
     await row.locator('.row-details > summary').click();
     await expect(row).not.toContainText('Continue na linha principal');
     await expect(row.locator('.extra-issue-evidence')).toHaveCount(0);
+    await base.getByRole('button', { name: /1\. Os 19 volumes completos/ }).click();
+    await expect(base).not.toHaveClass(/is-open/);
+    await page.goto('/#explorar/clone?passo=leitura-23');
+    const remaining = page.locator('#clone-step-leitura-23');
+    const links = remaining.getByRole('button', {
+      name: 'Ver links de A Teia do Aranha — Abril, nº 100'
+    });
+    await expect(links).toBeEnabled();
     await links.click();
     await expect(page).toHaveURL(/#explorar\/links\?/);
     await expect(
@@ -959,10 +971,8 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
       })
     ).toBeVisible();
     await page.getByRole('button', { name: 'Voltar à leitura' }).click();
-    await expect(page).toHaveURL(/#explorar\/clone\?passo=panini-saga-01$/);
-    await expect(page.locator('#clone-step-panini-saga-01')).toHaveAttribute('open', '');
-    await base.getByRole('button', { name: /1\. Os 19 volumes completos/ }).click();
-    await expect(base).not.toHaveClass(/is-open/);
+    await expect(page).toHaveURL(/#explorar\/clone\?passo=leitura-23$/);
+    await expect(page.locator('#clone-step-leitura-23')).toHaveAttribute('open', '');
   });
 
   test('Saga do Clone encontra revistas brasileiras na busca e abre o passo no mobile', async ({

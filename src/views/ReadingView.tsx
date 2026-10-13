@@ -163,6 +163,7 @@ function CloneStep({ step, targeted }: { step: CloneGuideStep; targeted: boolean
         <CloneGuideLinksAction
           itemIds={ids}
           arcIds={step.arcIds}
+          checklistId={step.checklistId}
           stepId={step.id}
           label={step.title}
         />

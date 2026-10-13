@@ -32,6 +32,8 @@ O catálogo tem 1.301 HQs em 46 arquivos, listados em `data/src/manifest.json`. 
 
 Confirme a correspondência antes de usar os exemplos. Números de edição não são IDs. Sem `targets`, o grupo precisa de `coverage` e aparece somente na aba Links. `extraTarget` em um destino substitui a ficha associada; `null` a suprime. Títulos e coberturas não criam vínculos automaticamente.
 
+Volumes Panini exigem um alvo `items` com o `checklistId` do volume exato. Links das HQs americanas ou dos arcos não ativam o botão do encadernado; sem destino próprio, ele mostra **Sem link**.
+
 Os botões **Ler** da Checklist reúnem os destinos do grupo de leituras. `#explorar/links?link=<id>` abre um card; o parâmetro `from` guarda a rota para **Voltar à leitura**. O histórico restaura posição/filtros sem alterar progresso.
 
 Fontes de pesquisa ficam em `data/src/fontes.json`. Evidências brasileiras ficam em `data/src/editorial/publication-evidence.json`, fora do build. Para editar destinos e preservar o baseline, siga [Manutenção](MANUTENCAO.md#como-adicionar-ou-modificar-links).

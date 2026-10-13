@@ -4,6 +4,7 @@ import {
   createLinkAssociations,
   linkTargetsFor,
   linkTargetsForCloneArc,
+  linkTargetsForCloneStep,
   linkTargetsForItems
 } from '../links/associations';
 import { rememberReadingReturn } from '../links/return-context';
@@ -96,22 +97,18 @@ export function CloneArcLinksAction({ arcId, label }: { arcId: string; label: st
 export function CloneGuideLinksAction({
   itemIds,
   arcIds,
+  checklistId,
   stepId,
   label
 }: {
   itemIds: number[];
   arcIds: string[];
+  checklistId?: number;
   stepId: string;
   label: string;
 }) {
   if (!linksEnabled) return null;
-  const linkIds = [
-    ...new Set([
-      ...linkTargetsForItems(associations, itemIds),
-      ...arcIds.flatMap((arcId) => [...linkTargetsForCloneArc(associations, arcId)])
-    ])
-  ];
-  if (!linkIds.length) return null;
+  const linkIds = linkTargetsForCloneStep(associations, { itemIds, arcIds, checklistId });
   return (
     <ReadingLinksButton
       linkIds={linkIds}

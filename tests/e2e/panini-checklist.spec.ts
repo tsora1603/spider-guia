@@ -44,6 +44,9 @@ test('Checklist Panini: link antigo abre volume, preserva história e Modo Foco 
   await expect(volume).toBeVisible();
   await expect(volume).toHaveAttribute('data-progress-status', 'Não');
   await expect(page.locator('#hq-410')).toHaveCount(0);
+  const group = page.locator('.checklist-series-group').filter({ has: volume });
+  await expect(group.locator('.reading-links-cta')).toBeDisabled();
+  await expect(group.locator('.reading-links-cta')).toHaveText('Sem link');
   await volume.getByRole('button', { name: /Marcar como lida/ }).click();
   await expect(volume).toHaveAttribute('data-progress-status', 'Sim');
   expect(await stored(page)).toMatchObject({ '410': 'Sim', '1302': 'Sim' });
@@ -104,13 +107,11 @@ test('Checklist Panini: backup novo inclui referências e volumes, e backup anti
     })),
     readingLog: {}
   };
-  await page
-    .getByLabel('Selecionar arquivo JSON para importação')
-    .setInputFiles({
-      name: 'backup-antigo.json',
-      mimeType: 'application/json',
-      buffer: Buffer.from(JSON.stringify(old))
-    });
+  await page.getByLabel('Selecionar arquivo JSON para importação').setInputFiles({
+    name: 'backup-antigo.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(JSON.stringify(old))
+  });
   const dialog = page.getByRole('dialog', { name: 'Importar progresso?' });
   await expect(dialog).toContainText('marcações atuais dos volumes Panini');
   await dialog.getByRole('button', { name: 'Importar e sobrescrever' }).click();

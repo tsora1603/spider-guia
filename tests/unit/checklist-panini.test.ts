@@ -13,7 +13,11 @@ import { buildReadingPlan } from '../../src/preferences/reading-plan';
 import { createChecklistCatalog } from '../../src/data/checklist-catalog';
 import { progressStore, statusOf } from '../../src/state/progress-store';
 import { appState } from '../../src/state/app-state';
-import { createLinkAssociations, linkTargetsFor } from '../../src/links/associations';
+import {
+  createLinkAssociations,
+  linkTargetsFor,
+  linkTargetsForCloneStep
+} from '../../src/links/associations';
 import { readThroughSelection } from '../../src/progress/read-through';
 import { selectBulkItems } from '../../src/progress/bulk-progress';
 
@@ -56,19 +60,46 @@ describe('Checklist com volumes Panini e referências históricas preservadas', 
     expect(focused.some((item) => item.id === 1302)).toBe(true);
     expect(focused.some((item) => item.id === 410)).toBe(false);
   });
-  it('herda links somente pela cobertura explícita, sem inventar destinos', () => {
+  it('não usa links dos originais ou dos arcos como destinos dos volumes Panini', () => {
     const groups = [
       {
         id: 'original',
         title: 'Original',
         links: [{ label: 'Ler', url: 'https://example.org/hq' }],
-        targets: [{ kind: 'items' as const, ids: [410] }]
+        targets: [
+          { kind: 'items' as const, ids: [410] },
+          { kind: 'cloneArc' as const, id: cloneGuide.sections[0].steps[0].arcIds[0] }
+        ]
+      }
+    ];
+    const arc = cloneGuide.sections[0].steps[0].arcIds[0];
+    const associations = createLinkAssociations(groups, readings, [], new Set([arc]));
+    expect(linkTargetsFor(associations, 'item', 410)).toEqual(['original']);
+    for (const step of cloneGuide.sections[0].steps) {
+      expect(linkTargetsFor(associations, 'item', step.checklistId!)).toEqual([]);
+      expect(linkTargetsForCloneStep(associations, step)).toEqual([]);
+    }
+    expect(linkTargetsForCloneStep(associations, { itemIds: [410], arcIds: [arc] })).toEqual([
+      'original'
+    ]);
+  });
+  it('um destino explícito do volume não ativa outros volumes que compartilham capítulos', () => {
+    const first = cloneGuide.sections[0].steps[0];
+    const groups = [
+      {
+        id: 'panini-volume-1',
+        title: first.title,
+        targets: [{ kind: 'items' as const, ids: [first.checklistId!] }],
+        links: [{ label: 'Volume completo', url: 'https://example.org/panini-1' }]
       }
     ];
     const associations = createLinkAssociations(groups, readings, []);
-    expect(linkTargetsFor(associations, 'item', 1302)).toEqual(['original']);
-    expect(linkTargetsFor(associations, 'item', 1303)).toEqual(['original']);
-    expect(linkTargetsFor(associations, 'item', 1304)).toEqual([]);
+    expect(linkTargetsForCloneStep(associations, first)).toEqual(['panini-volume-1']);
+    expect(linkTargetsFor(associations, 'item', 1302)).toEqual(['panini-volume-1']);
+    expect(linkTargetsFor(associations, 'item', 410)).toEqual([]);
+    for (const step of cloneGuide.sections[0].steps.slice(1)) {
+      expect(linkTargetsForCloneStep(associations, step)).toEqual([]);
+    }
   });
   it('marca histórica não conclui volumes inteiros nem reintroduz HQs cobertas', () => {
     const selection = readThroughSelection(407, checklistReadings, () => 'Não');
