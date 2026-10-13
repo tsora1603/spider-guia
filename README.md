@@ -1,6 +1,6 @@
 # SPIDER·GUIA
 
-Guia privado de leitura do Homem-Aranha, feito com **Vite + TypeScript + Preact**. A Checklist tem **1.236 leituras**, incluindo os 19 volumes Panini da Saga do Clone que substituem 84 HQs avulsas. As **1.301 HQs de referência em 46 arquivos de fase** permanecem disponíveis para compatibilidade e pesquisa, com progresso local e sincronização opcional via Supabase.
+Guia de leitura do Homem-Aranha, feito com **Vite + TypeScript + Preact**. A Checklist tem **1.236 leituras**, incluindo os 19 volumes Panini da Saga do Clone que substituem 84 HQs avulsas. As **1.301 HQs de referência em 46 arquivos de fase** permanecem disponíveis para compatibilidade e pesquisa, com progresso local e sincronização opcional via Supabase.
 
 ## Começar
 
@@ -22,7 +22,7 @@ Para checagem mais ampla: `npm run e:check`, `npm run reset:local-smoke` e `npm 
 
 O Vite exibe a URL local (normalmente `http://localhost:5173`). Abra-a no navegador; encerre com `Ctrl+C`. Não abra `index.html` por duplo clique. Para testar a versão publicada, rode `npm run build` e `npm run preview` (normalmente `http://localhost:4173`).
 
-Para preparar um fork com configuração própria, publicar no GitHub Pages ou servir em outra hospedagem, siga [Execução e hospedagem](docs/HOSPEDAGEM.md). A versão do Pages usa o endereço padrão `https://tsora1603.github.io/spider-guia/`; a ativação e o resultado do deploy aparecem em **Settings → Pages** e **Actions**.
+**Site publicado:** [SPIDER·GUIA no GitHub Pages](https://tsora1603.github.io/spider-guia/). Para preparar um fork com configuração própria, publicar no GitHub Pages ou servir em outra hospedagem, siga [Execução e hospedagem](docs/HOSPEDAGEM.md). O resultado de cada deploy aparece em **Settings → Pages** e **Actions**.
 
 ## Onde fica cada coisa
 

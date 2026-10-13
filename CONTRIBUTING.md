@@ -15,8 +15,8 @@ No pull request, explique o problema, a mudança, os comandos de validação e o
 
 ## Revisão e integração
 
-Quem mantém o repositório deve conferir o diff, os checks de **Quality and tests** e a prévia quando houver. Configure regras de proteção da branch de produção com revisão e checks obrigatórios para impedir integração antes da validação. Essas regras são configurações do GitHub e não são ativadas por este documento.
+Quem mantém o repositório deve conferir o diff, os checks de **Quality and GitHub Pages** e a prévia quando houver. Configure regras de proteção da branch de produção com revisão e checks obrigatórios para impedir integração antes da validação. Essas regras são configurações do GitHub e não são ativadas por este documento.
 
-Após integrar, confira o deploy do provedor em uso e teste a versão publicada. Para reverter um problema, prefira um commit de reversão ou o rollback da hospedagem; preserve o histórico. Mudanças no banco têm procedimento próprio em [Supabase e segurança](docs/SUPABASE-E-SEGURANCA.md).
+Após integrar, confira o job **Publish GitHub Pages** e teste a versão publicada. Para reverter um problema, envie um commit de reversão à `main`; o workflow valida e publica novamente, preservando o histórico. Mudanças no banco têm procedimento próprio em [Supabase e segurança](docs/SUPABASE-E-SEGURANCA.md).
 
 Para relatar um problema, abra uma issue com URL/rota, comportamento esperado, passos para reproduzir, navegador e capturas úteis. Remova dados pessoais, tokens e backups de progresso antes de anexar arquivos.
