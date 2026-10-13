@@ -42,4 +42,4 @@ Agrupe apenas trechos consecutivos da mesma série. O Foco segue o mesmo plano, 
 
 ## Validação
 
-`npm run stage4:check` verifica tokens, contraste AA, componentes e alvos de toque. Confira também responsividade e comportamento no navegador conforme [Manutenção](MANUTENCAO.md#comandos-úteis).
+`npm run design:check` verifica tokens, contraste AA, componentes e alvos de toque. Confira também responsividade e comportamento no navegador conforme [Manutenção](MANUTENCAO.md#comandos-úteis).

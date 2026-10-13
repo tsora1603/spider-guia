@@ -1,3 +1,4 @@
+import { supabaseModule } from '../fixtures/supabase-module';
 import { test, expect } from '@playwright/test';
 
 const privateAuthMock = `(() => {
@@ -30,38 +31,65 @@ const privateAuthMock = `(() => {
 })();`;
 
 test.beforeEach(async ({ page }) => {
-  await page.route('**/config.js', route => route.fulfill({status:200,contentType:'application/javascript',body:"window.SUPABASE_URL='https://e2e.supabase.co';window.SUPABASE_ANON_KEY='public-test';window.LINKS_ENABLED=true;"}));
-  await page.route('**/supabase.min.js', route => route.fulfill({status:200,contentType:'application/javascript',body:privateAuthMock}));
-  await page.route('https://fonts.googleapis.com/**', route => route.fulfill({status:200,contentType:'text/css',body:''}));
-  await page.addInitScript(() => localStorage.setItem('aranha-reading-preferences-v1',JSON.stringify({version:1,onboardingComplete:true,depth:'essential',focusQuery:'',readThrough:0})));
+  await page.route('**/config.js', (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: 'application/javascript',
+      body: "window.SUPABASE_URL='https://e2e.supabase.co';window.SUPABASE_ANON_KEY='public-test';window.LINKS_ENABLED=true;"
+    })
+  );
+  await page.route('**/supabase-sdk-*.js', (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: 'application/javascript',
+      body: supabaseModule(privateAuthMock)
+    })
+  );
+  await page.route('https://fonts.googleapis.com/**', (route) =>
+    route.fulfill({ status: 200, contentType: 'text/css', body: '' })
+  );
+  await page.addInitScript(() =>
+    localStorage.setItem(
+      'aranha-reading-preferences-v1',
+      JSON.stringify({
+        version: 1,
+        onboardingComplete: true,
+        depth: 'essential',
+        focusQuery: '',
+        readThrough: 0
+      })
+    )
+  );
 });
 
-test('login privado: erro, entrar com senha, alterar senha e sair, sem cadastro', async ({ page }) => {
+test('login privado: erro, entrar com senha, alterar senha e sair, sem cadastro', async ({
+  page
+}) => {
   await page.goto('/#configuracoes');
-  await page.getByRole('button',{name:'Entrar para sincronizar'}).click();
-  const login = page.getByRole('dialog',{name:'Entrar para sincronizar'});
+  await page.getByRole('button', { name: 'Entrar para sincronizar' }).click();
+  const login = page.getByRole('dialog', { name: 'Entrar para sincronizar' });
   await expect(login).toBeVisible();
   await expect(login.getByText('Acesso para contas cadastradas')).toBeVisible();
-  await expect(login.getByRole('button',{name:/criar conta|cadastrar/i})).toHaveCount(0);
-  await expect(login.getByRole('button',{name:/enviar link/i})).toHaveCount(0);
+  await expect(login.getByRole('button', { name: /criar conta|cadastrar/i })).toHaveCount(0);
+  await expect(login.getByRole('button', { name: /enviar link/i })).toHaveCount(0);
   await login.getByLabel('E-mail').fill('amigo@example.com');
-  await login.getByLabel('Senha',{exact:true}).fill('senha-errada');
-  await login.getByRole('button',{name:'Entrar',exact:true}).click();
+  await login.getByLabel('Senha', { exact: true }).fill('senha-errada');
+  await login.getByRole('button', { name: 'Entrar', exact: true }).click();
   await expect(login.getByRole('status')).toContainText('incorretos');
-  await expect(login.getByLabel('Senha',{exact:true})).toHaveValue('');
-  await login.getByLabel('Senha',{exact:true}).fill('senha-correta');
-  await login.getByRole('button',{name:'Mostrar'}).click();
-  await expect(login.getByLabel('Senha',{exact:true})).toHaveAttribute('type','text');
-  await login.getByRole('button',{name:'Entrar',exact:true}).click();
+  await expect(login.getByLabel('Senha', { exact: true })).toHaveValue('');
+  await login.getByLabel('Senha', { exact: true }).fill('senha-correta');
+  await login.getByRole('button', { name: 'Mostrar' }).click();
+  await expect(login.getByLabel('Senha', { exact: true })).toHaveAttribute('type', 'text');
+  await login.getByRole('button', { name: 'Entrar', exact: true }).click();
   await expect(login).toBeHidden();
   await expect(page.getByText('Conectado como amigo@example.com')).toBeVisible();
   await page.getByLabel('Senha atual').fill('senha-correta');
   await page.getByLabel('Nova senha', { exact: true }).fill('nova-senha-segura');
   await page.getByLabel('Confirmar nova senha').fill('nova-senha-segura');
-  await page.getByRole('button',{name:'Alterar senha'}).click();
+  await page.getByRole('button', { name: 'Alterar senha' }).click();
   await expect(page.getByText('Senha alterada.')).toBeVisible();
   expect(await page.evaluate(() => (window as any).__authCalls.passwordChanges)).toBe(1);
-  await page.getByRole('button',{name:'Sair da conta'}).click();
-  await expect(page.getByRole('button',{name:'Entrar para sincronizar'})).toBeVisible();
-  await expect(page.getByRole('button',{name:'Alterar senha'})).toHaveCount(0);
+  await page.getByRole('button', { name: 'Sair da conta' }).click();
+  await expect(page.getByRole('button', { name: 'Entrar para sincronizar' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Alterar senha' })).toHaveCount(0);
 });

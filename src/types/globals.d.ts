@@ -16,9 +16,6 @@ declare global {
         summary: Record<string, number>;
       };
     };
-    supabase?: {
-      createClient(url: string, key?: string): any;
-    };
     __SPIDER_VALIDATION__?: unknown;
     _t?: number;
   }

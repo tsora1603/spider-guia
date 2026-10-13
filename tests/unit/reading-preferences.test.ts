@@ -1,4 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { checklistReadings } from '../../src/data/model';
 import { buildReadingPlan } from '../../src/preferences/reading-plan';
 import {
   READING_PREFERENCES_KEY,
@@ -81,7 +82,7 @@ describe('preferências de leitura', () => {
     const essential = buildReadingPlan({ depth: 'essential', focusQuery: '' });
     const focus = buildReadingPlan({ depth: 'focus', focusQuery: 'Kraven' });
 
-    expect(complete).toHaveLength(1236);
+    expect(complete).toEqual(checklistReadings);
     expect(essential.length).toBeLessThan(complete.length);
     expect(essential.every((item) => item.weight === '● Essencial')).toBe(true);
     expect(focus.length).toBeGreaterThan(0);

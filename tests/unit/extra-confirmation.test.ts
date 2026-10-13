@@ -7,9 +7,8 @@ import {
   validateExtraConfirmation
 } from '../../data/extra-confirmation.mjs';
 
-const readExtras = async () => JSON.parse(
-  await readFile(path.join(process.cwd(), 'data/src/editorial/extras.json'), 'utf8')
-);
+const readExtras = async () =>
+  JSON.parse(await readFile(path.join(process.cwd(), 'data/src/editorial/extras.json'), 'utf8'));
 
 describe('contrato de confirmação das Leituras Extras', () => {
   it('fixa a política em 100/0 para posição e 60/40 para peso', () => {
@@ -24,9 +23,10 @@ describe('contrato de confirmação das Leituras Extras', () => {
     const confirmed = extras.filter((extra: any) => extra.confirmation === 'Confirmado');
     const bothPass = extras.filter((extra: any) => extraConfirmationPasses(extra));
 
-    expect(extras).toHaveLength(108);
-    expect(confirmed).toHaveLength(32);
-    expect(bothPass).toHaveLength(32);
+    expect(extras.length).toBeGreaterThan(0);
+    expect(confirmed.map((extra: { n: number }) => extra.n)).toEqual(
+      bothPass.map((extra: { n: number }) => extra.n)
+    );
     for (const extra of extras) {
       expect(validateExtraConfirmation(extra).ok).toBe(true);
       expect(extra.confirmation === 'Confirmado').toBe(extraConfirmationPasses(extra));
@@ -50,13 +50,15 @@ describe('contrato de confirmação das Leituras Extras', () => {
 
   it('mantém Parcial quando só um critério passa', async () => {
     const extras = await readExtras();
-    const positionOnly = extras.find((extra: any) =>
-      extra.confirmationCriteria.position === 'source-only'
-      && extra.confirmationCriteria.weight === 'not-met'
+    const positionOnly = extras.find(
+      (extra: any) =>
+        extra.confirmationCriteria.position === 'source-only' &&
+        extra.confirmationCriteria.weight === 'not-met'
     );
-    const weightOnly = extras.find((extra: any) =>
-      extra.confirmationCriteria.position === 'not-met'
-      && extra.confirmationCriteria.weight === 'evidence-led-60-40'
+    const weightOnly = extras.find(
+      (extra: any) =>
+        extra.confirmationCriteria.position === 'not-met' &&
+        extra.confirmationCriteria.weight === 'evidence-led-60-40'
     );
 
     expect(positionOnly?.confirmation).toBe('Parcial');

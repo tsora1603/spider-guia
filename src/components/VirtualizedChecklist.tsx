@@ -127,6 +127,7 @@ export function VirtualizedChecklist() {
   const design = useDesignPreferences();
   const plan = useMemo(() => buildReadingPlan(preferences), [preferences.depth, preferences.focusQuery]);
   const planSummary = useMemo(() => summarizeReadingPlan(plan, statusOf), [plan, progressRevision]);
+  const nextReading = planSummary.next;
   const planIds = useMemo(() => new Set(plan.map(item => item.id)), [plan]);
 
   // Um link direto continua acessível, mesmo se a HQ não fizer parte do plano.
@@ -144,7 +145,7 @@ export function VirtualizedChecklist() {
   })).filter(group => group.items.length), [orderedItems, outsidePlanItem, focusedItemId, filter, query, progressRevision]);
   const visibleItems = useMemo(() => groups.flatMap(group => group.items), [groups]);
 
-  const [focusItemId, setFocusItemId] = useState<number | null>(() => focusedItemId ?? planSummary.next?.id ?? null);
+  const [focusItemId, setFocusItemId] = useState<number | null>(() => focusedItemId ?? nextReading?.id ?? null);
   const [deepLinkPending, setDeepLinkPending] = useState<number | null>(() => focusedItemId ?? null);
   const [openItems, setOpenItems] = useState<Set<number>>(() => new Set(appState.checklistOpenItems));
   const [openGroups, setOpenGroups] = useState<Set<string>>(() => new Set(appState.checklistOpenGroups));
@@ -299,10 +300,10 @@ export function VirtualizedChecklist() {
     </div>
     <div class="checklist-sequence-heading">
       <div><span class="lbl">Sequência de leitura</span><strong>Plano: {readingDepthName(preferences)}</strong><p class="mu sm">Abra uma série para ver as edições. Anuais e outras leituras mantêm sua posição na sequência.</p>
-        {planSummary.next ? <p class="checklist-next-hint sm"><b>Próxima:</b> {planSummary.next.series} {planSummary.next.issue}</p> : <p class="checklist-next-hint sm">{plan.length ? 'Nenhuma leitura pendente neste plano.' : 'O plano atual não contém leituras.'}</p>}
+        {nextReading ? <p class="checklist-next-hint sm"><b>Próxima:</b> {nextReading.series} {nextReading.issue}</p> : <p class="checklist-next-hint sm">{plan.length ? 'Nenhuma leitura pendente neste plano.' : 'O plano atual não contém leituras.'}</p>}
       </div>
       <div class="checklist-sequence-actions">
-        {planSummary.next ? <button class="btn" type="button" onClick={event => router.navigate(`#checklist/hq/${planSummary.next.id}`, event.currentTarget)}>Ir à próxima</button> : null}
+        {nextReading ? <button class="btn" type="button" onClick={event => router.navigate(`#checklist/hq/${nextReading.id}`, event.currentTarget)}>Ir à próxima</button> : null}
         <button class="btn g" type="button" onClick={event => router.navigate('#configuracoes', event.currentTarget)}>Alterar plano</button>
       </div>
     </div>

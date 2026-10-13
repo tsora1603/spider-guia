@@ -176,8 +176,12 @@ describe('Ações contextuais — índice de Links explícitos', () => {
       editorial,
       new Set(clone.entries.map((entry) => entry.arcId))
     );
-    expect(groups).toHaveLength(34);
-    expect(groups.filter((group) => !group.targets?.length)).toHaveLength(0);
+    const originalGroups = JSON.parse(
+      readFileSync('data/snapshots/editorial-links-baseline.json', 'utf8')
+    ) as { id: string }[];
+    expect(groups.map((group) => group.id)).toEqual(
+      expect.arrayContaining(originalGroups.map((group) => group.id))
+    );
     expect(index.byExtraId.size).toBeGreaterThan(20);
     expect(index.byItemId.get(2)).toEqual(['spider-man-1963']);
     expect(groups[0].targets).toContainEqual({

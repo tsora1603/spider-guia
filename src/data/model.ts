@@ -3,8 +3,17 @@ import generatedIndex from './generated-index.json';
 import { catalogChunkLoaders } from './generated-chunks';
 import type { CloneGuide } from '../clone-guide/model';
 import { createChecklistCatalog } from './checklist-catalog';
+import type {
+  RuntimeIndex,
+  EditorialExtra,
+  ChunkDescriptor,
+  CatalogChunk,
+  JourneyPhase,
+  Milestone
+} from './contracts';
 
-export const DATA = generatedIndex as any;
+// O gerador valida o conteúdo pelos schemas antes de produzir esta projeção.
+export const DATA = generatedIndex as unknown as RuntimeIndex;
 
 export interface Reading {
   id: number;
@@ -119,8 +128,8 @@ export const itemsById: Record<number, Reading> = Object.fromEntries(
 );
 
 export const catalogChunks = DATA.catalogChunks || [];
-export const catalogChunkByPhase: Record<string, any> = Object.fromEntries(
-  catalogChunks.map((chunk: any) => [chunk.phase, chunk])
+export const catalogChunkByPhase: Record<string, ChunkDescriptor> = Object.fromEntries(
+  catalogChunks.map((chunk) => [chunk.phase, chunk])
 );
 
 export async function loadPhaseReadings(phase: string): Promise<Map<number, Reading>> {
@@ -129,7 +138,7 @@ export async function loadPhaseReadings(phase: string): Promise<Map<number, Read
   const loader = catalogChunkLoaders[phase];
   if (!loader) return new Map();
   const promise = loader()
-    .then((chunk: any) => {
+    .then((chunk: CatalogChunk) => {
       const map = new Map<number, Reading>();
       for (const row of chunk.items || []) {
         const reading = toDetailedReading(row, chunk.itemFields || []);
@@ -164,12 +173,12 @@ export function cachedReadingDetails(id: number): Reading | null {
  * quando existe uma entrada de Extras que realmente referencia a HQ.
  * Não inventar destinos para leituras sem ficha editorial própria.
  */
-export const extraEditorialByItemId: Record<number, any> = Object.fromEntries(
-  editorialExtras.flatMap((extra: any) => (extra.itemIds || []).map((id: number) => [id, extra]))
+export const extraEditorialByItemId: Record<number, EditorialExtra> = Object.fromEntries(
+  editorialExtras.flatMap((extra) => (extra.itemIds || []).map((id: number) => [id, extra]))
 );
 
 export const extraDetailsById = Object.fromEntries(
-  editorialExtras.flatMap((extra: any) =>
+  editorialExtras.flatMap((extra) =>
     (extra.itemIds || []).map((id: number) => [
       id,
       {
@@ -183,9 +192,9 @@ export const extraDetailsById = Object.fromEntries(
 );
 
 export const readingGroups = editorialExtras
-  .filter((extra: any) => Number.isInteger(extra.readingGroup))
-  .sort((a: any, b: any) => a.readingGroup - b.readingGroup)
-  .map((extra: any) => ({
+  .filter((extra) => Number.isInteger(extra.readingGroup))
+  .sort((a, b) => (a.readingGroup ?? 0) - (b.readingGroup ?? 0))
+  .map((extra) => ({
     n: extra.readingGroup,
     after: extra.after,
     peso: extra.weight,
@@ -223,10 +232,10 @@ export const checklistGroups: ChecklistGroup[] = (() => {
   }));
 })();
 
-const namedRows = (rows: unknown[][], fields: string[]) =>
-  rows.map((row) => Object.fromEntries(fields.map((field, index) => [field, row[index]])));
+const namedRows = <T>(rows: unknown[][], fields: string[]): T[] =>
+  rows.map((row) => Object.fromEntries(fields.map((field, index) => [field, row[index]])) as T);
 
-export const journeyPhases = namedRows(DATA.fases.r, [
+export const journeyPhases = namedRows<JourneyPhase>(DATA.fases.r, [
   'historicalStart',
   'historicalEnd',
   'name',
@@ -234,14 +243,14 @@ export const journeyPhases = namedRows(DATA.fases.r, [
   'highlights',
   'notes'
 ])
-  .filter((phase: any) => Number(phase.historicalStart) > 0)
-  .map((phase: any) => ({
+  .filter((phase) => Number(phase.historicalStart) > 0)
+  .map((phase) => ({
     ...phase,
     historicalStart: Number(phase.historicalStart),
     historicalEnd: Number(phase.historicalEnd)
   }));
 
-export const milestones = namedRows(DATA.marcos.r, [
+export const milestones = namedRows<Milestone>(DATA.marcos.r, [
   'year',
   'title',
   'description',
@@ -249,7 +258,7 @@ export const milestones = namedRows(DATA.marcos.r, [
   'historicalStart',
   'historicalEnd',
   'weight'
-]).map((milestone: any) => ({
+]).map((milestone) => ({
   ...milestone,
   historicalStart: milestone.historicalStart ? Number(milestone.historicalStart) : null,
   historicalEnd: milestone.historicalEnd ? Number(milestone.historicalEnd) : null
@@ -257,3 +266,62 @@ export const milestones = namedRows(DATA.marcos.r, [
 
 export const principalReadings = readings.filter((item) => item.type === 'Principal');
 export const essentialReadings = checklistReadings.filter((item) => item.weight === '● Essencial');
+
+export type EditorialSection = 'extras' | 'clone' | 'help' | 'all';
+const editorialPromises = new Map<EditorialSection, Promise<void>>();
+
+/** Mantém as identidades compartilhadas do índice; descrições só chegam ao abrir a seção. */
+export function loadEditorialDetails(section: EditorialSection): Promise<void> {
+  if (section === 'all')
+    return Promise.all(
+      ['extras', 'clone', 'help'].map((part) => loadEditorialDetails(part as EditorialSection))
+    ).then(() => undefined);
+  const existing = editorialPromises.get(section);
+  if (existing) return existing;
+  const promise = (async () => {
+    if (section === 'extras') {
+      const module = await import('./generated-extra-details.json');
+      const full = module.default as unknown as EditorialExtra[];
+      for (const extra of editorialExtras) {
+        const details = full.find((entry) => entry.n === extra.n);
+        if (details) Object.assign(extra, details);
+      }
+      for (const extra of editorialExtras) {
+        for (const id of extra.itemIds) {
+          Object.assign(extraDetailsById[id], {
+            porque: extra.why,
+            quanto: extra.howMuch,
+            confirmationDetail: extra.confirmationDetail || extra.just || ''
+          });
+        }
+        const group = readingGroups.find((entry) => entry.n === extra.readingGroup);
+        if (group)
+          Object.assign(group, {
+            porque: extra.why,
+            quanto: extra.howMuch,
+            just: extra.just || extra.confirmationDetail || ''
+          });
+      }
+    } else if (section === 'clone') {
+      const module = await import('./generated-clone-details.json');
+      const full = module.default as unknown as RuntimeIndex['editorial']['clone'];
+      for (const entry of cloneEntries) {
+        const details = full.entries.find((item) => item.sourceOrder === entry.sourceOrder);
+        if (details) Object.assign(entry, details);
+      }
+      Object.assign(cloneGuide, full.guide);
+    } else {
+      const module = await import('./generated-help-details.json');
+      Object.assign(DATA, { fontes: module.default.fontes, glossario: module.default.glossario });
+      Object.assign(editorialData, {
+        metodologia: module.default.metodologia,
+        changelog: module.default.changelog
+      });
+    }
+  })().catch((error) => {
+    editorialPromises.delete(section);
+    throw error;
+  });
+  editorialPromises.set(section, promise);
+  return promise;
+}

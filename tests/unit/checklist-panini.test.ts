@@ -18,6 +18,7 @@ import {
   linkTargetsFor,
   linkTargetsForCloneStep
 } from '../../src/links/associations';
+import { configuredCatalog } from '../fixtures/configured-links';
 import { readThroughSelection } from '../../src/progress/read-through';
 import { selectBulkItems } from '../../src/progress/bulk-progress';
 
@@ -27,12 +28,16 @@ describe('Checklist com volumes Panini e referências históricas preservadas', 
     appState.progressMeta = {};
     appState.readingLog = {};
   });
-  it('substitui somente as 84 HQs cobertas por 19 volumes unitários e consecutivos', () => {
-    expect(catalogReadings).toHaveLength(1301);
+  it('substitui somente as HQs cobertas por 19 volumes unitários e consecutivos', () => {
+    expect(catalogReadings).toHaveLength(configuredCatalog.length);
     expect(paniniVolumes).toHaveLength(19);
-    expect(readings).toHaveLength(1320);
-    expect(checklistReadings).toHaveLength(1236);
-    expect(coveredByPanini.size).toBe(84);
+    expect(readings).toHaveLength(catalogReadings.length + paniniVolumes.length);
+    expect(checklistReadings).toHaveLength(readings.length - coveredByPanini.size);
+    expect([...coveredByPanini.keys()].sort((a, b) => a - b)).toEqual(
+      [...new Set(cloneGuide.sections[0].steps.flatMap((step) => step.itemIds))].sort(
+        (a, b) => a - b
+      )
+    );
     const first = checklistReadings.findIndex((item) => item.id === 1302);
     expect(checklistReadings.slice(first, first + 19).map((item) => item.id)).toEqual(
       Array.from({ length: 19 }, (_, index) => 1302 + index)

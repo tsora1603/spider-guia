@@ -1,3 +1,4 @@
+import { supabaseModule } from '../fixtures/supabase-module';
 import { expect, test } from '@playwright/test';
 
 const mockedClient = `(() => {
@@ -28,49 +29,87 @@ const mockedClient = `(() => {
 
 test.beforeEach(async ({ context }) => {
   // As rotas/mocks precisam valer também para abas criadas dentro do teste.
-  await context.route('**/config.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: "window.SUPABASE_URL='https://e2e.supabase.co';window.SUPABASE_ANON_KEY='fake';window.LINKS_ENABLED=true;" }));
-  await context.route('**/supabase.min.js', route => route.fulfill({ status: 200, contentType: 'application/javascript', body: mockedClient }));
-  await context.route('https://fonts.googleapis.com/**', route => route.fulfill({ status: 200, contentType: 'text/css', body: '' }));
+  await context.route('**/config.js', (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: 'application/javascript',
+      body: "window.SUPABASE_URL='https://e2e.supabase.co';window.SUPABASE_ANON_KEY='fake';window.LINKS_ENABLED=true;"
+    })
+  );
+  await context.route('**/supabase-sdk-*.js', (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: 'application/javascript',
+      body: supabaseModule(mockedClient)
+    })
+  );
+  await context.route('https://fonts.googleapis.com/**', (route) =>
+    route.fulfill({ status: 200, contentType: 'text/css', body: '' })
+  );
   await context.addInitScript(() => {
     if (localStorage.getItem('e2e-reconnect-seeded')) return;
     localStorage.setItem('e2e-reconnect-seeded', '1');
-    localStorage.setItem('aranha-local-reset-guard-v1', JSON.stringify({version:2,phase:'completed',decision:'pending'}));
-    localStorage.setItem('aranha-reading-preferences-v1', JSON.stringify({version:1,depth:'essential',onboardingComplete:true,focusQuery:'',readThrough:0}));
+    localStorage.setItem(
+      'aranha-local-reset-guard-v1',
+      JSON.stringify({ version: 2, phase: 'completed', decision: 'pending' })
+    );
+    localStorage.setItem(
+      'aranha-reading-preferences-v1',
+      JSON.stringify({
+        version: 1,
+        depth: 'essential',
+        onboardingComplete: true,
+        focusQuery: '',
+        readThrough: 0
+      })
+    );
   });
 });
 
-test('login após reset: SELECT de consulta, sem push antes da escolha, e adiamento persiste', async ({ page }) => {
+test('login após reset: SELECT de consulta, sem push antes da escolha, e adiamento persiste', async ({
+  page
+}) => {
   await page.goto('/#conta/ajuda');
   const dialog = page.getByRole('dialog', { name: /Encontramos progresso salvo na nuvem/ });
   await expect(dialog).toBeVisible();
   await expect(dialog).toContainText('1 registro encontrado');
   expect(await page.evaluate(() => (window as any).__pushes)).toBe(0);
-  await dialog.getByRole('button', {name:'Decidir depois'}).click();
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1')!).decision)).toBe('pending');
+  await dialog.getByRole('button', { name: 'Decidir depois' }).click();
+  expect(
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1')!).decision
+    )
+  ).toBe('pending');
   await page.reload();
-  await expect(page.getByRole('dialog', { name: /Encontramos progresso salvo na nuvem/ })).toBeVisible();
+  await expect(
+    page.getByRole('dialog', { name: /Encontramos progresso salvo na nuvem/ })
+  ).toBeVisible();
   expect(await page.evaluate(() => (window as any).__pushes)).toBe(0);
 });
 
-test('continuar sem sincronização mantém nuvem intacta e permite reconsiderar', async ({ page }) => {
+test('continuar sem sincronização mantém nuvem intacta e permite reconsiderar', async ({
+  page
+}) => {
   await page.goto('/#conta/ajuda');
   const dialog = page.locator('#cloud-reconnect-dialog');
   await expect(dialog).toBeVisible();
-  await dialog.getByRole('button', {name:'Continuar sem sincronizar'}).click();
+  await dialog.getByRole('button', { name: 'Continuar sem sincronizar' }).click();
   await expect(dialog).toBeHidden();
   await page.reload();
   await expect(dialog).toBeHidden();
   expect(await page.evaluate(() => (window as any).__pushes)).toBe(0);
-  await page.getByRole('button', {name:'Decidir sobre o progresso na nuvem'}).click();
+  await page.getByRole('button', { name: 'Decidir sobre o progresso na nuvem' }).click();
   await expect(dialog).toBeVisible();
   expect(await page.evaluate(() => (window as any).__deletes)).toBe(0);
 });
 
-test('restauração explícita persiste consentimento e recupera o registro remoto', async ({ page }) => {
+test('restauração explícita persiste consentimento e recupera o registro remoto', async ({
+  page
+}) => {
   await page.goto('/#conta/ajuda');
   const dialog = page.locator('#cloud-reconnect-dialog');
-  await expect(dialog.getByRole('button', {name:'Restaurar progresso da nuvem'})).toBeVisible();
-  await dialog.getByRole('button', {name:'Restaurar progresso da nuvem'}).click();
+  await expect(dialog.getByRole('button', { name: 'Restaurar progresso da nuvem' })).toBeVisible();
+  await dialog.getByRole('button', { name: 'Restaurar progresso da nuvem' }).click();
   await expect(dialog).toBeHidden();
   const stored = await page.evaluate(() => ({
     guard: JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1') || '{}'),
@@ -87,39 +126,66 @@ test('restauração explícita persiste consentimento e recupera o registro remo
 test('erro de rede na consulta bloqueia restauração sem reportar sucesso', async ({ page }) => {
   await page.goto('/#conta/ajuda');
   await expect(page.locator('#cloud-reconnect-dialog')).toBeVisible();
-  await page.evaluate(() => { (window as any).__remoteRows = []; });
-  await page.locator('#cloud-reconnect-dialog').getByRole('button', {name:'Decidir depois'}).click();
+  await page.evaluate(() => {
+    (window as any).__remoteRows = [];
+  });
+  await page
+    .locator('#cloud-reconnect-dialog')
+    .getByRole('button', { name: 'Decidir depois' })
+    .click();
   await page.context().setOffline(true);
-  await page.getByRole('button', {name:'Decidir sobre o progresso na nuvem'}).click();
+  await page.getByRole('button', { name: 'Decidir sobre o progresso na nuvem' }).click();
   const dialog = page.locator('#cloud-reconnect-dialog');
   await expect(dialog.getByRole('alert')).toContainText('Sem conexão');
-  await expect(dialog.getByRole('button', {name:'Restaurar progresso da nuvem'})).toHaveCount(0);
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1')!).decision)).toBe('pending');
+  await expect(dialog.getByRole('button', { name: 'Restaurar progresso da nuvem' })).toHaveCount(0);
+  expect(
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1')!).decision
+    )
+  ).toBe('pending');
 });
-
 
 test('logout e novo login não removem consentimento pendente nem sincronizam', async ({ page }) => {
   await page.goto('/#conta/ajuda');
   const dialog = page.locator('#cloud-reconnect-dialog');
   await expect(dialog).toBeVisible();
-  await dialog.getByRole('button', {name:'Decidir depois'}).click();
-  await page.getByRole('button', {name:'Sair da conta'}).click();
-  await expect(page.getByRole('button', {name:'Entrar para sincronizar'})).toBeVisible();
+  await dialog.getByRole('button', { name: 'Decidir depois' }).click();
+  await page.getByRole('button', { name: 'Sair da conta' }).click();
+  await expect(page.getByRole('button', { name: 'Entrar para sincronizar' })).toBeVisible();
   await page.evaluate(() => (window as any).__authLogin());
   await expect(dialog).toBeVisible();
   expect(await page.evaluate(() => (window as any).__pushes)).toBe(0);
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1')!).decision)).toBe('pending');
+  expect(
+    await page.evaluate(
+      () => JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1')!).decision
+    )
+  ).toBe('pending');
 });
 
-test('outra aba aberta recarrega após concessão, sem herdá-la enquanto antiga', async ({ page, context }) => {
+test('outra aba aberta recarrega após concessão, sem herdá-la enquanto antiga', async ({
+  page,
+  context
+}) => {
   await page.goto('/#conta/ajuda');
   const second = await context.newPage();
   await second.goto('/#conta/ajuda');
   await expect(second.locator('#cloud-reconnect-dialog')).toBeVisible();
-  await second.locator('#cloud-reconnect-dialog').getByRole('button', {name:'Decidir depois'}).click();
-  await page.locator('#cloud-reconnect-dialog').getByRole('button', {name:'Restaurar progresso da nuvem'}).click();
+  await second
+    .locator('#cloud-reconnect-dialog')
+    .getByRole('button', { name: 'Decidir depois' })
+    .click();
+  await page
+    .locator('#cloud-reconnect-dialog')
+    .getByRole('button', { name: 'Restaurar progresso da nuvem' })
+    .click();
   await expect(page.locator('#cloud-reconnect-dialog')).toBeHidden();
-  await expect.poll(() => second.evaluate(() => JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1') || '{}').decision)).toBe('restored');
+  await expect
+    .poll(() =>
+      second.evaluate(
+        () => JSON.parse(localStorage.getItem('aranha-local-reset-guard-v1') || '{}').decision
+      )
+    )
+    .toBe('restored');
   await expect(second.locator('#cloud-reconnect-dialog')).toBeHidden();
   // Aba antiga não recebe permissão de sincronização automaticamente.
   expect(await second.evaluate(() => (window as any).__pushes)).toBe(0);

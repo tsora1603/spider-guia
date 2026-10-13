@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'preact/compat';
 import { useProgressRevision, useUiRevision } from '../ui/hooks';
 import { appState } from '../state/app-state';
-import { principalReadings, projectChecklistIds, checklistReadings } from '../data/model';
+import { principalReadings, projectChecklistIds, checklistReadings, loadEditorialDetails } from '../data/model';
 import { statusOf } from '../state/progress-store';
 import { Icon, type IconName } from '../components/Icon';
 import { percent } from '../components/Progress';
@@ -17,10 +17,19 @@ import { ScreenState, ViewErrorBoundary } from '../components/ScreenState';
 import { ProgressBarVisual } from '../design/ProgressVisuals';
 
 const HomeView = lazy(() => import('./HomeView').then(module => ({ default: module.HomeView })));
-const ReadingView = lazy(() => import('./ReadingView').then(module => ({ default: module.ReadingView })));
-const ExploreView = lazy(() => import('./ExploreView').then(module => ({ default: module.ExploreView })));
+const ReadingView = lazy(async () => {
+  await Promise.all([loadEditorialDetails('extras'), loadEditorialDetails('help')]);
+  return { default: (await import('./ReadingView')).ReadingView };
+});
+const ExploreView = lazy(async () => {
+  await loadEditorialDetails('all');
+  return { default: (await import('./ExploreView')).ExploreView };
+});
 const MoreView = lazy(() => import('./MoreView').then(module => ({ default: module.MoreView })));
-const HelpView = lazy(() => import('./HelpView').then(module => ({ default: module.HelpView })));
+const HelpView = lazy(async () => {
+  await loadEditorialDetails('help');
+  return { default: (await import('./HelpView')).HelpView };
+});
 
 const NAV_ITEMS: Array<{ key: 'Hoje' | 'Checklist' | 'Explorar' | 'Ajuda' | 'Configurações'; icon: IconName; hash: string; mobileLabel?: string }> = [
   { key: 'Hoje', icon: 'home', hash: '#hoje' },

@@ -1,6 +1,8 @@
+import { supabaseModule } from '../fixtures/supabase-module';
 import { expect, test, type Page } from '@playwright/test';
+import { configuredCloneSteps, configuredStepLinks } from '../fixtures/configured-links';
 
-const SUPABASE_CDN = '**/supabase.min.js';
+const SUPABASE_MODULE = '**/supabase-sdk-*.js';
 const DEFAULT_READING_PREFERENCES = {
   version: 1,
   onboardingComplete: true,
@@ -16,11 +18,11 @@ async function mockExternalAssets(page: Page) {
   await page.route('https://fonts.gstatic.com/**', (route) =>
     route.fulfill({ status: 204, body: '' })
   );
-  await page.route(SUPABASE_CDN, (route) =>
+  await page.route(SUPABASE_MODULE, (route) =>
     route.fulfill({
       status: 200,
       contentType: 'application/javascript',
-      body: 'window.supabase = undefined;'
+      body: supabaseModule('window.supabase = undefined;')
     })
   );
 }
@@ -37,11 +39,11 @@ async function mockAuthenticatedSupabase(page: Page) {
       `
     })
   );
-  await page.route(SUPABASE_CDN, (route) =>
+  await page.route(SUPABASE_MODULE, (route) =>
     route.fulfill({
       status: 200,
       contentType: 'application/javascript',
-      body: `
+      body: supabaseModule(`
         (() => {
           let session = { user: { id: 'e2e-user', email: 'e2e@example.com' } };
           let authListener = null;
@@ -71,7 +73,7 @@ async function mockAuthenticatedSupabase(page: Page) {
             }
           };
         })();
-      `
+      `)
     })
   );
 }
@@ -318,7 +320,7 @@ test.describe('SPIDER·GUIA — fluxos críticos', () => {
   });
 
   test('logout não apaga progresso local existente', async ({ page }) => {
-    await page.unroute(SUPABASE_CDN);
+    await page.unroute(SUPABASE_MODULE);
     await mockAuthenticatedSupabase(page);
     await initializeStorage(page, {
       progress: { '2': 'Sim', '63': 'Pulei' },
@@ -943,12 +945,18 @@ test.describe('UX Etapa 3 — progresso nas três listas', () => {
     await expect(page.locator('.clone-guide-sources a.source-link')).not.toHaveCount(0);
     const step = base.locator('[data-clone-step="panini-saga-01"]');
     await expect(step).toContainText('Leia o volume inteiro');
-    await expect(base.locator('.reading-links-cta')).toHaveCount(19);
-    await expect(base.locator('.reading-links-cta:not(:disabled)')).toHaveCount(0);
-    const missing = step.getByRole('button', { name: 'Link de leitura ainda não cadastrado' });
-    await expect(missing).toBeVisible();
-    await expect(missing).toBeDisabled();
-    await expect(missing).toHaveText('Sem link');
+    await expect(base.locator('.reading-links-cta')).toHaveCount(configuredCloneSteps.length);
+    for (const volume of configuredCloneSteps) {
+      const button = base.locator(`[data-clone-step="${volume.id}"] .reading-links-cta`);
+      if (configuredStepLinks(volume.id).length) {
+        await expect(button).toBeEnabled();
+        await expect(button).toHaveText('Ler');
+      } else {
+        await expect(button).toBeDisabled();
+        await expect(button).toHaveText('Sem link');
+      }
+    }
+    await expect(step.locator('.reading-links-cta')).toBeVisible();
     await step.locator('.clone-checklist > summary').click();
     const row = step.locator('.issue-entry').first();
     await expect(row.locator('.extra-editorial-status')).toHaveCount(0);

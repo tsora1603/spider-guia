@@ -53,10 +53,10 @@ describe('Dropdowns por série preservam a sequência', () => {
 });
 
 describe('Checklist e Modo Foco seguem o plano canônico da Home', () => {
-  it('Completo segue os 1.236 itens em readingOrder, incluindo intercaladas', () => {
+  it('Completo segue a sequência canônica, incluindo intercaladas', () => {
     const plan = buildReadingPlan({ depth: 'complete', focusQuery: '' });
     expect(plan.map((item) => item.id)).toEqual(readings.map((item) => item.id));
-    expect(plan).toHaveLength(1236);
+
     expect(plan[0].id).toBe(1); // Amazing Fantasy #15
     const index16 = plan.findIndex(
       (item) => item.type === 'Principal' && item.historicalNumber === 16

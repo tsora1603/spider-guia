@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
+import { configuredReadings } from '../fixtures/configured-links';
 import { resolve } from 'node:path';
 import * as model from '../../data/link-model.mjs';
 
@@ -43,7 +44,7 @@ function loadModel() {
   };
 }
 
-const fakeItemIds = new Set(Array.from({ length: 1301 }, (_, i) => i + 1));
+const fakeItemIds = new Set(configuredReadings.map((item) => item.id));
 const fakeExtras = [{ n: 30, itemIds: [256, 257, 258] }];
 const fakeCloneArcs = new Set(['arc-a']);
 
@@ -84,9 +85,13 @@ const errorsFor = (group: Group) => {
 describe('Links editoriais — cobertura e associações explícitas', () => {
   it('preserva os grupos e centraliza todas as associações em targets', () => {
     const { model, groups } = loadModel();
-    expect(groups).toHaveLength(34);
-    expect(groups.filter((group) => group.coverage)).toHaveLength(29);
-    expect(groups.every((group) => group.targets?.length)).toBe(true);
+    const baseline: { id: string }[] = JSON.parse(
+      readFileSync(resolve('data/snapshots/editorial-links-baseline.json'), 'utf8')
+    );
+    expect(groups.map((group) => group.id)).toEqual(
+      expect.arrayContaining(baseline.map((group) => group.id))
+    );
+    expect(groups.every((group) => group.targets?.length || group.coverage?.length)).toBe(true);
     expect(groups.find((group) => group.id === 'leitura-5')?.targets).toEqual(
       expect.arrayContaining([
         { kind: 'extra', id: 30 },

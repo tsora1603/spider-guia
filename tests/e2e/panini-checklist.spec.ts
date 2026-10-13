@@ -1,5 +1,11 @@
 import { expect, test, type Page } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
+import {
+  configuredCloneSteps,
+  configuredItemLinks,
+  configuredCatalog,
+  configuredReadings
+} from '../fixtures/configured-links';
 
 async function prepare(page: Page, progress: Record<string, string> = {}) {
   await page.route('https://fonts.googleapis.com/**', (route) =>
@@ -45,8 +51,12 @@ test('Checklist Panini: link antigo abre volume, preserva história e Modo Foco 
   await expect(volume).toHaveAttribute('data-progress-status', 'Não');
   await expect(page.locator('#hq-410')).toHaveCount(0);
   const group = page.locator('.checklist-series-group').filter({ has: volume });
-  await expect(group.locator('.reading-links-cta')).toBeDisabled();
-  await expect(group.locator('.reading-links-cta')).toHaveText('Sem link');
+  const available =
+    configuredItemLinks(configuredCloneSteps.slice(0, 18).map((step) => step.checklistId!)).length >
+    0;
+  if (available) await expect(group.locator('.reading-links-cta')).toBeEnabled();
+  else await expect(group.locator('.reading-links-cta')).toBeDisabled();
+  await expect(group.locator('.reading-links-cta')).toHaveText(available ? 'Ler' : 'Sem link');
   await volume.getByRole('button', { name: /Marcar como lida/ }).click();
   await expect(volume).toHaveAttribute('data-progress-status', 'Sim');
   expect(await stored(page)).toMatchObject({ '410': 'Sim', '1302': 'Sim' });
@@ -94,15 +104,15 @@ test('Checklist Panini: backup novo inclui referências e volumes, e backup anti
   const path = info.outputPath('backup-atual.json');
   await download.saveAs(path);
   const exported = JSON.parse(await readFile(path, 'utf8'));
-  expect(exported.items).toHaveLength(1320);
+  expect(exported.items).toHaveLength(configuredReadings.length);
   expect(exported.items.find((item: { id: number }) => item.id === 410).status).toBe('Sim');
   expect(exported.items.find((item: { id: number }) => item.id === 1302).status).toBe('Sim');
   const old = {
     format: 'spider-guia-progress',
     version: 1,
-    items: Array.from({ length: 1301 }, (_, index) => ({
-      id: index + 1,
-      status: index + 1 === 410 ? 'Pulei' : 'Não',
+    items: configuredCatalog.map((item) => ({
+      id: item.id,
+      status: item.id === 410 ? 'Pulei' : 'Não',
       updatedAt: null
     })),
     readingLog: {}

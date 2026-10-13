@@ -185,32 +185,46 @@ if (!checkOnly) {
     'utf8'
   );
 
-  const catalogLookup = {
-    bySeries: Object.fromEntries(
-      [...new Set(items.map((item) => item.series))].map((series) => [
-        series,
-        items
-          .filter((item) => item.series === series)
-          .map((item) => ({
-            id: item.id,
-            issue: item.issue,
-            historicalNumber: item.historicalNumber
-          }))
-      ])
-    )
-  };
   const indexOutput = {
-    catalogLookup,
     itemIndexFields: ITEM_INDEX_FIELDS,
     itemIndex: items.map(itemIndexRow),
     catalogChunks: chunkDescriptors,
     marcos: output.marcos,
     fases: output.fases,
     pular: output.pular,
-    fontes: output.fontes,
-    glossario: output.glossario,
+    fontes: { ...output.fontes, r: [] },
+    glossario: { ...output.glossario, r: [] },
     schemaVersion: output.schemaVersion,
-    editorial: output.editorial,
+    editorial: {
+      ...output.editorial,
+      extras: editorialExtras.map((extra) => ({
+        ...extra,
+        why: '',
+        howMuch: '',
+        just: '',
+        confirmationDetail: '',
+        positionEvidence: '',
+        weightEvidence: ''
+      })),
+      clone: {
+        entries: clone.entries.map(({ id, arcId, sourceOrder }) => ({ id, arcId, sourceOrder })),
+        guide: {
+          ...clone.guide,
+          intro: [],
+          legend: '',
+          notes: [],
+          sources: [],
+          sections: clone.guide.sections.map((section, index) => ({
+            ...section,
+            steps: section.steps.map((step) =>
+              index === 0 ? step : { ...step, note: '', complement: '' }
+            )
+          }))
+        }
+      },
+      metodologia: [],
+      changelog: []
+    },
     editorialVersion: output.editorialVersion
   };
   await fs.writeFile(
@@ -218,6 +232,19 @@ if (!checkOnly) {
     `${JSON.stringify(indexOutput)}\n`,
     'utf8'
   );
+
+  for (const [file, payload] of Object.entries({
+    'generated-extra-details.json': editorialExtras,
+    'generated-clone-details.json': clone,
+    'generated-help-details.json': {
+      fontes: output.fontes,
+      glossario: output.glossario,
+      metodologia,
+      changelog
+    }
+  })) {
+    await fs.writeFile(path.join(generatedDir, file), `${JSON.stringify(payload)}\n`, 'utf8');
+  }
 
   const chunksDir = path.join(generatedDir, 'chunks');
   await fs.rm(chunksDir, { recursive: true, force: true });
@@ -234,11 +261,11 @@ if (!checkOnly) {
 
   const loaderEntries = chunkDescriptors.map(
     (descriptor) =>
-      `  ${JSON.stringify(descriptor.phase)}: () => import('./chunks/${descriptor.file}').then(module => module.default)`
+      `  ${JSON.stringify(descriptor.phase)}: () => import('./chunks/${descriptor.file}').then(module => module.default as unknown as CatalogChunk)`
   );
   const loaderSource =
     `/* GERADO por scripts/build-data.mjs. Não edite manualmente. */\n` +
-    `export const catalogChunkLoaders: Record<string, () => Promise<any>> = {\n${loaderEntries.join(',\n')}\n};\n`;
+    `import type { CatalogChunk } from './contracts';\nexport const catalogChunkLoaders: Record<string, () => Promise<CatalogChunk>> = {\n${loaderEntries.join(',\n')}\n};\n`;
   await fs.writeFile(path.join(generatedDir, 'generated-chunks.ts'), loaderSource, 'utf8');
 }
 

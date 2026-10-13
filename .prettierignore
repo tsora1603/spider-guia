@@ -1,2 +1,4 @@
 data.js
 node_modules/
+src/data/generated-*
+src/data/chunks/

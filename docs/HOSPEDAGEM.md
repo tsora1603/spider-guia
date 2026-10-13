@@ -34,9 +34,13 @@ O Pages **já está ativo neste repositório**. Para configurar uma cópia:
 2. Envie um commit à `main` ou use **Actions → Quality and GitHub Pages → Run workflow**.
 3. Aguarde qualidade, testes de navegador e **Publish GitHub Pages**. O endereço aparece em **Settings → Pages**.
 
-O workflow `.github/workflows/quality.yml` publica o mesmo `dist/` testado. Outras branches e pull requests só executam checks; uma falha mantém a versão anterior no ar.
+O workflow `.github/workflows/quality.yml` publica o mesmo `dist/` testado. Depois verifica o commit e os hashes de todos os arquivos públicos. Outras branches e pull requests só executam checks; uma falha mantém a versão anterior no ar.
 
 A URL de uma cópia será `https://USUARIO.github.io/REPOSITORIO/`. Pages em repositórios privados exige plano compatível; o conteúdo estático é normalmente público. Para domínio próprio, siga a [configuração oficial](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+
+## Proteger a main
+
+Em **Settings → Branches → Add branch protection rule**, selecione `main`. Exija os checks **Lint, types, data and Vitest** e **Playwright critical flows**, com a branch atualizada antes de integrar. Mantenha force push e exclusão desativados. Exija revisão de pull requests se houver outros responsáveis disponíveis.
 
 ## Concluir a transição do Netlify
 

@@ -49,26 +49,27 @@ Para mudar cobertura, volumes ou ordem, siga os contratos de [Arquitetura](ARQUI
 
 ## Comandos úteis
 
-| Comando                                    | Uso                                  |
-| ------------------------------------------ | ------------------------------------ |
-| `npm run dev`                              | Desenvolvimento local                |
-| `npm run data:build && npm run data:check` | Alterações nos dados                 |
-| `npm run links:check`                      | Cadastro de links                    |
-| `npm run ci`                               | Validações completas e build         |
-| `npm run test:e2e`                         | Fluxos no navegador; requer Chromium |
-| `npm run build && npm run test:pages`      | Build na subpasta do Pages           |
-| `npm run reading-sequence:check`           | Plano, Checklist e Modo Foco         |
+| Comando                                    | Uso                                                   |
+| ------------------------------------------ | ----------------------------------------------------- |
+| `npm run dev`                              | Desenvolvimento local                                 |
+| `npm run data:build && npm run data:check` | Alterações nos dados                                  |
+| `npm run data:generated:check`             | Confere se os arquivos gerados correspondem às fontes |
+| `npm run links:check`                      | Cadastro de links                                     |
+| `npm run ci`                               | Validações completas e build                          |
+| `npm run test:e2e`                         | Fluxos no navegador; requer Chromium                  |
+| `npm run build && npm run test:pages`      | Build na subpasta do Pages                            |
+| `npm run reading-sequence:check`           | Plano, Checklist e Modo Foco                          |
 
 Instale o navegador de testes com `npx playwright install chromium`.
 
 ## Publicar ou reverter
 
-Revise o diff e envie as alterações conforme [Contribuição](../CONTRIBUTING.md). Após integrar à **main**, o Actions testa e publica no Pages. Confira **Actions → Quality and GitHub Pages** e abra o site. Para desfazer uma alteração, envie um commit de reversão; mudanças no banco exigem tratamento separado.
+Revise o diff e envie as alterações conforme [Contribuição](../CONTRIBUTING.md). Após integrar à **main**, o Actions testa, publica no Pages e compara os arquivos públicos com o build aprovado. Confira **Actions → Quality and GitHub Pages** e abra o site. Para desfazer uma alteração, envie um commit de reversão; mudanças no banco exigem tratamento separado.
 
 ## Rotina de quem mantém sua própria cópia
 
 - Revise links externos e falhas em Actions periodicamente.
-- Atualize dependências em uma branch, versione `package-lock.json` e valide com `npm run ci`.
+- Revise os pull requests semanais do Dependabot para npm e Actions; o CI deve passar antes de integrar. Em atualizações manuais, versione `package-lock.json` e valide com `npm run ci`.
 - Para incorporar mudanças do original, configure `upstream`, faça `git fetch upstream` e integre em uma branch, preservando sua configuração e seus links.
 - Guarde backups antes de trocar domínio ou catálogo. O JSON exportado contém progresso e histórico; preferências e aparência não entram nele.
 - Mantenha os responsáveis por GitHub, domínio e Supabase registrados. Preserve o histórico Git e mantenha segredos fora do repositório.

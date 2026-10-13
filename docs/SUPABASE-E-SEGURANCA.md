@@ -2,6 +2,8 @@
 
 O site funciona sem login. Supabase é usado para contas privadas e sincronização. O conteúdo de `public/config.js` fica público: use apenas Project URL e chave publicável; mantenha `service_role`, `sb_secret_*`, senhas e tokens administrativos fora do navegador/repositório.
 
+O SDK vem de `@supabase/supabase-js`, versionado no npm e carregado sob demanda. Para atualizá-lo, altere a dependência e o lockfile e execute os testes de login, sincronização e reset.
+
 ## Configuração inicial
 
 1. Prepare staging e backup antes de alterar produção. Em banco novo, execute **uma vez** `setup.sql` e depois `supabase/migrations/20261007_000001_server_sync_generation.sql`. **Não execute `setup.sql` após a migração:** ele reinstala políticas legadas.
