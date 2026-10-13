@@ -44,6 +44,11 @@ describe('guia brasileiro da Saga do Clone', () => {
     const repeated = structuredClone(guide);
     repeated.sections[1].steps[0].id = repeated.sections[0].steps[0].id;
     expect(CloneGuideSchema.safeParse(repeated).success).toBe(false);
+    const reassigned = structuredClone(guide);
+    [reassigned.sections[0].steps[0].checklistId, reassigned.sections[0].steps[1].checklistId] = [
+      1303, 1302
+    ];
+    expect(CloneGuideSchema.safeParse(reassigned).success).toBe(false);
     const incomplete = structuredClone(guide);
     incomplete.sections[0].steps.pop();
     expect(CloneGuideSchema.safeParse(incomplete).success).toBe(false);
@@ -62,17 +67,20 @@ describe('guia brasileiro da Saga do Clone', () => {
     );
   });
 
-  it('resolve alvos estáveis e conta cada HQ uma vez mesmo com contos em vários volumes', () => {
+  it('resolve alvos estáveis e atribui progresso independente aos 19 volumes', () => {
     const found = findCloneGuideStep(guide, 'panini-saga-02');
     expect(found?.section.id).toBe('base');
     expect(found?.step.number).toBe(2);
     expect(findCloneGuideStep(guide, 'inexistente')).toBeNull();
     expect(findCloneGuideStep(guide, null)).toBeNull();
     const ids = cloneGuideItemIds([guide.sections[0]]);
-    expect(ids.filter((id) => id === 410)).toHaveLength(1); // Amazing #394 em dois volumes.
+    expect(ids).toEqual(Array.from({ length: 19 }, (_, index) => 1302 + index));
     const catalog = JSON.parse(readFileSync('src/data/generated-index.json', 'utf8'));
     const idIndex = catalog.itemIndexFields.indexOf('id');
-    const known = new Set(catalog.itemIndex.map((row: unknown[]) => Number(row[idIndex])));
+    const known = new Set([
+      ...catalog.itemIndex.map((row: unknown[]) => Number(row[idIndex])),
+      ...ids
+    ]);
     expect(cloneGuideItemIds(guide.sections).every((id) => known.has(id))).toBe(true);
   });
 });

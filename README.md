@@ -1,6 +1,6 @@
 # SPIDER·GUIA
 
-Guia privado de leitura do Homem-Aranha, feito com **Vite + TypeScript + Preact**. O catálogo tem **1.301 leituras em 46 arquivos de fase**, com progresso local e sincronização opcional via Supabase.
+Guia privado de leitura do Homem-Aranha, feito com **Vite + TypeScript + Preact**. A Checklist tem **1.236 leituras**, incluindo os 19 volumes Panini da Saga do Clone que substituem 84 HQs avulsas. As **1.301 HQs de referência em 46 arquivos de fase** permanecem disponíveis para compatibilidade e pesquisa, com progresso local e sincronização opcional via Supabase.
 
 ## Começar
 

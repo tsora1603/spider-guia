@@ -125,3 +125,11 @@ Revise o diff dos arquivos-fonte e dos artefatos gerados versionados, faça o pu
 - Mantenha a branch de publicação, o domínio e o responsável por GitHub/Netlify/Supabase registrados para a equipe. Use acessos individuais e os mecanismos de colaboração das plataformas.
 - Antes de trocar domínio, limpar dados ou migrar catálogo, exporte o progresso em Configurações. Progresso local pertence ao navegador e à origem (protocolo, domínio e porta); não acompanha automaticamente a mudança de endereço. Importe o backup no novo site. Dois sites sob a mesma origem podem compartilhar armazenamento local; prefira origens distintas para cópias independentes.
 - Se uma versão falhar, reverta o commit por pull request ou restaure um deploy anterior no provedor. Uma reversão do site não reverte o banco Supabase; trate migrações separadamente.
+
+## Progresso após a substituição por volumes Panini
+
+As 84 HQs cobertas pelos 19 encadernados saíram da Checklist, e os volumes têm marcações independentes. Confirme quais volumes foram lidos inteiros; marcações antigas de HQs não concluem automaticamente os encadernados. Os registros anteriores continuam no backup e na sincronização.
+
+Exporte um backup antes de mudanças de cobertura. Um backup atual contém 1.320 registros, incluindo referências históricas e volumes, enquanto a Checklist mostra 1.236 leituras. Backups antigos com as 1.301 HQs continuam aceitos e preservam as marcações atuais dos volumes. Não reutilize os IDs `1302–1320` para novas HQs.
+
+Links para uma HQ substituída abrem seu volume correspondente. Ao cadastrar links novos, `targets.items` também pode apontar diretamente ao ID de um volume. Atualize `itemIds` do passo em `clone.json` para corrigir sua cobertura e rode `npm run ci` e os testes de Checklist/backup após mudanças estruturais.

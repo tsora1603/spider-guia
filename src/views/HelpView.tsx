@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
-import { DATA, editorialData, editorialExtras, normalizeText } from '../data/model';
+import { checklistReadings, DATA, editorialData, editorialExtras, normalizeText } from '../data/model';
 import { appState } from '../state/app-state';
 import { router } from '../runtime/controller';
 import { SpoilerText } from '../components/SpoilerText';
@@ -110,7 +110,7 @@ function Guide() {
       <section class="card account-guide-card">
         <div class="lbl">Como usar</div>
         <h3>Um lugar para cada intenção</h3>
-        <p class="sm"><b>Hoje</b> respeita seu plano e mostra o próximo passo. <b>Checklist</b> acompanha as 1.301 leituras. <b>Explorar</b> reúne Jornada, Extras e Saga do Clone. <b>Configurações</b> reúne preferências e gerenciamento de dados.</p>
+        <p class="sm"><b>Hoje</b> respeita seu plano e mostra o próximo passo. <b>Checklist</b> acompanha {checklistReadings.length.toLocaleString('pt-BR')} leituras, incluindo os volumes Panini que substituem as HQs cobertas. <b>Explorar</b> reúne Jornada, Extras e Saga do Clone. <b>Configurações</b> reúne preferências e gerenciamento de dados.</p>
       </section>
       <section class="card account-guide-card">
         <div class="lbl">Peso da leitura</div>

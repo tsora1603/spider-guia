@@ -217,6 +217,7 @@ export const CloneEntrySchema = z
 export const CloneGuideStepSchema = z
   .object({
     id: z.string().min(1),
+    checklistId: z.number().int().positive().optional(),
     number: z.number().int().positive(),
     title: z.string().min(1),
     edition: z.string().min(1),
@@ -297,6 +298,19 @@ export const CloneGuideSchema = z
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: 'A base deve conter os 19 volumes integrais na ordem definida.'
+      });
+    }
+    const volumeIds = base?.steps.map((step) => step.checklistId) || [];
+    if (
+      volumeIds.length !== 19 ||
+      volumeIds.some((id, index) => id !== 1302 + index) ||
+      new Set(volumeIds).size !== 19 ||
+      guide.sections.slice(1).some((section) => section.steps.some((step) => step.checklistId))
+    ) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message:
+          'Somente os 19 volumes da base devem ter IDs próprios de Checklist, todos distintos.'
       });
     }
   });

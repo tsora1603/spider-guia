@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
-import { principalReadings } from '../data/model';
+import { checklistReadings } from '../data/model';
 import { statusOf } from '../state/progress-store';
 import { spoilerPreferences } from '../spoilers/preferences';
 import type { SpoilerVisibility } from '../spoilers/model';
 import { applyReadThrough } from '../runtime/controller';
 import { readingPreferences, type ReadingDepth } from '../preferences/reading-preferences';
 import { currentResetEpoch } from '../reset/reset-guard';
+
+const principalReadings = checklistReadings.filter(item => item.type === 'Principal');
 
 function inferredReadThrough() {
   let last = 0;
@@ -79,7 +81,7 @@ export function Onboarding() {
       </section> : null}
       {step === 3 ? <section>
         <h2 id="onboarding-title">Já leu até onde?</h2>
-        <p class="mu">Use a numeração histórica da linha principal. Vamos marcar apenas edições da linha principal até esse ponto, sem alterar Extras, leituras puladas ou progresso existente.</p>
+        <p class="mu">Use a numeração histórica da linha principal. Vamos marcar apenas edições da linha principal até esse ponto, sem alterar volumes Panini, Extras, leituras puladas ou progresso existente. Marque cada volume completo na Checklist.</p>
         <label class="read-through-field" for="onboarding-read-through"><span>Já li até a edição histórica</span><span class="read-through-input"><b>#</b><input id="onboarding-read-through" type="number" min="0" max="1000" inputMode="numeric" value={readThrough || ''} onInput={event => setReadThrough(Number(event.currentTarget.value) || 0)} placeholder="0" /></span></label>
         <button type="button" class="text-button" onClick={() => setReadThrough(0)}>Vou começar do início</button>
         {readThrough > 0 ? <p class="onboarding-preview" aria-live="polite">Ao concluir, o guia inicializa seu progresso até a <b>#{Math.min(1000, readThrough)}</b>.</p> : <p class="onboarding-preview mu">Nenhuma edição será marcada automaticamente.</p>}

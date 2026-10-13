@@ -1,7 +1,7 @@
 import type { EditorialLinkGroup } from '../links/types';
 import { validateEditorialLinks } from '../../data/link-model.mjs';
 import { appState } from '../state/app-state';
-import { progressStore, statusOf, VALID_PROGRESS_STATUSES } from '../state/progress-store';
+import { progressStore, statusOf } from '../state/progress-store';
 import type { ProgressStatus } from '../state/types';
 import { createSyncEngine } from '../sync/sync-engine';
 import { currentResetEpoch, isSyncBlocked, mayUseCloud, cloudDecision, resetPhase, LOCAL_RESET_GUARD_KEY, REMOTE_RESET_INTENT_KEY, remoteResetIsPending } from '../reset/reset-guard';
@@ -11,14 +11,13 @@ import { cloudResetIntent, remoteResetVerified, resetDeviceAndCloud, resumeCloud
 import { checkServerGeneration, SERVER_GENERATIONS_KEY } from '../sync/server-generation';
 import { createRouter } from '../router/router';
 import { showToast } from '../components/feedback';
-import { DATA, readings, itemsById, editorialExtras, cloneEntries } from '../data/model';
+import { DATA, readings, catalogReadings, checklistReadings, paniniVolumes, itemsById, editorialExtras, cloneEntries } from '../data/model';
 import { uiStore } from '../ui/ui-store';
 import { readThroughSelection } from '../progress/read-through';
 import { readingPreferences } from '../preferences/reading-preferences';
 import { loginWithPassword, passwordAuthError } from '../auth/password-auth';
 
-const PROGRESS_EXPORT_FORMAT = 'spider-guia-progress';
-const PROGRESS_EXPORT_VERSION = 1;
+import { PROGRESS_EXPORT_FORMAT, PROGRESS_EXPORT_VERSION, validateProgressBackup, retainMissingVolumeProgress } from '../progress/backup';
 
 export const linksEnabled = window.LINKS_ENABLED !== false;
 export const editorialLinks: EditorialLinkGroup[] = linksEnabled ? (DATA.editorial?.links || []) : [];
@@ -361,7 +360,7 @@ export async function applyReadThrough(
     if (!options.silentToast) showToast('Digite um número de 1 a 1000.');
     return 0;
   }
-  const preview = readThroughSelection(number, readings, statusOf);
+  const preview = readThroughSelection(number, checklistReadings, statusOf);
   if (!preview.pending.length) {
     if (!options.silentToast) showToast(`Nada a marcar: todas as edições principais até a #${number} já estão lidas ou puladas.`);
     return 0;
@@ -373,7 +372,7 @@ export async function applyReadThrough(
     ].filter(Boolean).join(' e ');
     const confirmed = await confirmAction({
       title: 'Marcar leituras como lidas?',
-      message: `Até a edição histórica #${number}: ${preview.pending.length} ${preview.pending.length === 1 ? 'edição principal será marcada como lida' : 'edições principais serão marcadas como lidas'}. ${preserved ? `Permanecem inalteradas: ${preserved}. ` : ''}Extras e leituras fora da linha histórica não serão marcados. Confira antes de confirmar.`,
+      message: `Até a edição histórica #${number}: ${preview.pending.length} ${preview.pending.length === 1 ? 'edição principal será marcada como lida' : 'edições principais serão marcadas como lidas'}. ${preserved ? `Permanecem inalteradas: ${preserved}. ` : ''}Extras e volumes Panini não serão marcados. Marque cada volume completo na Checklist. Confira antes de confirmar.`,
       confirmLabel: 'Marcar como lidas'
     });
     if (!confirmed) return 0;
@@ -445,35 +444,7 @@ export function exportProgress() {
 }
 
 function validateProgressImport(payload: any) {
-  if (!payload || typeof payload !== 'object' || Array.isArray(payload)) throw new Error('O arquivo não contém um objeto JSON válido.');
-  if (payload.format !== PROGRESS_EXPORT_FORMAT) throw new Error('Este arquivo não é um backup do SPIDER·GUIA.');
-  if (payload.version !== PROGRESS_EXPORT_VERSION) throw new Error(`Versão de backup incompatível. Esperada: ${PROGRESS_EXPORT_VERSION}.`);
-  if (!Array.isArray(payload.items) || payload.items.length !== readings.length) throw new Error(`O backup deve conter ${readings.length} itens.`);
-  const seen = new Set<number>();
-  const items = payload.items.map((entry: any) => {
-    const id = Number(entry?.id);
-    if (!Number.isInteger(id) || !itemsById[id]) throw new Error(`ID de leitura inválido no backup: ${entry?.id}.`);
-    if (seen.has(id)) throw new Error(`ID duplicado no backup: ${id}.`);
-    seen.add(id);
-    if (!VALID_PROGRESS_STATUSES.has(entry?.status)) throw new Error(`Status inválido no ID ${id}.`);
-    let updatedAt = 0;
-    if (entry.updatedAt != null && entry.updatedAt !== '') {
-      updatedAt = typeof entry.updatedAt === 'number' ? entry.updatedAt : Date.parse(entry.updatedAt);
-      if (!Number.isFinite(updatedAt) || updatedAt < 0) throw new Error(`updatedAt inválido no ID ${id}.`);
-    }
-    return { id, status: entry.status as ProgressStatus, updatedAt };
-  });
-  const readingLog: Record<string, number> = {};
-  if (payload.readingLog != null) {
-    if (typeof payload.readingLog !== 'object' || Array.isArray(payload.readingLog)) throw new Error('O histórico local do backup é inválido.');
-    for (const [idText, value] of Object.entries(payload.readingLog)) {
-      const id = Number(idText);
-      const timestamp = Number(value);
-      if (!Number.isInteger(id) || !itemsById[id] || !Number.isFinite(timestamp) || timestamp < 0) throw new Error('O histórico local do backup contém dados inválidos.');
-      readingLog[String(id)] = timestamp;
-    }
-  }
-  return { items, readingLog };
+  return validateProgressBackup(payload, catalogReadings.map(item => item.id), readings.map(item => item.id));
 }
 
 function replaceLocalProgress(items: Array<{ id: number; status: ProgressStatus }>, readingLog: Record<string, number>) {
@@ -505,12 +476,14 @@ export async function handleProgressImport(file?: File | null) {
   if (mutationEpoch !== currentResetEpoch()) return;
   const confirmed = await confirmAction({
     title: 'Importar progresso?',
-    message: 'O progresso deste aparelho será sobrescrito pelo arquivo selecionado. Esta ação pode ser desfeita logo após a importação.',
+    message: normalized.legacy ? 'Este backup preserva o progresso histórico das HQs. As marcações atuais dos volumes Panini, ausentes no arquivo antigo, serão mantidas. A importação pode ser desfeita.' : 'O progresso deste aparelho será sobrescrito pelo arquivo selecionado. Esta ação pode ser desfeita logo após a importação.',
     confirmLabel: 'Importar e sobrescrever'
   });
   if (!confirmed || mutationEpoch !== currentResetEpoch()) return;
   const before = progressStore.snapshot();
-  replaceLocalProgress(normalized.items, normalized.readingLog);
+  // Reavalie os volumes após a confirmação para preservar alterações concorrentes.
+  const imported = retainMissingVolumeProgress(normalized, paniniVolumes.map(item => item.id), id => progressStore.record(id), appState.readingLog);
+  replaceLocalProgress(imported.items, imported.readingLog);
   const allIds = readings.map(item => item.id);
   void sync.syncLocalRecords(allIds, { showError: true });
   showToast('Progresso importado.', {

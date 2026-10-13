@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'preact/hooks';
-import { editorialExtras, journeyPhases, milestones, readings, type Reading } from '../data/model';
+import { editorialExtras, journeyPhases, milestones, checklistReadings as readings, projectChecklistIds, type Reading } from '../data/model';
 import { statusOf } from '../state/progress-store';
 import { useProgressRevision, useUiRevision } from '../ui/hooks';
 import { Icon } from '../components/Icon';
@@ -91,7 +91,7 @@ export function HomeView() {
     if (extraState(extra).className !== 'go') return false;
     if (preferences.depth === 'complete') return true;
     if (preferences.depth === 'essential') return String(extra.weight).startsWith('●');
-    return (extra.itemIds || []).some((id: number) => planIdSet.has(id));
+    return projectChecklistIds(extra.itemIds || []).some((id: number) => planIdSet.has(id));
   });
   const phase = next?.historicalNumber ? journeyPhases.find((entry: any) => Number(next.historicalNumber) >= entry.historicalStart && Number(next.historicalNumber) <= entry.historicalEnd) : null;
   const phaseItems = phase ? plan.filter(item => item.type === 'Principal' && Number(item.historicalNumber) >= phase.historicalStart && Number(item.historicalNumber) <= phase.historicalEnd) : [];
@@ -145,7 +145,7 @@ export function HomeView() {
               ? <><strong>{preview.pending.length} {preview.pending.length === 1 ? 'edição principal a marcar' : 'edições principais a marcar'}</strong>{preview.alreadyRead || preview.skipped ? ` · ${[preview.alreadyRead ? `${preview.alreadyRead} já ${preview.alreadyRead === 1 ? 'lida' : 'lidas'}` : '', preview.skipped ? `${preview.skipped} ${preview.skipped === 1 ? 'pulada preservada' : 'puladas preservadas'}` : ''].filter(Boolean).join(' · ')}` : ''}</>
               : 'Nenhuma edição pendente até este número.'
             : 'Digite um número de 1 a 1000 para ver a prévia.'}</p>
-          <p class="home-upto-help mu" id="home-read-through-help">Confira a seleção e confirme antes de salvar. Extras e leituras puladas não serão alterados. A atualização pode ser desfeita.</p>
+          <p class="home-upto-help mu" id="home-read-through-help">Confira a seleção e confirme antes de salvar. Extras, volumes Panini e leituras puladas não serão alterados. Marque cada volume completo na Checklist. A atualização pode ser desfeita.</p>
         </section>
       </div>
       <div class="home-workspace-progress">

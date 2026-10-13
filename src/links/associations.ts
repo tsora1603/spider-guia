@@ -12,7 +12,12 @@ export interface LinkAssociations {
 /** Apenas `targets` produz CTAs; cobertura e título são metadados de apresentação. */
 export function createLinkAssociations(
   groups: readonly EditorialLinkGroup[],
-  items: ReadonlyArray<{ id: number; historicalNumber: number | null; type: string }>,
+  items: ReadonlyArray<{
+    id: number;
+    historicalNumber: number | null;
+    type: string;
+    sourceItemIds?: number[];
+  }>,
   extras: ReadonlyArray<{ n: number; itemIds?: number[] }>,
   knownCloneArcIds: ReadonlySet<string> = new Set()
 ): LinkAssociations {
@@ -69,6 +74,12 @@ export function createLinkAssociations(
       } else if (knownCloneArcIds.has(target.id)) {
         add(byCloneArcId, target.id, group.id);
       }
+    }
+  }
+  // A cobertura explícita do volume herda os vínculos das HQs substituídas.
+  for (const item of items) {
+    for (const sourceId of item.sourceItemIds || []) {
+      for (const groupId of byItemId.get(sourceId) || []) add(byItemId, item.id, groupId);
     }
   }
   return { byItemId, byExtraId, byCloneArcId };

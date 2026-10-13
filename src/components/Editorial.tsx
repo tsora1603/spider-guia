@@ -1,5 +1,5 @@
 import { useMemo } from 'preact/hooks';
-import { cloneGuide, editorialExtras, itemsById, readings } from '../data/model';
+import { cloneGuide, editorialExtras, itemsById, readings, projectChecklistIds } from '../data/model';
 import { statusOf } from '../state/progress-store';
 import { useProgressRevision } from '../ui/hooks';
 import { Icon } from './Icon';
@@ -54,11 +54,11 @@ function unlockDependencyId(after: number | null | undefined) {
 }
 
 export function extraState(extra: any) {
-  const ids: number[] = extra.itemIds || [];
+  const ids: number[] = projectChecklistIds(extra.itemIds || []);
   const read = ids.filter(id => statusOf(id) === 'Sim').length;
   const skipped = ids.filter(id => statusOf(id) === 'Pulei').length;
   const dependency = unlockDependencyId(extra.after);
-  const unlocked = !dependency || statusOf(dependency) === 'Sim';
+  const unlocked = !dependency || projectChecklistIds([dependency]).every(id => statusOf(id) === 'Sim');
   // Editorial availability and the user's three-state progress are independent.
   // Preserve className's legacy meaning for current Home and Extras filters.
   const availability = unlocked ? 'Liberado' : 'Ainda não';
@@ -72,10 +72,11 @@ export function extraState(extra: any) {
 
 export function ExtraCard({ extra, editorialIndex, targeted = false }: { extra: any; editorialIndex?: number; targeted?: boolean; key?: any }) {
   const dependency = unlockDependencyId(extra.after);
-  const subscriptionIds = useMemo(() => [...(extra.itemIds || []), ...(dependency ? [dependency] : [])], [extra]);
+  const ids = projectChecklistIds(extra.itemIds || []);
+  const subscriptionIds = useMemo(() => projectChecklistIds([...(extra.itemIds || []), ...(dependency ? [dependency] : [])]), [extra]);
   useProgressRevision(subscriptionIds);
   const state = extraState(extra);
-  const id = extra.itemIds?.[0];
+  const id = ids[0];
   const singleStatus = id ? statusOf(id) : 'Não';
   const hasSingleIssue = state.total === 1 && Boolean(id);
   return (
@@ -105,7 +106,7 @@ export function ExtraCard({ extra, editorialIndex, targeted = false }: { extra: 
           <KeyValue label="Por que ajuda" value={extra.why} />
           <ReadingLinksAction kind="extra" id={extra.n} />
           {state.total > 1 ? <div class="extra-issue-list content-list disclosure-list ui-list" aria-label={`Edições de ${extra.name}`}>
-            {extra.itemIds.map((itemId: number) => {
+            {ids.map((itemId: number) => {
               const item = itemsById[itemId];
               return item ? <IssueRow
                 key={itemId}

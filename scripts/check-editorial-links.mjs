@@ -12,14 +12,14 @@ const itemIds = new Set((await loadSourceItems()).map((item) => item.id));
 const extras = JSON.parse(
   await fs.readFile(path.join(ROOT, 'data/src/editorial/extras.json'), 'utf8')
 );
+const clone = JSON.parse(
+  await fs.readFile(path.join(ROOT, 'data/src/editorial/clone.json'), 'utf8')
+);
+for (const step of clone.guide?.sections[0].steps || []) itemIds.add(step.checklistId);
 const errors = validateEditorialLinks(groups, {
   knownItemIds: itemIds,
   extras,
-  cloneArcIds: new Set(
-    JSON.parse(
-      await fs.readFile(path.join(ROOT, 'data/src/editorial/clone.json'), 'utf8')
-    ).entries.map((entry) => entry.arcId)
-  )
+  cloneArcIds: new Set(clone.entries.map((entry) => entry.arcId))
 });
 assert.equal(errors.length, 0, `Links inválidos: ${JSON.stringify(errors)}`);
 for (const group of groups) {

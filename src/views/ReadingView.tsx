@@ -20,6 +20,7 @@ import { readingReturnFor } from '../links/return-context';
 
 import {
   cloneGuideItemIds,
+  cloneStepItemIds,
   findCloneGuideStep,
   type CloneGuideSection,
   type CloneGuideStep
@@ -129,7 +130,8 @@ export function ExtrasView() {
 }
 
 function CloneStep({ step, targeted }: { step: CloneGuideStep; targeted: boolean }) {
-  const counts = useProgressCounts(step.itemIds);
+  const ids = cloneStepItemIds(step);
+  const counts = useProgressCounts(ids);
   return (
     <details
       id={`clone-step-${step.id}`}
@@ -159,21 +161,23 @@ function CloneStep({ step, targeted }: { step: CloneGuideStep; targeted: boolean
           </p>
         ) : null}
         <CloneGuideLinksAction
-          itemIds={step.itemIds}
+          itemIds={ids}
           arcIds={step.arcIds}
           stepId={step.id}
           label={step.title}
         />
         <details class="clone-checklist disclosure-nested">
           <summary>
-            HQs deste passo na Checklist · {counts.read} lidas · {counts.skipped} puladas
+            {step.checklistId ? 'Volume deste passo na Checklist' : 'HQs deste passo na Checklist'}{' '}
+            · {counts.read} lidas · {counts.skipped} puladas
           </summary>
           <p class="sm mu">
-            As marcas acompanham as HQs americanas do catálogo. Contos de um mesmo número podem
-            aparecer em volumes diferentes; confira o sumário para completar a leitura do volume.
+            {step.checklistId
+              ? 'Marque este volume somente depois de concluir todo o seu conteúdo. Cada volume tem progresso próprio.'
+              : 'As marcas acompanham as leituras restantes da Checklist.'}
           </p>
           <div class="content-list disclosure-list ui-list">
-            {step.itemIds.map((id) => {
+            {ids.map((id) => {
               const reading = itemsById[id];
               return reading ? (
                 <IssueRow
@@ -271,8 +275,8 @@ export function CloneView() {
           </p>
         ))}
         <p class="sm mu">
-          O progresso das HQs é compartilhado com a Checklist. Os encadernados da base não voltam à
-          sequência complementar.
+          O progresso das leituras e dos volumes é compartilhado com a Checklist. Os encadernados da
+          base não voltam à sequência complementar.
         </p>
       </div>
       <details class="list-callout clone-guide-help">

@@ -86,6 +86,20 @@ A tela `#explorar/clone` usa `guide` em `data/src/editorial/clone.json`: introdu
 
 Cada passo possui ID estável, número, edição brasileira ou americana, instrução de leitura, originais de referência, `itemIds` do catálogo e `arcIds` explícitos. A busca abre `#explorar/clone?passo=<id>`, expandindo e focando o passo. Os links de leitura retornam ao mesmo alvo. `CloneGuideSchema` verifica a ordem dos 19 volumes e a unicidade dos passos; `data:build` verifica as referências ao catálogo e aos arcos.
 
-`entries` conserva as referências editoriais anteriores para compatibilidade dos IDs de arcos e dos vínculos existentes; não é o roteiro exibido. Os passos reutilizam as HQs da Checklist, sem novo armazenamento de progresso. O progresso é deduplicado por ID, pois contos de um mesmo número americano podem estar em mais de um volume. Ele não certifica integralidade de uma edição brasileira.
+`entries` conserva as referências editoriais anteriores para compatibilidade dos IDs de arcos e dos vínculos existentes; não é o roteiro exibido. Os passos usam volumes com marcação própria na base e as HQs restantes nos blocos seguintes. IDs antigos e registros históricos permanecem disponíveis para backup e sincronização; a projeção operacional evita duplicar leituras cobertas.
 
 Para corrigir disponibilidade ou cobertura, edite os passos/notas de `guide`, preserve os IDs existentes e gere os dados novamente. Uma correspondência de revista não comprova todos os contos: registre cortes confirmados e dúvidas separadamente. A auditoria bibliográfica fornecida pelo leitor é a base das correspondências brasileiras; a ordem americana é retomada somente após os 19 volumes.
+
+## Checklist com volumes Panini
+
+`src/data/checklist-catalog.ts` projeta a sequência operacional a partir do catálogo de HQs e dos 19 passos da base do guia. Os IDs `1302–1320`, definidos como `checklistId` em `data/src/editorial/clone.json`, são reservados aos volumes. Cada volume tem estado próprio e herda os links pela cobertura explícita em `sourceItemIds`.
+
+O modelo publica `catalogReadings` (as 1.301 HQs históricas), `readings` (registro completo de 1.320 IDs para backup/sync) e `checklistReadings` (1.236 leituras visíveis: 84 HQs substituídas por 19 volumes). Home, Checklist, Modo Foco, busca e ações em lote usam a sequência visível. As referências bibliográficas e os snapshots históricos continuam preservados.
+
+Links antigos para HQs cobertas resolvem o primeiro volume correspondente, com aviso das demais correspondências, sem reinserir a HQ na Checklist. Jornada e Extras projetam IDs para os volumes, evitando contabilizar a mesma leitura duas vezes. Os volumes 1/2 e 11/14 não compartilham marcações, pois reúnem contos diferentes.
+
+`src/progress/backup.ts` aceita somente conjuntos completos de IDs reconhecidos: o catálogo histórico ou o registro atual. Backups novos incluem as HQs históricas e os volumes. Importar um backup antigo preserva marcações explícitas dos volumes que ele não conhece. Nenhuma leitura integral de volume é inferida de antigas marcações de HQs. O protocolo Supabase já aceita IDs positivos; as regras de autorização e reset não foram alteradas.
+
+A marca histórica “Já li até” opera apenas nas HQs principais visíveis; volumes devem ser marcados explicitamente. Intervalos em lote com um limite substituído pedem a seleção dos volumes, evitando concluir um encadernado inteiro por um único capítulo.
+
+Ao acrescentar HQs no futuro, escolha IDs que não colidam com os reservados aos volumes. O build rejeita colisões. Para mudar a cobertura, edite `itemIds` do passo do guia; não duplique a regra em filtros da interface.

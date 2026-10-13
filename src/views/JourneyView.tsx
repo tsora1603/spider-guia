@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
-import { journeyPhases, milestones, principalReadings } from '../data/model';
+import { journeyPhases, milestones, principalReadings, projectChecklistIds } from '../data/model';
 import { exploreRouteParam, focusEditorialTarget, milestoneAnchorKey } from './explore-navigation';
 import { statusOf } from '../state/progress-store';
 import { useProgressRevision } from '../ui/hooks';
@@ -16,7 +16,7 @@ const anchorOf = (milestone: any) => milestone.historicalStart || (ANC.find(entr
 const range = (start: number, end: number) => principalReadings.filter(item => Number(item.historicalNumber) >= start && Number(item.historicalNumber) <= end);
 
 function Milestone({ milestone, milestoneIndex, selected }: { milestone: any; milestoneIndex: number; selected: boolean; key?: any }) {
-  const ids = milestone.historicalStart && milestone.historicalEnd ? range(milestone.historicalStart, milestone.historicalEnd).map(item => item.id) : [];
+  const ids = milestone.historicalStart && milestone.historicalEnd ? projectChecklistIds(range(milestone.historicalStart, milestone.historicalEnd).map(item => item.id)) : [];
   useProgressRevision(ids);
   const value = ids.length ? percent(ids.filter(id => statusOf(id) === 'Sim').length, ids.length) : null;
   // Only link to a historic issue when the curated milestone explicitly names its number.
@@ -26,7 +26,7 @@ function Milestone({ milestone, milestoneIndex, selected }: { milestone: any; mi
 
 function JourneyPhase({ phase, index, open, onToggle, targetMilestone }: any) {
   const items = useMemo(() => range(phase.historicalStart, phase.historicalEnd), [phase.historicalStart, phase.historicalEnd]);
-  const ids = useMemo(() => items.map(item => item.id), [items]);
+  const ids = useMemo(() => projectChecklistIds(items.map(item => item.id)), [items]);
   useProgressRevision(ids);
   const value = percent(ids.filter(id => statusOf(id) === 'Sim').length, ids.length);
   const phaseMilestones = milestones.filter((milestone: any) => phaseIndexOf(anchorOf(milestone)) === index);

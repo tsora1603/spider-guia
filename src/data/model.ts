@@ -2,6 +2,7 @@ import { spoilerPlainText } from '../spoilers/model';
 import generatedIndex from './generated-index.json';
 import { catalogChunkLoaders } from './generated-chunks';
 import type { CloneGuide } from '../clone-guide/model';
+import { createChecklistCatalog } from './checklist-catalog';
 
 export const DATA = generatedIndex as any;
 
@@ -18,6 +19,8 @@ export interface Reading {
   extraNote: string;
   searchText: string;
   detailsLoaded?: boolean;
+  guideStepId?: string;
+  sourceItemIds?: number[];
 }
 
 export const normalizeText = (value: unknown) =>
@@ -34,7 +37,10 @@ const indexField = (row: unknown[], field: string) => row[indexFieldIndex[field]
 const toIndexReading = (row: unknown[]): Reading => {
   const reading: Reading = {
     id: Number(indexField(row, 'id')),
-    historicalNumber: indexField(row, 'historicalNumber') == null ? null : Number(indexField(row, 'historicalNumber')),
+    historicalNumber:
+      indexField(row, 'historicalNumber') == null
+        ? null
+        : Number(indexField(row, 'historicalNumber')),
     type: String(indexField(row, 'type')),
     series: String(indexField(row, 'series')),
     issue: String(indexField(row, 'issue')),
@@ -46,7 +52,17 @@ const toIndexReading = (row: unknown[]): Reading => {
     searchText: '',
     detailsLoaded: false
   };
-  reading.searchText = normalizeText([reading.series, reading.issue, reading.phase, reading.weight, reading.type, reading.historicalNumber ? `#${reading.historicalNumber}` : '', String(indexField(row, 'searchHint') || '')].join(' '));
+  reading.searchText = normalizeText(
+    [
+      reading.series,
+      reading.issue,
+      reading.phase,
+      reading.weight,
+      reading.type,
+      reading.historicalNumber ? `#${reading.historicalNumber}` : '',
+      String(indexField(row, 'searchHint') || '')
+    ].join(' ')
+  );
   return reading;
 };
 
@@ -63,7 +79,10 @@ const toDetailedReading = (row: unknown[], fields: string[]): Reading => {
   const value = (field: string) => row[fieldIndex![field]];
   const reading: Reading = {
     id: Number(value('id')),
-    historicalNumber: value('historicalNumber') == null || value('historicalNumber') === '' ? null : Number(value('historicalNumber')),
+    historicalNumber:
+      value('historicalNumber') == null || value('historicalNumber') === ''
+        ? null
+        : Number(value('historicalNumber')),
     type: String(value('type')),
     series: String(value('series')),
     issue: String(value('issue')),
@@ -72,18 +91,31 @@ const toDetailedReading = (row: unknown[], fields: string[]): Reading => {
     notes: String(value('instructions') ?? ''),
     readingOrder: Number(value('readingOrder')),
     extraNote: String(value('note') ?? ''),
-    searchText: normalizeText(row.map(entry => spoilerPlainText(entry)).join(' ')),
+    searchText: normalizeText(row.map((entry) => spoilerPlainText(entry)).join(' ')),
     detailsLoaded: true
   };
   return reading;
 };
 
-export const readings: Reading[] = (DATA.itemIndex || [])
+export const catalogReadings: Reading[] = (DATA.itemIndex || [])
   .map(toIndexReading)
   .sort((a: Reading, b: Reading) => a.readingOrder - b.readingOrder);
 
+export const editorialData = DATA.editorial || {};
+export const editorialExtras = editorialData.extras || [];
+export const cloneEntries = editorialData.clone?.entries || [];
+export const cloneGuide: CloneGuide = editorialData.clone?.guide;
+const checklistCatalog = createChecklistCatalog(catalogReadings, cloneGuide);
+// Registro completo para backup/sync; sequência ativa para Home/Checklist.
+export const readings = checklistCatalog.registry;
+export const checklistReadings = checklistCatalog.sequence;
+export const paniniVolumes = checklistCatalog.volumes;
+export const coveredByPanini = checklistCatalog.coveredBy;
+export const projectChecklistIds = checklistCatalog.projectIds;
+export const resolveChecklistId = checklistCatalog.resolveId;
+
 export const itemsById: Record<number, Reading> = Object.fromEntries(
-  readings.map(item => [item.id, item])
+  readings.map((item) => [item.id, item])
 );
 
 export const catalogChunks = DATA.catalogChunks || [];
@@ -96,23 +128,26 @@ export async function loadPhaseReadings(phase: string): Promise<Map<number, Read
   if (cachedPromise) return cachedPromise;
   const loader = catalogChunkLoaders[phase];
   if (!loader) return new Map();
-  const promise = loader().then((chunk: any) => {
-    const map = new Map<number, Reading>();
-    for (const row of chunk.items || []) {
-      const reading = toDetailedReading(row, chunk.itemFields || []);
-      chunkReadingCache.set(reading.id, reading);
-      map.set(reading.id, reading);
-    }
-    return map;
-  }).catch(error => {
-    chunkPromiseCache.delete(phase);
-    throw error;
-  });
+  const promise = loader()
+    .then((chunk: any) => {
+      const map = new Map<number, Reading>();
+      for (const row of chunk.items || []) {
+        const reading = toDetailedReading(row, chunk.itemFields || []);
+        chunkReadingCache.set(reading.id, reading);
+        map.set(reading.id, reading);
+      }
+      return map;
+    })
+    .catch((error) => {
+      chunkPromiseCache.delete(phase);
+      throw error;
+    });
   chunkPromiseCache.set(phase, promise);
   return promise;
 }
 
 export async function loadReadingDetails(id: number): Promise<Reading | null> {
+  if (itemsById[id]?.guideStepId) return itemsById[id];
   const cached = chunkReadingCache.get(id);
   if (cached) return cached;
   const index = itemsById[id];
@@ -122,22 +157,15 @@ export async function loadReadingDetails(id: number): Promise<Reading | null> {
 }
 
 export function cachedReadingDetails(id: number): Reading | null {
-  return chunkReadingCache.get(id) || null;
+  return chunkReadingCache.get(id) || (itemsById[id]?.guideStepId ? itemsById[id] : null);
 }
-
-export const editorialData = DATA.editorial || {};
-export const editorialExtras = editorialData.extras || [];
-export const cloneEntries = editorialData.clone?.entries || [];
-export const cloneGuide: CloneGuide = editorialData.clone?.guide;
 
 /** Associação editorial explícita: a Checklist só oferece detalhes em Explorar
  * quando existe uma entrada de Extras que realmente referencia a HQ.
  * Não inventar destinos para leituras sem ficha editorial própria.
  */
 export const extraEditorialByItemId: Record<number, any> = Object.fromEntries(
-  editorialExtras.flatMap((extra: any) =>
-    (extra.itemIds || []).map((id: number) => [id, extra])
-  )
+  editorialExtras.flatMap((extra: any) => (extra.itemIds || []).map((id: number) => [id, extra]))
 );
 
 export const extraDetailsById = Object.fromEntries(
@@ -182,7 +210,7 @@ export interface ChecklistGroup {
 
 export const checklistGroups: ChecklistGroup[] = (() => {
   const groups = new Map<string, Reading[]>();
-  for (const item of readings) {
+  for (const item of checklistReadings) {
     const key = item.phase || 'Sem fase';
     const bucket = groups.get(key) || [];
     bucket.push(item);
@@ -196,7 +224,7 @@ export const checklistGroups: ChecklistGroup[] = (() => {
 })();
 
 const namedRows = (rows: unknown[][], fields: string[]) =>
-  rows.map(row => Object.fromEntries(fields.map((field, index) => [field, row[index]])));
+  rows.map((row) => Object.fromEntries(fields.map((field, index) => [field, row[index]])));
 
 export const journeyPhases = namedRows(DATA.fases.r, [
   'historicalStart',
@@ -227,5 +255,5 @@ export const milestones = namedRows(DATA.marcos.r, [
   historicalEnd: milestone.historicalEnd ? Number(milestone.historicalEnd) : null
 }));
 
-export const principalReadings = readings.filter(item => item.type === 'Principal');
-export const essentialReadings = readings.filter(item => item.weight === '● Essencial');
+export const principalReadings = readings.filter((item) => item.type === 'Principal');
+export const essentialReadings = checklistReadings.filter((item) => item.weight === '● Essencial');

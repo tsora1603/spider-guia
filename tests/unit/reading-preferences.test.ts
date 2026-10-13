@@ -8,12 +8,24 @@ import {
 
 class MemoryStorage implements Storage {
   private values = new Map<string, string>();
-  get length() { return this.values.size; }
-  clear() { this.values.clear(); }
-  getItem(key: string) { return this.values.get(key) ?? null; }
-  key(index: number) { return [...this.values.keys()][index] ?? null; }
-  removeItem(key: string) { this.values.delete(key); }
-  setItem(key: string, value: string) { this.values.set(key, String(value)); }
+  get length() {
+    return this.values.size;
+  }
+  clear() {
+    this.values.clear();
+  }
+  getItem(key: string) {
+    return this.values.get(key) ?? null;
+  }
+  key(index: number) {
+    return [...this.values.keys()][index] ?? null;
+  }
+  removeItem(key: string) {
+    this.values.delete(key);
+  }
+  setItem(key: string, value: string) {
+    this.values.set(key, String(value));
+  }
 }
 
 describe('preferências de leitura', () => {
@@ -48,12 +60,14 @@ describe('preferências de leitura', () => {
   });
 
   it('normaliza valores inválidos sem inventar um foco', () => {
-    expect(normalizeReadingPreferences({
-      onboardingComplete: 'sim',
-      depth: 'focus',
-      focusQuery: ' ',
-      readThrough: 9000
-    })).toEqual({
+    expect(
+      normalizeReadingPreferences({
+        onboardingComplete: 'sim',
+        depth: 'focus',
+        focusQuery: ' ',
+        readThrough: 9000
+      })
+    ).toEqual({
       version: 1,
       onboardingComplete: false,
       depth: 'essential',
@@ -67,11 +81,11 @@ describe('preferências de leitura', () => {
     const essential = buildReadingPlan({ depth: 'essential', focusQuery: '' });
     const focus = buildReadingPlan({ depth: 'focus', focusQuery: 'Kraven' });
 
-    expect(complete).toHaveLength(1301);
+    expect(complete).toHaveLength(1236);
     expect(essential.length).toBeLessThan(complete.length);
-    expect(essential.every(item => item.weight === '● Essencial')).toBe(true);
+    expect(essential.every((item) => item.weight === '● Essencial')).toBe(true);
     expect(focus.length).toBeGreaterThan(0);
     expect(focus.length).toBeLessThan(essential.length);
-    expect(focus.every(item => item.weight !== '○ Opcional')).toBe(true);
+    expect(focus.every((item) => item.weight !== '○ Opcional')).toBe(true);
   });
 });

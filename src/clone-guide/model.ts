@@ -1,5 +1,6 @@
 export interface CloneGuideStep {
   id: string;
+  checklistId?: number;
   number: number;
   title: string;
   edition: string;
@@ -28,9 +29,17 @@ export interface CloneGuide {
   sources: Array<{ title: string; description: string; url?: string }>;
 }
 
-/** A HQ pode ter contos em mais de um volume. O progresso continua sendo único por ID. */
+/** Volumes têm progresso próprio; as HQs americanas ficam como referência de cobertura. */
+export function cloneStepItemIds(step: CloneGuideStep): number[] {
+  return step.checklistId ? [step.checklistId] : step.itemIds;
+}
+
 export function cloneGuideItemIds(sections: readonly CloneGuideSection[]): number[] {
-  return [...new Set(sections.flatMap((section) => section.steps.flatMap((step) => step.itemIds)))];
+  return [
+    ...new Set(
+      sections.flatMap((section) => section.steps.flatMap((step) => cloneStepItemIds(step)))
+    )
+  ];
 }
 
 export function findCloneGuideStep(guide: CloneGuide, stepId: string | null) {

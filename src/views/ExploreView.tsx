@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
-import { cloneGuide, editorialExtras, milestones, normalizeText, readings } from '../data/model';
+import { cloneGuide, editorialExtras, milestones, normalizeText, checklistReadings as readings } from '../data/model';
 import { appState } from '../state/app-state';
 import { linksEnabled, router } from '../runtime/controller';
 import { Icon } from '../components/Icon';

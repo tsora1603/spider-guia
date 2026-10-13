@@ -1,3 +1,4 @@
+import { checklistReadings } from '../data/model';
 import type { ComponentChildren } from 'preact';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { appState } from '../state/app-state';
@@ -29,7 +30,7 @@ function ReadingPreferencesCard() {
     <h3>Escolha a profundidade</h3>
     <fieldset class="account-choice-group">
       <legend>Profundidade</legend>
-      <label><input type="radio" name="account-reading-depth" checked={depth === 'complete'} onChange={() => setDepth('complete')} /> <span><b>Completo</b><small>Todas as 1.301 leituras.</small></span></label>
+      <label><input type="radio" name="account-reading-depth" checked={depth === 'complete'} onChange={() => setDepth('complete')} /> <span><b>Completo</b><small>Todas as {checklistReadings.length.toLocaleString('pt-BR')} leituras da sequência atual.</small></span></label>
       <label><input type="radio" name="account-reading-depth" checked={depth === 'essential'} onChange={() => setDepth('essential')} /> <span><b>Essenciais</b><small>Só o núcleo classificado como essencial.</small></span></label>
       <label><input type="radio" name="account-reading-depth" checked={depth === 'focus'} onChange={() => setDepth('focus')} /> <span><b>Arco ou filme</b><small>Plano enxuto para um foco específico.</small></span></label>
     </fieldset>

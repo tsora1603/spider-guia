@@ -24,7 +24,7 @@ test('Hoje: prévia, cancelar, confirmar e desfazer preservam Extras, Sim e Pule
   await page.getByRole('button', { name: 'Revisar e atualizar' }).click();
   await expect(confirm).toContainText('3 edições principais serão marcadas');
   await expect(confirm).toContainText('1 pulada');
-  await expect(confirm).toContainText('Extras e leituras fora da linha histórica não serão marcados');
+  await expect(confirm).toContainText('Extras e volumes Panini não serão marcados');
   await confirm.getByRole('button', { name: 'Cancelar' }).click();
   await expect(confirm).toBeHidden();
   expect(await storedProgress(page)).toEqual(before);

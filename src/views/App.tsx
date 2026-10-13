@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'preact/compat';
 import { useProgressRevision, useUiRevision } from '../ui/hooks';
 import { appState } from '../state/app-state';
-import { principalReadings } from '../data/model';
+import { principalReadings, projectChecklistIds, checklistReadings } from '../data/model';
 import { statusOf } from '../state/progress-store';
 import { Icon, type IconName } from '../components/Icon';
 import { percent } from '../components/Progress';
@@ -30,14 +30,14 @@ const NAV_ITEMS: Array<{ key: 'Hoje' | 'Checklist' | 'Explorar' | 'Ajuda' | 'Con
   { key: 'Configurações', icon: 'settings', hash: '#configuracoes', mobileLabel: 'Config.' }
 ];
 const PAGE_HEADERS: Record<string, [string, string]> = {
-  Checklist: ['Checklist', 'Acompanhe as 1.301 leituras por série, na ordem do seu plano.'],
+  Checklist: ['Checklist', `Acompanhe ${checklistReadings.length.toLocaleString('pt-BR')} leituras por série, na ordem do seu plano.`],
   Explorar: ['Explorar', 'Descubra a Jornada, leituras Extras e a ordem da Saga do Clone.'],
   Ajuda: ['Ajuda', 'Como usar o guia, glossário, fontes e metodologia.'],
   Configurações: ['Configurações', 'Gerencie suas preferências, sincronização e dados locais.']
 };
 
 function SidebarProgress() {
-  const ids = principalReadings.map(item => item.id);
+  const ids = projectChecklistIds(principalReadings.map(item => item.id));
   useProgressRevision(ids);
   const read = ids.filter(id => statusOf(id) === 'Sim').length;
   const value = percent(read, ids.length);

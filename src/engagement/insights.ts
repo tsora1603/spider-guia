@@ -1,4 +1,4 @@
-import { principalReadings } from '../data/model';
+import { principalReadings, checklistReadings, projectChecklistIds } from '../data/model';
 import { statusOf } from '../state/progress-store';
 import { appState } from '../state/app-state';
 
@@ -15,8 +15,9 @@ export function weekStart(timestamp = Date.now()) {
 
 export function weeklyReadCount(now = Date.now()) {
   const start = weekStart(now);
+  const activeIds = new Set(checklistReadings.map(item => item.id));
   return Object.entries(appState.readingLog).filter(([id, timestamp]) =>
-    Number(timestamp) >= start && Number(timestamp) <= now && statusOf(Number(id)) === 'Sim'
+    activeIds.has(Number(id)) && Number(timestamp) >= start && Number(timestamp) <= now && statusOf(Number(id)) === 'Sim'
   ).length;
 }
 
@@ -26,7 +27,7 @@ export function highestContiguousHistorical() {
     .filter(item => item.historicalNumber != null)
     .sort((a, b) => Number(a.historicalNumber) - Number(b.historicalNumber));
   for (const item of ordered) {
-    if (Number(item.historicalNumber) !== highest + 1 || statusOf(item.id) !== 'Sim') break;
+    if (Number(item.historicalNumber) !== highest + 1 || !projectChecklistIds([item.id]).every(id => statusOf(id) === 'Sim')) break;
     highest = Number(item.historicalNumber);
   }
   return highest;

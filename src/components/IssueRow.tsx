@@ -9,6 +9,7 @@ import { SpoilerText } from './SpoilerText';
 import { SkipButton, StatusButton, progressStatusLabel } from './Progress';
 import { Icon } from './Icon';
 import { SourceLinks } from './SourceLinks';
+import { router } from '../runtime/controller';
 import { bulkProgressUi } from '../progress/bulk-ui';
 import { ReadingLinksAction, hasReadingLinks } from './ReadingLinksAction';
 
@@ -241,6 +242,7 @@ export const IssueRow = memo(function IssueRow({
             </div>
           </details>
         )}
+        {item.guideStepId ? <div class="issue-permanent-actions"><button class="btn g" type="button" onClick={event => router.navigate(exploreTarget('clone', 'passo', item.guideStepId!), event.currentTarget)}>Ver este volume no guia</button></div> : null}
         {editorialExtra && !extraEvidence ? (
           <div class="issue-permanent-actions">
             <a

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks';
-import { itemsById, readings, type ChecklistGroup, type Reading } from '../data/model';
+import { itemsById, checklistReadings as readings, coveredByPanini, resolveChecklistId, type ChecklistGroup, type Reading } from '../data/model';
 import { appState } from '../state/app-state';
 import { router } from '../runtime/controller';
 import { bulkProgressUi } from '../progress/bulk-ui';
@@ -119,7 +119,9 @@ function FocusChecklist({ items, currentId, onCurrentId, onExit }: {
 export function VirtualizedChecklist() {
   const [query, setQuery] = useState(appState.checklistQuery);
   const [filter, setFilter] = useState<ChecklistFilterValue>((appState.checklistFilter || '') as ChecklistFilterValue);
-  const focusedItemId = appState.focusedItemId ?? readingReturnFor(history.state, location.hash, 'item');
+  const requestedItemId = appState.focusedItemId ?? readingReturnFor(history.state, location.hash, 'item');
+  const focusedItemId = requestedItemId == null ? null : resolveChecklistId(requestedItemId);
+  const replacementIds = requestedItemId == null ? undefined : coveredByPanini.get(requestedItemId);
   const progressRevision = useProgressRevision();
   const preferences = useReadingPreferences();
   const design = useDesignPreferences();
@@ -287,6 +289,8 @@ export function VirtualizedChecklist() {
   };
 
   return <>
+    {replacementIds ? <div class="list-callout sm" role="status">Esta HQ foi substituída na Checklist pelos volumes Panini: {replacementIds.map(id => `${itemsById[id].series} ${itemsById[id].issue}`).join('; ')}. Leia e marque o volume completo.</div> : null}
+
     <div class={`checklist-focus-control ${design.focusMode ? 'is-active' : ''}`}>
       <div class="checklist-focus-copy"><span class="lbl">Leitura sem distrações</span><strong>Modo Foco</strong><span class="sm mu">Uma edição por vez, seguindo a ordem de Sua próxima leitura.</span></div>
       <button type="button" class={`btn focus-mode-button ${design.focusMode ? 'g' : ''}`} data-focus-toggle aria-pressed={design.focusMode} onClick={() => designPreferences.set({ focusMode: !design.focusMode })}>

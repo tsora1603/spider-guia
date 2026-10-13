@@ -80,7 +80,10 @@ const editorialMeta = EditorialMetaSchema.parse(
 );
 validateInvariants({ items, fases, marcos, editorialExtras, derivedReadings, clone, fontes });
 const linkErrors = validateEditorialLinks(editorialLinks, {
-  knownItemIds: new Set(items.map((item) => item.id)),
+  knownItemIds: new Set([
+    ...items.map((item) => item.id),
+    ...(clone.guide?.sections[0].steps.map((step) => step.checklistId) || [])
+  ]),
   extras: editorialExtras,
   cloneArcIds: new Set(clone.entries.map((entry) => entry.arcId))
 });
@@ -351,6 +354,8 @@ function validateInvariants({
   const cloneArcIds = new Set(clone.entries.map((entry) => entry.arcId));
   for (const section of clone.guide?.sections || []) {
     for (const step of section.steps) {
+      if (step.checklistId && idSet.has(step.checklistId))
+        fail(`Guia brasileiro ${step.id}: ID do volume colide com uma HQ existente.`);
       validateItemIds(`editorial.clone.guide.${step.id}`, step.itemIds);
       if (new Set(step.itemIds).size !== step.itemIds.length)
         fail(`Guia brasileiro ${step.id}: itemIds duplicados.`);
