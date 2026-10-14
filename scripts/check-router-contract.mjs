@@ -1,4 +1,4 @@
-import { spawnSync } from 'node:child_process';
+import ts from 'typescript';
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
@@ -9,25 +9,27 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const outDir = await fs.mkdtemp(path.join(os.tmpdir(), 'spider-router-'));
 
 try {
-  const compile = spawnSync(
-    'tsc',
-    [
-      'src/router/router.ts',
-      'src/state/app-state.ts',
-      'src/state/types.ts',
-      '--module', 'commonjs',
-      '--moduleResolution', 'node',
-      '--target', 'ES2020',
-      '--outDir', outDir,
-      '--skipLibCheck',
-      '--esModuleInterop'
-    ],
-    { cwd: ROOT, encoding: 'utf8' }
-  );
-  if (compile.status !== 0) {
-    process.stderr.write(compile.stdout || '');
-    process.stderr.write(compile.stderr || '');
-    process.exit(compile.status || 1);
+  // typecheck valida o projeto inteiro; este contrato exercita as rotas no Node.
+  // A API evita depender de flags de resolução legadas do CLI.
+  for (const file of ['router/router.ts', 'state/app-state.ts', 'state/types.ts']) {
+    const source = await fs.readFile(path.join(ROOT, 'src', file), 'utf8');
+    const result = ts.transpileModule(source, {
+      fileName: file,
+      reportDiagnostics: true,
+      compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 }
+    });
+    const errors = (result.diagnostics || []).filter(
+      (diagnostic) => diagnostic.category === ts.DiagnosticCategory.Error
+    );
+    if (errors.length)
+      throw new Error(
+        errors
+          .map((diagnostic) => ts.flattenDiagnosticMessageText(diagnostic.messageText, '\n'))
+          .join('\n')
+      );
+    const output = path.join(outDir, file.replace(/\.ts$/, '.js'));
+    await fs.mkdir(path.dirname(output), { recursive: true });
+    await fs.writeFile(output, result.outputText);
   }
 
   Object.defineProperty(globalThis, 'navigator', { value: { onLine: true }, configurable: true });
@@ -40,7 +42,10 @@ try {
   const linksDisabled = parseHash('#links', false);
 
   const checks = {
-    checklistDecodes: checklist.name === 'checklist' && checklist.checklistFilter === 'Não' && checklist.checklistQuery === 'clone',
+    checklistDecodes:
+      checklist.name === 'checklist' &&
+      checklist.checklistFilter === 'Não' &&
+      checklist.checklistQuery === 'clone',
     checklistRedirects: routeToHash(checklist) === '#checklist?f=pendentes&q=clone',
     hqDecodes: hq.name === 'hq' && hq.itemId === 123,
     hqRedirects: routeToHash(hq) === '#checklist/hq/123',
