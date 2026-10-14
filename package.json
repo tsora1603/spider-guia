@@ -63,6 +63,6 @@
   "dependencies": {
     "@supabase/supabase-js": "2.117.3",
     "lucide-preact": "^1.54.0",
-    "preact": "^10.29.8"
+    "preact": "^11.0.1"
   }
 }

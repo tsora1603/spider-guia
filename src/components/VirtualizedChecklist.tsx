@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'preact/hooks';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { itemsById, checklistReadings as readings, coveredByPanini, resolveChecklistId, type ChecklistGroup, type Reading } from '../data/model';
 import { appState } from '../state/app-state';
 import { router } from '../runtime/controller';
@@ -154,8 +154,9 @@ export function VirtualizedChecklist() {
   const hostRef = useRef<HTMLDivElement>(null);
   const focusWasActive = useRef(design.focusMode);
 
-  useEffect(() => setDeepLinkPending(focusedItemId ?? null), [focusedItemId]);
-  useEffect(() => {
+  // Restaure o alvo e seu grupo antes de pintar a tela retomada.
+  useLayoutEffect(() => setDeepLinkPending(focusedItemId ?? null), [focusedItemId]);
+  useLayoutEffect(() => {
     if (deepLinkPending == null) return;
     const group = groups.find(group => group.items.some(item => item.id === deepLinkPending));
     if (!group || group.items.length === 1) return;
@@ -235,9 +236,11 @@ export function VirtualizedChecklist() {
   const windowed = computeVirtualWindow(heights, forcedTop ?? relativeScroll, viewport.height, forcedTop == null ? 700 : 0);
   const visibleGroups = groups.slice(windowed.start, windowed.end);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (deepLinkPending == null || !visibleItems.some(item => item.id === deepLinkPending)) return;
     const targetId = deepLinkPending;
+    let frame = 0;
+    let cancelled = false;
     const timeout = window.setTimeout(() => {
       if (!design.focusMode && forcedChunkIndex >= 0) {
         const top = (hostRef.current?.getBoundingClientRect().top || 0) + scrollY;
@@ -245,6 +248,7 @@ export function VirtualizedChecklist() {
       }
       let attempts = 0;
       const focusWhenReady = () => {
+        if (cancelled) return;
         const target = document.getElementById(`hq-${targetId}`);
         if (target) {
           target.scrollIntoView({ block: 'center', behavior: 'auto' });
@@ -253,11 +257,15 @@ export function VirtualizedChecklist() {
           // Manter o chunk-alvo montado até a primeira navegação manual.
           // Liberá-lo imediatamente pode desmontar a HQ focada quando as
           // alturas estimadas da virtualização ainda estão sendo medidas.
-        } else if (++attempts < 45) requestAnimationFrame(focusWhenReady);
+        } else if (++attempts < 45) frame = requestAnimationFrame(focusWhenReady);
       };
-      requestAnimationFrame(focusWhenReady);
+      frame = requestAnimationFrame(focusWhenReady);
     }, 30);
-    return () => clearTimeout(timeout);
+    return () => {
+      cancelled = true;
+      clearTimeout(timeout);
+      cancelAnimationFrame(frame);
+    };
   }, [deepLinkPending, design.focusMode, forcedChunkIndex, query, filter]);
 
   useEffect(() => {
