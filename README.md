@@ -1,6 +1,6 @@
 # SPIDER·GUIA
 
-Guia de leitura do Homem-Aranha com **1.236 leituras**, Checklist, Saga do Clone, links e progresso salvo no navegador. Contas cadastradas pelo administrador podem sincronizar pelo Supabase.
+Guia de leitura do Homem-Aranha **completamente vibe-codado** com **1.236 leituras**, Checklist, Saga do Clone, links e progresso salvo no navegador. Contas cadastradas pelo administrador podem sincronizar pelo Supabase.
 
 **[Abrir o site no GitHub Pages](https://tsora1603.github.io/spider-guia/)**
 
