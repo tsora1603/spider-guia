@@ -49,20 +49,20 @@
     "read-through:check": "node scripts/check-read-through.mjs"
   },
   "devDependencies": {
-    "@playwright/test": "^1.63.0",
+    "@playwright/test": "^1.64.1",
     "@types/node": "^24.19.1",
     "eslint": "^9.0.0",
-    "prettier": "^3.0.0",
+    "prettier": "^3.9.10",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.70.0",
+    "typescript-eslint": "^8.71.2",
     "vite": "^8.3.4",
-    "vitest": "^5.0.3",
+    "vitest": "^5.0.5",
     "yaml": "2.9.1",
-    "zod": "^4.6.5"
+    "zod": "^4.6.7"
   },
   "dependencies": {
-    "@supabase/supabase-js": "2.117.3",
-    "lucide-preact": "^1.54.0",
+    "@supabase/supabase-js": "2.118.0",
+    "lucide-preact": "^1.59.0",
     "preact": "^11.0.1"
   }
 }
