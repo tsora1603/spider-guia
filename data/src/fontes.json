@@ -116,7 +116,27 @@
   },
   {
     "source": "Wikipedia: Clone Saga",
-    "usedFor": "Saga de 1994–1996, desfecho com Norman Osborn e morte de Ben Reilly; Saga do Clone original (ASM #149)",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "Saga de 1994–1996, "
+        },
+        {
+          "text": "desfecho com Norman Osborn",
+          "spoiler": "forte"
+        },
+        {
+          "text": " e "
+        },
+        {
+          "text": "morte de Ben Reilly",
+          "spoiler": "forte"
+        },
+        {
+          "text": "; Saga do Clone original (ASM #149)"
+        }
+      ]
+    },
     "link": "https://en.wikipedia.org/wiki/Clone_Saga"
   },
   {
@@ -126,12 +146,42 @@
   },
   {
     "source": "Nick Peron: Spectacular Spider-Man #226",
-    "usedFor": "Gravidez de MJ na Spectacular #220; troca de lugar entre Ben e Peter na #224; revelação da #226",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "Gravidez de MJ",
+          "spoiler": "forte"
+        },
+        {
+          "text": " na Spectacular #220; troca de lugar entre Ben e Peter na #224; revelação da #226"
+        }
+      ]
+    },
     "link": "https://nickperon.com/spectacular-spiderman-1990s/spectacular-spider-man-226?format=amp"
   },
   {
     "source": "Comicbook.com: Back Issues: The Death of Spider-Man's Aunt May",
-    "usedFor": "Morte da Tia May na ASM #400, bebê nasce morto na #418, May atriz revelada, Spectacular #263 e Spider-Man #98",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "Morte da Tia May na ASM #400, "
+        },
+        {
+          "text": "bebê nasce morto",
+          "spoiler": "forte"
+        },
+        {
+          "text": " na #418, "
+        },
+        {
+          "text": "May atriz revelada",
+          "spoiler": "forte"
+        },
+        {
+          "text": ", Spectacular #263 e Spider-Man #98"
+        }
+      ]
+    },
     "link": "https://comicbook.com/marvel/news/spider-man-peter-parker-how-aunt-may-dies-comics-death-explained-back-issues/"
   },
   {
@@ -281,7 +331,20 @@
   },
   {
     "source": "How To Love Comics: Amazing Spider-Man: Sins Rising Reading Order",
-    "usedFor": "Amazing (2018) #37 (Kindred ressuscita o Sin-Eater); ordem de Sins Rising: #44, Prelude, #45–48, Sins of Norman Osborn, #49",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "Amazing (2018) #37 ("
+        },
+        {
+          "text": "Kindred ressuscita o Sin-Eater",
+          "spoiler": "forte"
+        },
+        {
+          "text": "); ordem de Sins Rising: #44, Prelude, #45–48, Sins of Norman Osborn, #49"
+        }
+      ]
+    },
     "link": "https://www.howtolovecomics.com/2020/07/12/spider-man-sins-rising-reading/"
   },
   {
@@ -336,7 +399,20 @@
   },
   {
     "source": "Penguin Random House: Ultimate Spider-Man Vol. 1 — Married with Children",
-    "usedFor": "Segunda fonte para o casamento de Peter e MJ e os dois filhos; coletânea #1–6.",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "Segunda fonte para "
+        },
+        {
+          "text": "o casamento de Peter e MJ",
+          "spoiler": "forte"
+        },
+        {
+          "text": " e os dois filhos; coletânea #1–6."
+        }
+      ]
+    },
     "link": "https://www.penguinrandomhouse.com/books/746609/ultimate-spider-man-by-jonathan-hickman-vol-1-married-with-children-by-jonathan-hickman/"
   },
   {
@@ -346,17 +422,56 @@
   },
   {
     "source": "Omniverse Comics Guide: Spider-Man 1986–1987 Reading Order — Fearful Symmetry",
-    "usedFor": "Ordem indexada usada na tentativa de fixar o encaixe de A Morte de Jean DeWolff; o trecho coloca Spectacular #107–110 após Amazing #272.",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "Ordem indexada usada na tentativa de fixar o encaixe de "
+        },
+        {
+          "text": "A Morte de Jean DeWolff",
+          "spoiler": "forte"
+        },
+        {
+          "text": "; o trecho coloca Spectacular #107–110 após Amazing #272."
+        }
+      ]
+    },
     "link": "https://omniversecomics.guide/2025/12/09/spider-man-1986-1987-reading-order-fearful-symmetry/"
   },
   {
     "source": "Grand Comics Database: Peter Parker, The Spectacular Spider-Man #107",
-    "usedFor": "Data de capa e dados bibliográficos da edição #107, para corroborar a janela de publicação de A Morte de Jean DeWolff.",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "Data de capa e dados bibliográficos da edição #107, para corroborar a janela de publicação de "
+        },
+        {
+          "text": "A Morte de Jean DeWolff",
+          "spoiler": "forte"
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
     "link": "https://www.comics.org/issue/40555/"
   },
   {
     "source": "Grand Comics Database: Peter Parker, The Spectacular Spider-Man #110",
-    "usedFor": "Data de capa e dados bibliográficos da edição #110, para corroborar a janela de publicação de A Morte de Jean DeWolff.",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "Data de capa e dados bibliográficos da edição #110, para corroborar a janela de publicação de "
+        },
+        {
+          "text": "A Morte de Jean DeWolff",
+          "spoiler": "forte"
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
     "link": "https://www.comics.org/issue/902492/"
   },
   {
@@ -481,7 +596,20 @@
   },
   {
     "source": "Marvel Database: Amazing Spider-Man Vol 2 #35",
-    "usedFor": "#476 — “Coming Out”, descoberta do segredo por May e data de lançamento usada no guia.",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "#476 — “Coming Out”, "
+        },
+        {
+          "text": "descoberta do segredo por May",
+          "spoiler": "forte"
+        },
+        {
+          "text": " e data de lançamento usada no guia."
+        }
+      ]
+    },
     "link": "https://marvel.fandom.com/wiki/Amazing_Spider-Man_Vol_2_35"
   },
   {
@@ -491,7 +619,20 @@
   },
   {
     "source": "Marvel Database: Amazing Spider-Man Vol 1 #122",
-    "usedFor": "#122 — desfecho imediato de Gwen Stacy; morte aparente de Norman Osborn.",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "#122 — desfecho imediato de Gwen Stacy; "
+        },
+        {
+          "text": "morte aparente de Norman Osborn",
+          "spoiler": "forte"
+        },
+        {
+          "text": "."
+        }
+      ]
+    },
     "link": "https://marvel.fandom.com/wiki/Amazing_Spider-Man_Vol_1_122"
   },
   {
@@ -501,7 +642,20 @@
   },
   {
     "source": "Marvel Database: Amazing Spider-Man Vol 1 #200",
-    "usedFor": "#200 — confronto com o criminoso que matou Tio Ben; confirmação do marco.",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "#200 — confronto com "
+        },
+        {
+          "text": "o criminoso que matou Tio Ben",
+          "spoiler": "forte"
+        },
+        {
+          "text": "; confirmação do marco."
+        }
+      ]
+    },
     "link": "https://marvel.fandom.com/wiki/Amazing_Spider-Man_Vol_1_200"
   },
   {
@@ -526,7 +680,20 @@
   },
   {
     "source": "Grand Comics Database: The Amazing Spider-Man #122",
-    "usedFor": "#122; confirmação independente do desfecho envolvendo Norman Osborn e dados bibliográficos.",
+    "usedFor": {
+      "parts": [
+        {
+          "text": "#122; confirmação independente do "
+        },
+        {
+          "text": "desfecho envolvendo Norman Osborn",
+          "spoiler": "forte"
+        },
+        {
+          "text": " e dados bibliográficos."
+        }
+      ]
+    },
     "link": "https://www.comics.org/issue/26427/"
   },
   {

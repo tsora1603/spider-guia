@@ -1,10 +1,10 @@
 {
   "summary": {
-    "generatedAt": "2026-10-07T17:04:08.691Z",
+    "generatedAt": "2026-11-05T14:44:57.631Z",
     "appliedAutomatically": 0,
-    "total": 292,
-    "leve": 42,
-    "forte": 250,
+    "total": 199,
+    "leve": 25,
+    "forte": 174,
     "note": "Lista para revisão humana. decision=pending não altera os dados nem o runtime."
   },
   "suggestions": [
@@ -91,26 +91,6 @@
     {
       "id": "SP-0009",
       "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/113/instructions",
-      "text": "É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838).",
-      "match": "ressuscita",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:ressurreição",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0010",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/113/instructions",
-      "text": "Kindred ressuscita o Sin-Eater",
-      "match": "Kindred ressuscita o Sin-Eater",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0011",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
       "path": "/items/122/instructions",
       "text": "Por que ajuda: É o desfecho de Dark Web.",
       "match": "desfecho",
@@ -119,7 +99,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0012",
+      "id": "SP-0010",
       "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
       "path": "/items/2/instructions",
       "text": "Por que ajuda: Primeiro encontro Spider-Man/Doctor Strange;",
@@ -129,7 +109,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0013",
+      "id": "SP-0011",
       "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
       "path": "/items/26/instructions",
       "text": "também introduz Monica Rambeau como nova Captain Marvel.",
@@ -139,7 +119,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0014",
+      "id": "SP-0012",
       "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
       "path": "/items/35/instructions",
       "text": "A #264 ainda mostra Peter com um traje preto comum, não com o simbionte.",
@@ -149,27 +129,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0015",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/39/instructions",
-      "text": "A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
-      "match": "A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0016",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/39/instructions",
-      "text": "A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
-      "match": "ressuscita",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:ressurreição",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0017",
+      "id": "SP-0013",
       "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
       "path": "/items/42/instructions",
       "text": "Como encaixar: Leia depois da Amazing #292 e antes do bloco do casamento, em 1987.",
@@ -179,97 +139,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0018",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/43/instructions",
-      "text": "Como encaixar: Leia depois da #292 (MJ aceita o pedido).",
-      "match": "aceita o pedido",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:cerimônia",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0019",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/43/instructions",
-      "text": "É este casamento que One More Day apaga (#544–545).",
-      "match": "É este casamento que One More Day apaga (#544–545).",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0020",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/43/instructions",
-      "text": "É este casamento que One More Day apaga (#544–545).",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0021",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/43/instructions",
-      "text": "Por que ajuda: O casamento acontece no Annual, fora da contagem.",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0022",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/43/instructions",
-      "text": "Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia.",
-      "match": "cerimônia",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:cerimônia",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0023",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/44/instructions",
-      "text": "a lua de mel de Peter e Mary Jane",
-      "match": "a lua de mel de Peter e Mary Jane",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0024",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/44/instructions",
-      "text": "Como encaixar: Leia depois do Amazing Spider-Man Annual #21 (casamento) e antes de A Última Caçada de Kraven.",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0025",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/44/instructions",
-      "text": "Por que ajuda: É a lua de mel de Peter e Mary Jane e a continuação imediata do casamento, desenvolvendo a relação dos dois no início da vida de casados.",
-      "match": "lua de mel",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0026",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/44/instructions",
-      "text": "Por que ajuda: É a lua de mel de Peter e Mary Jane e a continuação imediata do casamento, desenvolvendo a relação dos dois no início da vida de casados.",
-      "match": "vida de casados",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:cerimônia",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0027",
+      "id": "SP-0014",
       "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
       "path": "/items/45/instructions",
       "text": "Como encaixar: Depois do casamento, leia nesta ordem: Web of Spider-Man #31 → Amazing #293 → Spectacular (1976) #131 → Web #32 → Amazing #294 → Spectacular #132.",
@@ -279,147 +149,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0028",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/5/instructions",
-      "text": "mantemos Confirmação: Parcial\nPor que ajuda: Peter descobre a verdade sobre Richard e Mary Parker, entendendo que seus pais eram agentes duplos e exonerando-os das acusações de traição.",
-      "match": "descobre",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0029",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/5/instructions",
-      "text": "mantemos Confirmação: Parcial\nPor que ajuda: Peter descobre a verdade sobre Richard e Mary Parker, entendendo que seus pais eram agentes duplos e exonerando-os das acusações de traição.",
-      "match": "traição",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:traição/ruptura",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0030",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/5/instructions",
-      "text": "Peter descobre a verdade sobre Richard e Mary Parker, entendendo que seus pais eram agentes duplos e exonerando-os das acusações de traição.",
-      "match": "Peter descobre a verdade sobre Richard e Mary Parker, entendendo que seus pais eram agentes duplos e exonerando-os das acusações de traição.",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0031",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/68/instructions",
-      "text": "O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições.",
-      "match": "larga o manto",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:poderes/aposentadoria",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0032",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/68/instructions",
-      "text": "O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições.",
-      "match": "desfecho",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:desfecho",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0033",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/69/instructions",
-      "text": "Peter 'morre' e volta com habilidades novas",
-      "match": "Peter 'morre' e volta com habilidades novas",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0034",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/69/instructions",
-      "text": "Por que ajuda: Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski).",
-      "match": "morre",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0035",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/70/instructions",
-      "text": "Na Civil War #2, Peter revela a identidade em rede nacional.",
-      "match": "Na Civil War #2, Peter revela a identidade em rede nacional.",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0036",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/70/instructions",
-      "text": "Por que ajuda: Na Civil War #2, Peter revela a identidade em rede nacional.",
-      "match": "revela",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0037",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/87/instructions",
-      "text": "O acordo com Mephisto, que apaga o casamento",
-      "match": "O acordo com Mephisto, que apaga o casamento",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0038",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/87/instructions",
-      "text": "Por que ajuda: O acordo com Mephisto, que apaga o casamento, passa por essas duas edições.",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0039",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/87/instructions",
-      "text": "Por que ajuda: O acordo com Mephisto, que apaga o casamento, passa por essas duas edições.",
-      "match": "acordo com",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:Mephisto/pacto",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0040",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/88/instructions",
-      "text": "o casamento de Peter e MJ",
-      "match": "o casamento de Peter e MJ",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0041",
-      "sourceFile": "data/src/catalog/001-leitura-intercalada.json",
-      "path": "/items/88/instructions",
-      "text": "Por que ajuda: Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado.",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0042",
+      "id": "SP-0015",
       "sourceFile": "data/src/catalog/010-0-contexto.json",
       "path": "/items/0/instructions",
       "text": "Retorno do clone, ainda sem nome (mai/1994, segundo a Wikipedia).",
@@ -429,17 +159,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0043",
-      "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
-      "path": "/items/1/instructions",
-      "text": "O clone passa a se chamar Ben Reilly.",
-      "match": "clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0044",
+      "id": "SP-0016",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/10/instructions",
       "text": "Saga do Clone",
@@ -449,7 +169,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0045",
+      "id": "SP-0017",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/12/instructions",
       "text": "Saga do Clone",
@@ -459,7 +179,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0046",
+      "id": "SP-0018",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/14/instructions",
       "text": "Saga do Clone",
@@ -469,7 +189,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0047",
+      "id": "SP-0019",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/15/instructions",
       "text": "Saga do Clone",
@@ -479,7 +199,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0048",
+      "id": "SP-0020",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/16/instructions",
       "text": "Saga do Clone",
@@ -489,7 +209,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0049",
+      "id": "SP-0021",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/2/instructions",
       "text": "Saga do Clone",
@@ -499,7 +219,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0050",
+      "id": "SP-0022",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/4/instructions",
       "text": "Saga do Clone",
@@ -509,7 +229,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0051",
+      "id": "SP-0023",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/5/instructions",
       "text": "Saga do Clone",
@@ -519,7 +239,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0052",
+      "id": "SP-0024",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/8/instructions",
       "text": "Saga do Clone",
@@ -529,7 +249,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0053",
+      "id": "SP-0025",
       "sourceFile": "data/src/catalog/011-1-reaparicao-de-ben-reilly-out-1994-jan-1995.json",
       "path": "/items/9/instructions",
       "text": "Saga do Clone",
@@ -539,37 +259,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0054",
-      "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
-      "path": "/items/0/instructions",
-      "text": "Mary Jane anuncia que está grávida.",
-      "match": "grávida",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:gravidez/família",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0055",
-      "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
-      "path": "/items/1/instructions",
-      "text": "Morte do Doutor Octopus.",
-      "match": "Morte do Doutor Octopus.",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0056",
-      "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
-      "path": "/items/1/instructions",
-      "text": "Morte do Doutor Octopus.",
-      "match": "Morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0057",
+      "id": "SP-0026",
       "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
       "path": "/items/10/instructions",
       "text": "Saga do Clone",
@@ -579,7 +269,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0058",
+      "id": "SP-0027",
       "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
       "path": "/items/12/instructions",
       "text": "Saga do Clone",
@@ -589,7 +279,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0059",
+      "id": "SP-0028",
       "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
       "path": "/items/13/instructions",
       "text": "Saga do Clone",
@@ -599,7 +289,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0060",
+      "id": "SP-0029",
       "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
       "path": "/items/14/instructions",
       "text": "Saga do Clone",
@@ -609,7 +299,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0061",
+      "id": "SP-0030",
       "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
       "path": "/items/15/instructions",
       "text": "Saga do Clone",
@@ -619,7 +309,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0062",
+      "id": "SP-0031",
       "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
       "path": "/items/3/instructions",
       "text": "Saga do Clone",
@@ -629,7 +319,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0063",
+      "id": "SP-0032",
       "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
       "path": "/items/4/instructions",
       "text": "Saga do Clone",
@@ -639,7 +329,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0064",
+      "id": "SP-0033",
       "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
       "path": "/items/7/instructions",
       "text": "Saga do Clone",
@@ -649,7 +339,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0065",
+      "id": "SP-0034",
       "sourceFile": "data/src/catalog/012-2-misterio-dos-clones-dez-1994-mar-1995.json",
       "path": "/items/9/instructions",
       "text": "Saga do Clone",
@@ -659,7 +349,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0066",
+      "id": "SP-0035",
       "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
       "path": "/items/0/instructions",
       "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
@@ -669,7 +359,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0067",
+      "id": "SP-0036",
       "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
       "path": "/items/0/instructions",
       "text": "Saga do Clone",
@@ -679,7 +369,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0068",
+      "id": "SP-0037",
       "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
       "path": "/items/1/instructions",
       "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
@@ -689,7 +379,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0069",
+      "id": "SP-0038",
       "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
       "path": "/items/1/instructions",
       "text": "Saga do Clone",
@@ -699,7 +389,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0070",
+      "id": "SP-0039",
       "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
       "path": "/items/10/instructions",
       "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
@@ -709,7 +399,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0071",
+      "id": "SP-0040",
       "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
       "path": "/items/10/instructions",
       "text": "Saga do Clone",
@@ -719,37 +409,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0072",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/11/instructions",
-      "text": "A revelação polêmica: os exames indicam que Peter é o clone e Ben, o original.",
-      "match": "A revelação polêmica: os exames indicam que Peter é o clone e Ben, o original.",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0073",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/11/instructions",
-      "text": "A revelação polêmica: os exames indicam que Peter é o clone e Ben, o original.",
-      "match": "revelação",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0074",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/11/instructions",
-      "text": "A revelação polêmica: os exames indicam que Peter é o clone e Ben, o original.",
-      "match": "clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0075",
+      "id": "SP-0041",
       "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
       "path": "/items/2/instructions",
       "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
@@ -759,8 +419,348 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0076",
+      "id": "SP-0042",
       "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/2/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0043",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/3/instructions",
+      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
+      "match": "revelação",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:revelação/identidade",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0044",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/3/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0045",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/5/instructions",
+      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
+      "match": "revelação",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:revelação/identidade",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0046",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/5/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0047",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/7/instructions",
+      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
+      "match": "revelação",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:revelação/identidade",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0048",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/7/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0049",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/8/instructions",
+      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
+      "match": "revelação",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:revelação/identidade",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0050",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/8/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0051",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/9/instructions",
+      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
+      "match": "revelação",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:revelação/identidade",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0052",
+      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
+      "path": "/items/9/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0053",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/0/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0054",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/1/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0055",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/12/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0056",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/13/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0057",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/14/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0058",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/16/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0059",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/17/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0060",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/18/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0061",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/19/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0062",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/2/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0063",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/3/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0064",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/4/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0065",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/5/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0066",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/7/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0067",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/8/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0068",
+      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
+      "path": "/items/9/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0069",
+      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
+      "path": "/items/11/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0070",
+      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
+      "path": "/items/12/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0071",
+      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
+      "path": "/items/13/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0072",
+      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
+      "path": "/items/14/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0073",
+      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
+      "path": "/items/16/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0074",
+      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
+      "path": "/items/17/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0075",
+      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
+      "path": "/items/19/instructions",
+      "text": "Saga do Clone",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0076",
+      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/2/instructions",
       "text": "Saga do Clone",
       "match": "Clone",
@@ -770,346 +770,6 @@
     },
     {
       "id": "SP-0077",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/3/instructions",
-      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
-      "match": "revelação",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0078",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/3/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0079",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/5/instructions",
-      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
-      "match": "revelação",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0080",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/5/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0081",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/7/instructions",
-      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
-      "match": "revelação",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0082",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/7/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0083",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/8/instructions",
-      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
-      "match": "revelação",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0084",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/8/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0085",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/9/instructions",
-      "text": "Legado Parker e a grande revelação (abr/1995–jul/1995).",
-      "match": "revelação",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0086",
-      "sourceFile": "data/src/catalog/013-3-legado-parker-e-a-grande-revelacao-abr-1995-jul-1995.json",
-      "path": "/items/9/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0087",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/0/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0088",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/1/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0089",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/12/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0090",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/13/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0091",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/14/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0092",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/16/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0093",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/17/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0094",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/18/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0095",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/19/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0096",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/2/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0097",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/3/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0098",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/4/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0099",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/5/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0100",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/7/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0101",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/8/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0102",
-      "sourceFile": "data/src/catalog/014-4-maximum-clonage-e-a-aposentadoria-de-peter-jul-1995-out-1995.json",
-      "path": "/items/9/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0103",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/11/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0104",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/12/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0105",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/13/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0106",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/14/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0107",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/16/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0108",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/17/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0109",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/19/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0110",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/2/instructions",
-      "text": "Saga do Clone",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0111",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/20/instructions",
       "text": "Saga do Clone",
@@ -1119,7 +779,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0112",
+      "id": "SP-0078",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/21/instructions",
       "text": "Saga do Clone",
@@ -1129,7 +789,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0113",
+      "id": "SP-0079",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/23/instructions",
       "text": "Saga do Clone",
@@ -1139,7 +799,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0114",
+      "id": "SP-0080",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/24/instructions",
       "text": "Saga do Clone",
@@ -1149,7 +809,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0115",
+      "id": "SP-0081",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/26/instructions",
       "text": "Saga do Clone",
@@ -1159,7 +819,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0116",
+      "id": "SP-0082",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/27/instructions",
       "text": "Saga do Clone",
@@ -1169,7 +829,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0117",
+      "id": "SP-0083",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/28/instructions",
       "text": "Saga do Clone",
@@ -1179,7 +839,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0118",
+      "id": "SP-0084",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/29/instructions",
       "text": "Saga do Clone",
@@ -1189,7 +849,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0119",
+      "id": "SP-0085",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/3/instructions",
       "text": "Saga do Clone",
@@ -1199,7 +859,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0120",
+      "id": "SP-0086",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/30/instructions",
       "text": "Saga do Clone",
@@ -1209,7 +869,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0121",
+      "id": "SP-0087",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/31/instructions",
       "text": "Saga do Clone",
@@ -1219,7 +879,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0122",
+      "id": "SP-0088",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/32/instructions",
       "text": "Saga do Clone",
@@ -1229,7 +889,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0123",
+      "id": "SP-0089",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/33/instructions",
       "text": "Saga do Clone",
@@ -1239,7 +899,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0124",
+      "id": "SP-0090",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/34/instructions",
       "text": "Saga do Clone",
@@ -1249,7 +909,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0125",
+      "id": "SP-0091",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/36/instructions",
       "text": "Saga do Clone",
@@ -1259,7 +919,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0126",
+      "id": "SP-0092",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/37/instructions",
       "text": "Saga do Clone",
@@ -1269,47 +929,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0127",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/38/instructions",
-      "text": "Ben é fotografado sem máscara",
-      "match": "Ben é fotografado sem máscara",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0128",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/38/instructions",
-      "text": "Ben é fotografado sem máscara;",
-      "match": "sem máscara",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0129",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/38/instructions",
-      "text": "o casamento de Peter e MJ",
-      "match": "o casamento de Peter e MJ",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0130",
-      "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
-      "path": "/items/38/instructions",
-      "text": "o casamento de Peter e MJ não vai bem.",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0131",
+      "id": "SP-0093",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/39/instructions",
       "text": "Saga do Clone",
@@ -1319,7 +939,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0132",
+      "id": "SP-0094",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/4/instructions",
       "text": "Saga do Clone",
@@ -1329,7 +949,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0133",
+      "id": "SP-0095",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/40/instructions",
       "text": "Saga do Clone",
@@ -1339,7 +959,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0134",
+      "id": "SP-0096",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/41/instructions",
       "text": "Saga do Clone",
@@ -1349,7 +969,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0135",
+      "id": "SP-0097",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/42/instructions",
       "text": "Saga do Clone",
@@ -1359,7 +979,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0136",
+      "id": "SP-0098",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/43/instructions",
       "text": "Saga do Clone",
@@ -1369,7 +989,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0137",
+      "id": "SP-0099",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/44/instructions",
       "text": "Saga do Clone",
@@ -1379,7 +999,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0138",
+      "id": "SP-0100",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/45/instructions",
       "text": "Saga do Clone",
@@ -1389,7 +1009,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0139",
+      "id": "SP-0101",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/47/instructions",
       "text": "Saga do Clone",
@@ -1399,7 +1019,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0140",
+      "id": "SP-0102",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/48/instructions",
       "text": "Saga do Clone",
@@ -1409,7 +1029,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0141",
+      "id": "SP-0103",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/49/instructions",
       "text": "Saga do Clone",
@@ -1419,7 +1039,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0142",
+      "id": "SP-0104",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/5/instructions",
       "text": "Saga do Clone",
@@ -1429,7 +1049,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0143",
+      "id": "SP-0105",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/7/instructions",
       "text": "Saga do Clone",
@@ -1439,7 +1059,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0144",
+      "id": "SP-0106",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/8/instructions",
       "text": "Saga do Clone",
@@ -1449,7 +1069,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0145",
+      "id": "SP-0107",
       "sourceFile": "data/src/catalog/015-5-ben-reilly-como-homem-aranha-nov-1995-out-1996.json",
       "path": "/items/9/instructions",
       "text": "Saga do Clone",
@@ -1459,7 +1079,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0146",
+      "id": "SP-0108",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/0/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1469,7 +1089,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0147",
+      "id": "SP-0109",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/0/instructions",
       "text": "Saga do Clone",
@@ -1479,7 +1099,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0148",
+      "id": "SP-0110",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/1/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1489,7 +1109,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0149",
+      "id": "SP-0111",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/1/instructions",
       "text": "Saga do Clone",
@@ -1499,7 +1119,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0150",
+      "id": "SP-0112",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/10/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1509,7 +1129,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0151",
+      "id": "SP-0113",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/10/instructions",
       "text": "Saga do Clone",
@@ -1519,7 +1139,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0152",
+      "id": "SP-0114",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/11/instructions",
       "text": "Preparam o desfecho da saga.",
@@ -1529,7 +1149,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0153",
+      "id": "SP-0115",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/12/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1539,7 +1159,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0154",
+      "id": "SP-0116",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/12/instructions",
       "text": "Saga do Clone",
@@ -1549,7 +1169,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0155",
+      "id": "SP-0117",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/13/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1559,7 +1179,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0156",
+      "id": "SP-0118",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/13/instructions",
       "text": "Saga do Clone",
@@ -1569,7 +1189,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0157",
+      "id": "SP-0119",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/14/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1579,7 +1199,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0158",
+      "id": "SP-0120",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/14/instructions",
       "text": "Saga do Clone",
@@ -1589,7 +1209,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0159",
+      "id": "SP-0121",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/16/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1599,7 +1219,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0160",
+      "id": "SP-0122",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/16/instructions",
       "text": "Saga do Clone",
@@ -1609,7 +1229,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0161",
+      "id": "SP-0123",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/17/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1619,7 +1239,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0162",
+      "id": "SP-0124",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/17/instructions",
       "text": "Saga do Clone",
@@ -1629,7 +1249,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0163",
+      "id": "SP-0125",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/18/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1639,7 +1259,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0164",
+      "id": "SP-0126",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/18/instructions",
       "text": "Saga do Clone",
@@ -1649,7 +1269,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0165",
+      "id": "SP-0127",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/19/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1659,7 +1279,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0166",
+      "id": "SP-0128",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/19/instructions",
       "text": "Saga do Clone",
@@ -1669,7 +1289,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0167",
+      "id": "SP-0129",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/2/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1679,7 +1299,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0168",
+      "id": "SP-0130",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/2/instructions",
       "text": "Saga do Clone",
@@ -1689,7 +1309,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0169",
+      "id": "SP-0131",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/20/instructions",
       "text": "Final da saga.",
@@ -1699,7 +1319,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0170",
+      "id": "SP-0132",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/21/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1709,7 +1329,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0171",
+      "id": "SP-0133",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/21/instructions",
       "text": "Saga do Clone",
@@ -1719,37 +1339,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0172",
-      "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
-      "path": "/items/22/instructions",
-      "text": "Ben morre salvando Peter, que volta a ser o Homem-Aranha.",
-      "match": "morre",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0173",
-      "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
-      "path": "/items/22/instructions",
-      "text": "Osborn confirma que Peter é o original e Ben é o clone;",
-      "match": "original",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0174",
-      "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
-      "path": "/items/22/instructions",
-      "text": "Osborn confirma que Peter é o original e Ben é o clone; Ben morre salvando Peter, que volta a ser o Homem-Aranha.",
-      "match": "Osborn confirma que Peter é o original e Ben é o clone; Ben morre salvando Peter, que volta a ser o Homem-Aranha.",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0175",
+      "id": "SP-0134",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/24/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1759,7 +1349,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0176",
+      "id": "SP-0135",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/24/instructions",
       "text": "Saga do Clone",
@@ -1769,7 +1359,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0177",
+      "id": "SP-0136",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/3/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1779,7 +1369,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0178",
+      "id": "SP-0137",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/3/instructions",
       "text": "Saga do Clone",
@@ -1789,7 +1379,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0179",
+      "id": "SP-0138",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/4/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1799,7 +1389,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0180",
+      "id": "SP-0139",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/4/instructions",
       "text": "Saga do Clone",
@@ -1809,7 +1399,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0181",
+      "id": "SP-0140",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/5/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1819,7 +1409,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0182",
+      "id": "SP-0141",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/5/instructions",
       "text": "Saga do Clone",
@@ -1829,7 +1419,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0183",
+      "id": "SP-0142",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/6/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1839,7 +1429,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0184",
+      "id": "SP-0143",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/6/instructions",
       "text": "Saga do Clone",
@@ -1849,7 +1439,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0185",
+      "id": "SP-0144",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/7/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1859,7 +1449,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0186",
+      "id": "SP-0145",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/7/instructions",
       "text": "Saga do Clone",
@@ -1869,7 +1459,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0187",
+      "id": "SP-0146",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/8/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1879,7 +1469,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0188",
+      "id": "SP-0147",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/8/instructions",
       "text": "Saga do Clone",
@@ -1889,7 +1479,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0189",
+      "id": "SP-0148",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/9/instructions",
       "text": "Desfecho: Osborn e Revelations (out/1996–dez/1996).",
@@ -1899,7 +1489,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0190",
+      "id": "SP-0149",
       "sourceFile": "data/src/catalog/016-6-desfecho-osborn-e-revelations-out-1996-dez-1996.json",
       "path": "/items/9/instructions",
       "text": "Saga do Clone",
@@ -1909,7 +1499,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0191",
+      "id": "SP-0150",
       "sourceFile": "data/src/catalog/017-7-depois-da-saga-contexto.json",
       "path": "/items/0/instructions",
       "text": "Retoma fios soltos do desfecho.",
@@ -1919,7 +1509,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0192",
+      "id": "SP-0151",
       "sourceFile": "data/src/catalog/017-7-depois-da-saga-contexto.json",
       "path": "/items/1/instructions",
       "text": "siga a ordem em Ler → Saga do Clone.",
@@ -1929,27 +1519,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0193",
-      "sourceFile": "data/src/catalog/017-7-depois-da-saga-contexto.json",
-      "path": "/items/4/instructions",
-      "text": "Apresenta a Spider-Girl (May Parker).",
-      "match": "Apresenta a Spider-Girl (May Parker).",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0194",
-      "sourceFile": "data/src/catalog/017-7-depois-da-saga-contexto.json",
-      "path": "/items/4/instructions",
-      "text": "Apresenta a Spider-Girl (May Parker).",
-      "match": "Apresenta",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:estreia/origem",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0195",
+      "id": "SP-0152",
       "sourceFile": "data/src/catalog/018-pos-saga-do-clone-1997.json",
       "path": "/items/0/instructions",
       "text": "Como encaixar: Leia no bloco Pós-Saga do Clone / 1997;",
@@ -1959,7 +1529,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0196",
+      "id": "SP-0153",
       "sourceFile": "data/src/catalog/018-pos-saga-do-clone-1997.json",
       "path": "/items/0/instructions",
       "text": "Por que ajuda: Complementa o período Pós-Saga do Clone / 1997 com material anual da respectiva série.",
@@ -1969,7 +1539,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0197",
+      "id": "SP-0154",
       "sourceFile": "data/src/catalog/018-pos-saga-do-clone-1997.json",
       "path": "/items/1/instructions",
       "text": "Como encaixar: Leia no bloco Pós-Saga do Clone / 1997;",
@@ -1979,7 +1549,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0198",
+      "id": "SP-0155",
       "sourceFile": "data/src/catalog/018-pos-saga-do-clone-1997.json",
       "path": "/items/1/instructions",
       "text": "Por que ajuda: Complementa o período Pós-Saga do Clone / 1997 com material anual da respectiva série.",
@@ -1989,7 +1559,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0199",
+      "id": "SP-0156",
       "sourceFile": "data/src/editorial/extras.json",
       "path": "/0/confirmationDetail",
       "text": "Posição e peso sustentados pelas fontes: Amazing Fantasy #15 é a origem e primeira aparição de Spider-Man, anterior à Amazing #1.",
@@ -1999,19 +1569,49 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0200",
+      "id": "SP-0157",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/33/title",
-      "text": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
-      "match": "Morte",
+      "path": "/10/confirmationDetail",
+      "text": "#30 como hipótese alternativa sobre o clone de Peter;",
+      "match": "clone",
       "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
+      "heuristic": "regex-legada:clone/original",
       "decision": "pending"
     },
     {
-      "id": "SP-0201",
+      "id": "SP-0158",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/41/title",
+      "path": "/29/confirmationDetail",
+      "text": "Dedução: o bloco expande a saga, mas a revelação fundamental aparece na Amazing;",
+      "match": "revelação",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:revelação/identidade",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0159",
+      "sourceFile": "data/src/editorial/extras.json",
+      "path": "/29/confirmationDetail",
+      "text": "Peso: Fontes documentam a intercalação dos títulos na Saga do Traje Negro, e a Marvel identifica Amazing #258 como capítulo da revelação do simbionte.",
+      "match": "revelação",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:revelação/identidade",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0160",
+      "sourceFile": "data/src/editorial/extras.json",
+      "path": "/29/confirmationDetail",
+      "text": "Peso: Fontes documentam a intercalação dos títulos na Saga do Traje Negro, e a Marvel identifica Amazing #258 como capítulo da revelação do simbionte.",
+      "match": "simbionte",
+      "suggestedLevel": "leve",
+      "heuristic": "regex-legada:simbionte/traje",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0161",
+      "sourceFile": "data/src/editorial/extras.json",
+      "path": "/41/name",
       "text": "The Amazing Spider-Man Annual #21 (1987), o casamento",
       "match": "casamento",
       "suggestedLevel": "leve",
@@ -2019,9 +1619,9 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0202",
+      "id": "SP-0162",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/42/title",
+      "path": "/42/name",
       "text": "Peter Parker, The Spectacular Spider-Man Annual #7 (1987), a lua de mel",
       "match": "lua de mel",
       "suggestedLevel": "leve",
@@ -2029,7 +1629,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0203",
+      "id": "SP-0163",
       "sourceFile": "data/src/editorial/extras.json",
       "path": "/66/confirmationDetail",
       "text": "Este card representa somente as entradas fora da numeração histórica da Saga do Clone.",
@@ -2039,7 +1639,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0204",
+      "id": "SP-0164",
       "sourceFile": "data/src/editorial/extras.json",
       "path": "/66/confirmationDetail",
       "text": "O roteiro dedicado editorial.clone continua com 187 entradas e inclui, separadamente, contexto da saga original, capítulos da Amazing principal e leituras posteriores.",
@@ -2049,9 +1649,9 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0205",
+      "id": "SP-0165",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/66/title",
+      "path": "/66/name",
       "text": "Saga do Clone (1994–96), em Spectacular (1976), Web of Spider-Man, Spider-Man (1990), Spider-Man Unlimited e outras revistas",
       "match": "Clone",
       "suggestedLevel": "forte",
@@ -2059,9 +1659,9 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0206",
+      "id": "SP-0166",
       "sourceFile": "data/src/editorial/extras.json",
-      "path": "/93/title",
+      "path": "/93/name",
       "text": "The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem)",
       "match": "Clone",
       "suggestedLevel": "forte",
@@ -2069,7 +1669,27 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0207",
+      "id": "SP-0167",
+      "sourceFile": "data/src/editorial/links.json",
+      "path": "/12/title",
+      "text": "The Amazing Spider-Man Annual #21 (1987), o casamento",
+      "match": "casamento",
+      "suggestedLevel": "leve",
+      "heuristic": "regex-legada:relacionamento/casamento",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0168",
+      "sourceFile": "data/src/editorial/links.json",
+      "path": "/26/title",
+      "text": "The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem)",
+      "match": "Clone",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:clone/original",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0169",
       "sourceFile": "data/src/fases.json",
       "path": "/15/notes",
       "text": "A minissérie Clone Conspiracy é paralela e não conta.",
@@ -2079,7 +1699,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0208",
+      "id": "SP-0170",
       "sourceFile": "data/src/fases.json",
       "path": "/3/notes",
       "text": "Limite ajustado: o texto original trazia #182–252;",
@@ -2089,7 +1709,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0209",
+      "id": "SP-0171",
       "sourceFile": "data/src/fases.json",
       "path": "/7/notes",
       "text": "A saga passa por todas as revistas do Aranha (ver Ler → Saga do Clone).",
@@ -2099,7 +1719,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0210",
+      "id": "SP-0172",
       "sourceFile": "data/src/fases.json",
       "path": "/7/notes",
       "text": "Saga do Clone: out/1994 a dez/1996 (#394–418).",
@@ -2109,17 +1729,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0211",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/100/usedFor",
-      "text": "— confronto com o criminoso que matou Tio Ben;",
-      "match": "matou",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0212",
+      "id": "SP-0173",
       "sourceFile": "data/src/fontes.json",
       "path": "/102/usedFor",
       "text": "Primeira aparição de Cormac em Amazing Spider-Man Vol 7 #26 (LGY #990), parentesco e história.",
@@ -2129,17 +1739,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0213",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/105/usedFor",
-      "text": "confirmação independente do desfecho envolvendo Norman Osborn e dados bibliográficos.",
-      "match": "desfecho",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:desfecho",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0214",
+      "id": "SP-0174",
       "sourceFile": "data/src/fontes.json",
       "path": "/106/usedFor",
       "text": "Segunda fonte para a primeira aparição de Cormac Crane em Amazing Spider-Man (2025) #26 / histórica #990.",
@@ -2149,7 +1749,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0215",
+      "id": "SP-0175",
       "sourceFile": "data/src/fontes.json",
       "path": "/113/usedFor",
       "text": "Clone Conspiracy #1–5, Amazing (2015) #20–24, Omega #1",
@@ -2159,7 +1759,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0216",
+      "id": "SP-0176",
       "sourceFile": "data/src/fontes.json",
       "path": "/149/usedFor",
       "text": "Registra o Annual #1 como primeira aparição do Sexteto Sinistro e como marco da história do personagem.",
@@ -2169,7 +1769,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0217",
+      "id": "SP-0177",
       "sourceFile": "data/src/fontes.json",
       "path": "/150/usedFor",
       "text": "Primeira aparição e origem do Homem-Aranha;",
@@ -2179,7 +1779,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0218",
+      "id": "SP-0178",
       "sourceFile": "data/src/fontes.json",
       "path": "/156/usedFor",
       "text": "Identifica “What If Spider-Man’s Clone Lived?” como realidade alternativa derivada da Saga do Clone, sustentando seu peso Opcional.",
@@ -2189,7 +1789,27 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0219",
+      "id": "SP-0179",
+      "sourceFile": "data/src/fontes.json",
+      "path": "/162/usedFor",
+      "text": "Sinopse oficial: Peter e Reed Richards descobrem a natureza do simbionte na série principal;",
+      "match": "simbionte",
+      "suggestedLevel": "leve",
+      "heuristic": "regex-legada:simbionte/traje",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0180",
+      "sourceFile": "data/src/fontes.json",
+      "path": "/165/usedFor",
+      "text": "Guia oficial separa Renew Your Vows como minissérie vinculada a Secret Wars e posiciona a série principal posterior.",
+      "match": "separa",
+      "suggestedLevel": "forte",
+      "heuristic": "regex-legada:traição/ruptura",
+      "decision": "pending"
+    },
+    {
+      "id": "SP-0181",
       "sourceFile": "data/src/fontes.json",
       "path": "/20/usedFor",
       "text": "Ordem de leitura edição por edição da Saga do Clone;",
@@ -2199,7 +1819,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0220",
+      "id": "SP-0182",
       "sourceFile": "data/src/fontes.json",
       "path": "/22/usedFor",
       "text": "Proposta (#290), recusa (#291), aceite (#292), Annual #21, lua de mel no Spectacular Annual #7;",
@@ -2209,37 +1829,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0221",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/23/usedFor",
-      "text": "Saga de 1994–1996, desfecho com Norman Osborn e morte de Ben Reilly;",
-      "match": "morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0222",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/23/usedFor",
-      "text": "Saga de 1994–1996, desfecho com Norman Osborn e morte de Ben Reilly;",
-      "match": "desfecho",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:desfecho",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0223",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/23/usedFor",
-      "text": "Saga do Clone original (ASM #149)",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0224",
+      "id": "SP-0183",
       "sourceFile": "data/src/fontes.json",
       "path": "/24/usedFor",
       "text": "retorno do clone na Web #114",
@@ -2249,47 +1839,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0225",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/25/usedFor",
-      "text": "Gravidez de MJ na Spectacular #220;",
-      "match": "Gravidez",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:gravidez/família",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0226",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/25/usedFor",
-      "text": "revelação da #226",
-      "match": "revelação",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0227",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/26/usedFor",
-      "text": "Morte da Tia May na ASM #400, bebê nasce morto na #418, May atriz revelada, Spectacular #263 e Spider-Man #98",
-      "match": "Morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0228",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/26/usedFor",
-      "text": "Morte da Tia May na ASM #400, bebê nasce morto na #418, May atriz revelada, Spectacular #263 e Spider-Man #98",
-      "match": "revelada",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0229",
+      "id": "SP-0184",
       "sourceFile": "data/src/fontes.json",
       "path": "/27/usedFor",
       "text": "desfecho e relançamento de 1999",
@@ -2299,7 +1849,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0230",
+      "id": "SP-0185",
       "sourceFile": "data/src/fontes.json",
       "path": "/28/usedFor",
       "text": "acordo com Mephisto",
@@ -2309,7 +1859,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0231",
+      "id": "SP-0186",
       "sourceFile": "data/src/fontes.json",
       "path": "/29/usedFor",
       "text": "casamento restaurado em Ultimate Spider-Man #1",
@@ -2319,7 +1869,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0232",
+      "id": "SP-0187",
       "sourceFile": "data/src/fontes.json",
       "path": "/3/usedFor",
       "text": "Clone Conspiracy nas #20–24 do volume de 2015;",
@@ -2329,7 +1879,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0233",
+      "id": "SP-0188",
       "sourceFile": "data/src/fontes.json",
       "path": "/35/usedFor",
       "text": "casamento no Annual #21;",
@@ -2339,7 +1889,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0234",
+      "id": "SP-0189",
       "sourceFile": "data/src/fontes.json",
       "path": "/35/usedFor",
       "text": "Primeiro encontro na ASM #42;",
@@ -2349,7 +1899,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0235",
+      "id": "SP-0190",
       "sourceFile": "data/src/fontes.json",
       "path": "/36/usedFor",
       "text": "#700 e a troca de corpos",
@@ -2359,7 +1909,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0236",
+      "id": "SP-0191",
       "sourceFile": "data/src/fontes.json",
       "path": "/39/usedFor",
       "text": "Confirmação de que Spectacular Spider-Man Annual #7 é a lua de mel posterior ao Amazing Spider-Man Annual #21.",
@@ -2369,7 +1919,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0237",
+      "id": "SP-0192",
       "sourceFile": "data/src/fontes.json",
       "path": "/50/usedFor",
       "text": "Clone Conspiracy acompanhada pelas #20–24",
@@ -2379,7 +1929,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0238",
+      "id": "SP-0193",
       "sourceFile": "data/src/fontes.json",
       "path": "/53/usedFor",
       "text": "Clone Conspiracy #1–5 e tie-ins (Silk #14–17, Prowler #1–5)",
@@ -2389,77 +1939,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0239",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/56/usedFor",
-      "text": "Amazing (2018) #37 (Kindred ressuscita o Sin-Eater);",
-      "match": "ressuscita",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:ressurreição",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0240",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/56/usedFor",
-      "text": "Kindred ressuscita o Sin-Eater",
-      "match": "Kindred ressuscita o Sin-Eater",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0241",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/67/usedFor",
-      "text": "o casamento de Peter e MJ",
-      "match": "o casamento de Peter e MJ",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0242",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/67/usedFor",
-      "text": "Segunda fonte para o casamento de Peter e MJ e os dois filhos;",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0243",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/69/usedFor",
-      "text": "Ordem indexada usada na tentativa de fixar o encaixe de A Morte de Jean DeWolff;",
-      "match": "Morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0244",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/70/usedFor",
-      "text": "Data de capa e dados bibliográficos da edição #107, para corroborar a janela de publicação de A Morte de Jean DeWolff.",
-      "match": "Morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0245",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/71/usedFor",
-      "text": "Data de capa e dados bibliográficos da edição #110, para corroborar a janela de publicação de A Morte de Jean DeWolff.",
-      "match": "Morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0246",
+      "id": "SP-0194",
       "sourceFile": "data/src/fontes.json",
       "path": "/73/usedFor",
       "text": "estreia da Spider-Gwen na Edge of Spider-Verse #2",
@@ -2469,37 +1949,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0247",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/96/usedFor",
-      "text": "— “Coming Out”, descoberta do segredo por May e data de lançamento usada no guia.",
-      "match": "segredo",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0248",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/98/usedFor",
-      "text": "— desfecho imediato de Gwen Stacy;",
-      "match": "desfecho",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:desfecho",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0249",
-      "sourceFile": "data/src/fontes.json",
-      "path": "/98/usedFor",
-      "text": "morte aparente de Norman Osborn.",
-      "match": "morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0250",
+      "id": "SP-0195",
       "sourceFile": "data/src/marcos.json",
       "path": "/0/title",
       "text": "Origem do Homem-Aranha",
@@ -2509,27 +1959,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0251",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/11/title",
-      "text": "A Morte de Jean DeWolff",
-      "match": "Morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0252",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/12/title",
-      "text": "Proposta e casamento com Mary Jane",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0253",
+      "id": "SP-0196",
       "sourceFile": "data/src/marcos.json",
       "path": "/14/title",
       "text": "Estreia de Venom",
@@ -2539,7 +1969,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0254",
+      "id": "SP-0197",
       "sourceFile": "data/src/marcos.json",
       "path": "/15/title",
       "text": "Saga do Clone",
@@ -2549,127 +1979,7 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0255",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/16/title",
-      "text": "A Tia May morre (#400)",
-      "match": "A Tia May morre (#400)",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0256",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/16/title",
-      "text": "A Tia May morre (#400)",
-      "match": "morre",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0257",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/18/title",
-      "text": "A Tia May descobre o segredo de Peter (#476)",
-      "match": "descobre",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0258",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/19/title",
-      "text": "A Tia May descobre o segredo de Peter (#479)",
-      "match": "descobre",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0259",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/2/title",
-      "text": "O Duende Verde é desmascarado",
-      "match": "O Duende Verde é desmascarado",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0260",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/22/title",
-      "text": "Guerra Civil: Peter revela a identidade",
-      "match": "Guerra Civil: Peter revela a identidade",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0261",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/22/title",
-      "text": "Guerra Civil: Peter revela a identidade",
-      "match": "revela",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0262",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/27/title",
-      "text": "Dying Wish: Octopus rouba o corpo de Peter",
-      "match": "Dying Wish: Octopus rouba o corpo de Peter",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0263",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/27/title",
-      "text": "Dying Wish: Octopus rouba o corpo de Peter",
-      "match": "rouba o corpo",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:troca de corpo",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0264",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/5/title",
-      "text": "A morte de Gwen Stacy",
-      "match": "A morte de Gwen Stacy",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0265",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/5/title",
-      "text": "A morte de Gwen Stacy",
-      "match": "morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0266",
-      "sourceFile": "data/src/marcos.json",
-      "path": "/6/title",
-      "text": "Harry Osborn vira Duende Verde",
-      "match": "Harry Osborn vira Duende Verde",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0267",
+      "id": "SP-0198",
       "sourceFile": "data/src/marcos.json",
       "path": "/7/title",
       "text": "Saga do Clone original",
@@ -2679,253 +1989,13 @@
       "decision": "pending"
     },
     {
-      "id": "SP-0268",
+      "id": "SP-0199",
       "sourceFile": "data/src/marcos.json",
       "path": "/8/title",
       "text": "Peter confronta o ladrão que matou o Tio Ben",
       "match": "matou",
       "suggestedLevel": "forte",
       "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0269",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/12/context",
-      "text": "O acordo com Mephisto, que apaga o casamento",
-      "match": "O acordo com Mephisto, que apaga o casamento",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0270",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/12/context",
-      "text": "O acordo com Mephisto, que apaga o casamento, passa por essas duas edições.",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0271",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/12/context",
-      "text": "O acordo com Mephisto, que apaga o casamento, passa por essas duas edições.",
-      "match": "acordo com",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:Mephisto/pacto",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0272",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/13/context",
-      "text": "Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado.",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0273",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/13/context",
-      "text": "o casamento de Peter e MJ",
-      "match": "o casamento de Peter e MJ",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0274",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/18/title",
-      "text": "The Clone Conspiracy #1–5 e Omega #1 (minissérie, fora da contagem)",
-      "match": "Clone",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:clone/original",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0275",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/2/context",
-      "text": "A #264 ainda mostra Peter com um traje preto comum, não com o simbionte.",
-      "match": "simbionte",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:simbionte/traje",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0276",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/21/context",
-      "text": "É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838).",
-      "match": "ressuscita",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:ressurreição",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0277",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/21/context",
-      "text": "Kindred ressuscita o Sin-Eater",
-      "match": "Kindred ressuscita o Sin-Eater",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0278",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/24/context",
-      "text": "É o desfecho de Dark Web.",
-      "match": "desfecho",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:desfecho",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0279",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/3/context",
-      "text": "A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
-      "match": "A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0280",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/3/context",
-      "text": "A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
-      "match": "ressuscita",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:ressurreição",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0281",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/3/title",
-      "text": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
-      "match": "Morte",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0282",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/4/context",
-      "text": "É este casamento que One More Day apaga (#544–545).",
-      "match": "É este casamento que One More Day apaga (#544–545).",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0283",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/4/context",
-      "text": "É este casamento que One More Day apaga (#544–545).",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0284",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/4/context",
-      "text": "O casamento acontece no Annual, fora da contagem.",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0285",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/4/context",
-      "text": "Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia.",
-      "match": "cerimônia",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:cerimônia",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0286",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/4/title",
-      "text": "The Amazing Spider-Man Annual #21 (1987), o casamento",
-      "match": "casamento",
-      "suggestedLevel": "leve",
-      "heuristic": "regex-legada:relacionamento/casamento",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0287",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/7/context",
-      "text": "O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições.",
-      "match": "larga o manto",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:poderes/aposentadoria",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0288",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/7/context",
-      "text": "O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições.",
-      "match": "desfecho",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:desfecho",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0289",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/8/context",
-      "text": "Peter 'morre' e volta com habilidades novas",
-      "match": "Peter 'morre' e volta com habilidades novas",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0290",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/8/context",
-      "text": "Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski).",
-      "match": "morre",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:morte",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0291",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/9/context",
-      "text": "Na Civil War #2, Peter revela a identidade em rede nacional.",
-      "match": "Na Civil War #2, Peter revela a identidade em rede nacional.",
-      "suggestedLevel": "forte",
-      "heuristic": "frase-literal-legada",
-      "decision": "pending"
-    },
-    {
-      "id": "SP-0292",
-      "sourceFile": "public/links.js",
-      "path": "/EDITORIAL_LINKS/9/context",
-      "text": "Na Civil War #2, Peter revela a identidade em rede nacional.",
-      "match": "revela",
-      "suggestedLevel": "forte",
-      "heuristic": "regex-legada:revelação/identidade",
       "decision": "pending"
     }
   ]

@@ -21,7 +21,17 @@
       "issue": "#51",
       "phase": "1. Reaparição de Ben Reilly (out/1994–jan/1995)",
       "weight": "● Essencial",
-      "instructions": "O clone passa a se chamar Ben Reilly.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "O clone passa a se chamar Ben Reilly.",
+            "spoiler": "forte"
+          },
+          {
+            "text": "\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 465,
       "note": ""
     },

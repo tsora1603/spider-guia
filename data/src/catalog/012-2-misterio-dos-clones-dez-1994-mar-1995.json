@@ -9,7 +9,17 @@
       "issue": "#220",
       "phase": "2. Mistério dos clones (dez/1994–mar/1995)",
       "weight": "● Essencial",
-      "instructions": "Mary Jane anuncia que está grávida.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Mary Jane anuncia que está grávida.",
+            "spoiler": "forte"
+          },
+          {
+            "text": "\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 484,
       "note": ""
     },
@@ -21,7 +31,17 @@
       "issue": "#221",
       "phase": "2. Mistério dos clones (dez/1994–mar/1995)",
       "weight": "● Essencial",
-      "instructions": "Morte do Doutor Octopus.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Morte do Doutor Octopus.",
+            "spoiler": "forte"
+          },
+          {
+            "text": "\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 486,
       "note": ""
     },

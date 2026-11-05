@@ -45,7 +45,7 @@ export interface RuntimeIndex {
   fases: { h: string[]; r: unknown[][] };
   marcos: { h: string[]; r: unknown[][] };
   pular: { h: string[]; r: unknown[][] };
-  fontes: { h: string[]; r: string[][] };
+  fontes: { h: string[]; r: unknown[][] };
   glossario: { h: string[]; r: string[][] };
   schemaVersion: number;
   editorialVersion: number;

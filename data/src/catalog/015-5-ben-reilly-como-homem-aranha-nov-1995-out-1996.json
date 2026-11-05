@@ -465,7 +465,24 @@
       "issue": "#4",
       "phase": "5. Ben Reilly como Homem-Aranha (nov/1995–out/1996)",
       "weight": "● Essencial",
-      "instructions": "Ben é fotografado sem máscara; o casamento de Peter e MJ não vai bem.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Ben é fotografado sem máscara",
+            "spoiler": "forte"
+          },
+          {
+            "text": "; "
+          },
+          {
+            "text": "o casamento de Peter e MJ",
+            "spoiler": "forte"
+          },
+          {
+            "text": " não vai bem.\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 584,
       "note": ""
     },

@@ -57,7 +57,7 @@ const rules = [
   ['leve', 'relacionamento/casamento', /\b(?:casamento|casam|casou|se casa|noivad[oa]?|lua de mel|marido|esposa)\b/i],
   ['forte', 'gravidez/família', /\b(?:grávida|gravidez|bebê|filho biológico|filha biológica|paternidade|maternidade)\b/i],
   ['forte', 'clone/original', /\b(?:clone|original)\b/i],
-  ['leve', 'mudança de identidade', /\b(?:assume o manto|assume a identidade|vira (?:o|a)|torna-se|passa a ser)\b/i],
+  ['forte', 'mudança de identidade', /\b(?:assume o manto|assume a identidade|vira(?: (?:o|a))?|torna-se|passa a ser)\b/i],
   ['forte', 'traição/ruptura', /\b(?:traição|trai|separa(?:ção|m)?|divórcio|rompimento)\b/i],
   ['leve', 'simbionte/traje', /\b(?:simbionte|traje alienígena)\b/i],
   ['forte', 'Mephisto/pacto', /\b(?:Mephisto|pacto|acordo com)\b/i],

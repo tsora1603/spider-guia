@@ -1,3 +1,4 @@
+import { plainText } from './lib/spoiler-data.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {
@@ -107,6 +108,7 @@ const SEARCH_STOPWORDS = new Set(
 );
 const compactSearchHint = (item) => {
   const text = [item.instructions, item.note]
+    .map(plainText)
     .filter(Boolean)
     .join(' ')
     .normalize('NFD')

@@ -7,9 +7,7 @@ export interface SpoilerPart {
 }
 
 export type SpoilerTextValue =
-  | string
-  | { text: string; spoiler: SpoilerStrength }
-  | { parts: SpoilerPart[] };
+  string | { text: string; spoiler: SpoilerStrength } | { parts: SpoilerPart[] };
 
 export const isSpoilerStrength = (value: unknown): value is SpoilerStrength =>
   value === 'leve' || value === 'forte';
@@ -23,8 +21,13 @@ export function spoilerParts(value: unknown): SpoilerPart[] {
   }
   if (Array.isArray(record.parts)) {
     return record.parts
-      .filter(part => part && typeof part === 'object' && typeof (part as Record<string, unknown>).text === 'string')
-      .map(part => {
+      .filter(
+        (part) =>
+          part &&
+          typeof part === 'object' &&
+          typeof (part as Record<string, unknown>).text === 'string'
+      )
+      .map((part) => {
         const item = part as Record<string, unknown>;
         return {
           text: String(item.text),
@@ -35,7 +38,27 @@ export function spoilerParts(value: unknown): SpoilerPart[] {
   return [{ text: String(value) }];
 }
 
-export const spoilerPlainText = (value: unknown) => spoilerParts(value).map(part => part.text).join('');
+export const spoilerPlainText = (value: unknown) =>
+  spoilerParts(value)
+    .map((part) => part.text)
+    .join('');
 
 export const spoilerIsVisible = (strength: SpoilerStrength, visibility: SpoilerVisibility) =>
   visibility === 'tudo' || (visibility === 'leve' && strength === 'leve');
+
+export function joinSpoilerText(values: unknown[], separator = '\n'): SpoilerTextValue {
+  const parts: SpoilerPart[] = [];
+  for (const value of values) {
+    if (!spoilerPlainText(value)) continue;
+    if (parts.length) parts.push({ text: separator });
+    parts.push(...spoilerParts(value));
+  }
+  return { parts };
+}
+
+export const spoilerAccessibleText = (value: unknown, visibility: SpoilerVisibility) =>
+  spoilerParts(value)
+    .map((part) =>
+      part.spoiler && !spoilerIsVisible(part.spoiler, visibility) ? 'Spoiler oculto' : part.text
+    )
+    .join('');

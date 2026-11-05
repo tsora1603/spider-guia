@@ -273,7 +273,17 @@
       "issue": "#75",
       "phase": "6. Desfecho: Osborn e Revelations (out/1996–dez/1996)",
       "weight": "● Essencial",
-      "instructions": "Osborn confirma que Peter é o original e Ben é o clone; Ben morre salvando Peter, que volta a ser o Homem-Aranha.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Osborn confirma que Peter é o original e Ben é o clone; Ben morre salvando Peter, que volta a ser o Homem-Aranha.",
+            "spoiler": "forte"
+          },
+          {
+            "text": "\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 627,
       "note": ""
     },

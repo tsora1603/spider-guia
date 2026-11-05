@@ -1,8 +1,9 @@
+import { spoilerAccessibleText } from '../spoilers/model';
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { editorialExtras, itemsById, normalizeText } from '../data/model';
 import { editorialLinks, router } from '../runtime/controller';
 import { Icon } from '../components/Icon';
-import { SpoilerText } from '../components/SpoilerText';
+import { SpoilerText, useSpoilerLevel } from '../components/SpoilerText';
 import { ScreenState } from '../components/ScreenState';
 import { ListSearch } from '../components/ListSearch';
 import { exploreTarget, focusEditorialTarget, resolveLinkTargets } from './explore-navigation';
@@ -19,6 +20,7 @@ export function getEditorialLinkGroups() {
 }
 
 export function LinksView() {
+  const level = useSpoilerLevel();
   const hash = location.hash;
   const [query, setQuery] = useState(
     () => new URLSearchParams(hash.split('?')[1] || '').get('lq') || ''
@@ -109,7 +111,7 @@ export function LinksView() {
               id={`explore-link-${all.indexOf(group)}`}
               data-explore-target={targeted.has(group.key) ? 'link' : undefined}
               tabIndex={-1}
-              aria-label={group.name}
+              aria-label={spoilerAccessibleText(group.name, level)}
             >
               <h3 class="link-card-title">
                 <SpoilerText text={group.name} />

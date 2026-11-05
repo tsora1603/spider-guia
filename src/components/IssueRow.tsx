@@ -1,3 +1,4 @@
+import { joinSpoilerText, spoilerParts, spoilerPlainText } from '../spoilers/model';
 import { memo } from 'preact/compat';
 import { useState } from 'preact/hooks';
 import type { Reading } from '../data/model';
@@ -17,14 +18,10 @@ const noteFor = (item: Reading) => {
   const notes = item.notes || '';
   const extraNote = item.extraNote || '';
   const filteredNotes = extraDetailsById[item.id]
-    ? notes
-        .split('\n')
-        .filter((line) => !/^(Por que ajuda|Confirmação):/.test(line))
-        .join('\n')
+    ? { parts: spoilerParts(notes).map(part => ({ ...part, text: part.text.split('\n').filter(line => !/^(Por que ajuda|Confirmação):/.test(line)).join('\n') })) }
     : notes;
-  return [extraNote, filteredNotes]
-    .filter((value, index, values) => value && values.indexOf(value) === index)
-    .join('\n');
+  const values = [extraNote, filteredNotes].filter((value, index, all) => spoilerPlainText(value) && all.findIndex(other => spoilerPlainText(other) === spoilerPlainText(value)) === index);
+  return values.length ? joinSpoilerText(values) : '';
 };
 
 type CloneContext = { part?: string | number; readingOrder?: number; note?: unknown };

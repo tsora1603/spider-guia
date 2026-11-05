@@ -69,7 +69,20 @@
       "issue": "#5",
       "phase": "Leitura intercalada",
       "weight": "◐ Contexto",
-      "instructions": "Como encaixar: Leia depois da #61 e antes da #62. A posição cronológica é a indicada pela ordem consultada; mantemos Confirmação: Parcial\nPor que ajuda: Peter descobre a verdade sobre Richard e Mary Parker, entendendo que seus pais eram agentes duplos e exonerando-os das acusações de traição. É um marco importante da história familiar de Peter.\nConfirmação: Parcial",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Leia depois da #61 e antes da #62. A posição cronológica é a indicada pela ordem consultada; mantemos Confirmação: Parcial\nPor que ajuda: "
+          },
+          {
+            "text": "Peter descobre a verdade sobre Richard e Mary Parker, entendendo que seus pais eram agentes duplos e exonerando-os das acusações de traição.",
+            "spoiler": "forte"
+          },
+          {
+            "text": " É um marco importante da história familiar de Peter.\nConfirmação: Parcial"
+          }
+        ]
+      },
       "readingOrder": 67,
       "note": ""
     },
@@ -477,7 +490,20 @@
       "issue": "#107–110",
       "phase": "Leitura intercalada",
       "weight": "◐ Contexto",
-      "instructions": "Como encaixar: Leia depois da Amazing Spider-Man (1963) #272 e antes da #273.\nPor que ajuda: Peter e o Demolidor caçam o assassino de uma amiga policial. Mostra os limites morais de Peter. A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Leia depois da Amazing Spider-Man (1963) #272 e antes da #273.\nPor que ajuda: Peter e o Demolidor caçam o assassino de uma amiga policial. Mostra os limites morais de Peter. "
+          },
+          {
+            "text": "A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
+            "spoiler": "forte"
+          },
+          {
+            "text": "\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 312,
       "note": ""
     },
@@ -525,7 +551,20 @@
       "issue": "#21",
       "phase": "Leitura intercalada",
       "weight": "● Essencial",
-      "instructions": "Como encaixar: Leia depois da #292 (MJ aceita o pedido).\nPor que ajuda: O casamento acontece no Annual, fora da contagem. Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. É este casamento que One More Day apaga (#544–545).\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Leia depois da #292 (MJ aceita o pedido).\nPor que ajuda: O casamento acontece no Annual, fora da contagem. Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. "
+          },
+          {
+            "text": "É este casamento que One More Day apaga (#544–545).",
+            "spoiler": "forte"
+          },
+          {
+            "text": "\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 336,
       "note": ""
     },
@@ -537,7 +576,20 @@
       "issue": "#7",
       "phase": "Leitura intercalada",
       "weight": "◐ Contexto",
-      "instructions": "Como encaixar: Leia depois do Amazing Spider-Man Annual #21 (casamento) e antes de A Última Caçada de Kraven. Fonte: Comics Back Issues + catálogo de The Wedding Saga (ver Mais → Fontes).\nPor que ajuda: É a lua de mel de Peter e Mary Jane e a continuação imediata do casamento, desenvolvendo a relação dos dois no início da vida de casados.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Leia depois do Amazing Spider-Man Annual #21 (casamento) e antes de A Última Caçada de Kraven. Fonte: Comics Back Issues + catálogo de The Wedding Saga (ver Mais → Fontes).\nPor que ajuda: É "
+          },
+          {
+            "text": "a lua de mel de Peter e Mary Jane",
+            "spoiler": "forte"
+          },
+          {
+            "text": " e a continuação imediata do casamento, desenvolvendo a relação dos dois no início da vida de casados.\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 337,
       "note": ""
     },
@@ -825,7 +877,20 @@
       "issue": "ver instruções",
       "phase": "Leitura intercalada",
       "weight": "◐ Contexto",
-      "instructions": "Como encaixar: Ordem confirmada: Sensational Spider-Man #32 → Amazing #440 → Spider-Man #96 → Spectacular #262 → Sensational Spider-Man #33 → Amazing #441 → Spider-Man #97 → Spectacular #263 → Spider-Man #98. Na aba principal, o primeiro bloco entra depois da #440 e o segundo continua depois da #441.\nPor que ajuda: A #441 não fecha a história. O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. Só depois começa o volume de 1999 (#442). A verdadeira Tia May reaparece aqui (ver Jornada).\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Ordem confirmada: Sensational Spider-Man #32 → Amazing #440 → Spider-Man #96 → Spectacular #262 → Sensational Spider-Man #33 → Amazing #441 → Spider-Man #97 → Spectacular #263 → Spider-Man #98. Na aba principal, o primeiro bloco entra depois da #440 e o segundo continua depois da #441.\nPor que ajuda: A #441 não fecha a história. O desfecho do arco, com "
+          },
+          {
+            "text": "Peter anunciando que larga o manto",
+            "spoiler": "forte"
+          },
+          {
+            "text": ", está nessas três edições. Só depois começa o volume de 1999 (#442). A verdadeira Tia May reaparece aqui (ver Jornada).\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 662,
       "note": ""
     },
@@ -837,7 +902,20 @@
       "issue": "ver instruções",
       "phase": "Leitura intercalada",
       "weight": "◐ Contexto",
-      "instructions": "Como encaixar: Ao chegar à #525, leia nesta ordem: Friendly Neighborhood Spider-Man (2005) #1 → Marvel Knights Spider-Man #19 → Amazing (1999) #525 → Friendly #2 → Marvel Knights #20 → Amazing #526 → Friendly #3 → Marvel Knights #21 → Amazing #527 → Friendly #4 → Marvel Knights #22 → Amazing #528.\nPor que ajuda: Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da Jornada lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Ao chegar à #525, leia nesta ordem: Friendly Neighborhood Spider-Man (2005) #1 → Marvel Knights Spider-Man #19 → Amazing (1999) #525 → Friendly #2 → Marvel Knights #20 → Amazing #526 → Friendly #3 → Marvel Knights #21 → Amazing #527 → Friendly #4 → Marvel Knights #22 → Amazing #528.\nPor que ajuda: "
+          },
+          {
+            "text": "Peter 'morre' e volta com habilidades novas",
+            "spoiler": "forte"
+          },
+          {
+            "text": " (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da Jornada lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4.\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 752,
       "note": ""
     },
@@ -849,7 +927,20 @@
       "issue": "#1–2",
       "phase": "Leitura intercalada",
       "weight": "● Essencial",
-      "instructions": "Como encaixar: Leia entre a #531 e a #532. Ordem sugerida pela Marvel: Civil War #2 → Amazing #532–533 → demais.\nPor que ajuda: Na Civil War #2, Peter revela a identidade em rede nacional. Sem ela, a #532 já começa com ele desmascarado.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Leia entre a #531 e a #532. Ordem sugerida pela Marvel: Civil War #2 → Amazing #532–533 → demais.\nPor que ajuda: "
+          },
+          {
+            "text": "Na Civil War #2, Peter revela a identidade em rede nacional.",
+            "spoiler": "forte"
+          },
+          {
+            "text": " Sem ela, a #532 já começa com ele desmascarado.\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 760,
       "note": ""
     },
@@ -1053,7 +1144,20 @@
       "issue": "ver instruções",
       "phase": "Leitura intercalada",
       "weight": "● Essencial",
-      "instructions": "Como encaixar: Intercale entre a #544 e a #545: Amazing #544 → Friendly Neighborhood Spider-Man #24 → Sensational Spider-Man (2006) #41 → Amazing #545.\nPor que ajuda: O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. Abre a fase Brand New Day (#546 em diante).\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Intercale entre a #544 e a #545: Amazing #544 → Friendly Neighborhood Spider-Man #24 → Sensational Spider-Man (2006) #41 → Amazing #545.\nPor que ajuda: "
+          },
+          {
+            "text": "O acordo com Mephisto, que apaga o casamento",
+            "spoiler": "forte"
+          },
+          {
+            "text": ", passa por essas duas edições. Abre a fase Brand New Day (#546 em diante).\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 790,
       "note": ""
     },
@@ -1065,7 +1169,20 @@
       "issue": "#1",
       "phase": "Leitura intercalada",
       "weight": "○ Opcional",
-      "instructions": "Como encaixar: Leia depois de One More Day (#545).\nPor que ajuda: Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado. Fica fora da continuidade principal. Não desfaz One More Day.\nConfirmação: Parcial",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Leia depois de One More Day (#545).\nPor que ajuda: Desvio opcional: em outro universo, "
+          },
+          {
+            "text": "o casamento de Peter e MJ",
+            "spoiler": "forte"
+          },
+          {
+            "text": " é restaurado. Fica fora da continuidade principal. Não desfaz One More Day.\nConfirmação: Parcial"
+          }
+        ]
+      },
       "readingOrder": 792,
       "note": ""
     },
@@ -1365,7 +1482,20 @@
       "issue": "ver instruções",
       "phase": "Leitura intercalada",
       "weight": "◐ Contexto",
-      "instructions": "Como encaixar: Ordem de Sins Rising: Amazing (2018) #44 → Prelude → #45–48 → The Sins of Norman Osborn → #49. Leia o Prelude depois da #44 (#845) e antes da #45 (#846).\nPor que ajuda: Abre Sins Rising (Amazing 2018 #45–49 = #846–850). É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838).\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "Como encaixar: Ordem de Sins Rising: Amazing (2018) #44 → Prelude → #45–48 → The Sins of Norman Osborn → #49. Leia o Prelude depois da #44 (#845) e antes da #45 (#846).\nPor que ajuda: Abre Sins Rising (Amazing 2018 #45–49 = #846–850). É a fase em que "
+          },
+          {
+            "text": "Kindred ressuscita o Sin-Eater",
+            "spoiler": "forte"
+          },
+          {
+            "text": ", visto na #37 do volume (#838).\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 1126,
       "note": ""
     },

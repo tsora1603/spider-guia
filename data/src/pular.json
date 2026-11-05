@@ -29,17 +29,29 @@
   },
   {
     "recommendation": "Não pule",
-    "item": "Casamento de Peter e MJ",
-    "range": "Proposta e noivado nas #290–292; casamento no Annual #21 (1987)",
+    "item": {
+      "text": "Casamento de Peter e MJ",
+      "spoiler": "forte"
+    },
+    "range": {
+      "text": "Proposta e noivado nas #290–292; casamento no Annual #21 (1987)",
+      "spoiler": "forte"
+    },
     "weight": "● Essencial",
-    "rule": "O Annual não conta na numeração, mas é onde o casamento acontece. A lua de mel está no Spectacular Spider-Man Annual #7 (○ Opcional)."
+    "rule": {
+      "text": "O Annual não conta na numeração, mas é onde o casamento acontece. A lua de mel está no Spectacular Spider-Man Annual #7 (○ Opcional).",
+      "spoiler": "forte"
+    }
   },
   {
     "recommendation": "Não pule",
     "item": "Guerra Civil",
     "range": "Civil War #1–2 (fora da contagem); Amazing #532–538",
     "weight": "● Essencial",
-    "rule": "Peter revela a identidade na Civil War #2. A Tia May é baleada na #538. Civil War #3–7 é ◐ Contexto: um resumo basta. As consequências seguem em Back in Black (#539–543) e One More Day (#544–545)."
+    "rule": {
+      "text": "Peter revela a identidade na Civil War #2. A Tia May é baleada na #538. Civil War #3–7 é ◐ Contexto: um resumo basta. As consequências seguem em Back in Black (#539–543) e One More Day (#544–545).",
+      "spoiler": "forte"
+    }
   },
   {
     "recommendation": "Não pule",
@@ -51,7 +63,10 @@
   {
     "recommendation": "Pode pular, com exceção",
     "item": "Annuals",
-    "range": "Ex.: o casamento de Peter e MJ está no Annual #21 (1987)",
+    "range": {
+      "text": "Ex.: o casamento de Peter e MJ está no Annual #21 (1987)",
+      "spoiler": "forte"
+    },
     "weight": "○ Opcional",
     "rule": "Annuals: ○ Opcional por padrão; ● Essencial quando a trama principal depende do Annual (ex.: #21, casamento). ◐ Contexto quando acrescenta desenvolvimento relevante de Peter/personagens (ex.: Amazing Spider-Man Annual #5 e The Spectacular Spider-Man Annual #7). Os demais Annuals incluídos neste guia seguem a mesma regra."
   },

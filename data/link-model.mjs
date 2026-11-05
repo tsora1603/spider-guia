@@ -1,5 +1,7 @@
+import { plainText, isAnnotatedText } from './spoiler-text.mjs';
 /* Modelo único de cobertura e associações de Links para Vite e Node. */
 const isText = (value) => typeof value === 'string' && value.trim().length > 0;
+const isEditorialText = value => isText(plainText(value)) && (typeof value === 'string' || isAnnotatedText(value));
 const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 const issueLabel = ({ start, end }, suffix = '') =>
   start === end ? `#${start}${suffix}` : `#${start}${suffix}–${end}${suffix}`;
@@ -97,10 +99,10 @@ function validateEditorialLinks(groups, { knownItemIds, extras, cloneArcIds } = 
     if (!isText(group.id)) fail('links.id', `${label}: ID obrigatório.`);
     else if (ids.has(group.id)) fail('links.id.duplicate', `${label}: ID duplicado ${group.id}.`);
     ids.add(group.id);
-    if (!isText(group.title)) fail('links.title', `${label}: título obrigatório.`);
-    if (group.notes != null && !isText(group.notes))
+    if (!isEditorialText(group.title)) fail('links.title', `${label}: título obrigatório.`);
+    if (group.notes != null && !isEditorialText(group.notes))
       fail('links.notes', `${label}: observação inválida.`);
-    if (group.context != null && !isText(group.context))
+    if (group.context != null && !isEditorialText(group.context))
       fail('links.notes', `${label}: contexto legado inválido.`);
     if (group.coverage != null) validateCoverage(group.coverage, `${label}.coverage`, fail);
     if (group.targets == null) {
