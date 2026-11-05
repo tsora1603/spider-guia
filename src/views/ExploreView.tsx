@@ -1,3 +1,4 @@
+import { spoilerPlainText } from '../spoilers/model';
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { cloneGuide, editorialExtras, milestones, normalizeText, checklistReadings as readings } from '../data/model';
 import { appState } from '../state/app-state';
@@ -35,20 +36,20 @@ function GlobalSearch({ query }: { query: string }) {
     const extraResults = editorialExtras
       .filter((entry: any) =>
         normalizeText(
-          [entry.name, entry.why, entry.howMuch, entry.weight, entry.category].join(' ')
+          [entry.name, entry.why, entry.howMuch, entry.weight, entry.category].map(spoilerPlainText).join(' ')
         ).includes(needle)
       )
       .slice(0, 5);
     const milestoneResults = milestones
       .filter((entry: any) =>
         normalizeText(
-          [entry.year, entry.title, entry.description, entry.whereToRead, entry.weight].join(' ')
+          [entry.year, entry.title, entry.description, entry.whereToRead, entry.weight].map(spoilerPlainText).join(' ')
         ).includes(needle)
       )
       .slice(0, 5);
     const linkResults = linksEnabled
       ? getEditorialLinkGroups()
-          .filter((group) => normalizeText([group.searchText].join(' ')).includes(needle))
+          .filter((group) => normalizeText([group.searchText].map(spoilerPlainText).join(' ')).includes(needle))
           .slice(0, 5)
       : [];
     const cloneResults = cloneGuide.sections
@@ -63,7 +64,7 @@ function GlobalSearch({ query }: { query: string }) {
             step.note,
             step.complement,
             ...step.originals
-          ].join(' ')
+          ].map(spoilerPlainText).join(' ')
         ).includes(needle)
       )
       .slice(0, 5);
@@ -122,10 +123,10 @@ function GlobalSearch({ query }: { query: string }) {
           {results.milestoneResults.map((item: any) => (
             <button
               class="search-result"
-              key={`${item.year}-${item.title}`}
+              key={milestoneAnchorKey(item)}
               onClick={(event) =>
                 router.navigate(
-                  exploreTarget('jornada', 'marco', milestoneAnchorKey(item)),
+                  exploreTarget('jornada', 'marco', milestones.indexOf(item)),
                   event.currentTarget
                 )
               }

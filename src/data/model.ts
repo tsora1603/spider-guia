@@ -1,4 +1,4 @@
-import { spoilerPlainText } from '../spoilers/model';
+import { spoilerPlainText, type SpoilerTextValue } from '../spoilers/model';
 import generatedIndex from './generated-index.json';
 import { catalogChunkLoaders } from './generated-chunks';
 import type { CloneGuide } from '../clone-guide/model';
@@ -23,9 +23,9 @@ export interface Reading {
   issue: string;
   phase: string;
   weight: string;
-  notes: string;
+  notes: SpoilerTextValue;
   readingOrder: number;
-  extraNote: string;
+  extraNote: SpoilerTextValue;
   searchText: string;
   detailsLoaded?: boolean;
   guideStepId?: string;
@@ -97,9 +97,9 @@ const toDetailedReading = (row: unknown[], fields: string[]): Reading => {
     issue: String(value('issue')),
     phase: String(value('phase')),
     weight: String(value('weight')),
-    notes: String(value('instructions') ?? ''),
+    notes: (value('instructions') ?? '') as SpoilerTextValue,
     readingOrder: Number(value('readingOrder')),
-    extraNote: String(value('note') ?? ''),
+    extraNote: (value('note') ?? '') as SpoilerTextValue,
     searchText: normalizeText(row.map((entry) => spoilerPlainText(entry)).join(' ')),
     detailsLoaded: true
   };

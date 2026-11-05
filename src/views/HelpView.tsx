@@ -1,3 +1,4 @@
+import { spoilerPlainText, joinSpoilerText, type SpoilerTextValue } from '../spoilers/model';
 import { useEffect, useState } from 'preact/hooks';
 import { checklistReadings, DATA, editorialData, editorialExtras, normalizeText } from '../data/model';
 import { appState } from '../state/app-state';
@@ -23,7 +24,7 @@ const sourceSite = (url: string) => {
 };
 
 // Cache the editorial cross-references: searching must not scan every Extra for every source.
-const sourceUses = new Map<number, string[]>();
+const sourceUses = new Map<number, SpoilerTextValue[]>();
 editorialExtras.forEach((extra: any) => (extra.src || []).forEach((index: number) => {
   const names = sourceUses.get(index) || [];
   names.push(extra.name);
@@ -32,12 +33,12 @@ editorialExtras.forEach((extra: any) => (extra.src || []).forEach((index: number
 
 function groupedSources(query: string, target: number | null) {
   const needle = normalizeText(query);
-  const groups = new Map<string, { key: string; label: string; sources: Array<{ source: any[]; index: number; uses: string[]; url: string }> }>();
+  const groups = new Map<string, { key: string; label: string; sources: Array<{ source: any[]; index: number; uses: SpoilerTextValue[]; url: string }> }>();
   DATA.fontes.r.forEach((source: any[], index: number) => {
     const uses = sourceUses.get(index) || [];
     const url = firstSourceUrl(source);
     const site = sourceSite(url);
-    if (needle && index !== target && !normalizeText([...source, ...uses, site.label, site.key].join(' ')).includes(needle)) return;
+    if (needle && index !== target && !normalizeText([...source, ...uses, site.label, site.key].map(spoilerPlainText).join(' ')).includes(needle)) return;
     if (!groups.has(site.key)) groups.set(site.key, { ...site, sources: [] });
     groups.get(site.key)!.sources.push({ source, index, uses, url });
   });
@@ -77,7 +78,7 @@ function Sources({ query, target }: { query: string; target: number | null }) {
         <summary class="disclosure-summary ui-disclosure-summary source-site-summary"><div class="row-head"><b>{group.label}</b><div class="row-meta disclosure-meta"><span class="tag">{group.sources.length} fontes</span><span class="mu sm">{group.key === 'sem-site' ? 'sem domínio' : group.key}</span></div></div><Icon name="chevD" className="help-summary-chevron" /></summary>
         <div class="source-site-body disclosure-content"><div class="source-list disclosure-list source-list-nested">{group.sources.map(({ source, index, uses, url }) => <details class={`content-row ui-list-item disclosure-item source-row${index === target ? ' is-targeted' : ''}`} id={`fonte-${index}`} key={index} open={index === target ? true : undefined}>
           <summary class="disclosure-summary ui-disclosure-summary"><b>{source[0]}</b><Icon name="chevD" className="disclosure-chevron" /></summary>
-          <div class="row-body disclosure-content"><p class="sm mu"><SpoilerText text={source[1]} /></p>{url ? <a class="source-link" href={url} target="_blank" rel="noopener noreferrer">Abrir fonte <Icon name="externalLink" /></a> : null}{uses.length ? <div class="source-uses sm mu"><b>Usada em:</b> {uses.join(' · ')}</div> : null}<a class="help-deep-link sm" href={`#ajuda/fontes?fonte=${index}`}>Link para esta fonte</a></div>
+          <div class="row-body disclosure-content"><p class="sm mu"><SpoilerText text={source[1]} /></p>{url ? <a class="source-link" href={url} target="_blank" rel="noopener noreferrer">Abrir fonte <Icon name="externalLink" /></a> : null}{uses.length ? <div class="source-uses sm mu"><b>Usada em:</b> <SpoilerText text={joinSpoilerText(uses, ' · ')} /></div> : null}<a class="help-deep-link sm" href={`#ajuda/fontes?fonte=${index}`}>Link para esta fonte</a></div>
         </details>)}</div></div>
       </details>;
     })}</div> : <ScreenState kind="empty" title="Nenhuma fonte encontrada" message={`Nenhuma fonte corresponde a “${query}”.`} />}
@@ -92,7 +93,7 @@ function Methodology({ target }: { target: number | null }) {
     <div class="method-grid">{entries.map((entry: any, index: number) => <section class={`card${index === target ? ' is-targeted' : ''}`} id={`metodologia-${index}`} key={entry.title} tabIndex={-1}>
       <h3>{entry.title}</h3><p class="sm mu"><SpoilerText text={entry.body} /></p><a class="help-deep-link sm" href={`#ajuda/metodologia?bloco=${index}`}>Link para este tema</a>
     </section>)}</div>
-    {editorialData.changelog?.length ? <div class="content-list disclosure-list"><details class="content-row ui-list-item disclosure-item"><summary class="disclosure-summary ui-disclosure-summary"><b>Atualizações editoriais</b><Icon name="chevD" className="disclosure-chevron" /></summary><div class="row-body disclosure-content">{editorialData.changelog.map((entry: any) => <div class="src" key={`${entry.date}-${entry.title}`}><b>{entry.date} · {entry.title}</b><p class="sm mu">{entry.body}</p></div>)}</div></details></div> : null}
+    {editorialData.changelog?.length ? <div class="content-list disclosure-list"><details class="content-row ui-list-item disclosure-item"><summary class="disclosure-summary ui-disclosure-summary"><b>Atualizações editoriais</b><Icon name="chevD" className="disclosure-chevron" /></summary><div class="row-body disclosure-content">{editorialData.changelog.map((entry: any) => <div class="src" key={`${entry.date}-${entry.title}`}><b>{entry.date} · <SpoilerText text={entry.title} /></b><p class="sm mu">{entry.body}</p></div>)}</div></details></div> : null}
   </>;
 }
 

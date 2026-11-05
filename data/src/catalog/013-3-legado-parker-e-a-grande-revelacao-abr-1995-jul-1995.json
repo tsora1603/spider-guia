@@ -141,7 +141,17 @@
       "issue": "#226",
       "phase": "3. Legado Parker e a grande revelação (abr/1995–jul/1995)",
       "weight": "● Essencial",
-      "instructions": "A revelação polêmica: os exames indicam que Peter é o clone e Ben, o original.\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "A revelação polêmica: os exames indicam que Peter é o clone e Ben, o original.",
+            "spoiler": "forte"
+          },
+          {
+            "text": "\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 517,
       "note": ""
     },

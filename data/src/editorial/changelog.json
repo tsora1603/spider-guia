@@ -16,7 +16,20 @@
   },
   {
     "date": "06/10/2026",
-    "title": "Encaixe de A Morte de Jean DeWolff confirmado",
+    "title": {
+      "parts": [
+        {
+          "text": "Encaixe de "
+        },
+        {
+          "text": "A Morte de Jean DeWolff",
+          "spoiler": "forte"
+        },
+        {
+          "text": " confirmado"
+        }
+      ]
+    },
     "body": "Peter Parker, The Spectacular Spider-Man #107–110 passa a entrar depois de Amazing Spider-Man #272 e antes da #273, mantendo a mesma identidade e o mesmo progresso."
   },
   {

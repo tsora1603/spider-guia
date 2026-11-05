@@ -57,7 +57,20 @@
       "issue": "#105",
       "phase": "7. Depois da saga (contexto)",
       "weight": "◐ Contexto",
-      "instructions": "E se MJ não tivesse perdido o bebê? Apresenta a Spider-Girl (May Parker).\nConfirmação: Confirmado",
+      "instructions": {
+        "parts": [
+          {
+            "text": "E se MJ não tivesse perdido o bebê? "
+          },
+          {
+            "text": "Apresenta a Spider-Girl (May Parker).",
+            "spoiler": "forte"
+          },
+          {
+            "text": "\nConfirmação: Confirmado"
+          }
+        ]
+      },
       "readingOrder": 633,
       "note": ""
     },

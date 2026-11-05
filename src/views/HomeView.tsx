@@ -1,3 +1,4 @@
+import { joinSpoilerText } from '../spoilers/model';
 import { useMemo, useState } from 'preact/hooks';
 import { editorialExtras, journeyPhases, milestones, checklistReadings as readings, projectChecklistIds, type Reading } from '../data/model';
 import { statusOf } from '../state/progress-store';
@@ -64,7 +65,7 @@ function HomeNext({ plan, next, skipped, label, focusQuery }: { plan: readonly R
           <span class={`tag ${displayNext.weight.startsWith('●') ? 'e' : ''}`}>{displayNext.weight}</span>
           {displayNext.historicalNumber ? <span class="tag">Edição histórica #{displayNext.historicalNumber}</span> : null}
         </div>
-        {displayNext.extraNote || displayNext.notes ? <p class="home-next-description mu sm"><SpoilerText text={[displayNext.extraNote, displayNext.notes].filter(Boolean).join('\n')} /></p> : null}
+        {displayNext.extraNote || displayNext.notes ? <p class="home-next-description mu sm"><SpoilerText text={joinSpoilerText([displayNext.extraNote, displayNext.notes])} /></p> : null}
         <button class="btn home-continue-button" onClick={event => router.navigate(`#checklist/hq/${displayNext.id}`, event.currentTarget)}><Icon name="play" /> Abrir leitura na Checklist</button>
       </> : <>
         <h3 class="home-issue-title" id="home-next-heading">{skipped ? 'Sem leituras pendentes' : 'Plano concluído!'}</h3>
@@ -185,7 +186,7 @@ export function HomeView() {
             <details class="home-extras" >
               <summary><span><b>{unlocked.length} {unlocked.length === 1 ? 'extra disponível' : 'extras disponíveis'}</b><small class="mu">Conteúdos liberados no seu ponto da leitura</small></span><Icon name="chevD" /></summary>
               <div class="home-extras-body">
-                {unlocked.slice(0, 3).map((extra: any) => <div class="home-extra-line" key={extra.name}><strong>{extra.name}</strong><span class="mu sm">{extra.after ? `Depois da #${extra.after}` : 'Antes da #1'} · {extra.weight}</span></div>)}
+                {unlocked.slice(0, 3).map((extra: any) => <div class="home-extra-line" key={extra.n}><strong><SpoilerText text={extra.name} /></strong><span class="mu sm">{extra.after ? `Depois da #${extra.after}` : 'Antes da #1'} · {extra.weight}</span></div>)}
                 <button class="home-text-action" onClick={event => router.toTab('Ler', event.currentTarget, { readingMode: 'ext', extraFilter: preferences.depth === 'complete' ? 'go' : 'rec' })}>Ver todas as extras <span aria-hidden="true">→</span></button>
               </div>
             </details>

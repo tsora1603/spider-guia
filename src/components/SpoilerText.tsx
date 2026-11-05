@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useLayoutEffect, useState } from 'preact/hooks';
 import { spoilerIsVisible, spoilerParts, type SpoilerTextValue } from '../spoilers/model';
 import { spoilerPreferences } from '../spoilers/preferences';
 
@@ -8,15 +8,28 @@ export function useSpoilerLevel() {
   return level;
 }
 
-export function SpoilerText({ text, inline = true }: { text: SpoilerTextValue | unknown; inline?: boolean }) {
+export function SpoilerText({
+  text,
+  inline = true
+}: {
+  text: SpoilerTextValue | unknown;
+  inline?: boolean;
+}) {
   const level = useSpoilerLevel();
-  const [revealed, setRevealed] = useState<Set<number>>(() => new Set());
-  const reveal = (index: number) => setRevealed(current => {
-    if (current.has(index)) return current;
-    const next = new Set(current);
-    next.add(index);
-    return next;
-  });
+  const context = JSON.stringify([text, level]);
+  const [revelation, setRevelation] = useState<{ context: string; indexes: Set<number> }>(() => ({
+    context,
+    indexes: new Set()
+  }));
+  useLayoutEffect(() => {
+    setRevelation({ context, indexes: new Set() });
+  }, [context]);
+  const revealed = revelation.context === context ? revelation.indexes : new Set<number>();
+  const reveal = (index: number) =>
+    setRevelation((current) => ({
+      context,
+      indexes: new Set([...(current.context === context ? current.indexes : []), index])
+    }));
   const Tag = inline ? 'span' : 'div';
   return (
     <Tag>
@@ -31,10 +44,15 @@ export function SpoilerText({ text, inline = true }: { text: SpoilerTextValue | 
             role="button"
             tabIndex={0}
             aria-label={`Revelar spoiler ${part.spoiler}`}
-            onClick={() => reveal(index)}
-            onKeyDown={event => {
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              reveal(index);
+            }}
+            onKeyDown={(event) => {
               if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
+                event.stopPropagation();
                 reveal(index);
               }
             }}
@@ -57,7 +75,9 @@ export function SpoilerLevelControl({ id = 'spoiler-level' }: { id?: string } = 
         aria-label="Nível de spoilers"
         id={id}
         value={level}
-        onChange={event => spoilerPreferences.set(event.currentTarget.value as 'nenhum' | 'leve' | 'tudo')}
+        onChange={(event) =>
+          spoilerPreferences.set(event.currentTarget.value as 'nenhum' | 'leve' | 'tudo')
+        }
       >
         <option value="nenhum">Nenhum</option>
         <option value="leve">Leve</option>

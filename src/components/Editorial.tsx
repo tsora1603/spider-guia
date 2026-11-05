@@ -105,7 +105,7 @@ export function ExtraCard({ extra, editorialIndex, targeted = false }: { extra: 
           <KeyValue label="Em que ordem" value={extra.sequence} />
           <KeyValue label="Por que ajuda" value={extra.why} />
           <ReadingLinksAction kind="extra" id={extra.n} />
-          {state.total > 1 ? <div class="extra-issue-list content-list disclosure-list ui-list" aria-label={`Edições de ${extra.name}`}>
+          {state.total > 1 ? <div class="extra-issue-list content-list disclosure-list ui-list" aria-label={`Edições do extra ${extra.n}`}>
             {ids.map((itemId: number) => {
               const item = itemsById[itemId];
               return item ? <IssueRow

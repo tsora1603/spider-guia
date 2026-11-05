@@ -42,9 +42,9 @@ export const ItemSchema = z.object({
   issue: z.string(),
   phase: z.string().min(1),
   weight: WeightSchema,
-  instructions: z.string(),
+  instructions: SpoilerTextSchema,
   readingOrder: z.number().int().positive(),
-  note: z.string()
+  note: SpoilerTextSchema
 });
 
 export const CatalogPhaseSchema = z.object({
@@ -77,7 +77,7 @@ export const ExtraSchema = z
     n: z.number().int().positive(),
     after: z.number().int().nonnegative(),
     weight: WeightSchema,
-    name: z.string().min(1),
+    name: SpoilerTextSchema.refine((value) => typeof value !== 'string' || value.trim().length > 0),
     sequence: z.string(),
     why: SpoilerTextSchema,
     confirmation: ConfirmationSchema,
@@ -162,10 +162,12 @@ const EditorialLinkTargetSchema = z.discriminatedUnion('kind', [
 export const EditorialLinkGroupSchema = z
   .object({
     id: z.string().min(1),
-    title: z.string().min(1),
+    title: SpoilerTextSchema.refine(
+      (value) => typeof value !== 'string' || value.trim().length > 0
+    ),
     coverage: z.array(LinkCoverageSchema).min(1).optional(),
-    notes: z.string().optional(),
-    context: z.string().optional(),
+    notes: SpoilerTextSchema.optional(),
+    context: SpoilerTextSchema.optional(),
     targets: z.array(EditorialLinkTargetSchema).min(1).optional(),
     links: z.array(LinkDestinationSchema).min(1),
     stores: z.array(LinkDestinationSchema).optional(),
@@ -322,7 +324,7 @@ export const CloneSchema = z.object({
 
 export const MarcoSchema = z.object({
   year: z.string(),
-  title: z.string().min(1),
+  title: SpoilerTextSchema.refine((value) => typeof value !== 'string' || value.trim().length > 0),
   description: SpoilerTextSchema,
   whereToRead: z.string(),
   historicalStart: z.number().int().positive().nullable(),
@@ -338,7 +340,7 @@ export const LeituraSchema = z.object({
   n: z.number().int().positive(),
   after: z.number().int().nonnegative(),
   weight: WeightSchema,
-  name: z.string().min(1),
+  name: SpoilerTextSchema,
   unavailable: z.boolean(),
   sequence: z.string(),
   why: SpoilerTextSchema,
@@ -353,15 +355,15 @@ export const LeituraSchema = z.object({
 
 export const SkipRuleSchema = z.object({
   recommendation: z.string(),
-  item: z.string(),
-  range: z.string(),
+  item: SpoilerTextSchema,
+  range: SpoilerTextSchema,
   weight: z.string(),
-  rule: z.string()
+  rule: SpoilerTextSchema
 });
 
 export const SourceSchema = z.object({
   source: z.string(),
-  usedFor: z.string(),
+  usedFor: SpoilerTextSchema,
   link: z.string()
 });
 
@@ -378,6 +380,6 @@ export const MethodologyEntrySchema = z.object({
 
 export const ChangelogEntrySchema = z.object({
   date: z.string(),
-  title: z.string(),
+  title: SpoilerTextSchema,
   body: z.string()
 });

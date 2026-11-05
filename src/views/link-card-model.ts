@@ -1,3 +1,4 @@
+import { spoilerPlainText, type SpoilerTextValue } from '../spoilers/model';
 import type { EditorialCoverage, EditorialDestination, EditorialLinkGroup } from '../links/types';
 import { normalizeText, type Reading } from '../data/model';
 import { extraAnchorKey } from './explore-navigation';
@@ -12,7 +13,7 @@ export interface LinkCardDestination {
 
 export interface EditorialLinkCard {
   key: string;
-  name: string;
+  name: SpoilerTextValue;
   coverageLabel: string;
   destinations: LinkCardDestination[];
   /** Searchable editorial metadata is deliberately never rendered as card prose. */
@@ -122,7 +123,7 @@ export function createEditorialLinkCards(
             ),
             group.notes,
             group.context
-          ].join(' ')
+          ].map(spoilerPlainText).join(' ')
         )
       }
     ];

@@ -47,6 +47,14 @@ Confira **Explorar → Links** e os botões associados. `LINKS_ENABLED` em `publ
 
 Para mudar cobertura, volumes ou ordem, siga os contratos de [Arquitetura](ARQUITETURA.md). Para contas e reset, siga [Supabase](SUPABASE-E-SEGURANCA.md).
 
+## Spoilers
+
+Mortes, ressurreições, identidades reveladas, mudanças de identidade e desfechos são **fortes**, inclusive em títulos oficiais. Marque o trecho no próprio JSON: `{ "text": "Revelação da história", "spoiler": "forte" }`. Use `{ "parts": [{ "text": "Edição #10 — " }, { "text": "Revelação", "spoiler": "forte" }] }` para manter a referência visível.
+
+“Nenhum” é o padrão; “Leve” também oculta os fortes. O leitor pode revelar um trecho ou escolher “Tudo”. Use `SpoilerText` na interface e preserve as marcações ao juntar textos. Não coloque revelações em `aria-label` ou tooltips.
+
+`npm run spoilers:suggest` gera candidatos para revisão, sem aplicar marcações. Revise também títulos; registre revelações recorrentes em `data/review/spoiler-policy.json`. Rode `npm run data:build && npm run ci` e confira a página nos três níveis.
+
 ## Comandos úteis
 
 | Comando                                    | Uso                                                   |

@@ -1,3 +1,4 @@
+import type { SpoilerTextValue } from '../spoilers/model';
 /** Edição/intervalo editorial independente dos IDs de progresso. */
 export interface IssueRange {
   start: number;
@@ -26,11 +27,11 @@ export type EditorialLinkTarget =
 
 export interface EditorialLinkGroup {
   id: string;
-  title: string;
+  title: SpoilerTextValue;
   coverage?: EditorialCoverage[];
-  notes?: string;
+  notes?: SpoilerTextValue;
   /** Compatibilidade de dados antigos; novas entradas devem usar notes. */
-  context?: string;
+  context?: SpoilerTextValue;
   /** Fonte única das associações contextuais da Checklist, Extras e Saga do Clone. */
   targets?: EditorialLinkTarget[];
   links: EditorialDestination[];

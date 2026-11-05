@@ -1,3 +1,4 @@
+import { plainText } from './lib/spoiler-data.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -13,7 +14,7 @@ for (const [index, original] of baseline.entries()) {
   const group = current[index];
   assert.ok(group, `Link original removido: ${original.id}`);
   assert.equal(group.id, original.id, `Ordem/ID de Link alterado em ${index}`);
-  assert.equal(group.title, original.title, `Título alterado em ${original.id}`);
+  assert.equal(plainText(group.title), plainText(original.title), `Título alterado em ${original.id}`);
   for (const key of ['links', 'stores', 'libraries']) {
     const previous = original[key] || [];
     const actual = group[key] || [];

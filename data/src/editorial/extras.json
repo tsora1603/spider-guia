@@ -1127,7 +1127,20 @@
     "n": 34,
     "after": 272,
     "weight": "◐ Contexto",
-    "name": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
+    "name": {
+      "parts": [
+        {
+          "text": "Peter Parker, The Spectacular Spider-Man #107–110 ("
+        },
+        {
+          "text": "A Morte de Jean DeWolff",
+          "spoiler": "forte"
+        },
+        {
+          "text": ")"
+        }
+      ]
+    },
     "sequence": "Leia depois da Amazing Spider-Man #272 e antes da #273.",
     "why": {
       "text": "Peter e o Demolidor caçam o assassino de uma amiga policial. Mostra os limites morais de Peter. A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",

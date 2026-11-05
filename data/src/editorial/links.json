@@ -539,14 +539,37 @@
   },
   {
     "id": "leitura-7",
-    "title": "Peter Parker, The Spectacular Spider-Man #107–110 (A Morte de Jean DeWolff)",
+    "title": {
+      "parts": [
+        {
+          "text": "Peter Parker, The Spectacular Spider-Man #107–110 ("
+        },
+        {
+          "text": "A Morte de Jean DeWolff",
+          "spoiler": "forte"
+        },
+        {
+          "text": ")"
+        }
+      ]
+    },
     "links": [
       {
         "label": "Arco completo (GoFile)",
         "url": "https://gofile.io/d/llaPQfHo"
       }
     ],
-    "notes": "Peter e o Demolidor caçam o assassino de uma amiga policial. Mostra os limites morais de Peter. A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
+    "notes": {
+      "parts": [
+        {
+          "text": "Peter e o Demolidor caçam o assassino de uma amiga policial. Mostra os limites morais de Peter. "
+        },
+        {
+          "text": "A #37 da Amazing (2018) ressuscita o Sin-Eater, vilão deste arco.",
+          "spoiler": "forte"
+        }
+      ]
+    },
     "coverage": [
       {
         "type": "series",
@@ -575,7 +598,17 @@
         "url": "https://www.mediafire.com/download/83knz3z28wrv5gn/O+Espantoso+Homem-Aranha+Anual+21+%28Lemuria%29.cbr"
       }
     ],
-    "notes": "O casamento acontece no Annual, fora da contagem. Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. É este casamento que One More Day apaga (#544–545).",
+    "notes": {
+      "parts": [
+        {
+          "text": "O casamento acontece no Annual, fora da contagem. Sem ele, a #293 em diante mostra o casal já casado, sem a cerimônia. "
+        },
+        {
+          "text": "É este casamento que One More Day apaga (#544–545).",
+          "spoiler": "forte"
+        }
+      ]
+    },
     "coverage": [
       {
         "type": "series",
@@ -639,7 +672,20 @@
         "url": "https://hqs-soquadrinhos.blogspot.com/2011/08/homem-aranha-reuniao-dos-cinco-1998.html"
       }
     ],
-    "notes": "A #441 não fecha a história. O desfecho do arco, com Peter anunciando que larga o manto, está nessas três edições. Só depois começa o volume de 1999 (#442). A verdadeira Tia May reaparece aqui (aba 'Marcos e arcos').",
+    "notes": {
+      "parts": [
+        {
+          "text": "A #441 não fecha a história. O desfecho do arco, com "
+        },
+        {
+          "text": "Peter anunciando que larga o manto",
+          "spoiler": "forte"
+        },
+        {
+          "text": ", está nessas três edições. Só depois começa o volume de 1999 (#442). A verdadeira Tia May reaparece aqui (aba 'Marcos e arcos')."
+        }
+      ]
+    },
     "targets": [
       {
         "kind": "extra",
@@ -656,7 +702,17 @@
         "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
       }
     ],
-    "notes": "Peter 'morre' e volta com habilidades novas (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da aba 'Marcos e arcos' lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4.",
+    "notes": {
+      "parts": [
+        {
+          "text": "Peter 'morre' e volta com habilidades novas",
+          "spoiler": "forte"
+        },
+        {
+          "text": " (Peter David, Reginald Hudlin e Straczynski). A linha 'The Other' da aba 'Marcos e arcos' lista só a Marvel Knights. A fonte conferida inclui também Friendly Neighborhood (2005) #1–4."
+        }
+      ]
+    },
     "targets": [
       {
         "kind": "extra",
@@ -673,7 +729,17 @@
         "url": "https://hqs-soquadrinhos.blogspot.com/2011/08/guerra-civil-2006.html"
       }
     ],
-    "notes": "Na Civil War #2, Peter revela a identidade em rede nacional. Sem ela, a #532 já começa com ele desmascarado.",
+    "notes": {
+      "parts": [
+        {
+          "text": "Na Civil War #2, Peter revela a identidade em rede nacional.",
+          "spoiler": "forte"
+        },
+        {
+          "text": " Sem ela, a #532 já começa com ele desmascarado."
+        }
+      ]
+    },
     "coverage": [
       {
         "type": "series",
@@ -794,7 +860,17 @@
         "url": "https://mega.nz/folder/iIo2WJTS#QBAFCLa4PqD3LHIeKN2hhw"
       }
     ],
-    "notes": "O acordo com Mephisto, que apaga o casamento, passa por essas duas edições. Abre a fase Brand New Day (#546 em diante).",
+    "notes": {
+      "parts": [
+        {
+          "text": "O acordo com Mephisto, que apaga o casamento",
+          "spoiler": "forte"
+        },
+        {
+          "text": ", passa por essas duas edições. Abre a fase Brand New Day (#546 em diante)."
+        }
+      ]
+    },
     "targets": [
       {
         "kind": "extra",
@@ -811,7 +887,20 @@
         "url": "https://hqs-soquadrinhos.blogspot.com/2024/01/ultimate-homem-aranha-2024.html"
       }
     ],
-    "notes": "Desvio opcional: em outro universo, o casamento de Peter e MJ é restaurado. Fica fora da continuidade principal. Não desfaz One More Day.",
+    "notes": {
+      "parts": [
+        {
+          "text": "Desvio opcional: em outro universo, "
+        },
+        {
+          "text": "o casamento de Peter e MJ",
+          "spoiler": "forte"
+        },
+        {
+          "text": " é restaurado. Fica fora da continuidade principal. Não desfaz One More Day."
+        }
+      ]
+    },
     "coverage": [
       {
         "type": "series",
@@ -1134,7 +1223,20 @@
         "url": "https://www.hq-now.com/hq-reader/32489/o-espetacular-homem-aranha-v5/chapter/44.1/page/1"
       }
     ],
-    "notes": "Abre Sins Rising (Amazing 2018 #45–49 = #846–850). É a fase em que Kindred ressuscita o Sin-Eater, visto na #37 do volume (#838).",
+    "notes": {
+      "parts": [
+        {
+          "text": "Abre Sins Rising (Amazing 2018 #45–49 = #846–850). É a fase em que "
+        },
+        {
+          "text": "Kindred ressuscita o Sin-Eater",
+          "spoiler": "forte"
+        },
+        {
+          "text": ", visto na #37 do volume (#838)."
+        }
+      ]
+    },
     "coverage": [
       {
         "type": "one-shot",

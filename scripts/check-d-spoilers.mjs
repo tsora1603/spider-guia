@@ -1,3 +1,4 @@
+import { findUnprotectedRevelations } from './lib/spoiler-policy.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { SRC_DIR, ROOT, readJson } from './lib/data-utils.mjs';
@@ -15,7 +16,9 @@ const counts = {
   marcoDescriptions: marcos.filter(entry => entry.description && isAnnotatedText(entry.description)).length,
   faseHighlights: fases.filter(entry => entry.highlights && isAnnotatedText(entry.highlights)).length
 };
+const unprotectedRevelations = await findUnprotectedRevelations(ROOT);
 const checks = {
+  reviewedRevelationsAreStrong: unprotectedRevelations.length === 0,
   allExtraWhyMigrated: counts.extrasWhy === extras.length,
   allExistingCloneNotesMigrated: counts.cloneNotes === clone.entries.filter(entry => entry.note).length,
   allMarcoDescriptionsMigrated: counts.marcoDescriptions === marcos.filter(entry => entry.description).length,
@@ -25,5 +28,5 @@ const checks = {
   suggestionLevelsValid: review.suggestions.every(entry => entry.suggestedLevel === 'leve' || entry.suggestedLevel === 'forte')
 };
 const ok = Object.values(checks).every(Boolean);
-console.log(JSON.stringify({ ok, counts, suggestionSummary: review.summary, checks }, null, 2));
+console.log(JSON.stringify({ ok, counts, unprotectedRevelations, suggestionSummary: review.summary, checks }, null, 2));
 if (!ok) process.exit(1);

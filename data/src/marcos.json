@@ -25,7 +25,10 @@
   },
   {
     "year": "1966",
-    "title": "O Duende Verde é desmascarado",
+    "title": {
+      "text": "O Duende Verde é desmascarado",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "A identidade do Duende Verde é revelada: Norman Osborn, pai do melhor amigo de Peter, Harry. Prepara a rivalidade que atravessa a vida de Peter.",
       "spoiler": "forte"
@@ -61,7 +64,10 @@
   },
   {
     "year": "1973",
-    "title": "A morte de Gwen Stacy",
+    "title": {
+      "text": "A morte de Gwen Stacy",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "O Duende Verde mata Gwen Stacy (#121) e Norman Osborn morre no confronto seguinte (#122). Gwen é a maior perda da juventude de Peter e continua a pesar nas escolhas dele.",
       "spoiler": "forte"
@@ -73,7 +79,10 @@
   },
   {
     "year": "1974",
-    "title": "Harry Osborn vira Duende Verde",
+    "title": {
+      "text": "Harry Osborn vira Duende Verde",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "Harry, melhor amigo de Peter, assume o manto do pai. A amizade entre os dois vira um dos conflitos centrais dos anos seguintes.",
       "spoiler": "forte"
@@ -97,7 +106,10 @@
   },
   {
     "year": "1980",
-    "title": "Peter confronta o ladrão que matou o Tio Ben",
+    "title": {
+      "text": "Peter confronta o ladrão que matou o Tio Ben",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "Peter reencontra o criminoso responsável pela morte do Tio Ben e acerta contas com a culpa que o move.",
       "spoiler": "forte"
@@ -133,7 +145,10 @@
   },
   {
     "year": "1985–86",
-    "title": "A Morte de Jean DeWolff",
+    "title": {
+      "text": "A Morte de Jean DeWolff",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "Peter e o Demolidor caçam o assassino de uma amiga policial; o arco mostra os limites morais de Peter.",
       "spoiler": "forte"
@@ -145,7 +160,10 @@
   },
   {
     "year": "1987",
-    "title": "Proposta e casamento com Mary Jane",
+    "title": {
+      "text": "Proposta e casamento com Mary Jane",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "Peter pede MJ em casamento (#290); ela recusa e volta a Pittsburgh (#291); ele vai atrás (#292) e ela aceita. O casamento acontece no Annual #21 e a lua de mel, no Spectacular Annual #7.",
       "spoiler": "forte"
@@ -193,7 +211,10 @@
   },
   {
     "year": "1995",
-    "title": "A Tia May morre (#400)",
+    "title": {
+      "text": "A Tia May morre (#400)",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "A Tia May morre na edição de marco #400, de DeMatteis e Bagley. Em 1998, revela-se que quem morreu era uma atriz contratada por Osborn.",
       "spoiler": "forte"
@@ -205,7 +226,10 @@
   },
   {
     "year": "1998",
-    "title": "A Tia May está viva",
+    "title": {
+      "text": "A Tia May está viva",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "Osborn revela que a May que morreu na #400 era uma atriz geneticamente alterada; a verdadeira May estava em cativeiro e fica sob os cuidados de Reed Richards. Peter se reencontra com ela.",
       "spoiler": "forte"
@@ -217,7 +241,17 @@
   },
   {
     "year": "2001–02",
-    "title": "A Tia May descobre o segredo de Peter (#476)",
+    "title": {
+      "parts": [
+        {
+          "text": "A Tia May descobre o segredo de Peter",
+          "spoiler": "forte"
+        },
+        {
+          "text": " (#476)"
+        }
+      ]
+    },
     "description": {
       "text": "Em #476 (“Coming Out”), Peter volta do confronto com Morlun e May percebe que o filho é o Homem-Aranha ao se deparar com a identidade secreta dele. É a revelação inicial do segredo para May.",
       "spoiler": "forte"
@@ -229,7 +263,17 @@
   },
   {
     "year": "2001–02",
-    "title": "A Tia May descobre o segredo de Peter (#479)",
+    "title": {
+      "parts": [
+        {
+          "text": "A Tia May descobre o segredo de Peter",
+          "spoiler": "forte"
+        },
+        {
+          "text": " (#479)"
+        }
+      ]
+    },
     "description": {
       "text": "Em #479 (“The Conversation”), Peter conversa abertamente com May sobre sua vida como Homem-Aranha e sobre a culpa ligada à morte de Tio Ben; May passa a conhecer de forma explícita a dimensão de sua vida heroica.",
       "spoiler": "forte"
@@ -265,7 +309,10 @@
   },
   {
     "year": "2006",
-    "title": "Guerra Civil: Peter revela a identidade",
+    "title": {
+      "text": "Guerra Civil: Peter revela a identidade",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "Ao lado de Tony Stark e do Registro de Super-Humanos, Peter se desmascara em rede nacional (Civil War #2). Depois muda de lado e luta ao lado do Capitão América. As escolhas dele colocam a família em perigo.",
       "spoiler": "forte"
@@ -277,7 +324,10 @@
   },
   {
     "year": "2007",
-    "title": "A Tia May é baleada",
+    "title": {
+      "text": "A Tia May é baleada",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "No fim da Guerra Civil, um atirador a mando do Rei do Crime acerta a Tia May. Peter entra numa espiral de culpa e raiva.",
       "spoiler": "forte"
@@ -325,7 +375,10 @@
   },
   {
     "year": "2012–14",
-    "title": "Dying Wish: Octopus rouba o corpo de Peter",
+    "title": {
+      "text": "Dying Wish: Octopus rouba o corpo de Peter",
+      "spoiler": "forte"
+    },
     "description": {
       "text": "Na conclusão de “Dying Wish”, o Doutor Octopus troca de mente com Peter em #700 e assume a identidade do Homem-Aranha; o arco de Amazing é #698–700.",
       "spoiler": "forte"

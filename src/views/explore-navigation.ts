@@ -1,8 +1,9 @@
+import { plainText as spoilerPlainText } from '../../data/spoiler-text.mjs';
 /** Internal editorial anchors are positions in the versioned curated index, not inferred HQ mappings. */
 export type EditorialTarget = 'marco' | 'extra' | 'link' | 'passo';
 
 const slug = (value: unknown) =>
-  String(value ?? '')
+  spoilerPlainText(value)
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
