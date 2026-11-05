@@ -1,6 +1,6 @@
 # SPIDER·GUIA
 
-Guia de leitura do Homem-Aranha **TOTALMENTE vibe-codado** com **1.236 leituras**, Checklist, Saga do Clone, links e progresso salvo no navegador. Contas cadastradas pelo administrador podem sincronizar pelo Supabase.
+Guia de leitura do Homem-Aranha **TOTALMENTE vibe-codado** com Checklist, Saga do Clone, links e progresso salvo no navegador. Contas cadastradas pelo administrador podem sincronizar pelo Supabase.
 
 **[Abrir o site no GitHub Pages](https://tsora1603.github.io/spider-guia/)**
 
@@ -31,7 +31,7 @@ Edite as fontes; os arquivos gerados são reconstruídos por `npm run data:build
 
 ## Guias
 
-- [Hospedagem](docs/HOSPEDAGEM.md): prévia de produção, Pages, cópia própria e saída do Netlify.
+- [Hospedagem](docs/HOSPEDAGEM.md): prévia de produção, Pages e servidor próprio.
 - [Manutenção](docs/MANUTENCAO.md): editar links, validar e atualizar o site.
 - [Contribuição](CONTRIBUTING.md): enviar alterações por pull request.
 - [Arquitetura](docs/ARQUITETURA.md): dados, IDs, rotas e volumes Panini.

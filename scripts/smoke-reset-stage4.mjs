@@ -11,7 +11,7 @@ let ts;
 try { ts = require('typescript'); }
 catch { const executable = realpathSync(execFileSync('which',['tsc'],{encoding:'utf8'}).trim()); ts = require(path.join(path.dirname(executable),'..','lib','typescript.js')); }
 const root=process.cwd(), out=mkdtempSync(path.join(tmpdir(),'spider-stage4-'));
-const paths=['src/state/app-state.ts','src/state/progress-store.ts','src/state/storage-migrations.ts','src/reset/reset-guard.ts','src/reset/cloud-reconnect.ts','src/sync/sync-engine.ts','src/sync/server-generation.ts','src/reset/remote-reset.ts'];
+const paths=['src/state/app-state.ts','src/state/progress-store.ts','src/state/storage-migrations.ts','src/reset/reset-guard.ts','src/reset/cloud-reconnect.ts','src/sync/sync-engine.ts','src/sync/server-generation.ts','src/sync/progress-pages.ts','src/reset/remote-reset.ts'];
 for(const filename of paths){
   const code=readFileSync(path.join(root,filename),'utf8');
   const transpiled=ts.transpileModule(code,{fileName:filename,reportDiagnostics:true,compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ESNext}});

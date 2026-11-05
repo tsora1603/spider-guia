@@ -1,3 +1,4 @@
+import { progressPages } from './progress-pages';
 import { appState } from '../state/app-state';
 import { isSyncBlocked, mayUseCloud, blockForChangedCloudGeneration } from '../reset/reset-guard';
 import { checkServerGeneration, isStaleGenerationError, type ServerProtocol } from './server-generation';
@@ -249,14 +250,9 @@ export function createSyncEngine(options: SyncEngineOptions) {
         if (!allowed(epoch) || appState.currentUser?.id !== userId) return { ok: false, blocked: true };
         if (protocol.mode === 'protected') {
           const pages: any[] = [];
-          for (let offset = 0; offset < 100000; offset += 500) {
-            const response = await client.from('progress').select('ord,status,updated_at')
-              .eq('user_id', userId).order('ord', { ascending: true }).range(offset, offset + 499);
+          for await (const page of progressPages(client, userId)) {
             if (!allowed(epoch)) return { ok: false, blocked: true };
-            if (response.error) throw response.error;
-            if (!Array.isArray(response.data)) throw Error('Resposta de consulta inválida.');
-            pages.push(...response.data);
-            if (response.data.length < 500) break;
+            pages.push(...page);
           }
           // Não aplicar um snapshot da geração anterior após reset de outra aba/dispositivo.
           const finalProtocol = await checkServerGeneration(client, userId);

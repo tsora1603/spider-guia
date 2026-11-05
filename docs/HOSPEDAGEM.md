@@ -42,20 +42,11 @@ A URL de uma cópia será `https://USUARIO.github.io/REPOSITORIO/`. Pages em rep
 
 Em **Settings → Branches → Add branch protection rule**, selecione `main`. Exija os checks **Lint, types, data and Vitest** e **Playwright critical flows**, com a branch atualizada antes de integrar. Mantenha force push e exclusão desativados. Exija revisão de pull requests se houver outros responsáveis disponíveis.
 
-## Concluir a transição do Netlify
-
-A publicação no Pages está concluída. Para encerrar a hospedagem antiga:
-
-1. Em `https://spider-guia.netlify.app/`, exporte o JSON em **Configurações**. Cada leitor com progresso local precisa fazer isso no próprio navegador.
-2. No Pages, importe o JSON. Quem usa sincronização deve entrar novamente na mesma conta; o projeto Supabase continua o mesmo.
-3. Atualize favoritos e links divulgados para o novo endereço. Não há domínio próprio nem DNS a transferir.
-4. Após conferir o progresso no Pages, interrompa os deploys, desconecte o repositório e encerre o projeto antigo no **painel do Netlify**.
-
-Remover `netlify.toml` não desliga o projeto no provedor. O progresso local pertence ao domínio e não acompanha automaticamente a mudança de endereço.
-
 ## Outro serviço estático ou servidor próprio
 
 Rode `npm run build` e publique **todo o conteúdo de `dist/`**, com `index.html`, `assets/` e arquivos públicos. O servidor precisa apenas servir arquivos por HTTPS; atualize o conjunto inteiro a cada versão.
+
+Ao trocar de domínio, exporte e importe o backup: o progresso local pertence ao navegador e à origem. A sincronização exige novo login.
 
 Para uma prévia local com Python 3: `python3 -m http.server 8080 --directory dist`. Abra `http://localhost:8080`.
 
