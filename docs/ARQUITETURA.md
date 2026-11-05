@@ -83,9 +83,9 @@ Preserve aliases antigos como `#inicio`, `#ler/*` e `#conta/*`. Testes de lógic
 
 - `src/router/router.ts` e `views/explore-navigation.ts` aceitam URLs antigas e alvos numéricos.
 - `state/storage-migrations.ts` lê versões anteriores do progresso; `progress/backup.ts` aceita backups do catálogo anterior aos volumes Panini. Chaves `aranha-*` continuam em uso.
-- `sync/server-generation.ts` permite o protocolo legado quando a RPC está ausente; esse caminho usa leitura/escrita direta em `progress`, com consulta não paginada sujeita ao limite do servidor. `setup.sql` cria a estrutura inicial; a migração em `supabase/migrations/` instala o protocolo protegido. Consulte as restrições em [Supabase](SUPABASE-E-SEGURANCA.md).
+- `setup.sql` continua como etapa inicial do banco; aplique depois a migração de `supabase/migrations/`. O cliente exige as RPCs do protocolo protegido, sem fallback para escrita direta. Consulte [Supabase](SUPABASE-E-SEGURANCA.md).
 - `data.js`, `generated-data.json`, `public/validator.js` e os baselines editoriais continuam servindo à validação/compatibilidade. O catálogo completo não é importado pelo bundle inicial; o validador global ainda é carregado pelo HTML e usado com `?debug=1`.
 - `data/src/pular.json` também segue no contrato gerado/validador, embora não tenha tela própria.
-- O controlador mantém a fachada de exports e listeners de filtros em `<details>`; `FilterDropdown` já controla os filtros atuais em Preact.
+- O controlador mantém a fachada de exports; `FilterDropdown` controla os filtros em Preact.
 
-A linha histórica #1–#1000 é um contrato validado no build. Esse limite também aparece em formulários, preferências e ações; ampliar o catálogo exige atualizar esses consumidores. IDs e cobertura de volumes vêm de `clone.json`; os nomes de série e números exibidos pela Checklist ainda são definidos por posição (`index < 18`) em `data/checklist-catalog.ts`. Links vêm de `links.json`, sem destinos específicos inseridos nos componentes.
+A cobertura #1–#1000 continua sendo um contrato editorial validado no build. Os limites da interface e das ações derivam do índice em `src/data/historical-range.mjs`. Volumes declaram `publication: { series, issue }` junto a `checklistId` em `clone.json`; a Checklist usa esses campos, preservando os IDs. Links vêm de `links.json`.

@@ -88,20 +88,6 @@ export function initializeRuntime() {
     event.preventDefault();
     ($('#app') as HTMLElement | null)?.focus();
   });
-  document.addEventListener('pointerdown', (event) => {
-    const dropdown = document.querySelector<HTMLDetailsElement>('.filter-dropdown[open]');
-    if (dropdown && !dropdown.contains(event.target as Node)) dropdown.removeAttribute('open');
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      const dropdown = document.querySelector<HTMLDetailsElement>('.filter-dropdown[open]');
-      if (dropdown) {
-        dropdown.removeAttribute('open');
-        dropdown.querySelector<HTMLElement>('summary')?.focus();
-      }
-    }
-  });
-
   void ensureSupabaseClient();
 
   addEventListener('focus', () => {

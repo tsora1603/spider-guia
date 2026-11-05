@@ -93,7 +93,7 @@ test('falha de logout interrompe a limpeza e não simula sucesso', async ({ page
       status: 200,
       contentType: 'application/javascript',
       body: supabaseModule(
-        `window.supabase={createClient:()=>({auth:{onAuthStateChange:()=>{},getSession:async()=>({data:{session:{user:{id:'e2e'}}}}),signOut:async()=>({error:{message:'falha simulada'}})},from:()=>({select:async()=>({data:[],error:null}),upsert:async()=>({error:null})})})};`
+        `window.supabase={createClient:()=>({auth:{onAuthStateChange:()=>{},getSession:async()=>({data:{session:{user:{id:'e2e'}}}}),signOut:async()=>({error:{message:'falha simulada'}})},rpc:async name=>({data:name==='spider_sync_state'?{protocol:4,generation:1,count:0}:{},error:null}),from:()=>({select:()=>({eq:()=>({order:()=>({range:async()=>({data:[],error:null})})})}),upsert:async()=>({error:null})})})};`
       )
     })
   );
@@ -155,8 +155,9 @@ test('conta autenticada: somente logout local; nenhum DELETE remoto', async ({ p
           getSession: async () => ({data:{session},error:null}),
           signOut: async ({scope}) => {window.__logoutScope = scope;session = null;listener('SIGNED_OUT',null);return {error:null};}
         },
+        rpc: async name => ({data:name==='spider_sync_state'?{protocol:4,generation:1,count:0}:{},error:null}),
         from: () => ({
-          select: async () => ({data:[],error:null}),
+          select: () => ({eq:()=>({order:()=>({range:async()=>({data:[],error:null})})})}),
           upsert: async () => ({error:null}),
           delete: () => {window.__remoteDeletes++;throw Error('DELETE remoto proibido');}
         })

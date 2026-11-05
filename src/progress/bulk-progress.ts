@@ -1,3 +1,4 @@
+import { HISTORICAL_MAX } from '../data/historical-range.mjs';
 import {
   checklistGroups,
   principalReadings,
@@ -93,8 +94,8 @@ export function selectBulkItems(selection: BulkSelection): { items: Reading[]; e
     cleanNumber(selection.startHistorical),
     cleanNumber(selection.endHistorical)
   );
-  if (!Number.isFinite(start) || !Number.isFinite(end) || start < 1 || end > 1000) {
-    return { items: [], error: 'Use um intervalo histórico entre #1 e #1000.' };
+  if (!Number.isFinite(start) || !Number.isFinite(end) || start < 1 || end > HISTORICAL_MAX) {
+    return { items: [], error: `Use um intervalo histórico entre #1 e #${HISTORICAL_MAX}.` };
   }
   const startItem = historicalAnchor(start);
   const endItem = historicalAnchor(end);

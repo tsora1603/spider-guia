@@ -3373,6 +3373,7 @@
           {
             "id": "panini-saga-01",
           "checklistId": 1302,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#1"},
             "number": 1,
             "title": "A Saga do Clone — volume 1",
             "edition": "A Saga do Clone — Panini, vol. 1",
@@ -3399,6 +3400,7 @@
           {
             "id": "panini-saga-02",
           "checklistId": 1303,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#2"},
             "number": 2,
             "title": "A Saga do Clone — volume 2",
             "edition": "A Saga do Clone — Panini, vol. 2",
@@ -3434,6 +3436,7 @@
           {
             "id": "panini-saga-03",
           "checklistId": 1304,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#3"},
             "number": 3,
             "title": "A Saga do Clone — volume 3",
             "edition": "A Saga do Clone — Panini, vol. 3",
@@ -3463,6 +3466,7 @@
           {
             "id": "panini-saga-04",
           "checklistId": 1305,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#4"},
             "number": 4,
             "title": "A Saga do Clone — volume 4",
             "edition": "A Saga do Clone — Panini, vol. 4",
@@ -3498,6 +3502,7 @@
           {
             "id": "panini-saga-05",
           "checklistId": 1306,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#5"},
             "number": 5,
             "title": "A Saga do Clone — volume 5",
             "edition": "A Saga do Clone — Panini, vol. 5",
@@ -3524,6 +3529,7 @@
           {
             "id": "panini-saga-06",
           "checklistId": 1307,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#6"},
             "number": 6,
             "title": "A Saga do Clone — volume 6",
             "edition": "A Saga do Clone — Panini, vol. 6",
@@ -3556,6 +3562,7 @@
           {
             "id": "panini-saga-07",
           "checklistId": 1308,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#7"},
             "number": 7,
             "title": "A Saga do Clone — volume 7",
             "edition": "A Saga do Clone — Panini, vol. 7",
@@ -3583,6 +3590,7 @@
           {
             "id": "panini-saga-08",
           "checklistId": 1309,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#8"},
             "number": 8,
             "title": "A Saga do Clone — volume 8",
             "edition": "A Saga do Clone — Panini, vol. 8",
@@ -3611,6 +3619,7 @@
           {
             "id": "panini-saga-09",
           "checklistId": 1310,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#9"},
             "number": 9,
             "title": "A Saga do Clone — volume 9",
             "edition": "A Saga do Clone — Panini, vol. 9",
@@ -3638,6 +3647,7 @@
           {
             "id": "panini-saga-10",
           "checklistId": 1311,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#10"},
             "number": 10,
             "title": "A Saga do Clone — volume 10",
             "edition": "A Saga do Clone — Panini, vol. 10",
@@ -3667,6 +3677,7 @@
           {
             "id": "panini-saga-11",
           "checklistId": 1312,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#11"},
             "number": 11,
             "title": "A Saga do Clone — volume 11",
             "edition": "A Saga do Clone — Panini, vol. 11",
@@ -3695,6 +3706,7 @@
           {
             "id": "panini-saga-12",
           "checklistId": 1313,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#12"},
             "number": 12,
             "title": "A Saga do Clone — volume 12",
             "edition": "A Saga do Clone — Panini, vol. 12",
@@ -3721,6 +3733,7 @@
           {
             "id": "panini-saga-13",
           "checklistId": 1314,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#13"},
             "number": 13,
             "title": "A Saga do Clone — volume 13",
             "edition": "A Saga do Clone — Panini, vol. 13",
@@ -3747,6 +3760,7 @@
           {
             "id": "panini-saga-14",
           "checklistId": 1315,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#14"},
             "number": 14,
             "title": "A Saga do Clone — volume 14",
             "edition": "A Saga do Clone — Panini, vol. 14",
@@ -3773,6 +3787,7 @@
           {
             "id": "panini-saga-15",
           "checklistId": 1316,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#15"},
             "number": 15,
             "title": "A Saga do Clone — volume 15",
             "edition": "A Saga do Clone — Panini, vol. 15",
@@ -3799,6 +3814,7 @@
           {
             "id": "panini-saga-16",
           "checklistId": 1317,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#16"},
             "number": 16,
             "title": "A Saga do Clone — volume 16",
             "edition": "A Saga do Clone — Panini, vol. 16",
@@ -3831,6 +3847,7 @@
           {
             "id": "panini-saga-17",
           "checklistId": 1318,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#17"},
             "number": 17,
             "title": "A Saga do Clone — volume 17",
             "edition": "A Saga do Clone — Panini, vol. 17",
@@ -3857,6 +3874,7 @@
           {
             "id": "panini-saga-18",
           "checklistId": 1319,
+          "publication": {"series": "A Saga do Clone (Panini)", "issue": "#18"},
             "number": 18,
             "title": "A Saga do Clone — volume 18",
             "edition": "A Saga do Clone — Panini, vol. 18",
@@ -3884,6 +3902,7 @@
           {
             "id": "panini-ben-01",
           "checklistId": 1320,
+          "publication": {"series": "A Saga do Clone — Ben Reilly (Panini)", "issue": "#1"},
             "number": 19,
             "title": "A Saga do Clone — Ben Reilly — volume 1",
             "edition": "A Saga do Clone — Ben Reilly — Panini, vol. 1",

@@ -20,6 +20,7 @@ const privateAuthMock = `(() => {
       updateUser: async ({password}) => { window.__authCalls.passwordChanges++; return {data:{user:session?.user},error:null}; },
       signOut: async () => {session=null;callback('SIGNED_OUT',null);return {error:null}}
     },
+    rpc: async name => ({data: name === 'spider_sync_state' ? {protocol:4,generation:1,count:0} : {},error:null}),
     from: () => ({
       select: () => ({
         eq: () => ({order: () => ({range: async () => ({data:[],error:null})})}),

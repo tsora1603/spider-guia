@@ -1,3 +1,4 @@
+import { HISTORICAL_MAX } from '../data/historical-range.mjs';
 import { canPersistLocalChange } from '../reset/reset-guard';
 
 export type ReadingDepth = 'complete' | 'essential' | 'focus';
@@ -26,7 +27,7 @@ const validDepths = new Set<ReadingDepth>(['complete', 'essential', 'focus']);
 const clampReadThrough = (value: unknown) => {
   const number = Number(value);
   if (!Number.isFinite(number)) return 0;
-  return Math.max(0, Math.min(1000, Math.trunc(number)));
+  return Math.max(0, Math.min(HISTORICAL_MAX, Math.trunc(number)));
 };
 
 export function normalizeReadingPreferences(value: unknown): ReadingPreferences {

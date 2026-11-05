@@ -1,4 +1,5 @@
--- Pode ser executado novamente com segurança no SQL Editor.
+-- Apenas para banco novo, antes da migração de sincronização.
+-- Não reexecute após a migração: as políticas abaixo permitem escrita direta.
 create table if not exists public.progress (
   user_id uuid not null default auth.uid() references auth.users(id) on delete cascade,
   ord int not null,

@@ -23,6 +23,21 @@ import { readThroughSelection } from '../../src/progress/read-through';
 import { selectBulkItems } from '../../src/progress/bulk-progress';
 
 describe('Checklist com volumes Panini e referências históricas preservadas', () => {
+  it('obtém série e edição dos dados mesmo quando o volume muda de posição', () => {
+    const guide = structuredClone(cloneGuide);
+    guide.sections[0].steps.reverse();
+    const { volumes } = createChecklistCatalog(catalogReadings, guide);
+    expect(volumes[0]).toMatchObject({
+      id: 1320,
+      series: 'A Saga do Clone — Ben Reilly (Panini)',
+      issue: '#1'
+    });
+    expect(volumes[18]).toMatchObject({
+      id: 1302,
+      series: 'A Saga do Clone (Panini)',
+      issue: '#1'
+    });
+  });
   beforeEach(() => {
     appState.progress = {};
     appState.progressMeta = {};

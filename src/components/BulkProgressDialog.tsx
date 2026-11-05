@@ -1,3 +1,4 @@
+import { HISTORICAL_MAX } from '../data/historical-range.mjs';
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { principalReadings } from '../data/model';
 import { applyBulkStatus } from '../runtime/controller';
@@ -106,10 +107,10 @@ export function BulkProgressDialog() {
 
         {mode === 'plan' ? <p class="mu sm">Inclui todas as leituras do mesmo plano usado na Home e na Checklist, na ordem de leitura. Confira a prévia antes de aplicar.</p> : null}
         {mode === 'through' ? (
-          <label class="bulk-field"><span>Marcar tudo até a edição histórica</span><div class="bulk-number"><b>#</b><input aria-label="Edição histórica para tudo até aqui" type="number" min="1" max="1000" inputMode="numeric" value={throughHistorical} onInput={event => setThroughHistorical(event.currentTarget.value)} placeholder="250" /></div></label>
+          <label class="bulk-field"><span>Marcar tudo até a edição histórica</span><div class="bulk-number"><b>#</b><input aria-label="Edição histórica para tudo até aqui" type="number" min="1" max={HISTORICAL_MAX} inputMode="numeric" value={throughHistorical} onInput={event => setThroughHistorical(event.currentTarget.value)} placeholder="250" /></div></label>
         ) : null}
         {mode === 'range' ? (
-          <fieldset class="bulk-range"><legend>Intervalo histórico</legend><label><span>De</span><div class="bulk-number"><b>#</b><input aria-label="Início do intervalo" type="number" min="1" max="1000" inputMode="numeric" value={rangeStart} onInput={event => setRangeStart(event.currentTarget.value)} placeholder="100" /></div></label><label><span>Até</span><div class="bulk-number"><b>#</b><input aria-label="Fim do intervalo" type="number" min="1" max="1000" inputMode="numeric" value={rangeEnd} onInput={event => setRangeEnd(event.currentTarget.value)} placeholder="125" /></div></label></fieldset>
+          <fieldset class="bulk-range"><legend>Intervalo histórico</legend><label><span>De</span><div class="bulk-number"><b>#</b><input aria-label="Início do intervalo" type="number" min="1" max={HISTORICAL_MAX} inputMode="numeric" value={rangeStart} onInput={event => setRangeStart(event.currentTarget.value)} placeholder="100" /></div></label><label><span>Até</span><div class="bulk-number"><b>#</b><input aria-label="Fim do intervalo" type="number" min="1" max={HISTORICAL_MAX} inputMode="numeric" value={rangeEnd} onInput={event => setRangeEnd(event.currentTarget.value)} placeholder="125" /></div></label></fieldset>
         ) : null}
 
         <fieldset class="bulk-target"><legend>Aplicar</legend><label><input type="radio" name="bulk-target" checked={target === 'Sim'} onChange={() => setTarget('Sim')} /> <span><b>Marcar como lidas</b><small>Itens pulados nesta seleção passam a lidos.</small></span></label><label><input type="radio" name="bulk-target" checked={target === 'Não'} onChange={() => setTarget('Não')} /> <span><b>Voltar a não lidas</b><small>Remove tanto “lida” quanto “pulada” desta seleção.</small></span></label></fieldset>

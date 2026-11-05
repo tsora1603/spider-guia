@@ -1,3 +1,4 @@
+import { HISTORICAL_MAX } from '../data/historical-range.mjs';
 import { joinSpoilerText } from '../spoilers/model';
 import { useMemo, useState } from 'preact/hooks';
 import { editorialExtras, journeyPhases, milestones, checklistReadings as readings, projectChecklistIds, type Reading } from '../data/model';
@@ -98,7 +99,7 @@ export function HomeView() {
   const phaseItems = phase ? plan.filter(item => item.type === 'Principal' && Number(item.historicalNumber) >= phase.historicalStart && Number(item.historicalNumber) <= phase.historicalEnd) : [];
   const phasePercent = phase && phaseItems.length ? percent(phaseItems.filter(item => statusOf(item.id) === 'Sim').length, phaseItems.length) : 0;
   const milestone = next?.historicalNumber ? milestones.find((item: any) => item.historicalStart && item.historicalEnd >= Number(next.historicalNumber)) : null;
-  const validUpTo = /^\d+$/.test(upTo.trim()) && Number(upTo) >= 1 && Number(upTo) <= 1000;
+  const validUpTo = /^\d+$/.test(upTo.trim()) && Number(upTo) >= 1 && Number(upTo) <= HISTORICAL_MAX;
   const preview = validUpTo ? readThroughSelection(Number(upTo), readings, statusOf) : null;
   const submitReadThrough = async () => {
     if (!validUpTo || !preview?.pending.length || updating) return;
@@ -137,7 +138,7 @@ export function HomeView() {
           <form class="home-upto-form" onSubmit={event => { event.preventDefault(); void submitReadThrough(); }}>
             <label for="home-read-through">Última edição histórica lida</label>
             <div class="home-upto-fields">
-              <div class="home-upto-number"><span aria-hidden="true">#</span><input id="home-read-through" type="number" min={1} max={1000} step={1} required inputMode="numeric" placeholder="Ex.: 350" value={upTo} disabled={updating} aria-describedby="home-read-through-preview home-read-through-help" onInput={event => setUpTo(event.currentTarget.value)} /></div>
+              <div class="home-upto-number"><span aria-hidden="true">#</span><input id="home-read-through" type="number" min={1} max={HISTORICAL_MAX} step={1} required inputMode="numeric" placeholder="Ex.: 350" value={upTo} disabled={updating} aria-describedby="home-read-through-preview home-read-through-help" onInput={event => setUpTo(event.currentTarget.value)} /></div>
               <button class="btn" type="submit" disabled={!preview?.pending.length || updating}>{updating ? 'Atualizando…' : 'Revisar e atualizar'} <span aria-hidden="true">→</span></button>
             </div>
           </form>
@@ -145,7 +146,7 @@ export function HomeView() {
             ? preview.pending.length
               ? <><strong>{preview.pending.length} {preview.pending.length === 1 ? 'edição principal a marcar' : 'edições principais a marcar'}</strong>{preview.alreadyRead || preview.skipped ? ` · ${[preview.alreadyRead ? `${preview.alreadyRead} já ${preview.alreadyRead === 1 ? 'lida' : 'lidas'}` : '', preview.skipped ? `${preview.skipped} ${preview.skipped === 1 ? 'pulada preservada' : 'puladas preservadas'}` : ''].filter(Boolean).join(' · ')}` : ''}</>
               : 'Nenhuma edição pendente até este número.'
-            : 'Digite um número de 1 a 1000 para ver a prévia.'}</p>
+            : `Digite um número de 1 a ${HISTORICAL_MAX} para ver a prévia.`}</p>
           <p class="home-upto-help mu" id="home-read-through-help">Confira a seleção e confirme antes de salvar. Extras, volumes Panini e leituras puladas não serão alterados. Marque cada volume completo na Checklist. A atualização pode ser desfeita.</p>
         </section>
       </div>

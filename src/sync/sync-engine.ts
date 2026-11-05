@@ -141,7 +141,7 @@ export function createSyncEngine(options: SyncEngineOptions) {
     }
     setSyncState('syncing');
     try {
-      const protocol: ServerProtocol = typeof client.rpc === 'function' ? await checkServerGeneration(client, user.id) : { mode: 'legacy' };
+      const protocol: ServerProtocol = await checkServerGeneration(client, user.id);
       if (!allowed(epoch) || appState.currentUser?.id !== user.id) return { ok: false, blocked: true };
       const payload = records.map(record => ({
         user_id: user.id,
@@ -149,12 +149,10 @@ export function createSyncEngine(options: SyncEngineOptions) {
         status: record.status,
         updated_at: new Date(record.updatedAt).toISOString()
       }));
-      const response: any = await trackWrite(Promise.resolve(protocol.mode === 'protected'
-        ? client.rpc('spider_sync_push', {
+      const response: any = await trackWrite(Promise.resolve(client.rpc('spider_sync_push', {
             p_generation: protocol.generation,
             p_records: payload.map(({ ord, status, updated_at }) => ({ ord, status, updated_at }))
-          })
-        : client.from('progress').upsert(payload)));
+          })));
       if (!allowed(epoch)) return { ok: false, blocked: true };
       if (response.error) throw response.error;
       removeQueuedRecords(user.id, records.map(record => record.id));
@@ -246,26 +244,17 @@ export function createSyncEngine(options: SyncEngineOptions) {
       setSyncState('syncing');
       let data: any[];
       try {
-        const protocol: ServerProtocol = typeof client.rpc === 'function' ? await checkServerGeneration(client, userId) : { mode: 'legacy' };
+        const protocol: ServerProtocol = await checkServerGeneration(client, userId);
         if (!allowed(epoch) || appState.currentUser?.id !== userId) return { ok: false, blocked: true };
-        if (protocol.mode === 'protected') {
-          const pages: any[] = [];
-          for await (const page of progressPages(client, userId)) {
-            if (!allowed(epoch)) return { ok: false, blocked: true };
-            pages.push(...page);
-          }
-          // Não aplicar um snapshot da geração anterior após reset de outra aba/dispositivo.
-          const finalProtocol = await checkServerGeneration(client, userId);
-          if (finalProtocol.mode !== 'protected' || finalProtocol.generation !== protocol.generation) {
-            throw Error('A geração remota mudou durante o download.');
-          }
-          data = pages;
-        } else {
-          const response = await client.from('progress').select('ord,status,updated_at');
+        const pages: any[] = [];
+        for await (const page of progressPages(client, userId)) {
           if (!allowed(epoch)) return { ok: false, blocked: true };
-          if (response.error) throw response.error;
-          data = response.data || [];
+          pages.push(...page);
         }
+        const finalProtocol = await checkServerGeneration(client, userId);
+        if (finalProtocol.generation !== protocol.generation)
+          throw Error('A geração remota mudou durante o download.');
+        data = pages;
       } catch (error) {
         if (!allowed(epoch)) return { ok: false, blocked: true };
         if (isSyncBlocked()) { invalidate(); return { ok: false, blocked: true }; }

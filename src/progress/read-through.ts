@@ -1,3 +1,4 @@
+import { HISTORICAL_MAX } from '../data/historical-range.mjs';
 import type { Reading } from '../data/model';
 import type { ProgressStatus } from '../state/types';
 
@@ -7,7 +8,7 @@ export function readThroughSelection(
   source: readonly Reading[],
   status: (id: number) => ProgressStatus
 ) {
-  const eligible = Number.isInteger(number) && number >= 1 && number <= 1000
+  const eligible = Number.isInteger(number) && number >= 1 && number <= HISTORICAL_MAX
     ? source.filter(item => item.type === 'Principal' && item.historicalNumber != null && item.historicalNumber >= 1 && item.historicalNumber <= number)
     : [];
   const pending = [] as Reading[];

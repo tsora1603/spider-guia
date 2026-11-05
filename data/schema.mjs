@@ -220,6 +220,7 @@ export const CloneGuideStepSchema = z
   .object({
     id: z.string().min(1),
     checklistId: z.number().int().positive().optional(),
+    publication: z.object({ series: z.string().min(1), issue: z.string().min(1) }).strict().optional(),
     number: z.number().int().positive(),
     title: z.string().min(1),
     edition: z.string().min(1),
@@ -301,6 +302,9 @@ export const CloneGuideSchema = z
         code: z.ZodIssueCode.custom,
         message: 'A base deve conter os 19 volumes integrais na ordem definida.'
       });
+    }
+    if (steps.some(step => Boolean(step.checklistId) !== Boolean(step.publication))) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Volumes com checklistId exigem publication; demais passos não a utilizam.' });
     }
     const volumeIds = base?.steps.map((step) => step.checklistId) || [];
     if (

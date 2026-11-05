@@ -1,6 +1,7 @@
 export interface CloneGuideStep {
   id: string;
   checklistId?: number;
+  publication?: { series: string; issue: string };
   number: number;
   title: string;
   edition: string;

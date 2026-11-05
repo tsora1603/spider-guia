@@ -19,7 +19,7 @@ function clientFor(rowsInput: any[], fail = false) {
   select.mockReturnValue({ eq });
   const upsert = vi.fn();
   const from = vi.fn(() => ({ select, upsert }));
-  return { client: { from }, select, eq, range, upsert };
+  return { client: { from, rpc: async () => ({ data: { protocol: 4, generation: 1, count: rowsInput.length } }) }, select, eq, range, upsert };
 }
 async function setup() {
   const guard = await import('../../src/reset/reset-guard');
