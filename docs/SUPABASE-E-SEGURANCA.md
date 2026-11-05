@@ -37,4 +37,4 @@ Antes de habilitar, use staging, dados fictícios, contas A/B e dois dispositivo
 
 Código: `src/reset/`, `src/sync/server-generation.ts`, `src/sync/sync-engine.ts`. SQL: `supabase/migrations/` e `supabase/tests/`. As RPCs protegidas são `spider_sync_state`, `spider_sync_push`, `spider_sync_confirm_empty` e `spider_sync_reset`.
 
-Para validar o cliente, rode `npm run ci`, `npm run test:e2e`, `npm run reset:local-smoke` e `npm run reset:smoke`. Preserve também os testes reais de contas e dispositivos descritos acima.
+Para validar o cliente, rode `npm run ci`, `npm run test:e2e` e `npm run reset:smoke`. Preserve também os testes reais de contas e dispositivos descritos acima.

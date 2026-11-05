@@ -12,8 +12,7 @@ export default defineConfig({
   use: {
     baseURL: 'http://127.0.0.1:4173',
     trace: 'retain-on-failure',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure'
+    screenshot: 'only-on-failure'
   },
   projects: [
     {
@@ -22,7 +21,8 @@ export default defineConfig({
     }
   ],
   webServer: {
-    command: 'npm run build && npm run preview -- --host 127.0.0.1 --port 4173 --strictPort',
+    // CI already validated types and generated data in the quality job.
+    command: `${process.env.CI ? 'npm run build:bundle' : 'npm run build'} && npm run preview -- --host 127.0.0.1 --port 4173 --strictPort`,
     url: 'http://127.0.0.1:4173',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000
