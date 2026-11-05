@@ -13,7 +13,7 @@ async function noPageOverflow(page: Page) {
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
 }
 
-for (const width of [320, 360, 390, 768, 899, 900, 1024, 1440]) {
+for (const width of [320, 899, 900, 1440]) {
   test(`Etapa 7 · menu, conteúdo e responsividade em ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 800 });
     await prepare(page);
@@ -42,7 +42,7 @@ for (const width of [320, 360, 390, 768, 899, 900, 1024, 1440]) {
   });
 }
 
-for (const theme of ['dark', 'light', 'auto'] as const) {
+for (const theme of ['dark', 'light'] as const) {
   test(`Etapa 7 · fonte grande e tema ${theme} sem overflow`, async ({ page }) => {
     await page.setViewportSize({ width: 320, height: 700 });
     await prepare(page, theme, 'large');

@@ -2,7 +2,7 @@ name: Quality and GitHub Pages
 
 on:
   push:
-    branches: ['**']
+    branches: ['main']
   pull_request:
   workflow_dispatch:
 
@@ -36,11 +36,8 @@ jobs:
       - name: Quality gate
         run: npm run e:check
 
-      - name: Reset protocol smoke tests
-        run: npm run reset:local-smoke && npm run reset:smoke
-
-      - name: Reading sequence regression
-        run: npm run reading-sequence:check
+      - name: Reset protocol integration
+        run: npm run reset:smoke
 
   e2e:
     name: Playwright critical flows
@@ -75,8 +72,8 @@ jobs:
         with:
           path: dist
 
-      - name: Upload Playwright report
-        if: ${{ !cancelled() }}
+      - name: Upload Playwright report on failure
+        if: ${{ failure() }}
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: playwright-report

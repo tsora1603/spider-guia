@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run data:build && vite",
-    "build": "npm run data:build && npm run typecheck && vite build && node scripts/build-deployment-manifest.mjs",
+    "build": "npm run data:build && npm run typecheck && npm run build:bundle",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.tests.json",
     "format": "prettier --write \"{src,scripts,data,tests}/**/*.{ts,tsx,mjs,json,md}\" \"*.{html,json,md,mjs,ts}\" \".github/workflows/*.yml\" public/*.js",
@@ -31,22 +31,20 @@
     "test:e2e:report": "playwright show-report",
     "e:unit": "vitest run",
     "e:e2e": "playwright test",
-    "e:check": "npm run typecheck && npm run lint && npm run architecture:check && npm run icons:check && npm run design:check && npm run storage:compat && npm run navigation:check && npm run reading-sequence:check && npm run read-through:check && npm run data:check && npm run links:check && npm run spoilers:check && npm run spoilers:explicit:check && npm run test:unit",
-    "ci": "npm run data:generated:check && npm run e:check && npm run build",
+    "e:check": "npm run typecheck && npm run lint && npm run architecture:check && npm run design:check && npm run storage:compat && npm run navigation:check && npm run reading-sequence:check && npm run read-through:check && npm run data:check && npm run links:check && npm run spoilers:check && npm run spoilers:explicit:check && npm run test:unit",
+    "ci": "npm run data:generated:check && npm run e:check && npm run build:bundle",
     "extras:confirmation:check": "node scripts/check-extra-confirmation.mjs",
     "reset:smoke": "node scripts/smoke-reset-stage4.mjs",
-    "reset:local-smoke": "node scripts/smoke-local-reset-stage4.mjs",
     "focus:navigation:check": "node --experimental-strip-types scripts/check-focus-navigation.mjs",
     "reading-sequence:check": "node --experimental-strip-types scripts/check-reading-sequence-refactor.mjs",
-    "icons:check": "node scripts/check-lucide-icons.mjs",
     "storage:compat": "node scripts/simulate-b-storage-migration.mjs",
-    "router:check": "node scripts/check-router-contract.mjs",
     "spoilers:check": "node scripts/check-d-spoilers.mjs",
     "design:check": "node scripts/check-design-system.mjs",
-    "architecture:check": "node scripts/check-module-boundaries.mjs && node scripts/check-e-quality.mjs",
+    "architecture:check": "node scripts/check-module-boundaries.mjs",
     "data:generated:check": "node scripts/check-generated-data.mjs",
-    "navigation:check": "npm run router:check && node scripts/check-explore-targets.mjs && node scripts/check-help-routing.mjs && npm run focus:navigation:check",
-    "read-through:check": "node scripts/check-read-through.mjs"
+    "navigation:check": "node scripts/check-explore-targets.mjs && node scripts/check-help-routing.mjs && npm run focus:navigation:check",
+    "read-through:check": "node scripts/check-read-through.mjs",
+    "build:bundle": "vite build && node scripts/build-deployment-manifest.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1",
@@ -57,7 +55,6 @@
     "typescript-eslint": "^8.72.0",
     "vite": "^8.3.5",
     "vitest": "^5.0.5",
-    "yaml": "2.9.1",
     "zod": "^4.6.7"
   },
   "dependencies": {

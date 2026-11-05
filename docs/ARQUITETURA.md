@@ -14,7 +14,7 @@ Site estático em **Vite + TypeScript estrito + Preact**, publicado pelo GitHub 
 | Login, sincronização e reset               | `src/auth/`, `src/sync/`, `src/reset/`               |
 | Validação editorial                        | `data/schema.mjs`, `data/link-model.mjs`, `scripts/` |
 
-O controlador inicializa o aplicativo; as operações ficam em `auth/auth-session.ts`, `progress/*actions.ts`, `reset/device-actions.ts` e `runtime/sync-service.ts`. Serviços não importam o controlador. `npm run architecture:check` verifica dependências, ciclos e contratos do CI.
+O controlador inicializa o aplicativo; as operações ficam em `auth/auth-session.ts`, `progress/*actions.ts`, `reset/device-actions.ts` e `runtime/sync-service.ts`. Serviços não importam o controlador. `npm run architecture:check` verifica dependências e ciclos de execução.
 
 Os tipos editoriais derivam de `data/schema.mjs`. O índice mantém IDs e associações; `loadEditorialDetails()` carrega textos de Extras, Clone e Ajuda antes de exibir as seções. O SDK Supabase também usa importação dinâmica, com versão fixada no npm.
 

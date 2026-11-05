@@ -68,6 +68,8 @@ Mortes, ressurreições, identidades reveladas, mudanças de identidade e desfec
 | `npm run build && npm run test:pages`      | Build na subpasta do Pages                            |
 | `npm run reading-sequence:check`           | Plano, Checklist e Modo Foco                          |
 
+`build:bundle` é uma etapa interna do CI: pressupõe dados gerados e tipos já validados. Para uso local, prefira `npm run build`. A justificativa das verificações está em [CI e testes](CI-E-TESTES.md).
+
 Instale o navegador de testes com `npx playwright install chromium`.
 
 ## Publicar ou reverter
