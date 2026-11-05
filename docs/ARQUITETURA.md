@@ -14,11 +14,13 @@ Site estático em **Vite + TypeScript estrito + Preact**, publicado pelo GitHub 
 | Login, sincronização e reset               | `src/auth/`, `src/sync/`, `src/reset/`               |
 | Validação editorial                        | `data/schema.mjs`, `data/link-model.mjs`, `scripts/` |
 
+`sync/progress-pages.ts` centraliza a consulta paginada por conta usada pela sincronização protegida e pela reconexão; resultados incompletos ou inválidos interrompem a operação.
+
 O controlador inicializa o aplicativo; as operações ficam em `auth/auth-session.ts`, `progress/*actions.ts`, `reset/device-actions.ts` e `runtime/sync-service.ts`. Serviços não importam o controlador. `npm run architecture:check` verifica dependências e ciclos de execução.
 
 Os tipos editoriais derivam de `data/schema.mjs`. O índice mantém IDs e associações; `loadEditorialDetails()` carrega textos de Extras, Clone e Ajuda antes de exibir as seções. O SDK Supabase também usa importação dinâmica, com versão fixada no npm.
 
-O catálogo tem 1.301 HQs em 46 arquivos, listados em `data/src/manifest.json`. Os arquivos gerados não são editáveis. **IDs e `readingOrder` devem permanecer estáveis**: alterações podem exigir migração de progresso e revisão dos snapshots.
+Os arquivos do catálogo são listados em `data/src/manifest.json`. Os arquivos gerados não são editáveis. **IDs e `readingOrder` devem permanecer estáveis**: alterações podem exigir migração de progresso e revisão dos snapshots.
 
 ## Links editoriais e cobertura
 
@@ -45,7 +47,7 @@ Fontes de pesquisa ficam em `data/src/fontes.json`. Evidências brasileiras fica
 
 ## Extras e confirmação
 
-A posição exige 100% de respaldo por fontes. O peso exige ao menos 60% de suporte factual e permite até 40% de dedução documentada. **Confirmado** exige ambos; a auditoria está em `data/review/extras-confirmacao-60-40.md`. `itemIds` vincula a leitura à ficha exibida em **Mais informações**.
+A política de confirmação exige respaldo documental da posição e peso; critérios em `data/src/editorial/meta.json` e evidências em `data/review/`. `itemIds` vincula a leitura à ficha exibida em **Mais informações**.
 
 ## Guia brasileiro da Saga do Clone
 
@@ -76,3 +78,14 @@ Volumes têm marcações próprias; HQs antigas não os concluem automaticamente
 | `#configuracoes`                                                    | Plano, aparência, conta e dados                  |
 
 Preserve aliases antigos como `#inicio`, `#ler/*` e `#conta/*`. Testes de lógica ficam em `tests/unit/`, de interface em `tests/e2e/` e de hospedagem em `tests/hosting/`.
+
+## Compatibilidades ainda em uso
+
+- `src/router/router.ts` e `views/explore-navigation.ts` aceitam URLs antigas e alvos numéricos.
+- `state/storage-migrations.ts` lê versões anteriores do progresso; `progress/backup.ts` aceita backups do catálogo anterior aos volumes Panini. Chaves `aranha-*` continuam em uso.
+- `sync/server-generation.ts` permite o protocolo legado quando a RPC está ausente; esse caminho usa leitura/escrita direta em `progress`, com consulta não paginada sujeita ao limite do servidor. `setup.sql` cria a estrutura inicial; a migração em `supabase/migrations/` instala o protocolo protegido. Consulte as restrições em [Supabase](SUPABASE-E-SEGURANCA.md).
+- `data.js`, `generated-data.json`, `public/validator.js` e os baselines editoriais continuam servindo à validação/compatibilidade. O catálogo completo não é importado pelo bundle inicial; o validador global ainda é carregado pelo HTML e usado com `?debug=1`.
+- `data/src/pular.json` também segue no contrato gerado/validador, embora não tenha tela própria.
+- O controlador mantém a fachada de exports e listeners de filtros em `<details>`; `FilterDropdown` já controla os filtros atuais em Preact.
+
+A linha histórica #1–#1000 é um contrato validado no build. Esse limite também aparece em formulários, preferências e ações; ampliar o catálogo exige atualizar esses consumidores. IDs e cobertura de volumes vêm de `clone.json`; os nomes de série e números exibidos pela Checklist ainda são definidos por posição (`index < 18`) em `data/checklist-catalog.ts`. Links vêm de `links.json`, sem destinos específicos inseridos nos componentes.

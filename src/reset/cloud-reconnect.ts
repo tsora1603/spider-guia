@@ -1,3 +1,4 @@
+import { progressPages } from '../sync/progress-pages';
 import { appState } from '../state/app-state';
 import { progressStore, STORAGE_KEYS, VALID_PROGRESS_STATUSES, type ProgressSnapshot } from '../state/progress-store';
 import { cloudDecision, isSyncBlocked, authorizeRestoredCloud, continueWithoutSync, resetPhase, currentResetEpoch, LOCAL_RESET_GUARD_KEY } from './reset-guard';
@@ -6,7 +7,6 @@ import { mergeRecords } from '../sync/sync-engine';
 import { checkServerGeneration, saveKnownGeneration, getKnownGeneration } from '../sync/server-generation';
 import type { ProgressStatus } from '../state/types';
 
-const PAGE_SIZE = 500;
 export type CloudPreview = { count: number; collisions: number; localCount: number; localFingerprint: string; remoteFingerprint: string; storageFingerprint: string; protocolGeneration?: number };
 type RemoteItem = { id: number; status: ProgressStatus; updatedAt: number };
 
@@ -16,15 +16,8 @@ export async function readCloudRecords(client: any, userId: string): Promise<Rem
   if (!client || !userId || !isSyncBlocked() || resetPhase() !== 'completed') throw Error('Consulta protegida indisponível.');
   const rows: RemoteItem[] = [];
   const seen = new Set<number>();
-  for (let offset = 0; ; offset += PAGE_SIZE) {
-    const response = await client.from('progress')
-      .select('ord,status,updated_at')
-      .eq('user_id', userId)
-      .order('ord', { ascending: true })
-      .range(offset, offset + PAGE_SIZE - 1);
-    if (response.error) throw Error(`Falha ao consultar a nuvem: ${response.error.message || 'erro desconhecido'}`);
-    if (!Array.isArray(response.data)) throw Error('A nuvem retornou dados inválidos. Nada foi restaurado.');
-    for (const row of response.data) {
+  for await (const page of progressPages(client, userId)) {
+    for (const row of page) {
       const id = Number(row?.ord);
       if (!Number.isInteger(id) || !itemsById[id]) continue; // IDs fora do catálogo não são importados.
       const time = typeof row?.updated_at === 'string' ? Date.parse(row.updated_at) : NaN;
@@ -34,9 +27,8 @@ export async function readCloudRecords(client: any, userId: string): Promise<Rem
       seen.add(id);
       rows.push({ id, status: row.status, updatedAt: time });
     }
-    if (response.data.length < PAGE_SIZE) return rows;
-    if (offset > 100000) throw Error('Quantidade de registros inesperada na nuvem.');
   }
+  return rows;
 }
 
 function localStorageFingerprint(): string {

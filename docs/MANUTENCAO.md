@@ -26,26 +26,14 @@ Use um ID único e estável. O exemplo cria um card na aba Links. Para associar 
 Valide a alteração:
 
 ```bash
-npm run links:check
 npm run data:build
-npm run data:check
-npm run build
+npm run ci
 npm run preview
 ```
 
 Confira **Explorar → Links** e os botões associados. `LINKS_ENABLED` em `public/config.js` precisa estar `true`. Depois de editar JSON com o servidor aberto, rode `data:build` novamente ou reinicie `npm run dev`.
 
-## Outras alterações
-
-| Conteúdo               | Fonte                                                             |
-| ---------------------- | ----------------------------------------------------------------- |
-| HQs e ordem            | `data/src/catalog/`                                               |
-| Extras e Saga do Clone | `data/src/editorial/extras.json`, `data/src/editorial/clone.json` |
-| Jornada                | `data/src/fases.json`, `data/src/marcos.json`                     |
-| Fontes e glossário     | `data/src/fontes.json`, `data/src/glossario.json`                 |
-| Visual                 | `src/design-system.css`, `src/styles.css`                         |
-
-Para mudar cobertura, volumes ou ordem, siga os contratos de [Arquitetura](ARQUITETURA.md). Para contas e reset, siga [Supabase](SUPABASE-E-SEGURANCA.md).
+Para outras fontes, consulte o [mapa no README](../README.md#o-que-editar). Cobertura e volumes seguem os contratos de [Arquitetura](ARQUITETURA.md); contas e reset, [Supabase](SUPABASE-E-SEGURANCA.md).
 
 ## Spoilers
 
@@ -68,7 +56,7 @@ Mortes, ressurreições, identidades reveladas, mudanças de identidade e desfec
 | `npm run build && npm run test:pages`      | Build na subpasta do Pages                            |
 | `npm run reading-sequence:check`           | Plano, Checklist e Modo Foco                          |
 
-`build:bundle` é uma etapa interna do CI: pressupõe dados gerados e tipos já validados. Para uso local, prefira `npm run build`. A justificativa das verificações está em [CI e testes](CI-E-TESTES.md).
+`build:bundle` é uma etapa interna do CI: pressupõe dados gerados e tipos já validados. Para uso local, prefira `npm run build`.
 
 Instale o navegador de testes com `npx playwright install chromium`.
 
@@ -76,10 +64,6 @@ Instale o navegador de testes com `npx playwright install chromium`.
 
 Revise o diff e envie as alterações conforme [Contribuição](../CONTRIBUTING.md). Após integrar à **main**, o Actions testa, publica no Pages e compara os arquivos públicos com o build aprovado. Confira **Actions → Quality and GitHub Pages** e abra o site. Para desfazer uma alteração, envie um commit de reversão; mudanças no banco exigem tratamento separado.
 
-## Rotina de quem mantém sua própria cópia
+## Atualizações
 
-- Revise links externos e falhas em Actions periodicamente.
-- Revise os pull requests semanais do Dependabot para npm e Actions; o CI deve passar antes de integrar. Em atualizações manuais, versione `package-lock.json` e valide com `npm run ci`.
-- Para incorporar mudanças do original, configure `upstream`, faça `git fetch upstream` e integre em uma branch, preservando sua configuração e seus links.
-- Guarde backups antes de trocar domínio ou catálogo. O JSON exportado contém progresso e histórico; preferências e aparência não entram nele.
-- Mantenha os responsáveis por GitHub, domínio e Supabase registrados. Preserve o histórico Git e mantenha segredos fora do repositório.
+Revise os PRs do Dependabot e valide atualizações com `npm run ci`. Para incorporar mudanças do projeto original, configure `upstream`, faça `git fetch upstream` e integre em uma branch, preservando `public/config.js`. Guarde backups antes de trocar domínio ou catálogo.
