@@ -60,11 +60,9 @@ export async function restoreFromCloud(deps: ReconnectDependencies, expected: Cl
     const epoch = currentResetEpoch();
     const userId = deps.userId;
     const guardBefore = localStorage.getItem(LOCAL_RESET_GUARD_KEY);
-    const protocolBefore = typeof deps.client.rpc === 'function'
-      ? await checkServerGeneration(deps.client, userId, { allowExplicitJoin: true }) : { mode: 'legacy' as const };
+    const protocolBefore = await checkServerGeneration(deps.client, userId, { allowExplicitJoin: true });
     const data = await readCloudRecords(deps.client, userId);
-    const protocolAfter = typeof deps.client.rpc === 'function'
-      ? await checkServerGeneration(deps.client, userId, { allowExplicitJoin: true }) : { mode: 'legacy' as const };
+    const protocolAfter = await checkServerGeneration(deps.client, userId, { allowExplicitJoin: true });
     if (protocolBefore.mode !== protocolAfter.mode || (protocolBefore.mode === 'protected' &&
         (protocolAfter.mode !== 'protected' || protocolBefore.generation !== protocolAfter.generation))) {
       throw Error('A geração da nuvem mudou durante a consulta.');

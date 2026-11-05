@@ -2,6 +2,8 @@
 
 O site funciona sem login. Supabase é usado para contas privadas e sincronização. O conteúdo de `public/config.js` fica público: use apenas Project URL e chave publicável; mantenha `service_role`, `sb_secret_*`, senhas e tokens administrativos fora do navegador/repositório.
 
+A sincronização exige o protocolo 4 da migração SQL. RPC ausente ou incompatível suspende a sincronização e mantém o progresso local; não há escrita direta como fallback.
+
 O SDK vem de `@supabase/supabase-js`, versionado no npm e carregado sob demanda. Para atualizá-lo, altere a dependência e o lockfile e execute os testes de login, sincronização e reset.
 
 ## Configuração inicial

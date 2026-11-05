@@ -16,6 +16,12 @@ const mockedClient = `(() => {
       signOut: async () => {session=null; listener('SIGNED_OUT',null); return {error:null};},
       signInWithOtp: async () => ({error:null})
     },
+    rpc: async name => {
+      if(name==='spider_sync_state') return {data:{protocol:4,generation:1,count:window.__remoteRows.length},error:null};
+      if(name==='spider_sync_push') {window.__pushes++;return {data:{},error:null};}
+      if(name==='spider_sync_confirm_empty') return {data:{generation:1,count:0},error:window.__remoteRows.length?{message:'SPIDER_CLOUD_NOT_EMPTY'}:null};
+      throw Error('RPC inesperada: '+name);
+    },
     from: () => ({
       select: () => ({
         then: (ok, fail) => Promise.resolve({data:window.__remoteRows,error:null}).then(ok,fail),

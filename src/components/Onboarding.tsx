@@ -1,3 +1,4 @@
+import { HISTORICAL_MAX } from '../data/historical-range.mjs';
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { checklistReadings } from '../data/model';
 import { statusOf } from '../state/progress-store';
@@ -51,7 +52,7 @@ export function Onboarding() {
   const finish = async () => {
     const epoch = currentResetEpoch();
     setSaving(true);
-    const normalizedReadThrough = Math.max(0, Math.min(1000, Number(readThrough) || 0));
+    const normalizedReadThrough = Math.max(0, Math.min(HISTORICAL_MAX, Number(readThrough) || 0));
     if (normalizedReadThrough > 0) await applyReadThrough(normalizedReadThrough, { confirm: false, silentToast: true });
     if (epoch !== currentResetEpoch()) return;
     spoilerPreferences.set(spoilerLevel);
@@ -82,9 +83,9 @@ export function Onboarding() {
       {step === 3 ? <section>
         <h2 id="onboarding-title">Já leu até onde?</h2>
         <p class="mu">Use a numeração histórica da linha principal. Vamos marcar apenas edições da linha principal até esse ponto, sem alterar volumes Panini, Extras, leituras puladas ou progresso existente. Marque cada volume completo na Checklist.</p>
-        <label class="read-through-field" for="onboarding-read-through"><span>Já li até a edição histórica</span><span class="read-through-input"><b>#</b><input id="onboarding-read-through" type="number" min="0" max="1000" inputMode="numeric" value={readThrough || ''} onInput={event => setReadThrough(Number(event.currentTarget.value) || 0)} placeholder="0" /></span></label>
+        <label class="read-through-field" for="onboarding-read-through"><span>Já li até a edição histórica</span><span class="read-through-input"><b>#</b><input id="onboarding-read-through" type="number" min="0" max={HISTORICAL_MAX} inputMode="numeric" value={readThrough || ''} onInput={event => setReadThrough(Number(event.currentTarget.value) || 0)} placeholder="0" /></span></label>
         <button type="button" class="text-button" onClick={() => setReadThrough(0)}>Vou começar do início</button>
-        {readThrough > 0 ? <p class="onboarding-preview" aria-live="polite">Ao concluir, o guia inicializa seu progresso até a <b>#{Math.min(1000, readThrough)}</b>.</p> : <p class="onboarding-preview mu">Nenhuma edição será marcada automaticamente.</p>}
+        {readThrough > 0 ? <p class="onboarding-preview" aria-live="polite">Ao concluir, o guia inicializa seu progresso até a <b>#{Math.min(HISTORICAL_MAX, readThrough)}</b>.</p> : <p class="onboarding-preview mu">Nenhuma edição será marcada automaticamente.</p>}
       </section> : null}
       <div class="onboarding-actions">
         {step > 1 ? <button type="button" class="btn g" onClick={() => setStep(value => value - 1)} disabled={saving}>Voltar</button> : <span />}

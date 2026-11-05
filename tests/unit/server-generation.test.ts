@@ -25,8 +25,9 @@ describe('protocolo de geração controlada no servidor',()=>{
    const gen=await import('../../src/sync/server-generation');
    await expect(gen.checkServerGeneration({rpc:async()=>({error:{code:'PGRST301',message:'timeout'}})},'u')).rejects.toThrow(/validar/);
  });
- it('retrocompatibilidade só se o RPC estiver efetivamente ausente',async()=>{
+ it('RPC ausente suspende a sincronização sem fallback',async()=>{
    const gen=await import('../../src/sync/server-generation');
-   expect(await gen.checkServerGeneration({rpc:async()=>({error:{code:'PGRST202',message:'public.spider_sync_state not found'}})},'u')).toEqual({mode:'legacy'});
+   await expect(gen.checkServerGeneration({rpc:async()=>({error:{code:'PGRST202',message:'public.spider_sync_state not found'}})},'u')).rejects.toThrow(/validar/);
+   await expect(gen.checkServerGeneration({},'u')).rejects.toThrow(/protocolo protegido/);
  });
 });

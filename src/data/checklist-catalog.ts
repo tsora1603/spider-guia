@@ -14,6 +14,7 @@ export function createChecklistCatalog(catalog: readonly Reading[], guide: Clone
     const id = step.checklistId;
     if (!id || byId.has(id) || volumeIds.has(id))
       throw new Error(`ID de volume inválido: ${step.id}`);
+    if (!step.publication) throw new Error(`Publicação ausente no volume: ${step.id}`);
     volumeIds.add(id);
     for (const sourceId of step.itemIds) {
       if (!byId.has(sourceId)) throw new Error(`HQ desconhecida no volume ${step.id}: ${sourceId}`);
@@ -24,8 +25,8 @@ export function createChecklistCatalog(catalog: readonly Reading[], guide: Clone
       id,
       historicalNumber: null,
       type: 'Volume Panini',
-      series: index < 18 ? 'A Saga do Clone (Panini)' : 'A Saga do Clone — Ben Reilly (Panini)',
-      issue: `#${index < 18 ? index + 1 : 1}`,
+      series: step.publication.series,
+      issue: step.publication.issue,
       phase: 'Saga do Clone · volumes Panini',
       weight: '● Essencial',
       notes: `${step.read}${step.note ? `\n${step.note}` : ''}`,

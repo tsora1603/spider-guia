@@ -25,7 +25,7 @@ describe('sincronização não ressuscita dados após reset', () => {
       select: vi.fn(async () => ({ data: [{ ord: 1, status: 'Sim', updated_at: new Date().toISOString() }], error: null })),
       upsert: vi.fn(async () => ({ error: null }))
     }));
-    const sync = createSyncEngine({ client: { from }, onLocalChanged: vi.fn(), onStateChange: vi.fn(), onToast: vi.fn() });
+    const sync = createSyncEngine({ client: { from, rpc: async () => ({ data: { protocol: 4, generation: 1, count: 1 } }) }, onLocalChanged: vi.fn(), onStateChange: vi.fn(), onToast: vi.fn() });
     beginLocalReset();
     await sync.pull();
     await sync.syncLocalRecords([1]);
@@ -42,10 +42,10 @@ describe('sincronização não ressuscita dados após reset', () => {
     appState.currentUser = { id: 'user' };
     let finishPull!: (response: unknown) => void;
     const select = vi.fn(() => new Promise(resolve => { finishPull = resolve; }));
-    const from = vi.fn(() => ({ select, upsert: vi.fn() }));
-    const sync = createSyncEngine({ client: { from }, onLocalChanged: vi.fn(), onStateChange: vi.fn(), onToast: vi.fn() });
+    const from = vi.fn(() => ({ select: () => ({ eq: () => ({ order: () => ({ range: select }) }) }) }));
+    const sync = createSyncEngine({ client: { from, rpc: async () => ({ data: { protocol: 4, generation: 1, count: 1 } }) }, onLocalChanged: vi.fn(), onStateChange: vi.fn(), onToast: vi.fn() });
     const pending = sync.pull();
-    await Promise.resolve();
+    await vi.waitFor(() => expect(finishPull).toBeTypeOf('function'));
     beginLocalReset();
     sync.invalidate();
     finishPull({ data: [{ ord: 1, status: 'Sim', updated_at: new Date().toISOString() }], error: null });
@@ -64,9 +64,9 @@ describe('sincronização não ressuscita dados após reset', () => {
     progressStore.set(1, 'Sim');
     let finishPush!: (response: unknown) => void;
     const upsert = vi.fn(() => new Promise(resolve => { finishPush = resolve; }));
-    const sync = createSyncEngine({ client: { from: () => ({ upsert }) }, onLocalChanged: vi.fn(), onStateChange: vi.fn(), onToast: vi.fn() });
+    const sync = createSyncEngine({ client: { rpc: (name: string) => name === 'spider_sync_push' ? upsert() : Promise.resolve({ data: { protocol: 4, generation: 1, count: 0 } }) }, onLocalChanged: vi.fn(), onStateChange: vi.fn(), onToast: vi.fn() });
     const pending = sync.syncLocalRecords([1]);
-    await Promise.resolve();
+    await vi.waitFor(() => expect(finishPush).toBeTypeOf('function'));
     beginLocalReset();
     sync.invalidate();
     const waiting = sync.waitForInFlight();

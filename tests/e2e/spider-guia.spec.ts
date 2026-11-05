@@ -63,9 +63,10 @@ async function mockAuthenticatedSupabase(page: Page) {
                   },
                   async signInWithOtp() { return { error: null }; }
                 },
+                async rpc(name) { return {data: name === 'spider_sync_state' ? {protocol:4,generation:1,count:0} : {},error:null}; },
                 from() {
                   return {
-                    async select() { return { data: [], error: null }; },
+                    select() { return {eq:()=>({order:()=>({range:async()=>({data:[],error:null})})})}; },
                     async upsert() { return { error: null }; }
                   };
                 }

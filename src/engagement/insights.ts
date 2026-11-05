@@ -1,8 +1,9 @@
+import { HISTORICAL_MAX } from '../data/historical-range.mjs';
 import { principalReadings, checklistReadings, projectChecklistIds } from '../data/model';
 import { statusOf } from '../state/progress-store';
 import { appState } from '../state/app-state';
 
-export const PROGRESS_MILESTONES = [25, 100, 250, 500, 750, 1000] as const;
+export const PROGRESS_MILESTONES = [...new Set([25, 100, 250, 500, 750].filter(value => value < HISTORICAL_MAX).concat(HISTORICAL_MAX))];
 
 export function weekStart(timestamp = Date.now()) {
   const date = new Date(timestamp);

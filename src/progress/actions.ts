@@ -1,3 +1,4 @@
+import { HISTORICAL_MAX } from '../data/historical-range.mjs';
 import { appState } from '../state/app-state';
 import { progressStore, statusOf } from '../state/progress-store';
 import type { ProgressStatus } from '../state/types';
@@ -100,8 +101,8 @@ export async function applyReadThrough(
   options: { confirm?: boolean; silentToast?: boolean; updateReadThrough?: boolean } = {}
 ) {
   const mutationEpoch = currentResetEpoch();
-  if (!Number.isInteger(number) || number < 1 || number > 1000) {
-    if (!options.silentToast) showToast('Digite um número de 1 a 1000.');
+  if (!Number.isInteger(number) || number < 1 || number > HISTORICAL_MAX) {
+    if (!options.silentToast) showToast(`Digite um número de 1 a ${HISTORICAL_MAX}.`);
     return 0;
   }
   const preview = readThroughSelection(number, checklistReadings, statusOf);

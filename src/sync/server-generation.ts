@@ -1,6 +1,6 @@
 import { blockForChangedCloudGeneration } from '../reset/reset-guard';
 
-/** Protocol 4 is optional until the SQL migration is applied. It never enables remote deletion. */
+/** Protocol 4 is required for cloud synchronization. It never enables remote deletion. */
 export const SERVER_GENERATIONS_KEY = 'aranha-server-generations-v1';
 let expectedRaw: string | null;
 try { expectedRaw = localStorage.getItem(SERVER_GENERATIONS_KEY); }
@@ -11,7 +11,7 @@ function assertSameTabVersion() {
     throw Error('Outra aba alterou a versão de sincronização. Recarregue a página para revisar a nuvem.');
   }
 }
-export type ServerProtocol = { mode: 'legacy' } | { mode: 'protected'; generation: number; count: number };
+export type ServerProtocol = { mode: 'protected'; generation: number; count: number };
 
 function readKnown(userId: string): number | null {
   const raw = localStorage.getItem(SERVER_GENERATIONS_KEY);
@@ -40,20 +40,13 @@ export function saveKnownGeneration(userId: string, generation: number): void {
   expectedRaw = serialized;
 }
 
-function isMissingProtocol(error: any): boolean {
-  // Only PostgREST's unambiguous function-not-found code allows legacy fallback.
-  return error?.code === 'PGRST202' && /spider_sync_state/.test(String(error?.message || ''));
-}
-
 export async function checkServerGeneration(client: any, userId: string, options: { allowExplicitJoin?: boolean } = {}): Promise<ServerProtocol> {
   if (!userId || !client) throw Error('Não há sessão para consultar a geração do servidor.');
   assertSameTabVersion();
   if (!navigator.onLine) throw Error('Sem conexão: a verificação da sincronização não pôde ser concluída.');
-  // Mocks antigos e SDKs sem RPC conservam comportamento pré-migração, sem reset remoto.
-  if (typeof client.rpc !== 'function') return { mode: 'legacy' };
+  if (typeof client.rpc !== 'function') throw Error('O servidor precisa do protocolo protegido de sincronização.');
   const response = await client.rpc('spider_sync_state');
   if (response?.error) {
-    if (isMissingProtocol(response.error)) return { mode: 'legacy' };
     throw Error(`Não foi possível validar a proteção do servidor: ${response.error.message || 'falha desconhecida'}`);
   }
   const info = response?.data;

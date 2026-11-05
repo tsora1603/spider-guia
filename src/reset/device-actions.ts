@@ -50,10 +50,7 @@ export async function inspectCloudAfterReset(): Promise<CloudPreview> {
   const records = await readCloudRecords(client, userId);
   if (appState.currentUser?.id !== userId)
     throw Error('A conta conectada mudou durante a consulta.');
-  const protocol =
-    typeof client.rpc === 'function'
-      ? await checkServerGeneration(client, userId, { allowExplicitJoin: true })
-      : { mode: 'legacy' as const };
+  const protocol = await checkServerGeneration(client, userId, { allowExplicitJoin: true });
   const preview = previewCloud(records);
   if (protocol.mode === 'protected') preview.protocolGeneration = protocol.generation;
   return preview;
