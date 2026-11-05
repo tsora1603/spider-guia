@@ -91,5 +91,13 @@ test('título oficial com morte fica oculto em Extras, Links e referências', as
   await expect(card.locator('[data-spoiler-level="forte"]')).toBeVisible();
   await expect(card).not.toHaveAttribute('aria-label', /Morte de Jean/);
   await page.goto('/#ajuda/fontes?fonte=69');
-  await expect(page.locator('#fonte-69 [data-spoiler-level="forte"]')).toBeVisible();
+  const source = page.locator('#fonte-69');
+  const protectedTexts = source.getByRole('button', { name: 'Revelar spoiler forte' });
+  // The source's description and its "Usada em" reference both contain the title.
+  await expect(protectedTexts).toHaveCount(2);
+  for (const text of await protectedTexts.all()) {
+    await expect(text).toBeVisible();
+    await expect(text.locator('[aria-hidden="true"]')).toBeHidden();
+  }
+  expect(await source.ariaSnapshot()).not.toContain('A Morte de Jean DeWolff');
 });
