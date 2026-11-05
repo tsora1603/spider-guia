@@ -88,4 +88,4 @@ Preserve aliases antigos como `#inicio`, `#ler/*` e `#conta/*`. Testes de lógic
 - `data/src/pular.json` também segue no contrato gerado/validador, embora não tenha tela própria.
 - O controlador mantém a fachada de exports; `FilterDropdown` controla os filtros em Preact.
 
-A cobertura #1–#1000 continua sendo um contrato editorial validado no build. Os limites da interface e das ações derivam do índice em `data/historical-range.mjs`. Volumes declaram `publication: { series, issue }` junto a `checklistId` em `clone.json`; a Checklist usa esses campos, preservando os IDs. Links vêm de `links.json`.
+A cobertura #1–#1000 continua sendo um contrato editorial validado no build. Os limites da interface e das ações derivam do índice em `src/data/historical-range.mjs`. Volumes declaram `publication: { series, issue }` junto a `checklistId` em `clone.json`; a Checklist usa esses campos, preservando os IDs. Links vêm de `links.json`.
